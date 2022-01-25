@@ -95,12 +95,12 @@ export default function Home() {
           </p>
           <div className="org__box flex flex-row items-center flex-wrap">
             <img
-              className="w-20 h-auto mr-12"
+              className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
             <img
-              className="w-20 h-auto mr-12"
+              className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
@@ -128,96 +128,36 @@ export default function Home() {
             </span>
             GSSoC 2022!
           </p>
-          <div className="container my-12 mx-auto ">
-            <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
+          <div className="container my-12 mx-auto">
+            <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
-              <div className="bg-gray-300 h-fit	 my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-                <article className="overflow-hidden rounded-lg">
-                  <header className="flex items-center p-2 md:p-4">
-                    <h1 className="font-semibold text-3xl 1.875 rem 2.25 rem">
-                      Participate in GSSoC 2021
-                    </h1>
-                  </header>
-                  <p className="text-grey-darker font-normal text-xl 1.25rem 1.75rem p-2 md:p-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt sed lectus non magna enim dignissim amet semper.
-                    Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor
-                    placerat tincidunt enim posuere hendrerit aliquet amet quis.
-                  </p>
-                  <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <button className="bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded">
-                      Register
-                    </button>
-                  </footer>
-                </article>
-              </div>
+              <Card
+                title="Participate in GSSoC 2021"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                btntext="Register"
+              />
               {/* Card-2 */}
-              <div className="bg-gray-300 h-fit	 my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-                <article className="overflow-hidden rounded-lg">
-                  <header className="flex items-center p-2 md:p-4">
-                    <h1 className="font-semibold text-3xl 1.875 rem 2.25 rem">
-                      Be a Mentor
-                    </h1>
-                  </header>
-                  <p className="text-grey-darker font-normal text-xl 1.25rem 1.75rem p-2 md:p-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt sed lectus non magna enim dignissim amet semper.
-                    Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor
-                    placerat tincidunt enim posuere hendrerit aliquet amet quis.
-                  </p>
-                  <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <button className="bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded">
-                      Register
-                    </button>
-                  </footer>
-                </article>
-              </div>
+              <Card
+                title="Be a Mentor"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                btntext="Register"
+              />
             </div>
           </div>
           <div className="container my-12 mx-auto ">
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
-              <div className="bg-gray-300 h-fit	 my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-                <article className="overflow-hidden rounded-lg">
-                  <header className="flex items-center p-2 md:p-4">
-                    <h1 className="font-semibold text-3xl 1.875 rem 2.25 rem">
-                      Calling all NGOs
-                    </h1>
-                  </header>
-                  <p className="text-grey-darker font-normal text-xl 1.25rem 1.75rem p-2 md:p-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt sed lectus non magna enim dignissim amet semper.
-                    Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor
-                    placerat tincidunt enim posuere hendrerit aliquet amet quis.
-                  </p>
-                  <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <button className="bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded">
-                      Submit your project
-                    </button>
-                  </footer>
-                </article>
-              </div>
+              <Card
+                title="Calling all NGOs"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                btntext="Submit your project"
+              />
               {/* Card-4 */}
-              <div className="bg-gray-300 h-fit	 my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-                <article className="overflow-hidden rounded-lg">
-                  <header className="flex items-center p-2 md:p-4">
-                    <h1 className="font-semibold text-3xl 1.875 rem 2.25 rem">
-                      Be a Sponsor
-                    </h1>
-                  </header>
-                  <p className="text-grey-darker font-normal text-xl 1.25rem 1.75rem p-2 md:p-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tincidunt sed lectus non magna enim dignissim amet semper.
-                    Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor
-                    placerat tincidunt enim posuere hendrerit aliquet amet quis.
-                  </p>
-                  <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <button className="bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded">
-                      Know More
-                    </button>
-                  </footer>
-                </article>
-              </div>
+              <Card
+                title="Be a Sponsor"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                btntext="Know More"
+              />
             </div>
           </div>
         </div>
