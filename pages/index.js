@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
+import SocialFollow from "../components/homepage/SocialFollow"
 import Schedule from "../components/homepage/Schedule";
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
           @import url('https://fonts.googleapis.com/css2?family=Rubik');
         </style>
       </Head>
-
+      <SocialFollow />
       <div className="container mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50">
         <div className="first-section mb-10">
           <div className="basis-1/2">
