@@ -19,8 +19,8 @@ export default function Home() {
           <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
             Projects 2021
           </p>
-          "unfinished project are the symbol of progress,
-          <br /> not of imperfection"
+          unfinished project are the symbol of progress,
+          <br /> not of imperfection
         </p>
       </div>
     </div>
