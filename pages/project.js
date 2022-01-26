@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div classname=" items-center justify-center">
+      <div className=" items-center justify-center">
         <p className="font-serif text-center text-2xl font-extrabold text-black-100">
           <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
             Projects 2021

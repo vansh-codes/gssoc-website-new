@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {accordionData} from './api/data'
 import MyAccordion from './MyAccordion';
 
-const faq = () => {
+const Faq = () => {
   const [data, setData] = useState(accordionData);
   return (
     <>
@@ -19,4 +19,4 @@ const faq = () => {
   );
 };
 
-export default faq;
+export default Faq;
