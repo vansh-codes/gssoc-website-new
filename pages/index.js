@@ -1,3 +1,4 @@
+// import useDarkMode from "../useDarkmode";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -6,6 +7,7 @@ import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
 export default function Home() {
+  // const [colorTheme, setTheme] = useDarkMode();
   return (
     <div>
       <Head>
@@ -16,16 +18,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SocialFollow />
-      <div className="container mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50">
+      <div className="container mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700">
         <div className="first-section mb-10">
           <div className="basis-1/2">
-            <p className="text-black font-bold text-4xl 2.25rem 3rem mb-10">
+            <p className="text-black dark:text-white font-bold text-4xl 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
               <br />
               is here! &nbsp;
             </p>
-            <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 mb-24">
+            <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
@@ -49,11 +51,11 @@ export default function Home() {
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
             />
-            <p className="text-black font-semibold text-4xl 2.25rem 3rem mb-5">
+            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
             </p>
-            <p className="font-serif text-1xl text-black-100">
+            <p className="dark:text-white font-serif text-1xl text-black-100">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
               pulvinar malesuada tortor orci nullam rhoncus et. Purus, massa
               orci aliquet neque. Nulla urna viverra tempus nullam commodo.
@@ -71,14 +73,14 @@ export default function Home() {
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
             />
             <p className="text-primary_orange-0 font-semibold text-4xl 2.25rem 3rem mb-10">
-              <span className="text-black text-4xl 2.25rem 3rem">
+              <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
                 GirlScript{" "}
               </span>
               Summer of Code
             </p>
-            <p className="font-serif text-xl 1.25rem 1.75rem">
+            <p className="dark:text-white font-serif text-xl 1.25rem 1.75rem">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque sit
               tortor aliquet mauris. Sodales odio vitae morbi nulla sit turpis
               sem at. Nibh in consectetur aliquam in ante pulvinar vehicula sed.
@@ -91,7 +93,7 @@ export default function Home() {
         </div>
 
         <div className="organisation mb-24">
-          <p className="font-serif font-semibold text-gray-800 text-4xl 2.25rem 3rem mb-8">
+          <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl 2.25rem 3rem mb-8">
             Some of the{" "}
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               participating organisations!
@@ -119,14 +121,14 @@ export default function Home() {
               alt="logo"
             />
             <div>
-              <p className="font-serif font-medium text-4xl text-gray-800">
+              <p className="font-serif font-medium text-4xl dark:text-white text-gray-800">
                 and more ...
               </p>
             </div>
           </div>
         </div>
         <div className="be-part-of mb-24">
-          <p className="font-serif font-semibold text-justify text-gray-800 text-4xl 2.25rem 3rem ">
+          <p className="font-serif font-semibold text-justify dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
@@ -170,15 +172,15 @@ export default function Home() {
       <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
           <div className="sponsors__header mb-9">
-            <p className="font-serif font-semibold text-gray-800 text-4xl leading-10">
+            <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl leading-10">
               Our Sponsors
             </p>
           </div>
           {/* sponsors card container */}
           <div className="sponsors__card__container flex flex-row justify-between">
             {/* card1 */}
-            <div className="sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
-              <p className="text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
+            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+              <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
                 Gold Sponsor
               </p>
               <img
@@ -187,8 +189,8 @@ export default function Home() {
               />
             </div>
             {/* card2 */}
-            <div className="sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
-              <p className="text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
+            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+              <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Silver Sponsor
               </p>
               <img
@@ -197,8 +199,8 @@ export default function Home() {
               />
             </div>
             {/* card3 */}
-            <div className="sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
-              <p className="text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
+            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+              <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Bronze Sponsor
               </p>
               <img
@@ -207,9 +209,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="other__sponsors px-9 py-9 shadow-xl rounded mt-9">
+          <div className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9">
             <div className="other__sponsors__title">
-              <p className="text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
+              <p className=" dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Other Sponsors
               </p>
             </div>
