@@ -43,11 +43,11 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between flex-wrap  mb-24">
-          <img src="/assets/Rectangle.png" />
+          <img src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true" />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
             <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
-              src="/assets/GS_logo_Black.png"
+              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
             />
             <p className="text-black font-semibold text-4xl 2.25rem 3rem mb-5">
               About <span className="text-primary_orange-0">GirlScript </span>
@@ -66,7 +66,10 @@ export default function Home() {
 
         <div className="flex justify-between flex-wrap mb-24">
           <div className="w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-            <img className="mb-10" src="/assets/GSSoC_logo_Black.png" />
+            <img
+              className="mb-10"
+              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
+            />
             <p className="text-primary_orange-0 font-semibold text-4xl 2.25rem 3rem mb-10">
               <span className="text-black text-4xl 2.25rem 3rem">
                 About
@@ -81,7 +84,10 @@ export default function Home() {
               sem at. Nibh in consectetur aliquam in ante pulvinar vehicula sed.
             </p>
           </div>
-          <img className="mt-8 md:mt-4 lg:mt-0" src="/assets/Frame.png" />
+          <img
+            className="mt-8 md:mt-4 lg:mt-0"
+            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
+          />
         </div>
 
         <div className="organisation mb-24">
