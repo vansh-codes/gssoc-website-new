@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-const team = () => {
+const Team = () => {
     const [users, setUsers] = useState([]);
     const getUsers = async () => {
         const response = await fetch('https://opensheet.elk.sh/19hUF9aTIOH-kUSOW6HKWPItd0KPufOump2vm8mDJ0ro/json')
@@ -83,4 +83,4 @@ const team = () => {
     </>;
 };
 
-export default team;
+export default Team;
