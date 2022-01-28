@@ -1,34 +1,68 @@
 /*  ./components/Navbar.js     */
+// import { useTheme } from "next-themes";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import useDarkMode from "../useDarkmode";
+import ThemeChanger from "./Toggler";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
 export const Navbar = () => {
+  // const [colorTheme, setTheme] = useDarkMode();
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
     setActive(!active);
   };
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <>
-      <nav className="flex items-center flex-wrap bg-white drop-shadow-xl p-1 justify-center mb-24">
+      <nav className="flex items-center transition-colors flex-wrap bg-white drop-shadow-xl p-1 justify-center mb-24 dark:bg-slate-800 dark:text-primary_orange-0 dark:transition-colors">
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
             <span className="text-xl text-orange font-bold uppercase tracking-wide  ml-8">
-              {/* <Image
+              {/* <img
                 src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
                 alt=""
                 width="36"
                 height="36"
               /> */}
-              <img
-                src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
-                alt="logo"
-              />
+              {theme === "light" ? (
+                <img
+                  src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
+                  alt="logo"
+                />
+              ) : (
+                <img
+                  src="https://user-images.githubusercontent.com/64256342/151406017-3c029548-2b21-47a6-b81c-0bcb24310e77.png"
+                  alt="logo"
+                />
+              )}
             </span>
           </a>
         </Link>
+        {/* {colorTheme === "light" ? (
+          <img
+            src="https://user-images.githubusercontent.com/64256342/151415459-adf26d5f-ad89-4a4a-85b4-477ee85d0b61.png"
+            onClick={() => setTheme("light")}
+            className="h-6 w-6 block ml-auto lg:hidden"
+          />
+        ) : (
+          <img
+            src="https://user-images.githubusercontent.com/64256342/151416170-51c1f8ec-28bd-41b0-bf9c-837509e5460e.png"
+            onClick={() => setTheme("dark")}
+            className="h-6 w-6 block ml-auto lg:hidden"
+          />
+        )} */}
         <button
           className=" inline-flex p-3 hover:bg-orange-600 rounded lg:hidden text-grey-800 ml-auto hover:text-grey-800 outline-none"
           onClick={handleClick}
@@ -86,6 +120,7 @@ export const Navbar = () => {
             >
               CONTACT
             </a>
+            <ThemeChanger />
           </div>
         </div>
       </nav>
