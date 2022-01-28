@@ -13,7 +13,7 @@ const Footer = () => {
               <Link href="/">
                 <img
                   className="cursor-pointer"
-                  src="/assets/GS_logo_Black.png"
+                  src="https://user-images.githubusercontent.com/64256342/151364339-4cbebec2-07fc-4bfa-bbf6-639fea147aca.png"
                 />
               </Link>
               <span className="my-2">

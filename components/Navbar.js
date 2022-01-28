@@ -16,7 +16,16 @@ export const Navbar = () => {
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
             <span className="text-xl text-orange font-bold uppercase tracking-wide  ml-8">
-              <Image src="/assets/Union.png" alt="" width="36" height="36" />
+              {/* <Image
+                src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
+                alt=""
+                width="36"
+                height="36"
+              /> */}
+              <img
+                src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
+                alt="logo"
+              />
             </span>
           </a>
         </Link>

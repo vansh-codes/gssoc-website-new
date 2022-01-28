@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {accordionData} from './api/data'
-import MyAccordion from './MyAccordion';
+// import MyAccordion from './MyAccordion';
+import DiabloAccordion from './diabloAccordion';
 
 const Faq = () => {
   const [data, setData] = useState(accordionData);
@@ -11,7 +12,7 @@ const Faq = () => {
     {
        data.map((curElem) => {
          const { id } = curElem;
-         return <MyAccordion key={ id} { ...curElem }/>
+         return <DiabloAccordion key={ id} { ...curElem }/>
        })
      }
      </section>
