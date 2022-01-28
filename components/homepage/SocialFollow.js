@@ -1,5 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import {
   faYoutube,
   faFacebook,
@@ -9,10 +12,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialFollow() {
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, []);
   return (
-    <div className=" absolute object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block">
+    <div data-aos="right" className=" absolute object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block">
       <h3 className="text-white">Social Follow</h3>
-      <a
+      <a 
         href="https://www.facebook.com/girlscriptsoc/"
         target="_blank"
         className="block pr-4 text-center text-gray-700 text-base bg-white hover:text-blue-600 ease-linear hover:ease-in pt-4" rel="noreferrer"
