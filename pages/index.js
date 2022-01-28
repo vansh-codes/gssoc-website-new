@@ -6,8 +6,11 @@ import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
+
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
   // console.log(colorTheme);
@@ -15,9 +18,17 @@ export default function Home() {
   const { theme, setTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
 
+
+
+
+export default function Home() {
+  useEffect(() => {
+    Aos.init({duration:2000});
+    setMounted(true);
+  }, []);
   if (!mounted) return null;
+
   return (
     <div>
       <Head>
@@ -44,7 +55,7 @@ export default function Home() {
               program by GirlScript Foundation.
             </p>
             <div className="flex items-center mb-44 md:mb-52 lg:mb-56">
-              <button className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-6">
+              <button data-aos="fade-down" className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-6">
                 Register Here
               </button>
               <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
@@ -55,7 +66,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between flex-wrap  mb-24">
-          <img src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true" />
+          <img data-aos="fade-up" src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true" />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
@@ -91,7 +102,7 @@ export default function Home() {
 
         <div className="flex justify-between flex-wrap mb-24">
           <div className="w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-            <img
+            <img 
               className="mb-10"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
             />
@@ -109,7 +120,7 @@ export default function Home() {
               sem at. Nibh in consectetur aliquam in ante pulvinar vehicula sed.
             </p>
           </div>
-          <img
+          <img data-aos="fade-up"
             className="mt-8 md:mt-4 lg:mt-0"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
           />
@@ -123,22 +134,22 @@ export default function Home() {
             </span>
           </p>
           <div className="org__box flex flex-row items-center flex-wrap">
-            <img
+            <img data-aos="fade-right"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
-            <img
+            <img data-aos="fade-right"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
-            <img
+            <img data-aos="fade-right"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
               alt="logo"
             />
-            <img
+            <img data-aos="fade-right" 
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
@@ -157,7 +168,7 @@ export default function Home() {
             </span>
             GSSoC 2022!
           </p>
-          <div className="container my-12 mx-auto">
+          <div data-aos="fade-left" className="container my-12 mx-auto">
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
               <Card
@@ -173,7 +184,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="container my-12 mx-auto ">
+          <div data-aos="fade-right"  className="container my-12 mx-auto ">
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
@@ -200,30 +211,36 @@ export default function Home() {
             </p>
           </div>
           {/* sponsors card container */}
-          <div className="sponsors__card__container flex flex-row justify-between">
+          <div   className="sponsors__card__container flex flex-row justify-between">
             {/* card1 */}
-            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+
+            <div data-aos="up" className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
+
                 Gold Sponsor
               </p>
-              <img
+              <img data-aos="up"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/do_blue.svg"
                 alt="logo"
               />
             </div>
             {/* card2 */}
-            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+
+            <div data-aos="up" className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
+
                 Silver Sponsor
               </p>
-              <img
+              <img 
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/linode.svg"
                 alt="logo"
               />
             </div>
             {/* card3 */}
-            <div className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
+
+            <div data-aos="up" className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded">
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
+
                 Bronze Sponsor
               </p>
               <img
@@ -232,7 +249,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9">
+
+          <div data-aos="up" className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9">
+
             <div className="other__sponsors__title">
               <p className=" dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Other Sponsors
@@ -240,34 +259,34 @@ export default function Home() {
             </div>
             {/* row 1 */}
             <div className="sponsors__row__one flex flex-row mb-9">
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/taskade-logo.png"
                 alt="logo"
               />
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/sticker-mule.png"
                 alt="logo"
               />
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/xyz-logo-color.png"
                 alt="logo"
               />
             </div>
             <div className="sponsors__row__two flex flex-row">
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/sketch-logo-light.png"
                 alt="logo"
               />
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/egghead_logo.png"
                 alt="logo"
               />
-              <img
+              <img data-aos="fade-up"
                 className="h-12 mr-14"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/ORM_logo_red_rgb.png"
                 alt="logo"
