@@ -6,8 +6,18 @@ import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
+  // console.log(colorTheme);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
   return (
     <div>
       <Head>
@@ -18,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SocialFollow />
-      <div className="container mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700">
+      <div className="container transition-colors mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
         <div className="first-section mb-10">
           <div className="basis-1/2">
             <p className="text-black dark:text-white font-bold text-4xl 2.25rem 3rem mb-10">
@@ -47,10 +57,23 @@ export default function Home() {
         <div className="flex justify-between flex-wrap  mb-24">
           <img src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true" />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
-            <img
+            {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
-            />
+            /> */}
+            {theme === "light" ? (
+              <img
+                className=" mt-4 mb-8 md:mb-9 md:mt-0"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+                alt="logo"
+              />
+            ) : (
+              <img
+                className=" mt-4 mb-8 md:mb-9 md:mt-0"
+                src="https://user-images.githubusercontent.com/64256342/151560603-90bbd36c-8b30-4013-9f40-3420d9fb6b5f.png"
+                alt="logo"
+              />
+            )}
             <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
