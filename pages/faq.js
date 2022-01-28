@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {accordionData} from './api/data'
 // import MyAccordion from './MyAccordion';
-import DiabloAccordion from './diabloAccordion';
+import DiabloAccordion from '../components/diabloAccordion';
 
 const Faq = () => {
   const [data, setData] = useState(accordionData);
