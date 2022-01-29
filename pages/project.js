@@ -2,10 +2,21 @@ import React, { useState, useEffect } from 'react';
 import {projectData} from './api/projectsData'
 import Image from "next/image";
 import { Button, ButtonGroup } from '@chakra-ui/react'
-import ProjectModal from '../components/ProjectModal';
+// import ProjectModal from '../components/ProjectModal';
+// import {
+//   Modal,
+//   ModalOverlay,
+//   ModalContent,
+//   ModalHeader,
+//   ModalFooter,
+//   ModalBody,
+//   ModalCloseButton,
+// } from '@chakra-ui/react'
+// import { useDisclosure, Lorem } from '@chakra-ui/react'
 
 const Project = () => {
   const [data, setData] = useState(projectData);
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
     <section >
@@ -27,7 +38,29 @@ const Project = () => {
             <div className="p-4 shadow">
               <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
                 <>
-                  {/* <Button onClick={onOpen}>Open Modal</Button> */}
+                {/* <Button onClick={onOpen}>Open Modal</Button>
+
+                <Modal isOpen={isOpen} onClose={onClose}>
+                  <ModalOverlay />
+                  <ModalContent>
+                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                      <h6> Duh </h6>
+                    </ModalBody>
+
+                    <ModalFooter>
+                      <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        Close
+                      </Button>
+                      <Button variant='ghost'>Secondary Action</Button>
+                    </ModalFooter>
+                  </ModalContent>
+                </Modal> */}
+
+
+
+
                   <div className="font-bold text-indigo-500 md:text-lg">{i+1}. { curElem.project_name }</div>
                   <p className="mb-3 text-sm text-gray-500 md:text-base md:mb-4">
                   { curElem.owner_name }

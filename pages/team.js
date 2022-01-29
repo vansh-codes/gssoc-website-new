@@ -42,12 +42,14 @@ const Team = () => {
                             <div className="flex items-center justify-center w-80" key={i}>
                                 <div className="p-4 shadow">
                                     <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80">
-                                        <Image
-                                            src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166__340.jpg"
+                                        
+                                    {console.log(curElem.Photograph)}
+                                        <img
+                                            src={curElem.Photograph}
                                             alt="Team Member Photo"
                                             className="object-cover object-center w-full h-full"
-                                            height={400}
-                                            width={400}
+                                            // height={400}
+                                            // width={400}
                                         />
                                     </div>
                                     <div className="flex flex-col items-center justify-center">
