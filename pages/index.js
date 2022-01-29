@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
   // console.log(colorTheme);
