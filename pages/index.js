@@ -54,7 +54,7 @@ export default function Home() {
               >
                 Register Here
               </button>
-              <a href="#Learn_more">
+              <a data-aos="fade-down" href="#Learn_more">
                 <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
                   Learn More
                 </p>
