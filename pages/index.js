@@ -54,9 +54,11 @@ export default function Home() {
               >
                 Register Here
               </button>
-              <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
-                Learn More
-              </p>
+              <a href="#Learn_more">
+                <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
+                  Learn More
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -101,10 +103,19 @@ export default function Home() {
 
         <div className="flex justify-between flex-wrap mb-24">
           <div className="w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
-            <img
-              className="mb-10"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
-            />
+            {theme === "light" ? (
+              <img
+                id="Learn_more"
+                className="mb-10"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
+              />
+            ) : (
+              <img
+                id="Learn_more"
+                className="mb-10"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/logo.png?raw=true"
+              />
+            )}
             <p className="text-primary_orange-0 font-semibold text-4xl 2.25rem 3rem mb-10">
               <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About

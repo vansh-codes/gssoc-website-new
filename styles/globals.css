@@ -6,16 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS transitions */
-/* .light {
-  transition: ease-in-out 2s;
-} */
-/* .dark {
-  transition: ease-in-out 2s;
-} */
-/* html {
-  -webkit-transition: 2s ease-out;
-  -moz-transition: 2s ease-out;
-  -o-transition: 2s ease-out;
-  transition: 2s ease-out;
-} */
+html {
+  scroll-behavior: smooth;
+}
