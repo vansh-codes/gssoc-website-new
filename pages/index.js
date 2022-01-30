@@ -177,7 +177,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="be-part-of mb-24">
+        <div className="be-part-of">
           <p className="font-serif font-semibold text-justify dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
