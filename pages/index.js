@@ -347,7 +347,7 @@ export default function Home() {
       {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48">
         <div className="schedule__overview mt-24">
-          <p className="font-serif font-semibold text-3xl ml-5 mb-4">
+          <p className="font-serif font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
             2022!
           </p>
