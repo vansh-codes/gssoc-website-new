@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import {projectData} from './api/projectsData'
 import Image from "next/image";
 import { Button, ButtonGroup } from '@chakra-ui/react'
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from '@chakra-ui/react'
 // import ProjectModal from '../components/ProjectModal';
 // import {
 //   Modal,
@@ -17,6 +25,9 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 const Project = () => {
   const [data, setData] = useState(projectData);
   // const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isOpen, setIsOpen] = React.useState(false)
+  const onClose = () => setIsOpen(false)
+  const cancelRef = React.useRef()
   return (
     <>
     <section >
@@ -34,10 +45,51 @@ const Project = () => {
       {
        data.map((curElem, i) => {
           return (
-          <div className="flex items-center justify-between w-80" key={i}>
+          <div className="flex items-center justify-between w-80" key={i} data-aos="flip-up" data-aos-duration="800">
             <div className="p-4 shadow">
               <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
                 <>
+
+
+
+
+
+
+
+                
+                <Button colorScheme='red' onClick={() => setIsOpen(true)}>
+        Delete Customer
+      </Button>
+
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={onClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+              Delete Customer
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              Are you sure? You can't undo this action afterwards.
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='red' onClick={onClose} ml={3}>
+                Delete
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
+
+
+
                 {/* <Button onClick={onOpen}>Open Modal</Button>
 
                 <Modal isOpen={isOpen} onClose={onClose}>
@@ -80,7 +132,7 @@ const Project = () => {
                   {
                     curElem.technology_used.split(",").map((techStk, k) => {
                       return(
-                        <Button size='sm' colorScheme='orange' key={k}>{techStk}</Button>
+                        <Button size='sm' colorScheme='orange' key={k}>{techStk.trim()}</Button>
                       )
                     })
                   }

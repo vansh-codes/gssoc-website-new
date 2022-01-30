@@ -74,7 +74,7 @@ export default function Home() {
 
         <div className="flex justify-between items-center flex-wrap  mb-24">
           <img
-            data-aos="fade-up"
+            data-aos="flip-left" data-aos-duration="700"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true"
           />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
@@ -147,7 +147,7 @@ export default function Home() {
             </p>
           </div>
           <img
-            data-aos="fade-up"
+            data-aos="flip-right" data-aos-duration="700"
             className="mt-8 md:mt-4 lg:mt-0"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
           />
@@ -162,25 +162,25 @@ export default function Home() {
           </p>
           <div className="org__box flex flex-row items-center flex-wrap">
             <img
-              data-aos="fade-right"
+              data-aos="fade-right" data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right"
+              data-aos="fade-right" data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right"
+              data-aos="fade-right" data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right"
+              data-aos="fade-right" data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
@@ -199,11 +199,11 @@ export default function Home() {
             </span>
             GSSoC 2022!
           </p>
-          <div data-aos="fade-left" className="container my-12 mx-auto">
+          <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="700" className="container my-12 mx-auto">
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
               <Card
-                title="Participate in GSSoC 2021"
+                title="Participate in GSSoC'22"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
               />
@@ -215,7 +215,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-aos="fade-right" className="container my-12 mx-auto ">
+          <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="700" className="container my-12 mx-auto ">
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
@@ -246,14 +246,16 @@ export default function Home() {
             {/* card1 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
                 Gold Sponsor
               </p>
               <img
-                data-aos="up"
+                data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/do_blue.svg"
                 alt="logo"
               />
@@ -261,13 +263,16 @@ export default function Home() {
             {/* card2 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Silver Sponsor
               </p>
               <img
+              data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/linode.svg"
                 alt="logo"
               />
@@ -275,13 +280,16 @@ export default function Home() {
             {/* card3 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Bronze Sponsor
               </p>
               <img
+              data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/honeybadger.svg"
                 alt="logo"
               />
@@ -289,7 +297,8 @@ export default function Home() {
           </div>
 
           <div
-            data-aos="up"
+            data-aos="fade-up"
+     data-aos-anchor-placement="top-center" data-aos-duration="700"
             className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9"
           >
             <div className="other__sponsors__title">

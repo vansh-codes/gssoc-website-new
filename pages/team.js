@@ -39,11 +39,11 @@ const Team = () => {
                                 </Skeleton>
                             </div>
                             ):(
-                            <div className="flex items-center justify-center w-80" key={i}>
+                            <div className="flex items-center justify-center w-80" key={i} >
                                 <div className="p-4 shadow">
                                     <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80">
                                         
-                                    {console.log(curElem.Photograph)}
+                                    {/* {console.log(curElem.Photograph)} */}
                                         <img
                                             src={curElem.Photograph}
                                             alt="Team Member Photo"
