@@ -2,32 +2,32 @@ import React, { useState, useEffect } from 'react';
 import {projectData} from './api/projectsData'
 import Image from "next/image";
 import { Button, ButtonGroup } from '@chakra-ui/react'
-import {
-  AlertDialog,
-  AlertDialogBody,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogContent,
-  AlertDialogOverlay,
-} from '@chakra-ui/react'
-// import ProjectModal from '../components/ProjectModal';
 // import {
-//   Modal,
-//   ModalOverlay,
-//   ModalContent,
-//   ModalHeader,
-//   ModalFooter,
-//   ModalBody,
-//   ModalCloseButton,
+//   AlertDialog,
+//   AlertDialogBody,
+//   AlertDialogFooter,
+//   AlertDialogHeader,
+//   AlertDialogContent,
+//   AlertDialogOverlay,
 // } from '@chakra-ui/react'
-// import { useDisclosure, Lorem } from '@chakra-ui/react'
+// import ProjectModal from '../components/ProjectModal';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+import { useDisclosure, Lorem } from '@chakra-ui/react'
 
 const Project = () => {
   const [data, setData] = useState(projectData);
-  // const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isOpen, setIsOpen] = React.useState(false)
-  const onClose = () => setIsOpen(false)
-  const cancelRef = React.useRef()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const [isOpen, setIsOpen] = React.useState(false)
+  // const onClose = () => setIsOpen(false)
+  // const cancelRef = React.useRef()
   return (
     <>
     <section >
@@ -56,7 +56,7 @@ const Project = () => {
 
 
 
-                
+{/*                 
                 <Button colorScheme='red' onClick={() => setIsOpen(true)}>
         Delete Customer
       </Button>
@@ -86,11 +86,11 @@ const Project = () => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>
-      </AlertDialog>
+      </AlertDialog> */}
 
 
 
-                {/* <Button onClick={onOpen}>Open Modal</Button>
+                <Button onClick={onOpen}>Open Modal</Button>
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay />
@@ -108,7 +108,7 @@ const Project = () => {
                       <Button variant='ghost'>Secondary Action</Button>
                     </ModalFooter>
                   </ModalContent>
-                </Modal> */}
+                </Modal>
 
 
 
