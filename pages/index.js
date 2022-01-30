@@ -233,6 +233,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* sponsors */}
       <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
@@ -288,6 +289,7 @@ export default function Home() {
             </div>
           </div>
 
+          
           <div
             data-aos="up"
             className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9"
