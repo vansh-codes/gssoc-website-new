@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik");
-/* ! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com */html{-moz-tab-size:4;-o-tab-size:4}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input:-ms-input-placeholder,textarea:-ms-input-placeholder{opacity:1;color:#9ca3af}.h-fit{height:-webkit-fit-content}.object-cover{-o-object-fit:cover}.object-center{-o-object-position:center}.object-right{-o-object-position:right}html{scroll-behavior:smooth}
+/* ! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com */html{-moz-tab-size:4;-o-tab-size:4}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input:-ms-input-placeholder,textarea:-ms-input-placeholder{opacity:1;color:#9ca3af}.h-fit{height:-webkit-fit-content}.object-cover{-o-object-fit:cover}.object-center{-o-object-position:center}.object-right{-o-object-position:right}html{scroll-behavior:smooth}@-webkit-keyframes float{0%{transform:translatey(0)}50%{transform:translatey(-20px)}to{transform:translatey(0)}}@keyframes float{0%{transform:translatey(0)}50%{transform:translatey(-20px)}to{transform:translatey(0)}}.img__container>img{transform:translatey(0);-webkit-animation:float 6s ease-in-out infinite;animation:float 6s ease-in-out infinite}
 
 /*
 ! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
