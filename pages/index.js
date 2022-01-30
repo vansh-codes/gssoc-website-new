@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
       <SocialFollow />
       <div className="container transition-colors mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
-        <div className="first-section mb-10">
+        <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2">
             <p className="text-black dark:text-white font-bold text-4xl 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
@@ -48,7 +48,7 @@ export default function Home() {
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
             </p>
-            <div className="flex items-center mb-44 md:mb-52 lg:mb-56">
+            <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <button
                 data-aos="fade-down"
                 className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-6"
@@ -62,9 +62,17 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <div data-aos="fade-down" className="hero__image">
+            <div className="img__container">
+              <img
+                src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
+                alt="hero-image"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="flex justify-between flex-wrap  mb-24">
+        <div className="flex justify-between items-center flex-wrap  mb-24">
           <img
             data-aos="fade-up"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true"
@@ -98,7 +106,14 @@ export default function Home() {
               Fringilla turpis sit laoreet pellentesque sit. Ultrices consequat
               tempor nisi, tincidunt tortor, elit pharetra, nulla. Enim a quam
               tortor, sodales. Vitae placerat egestas pellentesque senectus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio consectetur dolore possimus tempora, aperiam earum
+              eligendi facilis. Itaque tenetur, nobis atque consequuntur nisi
+              expedita iure praesentium dolore ad. Eos, labore!
             </p>
+            <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
+              Get to know more about GIRLSCRIPT!
+            </button>
           </div>
         </div>
 
@@ -327,7 +342,19 @@ export default function Home() {
         </div>
       </div>
       {/* Schedule */}
-      <Schedule />
+      {/* <Schedule /> */}
+      <div className="schedule__container flex flex-col items-center mb-48">
+        <div className="schedule__overview mt-24">
+          <p className="font-serif font-semibold text-3xl ml-5 mb-4">
+            <span className="text-primary_orange-0">Schedule</span> of GSSoC
+            2022!
+          </p>
+          <img
+            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Schedule/Schedule.png?raw=true"
+            alt="schedule"
+          />
+        </div>
+      </div>
     </div>
   );
 }
