@@ -156,13 +156,13 @@ export default function Home() {
         </div>
 
         <div className="organisation mb-24">
-          <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl 2.25rem 3rem mb-8">
-            Some of the{" "}
-            <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
+          <p className="font-serif font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+            Some of the <br />
+            <span className="text-[#511A97] dark:text-primary_orange-0 text-4xl 2.25rem 3rem">
               participating organisations!
             </span>
           </p>
-          <div className="org__box flex flex-row items-center flex-wrap">
+          <div className="org__box flex flex-row items-center justify-center flex-wrap">
             <img
               data-aos="fade-right"
               data-aos-duration="500"
