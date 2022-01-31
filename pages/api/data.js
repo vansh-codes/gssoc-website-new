@@ -36,7 +36,7 @@ export const accordionData = [
     },
     {
         id: 8,
-        question: 'From where do we need to start being a beginner as of now so as contribute properly in the projects?',
+        question: 'Where do we start as a beginner to contribute properly in the projects?',
         answer: 'We’ll be providing you with the links on our official website to start with Github and various other development to make sure that everyone is able to aptly contribute for the projects. '
     },
     {
