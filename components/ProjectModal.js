@@ -13,8 +13,9 @@ import {
 import { Button } from "@chakra-ui/react";
 import { useDisclosure, Lorem } from "@chakra-ui/react";
 
-const ProjectModal = ({ currProject }) => {
+const ProjectModal = ({ ProjID }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [data, setData] = useState(projectData);
   return (
     // <>
     //   <Button onClick={onOpen}>Open Modal</Button>
@@ -47,12 +48,30 @@ const ProjectModal = ({ currProject }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Mentors</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <h6> Duh </h6>
+            {/* {curElem.mentors_id.map((mentor, j) => {
+              return (
+                <h6 className="mb-3 text-sm text-gray-400" key={j}>
+                  {j + 1}. {mentor.name}
+                </h6>
+              );
+            })} */}
+            {ProjID.project_id}
+            {/* {console.log(ProjID.mentors_id)} */}
+            {ProjID.mentors_id.map((mentor, j) => {
+              <p>{mentor.name}</p>;
+              {
+                console.log(mentor.name);
+              }
+            })}
+            {/* {data.map((curElem, i) => {
+              return (
+               {cu}
+              );
+            })} */}
           </ModalBody>
-
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close

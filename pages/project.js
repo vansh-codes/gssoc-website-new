@@ -104,7 +104,7 @@ const Project = () => {
                           </ModalFooter>
                         </ModalContent>
                       </Modal> */}
-                      <ProjectModal />
+                      <ProjectModal ProjID={curElem} />
 
                       <div className="font-bold text-indigo-500 md:text-lg">
                         {i + 1}. {curElem.project_name}
@@ -113,13 +113,13 @@ const Project = () => {
                         {curElem.owner_name}
                       </p>
                       <br />
-                      {curElem.mentors_id.map((mentor, j) => {
+                      {/* {curElem.mentors_id.map((mentor, j) => {
                         return (
                           <h6 className="mb-3 text-sm text-gray-400" key={j}>
                             {j + 1}. {mentor.name}
                           </h6>
                         );
-                      })}
+                      })} */}
                       <br />
                       <ButtonGroup
                         className="flex flex-wrap gap-1"
@@ -149,3 +149,36 @@ const Project = () => {
 };
 
 export default Project;
+
+// curElem: {
+//   project_id: number;
+//   owner_name: string;
+//   github_username: string;
+//   project_name: string;
+//   project_description: string;
+//   project_video_link: string;
+//   technology_used: string;
+//   github: string;
+//   email: string;
+//   repo_fullname: string;
+//   mentors_id: ({
+//       ...;
+//   } | {
+//       ...;
+//   })[];
+//   project_slack_channel?: undefined;
+// } | ... 4 more ... | {
+//   ...;
+// }
+
+// mentors_id: ({
+//   name: string;
+//   github: string;
+//   email: string;
+// } | {
+//   name: string;
+//   email: string;
+//   github?: undefined;
+// })[] | ({
+//   name: string;
+//   email?: undefined;
