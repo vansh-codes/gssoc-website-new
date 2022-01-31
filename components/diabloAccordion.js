@@ -13,7 +13,7 @@ import {
     const [show, setShow] = useState(false);
     return (
         <Accordion allowMultiple>
-        <AccordionItem>
+        <AccordionItem m={2} color='orange' backgroundColor='#1F2937' w="100%">
           <h2>
             <AccordionButton>
               <Box flex='1' textAlign='left'>
