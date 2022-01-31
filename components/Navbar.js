@@ -38,13 +38,14 @@ export const Navbar = () => {
               /> */}
               {theme === "light" ? (
                 <img
-                  src="https://user-images.githubusercontent.com/64256342/151362487-b8574a92-6d37-418b-8c97-03ba3470f4fa.png"
-                  alt="logo"
+                  id="Learn_more"
+                  className="w-2/5"
+                  src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
                 />
               ) : (
                 <img
-                  src="https://user-images.githubusercontent.com/64256342/151406017-3c029548-2b21-47a6-b81c-0bcb24310e77.png"
-                  alt="logo"
+                  id="Learn_more"
+                  src="https://user-images.githubusercontent.com/64256342/151821599-f8a08259-8b4d-443f-bbd6-547b56c628d6.png"
                 />
               )}
             </span>

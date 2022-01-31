@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ["Rubik", "ui-sans-serif"],
+      sans: ["Fira Code", "monospace"],
     },
     extend: {
       colors: {

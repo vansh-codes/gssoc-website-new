@@ -36,11 +36,10 @@ export default function Home() {
       <div className="container transition-colors mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2">
-            <p className="text-black dark:text-white font-bold text-4xl 2.25rem 3rem mb-10">
+            <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
-              <br />
-              is here! &nbsp;
+              <p className="mt-2">is here!</p>
             </p>
             <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
@@ -96,7 +95,7 @@ export default function Home() {
                 alt="logo"
               />
             )}
-            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5">
+            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
             </p>
@@ -133,7 +132,7 @@ export default function Home() {
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/logo.png?raw=true"
               />
             )}
-            <p className="text-primary_orange-0 font-semibold text-4xl 2.25rem 3rem mb-10">
+            <p className="text-primary_orange-0 font-semibold font-sans text-4xl 2.25rem 3rem mb-10">
               <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
@@ -156,7 +155,7 @@ export default function Home() {
         </div>
 
         <div className="organisation mb-24">
-          <p className="font-serif font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+          <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
             Some of the <br />
             <span className="text-[#511A97] dark:text-primary_orange-0 text-4xl 2.25rem 3rem">
               participating organisations!
@@ -192,17 +191,18 @@ export default function Home() {
               alt="logo"
             />
             <div>
-              <p className="font-serif font-medium text-4xl dark:text-white text-gray-800">
+              <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
                 and more ...
               </p>
             </div>
           </div>
         </div>
         <div className="be-part-of">
-          <p className="font-serif font-semibold text-justify dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
+          <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
+            <br />
             GSSoC 2022!
           </p>
           <div
@@ -253,7 +253,7 @@ export default function Home() {
       <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
           <div className="sponsors__header mb-9">
-            <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl leading-10">
+            <p className="font-sans font-semibold dark:text-white text-gray-800 text-4xl leading-10">
               Our Sponsors
             </p>
           </div>
@@ -377,7 +377,7 @@ export default function Home() {
       {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48">
         <div className="schedule__overview mt-24">
-          <p className="font-serif font-semibold text-3xl ml-5 mb-4 dark:text-white">
+          <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
             2022!
           </p>

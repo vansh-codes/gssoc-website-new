@@ -1,5 +1,6 @@
 /* Global fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
