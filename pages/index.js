@@ -74,7 +74,8 @@ export default function Home() {
 
         <div className="flex justify-between items-center flex-wrap  mb-24">
           <img
-            data-aos="flip-left" data-aos-duration="700"
+            data-aos="flip-left"
+            data-aos-duration="700"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true"
           />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
@@ -117,8 +118,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-between flex-wrap mb-24">
-          <div className="w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
+        <div className="flex justify-between items-center bg-[#FFECDE] dark:bg-gray-600 flex-wrap rounded-xl mb-24">
+          <div className="w-560px px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {theme === "light" ? (
               <img
                 id="Learn_more"
@@ -147,8 +148,9 @@ export default function Home() {
             </p>
           </div>
           <img
-            data-aos="flip-right" data-aos-duration="700"
-            className="mt-8 md:mt-4 lg:mt-0"
+            data-aos="flip-right"
+            data-aos-duration="700"
+            className="mt-8 md:mt-4 lg:mt-0 lg:pr-10"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
           />
         </div>
@@ -162,25 +164,29 @@ export default function Home() {
           </p>
           <div className="org__box flex flex-row items-center flex-wrap">
             <img
-              data-aos="fade-right" data-aos-duration="500"
+              data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right" data-aos-duration="500"
+              data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right" data-aos-duration="500"
+              data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
               alt="logo"
             />
             <img
-              data-aos="fade-right" data-aos-duration="500"
+              data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
@@ -199,7 +205,12 @@ export default function Home() {
             </span>
             GSSoC 2022!
           </p>
-          <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="700" className="container my-12 mx-auto">
+          <div
+            data-aos="fade-left"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className="container my-12 mx-auto"
+          >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
               <Card
@@ -215,7 +226,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="700" className="container my-12 mx-auto ">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className="container my-12 mx-auto "
+          >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
@@ -247,7 +263,8 @@ export default function Home() {
 
             <div
               data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
@@ -255,7 +272,8 @@ export default function Home() {
               </p>
               <img
                 data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/do_blue.svg"
                 alt="logo"
               />
@@ -264,15 +282,17 @@ export default function Home() {
 
             <div
               data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Silver Sponsor
               </p>
               <img
-              data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/linode.svg"
                 alt="logo"
               />
@@ -281,15 +301,17 @@ export default function Home() {
 
             <div
               data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Bronze Sponsor
               </p>
               <img
-              data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/honeybadger.svg"
                 alt="logo"
               />
@@ -298,7 +320,8 @@ export default function Home() {
 
           <div
             data-aos="fade-up"
-     data-aos-anchor-placement="top-center" data-aos-duration="700"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="700"
             className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9"
           >
             <div className="other__sponsors__title">
