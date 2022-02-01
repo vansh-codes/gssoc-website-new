@@ -30,7 +30,7 @@ function ComingSoon() {
     },
   ];
   return (
-    <div className="h-[100vh] flex flex-col items-center justify-center">
+    <div className="h-[100vh] md:h-[100vh] py-5 flex flex-col items-center justify-between md:justify-center px-2">
       <div className="text__container">
         <h1 className="text-3xl dark:text-white text-gray-900 font-sans">
           Coming soon 🚧
@@ -38,7 +38,7 @@ function ComingSoon() {
       </div>
       <div className="redirect__container flex mt-10">
         <Link href="/">
-          <p className="text-2xl font-serif text-center cursor-pointer">
+          <p className="text-2xl font-serif text-center cursor-pointer mb-5 md:mb-10">
             Meanwhile you can hangout at our{" "}
             <span className="dark:text-primary_orange-0 ">
               awesome Homepage
@@ -46,7 +46,7 @@ function ComingSoon() {
           </p>
         </Link>
       </div>
-      <div className="review__container w-1/2 mt-10 font-sans italic bg-gray-800 px-5 py-5 rounded-xl">
+      <div className="review__container md:w-1/2 font-sans italic bg-gray-800 px-5 py-5 rounded-xl">
         <p className="dark:text-white text-primary_orange-0 ">
           {reviews[random_index].review}
         </p>
