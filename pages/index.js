@@ -6,6 +6,7 @@ import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
+import Tilt from 'react-tilt';
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -60,14 +61,17 @@ export default function Home() {
                 </p>
               </a>
             </div>
-          </div>
+          </div> 
+          
           <div data-aos="fade-down" className="hero__image">
-            <div className="img__container">
+          <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 600, width: 600 }} >
+            <div className="img__container" >
               <img
                 src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
                 alt="hero-image"
               />
             </div>
+          </Tilt>
           </div>
         </div>
 
@@ -258,7 +262,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* sponsors */}
       {/* <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
@@ -325,7 +328,6 @@ export default function Home() {
             </div>
           </div>
 
-          
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
