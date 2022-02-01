@@ -21,7 +21,7 @@ function Schedule() {
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl mb-1">
                   4th Mar to 5th Mar
                 </h3>
@@ -40,7 +40,7 @@ function Schedule() {
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 border-orange-500 bg-white text-gray-600 dark:bg-slate-700 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 border-orange-500 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   08th Mar
                 </h3>
@@ -59,7 +59,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   10th Mar to 12th Mar
                 </h3>
@@ -78,7 +78,7 @@ function Schedule() {
                   <i className="fas fa-exclamation-circle text-gray-400"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   10th Mar
                 </h3>
@@ -95,7 +95,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   01st Apr
                 </h3>
@@ -114,7 +114,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   31st May
                 </h3>
@@ -131,7 +131,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   2nd week of July
                 </h3>
