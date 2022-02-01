@@ -36,11 +36,10 @@ export default function Home() {
       <div className="container transition-colors mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2">
-            <p className="text-black dark:text-white font-bold text-4xl 2.25rem 3rem mb-10">
+            <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
-              <br />
-              is here! &nbsp;
+              <p className="mt-2">is here!</p>
             </p>
             <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
@@ -74,7 +73,8 @@ export default function Home() {
 
         <div className="flex justify-between items-center flex-wrap  mb-24">
           <img
-            data-aos="fade-up"
+            data-aos="flip-left"
+            data-aos-duration="700"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true"
           />
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
@@ -95,7 +95,7 @@ export default function Home() {
                 alt="logo"
               />
             )}
-            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5">
+            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
             </p>
@@ -117,8 +117,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-between flex-wrap mb-24">
-          <div className="w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
+        <div className="flex justify-between items-center bg-[#FFECDE] dark:bg-gray-600 flex-wrap rounded-xl mb-24">
+          <div className="w-560px px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {theme === "light" ? (
               <img
                 id="Learn_more"
@@ -132,7 +132,7 @@ export default function Home() {
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/logo.png?raw=true"
               />
             )}
-            <p className="text-primary_orange-0 font-semibold text-4xl 2.25rem 3rem mb-10">
+            <p className="text-primary_orange-0 font-semibold font-sans text-4xl 2.25rem 3rem mb-10">
               <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
@@ -146,64 +146,86 @@ export default function Home() {
               sem at. Nibh in consectetur aliquam in ante pulvinar vehicula sed.
             </p>
           </div>
-          <img
-            data-aos="fade-up"
-            className="mt-8 md:mt-4 lg:mt-0"
+          {/* <img
+            data-aos="flip-right"
+            data-aos-duration="700"
+            className="mt-8 md:mt-4 lg:mt-0 lg:pr-10"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
-          />
+          /> */}
+          {theme === "light" ? (
+            <img
+              id="Learn_more"
+              src="https://user-images.githubusercontent.com/64256342/151832119-43240ddb-f395-4d2c-8bdf-ef9e92ae15c9.png"
+            />
+          ) : (
+            <img
+              id="Learn_more"
+              src="https://user-images.githubusercontent.com/64256342/151832205-3b2b2c01-9ae9-47f9-a8e7-9414f661ccb4.png"
+            />
+          )}
         </div>
 
         <div className="organisation mb-24">
-          <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl 2.25rem 3rem mb-8">
-            Some of the{" "}
-            <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
+          <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+            Some of the <br />
+            <span className="text-[#511A97] dark:text-primary_orange-0 text-4xl 2.25rem 3rem">
               participating organisations!
             </span>
           </p>
-          <div className="org__box flex flex-row items-center flex-wrap">
+          <div className="org__box flex flex-row items-center justify-center flex-wrap">
             <img
               data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
             <img
               data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
             <img
               data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
               alt="logo"
             />
             <img
               data-aos="fade-right"
+              data-aos-duration="500"
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
             />
             <div>
-              <p className="font-serif font-medium text-4xl dark:text-white text-gray-800">
+              <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
                 and more ...
               </p>
             </div>
           </div>
         </div>
         <div className="be-part-of">
-          <p className="font-serif font-semibold text-justify dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
+          <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
+            <br />
             GSSoC 2022!
           </p>
-          <div data-aos="fade-left" className="container my-12 mx-auto">
+          <div
+            data-aos="fade-left"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className="container my-12 mx-auto"
+          >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
               <Card
-                title="Participate in GSSoC 2021"
+                title="Participate in GSSoC'22"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
               />
@@ -215,7 +237,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-aos="fade-right" className="container my-12 mx-auto ">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className="container my-12 mx-auto "
+          >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
@@ -238,7 +265,7 @@ export default function Home() {
       <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
           <div className="sponsors__header mb-9">
-            <p className="font-serif font-semibold dark:text-white text-gray-800 text-4xl leading-10">
+            <p className="font-sans font-semibold dark:text-white text-gray-800 text-4xl leading-10">
               Our Sponsors
             </p>
           </div>
@@ -247,14 +274,18 @@ export default function Home() {
             {/* card1 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl mb-9">
                 Gold Sponsor
               </p>
               <img
-                data-aos="up"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/do_blue.svg"
                 alt="logo"
               />
@@ -262,13 +293,18 @@ export default function Home() {
             {/* card2 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Silver Sponsor
               </p>
               <img
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/linode.svg"
                 alt="logo"
               />
@@ -276,13 +312,18 @@ export default function Home() {
             {/* card3 */}
 
             <div
-              data-aos="up"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="700"
               className="dark:bg-white sponsor__card__wrapper w-[368px] h-[228px] px-9 py-9 shadow-xl rounded"
             >
               <p className="dark:text-gray-800 text-[#ff7a19] font-serif font-semibold text-3xl  mb-9">
                 Bronze Sponsor
               </p>
               <img
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="700"
                 src="https://gssoc.girlscript.tech/images/sponsor/2021/honeybadger.svg"
                 alt="logo"
               />
@@ -291,7 +332,9 @@ export default function Home() {
 
           
           <div
-            data-aos="up"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="700"
             className="dark:bg-white other__sponsors px-9 py-9 shadow-xl rounded mt-9"
           >
             <div className="other__sponsors__title">
@@ -347,7 +390,7 @@ export default function Home() {
       {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48">
         <div className="schedule__overview mt-24">
-          <p className="font-serif font-semibold text-3xl ml-5 mb-4 dark:text-white">
+          <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
             2022!
           </p>
