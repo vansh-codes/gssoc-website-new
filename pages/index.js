@@ -217,9 +217,8 @@ export default function Home() {
             GSSoC 2022!
           </p>
           <div
-            data-aos="fade-left"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-left"
+            data-aos-duration="1500"
             className="container my-12 mx-auto"
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
@@ -238,9 +237,8 @@ export default function Home() {
             </div>
           </div>
           <div
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-right"
+            data-aos-duration="1500"
             className="container my-12 mx-auto "
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
@@ -262,16 +260,15 @@ export default function Home() {
       </div>
 
       {/* sponsors */}
-      <div className="sponsors__container flex flex-row justify-center">
+      {/* <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
           <div className="sponsors__header mb-9">
             <p className="font-sans font-semibold dark:text-white text-gray-800 text-4xl leading-10">
               Our Sponsors
             </p>
           </div>
-          {/* sponsors card container */}
+          
           <div className="sponsors__card__container flex flex-row justify-between">
-            {/* card1 */}
 
             <div
               data-aos="fade-up"
@@ -290,7 +287,6 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            {/* card2 */}
 
             <div
               data-aos="fade-up"
@@ -309,7 +305,6 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            {/* card3 */}
 
             <div
               data-aos="fade-up"
@@ -342,7 +337,6 @@ export default function Home() {
                 Other Sponsors
               </p>
             </div>
-            {/* row 1 */}
             <div className="sponsors__row__one flex flex-row mb-9">
               <img
                 data-aos="fade-up"
@@ -385,7 +379,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Schedule */}
       {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48">
