@@ -15,7 +15,7 @@ const Team = () => {
 
   
         const fetchData = () => {
-          fetch("https://jsonplaceholder.typicode.com/users")
+          fetch("")
             .then(response => {
               return response.json()
             })

@@ -1,417 +1,240 @@
-  
-      "2020": [
+   [
         {
-          " ": "Anubha Maneshwar",
-          "position": "Founder & CEO, GirlScript Foundation India",
+          " Full Name": "Anubha Maneshwar",
+          "Designation in GSSOC'22": "Founder & CEO, GirlScript Foundation India",
           "image": "images/team/2020/anubha.jpg",
           
-            "github": "https://github.com/anubhamane",
-            "linkedin": "https://www.linkedin.com/in/anubhamane/",
+            "Github Account": "https://github.com/anubhamane",
+            "LinkedIn Profile": "https://www.linkedin.com/in/anubhamane/",
             "facebook": "https://www.facebook.com/amaneshwar"
-          } 
+           
         },
         {
-          " ": "Mohit Varu",
-          "position": "COO, GirlScript Foundation India",
+          " Full Name": "Mohit Varu",
+          "Designation in GSSOC'22": "COO, GirlScript Foundation India",
           "image": "images/team/2020/mohit.jpg",
           
-            "linkedin": "https://www.linkedin.com/in/mohitvaru/"
-          } 
+            "LinkedIn Profile": "https://www.linkedin.com/in/mohitvaru/"
+           
         },
         {
-          " ": "Vaishnavi Janardhan",
-          "position": "Project Lead",
+          " Full Name": "Vaishnavi Janardhan",
+          "Designation in GSSOC'22": "Project Lead",
           "image": "images/team/2020/Vaishnavi.jpg",
           
-            "github": "https://github.com/vaishnavi-janardhan",
-            "linkedin": "https://www.linkedin.com/in/vaish-janardhan/",
+            "Github Account": "https://github.com/vaishnavi-janardhan",
+            "LinkedIn Profile": "https://www.linkedin.com/in/vaish-janardhan/",
             "facebook": "https://www.facebook.com/vaishnavi.janardhan.56"
-          } 
+          
         },
         {
-          " ": "Shivam Kumar Jha",
-          "position": "Web Lead",
+          " Full Name": "Shivam Kumar Jha",
+          "Designation in GSSOC'22": "Web Lead",
           "image": "images/team/2020/shivam.jpg",
           
-            "github": "https://www.github.com/thealphadollar",
-            "linkedin": "https://www.linkedin.com/in/thealphadollar",
+            "Github Account": "https://www.github.com/thealphadollar",
+            "LinkedIn Profile": "https://www.linkedin.com/in/thealphadollar",
             "facebook": "https://www.facebook.com/thealphadollar"
-          } 
+          
         },
         {
-          " ": "Pawan Kolhe",
-          "position": "Web Team",
+          " Full Name": "Pawan Kolhe",
+          "Designation in GSSOC'22": "Web Team",
           "image": "images/team/2020/Pawan.jpg",
           
-            "github": "https://github.com/PawanKolhe",
-            "linkedin": "https://www.linkedin.com/in/kolhepawan/",
+            "Github Account": "https://github.com/PawanKolhe",
+            "LinkedIn Profile": "https://www.linkedin.com/in/kolhepawan/",
             "facebook": "https://www.facebook.com/pawankolhe"
-          } 
+          
         },
         {
-          " ": "Ditikrushna Giri",
-          "position": "Web Team",
+          " Full Name": "Ditikrushna Giri",
+          "Designation in GSSOC'22": "Web Team",
           "image": "images/team/2020/ditikrushna.jpg",
           
-            "github": "https://github.com/ditikrushna",
+            "Github Account": "https://github.com/ditikrushna",
             "facebook": "https://www.facebook.com/diti.giri"
-          } 
+          
         },
         {
-          " ": "Muskan Khedia",
-          "position": "Web Team",
+          " Full Name": "Muskan Khedia",
+          "Designation in GSSOC'22": "Web Team",
           "image": "images/team/2020/Muskan.jpg",
           
-            "github": "https://github.com/muskankhedia",
-            "linkedin": "https://www.linkedin.com/in/muskan-khedia-b5b97015a/",
+            "Github Account": "https://github.com/muskankhedia",
+            "LinkedIn Profile": "https://www.linkedin.com/in/muskan-khedia-b5b97015a/",
             "facebook": "https://www.facebook.com/profile.php?id=100003692231508"
-          } 
+          
         },
         {
-          " ": "Sanjeev Kumar Sharma",
-          "position": "Web Team",
+          " Full Name": "Sanjeev Kumar Sharma",
+          "Designation in GSSOC'22": "Web Team",
           "image": "images/team/2020/Sanjeev.jpg",
           
-            "github": "https://github.com/thedevelopersanjeev",
-            "linkedin": "https://www.linkedin.com/in/codersanjeev/",
+            "Github Account": "https://github.com/thedevelopersanjeev",
+            "LinkedIn Profile": "https://www.linkedin.com/in/codersanjeev/",
             "facebook": "https://www.facebook.com/codersanjeev"
-          } 
+          
         },
         {
-          " ": "Parteek Rawal",
-          "position": "Sponsorship Lead",
+          " Full Name": "Parteek Rawal",
+          "Designation in GSSOC'22": "Sponsorship Lead",
           "image": "images/team/2020/Prateekrawal.jpg",
           
-            "github": "https://github.com/prateekrawal",
-            "linkedin": "https://www.linkedin.com/in/parteekrawal",
+            "Github Account": "https://github.com/prateekrawal",
+            "LinkedIn Profile": "https://www.linkedin.com/in/parteekrawal",
             "facebook": "https://m.facebook.com/tranquilgoof"
-          } 
+          
         },
         {
-          " ": "Tanisha Sabherwal",
-          "position": "Sponsorship Team",
+          " Full Name": "Tanisha Sabherwal",
+          "Designation in GSSOC'22": "Sponsorship Team",
           "image": "images/team/2020/Tanisha.jpg",
           
-            "github": "https://github.com/tanisha03",
-            "linkedin": "https://www.linkedin.com/in/tanisha-sabherwal-7b968a146",
+            "Github Account": "https://github.com/tanisha03",
+            "LinkedIn Profile": "https://www.linkedin.com/in/tanisha-sabherwal-7b968a146",
             "facebook": "https://www.facebook.com/tanisha.sabherwal.1"
-          } 
+          
         },
         {
-          " ": "Priya Mehta",
-          "position": "Sponsorship Team",
+          " Full Name": "Priya Mehta",
+          "Designation in GSSOC'22": "Sponsorship Team",
           "image": "images/team/2020/PriyaMehta.jpg",
           
-            "github": "https://github.com/priyamehta2772",
-            "linkedin": "https://www.linkedin.com/in/priya-m-968428132/",
+            "Github Account": "https://github.com/priyamehta2772",
+            "LinkedIn Profile": "https://www.linkedin.com/in/priya-m-968428132/",
             "facebook": "https://www.facebook.com/PriyaMehta2772"
-          } 
+          
         },
         {
-          " ": "Anika Sharma",
-          "position": "Sponsorship Team",
+          " Full Name": "Anika Sharma",
+          "Designation in GSSOC'22": "Sponsorship Team",
           "image": "images/team/2020/AnikaSharma.jpg",
           
-            "linkedin": "https://www.linkedin.com/in/sharma3anika",
+            "LinkedIn Profile": "https://www.linkedin.com/in/sharma3anika",
             "facebook": "https://www.facebook.com/ona.shara"
-          } 
+          
         },
         {
-          " ": "Debdut Goswami",
-          "position": "Content Team",
+          " Full Name": "Debdut Goswami",
+          "Designation in GSSOC'22": "Content Team",
           "image": "images/team/2020/Debdut.jpg",
           
-            "github": "https://github.com/debdutgoswami",
-            "linkedin": "https://www.linkedin.com/in/debdutgoswami",
+            "Github Account": "https://github.com/debdutgoswami",
+            "LinkedIn Profile": "https://www.linkedin.com/in/debdutgoswami",
             "facebook": "https://www.facebook.com/debdut.goswami"
-          } 
+          
         },
         {
-          " ": "Saumya Singh",
-          "position": "Content Team",
+          " Full Name": "Saumya Singh",
+          "Designation in GSSOC'22": "Content Team",
           "image": "images/team/2020/SaumyaSingh.jpg",
           
-            "github": "https://github.com/SaumyaSingh1",
-            "linkedin": "https://www.linkedin.com/in/saumya-singh-558587137/"
+            "Github Account": "https://github.com/SaumyaSingh1",
+            "LinkedIn Profile": "https://www.linkedin.com/in/saumya-singh-558587137/"
           
         },
         {
-          " ": "Manish Virgat",
-          "position": "Content Team",
+          " Full Name": "Manish Virgat",
+          "Designation in GSSOC'22": "Content Team",
           "image": "images/team/2020/ManishVirgat.jpg",
           
-            "github": "https://github.com/V4MP1R3-GIT",
-            "linkedin": "https://www.linkedin.com/in/manishvirgat",
+            "Github Account": "https://github.com/V4MP1R3-GIT",
+            "LinkedIn Profile": "https://www.linkedin.com/in/manishvirgat",
             "facebook": "https://www.facebook.com/the.manish.virgat"
           
         },
         {
-          " ": "Ketan Bansal",
-          "position": "Design Team",
+          " Full Name": "Ketan Bansal",
+          "Designation in GSSOC'22": "Design Team",
           "image": "images/team/2020/KetanBansal.jpg",
           
-            "github": "https://github.com/ketan-b",
-            "linkedin": "https://www.linkedin.com/in/ketan-bansal-894021191/"
+            "Github Account": "https://github.com/ketan-b",
+            "LinkedIn Profile": "https://www.linkedin.com/in/ketan-bansal-894021191/"
           
         },
         {
-          " ": "Rajat Gulati",
-          "position": "Design Team",
+          " Full Name": "Rajat Gulati",
+          "Designation in GSSOC'22": "Design Team",
           "image": "images/team/2020/rajatgulati.jpg",
           
-            "linkedin": "https://www.linkedin.com/in/rajat-gulati/",
+            "LinkedIn Profile": "https://www.linkedin.com/in/rajat-gulati/",
             "facebook": "https://www.facebook.com/rajat.gulati.1004"
           
         },
         {
-          " ": "Rushank Jain",
-          "position": "Design Team",
+          " Full Name": "Rushank Jain",
+          "Designation in GSSOC'22": "Design Team",
           "image": "images/team/2020/RushJain.jpg",
           
-            "linkedin": "https://www.linkedin.com/in/rushank-jain-8b3a83169/",
+            "LinkedIn Profile": "https://www.linkedin.com/in/rushank-jain-8b3a83169/",
             "facebook": "https://www.facebook.com/profile.php?id=100008103107950"
           
         },
         {
-          " ": "Disha Lamba",
-          "position": "Social Outreach Team",
+          " Full Name": "Disha Lamba",
+          "Designation in GSSOC'22": "Social Outreach Team",
           "image": "images/team/2020/DishaLamba.jpg",
           
-            "github": "https://github.com/dldisha",
-            "linkedin": "https://www.linkedin.com/in/dldisha/"
+            "Github Account": "https://github.com/dldisha",
+            "LinkedIn Profile": "https://www.linkedin.com/in/dldisha/"
           
         },
         {
-          " ": "Sahastra Kishore",
-          "position": "Social Outreach Team",
+          " Full Name": "Sahastra Kishore",
+          "Designation in GSSOC'22": "Social Outreach Team",
           "image": "images/team/2020/ahastra.jpg",
           
-            "github": "https://github.com/Sahastracookcoder1",
-            "linkedin": "https://www.linkedin.com/in/sahastra-kishore-49340416a/"
+            "Github Account": "https://github.com/Sahastracookcoder1",
+            "LinkedIn Profile": "https://www.linkedin.com/in/sahastra-kishore-49340416a/"
           
         },
         {
-          " ": "Shailza Singh",
-          "position": "Social Outreach Team",
+          " Full Name": "Shailza Singh",
+          "Designation in GSSOC'22": "Social Outreach Team",
           "image": "images/team/2020/ShailzaSingh.jpg",
           
-            "github": "https://github.com/shailzaa",
-            "linkedin": "https://linkedin.com/in/shailzasingh"
+            "Github Account": "https://github.com/shailzaa",
+            "LinkedIn Profile": "https://linkedin.com/in/shailzasingh"
           
         },
         {
-          " ": "Tushar Sabhani",
-          "position": "Community Management",
+          " Full Name": "Tushar Sabhani",
+          "Designation in GSSOC'22": "Community Management",
           "image": "images/team/2020/TusharSabhani.jpg",
           
-            "github": "https://github.com/tusharsabhani",
-            "linkedin": "https://in.linkedin.com/in/tushar-sabhani-bb08a5151"
+            "Github Account": "https://github.com/tusharsabhani",
+            "LinkedIn Profile": "https://in.linkedin.com/in/tushar-sabhani-bb08a5151"
           
         },
         {
-          " ": "Parul Chandel",
-          "position": "Community Management",
+          " Full Name": "Parul Chandel",
+          "Designation in GSSOC'22": "Community Management",
           "image": "images/team/2020/ParulChandel.jpg",
           
-            "github": "https://www.github.com/Deathrow77",
-            "linkedin": "https://www.linkedin.com/in/parulc7",
+            "Github Account": "https://www.github.com/Deathrow77",
+            "LinkedIn Profile": "https://www.linkedin.com/in/parulc7",
             "facebook": "https://www.facebook.com/parul.chandel.35"
           
         },
         {
-          " ": "Sourav Das",
-          "position": "Community Management",
+          " Full Name": "Sourav Das",
+          "Designation in GSSOC'22": "Community Management",
           "image": "images/team/2020/SouravDas.jpg",
           
-            "github": "https://github.com/adventuroussrv",
-            "linkedin": "https://www.linkedin.com/in/adventuroussrv",
+            "Github Account": "https://github.com/adventuroussrv",
+            "LinkedIn Profile": "https://www.linkedin.com/in/adventuroussrv",
             "facebook": "https://www.facebook.com/adventuroussrv"
           
         },
         {
-          " ": "Lakshita Malhotra",
-          "position": "Community Management",
+          " Full Name": "Lakshita Malhotra",
+          "Designation in GSSOC'22": "Community Management",
           "image": "images/team/2020/Lakshita.jpg",
           
-            "github": "https://github.com/Lakshita7",
-            "linkedin": "https://www.linkedin.com/in/lakshitamalhotra/",
+            "Github Account": "https://github.com/Lakshita7",
+            "LinkedIn Profile": "https://www.linkedin.com/in/lakshitamalhotra/",
             "facebook": "https://www.facebook.com/lakshita.malhotra.7"
-          
-        }
-      ],
-  
-  
-      "2019": [
-        {
-          " ": "Anubha Maneshwar",
-          "position": "Founder & CEO, GirlScript Foundation India",
-          "image": "images/team/2020/anubha.jpg",
-          
-            "github": "https://github.com/anubhamane",
-            "linkedin": "https://www.linkedin.com/in/anubhamane/",
-            "facebook": "https://www.facebook.com/amaneshwar"
-          
-        },
-        {
-          " ": "Mohit Varu",
-          "position": "COO, GirlScript Foundation India",
-          "image": "images/team/2020/mohit.jpg",
-          
-            "linkedin": "https://www.linkedin.com/in/mohitvaru/"
-           
-        },
-        {
-          " ": "Aakanksha Jain",
-          "position": "Project Lead",
-          "image": "images/team/2019/aakansha.jpg",
-          
-            "github": "https://github.com/accakks",
-            "linkedin": "https://www.linkedin.com/in/jaakanksha8",
-            "facebook": "https://www.facebook.com/jaakanksha8"
-          
-        },
-        {
-          " ": "Akshita Aggarwal",
-          "position": "Operations Lead",
-          "image": "images/team/2019/akshita.jpg",
-          
-            "github": "https://github.com/Akshitaag",
-            "linkedin": "https://www.linkedin.com/in/akshita-aggarwal-98845413a",
-            "facebook": "https://m.facebook.com/akshita.aggarwal.925"
-          
-        },
-        {
-          " ": "Rahmeen Habib",
-          "position": "Project Lead",
-          "image": "images/team/2019/rahmeen.jpg",
-          
-            "github": "https://github.com/Rahmeen14",
-            "linkedin": "https://www.linkedin.com/in/rahmeenhabib",
-            "facebook": "https://www.facebook.com/profile.php?id=100009200693756"
-          
-        },
-        {
-          " ": "Mrunali Pantawane",
-          "position": "Program Manager",
-          "image": "images/team/2019/mrunali.jpg",
-          
-            "linkedin": "https://www.linkedin.com/in/mrunali-pantawane-205826136",
-            "facebook": "https://www.facebook.com/profile.php?id=100005491336449"
-           
-        },
-        {
-          " ": "Shivam Kumar Jha",
-          "position": "Web Team",
-          "image": "images/team/2019/shivam.jpg",
-          
-            "github": "https://www.github.com/thealphadollar",
-            "linkedin": "https://www.linkedin.com/in/thealphadollar",
-            "facebook": "https://www.facebook.com/thealphadollar"
-           
-        },
-        {
-          " ": "Debasish Sahoo",
-          "position": "Web Team",
-          "image": "images/team/2019/debasish.jpg",
-          
-            "linkedin": "https://www.linkedin.com/in/debasish2014/"
-           
-        },
-        {
-          " ": "Anisha Swain",
-          "position": "Web Team",
-          "image": "images/team/2019/anisha.jpg",
-          
-            "github": "https://github.com/Anisha1234",
-            "linkedin": "https://www.linkedin.com/in/anisha1234",
-            "facebook": "https://www.facebook.com/anisha.swain.37"
-          
-        },
-        {
-          " ": "Sayantika Banik",
-          "position": "Database Admin",
-          "image": "images/team/2019/sayantika.jpg",
-          
-            "github": "https://github.com/sayantikabanik",
-            "linkedin": "https://www.linkedin.com/in/sayantika-banik"
-          
-        },
-        {
-          " ": "Vaishnavi Janardhan",
-          "position": "Design Team",
-          "image": "images/team/2019/vaishnavi.jpg",
-          
-            "github": "https://github.com/vaishnavi-janardhan",
-            "linkedin": "https://www.linkedin.com/in/vaish-janardhan",
-            "facebook": "https://www.facebook.com/vaishnavi.janardhan.56"
-          
-        },
-        {
-          " ": "Yatharth Manocha",
-          "position": "Design Team",
-          "image": "images/team/2019/yatharth.jpg",
-          
-            "github": "https://github.com/YaMo97",
-            "linkedin": "https://www.linkedin.com/in/YaMo97",
-            "facebook": "https://www.facebook.com/yamo97"
-          
-        },
-        {
-          " ": "Ashutosh Dwivedi",
-          "position": "Sponsorship Team",
-          "image": "images/team/2019/ashutosh.jpg",
-          
-            "github": "https://github.com/kindacoder",
-            "linkedin": "https://www.linkedin.com/in/ashutosh1001/",
-            "facebook": "https://www.facebook.com/kindacoder"
-          
-        },
-        {
-          " ": "Parteek Rawal",
-          "position": "Sponsorship Team",
-          "image": "images/team/2019/parteek.jpg",
-          
-            "github": "https://github.com/prateekrawal",
-            "linkedin": "https://www.linkedin.com/in/parteekrawal",
-            "facebook": "https://www.facebook.com/tranquilgoof"
-          
-        },
-        {
-          " ": "Parikshit Hooda",
-          "position": "Sponsorship Team",
-          "image": "images/team/2019/parikshit.jpg",
-          
-            "github": "https://github.com/Parikshit-Hooda",
-            "linkedin": "https://linkedin.com/in/parikshit-hooda",
-            "facebook": "https://www.facebook.com/parikshit.hooda3"
-          
-        },
-        {
-          " ": "Abhimanyu Shekhawat",
-          "position": "Community Management",
-          "image": "images/team/2019/abhimanyu.jpg",
-          
-            "github": "https://github.com/Abhimanyu121",
-            "linkedin": "https://www.linkedin.com/in/abhimanyu-shekhawat-886896168",
-            "facebook": "https://www.facebook.com/abhimanyu.shekhawat2"
-           
-        },
-        {
-          " ": "Jehlum Vitasta Pandit",
-          "position": "Social Outreach",
-          "image": "images/team/2019/jehlum.jpg",
-          
-            "github": "https://github.com/j1197",
-            "linkedin": "https://www.linkedin.com/in/jehlum-vitasta-pandit-205361168"
-          
-        },
-        {
-          " ": "Aishwarya Bansal",
-          "position": "Social Outreach",
-          "image": "images/team/2019/aish.jpg",
-          
-            "github": "https://github.com/aish51197",
-            "linkedin": "https://www.linkedin.com/in/aishwarya-bansal-3aa6a3129"
           
         }
       ]
