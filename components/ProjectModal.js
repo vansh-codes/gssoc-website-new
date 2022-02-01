@@ -50,7 +50,10 @@ const ProjectModal = ({ currProject }) => {
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <h6> Duh </h6>
+          {currProject.project_id}
+            {currProject.mentors_id.map((mentor, j) => {
+              return(<p key={j}>{mentor.name}</p>);
+            })}
           </ModalBody>
 
           <ModalFooter>

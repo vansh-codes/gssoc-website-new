@@ -104,7 +104,7 @@ const Project = () => {
                           </ModalFooter>
                         </ModalContent>
                       </Modal> */}
-                      <ProjectModal />
+                      <ProjectModal currProject={curElem}/>
 
                       <div className="font-bold text-indigo-500 md:text-lg">
                         {i + 1}. {curElem.project_name}
