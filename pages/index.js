@@ -217,9 +217,8 @@ export default function Home() {
             GSSoC 2022!
           </p>
           <div
-            data-aos="fade-left"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-left"
+            data-aos-duration="1500"
             className="container my-12 mx-auto"
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
@@ -238,9 +237,8 @@ export default function Home() {
             </div>
           </div>
           <div
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-right"
+            data-aos-duration="1500"
             className="container my-12 mx-auto "
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
