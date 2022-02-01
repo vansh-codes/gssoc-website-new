@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from "next/image";
 import { Box, Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 const Team = () => {
+
     const [users, setUsers] = useState([]);
     const getUsers = async () => {
         const response = await fetch('https://opensheet.elk.sh/19hUF9aTIOH-kUSOW6HKWPItd0KPufOump2vm8mDJ0ro/json')
@@ -11,17 +12,54 @@ const Team = () => {
     useEffect(() => {
         getUsers();
     }, [])
+
+  
+        const fetchData = () => {
+          fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => {
+              return response.json()
+            })
+            .then(data => {
+              setUsers(data)
+            })
+        }
+
     return <>
         <div className=" items-center justify-center">
             <p className="font-serif text-center text-2xl font-extrabold text-black-100">
-                <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
+                <p className="text-primary_orange-0  text-5xl text center font-extrabold mb-10">
                     Meet The Team
                 </p>
+                <p className="font-serif dark:text-white">
                 Individuals can and do make a difference, <br />but it takes a team to really mess things up
             </p>
+            </p>
+            
         </div>
-        <br/>
-        <br/>
+        
+        <div className="flex justify-center items-center mb-10 md:mb-28 lg:mb-28 mt-10 pr-8 space-x-16">
+              <a><button
+                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                onClick={() => getUsers()}>
+                2022
+              </button></a>
+              <a><button
+                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+                onClick={fetchData}>
+                2021
+              </button></a>
+              <a><button
+                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                onClick={fetchData}>
+                2020
+              </button></a>
+              <a><button
+                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                onClick={fetchData}>
+                2019
+              </button></a>
+            </div>
+
         <div className="flex flex-wrap w-100 justify-around gap-5">
             {
                 users.map((curElem, i) => {
