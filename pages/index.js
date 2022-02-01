@@ -51,7 +51,7 @@ export default function Home() {
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <button
                 data-aos="fade-down"
-                className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-6"
+                className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-4"
               >
                 Register Here
               </button>
@@ -231,12 +231,14 @@ export default function Home() {
                 title="Participate in GSSoC'22"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
+                link="https://forms.gle/FHtuuhW17hv2dqua8"
               />
               {/* Card-2 */}
               <Card
                 title="Be a Mentor"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
+                link="https://forms.gle/4F3aBfdt6DC6bkVT6"
               />
             </div>
           </div>
@@ -251,12 +253,14 @@ export default function Home() {
                 title="Calling all NGOs"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Submit your project"
+                link="https://forms.gle/vbLVda6KNQGSbzZ59"
               />
               {/* Card-4 */}
               <Card
                 title="Be a Sponsor"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Know More"
+                link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />
             </div>
           </div>
