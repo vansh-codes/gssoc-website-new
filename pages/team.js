@@ -4,7 +4,6 @@ import Image from "next/image";
 import team2021 from "./api/team2021.json";
 import axios from "axios";
 import { Box, Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
 
 const Team = () => {
 
