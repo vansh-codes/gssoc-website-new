@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Image from "next/image";
+import team2021 from "./api/team2021.json";
+import axios from "axios";
 import { Box, Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+
 const Team = () => {
 
     const [users, setUsers] = useState([]);
@@ -10,19 +14,17 @@ const Team = () => {
         setUsers(await response.json());
     }
     useEffect(() => {
-        getUsers();
+            getUsers();
     }, [])
 
-  
-        const fetchData = () => {
-          fetch("")
-            .then(response => {
-              return response.json()
-            })
-            .then(data => {
-              setUsers(data)
-            })
-        }
+    const apiURL = "https://www.anapioficeandfire.com/api/books?pageSize=30";
+
+    const fetchData = async () => {
+    const response = await axios.get(apiURL)
+
+    setUsers(response.data) 
+  }
+
 
     return <>
         <div className=" items-center justify-center">
@@ -38,24 +40,24 @@ const Team = () => {
         </div>
         
         <div className="flex justify-center items-center mb-10 md:mb-28 lg:mb-28 mt-10 pr-8 space-x-16">
-              <a><button
-                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+              <a ><button
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
                 onClick={() => getUsers()}>
                 2022
               </button></a>
               <a><button
-                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
-                onClick={fetchData}>
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+                onClick={()=>fetchData()}>
                 2021
               </button></a>
               <a><button
-                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
-                onClick={fetchData}>
+                className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                onClick={() => fetchData()}>
                 2020
               </button></a>
               <a><button
-                className="bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
-                onClick={fetchData}>
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                onClick={() => fetchData()}>
                 2019
               </button></a>
             </div>
