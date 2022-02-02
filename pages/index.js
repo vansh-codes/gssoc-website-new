@@ -56,12 +56,14 @@ export default function Home() {
               <b> 1st March - 31st May 2022 </b>
             </p>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
-              <button
+              <a href="#card-1">
+                <button
                 data-aos="fade-down"
                 className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-4"
               >
                 Register Here
-              </button>
+                </button>
+              </a>
               <a data-aos="fade-down" href="#Learn_more">
                 <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
                   Learn More
@@ -244,7 +246,7 @@ export default function Home() {
             data-aos-duration="1500"
             className="container my-12 mx-auto"
           >
-            <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
+            <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch" id="card-1">
               {/* Card-1 */}
               <Card
                 title="Start your Journey"
@@ -269,16 +271,16 @@ export default function Home() {
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
-                title="Calling all NGOs"
+                title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
                 btntext="Submit your Project"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
               />
               {/* Card-4 */}
               <Card
-                title="Be a Sponsor"
+                title="Add a Shade to GSSOC"
                 content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors."
-                btntext="Know More"
+                btntext="Sponsor Us"
                 link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />
             </div>
