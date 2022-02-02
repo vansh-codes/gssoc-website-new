@@ -16,7 +16,7 @@ const Team = () => {
             getUsers();
     }, [])
 
-    const apiURL = "https://www.anapioficeandfire.com/api/books?pageSize=30";
+    const apiURL = "https://github.com/GSSoC-Web/gssoc-website/blob/main/pages/api/team2021.json";
 
     const fetchData = async () => {
     const response = await axios.get(apiURL)

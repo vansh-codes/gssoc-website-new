@@ -21,9 +21,9 @@ function Schedule() {
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-orange-400 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl mb-1">
-                  4th Mar to 5th Mar
+                  25th Feb to 26th Feb
                 </h3>
                 <p className=" leading-tight text-lg w-full">
                   Assign projects to mentors
@@ -40,9 +40,9 @@ function Schedule() {
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 border-orange-500 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 border-orange-500 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
-                  08th Mar
+                  01th Mar
                 </h3>
                 <p className="leading-tight text-justify">
                   1st phase of contribution
@@ -59,9 +59,9 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
-                  10th Mar to 12th Mar
+                  5th Mar to 6th Mar
                 </h3>
                 <p className="leading-tight text-justify">
                   Community bonding session starts
@@ -78,32 +78,14 @@ function Schedule() {
                   <i className="fas fa-exclamation-circle text-gray-400"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
-                  10th Mar
+                  1st April
                 </h3>
                 <p className="leading-tight text-justify">Leaderboard opens</p>
               </div>
             </div>
 
-            <div className="flex md:contents">
-              <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
-                <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
-                </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
-                  <i className="fas fa-times-circle text-white"></i>
-                </div>
-              </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
-                <h3 className="font-bold text-xl text-xl mb-1">
-                  01st Apr
-                </h3>
-                <p className="leading-tight text-justify">
-                  Allotment of projects
-                </p>
-              </div>
-            </div>
 
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
@@ -114,7 +96,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   31st May
                 </h3>
@@ -131,7 +113,7 @@ function Schedule() {
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
-              <div className="border-4 bg-white text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   2nd week of July
                 </h3>
