@@ -51,19 +51,19 @@ const Footer = () => {
                   </h6>
                   <div>
                     <a
-                      href="#"
+                      href="https://gwoc.girlscript.tech/"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       GWoC
                     </a>
                     <a
-                      href="#"
+                      href="https://uplift.girlscript.tech/"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       Uplift Project
                     </a>
                     <a
-                      href="#"
+                      href="https://summit.girlscript.tech/"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       GirlScript India Summit
@@ -80,9 +80,11 @@ const Footer = () => {
                 help beginners in technology. Be a part, spread knowledge {"& "}
                 happiness.
               </h5>
-              <button className="bg-black text-white hover:bg-slate-800 rounded py-2 px-4 md:px-12 transition-colors duration-300">
-                Explore
-              </button>
+              <a href="https://www.girlscript.tech/home">
+                <button className="bg-black text-white hover:bg-slate-800 rounded py-2 px-4 md:px-12 transition-colors duration-300">
+                  Explore
+                </button>
+              </a>
             </div>
           </div>
         </div>
