@@ -6,7 +6,7 @@ import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
-import Tilt from 'react-tilt';
+import Tilt from "react-tilt";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -61,17 +61,21 @@ export default function Home() {
                 </p>
               </a>
             </div>
-          </div> 
-          
+          </div>
+
           <div data-aos="fade-down" className="hero__image">
-          <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 600, width: 600 }} >
-            <div className="img__container" >
-              <img
-                src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
-                alt="hero-image"
-              />
-            </div>
-          </Tilt>
+            <Tilt
+              className="Tilt"
+              options={{ max: 25 }}
+              style={{ height: 600, width: 600 }}
+            >
+              <div className="img__container">
+                <img
+                  src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
+                  alt="hero-image"
+                />
+              </div>
+            </Tilt>
           </div>
         </div>
 
@@ -104,16 +108,16 @@ export default function Home() {
               Foundation
             </p>
             <p className="dark:text-white font-serif text-1xl text-black-100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-              pulvinar malesuada tortor orci nullam rhoncus et. Purus, massa
-              orci aliquet neque. Nulla urna viverra tempus nullam commodo.
-              Fringilla turpis sit laoreet pellentesque sit. Ultrices consequat
-              tempor nisi, tincidunt tortor, elit pharetra, nulla. Enim a quam
-              tortor, sodales. Vitae placerat egestas pellentesque senectus.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio consectetur dolore possimus tempora, aperiam earum
-              eligendi facilis. Itaque tenetur, nobis atque consequuntur nisi
-              expedita iure praesentium dolore ad. Eos, labore!
+              The GirlScript Foundation is a well-acclaimed organization in the
+              EdTech field. It has been successfully equipping modern youth with
+              the new age technologies that are revolutionising the world
+              today.It is a sturdy initiative that inspires the youth to learn,
+              grow and diversify their reach in the competitive world. Our
+              mission is to impinge on every individual who has the zeal to
+              learn more. Around the year we conduct several educational
+              programs and offer internship opportunities to the youngsters so
+              that they become industry-ready. Today our network has expanded to
+              a great extent and has culminated the submit of success.
             </p>
             <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
               Get to know more about GIRLSCRIPT!
@@ -145,9 +149,12 @@ export default function Home() {
               Summer of Code
             </p>
             <p className="dark:text-white font-serif text-xl 1.25rem 1.75rem">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque sit
-              tortor aliquet mauris. Sodales odio vitae morbi nulla sit turpis
-              sem at. Nibh in consectetur aliquam in ante pulvinar vehicula sed.
+              GirlScript Summer of Code is the 3 month long Open Source program
+              during summers conducted by GirlScript Foundation, started in
+              2018, with an aim to help beginners get started with Open Source
+              Development while encouraging diversity. Throughout the program,
+              participants contribute to different projects under guidance of
+              experienced mentors.
             </p>
           </div>
           {/* <img
@@ -228,14 +235,14 @@ export default function Home() {
               {/* Card-1 */}
               <Card
                 title="Participate in GSSoC'22"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                content="If you have basic git skills or are first timers or even veteran developers, GirlScript Summer of Code would give you a taste of contributing in a long open source projects. Continuously for 3 months you will contribute to your assigned projects under guidance of experienced mentors. Register yourself as a participant for GSSoc 2022 here. "
                 btntext="Register"
                 link="https://forms.gle/FHtuuhW17hv2dqua8"
               />
               {/* Card-2 */}
               <Card
                 title="Be a Mentor"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
                 btntext="Register"
                 link="https://forms.gle/4F3aBfdt6DC6bkVT6"
               />
@@ -250,14 +257,15 @@ export default function Home() {
               {/* Card-3 */}
               <Card
                 title="Calling all NGOs"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
                 btntext="Submit your project"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
               />
               {/* Card-4 */}
               <Card
                 title="Be a Sponsor"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
+                content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors.
+                Sponsor us to add a bright shade for our program."
                 btntext="Know More"
                 link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />

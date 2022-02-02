@@ -13,14 +13,15 @@ import {
 
 export default function SocialFollow() {
   useEffect(() => {
-    Aos.init({duration:2000});
+    Aos.init({ duration: 2000 });
   }, []);
   return (
-
-    <div data-aos="right" className="absolute object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block">
+    <div
+      data-aos="right"
+      className=" fixed object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block"
+    >
       {/* <h3 className="text-white">Social Follow</h3> */}
       <a
-
         href="https://www.facebook.com/girlscriptsoc/"
         target="_blank"
         className="dark:transition-colors transition-colors dark:bg-gray-700 dark:text-primary_orange-0 dark:hover:text-blue-600 dark:ease-linear dark:hover:ease-in block pr-4 text-center text-gray-700 text-base bg-white hover:text-blue-600 ease-linear hover:ease-in pt-4"

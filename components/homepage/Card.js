@@ -11,10 +11,15 @@ function Cards(props) {
           {props.content}
         </p>
         <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-          <a href={props.link} target="_blank" rel="noreferrer">
-          <button className="dark:text-gray-800 bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded mb-3">
-            {props.btntext}
-          </button>
+          <a
+            className="w-full"
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="dark:text-gray-800 bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded mb-3">
+              {props.btntext}
+            </button>
           </a>
         </footer>
       </article>
