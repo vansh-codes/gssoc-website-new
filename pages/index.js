@@ -89,13 +89,13 @@ export default function Home() {
             {theme === "light" ? (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GirlScript_logo_Black.png?raw=true"
                 alt="logo"
               />
             ) : (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://user-images.githubusercontent.com/64256342/151560603-90bbd36c-8b30-4013-9f40-3420d9fb6b5f.png"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GirlScript_logo_White.png?raw=true"
                 alt="logo"
               />
             )}
@@ -127,13 +127,13 @@ export default function Home() {
               <img
                 id="Learn_more"
                 className="mb-10"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GSSoC_logo_Black.png?raw=true"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
               />
             ) : (
               <img
                 id="Learn_more"
                 className="mb-10"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/logo.png?raw=true"
+                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
               />
             )}
             <p className="text-primary_orange-0 font-semibold font-sans text-4xl 2.25rem 3rem mb-10">
@@ -217,7 +217,6 @@ export default function Home() {
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
-            <br />
             GSSoC 2022!
           </p>
           <div
