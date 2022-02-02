@@ -4,6 +4,6 @@ module.exports = {
     path: "/",
     // domains: ["user-images.githubusercontent.com"],
   },
-  basePath: "",
-  assetPrefix: "",
+  basePath: "/gssoc-website",
+  assetPrefix: "/gssoc-website",
 };
