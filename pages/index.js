@@ -34,7 +34,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SocialFollow />
-      <div className="container transition-colors mx-auto my-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
+      <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2">
             <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div data-aos="fade-down" className="hero__image">
+          <div data-aos="fade-down" className="hero__image hidden md:block">
             <Tilt
               className="Tilt"
               options={{ max: 25 }}
@@ -167,18 +167,20 @@ export default function Home() {
           /> */}
           {theme === "light" ? (
             <img
+              className="mt-3 md:mt-0"
               id="Learn_more"
               src="https://user-images.githubusercontent.com/64256342/151832119-43240ddb-f395-4d2c-8bdf-ef9e92ae15c9.png"
             />
           ) : (
             <img
+              className="mt-3 md:mt-0"
               id="Learn_more"
               src="https://user-images.githubusercontent.com/64256342/151832205-3b2b2c01-9ae9-47f9-a8e7-9414f661ccb4.png"
             />
           )}
         </div>
 
-        <div className="organisation mb-24">
+        {/* <div className="organisation mb-24">
           <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
             Some of the <br />
             <span className="text-[#511A97] dark:text-primary_orange-0 text-4xl 2.25rem 3rem">
@@ -220,7 +222,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
