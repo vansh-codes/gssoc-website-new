@@ -40,22 +40,22 @@ const Team = () => {
         
         <div className="flex justify-center items-center flex-wrap mb-10 md:mb-28 lg:mb-28 mt-10 pr-8 space-x-16">
               <a ><button
-                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-10 py-2 rounded md:text-2xl md:py-6 "
                 onClick={() => getUsers()}>
                 2022
               </button></a>
               <a><button
-                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-10 py-2 rounded md:text-2xl md:py-6"
                 onClick={()=>fetchData()}>
                 2021
               </button></a>
               <a><button
-                className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-10 py-2 rounded md:text-2xl md:py-6 "
                 onClick={() => fetchData()}>
                 2020
               </button></a>
               <a><button
-                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+                className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-10 py-2 rounded md:text-2xl md:py-6 "
                 onClick={() => fetchData()}>
                 2019
               </button></a>
