@@ -264,8 +264,7 @@ export default function Home() {
               {/* Card-4 */}
               <Card
                 title="Be a Sponsor"
-                content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors.
-                Sponsor us to add a bright shade for our program."
+                content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors."
                 btntext="Know More"
                 link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />
