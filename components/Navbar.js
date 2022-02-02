@@ -39,11 +39,14 @@ export const Navbar = () => {
               /> */}
               {theme === "light" ? (
                 <img
+                  style={{width:'200px'}}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_Black1.png?raw=true"
+                  style={{width:'200px'}}
                 />
               ) : (
                 <img
+                  style={{width:'200px'}}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_White.png?raw=true"
                 />
