@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { Tooltip } from "@chakra-ui/react";
 
 export const Navbar = () => {
   // const [colorTheme, setTheme] = useDarkMode();
@@ -90,38 +91,42 @@ export const Navbar = () => {
         >
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center content-center items-start  flex flex-col lg:h-auto mr-3.5">
             <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all">
                 ABOUT
               </a>
             </Link>
             <Link href="/schedule">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all">
                 SCHEDULE
               </a>
             </Link>
             <Link href="/comingsoon">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2  text-center rounded text-grey-800 text-1xl  mr-3.5">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2  text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all">
                 PROJECT
               </a>
             </Link>
             <Link href="/faq">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all">
                 FAQ
               </a>
             </Link>
             <Link href="/team">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all">
                 TEAM
               </a>
             </Link>
             <a
               href="#Contact"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl  mr-3.5"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl  mr-3.5 hover:text-primary_orange-0 dark:hover:text-white hover:text-lg transition-all"
             >
               CONTACT
             </a>
             <p className="hidden lg:block">
-              <ThemeChanger />
+              <Tooltip label="Change Theme" placement="bottom">
+                <div>
+                  <ThemeChanger />
+                </div>
+              </Tooltip>
             </p>
           </div>
         </div>
