@@ -99,7 +99,7 @@ export const Navbar = () => {
                 SCHEDULE
               </a>
             </Link>
-            <Link href="/project">
+            <Link href="/comingsoon">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2  text-center rounded text-grey-800 text-1xl  mr-3.5">
                 PROJECT
               </a>
