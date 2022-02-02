@@ -52,7 +52,8 @@ export default function Home() {
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
-              program by GirlScript Foundation.
+              program by GirlScript Foundation.<br />
+              <b> 1st March - 31st May 2022 </b>
             </p>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <button
@@ -77,7 +78,7 @@ export default function Home() {
             >
               <div className="img__container">
                 <img
-                  src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
+                  src="https://user-images.githubusercontent.com/63473496/152215082-3796d85f-5678-4c0f-bced-72f352ab8b4e.png"
                   alt="hero-image"
                 />
               </div>
@@ -118,7 +119,7 @@ export default function Home() {
               India. It has successfully completed Five Years of educating young
               minds through robust initiatives. It aims to change lives by
               imparting tech education and relevant skills while fostering
-              diversity. Apart from this, the Foundation is the world’s largest
+              diversity. Apart from this, the Foundation is one of the world’s largest
               tech community for students to polish and nurture their technical
               skills. Our tremendous endeavors curb the gap to offer a
               technophilic environment and revolutionize the tech domain by
@@ -126,7 +127,7 @@ export default function Home() {
               individual.
             </p>
             <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
-              Get to know more about GIRLSCRIPT!
+              Wanna know more about GIRLSCRIPT?
             </button>
           </div>
         </div>
@@ -171,6 +172,8 @@ export default function Home() {
             className="mt-8 md:mt-4 lg:mt-0 lg:pr-10"
             src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
           /> */}
+          <div className="w-560px px-4 pt-3 lg:text-left rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
+            {/* <h1>GSSOC 2021 by the numbers</h1> */}
           {theme === "light" ? (
             <img
               className="mt-3 md:mt-0"
@@ -184,8 +187,8 @@ export default function Home() {
               src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame_Dark.png"
             />
           )}
+          </div>
         </div>
-
         {/* <div className="organisation mb-24">
           <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
             Some of the <br />
@@ -234,7 +237,7 @@ export default function Home() {
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
-            GSSoC 2022!
+            GSSoC 2022
           </p>
           <div
             data-aos="flip-left"
@@ -244,16 +247,16 @@ export default function Home() {
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
               {/* Card-1 */}
               <Card
-                title="Participate in GSSoC'22"
+                title="Start your Journey"
                 content="If you have basic git skills or are first timers or even veteran developers, GirlScript Summer of Code would give you a taste of contributing in a long open source projects. Continuously for 3 months you will contribute to your assigned projects under guidance of experienced mentors. Register yourself as a participant for GSSoc 2022 here. "
-                btntext="Register"
+                btntext="Register to Participate"
                 link="https://forms.gle/FHtuuhW17hv2dqua8"
               />
               {/* Card-2 */}
               <Card
-                title="Be a Mentor"
+                title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
-                btntext="Register"
+                btntext="Register to Mentor"
                 link="https://forms.gle/4F3aBfdt6DC6bkVT6"
               />
             </div>
@@ -268,7 +271,7 @@ export default function Home() {
               <Card
                 title="Calling all NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
-                btntext="Submit your project"
+                btntext="Submit your Project"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
               />
               {/* Card-4 */}
