@@ -38,7 +38,7 @@ const Team = () => {
             
         </div>
         
-        <div className="flex justify-center items-center mb-10 md:mb-28 lg:mb-28 mt-10 pr-8 space-x-16">
+        <div className="flex justify-center items-center flex-wrap mb-10 md:mb-28 lg:mb-28 mt-10 pr-8 space-x-16">
               <a ><button
                 className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
                 onClick={() => getUsers()}>
