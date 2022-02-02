@@ -6,6 +6,7 @@ import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
+import Tilt from 'react-tilt';
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -50,7 +51,7 @@ export default function Home() {
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <button
                 data-aos="fade-down"
-                className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-6"
+                className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-4"
               >
                 Register Here
               </button>
@@ -60,14 +61,17 @@ export default function Home() {
                 </p>
               </a>
             </div>
-          </div>
+          </div> 
+          
           <div data-aos="fade-down" className="hero__image">
-            <div className="img__container">
+          <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 600, width: 600 }} >
+            <div className="img__container" >
               <img
                 src="https://user-images.githubusercontent.com/64256342/151706657-5f08df0e-9837-4319-a992-c536b745c642.svg"
                 alt="hero-image"
               />
             </div>
+          </Tilt>
           </div>
         </div>
 
@@ -217,9 +221,8 @@ export default function Home() {
             GSSoC 2022!
           </p>
           <div
-            data-aos="fade-left"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-left"
+            data-aos-duration="1500"
             className="container my-12 mx-auto"
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch">
@@ -228,19 +231,20 @@ export default function Home() {
                 title="Participate in GSSoC'22"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
+                link="https://forms.gle/FHtuuhW17hv2dqua8"
               />
               {/* Card-2 */}
               <Card
                 title="Be a Mentor"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Register"
+                link="https://forms.gle/4F3aBfdt6DC6bkVT6"
               />
             </div>
           </div>
           <div
-            data-aos="fade-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="700"
+            data-aos="flip-right"
+            data-aos-duration="1500"
             className="container my-12 mx-auto "
           >
             <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
@@ -249,28 +253,29 @@ export default function Home() {
                 title="Calling all NGOs"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Submit your project"
+                link="https://forms.gle/vbLVda6KNQGSbzZ59"
               />
               {/* Card-4 */}
               <Card
                 title="Be a Sponsor"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed lectus non magna enim dignissim amet semper. Quisque nisl sed ipsum in id sit volutpat pulvinar. Tortor placerat tincidunt enim posuere hendrerit aliquet amet quis."
                 btntext="Know More"
+                link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />
             </div>
           </div>
         </div>
       </div>
       {/* sponsors */}
-      <div className="sponsors__container flex flex-row justify-center">
+      {/* <div className="sponsors__container flex flex-row justify-center">
         <div className="sponsors__wrapper flex flex-col w-[1136px] mt-[93px]">
           <div className="sponsors__header mb-9">
             <p className="font-sans font-semibold dark:text-white text-gray-800 text-4xl leading-10">
               Our Sponsors
             </p>
           </div>
-          {/* sponsors card container */}
+          
           <div className="sponsors__card__container flex flex-row justify-between">
-            {/* card1 */}
 
             <div
               data-aos="fade-up"
@@ -289,7 +294,6 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            {/* card2 */}
 
             <div
               data-aos="fade-up"
@@ -308,7 +312,6 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            {/* card3 */}
 
             <div
               data-aos="fade-up"
@@ -340,7 +343,6 @@ export default function Home() {
                 Other Sponsors
               </p>
             </div>
-            {/* row 1 */}
             <div className="sponsors__row__one flex flex-row mb-9">
               <img
                 data-aos="fade-up"
@@ -383,7 +385,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Schedule */}
       {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48">
