@@ -108,16 +108,16 @@ export default function Home() {
               Foundation
             </p>
             <p className="dark:text-white font-serif text-1xl text-black-100">
-              The GirlScript Foundation is a well-acclaimed organization in the
-              EdTech field. It has been successfully equipping modern youth with
-              the new age technologies that are revolutionising the world
-              today.It is a sturdy initiative that inspires the youth to learn,
-              grow and diversify their reach in the competitive world. Our
-              mission is to impinge on every individual who has the zeal to
-              learn more. Around the year we conduct several educational
-              programs and offer internship opportunities to the youngsters so
-              that they become industry-ready. Today our network has expanded to
-              a great extent and has culminated the submit of success.
+              The GirlScript Foundation is one of the leading foundations in
+              India. It has successfully completed Five Years of educating young
+              minds through robust initiatives. It aims to change lives by
+              imparting tech education and relevant skills while fostering
+              diversity. Apart from this, the Foundation is the world’s largest
+              tech community for students to polish and nurture their technical
+              skills. Our tremendous endeavors curb the gap to offer a
+              technophilic environment and revolutionize the tech domain by
+              promoting, sharing, and spreading knowledge equally to every
+              individual.
             </p>
             <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
               Get to know more about GIRLSCRIPT!
@@ -149,12 +149,14 @@ export default function Home() {
               Summer of Code
             </p>
             <p className="dark:text-white font-serif text-xl 1.25rem 1.75rem">
-              GirlScript Summer of Code is the 3 month long Open Source program
-              during summers conducted by GirlScript Foundation, started in
-              2018, with an aim to help beginners get started with Open Source
-              Development while encouraging diversity. Throughout the program,
-              participants contribute to different projects under guidance of
-              experienced mentors.
+              GirlScript Summer Of Code is a three-month-long Open-Source
+              Program conducted every summer by the Girlscript Foundation. With
+              constant efforts, participants contribute to numerous projects
+              under the extreme guidance of skilled mentors over these months.
+              With such exposure, students begin to contribute to real-world
+              projects from the comfort of their homes. GirlScript Summer Of
+              Code has witnessed active participation over the years, and the
+              2022 edition aims to carry the legacy with a promising impact.
             </p>
           </div>
           {/* <img
