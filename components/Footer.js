@@ -31,14 +31,14 @@ const Footer = () => {
                     >
                       Contact Us
                     </a>
-                    <a
+                    {/* <a
                       href="#"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       Past Programs
-                    </a>
+                    </a> */}
                     <a
-                      href="#"
+                      href="https://drive.google.com/file/d/1AaD9wWaY4ZdzsI8J6ILXHg7MkmH-qZ3y/view"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       Code of Conduct
@@ -100,7 +100,7 @@ const Footer = () => {
                   </strong>
                 </p>
               </div>
-              <div className="md:flex-1 md:px-4 text-center md:text-right">
+              {/* <div className="md:flex-1 md:px-4 text-center md:text-right">
                 <a
                   href="#"
                   className="py-2 px-4 text-white inline-block hover:underline"
@@ -113,7 +113,7 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

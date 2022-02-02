@@ -175,13 +175,13 @@ export default function Home() {
             <img
               className="mt-3 md:mt-0"
               id="Learn_more"
-              src="https://user-images.githubusercontent.com/64256342/151832119-43240ddb-f395-4d2c-8bdf-ef9e92ae15c9.png"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame_Light.png"
             />
           ) : (
             <img
               className="mt-3 md:mt-0"
               id="Learn_more"
-              src="https://user-images.githubusercontent.com/64256342/151832205-3b2b2c01-9ae9-47f9-a8e7-9414f661ccb4.png"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame_Dark.png"
             />
           )}
         </div>
