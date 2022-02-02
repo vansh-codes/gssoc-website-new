@@ -8,8 +8,7 @@ const Footer = () => {
           <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-8">
             <div className="footer-info lg:w-1/3 md:px-4">
               <h4 className="text-white text-2xl font-medium mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
+                Made with ❤️ by GirlScript India
               </h4>
               <Link href="/">
                 <img
@@ -27,7 +26,7 @@ const Footer = () => {
                   </h6>
                   <div>
                     <a
-                      href="#"
+                      href="https://linktr.ee/GSSoC22"
                       className="font-normal text-black py-1 block hover:underline"
                     >
                       Contact Us
@@ -76,8 +75,10 @@ const Footer = () => {
 
             <div className="md:w-1/3 md:px-4 md:text-left mt-12 lg:mt-0">
               <h5 className="text-lg text-white font-medium mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                GirlScript is the fastest growing tech-community in India. It is
+                a non-profit project brought to you by GirlScript Foundation to
+                help beginners in technology. Be a part, spread knowledge {"& "}
+                happiness.
               </h5>
               <button className="bg-black text-white hover:bg-slate-800 rounded py-2 px-4 md:px-12 transition-colors duration-300">
                 Explore
