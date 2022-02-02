@@ -120,7 +120,9 @@ export const Navbar = () => {
             >
               CONTACT
             </a>
-            <ThemeChanger />
+            <p className="hidden lg:block">
+              <ThemeChanger />
+            </p>
           </div>
         </div>
       </nav>

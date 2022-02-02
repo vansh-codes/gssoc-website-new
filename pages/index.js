@@ -7,6 +7,8 @@ import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Schedule from "../components/homepage/Schedule";
 import Tilt from "react-tilt";
+import ThemeChanger from "../components/Toggler";
+// import { useTheme } from "next-themes";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -18,6 +20,7 @@ export default function Home() {
   // console.log(colorTheme);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
   useEffect(() => {
     Aos.init({ duration: 2000 });
     setMounted(true);
@@ -34,6 +37,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SocialFollow />
+      <div className="absolute object-right text-xs text-right right-1 dark:bg-primary_orange-0 px-2 animate-pulse py-2 rounded-full opacity-80 bg-black top-20">
+        <ThemeChanger />
+      </div>
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-gray-700 dark:transition-colors">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2">
