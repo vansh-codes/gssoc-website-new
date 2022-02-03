@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import team2021 from "./api/team2021.json";
 import axios from "axios";
-import { Box, Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
+import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 
 const Team = () => {
   const [users, setUsers] = useState([]);
@@ -60,8 +60,8 @@ const Team = () => {
           </p>
         </p>
       </div>
-
-      <div className="flex justify-center items-center flex-wrap mb-10 md:mb-28 lg:mb-28 mt-10 space-x-16">
+      <Spacer mt={10} />
+      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5 ">
         <a>
           <button
             className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6 "
@@ -95,7 +95,7 @@ const Team = () => {
           </button>
         </a>
       </div>
-
+      <Spacer mt={10} />
       <div className="flex flex-wrap w-100 justify-around gap-5">
         {users.map((curElem, i) => {
           return (
