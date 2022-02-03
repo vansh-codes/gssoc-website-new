@@ -9,7 +9,7 @@ import Schedule from "../components/homepage/Schedule";
 import Tilt from "react-tilt";
 import ThemeChanger from "../components/Toggler";
 // import { useTheme } from "next-themes";
-
+import {Spacer} from '@chakra-ui/react'
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
@@ -80,20 +80,33 @@ export default function Home() {
             >
               <div className="img__container">
                 <img
-                  src="https://user-images.githubusercontent.com/63473496/152215082-3796d85f-5678-4c0f-bced-72f352ab8b4e.png"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13%201.png"
                   alt="hero-image"
-                />
+                  />
               </div>
             </Tilt>
           </div>
         </div>
 
-        <div className="flex justify-between items-center flex-wrap  mb-24">
-          <img
-            data-aos="flip-left"
-            data-aos-duration="700"
-            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Rectangle.png?raw=true"
-          />
+        <div className="flex justify-between items-center flex-wrap mb-24">
+        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black">
+            <img
+              data-aos="flip-left"
+              data-aos-duration="700"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
+              height="453"
+              width="420"
+            />
+          </div>
+          ):(<div className="border-8 rounded drop-shadow-xl">
+            <img
+              data-aos="flip-left"
+              data-aos-duration="700"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
+              height="453"
+              width="420"
+            />
+          </div>)}
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
@@ -108,7 +121,7 @@ export default function Home() {
             ) : (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GirlScript_logo_White.png?raw=true"
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/GsLogo_White.png"
                 alt="logo"
               />
             )}
@@ -128,9 +141,9 @@ export default function Home() {
               promoting, sharing, and spreading knowledge equally to every
               individual.
             </p>
-            <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
+            {/* <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
               Wanna know more about GIRLSCRIPT?
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -180,13 +193,13 @@ export default function Home() {
             <img
               className="mt-3 md:mt-0"
               id="Learn_more"
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame_Light.png"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(4).png"
             />
           ) : (
             <img
               className="mt-3 md:mt-0"
               id="Learn_more"
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame_Dark.png"
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(3).png"
             />
           )}
           </div>
