@@ -43,18 +43,20 @@ export default function Home() {
           href="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Favicon/favicon.png"
         />
       </Head>
-      {/* Hex */}
-      <div className="absolute w-full left-0 top-0 right-0">
-        <Bighex />
-      </div>
-      <div className="absolute top-0 left-48">
-        <EllipseBox2 />
-      </div>
-      <div className="absolute top-10 -left-20">
-        <EllipseBox />
-      </div>
-      <div className="absolute top-0">
-        <SmallHex />
+      {/* Bg assets */}
+      <div className="hidden lg:block">
+        <div className="absolute w-full left-0 top-0 right-0">
+          <Bighex />
+        </div>
+        <div className="absolute top-0 left-48">
+          <EllipseBox2 />
+        </div>
+        <div className="absolute top-10 -left-20">
+          <EllipseBox />
+        </div>
+        <div className="absolute top-0">
+          <SmallHex />
+        </div>
       </div>
       <SocialFollow />
       <div className="absolute object-right text-xs text-right right-1 dark:bg-primary_orange-0 px-2 animate-pulse py-2 rounded-full opacity-80 bg-black top-20 md:hidden">
