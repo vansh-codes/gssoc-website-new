@@ -50,7 +50,7 @@ export default function Home() {
       <div className="absolute top-0 left-48">
         <EllipseBox2 />
       </div>
-      <div className="absolute top-50">
+      <div className="absolute top-10 -left-20">
         <EllipseBox />
       </div>
       <div className="absolute top-0">
