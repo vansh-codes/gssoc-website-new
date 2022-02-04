@@ -89,19 +89,19 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black">
+        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black" 
+              data-aos="flip-left" 
+              data-aos-duration="700">
             <img
-              data-aos="flip-left"
-              data-aos-duration="700"
               src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
               height="453"
               width="420"
             />
           </div>
-          ):(<div className="border-8 rounded drop-shadow-xl">
+          ):(<div className="border-8 rounded drop-shadow-xl" 
+          data-aos="flip-left"
+          data-aos-duration="700">
             <img
-              data-aos="flip-left"
-              data-aos-duration="700"
               src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
               height="453"
               width="420"
