@@ -45,7 +45,7 @@ export default function Home() {
       </Head>
       {/* Bg assets */}
       <div className="hidden lg:block">
-        <div className="absolute w-full left-0 top-0 right-0">
+        <div className="absolute w-full left-0 -top-10 right-0">
           <Bighex />
         </div>
         <div className="absolute top-0 left-48">
