@@ -27,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center transition-colors flex-wrap bg-white drop-shadow-xl p-1 justify-center mb-10 dark:bg-slate-800 dark:text-primary_orange-0 dark:transition-colors sticky top-0 z-10">
+      <nav className="flex items-center transition-colors flex-wrap bg-white drop-shadow-xl p-1 justify-center mb-10 dark:bg-black dark:text-white dark:transition-colors sticky top-0 z-10">
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
             <span className="text-xl text-orange font-bold uppercase tracking-wide  ml-8">
@@ -39,13 +39,13 @@ export const Navbar = () => {
               /> */}
               {theme === "light" ? (
                 <img
-                  style={{width:'200px'}}
+                  style={{ width: "200px" }}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_Black1.png?raw=true"
                 />
               ) : (
                 <img
-                  style={{width:'200px'}}
+                  style={{ width: "200px" }}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_White.png?raw=true"
                 />
