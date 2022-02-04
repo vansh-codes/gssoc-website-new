@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {accordionData} from './api/data';
+import {accordionData} from './api/faqData';
 // import MyAccordion from './MyAccordion';
 import DiabloAccordion from '../components/diabloAccordion';
 // import Datas from "../pages/api/data";
