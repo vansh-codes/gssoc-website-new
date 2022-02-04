@@ -14,6 +14,9 @@ module.exports = {
         primary_orange: {
           0: "#FF7A19",
         },
+        darkmode_gray: {
+          0: "#303030",
+        },
       },
     },
   },

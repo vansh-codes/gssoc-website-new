@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const router = useRouter();
   if (router.pathname != "/comingsoon") {
     return (
-      <div className="transition-colors dark:bg-gray-700 dark:transition-colors">
+      <div className="transition-colors dark:bg-darkmode_gray-0 dark:transition-colors">
         <Navbar />
         {children}
         <div className="hidden lg:block">
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     );
   } else {
     return (
-      <div className="transition-colors dark:bg-gray-700 dark:transition-colors">
+      <div className="transition-colors dark:bg-darkmode_gray-0 dark:transition-colors">
         {/* <Navbar />
         {children}
         <div className="hidden lg:block">
