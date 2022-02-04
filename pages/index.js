@@ -14,6 +14,10 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Bighex from "../components/BgAssets/Bighex";
+import EllipseBox from "../components/BgAssets/EllipseBox";
+import SmallHex from "../components/BgAssets/SmallHex";
+import EllipseBox2 from "../components/BgAssets/EllipseBox2";
 
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
@@ -39,13 +43,26 @@ export default function Home() {
           href="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Favicon/favicon.png"
         />
       </Head>
+      {/* Hex */}
+      <div className="absolute w-full left-0 top-0 right-0">
+        <Bighex />
+      </div>
+      <div className="absolute top-0 left-48">
+        <EllipseBox2 />
+      </div>
+      <div className="absolute top-50">
+        <EllipseBox />
+      </div>
+      <div className="absolute top-0">
+        <SmallHex />
+      </div>
       <SocialFollow />
       <div className="absolute object-right text-xs text-right right-1 dark:bg-primary_orange-0 px-2 animate-pulse py-2 rounded-full opacity-80 bg-black top-20 md:hidden">
         <ThemeChanger />
       </div>
-      <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors">
+      <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="first-section mb-10 flex flex-col md:flex-row">
-          <div className="basis-1/2">
+          <div className="basis-1/2 relative">
             <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
@@ -118,7 +135,7 @@ export default function Home() {
               />
             </div>
           )}
-          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
+          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
