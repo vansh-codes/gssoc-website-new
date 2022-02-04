@@ -14,18 +14,50 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Globe from 'react-globe.gl';
+  const World = () => {
+    const [countries, setCountries] = useState({ features: []});
+
+    useEffect(() => {
+      // load data
+      fetch('https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(setCountries);
+    }, []);
+
+    return <Globe
+      globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
+      backgroundColor="#374151"
+      height={400}
+      width={400}
+      hexPolygonsData={countries.features}
+      hexPolygonResolution={3}
+      hexPolygonMargin={0.3}
+      hexPolygonColor={() => `#${Math.round(Math.random() * Math.pow(2, 24)).toString(16).padStart(6, '0')}`}
+      hexPolygonLabel={({ properties: d }) => `
+        <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
+        Population: <i>${d.POP_EST}</i>
+      `}
+    />;
+  };
 
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
   // console.log(colorTheme);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
+  
   useEffect(() => {
     Aos.init({ duration: 2000 });
     setMounted(true);
   }, []);
   if (!mounted) return null;
+
+  // const N = 300;
+  // const gData = [...Array(N).keys()].map(() => ({
+  //   lat: (Math.random() - 0.5) * 180,
+  //   lng: (Math.random() - 0.5) * 360,
+  //   size: Math.random() / 3,
+  //   color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]
+  // }));
 
   return (
     <div>
@@ -71,7 +103,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-
+          
           <div data-aos="fade-down" className="hero__image hidden md:block">
             <Tilt
               className="Tilt"
@@ -89,7 +121,17 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black">
+        {/* <Globe
+      globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+      pointsData={gData}
+      pointAltitude="size"
+      pointColor="color"
+      backgroundColor="#374151"
+      height={400}
+      width={400}
+    /> */}
+      < World />  
+        {/* {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black">
             <img
               data-aos="flip-left"
               data-aos-duration="700"
@@ -106,7 +148,7 @@ export default function Home() {
               height="453"
               width="420"
             />
-          </div>)}
+          </div>)} */}
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
