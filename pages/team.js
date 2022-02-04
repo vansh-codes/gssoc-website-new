@@ -96,7 +96,7 @@ const Team = () => {
         </a>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-wrap w-100 justify-around gap-5">
+      <div className="grid grid-cols-3 w-100 justify-items-center	">
         {users.map((curElem, i) => {
           return (
             <>
@@ -119,7 +119,7 @@ const Team = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-4 shadow">
+                  <div className="p-4 shadow bg-orange-400 rounded-xl mt-20 w-full">
                     <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80">
                       {/* {console.log(curElem.Photograph)} */}
                       <img
@@ -130,11 +130,12 @@ const Team = () => {
                         // width={400}
                       />
                     </div>
+                    
                     <div className="flex flex-col items-center justify-center">
-                      <div className="font-bold text-indigo-500 md:text-lg">
-                        {i + 1}. {curElem["Name"]}
+                      <div className="font-bold text-black md:text-lg">
+                        {curElem["Name"]}
                       </div>
-                      <p className="mb-3 text-sm text-gray-500 md:text-base md:mb-4">
+                      <p className="mb-3 text-sm text-slate-200 md:text-base md:mb-4">
                         {curElem["Designation"]}
                       </p>
 
@@ -149,7 +150,7 @@ const Team = () => {
                               href={curElem["GitHub"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-600 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 16 16"
                               >
@@ -166,7 +167,7 @@ const Team = () => {
                               href={curElem["Twitter"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-300 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
                               >
@@ -183,7 +184,7 @@ const Team = () => {
                               href={curElem["LinkedIn"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-500 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
                               >
