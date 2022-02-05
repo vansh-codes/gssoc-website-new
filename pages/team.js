@@ -95,7 +95,7 @@ const Team = () => {
           </button>
         </a>
       </div>
-      <Spacer mt={10} />
+      <Spacer mt={20} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 w-100">
         {users.map((curElem, i) => {
           return (
@@ -119,23 +119,20 @@ const Team = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-4 shadow bg-primary_orange-0 rounded-xl mt-20 w-full">
-                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 relative bottom-9 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-                      {/* {console.log(curElem.Photograph)} */}
+                  <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit relative">
+                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300">
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
                         className="object-cover object-center w-full h-full"
-                        // height={400}
-                        // width={400}
                       />
                     </div>
                     
                     <div className="flex flex-col items-center justify-center">
-                      <div className="font-bold text-black md:text-lg">
+                      <div className="font-bold text-black md:text-xl">
                         {curElem["Name"]}
                       </div>
-                      <p className="mb-3 text-sm text-white font-bold	md:text-base md:mb-4">
+                      <p className="mb-3 text-lg text-white font-bold	md:text-base md:mb-4">
                         {curElem["Designation"]}
                       </p>
 
@@ -202,6 +199,7 @@ const Team = () => {
           );
         })}
       </div>
+      <Spacer mt={20} />
     </>
   );
 };
