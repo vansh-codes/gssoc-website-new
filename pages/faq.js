@@ -3,7 +3,7 @@ import {accordionData} from './api/data';
 // import MyAccordion from './MyAccordion';
 import DiabloAccordion from '../components/diabloAccordion';
 // import Datas from "../pages/api/data";
-
+ 
 function Faq() {
   const [data, setData] = useState(accordionData);
   return (
