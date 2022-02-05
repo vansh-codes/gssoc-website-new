@@ -11,13 +11,23 @@ function Faq() {
     <section className="flex flex-col items-center">
     <h1 className="flex flex-col text-orange-500 text-5xl font-bold m-3">Frequently Asked Questions (FAQS)</h1>
     < br/ >
-    <div className="flex flex-wrap w-85 justify-around gap-0">
+    <div className="flex justify-around md:gap-1 w-11/12">
+      <div className="w-6/12">
     {
-       data.map((curElem) => {
+       data.slice(0, Math.ceil(data.length/2)).map((curElem) => {
          const { id } = curElem;
          return <DiabloAccordion key={ id} { ...curElem }/>
        })
      }
+     </div>
+     <div className="w-6/12">
+     {
+       data.slice(Math.ceil(data.length/2), data.length).map((curElem) => {
+         const { id } = curElem;
+         return <DiabloAccordion key={ id} { ...curElem }/>
+       })
+     }
+      </div>
      </div>
      </section>
 
