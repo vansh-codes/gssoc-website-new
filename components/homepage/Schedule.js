@@ -17,7 +17,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-bounce dark:bg-white shadow text-center">
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
@@ -36,7 +36,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-ping dark:bg-white shadow text-center">
                   <i className="fas fa-check-circle text-white"></i>
                 </div>
               </div>
@@ -55,7 +55,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-pulse dark:bg-white shadow text-center">
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 dark:bg-white shadow text-center">
                   <i className="fas fa-exclamation-circle text-gray-400"></i>
                 </div>
               </div>
@@ -92,7 +92,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 dark:bg-white shadow text-center">
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
@@ -109,7 +109,7 @@ function Schedule() {
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 shadow text-center">
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 dark:bg-white shadow text-center">
                   <i className="fas fa-times-circle text-white"></i>
                 </div>
               </div>
