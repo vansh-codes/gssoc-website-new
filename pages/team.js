@@ -49,7 +49,7 @@ const Team = () => {
 
   return (
     <>
-      <div className=" items-center justify-center">
+      <div className="items-center justify-center">
         <p className="font-serif text-center text-2xl font-extrabold text-black-100">
           <p className="text-primary_orange-0  text-5xl text center font-extrabold mb-10">
             Meet The Team
@@ -61,10 +61,10 @@ const Team = () => {
         </p>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5 ">
+      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5">
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6 "
+            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6"
             onClick={() => getUsers2022()}
           >
             2022
@@ -80,7 +80,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2020()}
           >
             2020
@@ -88,7 +88,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2019()}
           >
             2019
@@ -96,7 +96,7 @@ const Team = () => {
         </a>
       </div>
       <Spacer mt={10} />
-      <div className="grid grid-cols-3 w-100 justify-items-center	">
+      <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 w-100">
         {users.map((curElem, i) => {
           return (
             <>
@@ -120,7 +120,7 @@ const Team = () => {
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
                   <div className="p-4 shadow bg-orange-400 rounded-xl mt-20 w-full">
-                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80">
+                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 relative bottom-9">
                       {/* {console.log(curElem.Photograph)} */}
                       <img
                         src={curElem.Image}
