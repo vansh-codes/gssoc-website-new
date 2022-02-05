@@ -61,7 +61,7 @@ const Team = () => {
         </p>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5">
+      <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
             className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6"
@@ -119,7 +119,7 @@ const Team = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit relative">
+                  <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
                     <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300">
                       <img
                         src={curElem.Image}
