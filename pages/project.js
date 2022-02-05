@@ -32,16 +32,15 @@ const Project = () => {
     <>
       <section>
         <div className="flex items-center justify-center">
-          <p className="font-serif text-center text-2xl font-extrabold text-black-100">
+          <p className="font-serif text-center dark:text-white text-2xl font-extrabold text-black-100">
             <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
-              Projects - GSSOC&apos;21
+              Projects <span className="dark:text-white">for GSSoC 2022</span>
             </p>
-            unfinished projects are the symbol of progress,
-            <br /> not of imperfection
+            "Unfinished projects are the symbol of progress, not of imperfection."
           </p>
         </div>
         <br />
-        <div className="flex flex-wrap w-100 justify-around gap-5">
+        <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 mt-9">
           {data.map((curElem, i) => {
             return (
               <div
@@ -50,7 +49,7 @@ const Project = () => {
                 data-aos="flip-up"
                 data-aos-duration="800"
               >
-                <div className="p-4 shadow">
+                <div className="p-4 shadow dark:bg-black">
                   <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
                     <>
                       {/*                 
@@ -104,27 +103,27 @@ const Project = () => {
                           </ModalFooter>
                         </ModalContent>
                       </Modal> */}
-                      <ProjectModal currProject={curElem}/>
 
-                      <div className="font-bold text-indigo-500 md:text-lg">
+                      <div className="font-bold text-primary_orange-0 md:text-lg">
                         {i + 1}. {curElem.project_name}
                       </div>
-                      <p className="mb-3 text-sm text-gray-500 md:text-base md:mb-4">
+                      <p className="mb-3 text-sm text-white md:text-base md:mb-4">
                         {curElem.owner_name}
                       </p>
-                      <br />
-                      {curElem.mentors_id.map((mentor, j) => {
+                      
+                      {/* {curElem.mentors_id.map((mentor, j) => {
                         return (
                           <h6 className="mb-3 text-sm text-gray-400" key={j}>
                             {j + 1}. {mentor.name}
                           </h6>
                         );
-                      })}
-                      <br />
+                      })} */}
+                      
+                      
                       <ButtonGroup
-                        className="flex flex-wrap gap-1"
+                        className="flex flex-row flex-wrap w-fit h-fit gap-5 ml-7"
                         variant="outline"
-                        spacing="1"
+                        spacing="2"
                       >
                         {curElem.technology_used
                           .split(",")
@@ -136,6 +135,7 @@ const Project = () => {
                             );
                           })}
                       </ButtonGroup>
+                      <ProjectModal currProject={curElem}/>
                     </>
                   </div>
                 </div>

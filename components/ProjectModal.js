@@ -43,7 +43,7 @@ const ProjectModal = ({ currProject }) => {
     //   </Modal>
     // </>
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={onOpen}>Porject Details</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent className="dark:bg-slate-700 h-96">
@@ -56,7 +56,7 @@ const ProjectModal = ({ currProject }) => {
             })}
           </ModalBody>
 
-          <ModalFooter className="flex text-center justify-centercontent-center bg-orange-500 dark:bg-orange-700 ">
+          <ModalFooter className="flex text-center justify-center content-center bg-orange-500 dark:bg-orange-700 ">
             {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button> */}
