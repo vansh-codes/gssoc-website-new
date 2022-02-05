@@ -237,13 +237,13 @@ export default function Home() {
               <img
                 className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(4).png"
+                src="https://user-images.githubusercontent.com/64256342/152652343-d9c8d7c0-2cb4-401e-aef0-f4aed14f7731.svg"
               />
             ) : (
               <img
                 className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(3).png"
+                src="https://user-images.githubusercontent.com/64256342/152652299-9d3ac037-628b-46bb-ba07-fe5f2d4587b9.svg"
               />
             )}
           </div>
@@ -479,7 +479,7 @@ export default function Home() {
             <img
               id="Learn_more"
               className="mb-10"
-              src="https://user-images.githubusercontent.com/64256342/152650154-ddc67996-9855-45e8-b2bc-287a8b07b2fc.svg"
+              src="https://user-images.githubusercontent.com/64256342/152652419-27cc707a-628e-4f6e-bc80-e7157ecfcfe1.svg"
             />
           ) : (
             <img
