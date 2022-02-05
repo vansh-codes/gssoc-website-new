@@ -37,9 +37,9 @@ function Schedule() {
                   <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
-                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  {/* <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
                     <i className="fas fa-check-circle text-white"></i>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-4 border-primary_orange-0 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
@@ -56,9 +56,9 @@ function Schedule() {
                   <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
-                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  {/* <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
                     <i className="fas fa-check-circle text-white"></i>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
@@ -77,9 +77,9 @@ function Schedule() {
                   <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
-                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  {/* <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
                     <i className="fas fa-check-circle text-white"></i>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
@@ -94,9 +94,9 @@ function Schedule() {
                   <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
-                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  {/* <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
                     <i className="fas fa-check-circle text-white"></i>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
@@ -111,9 +111,9 @@ function Schedule() {
                   <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
-                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  {/* <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
                     <i className="fas fa-check-circle text-white"></i>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
