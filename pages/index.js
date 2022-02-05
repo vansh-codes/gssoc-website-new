@@ -206,7 +206,7 @@ export default function Home() {
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
               />
             )}
-            <p className="text-primary_orange-0 font-semibold font-sans text-4xl 2.25rem 3rem mb-10">
+            <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
               <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
@@ -214,7 +214,7 @@ export default function Home() {
               </span>
               Summer of Code
             </p>
-            <p className="dark:text-white font-serif text-xl 1.25rem 1.75rem">
+            <p className="dark:text-white font-serif text-left text-xl 1.25rem 1.75rem">
               GirlScript Summer Of Code is a three-month-long Open-Source
               Program conducted every summer by the Girlscript Foundation. With
               constant efforts, participants contribute to numerous projects
