@@ -46,7 +46,7 @@ export default function Home() {
         />
       </Head>
       {/* Bg assets */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block 3xl:hidden">
         <div className="absolute bottom-80 right-0">
           <img
             src="https://user-images.githubusercontent.com/64256342/152650376-d285b39d-3b06-4c46-afad-c15b90074358.svg"
