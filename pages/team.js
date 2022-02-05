@@ -119,8 +119,8 @@ const Team = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-4 shadow bg-orange-400 rounded-xl mt-20 w-full">
-                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 relative bottom-9">
+                  <div className="p-4 shadow bg-primary_orange-0 rounded-xl mt-20 w-full">
+                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 relative bottom-9 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                       {/* {console.log(curElem.Photograph)} */}
                       <img
                         src={curElem.Image}
@@ -135,7 +135,7 @@ const Team = () => {
                       <div className="font-bold text-black md:text-lg">
                         {curElem["Name"]}
                       </div>
-                      <p className="mb-3 text-sm text-slate-200 md:text-base md:mb-4">
+                      <p className="mb-3 text-sm text-white font-bold	md:text-base md:mb-4">
                         {curElem["Designation"]}
                       </p>
 
