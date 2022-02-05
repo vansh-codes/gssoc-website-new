@@ -11,20 +11,20 @@ function Schedule() {
           of GSSoC 2022!
         </h1>
         <div className="container">
-          <div className="flex flex-col md:grid grid-cols-12 text-gray-50">
+          <div className="flex flex-col md:grid grid-cols-12 text-gray-50 cursor-default">
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
-                <div className="h-full w-6 flex items-center justify-center"> 
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                <div className="h-full w-6 flex items-center justify-center">
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-orange-500 rounded-full bg-white dark:bg-gray-700 shadow text-center">
-                  <i className="fas fa-check-circle text-white"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 bg-white hover:bg-orange-400 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
-                <h3 className="font-bold text-xl mb-1">
-                  25th Feb to 26th Feb
-                </h3>
+              <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+                <h3 className="font-bold text-xl mb-1">25th Feb to 26th Feb</h3>
                 <p className=" leading-tight text-lg w-full">
                   Assign projects to mentors
                 </p>
@@ -34,16 +34,16 @@ function Schedule() {
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-ping dark:bg-white shadow text-center">
-                  <i className="fas fa-check-circle text-white"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 border-orange-500 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
-                <h3 className="font-bold text-xl text-xl mb-1">
-                  01th Mar
-                </h3>
+              <div className="border-4 border-primary_orange-0 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white  col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+                <h3 className="font-bold text-xl text-xl mb-1">01th Mar</h3>
                 <p className="leading-tight text-justify">
                   1st phase of contribution
                 </p>
@@ -53,13 +53,15 @@ function Schedule() {
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-pulse dark:bg-white shadow text-center">
-                  <i className="fas fa-times-circle text-white"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   5th Mar to 6th Mar
                 </h3>
@@ -72,34 +74,33 @@ function Schedule() {
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 animate-bounce dark:bg-white shadow text-center">
-                  <i className="fas fa-exclamation-circle text-gray-400"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
-                <h3 className="font-bold text-xl text-xl mb-1">
-                  1st April
-                </h3>
+              <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+                <h3 className="font-bold text-xl text-xl mb-1">1st April</h3>
                 <p className="leading-tight text-justify">Leaderboard opens</p>
               </div>
             </div>
 
-
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 dark:bg-white shadow text-center">
-                  <i className="fas fa-times-circle text-white"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
-                <h3 className="font-bold text-xl text-xl mb-1">
-                  31st May
-                </h3>
+              <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+                <h3 className="font-bold text-xl text-xl mb-1">31st May</h3>
                 <p className="leading-tight text-justify">Coding period ends</p>
               </div>
             </div>
@@ -107,13 +108,15 @@ function Schedule() {
             <div className="flex md:contents">
               <div className="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
-                  <div className="h-full w-1 bg-orange-500 pointer-events-none"></div>
+                  <div className="h-full w-1 bg-primary_orange-0 pointer-events-none"></div>
                 </div>
-                <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-orange-500 dark:bg-white shadow text-center">
-                  <i className="fas fa-times-circle text-white"></i>
+                <div className="w-6 h-6 absolute top-1/2 -mt-3 border-4 border-primary_orange-0 rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 animate-ping rounded-full bg-white dark:bg-darkmode_gray-0 shadow text-center">
+                    <i className="fas fa-check-circle text-white"></i>
+                  </div>
                 </div>
               </div>
-              <div className="border-4 bg-white hover:bg-orange-500 text-gray-600 dark:bg-orange-600 dark:hover:bg-slate-700 dark:text-white border-orange-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
+              <div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full">
                 <h3 className="font-bold text-xl text-xl mb-1">
                   2nd week of July
                 </h3>
