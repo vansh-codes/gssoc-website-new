@@ -49,7 +49,7 @@ const Team = () => {
 
   return (
     <>
-      <div className=" items-center justify-center">
+      <div className="items-center justify-center">
         <p className="font-serif text-center text-2xl font-extrabold text-black-100">
           <p className="text-primary_orange-0  text-5xl text center font-extrabold mb-10">
             Meet The Team
@@ -61,10 +61,10 @@ const Team = () => {
         </p>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5 ">
+      <div className="flex flex-row justify-center flex-wrap items-center flex-wrap gap-5">
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6 "
+            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6"
             onClick={() => getUsers2022()}
           >
             2022
@@ -80,7 +80,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2020()}
           >
             2020
@@ -88,7 +88,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6 "
+            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2019()}
           >
             2019
@@ -96,7 +96,7 @@ const Team = () => {
         </a>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-wrap w-100 justify-around gap-5">
+      <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 w-100">
         {users.map((curElem, i) => {
           return (
             <>
@@ -119,8 +119,8 @@ const Team = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-4 shadow">
-                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80">
+                  <div className="p-4 shadow bg-primary_orange-0 rounded-xl mt-20 w-full">
+                    <div className="h-48 mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 relative bottom-9 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                       {/* {console.log(curElem.Photograph)} */}
                       <img
                         src={curElem.Image}
@@ -130,11 +130,12 @@ const Team = () => {
                         // width={400}
                       />
                     </div>
+                    
                     <div className="flex flex-col items-center justify-center">
-                      <div className="font-bold text-indigo-500 md:text-lg">
-                        {i + 1}. {curElem["Name"]}
+                      <div className="font-bold text-black md:text-lg">
+                        {curElem["Name"]}
                       </div>
-                      <p className="mb-3 text-sm text-gray-500 md:text-base md:mb-4">
+                      <p className="mb-3 text-sm text-white font-bold	md:text-base md:mb-4">
                         {curElem["Designation"]}
                       </p>
 
@@ -149,7 +150,7 @@ const Team = () => {
                               href={curElem["GitHub"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-600 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 16 16"
                               >
@@ -166,7 +167,7 @@ const Team = () => {
                               href={curElem["Twitter"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-300 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
                               >
@@ -183,7 +184,7 @@ const Team = () => {
                               href={curElem["LinkedIn"]}
                             >
                               <svg
-                                className="w-6 h-6 text-blue-500 fill-current"
+                                className="w-6 h-6 text-black fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
                               >

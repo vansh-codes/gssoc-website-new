@@ -14,6 +14,12 @@ module.exports = {
         primary_orange: {
           0: "#FF7A19",
         },
+        darkmode_gray: {
+          0: "#303030",
+        },
+      },
+      screens: {
+        "3xl": "1600px",
       },
     },
   },

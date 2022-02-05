@@ -1,6 +1,6 @@
 function Cards(props) {
   return (
-    <div className="dark:bg-gray-800 bg-white shadow-lg rounded-lg  h-fit my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
+    <div className="dark:bg-black bg-white shadow-lg rounded-lg  h-fit my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5">
       <article className="overflow-hidden rounded-lg">
         <header className="flex items-center p-2 md:p-4">
           <h1 className="dark:text-white font-semibold text-3xl 1.875 rem 2.25 rem">
@@ -17,7 +17,7 @@ function Cards(props) {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="dark:text-gray-800 bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded mb-3">
+            <button className="dark:text-black bg-primary_orange-0 text-white w-full font-bold py-3 px-5 rounded mb-3">
               {props.btntext}
             </button>
           </a>
