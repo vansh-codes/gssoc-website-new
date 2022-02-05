@@ -103,7 +103,7 @@ export default function Home() {
             >
               <div className="img__container">
                 <img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13%201.png"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13.svg"
                   alt="hero-image"
                 />
               </div>
@@ -112,32 +112,25 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-          {theme === "light" ? (
-            <div
-              className="border-8 rounded drop-shadow-xl border-black"
-              data-aos="flip-left"
-              data-aos-duration="700"
-            >
-              <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
-                height="453"
-                width="420"
-              />
-            </div>
-          ) : (
-            <div
-              className="border-8 rounded drop-shadow-xl"
-              data-aos="flip-left"
-              data-aos-duration="700"
-            >
-              <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle.png"
-                height="453"
-                width="420"
-              />
-            </div>
-          )}
-          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
+        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black" 
+              data-aos="flip-left" 
+              data-aos-duration="700">
+            <img
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+              height="453"
+              width="420"
+            />
+          </div>
+          ):(<div className="border-8 rounded drop-shadow-xl" 
+          data-aos="flip-left"
+          data-aos-duration="700">
+            <img
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+              height="453"
+              width="420"
+            />
+          </div>)}
+          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
