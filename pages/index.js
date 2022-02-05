@@ -18,6 +18,8 @@ import Bighex from "../components/BgAssets/Bighex";
 import EllipseBox from "../components/BgAssets/EllipseBox";
 import SmallHex from "../components/BgAssets/SmallHex";
 import EllipseBox2 from "../components/BgAssets/EllipseBox2";
+import Hex1 from "../components/BgAssets/Hex1";
+import Hex2 from "../components/BgAssets/Hex2";
 
 export default function Home() {
   // const [colorTheme, setTheme] = useDarkMode();
@@ -45,8 +47,20 @@ export default function Home() {
       </Head>
       {/* Bg assets */}
       <div className="hidden lg:block">
+        <div className="absolute bottom-80 right-0">
+          <img
+            src="https://user-images.githubusercontent.com/64256342/152650376-d285b39d-3b06-4c46-afad-c15b90074358.svg"
+            alt="bg"
+          />
+        </div>
         <div className="absolute w-full left-0 -top-10 right-0">
           <Bighex />
+        </div>
+        <div className="absolute top-0 left-0">
+          <Hex1 />
+        </div>
+        <div className="absolute top-0 left-0">
+          <Hex2 />
         </div>
         <div className="absolute top-0 left-48">
           <EllipseBox2 />
@@ -112,25 +126,32 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-        {theme==="light"?(<div className="border-8 rounded drop-shadow-xl border-black" 
-              data-aos="flip-left" 
-              data-aos-duration="700">
-            <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
-              height="453"
-              width="420"
-            />
-          </div>
-          ):(<div className="border-8 rounded drop-shadow-xl" 
-          data-aos="flip-left"
-          data-aos-duration="700">
-            <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
-              height="453"
-              width="420"
-            />
-          </div>)}
-          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last">
+          {theme === "light" ? (
+            <div
+              className="border-8 rounded drop-shadow-xl border-black"
+              data-aos="flip-left"
+              data-aos-duration="700"
+            >
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+                height="453"
+                width="420"
+              />
+            </div>
+          ) : (
+            <div
+              className="border-8 rounded drop-shadow-xl"
+              data-aos="flip-left"
+              data-aos-duration="700"
+            >
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+                height="453"
+                width="420"
+              />
+            </div>
+          )}
+          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
@@ -214,13 +235,13 @@ export default function Home() {
             {/* <h1>GSSOC 2021 by the numbers</h1> */}
             {theme === "light" ? (
               <img
-                className="mt-3 md:mt-0"
+                className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(4).png"
               />
             ) : (
               <img
-                className="mt-3 md:mt-0"
+                className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Frame%201(3).png"
               />
@@ -448,16 +469,25 @@ export default function Home() {
       </div> */}
       {/* Schedule */}
       {/* <Schedule /> */}
-      <div className="schedule__container flex flex-col items-center mb-48">
-        <div className="schedule__overview mt-24">
+      <div className="schedule__container flex flex-col items-center mb-48 ">
+        <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
             2022!
           </p>
-          <img
-            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Schedule/Schedule.png?raw=true"
-            alt="schedule"
-          />
+          {theme === "light" ? (
+            <img
+              id="Learn_more"
+              className="mb-10"
+              src="https://user-images.githubusercontent.com/64256342/152650154-ddc67996-9855-45e8-b2bc-287a8b07b2fc.svg"
+            />
+          ) : (
+            <img
+              id="Learn_more"
+              className="mb-10"
+              src="https://user-images.githubusercontent.com/64256342/152650154-ddc67996-9855-45e8-b2bc-287a8b07b2fc.svg"
+            />
+          )}
         </div>
       </div>
     </div>
