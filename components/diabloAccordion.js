@@ -6,18 +6,16 @@ import {
     AccordionIcon,
     Box
   } from '@chakra-ui/react'
-  import { MinusIcon, AddIcon } from '@chakra-ui/icons'
-  import React, {useState} from 'react';
+  import React from 'react';
   import { useTheme } from "next-themes";
   
   const DiabloAccordion = ({question, answer}) => {
-    const { theme, setTheme } = useTheme();
-    const [show, setShow] = useState(false);
+    const { theme } = useTheme();
     return (
       <>
         {theme === "light" ? (
         <Accordion allowMultiple className="drop-shadow-xl">
-        <AccordionItem m={2} color='#FFF' backgroundColor='#F97316' w="container.sm">
+        <AccordionItem m={3} color='#FFFFFF' backgroundColor='#F97316'>
           <h2>
             <AccordionButton>
               <Box flex='1' textAlign='left' className="font-medium">
@@ -26,14 +24,14 @@ import {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4} color='#374151' backgroundColor='#FFF'>
+          <AccordionPanel pb={4} color='#000000' backgroundColor='#FFFFFF'>
             {answer}
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
       ):(
         <Accordion allowMultiple className="drop-shadow-xl">
-        <AccordionItem m={2} color='orange' backgroundColor='#1F2937' w="container.sm">
+        <AccordionItem m={3} color='orange' backgroundColor='#000000'>
           <h2>
             <AccordionButton>
               <Box flex='1' textAlign='left' className="font-medium">

@@ -1,4 +1,3 @@
-// import useDarkMode from "../useDarkmode";
 import Head from "next/head";
 import Image from "next/image";
 // import { Button, ButtonGroup } from "@chakra-ui/react";
@@ -6,13 +5,9 @@ import { Box } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
-import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
-import Schedule from "../components/homepage/Schedule";
 import Tilt from "react-tilt";
 import ThemeChanger from "../components/Toggler";
-// import { useTheme } from "next-themes";
-import { Spacer } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
@@ -25,10 +20,8 @@ import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 
 export default function Home() {
-  // const [colorTheme, setTheme] = useDarkMode();
-  // console.log(colorTheme);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -150,6 +143,7 @@ export default function Home() {
                 <img
                   src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13.svg"
                   alt="hero-image"
+                  className="dark:invert dark:hue-rotate-180"
                 />
               </div>
             </Tilt>
@@ -167,6 +161,7 @@ export default function Home() {
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
                 height="453"
                 width="420"
+                alt="Rectangle light"
               />
             </div>
           ) : (
@@ -179,6 +174,7 @@ export default function Home() {
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
                 height="453"
                 width="420"
+                alt="Rectangle dark"
               />
             </div>
           )}
@@ -222,30 +218,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center bg-[#FFECDE] dark:bg-black flex-wrap rounded-xl mb-24">
+        <div className="flex flex-row justify-between items-center bg-[#FFECDE] dark:bg-black flex-wrap rounded-xl mb-24">
           <div className="w-560px px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {theme === "light" ? (
               <img
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+                alt="Learn More light"
               />
             ) : (
               <img
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
+                alt="Learn More dark"
               />
             )}
             <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
-              <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
+              <h1 className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
                 GirlScript{" "}
-              </span>
+              </h1>
               Summer of Code
             </p>
-            <p className="dark:text-white font-serif text-left text-xl 1.25rem 1.75rem">
+            <p className="dark:text-white font-serif text-left text-xl">
               GirlScript Summer Of Code is a three-month-long Open-Source
               Program conducted every summer by the Girlscript Foundation. With
               constant efforts, participants contribute to numerous projects
@@ -256,12 +254,7 @@ export default function Home() {
               2022 edition aims to carry the legacy with a promising impact.
             </p>
           </div>
-          {/* <img
-            data-aos="flip-right"
-            data-aos-duration="700"
-            className="mt-8 md:mt-4 lg:mt-0 lg:pr-10"
-            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
-          /> */}
+
           <div className="w-560px px-4 pt-3 lg:text-left rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {/* <h1>GSSOC 2021 by the numbers</h1> */}
             {theme === "light" ? (
