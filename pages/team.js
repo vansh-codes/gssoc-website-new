@@ -144,7 +144,7 @@ const Team = () => {
                             </a>
                           )}
                           {curElem.hasOwnProperty("Twitter")===false || curElem["Twitter"].trim() == ""? (
-                            <></>
+                            <></> 
                           ) : (
                             <a
                               target="_blank"
