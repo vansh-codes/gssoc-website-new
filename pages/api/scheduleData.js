@@ -2,17 +2,17 @@ export const schedData = [
     {
         id: 1,
         duration: '25th Feb to 26th Feb',
-        event: 'Assign projects to mentors'
+        event: 'Project Assignment to Mentors'
     },
     {
         id: 2,
         duration: '01st Mar',
-        event: '1st phase of contribution'
+        event: 'Coding Period Starts'
     },
     {
         id: 3,
         duration: '5th Mar to 6th Mar',
-        event: 'Community bonding session starts'
+        event: 'Community Bonding Session begins'
     },
     {
         id: 4,
@@ -22,7 +22,7 @@ export const schedData = [
     {
         id: 5,
         duration: '31st May',
-        event: 'Coding period ends'
+        event: 'Coding Period Ends'
     },
     {
         id: 6,
