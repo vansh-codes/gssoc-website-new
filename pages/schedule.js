@@ -1,4 +1,4 @@
-import Schedule from "../components/homepage/Schedule";
+import Schedule from "../components/ScheduleMap";
 
 function schedule() {
   return (

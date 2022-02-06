@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import team2021 from "./api/team2021.json";
-import axios from "axios";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 
 const Team = () => {
@@ -38,14 +34,6 @@ const Team = () => {
   useEffect(() => {
     getUsers2022();
   }, []);
-
-  const apiURL = "https://www.anapioficeandfire.com/api/books?pageSize=30";
-
-  const fetchData = async () => {
-    const response = await axios.get(apiURL);
-
-    setUsers(response.data);
-  };
 
   return (
     <>

@@ -1,15 +1,8 @@
-// import useDarkMode from "../useDarkmode";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
-import Navbar from "../components/Navbar";
 import SocialFollow from "../components/homepage/SocialFollow";
-import Schedule from "../components/homepage/Schedule";
 import Tilt from "react-tilt";
 import ThemeChanger from "../components/Toggler";
-// import { useTheme } from "next-themes";
-import { Spacer } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
@@ -22,10 +15,8 @@ import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 
 export default function Home() {
-  // const [colorTheme, setTheme] = useDarkMode();
-  // console.log(colorTheme);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -136,6 +127,7 @@ export default function Home() {
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
                 height="453"
                 width="420"
+                alt="Rectangle light"
               />
             </div>
           ) : (
@@ -148,6 +140,7 @@ export default function Home() {
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
                 height="453"
                 width="420"
+                alt="Rectangle dark"
               />
             </div>
           )}
@@ -198,12 +191,14 @@ export default function Home() {
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+                alt="LearnMore light"
               />
             ) : (
               <img
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
+                alt="LearnMore dark"
               />
             )}
             <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">

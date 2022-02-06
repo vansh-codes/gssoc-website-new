@@ -1,24 +1,17 @@
-/*  ./components/Navbar.js     */
-// import { useTheme } from "next-themes";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import useDarkMode from "../useDarkmode";
 import ThemeChanger from "./Toggler";
 import Link from "next/link";
-// import { useState } from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import { Tooltip } from "@chakra-ui/react";
 
 export const Navbar = () => {
-  // const [colorTheme, setTheme] = useDarkMode();
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
     setActive(!active);
   };
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
@@ -42,30 +35,19 @@ export const Navbar = () => {
                   style={{ width: "200px" }}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_Black1.png?raw=true"
+                  alt="GSSoC logo light"
                 />
               ) : (
                 <img
                   style={{ width: "200px" }}
                   id="Learn_more"
                   src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Navbar%20logo/GS_logo_White.png?raw=true"
+                  alt="GSSoC logo dark"
                 />
               )}
             </span>
           </a>
         </Link>
-        {/* {colorTheme === "light" ? (
-          <img
-            src="https://user-images.githubusercontent.com/64256342/151415459-adf26d5f-ad89-4a4a-85b4-477ee85d0b61.png"
-            onClick={() => setTheme("light")}
-            className="h-6 w-6 block ml-auto lg:hidden"
-          />
-        ) : (
-          <img
-            src="https://user-images.githubusercontent.com/64256342/151416170-51c1f8ec-28bd-41b0-bf9c-837509e5460e.png"
-            onClick={() => setTheme("dark")}
-            className="h-6 w-6 block ml-auto lg:hidden"
-          />
-        )} */}
         <button
           className=" inline-flex p-3 hover:bg-orange-600 rounded lg:hidden text-grey-800 ml-auto hover:text-grey-800 outline-none"
           onClick={handleClick}

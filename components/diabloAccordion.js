@@ -6,13 +6,11 @@ import {
     AccordionIcon,
     Box
   } from '@chakra-ui/react'
-  import { MinusIcon, AddIcon } from '@chakra-ui/icons'
-  import React, {useState} from 'react';
+  import React from 'react';
   import { useTheme } from "next-themes";
   
   const DiabloAccordion = ({question, answer}) => {
-    const { theme, setTheme } = useTheme();
-    const [show, setShow] = useState(false);
+    const { theme } = useTheme();
     return (
       <>
         {theme === "light" ? (

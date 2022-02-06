@@ -2,14 +2,6 @@ import React, { useState, useEffect } from "react";
 import { projectData } from "./api/projectsData";
 import Image from "next/image";
 import { Button, ButtonGroup } from "@chakra-ui/react";
-// import {
-//   AlertDialog,
-//   AlertDialogBody,
-//   AlertDialogFooter,
-//   AlertDialogHeader,
-//   AlertDialogContent,
-//   AlertDialogOverlay,
-// } from '@chakra-ui/react'
 import ProjectModal from "../components/ProjectModal";
 import {
   Modal,
@@ -23,7 +15,7 @@ import {
 import { useDisclosure, Lorem } from "@chakra-ui/react";
 
 const Project = () => {
-  const [data, setData] = useState(projectData);
+  const [data] = useState(projectData);
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const [isOpen, setIsOpen] = React.useState(false)
   // const onClose = () => setIsOpen(false)
