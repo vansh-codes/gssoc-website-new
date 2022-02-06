@@ -19,14 +19,14 @@ import React, { useState } from 'react';
             onMouseLeave={() => setIsShown(false)}>
             <h3 className="font-bold text-xl mb-1">{curElem.duration}</h3>
             <p className=" leading-tight text-lg w-full">
-                {curElem.event}
+                {curElem.duration}
             </p>
             </div>):
             (<div className="border-4 bg-white hover:bg-primary_orange-0 hover:text-white text-gray-600 dark:bg-darkmode_gray-0 dark:hover:bg-primary_orange-0 dark:text-white border-primary_orange-0 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto w-full" onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}>
             <h3 className="font-bold text-xl mb-1">{curElem.duration}</h3>
             <p className=" leading-tight text-lg w-full">
-                Assign projects to mentors
+                {curElem.duration}
             </p>
             </div>)}
         </div>
