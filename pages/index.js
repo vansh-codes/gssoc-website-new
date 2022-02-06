@@ -152,7 +152,7 @@ export default function Home() {
 
         <div className="flex justify-between items-center flex-wrap mb-24">
             <div
-              className="border-8 rounded drop-shadow-xl light:border-black"
+              className="border-8 rounded drop-shadow-xl border-black dark:border-white"
               data-aos="flip-left"
               data-aos-duration="700"
             >
