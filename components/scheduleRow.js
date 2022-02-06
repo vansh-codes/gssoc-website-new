@@ -26,7 +26,7 @@ import React, { useState } from 'react';
             onMouseLeave={() => setIsShown(false)}>
             <h3 className="font-bold text-xl mb-1">{curElem.duration}</h3>
             <p className=" leading-tight text-lg w-full">
-                {curElem.duration}
+                {curElem.event}
             </p>
             </div>)}
         </div>
