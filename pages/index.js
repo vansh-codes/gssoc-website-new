@@ -334,7 +334,7 @@ export default function Home() {
               {/* Card-1 */}
               <Card
                 title="Start your Journey"
-                content="If you have basic git skills or are first timers or even veteran developers, GirlScript Summer of Code would give you a taste of contributing in a long open source projects. Continuously for 3 months you will contribute to your assigned projects under guidance of experienced mentors. Register yourself as a participant for GSSoc 2022 here. "
+                content="Participating in GSSoC’22 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and learn to work with essential tools like Git and Github under the supervision of excellent mentors."
                 btntext="Register to Participate"
                 link="https://forms.gle/FHtuuhW17hv2dqua8"
               />
@@ -363,7 +363,7 @@ export default function Home() {
               {/* Card-4 */}
               <Card
                 title="Add a Shade to GSSOC"
-                content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors."
+                content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly. They make it possible to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors. Sponsor us to add a bright shade to our program."
                 btntext="Sponsor Us"
                 link="https://forms.gle/fkzq3xQ7nh2CbrA78"
               />
