@@ -184,32 +184,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center bg-[#FFECDE] dark:bg-black flex-wrap rounded-xl mb-24">
+        <div className="flex flex-row justify-between items-center bg-[#FFECDE] dark:bg-black flex-wrap rounded-xl mb-24">
           <div className="w-560px px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {theme === "light" ? (
               <img
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
-                alt="LearnMore light"
+                alt="Learn More light"
               />
             ) : (
               <img
                 id="Learn_more"
                 className="mb-10"
                 src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
-                alt="LearnMore dark"
+                alt="Learn More dark"
               />
             )}
             <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
-              <span className="dark:text-white text-black text-4xl 2.25rem 3rem">
+              <h1 className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
                 GirlScript{" "}
-              </span>
+              </h1>
               Summer of Code
             </p>
-            <p className="dark:text-white font-serif text-left text-xl 1.25rem 1.75rem">
+            <p className="dark:text-white font-serif text-left text-xl">
               GirlScript Summer Of Code is a three-month-long Open-Source
               Program conducted every summer by the Girlscript Foundation. With
               constant efforts, participants contribute to numerous projects
@@ -220,12 +220,7 @@ export default function Home() {
               2022 edition aims to carry the legacy with a promising impact.
             </p>
           </div>
-          {/* <img
-            data-aos="flip-right"
-            data-aos-duration="700"
-            className="mt-8 md:mt-4 lg:mt-0 lg:pr-10"
-            src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/Frame.png?raw=true"
-          /> */}
+
           <div className="w-560px px-4 pt-3 lg:text-left rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {/* <h1>GSSOC 2021 by the numbers</h1> */}
             {theme === "light" ? (
