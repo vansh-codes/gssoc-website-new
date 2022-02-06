@@ -25,6 +25,7 @@ import { useDisclosure, Lorem } from "@chakra-ui/react";
 const Project = () => {
   const [data, setData] = useState(projectData);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [searchtrm, setsearchtrm] = useState("");
   // const [isOpen, setIsOpen] = React.useState(false)
   // const onClose = () => setIsOpen(false)
   // const cancelRef = React.useRef()
@@ -39,9 +40,21 @@ const Project = () => {
             "Unfinished projects are the symbol of progress, not of imperfection."
           </p>
         </div>
+        <div className="flex flex-col justify-center content-center items-center mt-4">
+        <input type="text" placeholder="Search Projects" className="h-20 w-5/12 pl-5 border-2	border-black dark:hover:bg-white" onChange={(event)=>{
+            setsearchtrm(event.target.value);
+          }}></input>
+        </div>  
         <br />
         <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 mt-9">
-          {data.map((curElem, i) => {
+          {data.filter((curElem, i) => {
+            if (searchtrm == ""){
+              return curElem;
+            }
+            else if (curElem.technology_used.includes(searchtrm)){
+              return curElem;
+            }
+          }).map((curElem, i) => {
             return (
               <div
                 className="flex items-center justify-between w-80"
@@ -49,7 +62,7 @@ const Project = () => {
                 data-aos="flip-up"
                 data-aos-duration="800"
               >
-                <div className="p-4 shadow dark:bg-black">
+                <div className="p-4 shadow dark:bg-black rounded-lg">
                   <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
                     <>
                       {/*                 
