@@ -143,7 +143,7 @@ const Team = () => {
                               </svg>
                             </a>
                           )}
-                          {curElem["Twitter"] == "" ? (
+                          {curElem.hasOwnProperty("Twitter")===false || curElem["Twitter"].trim() == ""? (
                             <></>
                           ) : (
                             <a
