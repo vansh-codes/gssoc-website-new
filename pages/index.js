@@ -1,6 +1,9 @@
 // import useDarkMode from "../useDarkmode";
 import Head from "next/head";
 import Image from "next/image";
+// import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
 import Navbar from "../components/Navbar";
@@ -93,13 +96,41 @@ export default function Home() {
               <b> 1st March - 31st May 2022 </b>
             </p>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
-              <a href="#card-1">
+              <a className="" href="#card-1">
                 <button
+                  id="CTA-button"
                   data-aos="fade-down"
-                  className="bg-primary_orange-0 text-md text-white font-bold px-4 py-4 rounded md:text-2xl md:py-4"
+                  className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white font-semibold px-4 py-4 rounded-2xl md:text-2xl md:py-2 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600"
                 >
                   Register Here
                 </button>
+                {/* <Box
+                  as="button"
+                  height="50px"
+                  width="200px"
+                  lineHeight="1.2"
+                  transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+                  border="0px"
+                  px="8px"
+                  borderRadius="15px"
+                  fontSize="24px"
+                  fontWeight="semibold"
+                  bg="#FF7A19"
+                  borderColor="##b55712"
+                  color="#ffffff"
+                  _hover={{ bg: "#b55712" }}
+                  _active={{
+                    bg: "#FF7A19",
+                    transform: "scale(0.98)",
+                    borderColor: "#bec3c9",
+                  }}
+                  _focus={{
+                    boxShadow:
+                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                  }}
+                >
+                  Register Here
+                </Box> */}
               </a>
               <a data-aos="fade-down" href="#Learn_more">
                 <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
