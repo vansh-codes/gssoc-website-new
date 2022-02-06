@@ -38,11 +38,9 @@ function ComingSoon() {
       </div>
       <div className="redirect__container flex mt-10">
         <Link href="/">
-          <p className="text-2xl font-serif text-center cursor-pointer mb-5 md:mb-10">
+          <p className="text-2xl dark:text-white font-serif text-center cursor-pointer mb-5 md:mb-10">
             Meanwhile you can hangout at our{" "}
-            <span className="dark:text-primary_orange-0 ">
-              awesome Homepage
-            </span>
+            <span className="text-primary_orange-0 ">awesome Homepage</span>
           </p>
         </Link>
       </div>
