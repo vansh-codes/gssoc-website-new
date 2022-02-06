@@ -110,6 +110,7 @@ export default function Home() {
                 <img
                   src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13.svg"
                   alt="hero-image"
+                  className="dark:invert dark:hue-rotate-180"
                 />
               </div>
             </Tilt>
