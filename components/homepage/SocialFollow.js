@@ -7,7 +7,7 @@ import {
   faYoutube,
   faFacebook,
   faTwitter,
-  faInstagram,
+  faInstagramSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -35,7 +35,7 @@ export default function SocialFollow() {
         className="dark:transition-colors transition-colors  bg-transparent dark:text-primary_orange-0 dark:hover:text-pink-600 dark:ease-linear dark:hover:ease-in block text-center text-gray-700 py-2 px-2 text-base  hover:text-pink-600 ease-linear hover:ease-in"
         rel="noreferrer"
       >
-        <FontAwesomeIcon className="w-10 h-10" icon={faInstagram} size="2x" />
+        <FontAwesomeIcon className="w-10 h-10" icon={faInstagramSquare} size="2x" />
       </a>
       <a
         href="https://www.linkedin.com/company/girlscriptsoc/mycompany/"

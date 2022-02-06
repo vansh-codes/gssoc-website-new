@@ -151,9 +151,8 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-          {theme === "light" ? (
             <div
-              className="border-8 rounded drop-shadow-xl border-black"
+              className="border-8 rounded drop-shadow-xl border-black dark:border-white"
               data-aos="flip-left"
               data-aos-duration="700"
             >
@@ -164,20 +163,6 @@ export default function Home() {
                 alt="Rectangle light"
               />
             </div>
-          ) : (
-            <div
-              className="border-8 rounded drop-shadow-xl"
-              data-aos="flip-left"
-              data-aos-duration="700"
-            >
-              <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
-                height="453"
-                width="420"
-                alt="Rectangle dark"
-              />
-            </div>
-          )}
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
