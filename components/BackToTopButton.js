@@ -57,6 +57,7 @@ const BackToTopButton = () => {
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="animate-bounce"
       >
         <path d="M12 19V5M5 12l7-7 7 7" />
       </svg>
