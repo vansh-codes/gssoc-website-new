@@ -18,6 +18,7 @@ import SmallHex from "../components/BgAssets/SmallHex";
 import EllipseBox2 from "../components/BgAssets/EllipseBox2";
 import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
+import Map from "../components/BgAssets/Map";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -151,18 +152,18 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between items-center flex-wrap mb-24">
-            <div
-              className="border-8 rounded drop-shadow-xl border-black dark:border-white"
-              data-aos="flip-left"
-              data-aos-duration="700"
-            >
-              <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
-                height="453"
-                width="420"
-                alt="Rectangle light"
-              />
-            </div>
+          <div
+            className="border-8 rounded drop-shadow-xl border-black dark:border-white"
+            data-aos="flip-left"
+            data-aos-duration="700"
+          >
+            <img
+              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+              height="453"
+              width="420"
+              alt="Rectangle light"
+            />
+          </div>
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
@@ -257,11 +258,17 @@ export default function Home() {
             )}
           </div>
         </div>
-        {/* <div className="organisation mb-24">
+        <div className="organisation mb-48 ">
+          <div className="hidden lg:block 3xl:hidden">
+            <div className="absolute left-0 top-[130rem]">
+              <Map />
+            </div>
+          </div>
+
           <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
-            Some of the <br />
-            <span className="text-[#511A97] dark:text-primary_orange-0 text-4xl 2.25rem 3rem">
-              participating organisations!
+            Some of the previous <br />
+            <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
+              participating organisations
             </span>
           </p>
           <div className="org__box flex flex-row items-center justify-center flex-wrap">
@@ -293,13 +300,13 @@ export default function Home() {
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
             />
-            <div>
+            <div className="mt-12 md:mt-0">
               <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
                 and more ...
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
