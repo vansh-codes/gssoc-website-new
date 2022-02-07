@@ -3,11 +3,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer id="Contact">
-      <div className="footer-2 bg-orange-500 pt-6 md:pt-8">
+      <div className="footer-2 bg-gradient-to-b from-[#FF8500] to-[#FF6701] pt-6 md:pt-8">
         <div className="container px-4 mx-auto">
           <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-8">
             <div className="footer-info lg:w-1/3 md:px-4">
-             {/* <h4 className="text-white text-2xl font-medium mb-4">
+              {/* <h4 className="text-white text-2xl font-medium mb-4">
                 Made with ❤️ by GirlScript India
   </h4>*/}
               <Link href="/">
@@ -96,7 +96,8 @@ const Footer = () => {
                 <p className="text-black">
                   &copy;{" "}
                   <strong>
-                  2022 GirlScript Foundation. Made with 🖤️ by GirlScript India. All rights reserved. 
+                    2022 GirlScript Foundation. Made with 🖤️ by GirlScript
+                    India. All rights reserved.
                   </strong>
                 </p>
               </div>
