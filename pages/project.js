@@ -62,7 +62,7 @@ const Project = () => {
                 data-aos="flip-up"
                 data-aos-duration="800"
               >
-                <div className="p-4 shadow dark:bg-black rounded-lg">
+                <div className="shadow dark:bg-black rounded-lg">
                   <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
                     <>
                       {/*                 
@@ -120,7 +120,7 @@ const Project = () => {
                       <div className="font-bold text-primary_orange-0 md:text-lg">
                         {i + 1}. {curElem.project_name}
                       </div>
-                      <p className="mb-3 text-sm text-white md:text-base md:mb-4">
+                      <p className="mb-3 text-sm dark:text-white md:text-base md:mb-4">
                         {curElem.owner_name}
                       </p>
                       
@@ -134,7 +134,7 @@ const Project = () => {
                       
                       
                       <ButtonGroup
-                        className="flex flex-row flex-wrap w-fit h-fit gap-5 ml-7"
+                        className="flex flex-row flex-wrap w-fit h-fit gap-5 mb-7"
                         variant="outline"
                         spacing="2"
                       >
@@ -148,9 +148,9 @@ const Project = () => {
                             );
                           })}
                       </ButtonGroup>
-                      <ProjectModal currProject={curElem}/>
                     </>
                   </div>
+                  <ProjectModal currProject={curElem}/>
                 </div>
               </div>
             );

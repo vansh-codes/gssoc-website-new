@@ -10,7 +10,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useDisclosure, Lorem } from "@chakra-ui/react";
 
 const ProjectModal = ({ currProject }) => {
@@ -43,24 +43,32 @@ const ProjectModal = ({ currProject }) => {
     //   </Modal>
     // </>
     <>
-      <Button onClick={onOpen}>Porject Details</Button>
+      <div className="bg-orange-500"><Button className="text-black bg-orange-500 dark:hover:bg-orange-500 ml-20" variant="ghost" onClick={onOpen}>Project Details</Button></div>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent className="dark:bg-slate-700 h-96">
-          <ModalHeader className="flex text-center justify-center text-orange-500 font-medium font-Rubik border-2	border-red-600 border-dashed">Modal Title</ModalHeader>
+        <ModalContent className="dark:bg-black h-96">
+          <ModalHeader className="flex text-center justify-center text-orange-500 font-medium font-Rubik border-2	border-red-600 border-dashed">{currProject.project_name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody className="flex flex-col justify-evenly content-center text-orange-500"> 
-          {currProject.project_id}
-            {currProject.mentors_id.map((mentor, j) => {
+          <div className="text-white">{currProject.owner_name}</div>
+          <ButtonGroup className="flex flex-row flex-wrap w-fit h-fit gap-8 ml-7" variant="outline"
+                        spacing="1">{currProject.technology_used.split(",").map((techStk, k)=>{
+                          return(
+                            <Button size="sm" colorScheme="orange" key={k}>
+                              {techStk.trim()}
+                            </Button>
+                          )})}
+          </ButtonGroup>
+            {/* {currProject.mentors_id.map((mentor, j) => {
               return(<p key={j}>{mentor.name}</p>);
-            })}
+            })}   */}
           </ModalBody>
 
-          <ModalFooter className="flex text-center justify-center content-center bg-orange-500 dark:bg-orange-700 ">
+          <ModalFooter className="flex text-center justify-center content-center bg-orange-500 dark:bg-orange-500 ">
             {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button> */}
-            <Button className="mr-36" variant="ghost">View Projects</Button>
+            <Button className="mr-36 text-black dark:hover:bg-orange-500" variant="ghost">View Projects</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
