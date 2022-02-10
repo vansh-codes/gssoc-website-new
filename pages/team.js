@@ -41,6 +41,7 @@ const Team = () => {
         <p className="font-serif text-center text-2xl font-extrabold text-black-100">
           <p className="text-primary_orange-0  text-5xl text center font-extrabold mb-10">
             Meet The Team
+            <hr className="horizontal-line"></hr>
           </p>
           <p className="font-serif dark:text-white">
             Individuals can and do make a difference, <br />

@@ -138,3 +138,8 @@ html {
   background-size: 100% 3px;
   background-position: 0 100%
 }
+
+.horizontal-line{
+  color: #FF6701;
+  background-color: #FF6701;
+}
