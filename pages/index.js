@@ -323,7 +323,7 @@ export default function Home() {
             className="container my-12 mx-auto"
           >
             <div
-              className="flex flex-wrap justify-between -mx-1 lg:-mx-4 md:justify-items-stretch"
+              className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4 md:justify-items-stretch"
               id="card-1"
             >
               {/* Card-1 */}
@@ -347,7 +347,7 @@ export default function Home() {
             data-aos-duration="1500"
             className="container my-12 mx-auto "
           >
-            <div className="flex flex-wrap justify-between -mx-1 lg:-mx-4">
+            <div className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4">
               {/* Card-3 */}
               <Card
                 title="Inviting Projects &amp; NGOs"
