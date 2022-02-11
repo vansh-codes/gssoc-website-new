@@ -14,7 +14,7 @@ function Schedule() {
             of GSSoC 2022!
           </span>
         </h1>
-        <div className="container">
+        <div data-aos="zoom-out" className="container">
           <div className="flex flex-col md:grid grid-cols-12 text-gray-50 cursor-default">
             {data.map((curElem, i) => {
               return <ScheduleRow key={i} curElem={curElem} />;

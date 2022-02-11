@@ -2,7 +2,7 @@ import Schedule from "../components/ScheduleMap";
 
 function schedule() {
   return (
-    <div data-aos="zoom-in-up">
+    <div>
       <div className="hidden lg:block 3xl:hidden">
         <div className="hor absolute top-32 left-0 right-0">
           <img
@@ -17,9 +17,10 @@ function schedule() {
           />
         </div> */}
       </div>
-
-      <div className="relative">
-        <Schedule />
+      <div>
+        <div className="relative">
+          <Schedule />
+        </div>
       </div>
     </div>
   );
