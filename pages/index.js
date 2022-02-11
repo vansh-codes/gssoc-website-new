@@ -19,6 +19,7 @@ import EllipseBox2 from "../components/BgAssets/EllipseBox2";
 import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
+import CountUp from 'react-countup';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -241,9 +242,71 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="w-560px px-4 pt-3 lg:text-left rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
-            {/* <h1>GSSOC 2021 by the numbers</h1> */}
-            {theme === "light" ? (
+          <div className="pr-8 font-semibold px-4 pt-3 rounded-lg lg:my-4 lg:px-10 lg:py-10 ">
+            <div className="dark:bg-darkmode_gray-0 dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-560px">
+             <h1 className="mt-8 pt-6 pl-8 text-5xl text-primary_orange-0 3rem 3rem ">GSSoC 2021</h1>
+             <p className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem "> by the numbers</p>
+             <div className="grid grid-cols-2 gap-2 mb-4">
+                <div>
+                  <div className="mt-4 pt-4 pl-8">
+                <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                  <CountUp 
+                  end={8}
+                  duration={1}
+                  />k+</h1>
+             <p className="text-2xl text-primary_orange-0 1.5rem 2rem "> Registrations</p>
+             </div>
+             <div className="mt-4 pt-4 pl-8">
+             <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+             <CountUp 
+                  end={135}
+                  duration={1}
+                  />+</h1>
+             <p className="text-2xl text-primary_orange-0 1.5rem 2rem "> Institutes</p>
+             </div>
+             <div className="mt-4 pt-4 pl-8">
+             <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+             <CountUp 
+                  end={10}
+                  duration={1}
+                  />k+</h1>
+             <p className=" mb-6 text-2xl text-primary_orange-0 1.5rem 2rem ">Total PRs</p>
+             </div>
+                </div>
+
+                <div>
+                  <div className="mt-4 pt-4 pl-8 pr-4">
+                <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                <CountUp 
+                  end={5500}
+                  duration={1}
+                  />+</h1>
+             <p className="text-2xl text-primary_orange-0 1.5rem 2rem "> Participants</p>
+             </div>
+             <div className="mt-4 pt-4 pl-8">
+             <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+             <CountUp 
+                  end={14}
+                  duration={1}
+                  />
+             </h1>
+             <p className="text-2xl text-primary_orange-0 1.5rem 2rem "> Countries</p>
+             </div>
+             <div className="mt-4 pt-4 pl-8">
+             <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+             <CountUp 
+                  end={100}
+                  duration={1}
+                  />+</h1>
+             <p className=" mb-6 text-2xl text-primary_orange-0 1.5rem 2rem ">Total Projects</p>
+             </div>
+                </div>
+
+            
+              </div>
+              </div>
+
+         {/*   {theme === "light" ? (
               <img
                 className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
@@ -255,7 +318,7 @@ export default function Home() {
                 id="Learn_more"
                 src="https://user-images.githubusercontent.com/64256342/152652299-9d3ac037-628b-46bb-ba07-fe5f2d4587b9.svg"
               />
-            )}
+            )} */}
           </div>
         </div>
         <div className="organisation mb-48 ">
