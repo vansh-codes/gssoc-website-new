@@ -138,3 +138,7 @@ html {
   background-size: 100% 3px;
   background-position: 0 100%
 }
+
+.statscol{
+  width: 200px;
+}
