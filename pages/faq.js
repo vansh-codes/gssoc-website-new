@@ -7,7 +7,7 @@ function Faq() {
   return (
     <>
     <section className="flex flex-col items-center">
-    <h1 className="flex flex-col text-orange-500 text-5xl font-bold m-3">Frequently Asked Questions (FAQS)</h1>
+    <h1 className="font-sans text-center flex flex-col text-orange-500 text-5xl font-bold m-3 underline underline-offset-4 decoration-primary_orange-0">Frequently Asked Questions (FAQS)</h1>
     < br/ >
     <div className="flex justify-around md:gap-1 w-11/12">
       <div className="w-6/12">

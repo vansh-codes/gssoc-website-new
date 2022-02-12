@@ -6,7 +6,7 @@ function Schedule() {
   return (
     <div>
       <div className="p-4 mb-10">
-        <h1 className="text-4xl text-center dark:text-white text-gray-800 font-semibold mb-6">
+        <h1 className="font-sans text-4xl text-center dark:text-white text-gray-800 font-semibold mb-6 underline underline-offset-4 decoration-primary_orange-0">
           <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
             Schedule{" "}
           </span>
