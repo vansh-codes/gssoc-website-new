@@ -247,18 +247,18 @@ export default function Home() {
           </div>
 
           <div className="pr-8 font-semibold px-4 pt-3 rounded-lg lg:my-4 lg:px-10 lg:py-10 ">
-            <div className="dark:bg-darkmode_gray-0 dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-560px">
-              <h1 className="mt-8 pt-6 pl-8 text-5xl text-primary_orange-0 3rem 3rem ">
+            <div className="dark:bg-darkmode_gray-0 dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-64 sm:w-fit">
+              <h1 className="mt-8 pt-6 pl-8 text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                 GSSoC 2021
               </h1>
               <p className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
                 {" "}
                 by the numbers
               </p>
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="statscol">
                   <div className="mt-4 pt-4 pl-8">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -276,7 +276,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4 pt-4 pl-8">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -292,7 +292,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4 pt-4 pl-8">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -312,7 +312,7 @@ export default function Home() {
 
                 <div className="statscol">
                   <div className="mt-4 pt-4 pl-8 pr-4">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -330,7 +330,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4 pt-4 pl-8">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -346,7 +346,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4 pt-4 pl-8">
-                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                    <h1 className="text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                       <VisibilitySensor
                         partialVisibility
                         offset={{ bottom: 0 }}
@@ -501,7 +501,7 @@ export default function Home() {
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex md:flex-row flex-col justify-between md:mb-0">
+            <div className="sponsors__row__one flex lg:flex-row flex-col justify-between md:mb-0">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
@@ -522,12 +522,12 @@ export default function Home() {
               />
               <img
                 data-aos="fade-up"
-                className="h-28 relative md:bottom-10 mb-5 md:mb-0"
+                className="h-28 relative lg:bottom-10 mb-5 md:mb-0"
                 src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                 alt="logo"
               />
             </div>
-            <div className="sponsors__row__two flex md:flex-row flex-col justify-between mb-10">
+            <div className="sponsors__row__two flex lg:flex-row flex-col justify-between mb-10">
               <img
                 data-aos="fade-up"
                 className="h-12 mb-5 md:mr-14"
@@ -553,7 +553,7 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            <div className="sponsors__row__three flex md:flex-row flex-col justify-between">
+            <div className="sponsors__row__three flex lg:flex-row flex-col justify-between">
               <img
                 data-aos="fade-up"
                 className="h-12 mb-5 md:mr-14"
