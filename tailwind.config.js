@@ -17,6 +17,18 @@ module.exports = {
         darkmode_gray: {
           0: "#303030",
         },
+        facebook:{
+          0: "#1877F2",
+        },
+        linkedin:{
+          0: "#00A0DC",
+        },
+        twitter:{
+          0: "#1DA1F2"
+        },
+        youtube:{
+          0: "#FF0000",
+        }
       },
       screens: {
         "3xl": "1600px",
