@@ -501,7 +501,8 @@ export default function Home() {
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex lg:flex-row flex-col justify-between md:mb-0">
+
+            <div className="sponsors__row__one  flex lg:flex-row flex-col justify-between mb-10 lg:mb-0">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
