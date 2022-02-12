@@ -380,7 +380,7 @@ export default function Home() {
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex md:flex-row flex-col justify-between md:mb-10">
+            <div className="sponsors__row__one flex lg:flex-row flex-col justify-between md:mb-10">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
@@ -406,7 +406,7 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            <div className="sponsors__row__two flex md:flex-row flex-col justify-between mb-10">
+            <div className="sponsors__row__two flex lg:flex-row flex-col justify-between mb-10">
               <img
                 data-aos="fade-up"
                 className="h-12 mb-5 md:mr-14"
@@ -432,7 +432,7 @@ export default function Home() {
                 alt="logo"
               />
             </div>
-            <div className="sponsors__row__three flex md:flex-row flex-col justify-between">
+            <div className="sponsors__row__three flex lg:flex-row flex-col justify-between">
               <img
                 data-aos="fade-up"
                 className="h-12 mb-5 md:mr-14"
