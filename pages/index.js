@@ -484,21 +484,24 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      
       {/* sponsors */}
-      <div className="sponsors__container flex flex-row justify-center px-3">
+      <div className="flex flex-row justify-center px-3">
         <div className="sponsors__wrapper flex flex-col">
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
             data-aos-duration="400"
-            className="dark:bg-white bg-white other__sponsors px-9 py-9 shadow-xl rounded"
+            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded"
           >
             <div className="other__sponsors__title">
-              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-9">
+              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5">
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex md:flex-row flex-col justify-between md:mb-10">
+            <div className="sponsors__row__one flex md:flex-row flex-col justify-between md:mb-0">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
@@ -519,7 +522,7 @@ export default function Home() {
               />
               <img
                 data-aos="fade-up"
-                className="h-12 mb-5 md:mb-0"
+                className="h-28 relative md:bottom-10 mb-5 md:mb-0"
                 src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                 alt="logo"
               />
