@@ -19,6 +19,8 @@ import EllipseBox2 from "../components/BgAssets/EllipseBox2";
 import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -244,9 +246,125 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="w-560px px-4 pt-3 lg:text-left rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
-            {/* <h1>GSSOC 2021 by the numbers</h1> */}
-            {theme === "light" ? (
+          <div className="pr-8 font-semibold px-4 pt-3 rounded-lg lg:my-4 lg:px-10 lg:py-10 ">
+            <div className="dark:bg-darkmode_gray-0 dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-560px">
+              <h1 className="mt-8 pt-6 pl-8 text-5xl text-primary_orange-0 3rem 3rem ">
+                GSSoC 2021
+              </h1>
+              <p className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
+                {" "}
+                by the numbers
+              </p>
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                <div className="statscol">
+                  <div className="mt-4 pt-4 pl-8">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>
+                            {isVisible ? <CountUp end={8000} /> : null}+
+                          </div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className="text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      {" "}
+                      Registrations
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 pl-8">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>{isVisible ? <CountUp end={135} /> : null}+</div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className="text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      {" "}
+                      Institutes
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 pl-8">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>
+                            {isVisible ? <CountUp end={10000} /> : null}+
+                          </div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className=" mb-6 text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      Total PRs
+                    </p>
+                  </div>
+                </div>
+
+                <div className="statscol">
+                  <div className="mt-4 pt-4 pl-8 pr-4">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>
+                            {isVisible ? <CountUp end={5500} /> : null}+
+                          </div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className="text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      {" "}
+                      Participants
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 pl-8">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>{isVisible ? <CountUp end={14} /> : null}+</div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className="text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      {" "}
+                      Countries
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 pl-8">
+                    <h1 className="text-5xl text-primary_orange-0 3rem 3rem ">
+                      <VisibilitySensor
+                        partialVisibility
+                        offset={{ bottom: 0 }}
+                      >
+                        {({ isVisible }) => (
+                          <div>{isVisible ? <CountUp end={100} /> : null}+</div>
+                        )}
+                      </VisibilitySensor>
+                    </h1>
+                    <p className=" mb-6 text-2xl text-primary_orange-0 1.5rem 2rem ">
+                      Total Projects
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/*   {theme === "light" ? (
               <img
                 className="mt-3 mb-3 md:mt-0"
                 id="Learn_more"
@@ -258,7 +376,7 @@ export default function Home() {
                 id="Learn_more"
                 src="https://user-images.githubusercontent.com/64256342/152652299-9d3ac037-628b-46bb-ba07-fe5f2d4587b9.svg"
               />
-            )}
+            )} */}
           </div>
         </div>
         <div className="organisation mb-48 ">
@@ -304,9 +422,9 @@ export default function Home() {
               alt="logo"
             />
             <div className="mt-12 md:mt-0">
-              <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
+              {/* <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
                 and more ...
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -366,21 +484,25 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      
       {/* sponsors */}
-      <div className="sponsors__container flex flex-row justify-center px-3">
+      <div className="flex flex-row justify-center px-3">
         <div className="sponsors__wrapper flex flex-col">
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
             data-aos-duration="400"
-            className="dark:bg-white bg-white other__sponsors px-9 py-9 shadow-xl rounded"
+            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded"
           >
             <div className="other__sponsors__title">
-              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-9">
+              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5">
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex lg:flex-row flex-col justify-between md:mb-10">
+
+            <div className="sponsors__row__one  flex lg:flex-row flex-col justify-between mb-10 lg:mb-0">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
@@ -401,7 +523,7 @@ export default function Home() {
               />
               <img
                 data-aos="fade-up"
-                className="h-12 mb-5 md:mb-0"
+                className="h-28 relative lg:bottom-10 mb-5 md:mb-0"
                 src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                 alt="logo"
               />
