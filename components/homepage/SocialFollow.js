@@ -18,7 +18,7 @@ export default function SocialFollow() {
   return (
     <div
       data-aos="right"
-      className="fixed object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block"
+      className="fixed object-right text-xs text-right right-0 pr-4 pl-4 hidden sm:block z-50"
     >
       {/* <h3 className="text-white">Social Follow</h3> */}
       <a
