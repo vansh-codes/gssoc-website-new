@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { projectData } from "./api/projectsData";
 import Image from "next/image";
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SimpleGrid } from '@chakra-ui/react';
 // import {
 //   AlertDialog,
 //   AlertDialogBody,
@@ -134,19 +137,22 @@ const Project = () => {
                       
                       
                       <ButtonGroup
-                        className="flex flex-row flex-wrap w-fit h-fit gap-5 mb-7"
+                        className="flex flex-row flex-wrap w-fit h-fit gap-4 mb-9 pl-7"
                         variant="outline"
                         spacing="2"
                       >
+          
+                     <SimpleGrid columns={2} spacing={3} margin={4} >
                         {curElem.technology_used
                           .split(",")
                           .map((techStk, k) => {
                             return (
-                              <Button size="sm" colorScheme="orange" key={k}>
+                              <Button size="sm" colorScheme="orange" width="100%" key={k}>
                                 {techStk.trim()}
                               </Button>
                             );
                           })}
+                      </SimpleGrid>
                       </ButtonGroup>
                     </>
                   </div>
