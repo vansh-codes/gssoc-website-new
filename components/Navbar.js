@@ -1,8 +1,25 @@
 import ThemeChanger from "./Toggler";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Tooltip } from "@chakra-ui/react";
+import React from "react";
+import Link from 'next/link';
+import { Menu, Transition } from '@headlessui/react'
+
+
+/*import Dropdown from "@material-tailwind/react/Dropdown"
+import DropdownItem from "@material-tailwind/react/DropdownItem"
+import DropdownLink from "@material-tailwind/react/DropdownLink" */
+
+
+function MyLink(props) {
+  let { href, children, ...rest } = props
+  return (
+    <Link href={href}>
+      <a {...rest}>{children}</a>
+    </Link>
+  )
+}
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -104,6 +121,101 @@ export const Navbar = () => {
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
             >
               CONTACT
+            </a>
+            <a
+              href="/"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+            >
+          <div >
+      <div className="relative inline-block text-center" > 
+        <Menu>
+          {({ open }) => (
+            <>
+              <span /*className="rounded-md shadow-sm"*/>
+                <Menu.Button    className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
+                  <span>MORE</span>
+                  <svg
+                    className="w-5 h-5 ml-2 -mr-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </Menu.Button>
+              </span>
+
+              <Transition
+                show={open}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items
+                  static
+                  className="absolute right-0 w-46 mt-2 origin-top-right dark:bg-darkmode_gray-0 bg-white border divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+                >
+                 
+                  <div className="py-1 ">
+                    
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/team"
+                          className={`${
+                            active
+                              ? "text-gray-800"
+                              : "text-gray-800"
+                          } lg:inline-flex lg:w-auto w-full px-3 py-2 text-center dark:text-white  rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black flex justify-between w-full px-4 py-2 text-1xl leading-5`}
+                        >
+                          Team
+                          <br/>
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/"
+                          className={`${
+                            active
+                              ? "text-gray-800"
+                              : "text-gray-800"
+                          } lg:inline-flex lg:w-auto w-full px-3 py-2 text-center dark:text-white  rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black flex justify-between w-full px-4 py-2 text-1xl leading-5`}
+                        >
+                          Blog
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/"
+                          className={`${
+                            active
+                              ? "text-gray-800"
+                              : "text-gray-800"
+                          } lg:inline-flex lg:w-auto w-full px-3 py-2 text-center dark:text-white  rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black  flex justify-between w-full px-4 py-2 text-1xl leading-5`}
+                        >
+                          CA Program
+                        </a>
+                      )}
+                    </Menu.Item>
+                  </div>
+
+                </Menu.Items>
+              </Transition>
+            </>
+          )}
+        </Menu>
+       </div>
+    </div>
             </a>
             <p className="hidden lg:block">
               <Tooltip label="Change Theme" placement="bottom">
