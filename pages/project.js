@@ -5,6 +5,8 @@ import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SimpleGrid } from '@chakra-ui/react';
+import { Spacer } from "@chakra-ui/react";
+
 // import {
 //   AlertDialog,
 //   AlertDialogBody,
@@ -43,7 +45,7 @@ const Project = () => {
             "Unfinished projects are the symbol of progress, not of imperfection."
           </p>
         </div>
-        <div className="flex flex-col justify-center content-center items-center mt-4">
+        <div className="flex flex-col justify-center content-center items-center mt-4 ">
         <input type="text" placeholder="Search Projects" className="h-20 w-5/12 pl-5 border-2	border-black dark:hover:bg-white" onChange={(event)=>{
             setsearchtrm(event.target.value);
           }}></input>
@@ -142,12 +144,12 @@ const Project = () => {
                         spacing="2"
                       >
           
-                     <SimpleGrid columns={2} spacing={3} margin={4} >
+                     <SimpleGrid columns={2} spacing={5} margin={1} >
                         {curElem.technology_used
                           .split(",")
                           .map((techStk, k) => {
                             return (
-                              <Button size="sm" colorScheme="orange" width="100%" key={k}>
+                              <Button size="sm" colorScheme="orange" width="100%" className="dark:hover:bg-slate-700 dark:bg-stone-800" key={k}>
                                 {techStk.trim()}
                               </Button>
                             );
@@ -158,10 +160,13 @@ const Project = () => {
                   </div>
                   <ProjectModal currProject={curElem}/>
                 </div>
+              
               </div>
+              
             );
           })}
         </div>
+        <Spacer mt={10} />
       </section>
     </>
   );
