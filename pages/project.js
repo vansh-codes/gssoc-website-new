@@ -3,6 +3,7 @@ import { projectData } from "./api/projectsData";
 import Image from "next/image";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import ProjectModal from "../components/ProjectModal";
+import { Search2Icon } from "@chakra-ui/icons";
 import {
   Modal,
   ModalOverlay,
@@ -13,26 +14,69 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { useDisclosure, Lorem } from "@chakra-ui/react";
+// import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const Project = () => {
   const [data] = useState(projectData);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
   // const [isOpen, setIsOpen] = React.useState(false)
   // const onClose = () => setIsOpen(false)
   // const cancelRef = React.useRef()
   return (
     <>
       <section>
-        <div className="flex items-center justify-center">
-          <p className="font-serif text-center text-2xl font-extrabold text-black-100">
-            <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
-              Projects - GSSOC&apos;21
+        {/* <div className="flex items-center justify-center">
+          <div>
+            <p className="font-serif text-center flex items-center text-2xl font-extrabold text-black-100">
+              <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
+                Projects - GSSOC&apos;21
+              </p>
             </p>
-            unfinished projects are the symbol of progress,
-            <br /> not of imperfection
-          </p>
+          </div>
+          <div>
+            <div>
+              <input type="search" name="search" id="search" />
+            </div>
+          </div>
+        </div> */}
+        <div className="flex justify-between items-center px-24">
+          <div>
+            <p className="text-primary_orange-0 flex dark:text-white font-sans text-5xl text center font-extrabold">
+              <p className="text-primary_orange-0 pr-2">Projects</p> - GSSOC'22
+            </p>
+          </div>
+          <div className="flex">
+            {theme === "light" ? (
+              <div className="border-b-2">
+                <Search2Icon color="black" />
+              </div>
+            ) : (
+              <div className="border-b-2">
+                <Search2Icon color="white" />
+              </div>
+            )}
+
+            <input
+              className="px-3 py-1 border-b-2 bg-transparent outline-none dark:text-white text-black"
+              type="search"
+              placeholder="search..."
+              name="search"
+              id="search"
+            />
+          </div>
         </div>
-        <br />
+        <p className="dark:text-white font-sans text-4xl font-semibold text-black mt-20 px-24 mb-10">
+          “Unfinished projects are a symbol of progress, not of imperfection.”
+        </p>
+        {/* <br /> */}
         <div className="flex flex-wrap w-100 justify-around gap-5">
           {data.map((curElem, i) => {
             return (
@@ -96,7 +140,7 @@ const Project = () => {
                           </ModalFooter>
                         </ModalContent>
                       </Modal> */}
-                      <ProjectModal currProject={curElem}/>
+                      <ProjectModal currProject={curElem} />
 
                       <div className="font-bold text-indigo-500 md:text-lg">
                         {i + 1}. {curElem.project_name}
