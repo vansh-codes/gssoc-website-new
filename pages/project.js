@@ -8,15 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SimpleGrid } from "@chakra-ui/react";
 import { Spacer } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-
-// import {
-//   AlertDialog,
-//   AlertDialogBody,
-//   AlertDialogFooter,
-//   AlertDialogHeader,
-//   AlertDialogContent,
-//   AlertDialogOverlay,
-// } from '@chakra-ui/react'
 import ProjectModal from "../components/ProjectModal";
 import {
   Modal,
@@ -79,12 +70,13 @@ const Project = () => {
           “Unfinished projects are a symbol of progress, not of imperfection.”
         </p>
         <br />
-        <div className="flex flex-row justify-center flex-wrap items-center gap-x-10 gap-y-10 mt-9">
+        <div className="flex flex-row justify-center flex-wrap items-center 
+        gap-x-10 gap-y-10 mt-9">
           {data
             .filter((curElem, i) => {
               if (searchtrm == "") {
                 return curElem;
-              } else if (curElem.technology_used.includes(searchtrm)) {
+              } else if (curElem.technology_used.toLowerCase().includes(searchtrm.toLowerCase())) {
                 return curElem;
               }
             })
@@ -97,9 +89,11 @@ const Project = () => {
                   data-aos-duration="800"
                 >
                   <div className="shadow dark:bg-black rounded-lg">
-                    <div className="mb-2 overflow-hidden rounded-lg md:h-72 w-80 p-5 flex flex-col justify-between">
+                    <div className="overflow-y-clip rounded-lg md:h-80 
+                    w-80 flex flex-col justify-start 
+                    shadow-lg shadow-black-200 relative">
                       <>
-                        <div className="flex flex-col justify-start gap-2">
+                        <div className="flex flex-col justify-start gap-2 px-5 py-3">
                           <div className="font-bold text-primary_orange-0 md:text-xl">
                             {i + 1}. {curElem.project_name}
                           </div>
@@ -108,46 +102,38 @@ const Project = () => {
                           </div>
                         </div>
 
-                        <ButtonGroup
-                          className="flex flex-row flex-wrap w-full h-fit gap-4 mb-9"
-                          variant="outline"
-                          spacing="1"
-                        >
                           <SimpleGrid
                             columns={{ sm: 2, md: 3 }}
-                            spacing={5}
+                            spacing={2}
                             margin={1}
+                            className="px-2"
                           >
                             {curElem.technology_used
                               .split(",")
+                              .sort((a, b) => a.length - b.length)
                               .map((techStk, k) => {
                                 return (
-                                  <Button
-                                    size="sm"
-                                    colorScheme="orange"
-                                    width="100%"
-                                    className="dark:hover:bg-slate-700 dark:bg-stone-800 rounded-full"
-                                    borderRadius="30px"
+                                  <button
+                                    className="bg-orange-50 dark:hover:bg-slate-700 dark:bg-stone-800 rounded-2xl w-full py-1
+                                    text-orange-600 drop-shadow-md font-semibold"
                                     key={k}
                                     onClick={() => {
                                       setsearchtrm(techStk.trim());
                                     }}
                                   >
                                     {techStk.trim()}
-                                  </Button>
+                                  </button>
                                 );
                               })}
                           </SimpleGrid>
-                        </ButtonGroup>
                       </>
-                    </div>
                     <ProjectModal currProject={curElem} />
+                    </div>
                   </div>
                 </div>
               );
             })}
         </div>
-        <Spacer mt={10} />
       </section>
     </>
   );

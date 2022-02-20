@@ -18,15 +18,12 @@ const ProjectModal = ({ currProject }) => {
   // const [scrollBehavior, setScrollBehavior] = React.useState("inside");
   const btnRef = React.useRef();
   return (
-    <>
-      <Button ref={btnRef} onClick={onOpen} 
-        colorScheme="orange"
-        width="100%"
-        className="dark:text-black"
-        isFullWidth
+    <div className="w-full absolute bottom-0">
+      <button ref={btnRef} onClick={onOpen} 
+        className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full"
         >
-        Project details
-      </Button>
+        Project Details
+      </button>
       <Modal
         onClose={onClose}
         finalFocusRef={btnRef}
@@ -117,7 +114,7 @@ const ProjectModal = ({ currProject }) => {
           </ModalBody>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 };
 
