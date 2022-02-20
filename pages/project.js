@@ -40,8 +40,8 @@ const Project = () => {
         <div className="flex flex-col md:flex-row justify-between items-center px-24 w-full">
           <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
             <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
-              <h1 className="text-primary_orange-0">Projects</h1>
-              <h1>- GSSOC&apos;22 </h1>
+              <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
+              <h1>-&nbsp;GSSOC&apos;22 </h1>
             </p>
             <div className="flex object-right">
               {theme === "light" ? (
