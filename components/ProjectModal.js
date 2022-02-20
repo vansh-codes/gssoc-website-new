@@ -33,7 +33,7 @@ const ProjectModal = ({ currProject }) => {
       >
         <ModalOverlay />
         <ModalContent className="dark:bg-darkmode_gray-0 h-96">
-          <ModalHeader className="flex text-primary_orange-0 dark:text-white">
+          <ModalHeader className="flex text-primary_orange-0">
             <p className="mr-3">
               {currProject.project_id}
               {"."}
