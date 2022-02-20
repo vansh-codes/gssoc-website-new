@@ -46,32 +46,13 @@ const Project = () => {
   return (
     <>
       <section>
-        {/* <div className="flex items-center justify-center">
-          <p className="font-serif text-center dark:text-white text-2xl font-extrabold text-black-100">
-            <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10">
-              Projects <span className="dark:text-white">for GSSoC 2022</span>
+        <div className="flex flex-col md:flex-row justify-between items-center px-24 w-full">
+          <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
+            <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
+              <h1 className="text-primary_orange-0">Projects</h1>
+              <h1>- GSSOC&apos;22 </h1>
             </p>
-            "Unfinished projects are the symbol of progress, not of
-            imperfection."
-          </p>
-        </div>
-        <div className="flex flex-col justify-center content-center items-center mt-4 ">
-          <input
-            type="text"
-            placeholder="Search Projects"
-            className="h-20 w-5/12 pl-5 border-2	border-black dark:hover:bg-white"
-            onChange={(event) => {
-              setsearchtrm(event.target.value);
-            }}
-          ></input>
-        </div> */}
-        <div className="flex justify-between items-center px-24 w-screen">
-          <div className="flex items-center space-between">
-            <p className="text-primary_orange-0 flex dark:text-white font-sans text-2xl md:text-5xl text center font-extrabold">
-              <p className="text-primary_orange-0 pr-2">Projects</p> -
-              GSSOC&apos;22
-            </p>
-            <div className="flex">
+            <div className="flex object-right">
               {theme === "light" ? (
                 <div className="border-b-2">
                   <Search2Icon color="black" />
@@ -84,7 +65,7 @@ const Project = () => {
               <input
                 className="px-3 py-1 border-b-2 bg-transparent outline-none dark:text-white text-black"
                 type="search"
-                placeholder="search..."
+                placeholder="Search..."
                 name="search"
                 id="search"
                 onChange={(event) => {
@@ -128,7 +109,7 @@ const Project = () => {
                         </div>
 
                         <ButtonGroup
-                          className="flex flex-row flex-wrap w-fit h-fit gap-4 mb-9"
+                          className="flex flex-row flex-wrap w-full h-fit gap-4 mb-9"
                           variant="outline"
                           spacing="1"
                         >
