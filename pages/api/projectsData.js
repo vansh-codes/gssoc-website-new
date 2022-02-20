@@ -15,25 +15,25 @@ export const projectData = [
     mentors_id: [
       {
         name: "Aavishkar Mishra",
-        // github: "https://github.com/drcoolsanjeev",
+        github: "https://github.com/drcoolsanjeev",
         email: "aavishkarmishra@gmail.com,",
         // slackId: "",
       },
       {
         name: "Vidisha Kayal",
-        // github: "https://github.com/PrathamDogra",
+        github: "https://github.com/PrathamDogra",
         email: "vidishakayal@gmail.com",
         // slackId: "UTZERSAMQ",
       },
       {
         name: "Abhishek Ranjan",
-        // github: "https://github.com/ayushi59",
+        github: "https://github.com/ayushi59",
         email: "iamabhi222@gmail.com",
         // slackId: "UUCRFPAJU",
       },
       {
         name: "Deeksha Sharma",
-        // github: "https://github.com/rajatmw1999",
+        github: "https://github.com/rajatmw1999",
         email: "sharmadeeksha325@gmail.com",
         // slackId: "UUCFC5NR3",
       },
@@ -44,7 +44,8 @@ export const projectData = [
     owner_name: "Awantika Nigam",
     github_username: "awantika10",
     project_name: "Desgen",
-    project_description: "We are trying to develop innovative designs through lastest UI/UX technologies. Most of the open source organisation and platforms have Web development, Android Development, ML etc, but ever wonder any organization or project which is completely dedicated to solving real world problems related to UI? Think about designing a wireless garden management system, or a smart video management system!! Here we provide a platform to learn and build innovative solutions for such problem. We love to brainstorm and come up with different techniques and approaches to design problems which we face in our day-to-day basis.",
+    project_description:
+      "We are trying to develop innovative designs through lastest UI/UX technologies. Most of the open source organisation and platforms have Web development, Android Development, ML etc, but ever wonder any organization or project which is completely dedicated to solving real world problems related to UI? Think about designing a wireless garden management system, or a smart video management system!! Here we provide a platform to learn and build innovative solutions for such problem. We love to brainstorm and come up with different techniques and approaches to design problems which we face in our day-to-day basis.",
     project_video_link: "https://youtu.be/cEWfIYKSuyw",
     technology_used: "HTML, CSS, Figma, AdobeXD, Illustrator, Framer, Anima",
     github: "https://github.com/awantika10/Desgen",
@@ -59,49 +60,49 @@ export const projectData = [
       },
       {
         name: "Shitiz Aggarwal",
-        // github: "https://github.com/manaswinidas",
+        github: "https://github.com/manaswinidas",
         email: "shitizaggarwal2000@gmail.com",
         // slackId: "UUBT59G5S",
       },
       {
         name: "Shaurya Bhandari",
-        // github: "https://github.com/aayush-05",
+        github: "https://github.com/aayush-05",
         email: "shauryabhandari25@gmail.com,",
         // slackId: "",
       },
     ],
   },
-  // {
-  //   project_id: 3,
-  //   owner_name: "Anushka Jadhav",
-  //   github_username: "anna4j",
-  //   project_name: "Feminist Bible Phase 1",
-  //   project_description: "A platform where the Feminist Bible community can interact by posting their stories, blogs, articles etc. This fullstack web app is built using ReactJS. Feminist Bible is an inclusive space for all. A place where we empathize, acknowledge, and promote diversity by creating an inclusive ecosystem powered by shared stories, culturally sensitive content, and equity-driven community philosophy.",
-  //   technology_used: "React.js, Redux, NodeJS, MongoDB, JavaScript, HTML, CSS",
-  //   repo_fullname: "girlscript/Feminist-Bible-FrontEnd-Phase1",
-  //       email: "anushkajadhav004@gmail.com",
-  //   mentors_id: [
-  //      {
-  //        name: "Ritish Kr Singh",
-  //     //   github: "https://github.com/Jayashree-panda",
-  //        email: "ritish.rks@gmail.com",
-  //     //   slackId: "UUC8L15G8",
-  //     },
-  //      {
-  //       name: "Debasmita Das",
-  //     //   github: "https://github.com/avikantwadhwa",
-  //        email: "debasmitad76@gmail.com",
-  //     //   slackId: "UTZH4BELS",
-  //      },
-  //      {
-  //        name: "Ananya Mahato",
-  //     //   github: "https://github.com/laveesh",
-  //        email: "ananyaiit123@gmail.com",
-  //     //   slackId: "UU0PYRJ3V",
-  //      },
-      
-  //   ],
-  // },
+  {
+    project_id: 3,
+    owner_name: "Anushka Jadhav",
+    github_username: "anna4j",
+    project_name: "Feminist Bible Phase 1",
+    project_description:
+      "A platform where the Feminist Bible community can interact by posting their stories, blogs, articles etc. This fullstack web app is built using ReactJS. Feminist Bible is an inclusive space for all. A place where we empathize, acknowledge, and promote diversity by creating an inclusive ecosystem powered by shared stories, culturally sensitive content, and equity-driven community philosophy.",
+    technology_used: "React.js, Redux, NodeJS, MongoDB, JavaScript, HTML, CSS",
+    repo_fullname: "girlscript/Feminist-Bible-FrontEnd-Phase1",
+    email: "anushkajadhav004@gmail.com",
+    mentors_id: [
+      {
+        name: "Ritish Kr Singh",
+        github: "https://github.com/Jayashree-panda",
+        email: "ritish.rks@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Debasmita Das",
+        github: "https://github.com/avikantwadhwa",
+        email: "debasmitad76@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Ananya Mahato",
+        github: "https://github.com/laveesh",
+        email: "ananyaiit123@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+    ],
+  },
   {
     project_id: 4,
     owner_name: "Vaibhavi Rohilla",
@@ -115,33 +116,32 @@ export const projectData = [
     // project_slack_channel: "proj_water-monitoring-system",
     github: "https://github.com/vaibhavirohilla741/Operationalizing-ML",
     email: "vaibhavi.rohilla.cs@ghriet.raisoni.net",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Sharvari Raut",
-        // github: "https://github.com/ramanaditya",
+        github: "https://github.com/ramanaditya",
         email: "sharuraut7other@gmail.com",
         // slackId: "UU1KYMFJ5",
       },
       {
         name: "Mainak Chaudhuri",
-        // github: "https://github.com/ramanaditya",
+        github: "https://github.com/ramanaditya",
         email: "mainakc24365@gmail.com",
         // slackId: "UU1KYMFJ5",
       },
       {
         name: "ARYAN GULATI",
-        // github: "https://github.com/jainpawan21",
+        github: "https://github.com/jainpawan21",
         email: "aryangulati2810@gmail.com",
         // slackId: "USHSXD0S0",
       },
       {
         name: "Harsh Gupta",
-        // github: "https://github.com/PragatiVerma18",
+        github: "https://github.com/PragatiVerma18",
         email: "harshguptaucme@gmail.com",
         // slackId: "USMU0EEJU",
       },
-
-      ],
+    ],
   },
   {
     project_id: 5,
@@ -156,32 +156,32 @@ export const projectData = [
     // project_slack_channel: "proj_bench-routes",
     github: "https://github.com/DSC-JSS-NOIDA/foss-events",
     email: "itispragativerma@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Rudrakshi Soni",
-        // github: "https://github.com/aquibbaig",
+        github: "https://github.com/aquibbaig",
         email: "sonirudrakshi99@gmail.com",
         // slackId: "UUEV2MUK1",
       },
       {
         name: "Akshay Sharma",
-        // github: "https://github.com/ganeshpatro321",
+        github: "https://github.com/ganeshpatro321",
         email: "akshaysharma30121999@gmail.com",
         // slackId: "UU9ALEGKX",
       },
       {
         name: "Ruchika Muddinagiri",
-        // github: "https://github.com/pandyamarut",
+        github: "https://github.com/pandyamarut",
         email: "rrmuddinagiri@gmail.com",
         // slackId: "UU0CQDP5H",
       },
       {
         name: "Shudhanshu Ranjan",
-        // github: "https://github.com/pandyamarut",
+        github: "https://github.com/pandyamarut",
         email: "sudhanshu03062002@gmail.com",
         // slackId: "UU0CQDP5H",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 6,
@@ -196,7 +196,7 @@ export const projectData = [
     // project_slack_channel: "proj_footsteps-app",
     github: "https://github.com/akshitagupta15june/Face-X",
     email: "akshitagupta15june@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Saurabh Shahane",
         // github: "https://github.com/R3l3ntl3ss",
@@ -214,8 +214,8 @@ export const projectData = [
         // github: "https://github.com/pydevsg",
         email: "tipaurush@gmail.com",
         // slackId: "UU27ALM89",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 7,
@@ -228,9 +228,10 @@ export const projectData = [
     technology_used: "Python,  HTML, CSS, Javascript, OpenCV, Computer Vision",
     repo_fullname: "Swarnimashukla/Automatic-attendance-management-system",
     // project_slack_channel: "proj_jarvis-personal-assistant",
-    github: "https://github.com/Swarnimashukla/Automatic-attendance-management-system",
+    github:
+      "https://github.com/Swarnimashukla/Automatic-attendance-management-system",
     email: "swara.shukla65@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Suyash Gautam",
         // github: "https://github.com/C-Anirudh",
@@ -248,8 +249,8 @@ export const projectData = [
         // github: "https://github.com/lalitmee",
         email: "bhubesh2k19@gmail.com",
         // slackId: "UUBRBNDAQ",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 8,
@@ -266,7 +267,7 @@ export const projectData = [
     // project_slack_channel: "proj_algodsnotes",
     github: "https://github.com/srimani-programmer/Breast-Cancer-Predictor",
     email: "srimanikantapalakollu@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "SaiVardhan Poloju",
         // github: "https://github.com/Vaibhavraj10",
@@ -290,8 +291,8 @@ export const projectData = [
         // github: "http://github.com//MastersAbh",
         email: "anustup.mukherjee99@gmail.com",
         // slackId: "UU5DN4G1X",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 9,
@@ -306,11 +307,11 @@ export const projectData = [
     // project_slack_channel: "proj_mapbot",
     github: "https://github.com/mishraaditya595/ScanIt",
     email: "mishraaditya595@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Priya Pandya",
         // github: "https://github.com/janakrajchadha",
-        
+
         // slackId: "UTWBMJRMY",
       },
       {
@@ -324,8 +325,8 @@ export const projectData = [
         // github: "https://github.com/athityakumar",
         email: "yashaswibiyahut25@gmail.com",
         // slackId: "UUBR827DE",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 10,
@@ -340,7 +341,7 @@ export const projectData = [
     // project_slack_channel: "proj_whatsapp-play",
     github: "https://github.com/purnima143/Kurakoo",
     email: "purnimasharma747359@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Vivekkumar Javiya",
         // github: "https://github.com/xandao6",
@@ -358,23 +359,25 @@ export const projectData = [
         // github: "https://github.com/Bhupesh-V",
         email: "ishuraj2010@gmail.com",
         // slackId: "UUEA9F80P",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 11,
     owner_name: "Pranav Mendiratta",
     github_username: "Pranav016",
     project_name: "WordNook",
-    project_description: "This is a dynamically updating Blog posting website developed primarily using HTML, CSS with EJS template engine, Node JS and Mongoose as ODM(Object Data Modeling library). It has been deployed using Heroku.",
+    project_description:
+      "This is a dynamically updating Blog posting website developed primarily using HTML, CSS with EJS template engine, Node JS and Mongoose as ODM(Object Data Modeling library). It has been deployed using Heroku.",
     // project_video_link:
     //   "Make an Ovulation Calculator and Calendar that supports more 20+ official languages in India.",
-      technology_used: "HTML, CSS, EJS, Node JS, Express JS, Mongoose, Mongo DB, Heroku",
+    technology_used:
+      "HTML, CSS, EJS, Node JS, Express JS, Mongoose, Mongo DB, Heroku",
     repo_fullname: "ALPHAVIO/WordNook",
     // project_slack_channel: "proj_ovuli",
     github: "https://github.com/ALPHAVIO/WordNook",
     email: "pranavmendi@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Rushan Khan",
         // github: "https://github.com/ayushi59",
@@ -386,8 +389,8 @@ export const projectData = [
         // github: "https://github.com/ayushi59",
         email: "ananya4negi@gmail.com",
         // slackId: "UUESFUNAK",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 12,
@@ -402,7 +405,7 @@ export const projectData = [
     // project_slack_channel: "proj_techtonica-curriculum",
     github: "https://github.com/DSC-JSS-NOIDA/Plasma-Donor-App",
     email: "dscjssnoida@gmail.com",
-      mentors_id: [
+    mentors_id: [
       {
         name: "Nakul Sharma",
         // github: "https://github.com/alodahl",
@@ -426,8 +429,8 @@ export const projectData = [
         // github: "https://github.com/Aayush-1999",
         // email: "N/A",
         // slackId: "UU1K7781Z",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 13,
@@ -441,8 +444,8 @@ export const projectData = [
     repo_fullname: "smaranjitghose/doc2pen",
     // project_slack_channel: "proj_travel-safe",
     github: "https://github.com/smaranjitghose/doc2pen",
-        email: "anushbhatia1234@gmail.com",
-      mentors_id: [
+    email: "anushbhatia1234@gmail.com",
+    mentors_id: [
       {
         name: "Mohit Raj",
         // github: "https://github.com/tanmayrauth",
@@ -466,23 +469,23 @@ export const projectData = [
         // github: "https://github.com/bharatmk257",
         email: "pankti.career@gmail.com",
         // slackId: "UU240MRED",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 14,
     owner_name: "Himanshu Sharma",
     github_username: "himanshusharma89",
     project_name: "Relic Bazaar",
-    project_description:
-      "A Retro Theme based e-commerce app for antiques.",
+    project_description: "A Retro Theme based e-commerce app for antiques.",
     project_video_link: "https://youtu.be/J8KGv62x0f4",
-    technology_used: "Flutter, Firebase, Matic API, TensorFlow, TensorFlow Lite",
+    technology_used:
+      "Flutter, Firebase, Matic API, TensorFlow, TensorFlow Lite",
     repo_fullname: "himanshusharma89/relic_bazaar",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/himanshusharma89/relic_bazaar",
-        email: "contact@himanshusharma.tech",
-      mentors_id: [
+    email: "contact@himanshusharma.tech",
+    mentors_id: [
       {
         name: "Ishan Sharma",
         // github: "https://github.com/Jayashree-panda",
@@ -507,7 +510,7 @@ export const projectData = [
         email: "rishabh5102000@gmail.com",
         // slackId: "UUE2B5JHM",
       },
-      ],
+    ],
   },
   {
     project_id: 15,
@@ -516,14 +519,13 @@ export const projectData = [
     project_name: "Algo-Tree",
     project_description:
       "Algo-Tree is a collection of Algorithms and data structures which are fundamentals to efficient code and good software design. Creating and designing excellent algorithms is required for being an exemplary programmer. It contains solutions in various languages such as C++, Python and Java.",
-    project_video_link:"https://youtu.be/TV2B4wQjiOw",
-    technology_used:
-      "C++, Java, Python",
+    project_video_link: "https://youtu.be/TV2B4wQjiOw",
+    technology_used: "C++, Java, Python",
     repo_fullname: "Algo-Phantoms/Algo-Tree",
     // project_slack_channel: "Ignitus",
     github: "https://github.com/Algo-Phantoms/Algo-Tree",
-        email: "vatsalkesarwani12@gmail.com",
-      mentors_id: [
+    email: "vatsalkesarwani12@gmail.com",
+    mentors_id: [
       {
         name: "Tarun Yadav",
         // github: "https://github.com/debck",
@@ -565,8 +567,8 @@ export const projectData = [
         // github: "https://github.com/vidushi-agarwal",
         email: "sonirudrakshi99@gmail.com",
         // slackId: "UTZGV6E9G",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 16,
@@ -580,8 +582,8 @@ export const projectData = [
     repo_fullname: "Algo-Phantoms/Algo-Phantoms-Android",
     // project_slack_channel: "proj_barview-android",
     github: "https://github.com/Algo-Phantoms/Algo-Phantoms-Android",
-        email: "dheeraj.kotwani41@gmail.com",
-      mentors_id: [
+    email: "dheeraj.kotwani41@gmail.com",
+    mentors_id: [
       {
         name: "Nakul Sharma",
         // github: "https://github.com/SaumyaSingh1",
@@ -600,7 +602,7 @@ export const projectData = [
         email: "aitik2000@gmail.com",
         // slackId: "UUB95B4UC",
       },
-      ],
+    ],
   },
   {
     project_id: 17,
@@ -614,8 +616,8 @@ export const projectData = [
     repo_fullname: "Algo-Phantoms/Algo-Phantoms-Backend",
     // project_slack_channel: "proj_plant-disease-webapp",
     github: "https://github.com/Algo-Phantoms/Algo-Phantoms-Backend",
-        email: "shubhijaiswal2000@gmail.com",
-      mentors_id: [
+    email: "shubhijaiswal2000@gmail.com",
+    mentors_id: [
       {
         name: "Prajul Gupta",
         // github: "https://github.com/Ishaan28malik",
@@ -633,8 +635,8 @@ export const projectData = [
         // github: "https://github.com/Devang-25",
         email: "harshkumar9.in@gmail.com",
         // slackId: "UU3BZQWEM",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 18,
@@ -648,15 +650,15 @@ export const projectData = [
     repo_fullname: "Algo-Phantoms/Algo-ScriptML",
     // project_slack_channel: "proj_the-vision",
     github: "https://github.com/Algo-Phantoms/Algo-ScriptML",
-        email: "adityaastranaut@gmail.com",
-      mentors_id: [
+    email: "adityaastranaut@gmail.com",
+    mentors_id: [
       {
         name: "Kritka Parmar",
         // github: "https://github.com/tanisha03",
         email: "tipaurush@gmail.com",
         // slackId: "URTT487KL",
       },
-      { 
+      {
         name: "Yukti Sachdeva",
         // github: "https://github.com/tanisha03",
         email: "yukti845@gmail.com",
@@ -673,8 +675,8 @@ export const projectData = [
         // github: "https://github.com/satyajiit",
         email: "ab669522@gmail.com",
         // slackId: "UUBP7SP5K",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 19,
@@ -683,13 +685,13 @@ export const projectData = [
     project_name: "Algo-Phantoms-Frontend",
     project_description:
       "Algo-Phantoms-Frontend is a Website that provides pathways and quizzes along with a code editor to help you towards your DSA journey. The features of website is that user can write and edit their code in the website, can play quizzes to improve their DSA fundamentals, Give their DSA journey a proper guide using pathways in the website.",
-    project_video_link:"https://youtu.be/HohxoCpFHRA",
+    project_video_link: "https://youtu.be/HohxoCpFHRA",
     technology_used: "HTML, CSS, Bootstrap, Javascript, VanillaJs",
     repo_fullname: "Algo-Phantoms/Algo-Phantoms-Frontend",
     // project_slack_channel: "proj_the-vision",
     github: "https://github.com/Algo-Phantoms/Algo-Phantoms-Frontend",
-        email: "manshitodi@gmail.com",
-      mentors_id: [
+    email: "manshitodi@gmail.com",
+    mentors_id: [
       {
         name: "Shruti Agarwal",
         // github: "https://github.com/tanisha03",
@@ -719,8 +721,8 @@ export const projectData = [
         // github: "https://github.com/satyajiit",
         // email: "p.harikesh409@gmail.com",
         // slackId: "UUBP7SP5K",
-      }
-      ],
+      },
+    ],
   },
   {
     project_id: 20,
@@ -734,7 +736,7 @@ export const projectData = [
     repo_fullname: "geekquad/Image-Processing-OpenCV",
     // project_slack_channel: "proj_the-vision",
     github: "https://github.com/geekquad/Image-Processing-OpenCV",
-        email: "adityaastranaut@gmail.com",
+    email: "adityaastranaut@gmail.com",
     mentors_id: [
       {
         name: "Kritika Parmar",
@@ -759,7 +761,7 @@ export const projectData = [
         // github: "https://github.com/TeAmp0is0N",
         email: "vaishdw2207@gmail.com",
         // slackId: "UTZCYBVB4",
-      }
+      },
     ],
   },
   {
@@ -770,12 +772,11 @@ export const projectData = [
     project_description:
       "Health Check is a Machine Learning project. It is a Web Application that is made using Flask that can predict diseases like Diabetes, Heart Disease, and Cancer. Machine Learning can do wonders in the field of Healthcare, if used properly, keeping this in mind, I've created a web application, anyone who wants to know about diseases mentioned above just has to fill in the required information and that will provide the user with the report as either positive or negative. The models have been trained and tested on datasets from Kaggle. The project also used Deep learning to train some models. The project is good for someone who wants a perfect project i.e. it uses flask, machine learning, deep learning, and python. All the analysis on the datasets has been done in Jupyter Notebooks.",
     project_video_link: "https://youtu.be/PqzzYjT11zA",
-    technology_used:
-      "Python, Flask, Machine Learning, Deep Learning",
+    technology_used: "Python, Flask, Machine Learning, Deep Learning",
     repo_fullname: "kritikaparmar-programmer/HealthCheck",
     // project_slack_channel: "proj_cropai",
     github: "https://github.com/kritikaparmar-programmer/HealthCheck",
-        email: "kritikaparmar07@gmail.com",
+    email: "kritikaparmar07@gmail.com",
     mentors_id: [
       {
         name: "Manan Bedi",
@@ -800,7 +801,7 @@ export const projectData = [
         // github: "https://github.com/tanishq9",
         email: "shubhigupta991@gmail.com",
         // slackId: "UUCRFPAJU",
-      }
+      },
     ],
   },
   {
@@ -812,12 +813,11 @@ export const projectData = [
       "An open-source document scanner. It is an application which can be used to scan and save the documents via your phone. Having features to scan visiting cards too.",
     // project_video_link:
     //   "To engage more students into open source development by encouraging them to contribute in one or more of the following technologies Machine Learning And Deep Learning Android Backend Frontend To teach about best practices in Development, Machine Learning and Deep Learning. ",
-    technology_used:
-      "Flutter, Dart, TFlite",
+    technology_used: "Flutter, Dart, TFlite",
     repo_fullname: "smaranjitghose/DocLense",
     // project_slack_channel: "proj_cropai",
     github: "https://github.com/smaranjitghose/DocLense",
-        email: "anushbhatia1234@gmail.com",
+    email: "anushbhatia1234@gmail.com",
     mentors_id: [
       {
         name: "Akshima Ghai",
@@ -836,7 +836,7 @@ export const projectData = [
         // github: "https://github.com/rajats98",
         email: "ishitakeshawani@gmail.com",
         // slackId: "UUCRFPAJU",
-      }
+      },
     ],
   },
   {
@@ -847,12 +847,11 @@ export const projectData = [
     project_description:
       "CoinShift Imaging Box: A collection of efficient and faster implementation of SOTA Object Detection and Segementation Models.",
     project_video_link: "https://youtu.be/2gtpqOms7AA",
-    technology_used:
-      "Python, Tensorflow, Pytorch",
+    technology_used: "Python, Tensorflow, Pytorch",
     repo_fullname: "CoinShift-Imaging/CoinShift-Imaging-Box",
     // project_slack_channel: "proj_cropai",
     github: "https://github.com/CoinShift-Imaging/CoinShift-Imaging-Box",
-        email: "daydreamingguy941@gmail.com",
+    email: "daydreamingguy941@gmail.com",
     mentors_id: [
       {
         name: "Sanjiban Sengupta",
@@ -877,7 +876,7 @@ export const projectData = [
         // github: "https://github.com/rajats98",
         email: "kushagrabansalajmer@gmail.com",
         // slackId: "UUCRFPAJU",
-      }
+      },
     ],
   },
   {
@@ -888,12 +887,11 @@ export const projectData = [
     project_description:
       "Friday - Your Personal Class Manager Assistant, It'll never let you miss another assignment deadline or any upcoming test. Since after the pandemic almost everything has been moved on virtual world So has Education. All our classes has been moved online and with that all our assignments, test, exams, Viva are being held on online platform as well, With so many assignments deadlines, upcoming exams dates and being busy with our life we forget the deadlines and examdates on most occasion. I don't know how many of you but it happens to me frequently. So I came up with this app which once feeded with all the required data it'll remind you of the assignement deadlines, upcoming exams, unfinished homework. So, you can plan your schedule accordingly.",
     project_video_link: "https://youtu.be/WSxsOAiOq1M",
-    technology_used:
-      "Flutter, Dart, UI/UX, Firebase, HTML, CSS, JS",
+    technology_used: "Flutter, Dart, UI/UX, Firebase, HTML, CSS, JS",
     repo_fullname: "avinashkranjan/Friday",
     // project_slack_channel: "proj_cropai",
     github: "https://github.com/avinashkranjan/Friday",
-        email: "ranjan.avinash@hotmail.com",
+    email: "ranjan.avinash@hotmail.com",
     mentors_id: [
       {
         name: "Haresh Nayak",
@@ -924,7 +922,7 @@ export const projectData = [
         // github: "https://github.com/rajats98",
         email: "vatsal22072001@gmail.com",
         // slackId: "UUCRFPAJU",
-      }
+      },
     ],
   },
   {
@@ -939,7 +937,7 @@ export const projectData = [
     repo_fullname: "himanshu007-creator/SFC-foundations",
     // project_slack_channel: "proj_awesome-react-modules",
     github: "https://github.com/himanshu007-creator/SFC-foundations",
-        email: "addyjeridiq@gmail.com",
+    email: "addyjeridiq@gmail.com",
     mentors_id: [
       {
         name: "Divya Shukla",
@@ -1025,8 +1023,9 @@ export const projectData = [
     technology_used: "Python, Jupyter Notebook",
     repo_fullname: "PetalsOnWind/Statistics-and-Econometrics-for-Data-Science",
     // project_slack_channel: "proj_awesome-react-modules",
-    github: "https://github.com/PetalsOnWind/Statistics-and-Econometrics-for-Data-Science",
-        email: "pankhurisaxena.iitkgp@gmail.com",
+    github:
+      "https://github.com/PetalsOnWind/Statistics-and-Econometrics-for-Data-Science",
+    email: "pankhurisaxena.iitkgp@gmail.com",
     mentors_id: [
       {
         name: "Anushka Thakkar",
@@ -1106,7 +1105,7 @@ export const projectData = [
     repo_fullname: "dscciem/Pentesting-and-Hacking-Scripts",
     // project_slack_channel: "proj_root-the-box-ctf-framework",
     github: "https://github.com/dscciem/Pentesting-and-Hacking-Scripts",
-        email: "ranjan.avinash@hotmail.com",
+    email: "ranjan.avinash@hotmail.com",
     mentors_id: [
       {
         name: "Minhajul Hossain",
@@ -1125,7 +1124,7 @@ export const projectData = [
         // github: "https://github.com/dubesar",
         email: "pushpendra.hpx2001@gmail.com",
         // slackId: "UUBBGDMT6",
-      }
+      },
     ],
   },
   {
@@ -1136,11 +1135,12 @@ export const projectData = [
     project_description:
       "The goal of this project is to have in a single place all possible algorithms and data structures - in multiple languages.",
     project_video_link: "https://youtu.be/fMkfU7GncQE",
-    technology_used: "C++, C, Java, Javascript, Q#, Python, Kotlin, Markdown, Golang",
+    technology_used:
+      "C++, C, Java, Javascript, Q#, Python, Kotlin, Markdown, Golang",
     repo_fullname: "TesseractCoding/NeoAlgo",
     // project_slack_channel: "proj_bookuploaderbot",
     github: "https://github.com/TesseractCoding/NeoAlgo",
-        email: "harsh@tesseractcoding.com",
+    email: "harsh@tesseractcoding.com",
     mentors_id: [
       {
         name: "Abhinav Anand",
@@ -1195,7 +1195,7 @@ export const projectData = [
         // github: "https://github.com/sahilbansal17",
         email: "ankitaggarwal1274@gmail.com",
         // slackId: "UU261R1AM",
-      }
+      },
     ],
   },
   {
@@ -1211,7 +1211,7 @@ export const projectData = [
     repo_fullname: "ChetnaNSharma/Alumni-Connect",
     // project_slack_channel: "proj_spotify-recommendation-engine",
     github: "https://github.com/ChetnaNSharma/Alumni-Connect",
-        email: "chetna.ns.sharma@gmail.com",
+    email: "chetna.ns.sharma@gmail.com",
     mentors_id: [
       {
         name: "Yash Rameshbhai Patel",
@@ -1230,7 +1230,7 @@ export const projectData = [
         // github: "https://github.com/roshniram",
         email: "yashgarg5101@gmail.com",
         // slackId: "",
-      }
+      },
     ],
   },
   {
@@ -1242,14 +1242,15 @@ export const projectData = [
       "Simulate aims to be a collection of simulations and visualizations from various domains like mathematics, physics, computer science etc. in a cross platform app made using Flutter.",
     // project_video_link:
     //   "I see this project turning into a simple, effective, easy to use and attractive employee management platform that can be used easily on different devices. ",
-    project_video_link: "https://drive.google.com/file/d/1dwyRJh4dUNAFy-NVeD-LDZGF6s1SQl35/view?usp=drivesdk",
+    project_video_link:
+      "https://drive.google.com/file/d/1dwyRJh4dUNAFy-NVeD-LDZGF6s1SQl35/view?usp=drivesdk",
     technology_used:
       "Android, IOS, Cross-Platform, Algorithms, Mathematics, Physics, Simulations, Flutter, Dart, Visualizations",
-    project_video_link:"https://youtu.be/iOLcfR1SULk",
+    project_video_link: "https://youtu.be/iOLcfR1SULk",
     repo_fullname: "cod-ed/simulate",
     // project_slack_channel: "proj_bossy",
     github: "https://github.com/cod-ed/simulate",
-    email:"garg.y2001@gmail.com",
+    email: "garg.y2001@gmail.com",
     mentors_id: [
       {
         name: "Yash Lamba",
@@ -1283,7 +1284,7 @@ export const projectData = [
     repo_fullname: "infiniteoverflow/Libro",
     // project_slack_channel: "proj_simulate",
     github: "https://github.com/infiniteoverflow/Libro",
-        email: "aswingopinathan1871@gmail.com",
+    email: "aswingopinathan1871@gmail.com",
     mentors_id: [
       {
         name: "Pratyush M",
@@ -1302,7 +1303,7 @@ export const projectData = [
         // github: "https://github.com/Akanksha1212",
         email: "souvikde.ns@gmail.com",
         // slackId: "UTYUXJPGA",
-      }
+      },
     ],
   },
   {
@@ -1314,30 +1315,31 @@ export const projectData = [
       "Considering the safety and security of women in India in the recent times, We wanted to give a try from our end to address the issue in a simpler and safer way.Looking at the recent trends and the most powerful weapon with the humanity - technology, we planned to use the same to give access to women in serious or dangerous situations to address the issue in a fast and easier way to ensure their security. We are working on providing an app for women which analyses the user location and surroundings and with a little input of behavioural analysis, we can estimate the probability of a women to be in a safe environment or prone to be under threat. Extra features like SOS, Instant recording, police siren(to drive away the danger), booking cabs and custom shake which user can a functionality to be available at hand.Women Safety App constantly shares the user’s location to the backend where the backend analyzes if the user is presently in a dense area or is alone in a very less populated zone or in an unused area via the google traffic analysing API.Contains a dashboard that contains all the important Action Buttons like SOS, InstantRecorder, Police Siren, Instant image capture, nearby police stations, instant Taxi/Cab booking, and most important a custom shake button to alert the application to automatically perform the emergency tasks while in danger. In the event the user doesn't give consent for their location being monitored, the app just functions as a safety and Self-defense app with various protections features which can make the app in action either on rapid shake while in emergency or by custom use by the user. While focusing on the idea for future developments, we want to proceed with WatchOS application as wearables are the near future and the technology is easily available at hand for users. Screen reader support enabled.",
     // project_video_link:
     //   "To ease the management of database and making the use of file system through csv to make the management easy and take the advantages of file system with the database and make a better combination.",
-    technology_used: "FLUTTER, SQLITE, FIREBASE, DART , GOOGLE API, GITHUB, DEEPLEARNING, C++, Python",
+    technology_used:
+      "FLUTTER, SQLITE, FIREBASE, DART , GOOGLE API, GITHUB, DEEPLEARNING, C++, Python",
     repo_fullname: "shagun25/SheHeroes",
     // project_slack_channel: "proj_ambsql",
     github: "https://github.com/shagun25/SheHeroes",
-        email: "goyalshagun25@gmail.com",
+    email: "goyalshagun25@gmail.com",
     mentors_id: [
-        {
-          name: "Aish Jain",
-      //   github: "https://github.com/IHackPy",
-          email: "aish.96jain@gmail.com",
-      //   slackId: "UUCRFPAJU",
-        },
-        {
-          name: " Pratyush Raj",
-      //   github: "https://github.com/17-Vishal",
-          email: "pratyushraj2f@gmail.com",
-      //   slackId: "UUCRFPAJU",
-        },
       {
-          name: "Dishebh",
-      //   github: "https://github.com/dikshagoyal26",
-          email: "dishebh27@gmail.com",
-      //   slackId: "UUCRFPAJU",
-        },
+        name: "Aish Jain",
+        //   github: "https://github.com/IHackPy",
+        email: "aish.96jain@gmail.com",
+        //   slackId: "UUCRFPAJU",
+      },
+      {
+        name: " Pratyush Raj",
+        //   github: "https://github.com/17-Vishal",
+        email: "pratyushraj2f@gmail.com",
+        //   slackId: "UUCRFPAJU",
+      },
+      {
+        name: "Dishebh",
+        //   github: "https://github.com/dikshagoyal26",
+        email: "dishebh27@gmail.com",
+        //   slackId: "UUCRFPAJU",
+      },
     ],
   },
   {
@@ -1352,26 +1354,26 @@ export const projectData = [
     repo_fullname: "khannakshat7/Elektra",
     // project_slack_channel: "proj_cosmos",
     github: "https://github.com/khannakshat7/Elektra",
-        email: "khannakshat7@gmail.com",
+    email: "khannakshat7@gmail.com",
     mentors_id: [
-        {
-          name: "Unnati Mishra",
-      //   github: "https://github.com/iamkunalpitale",
-          email: "unnaticse2019@gmail.com",
-      //   slackId: "UUE4J0R1D",
-        },
-        {
-          name: "Jagrit Acharya",
-      //   github: "https://github.com/OberoiSahaj",
-          email: "jagritacharya2020@gmail.com",
-      //   slackId: "UUCBC8W6L",
-        },
       {
-          name: "Abhishek Sharma",
-      //   github: "https://github.com/Bhawna11agg",
-          email: "sharmaash876@gmail.com",
-      //   slackId: "UU0RTFV27",
-        },
+        name: "Unnati Mishra",
+        //   github: "https://github.com/iamkunalpitale",
+        email: "unnaticse2019@gmail.com",
+        //   slackId: "UUE4J0R1D",
+      },
+      {
+        name: "Jagrit Acharya",
+        //   github: "https://github.com/OberoiSahaj",
+        email: "jagritacharya2020@gmail.com",
+        //   slackId: "UUCBC8W6L",
+      },
+      {
+        name: "Abhishek Sharma",
+        //   github: "https://github.com/Bhawna11agg",
+        email: "sharmaash876@gmail.com",
+        //   slackId: "UU0RTFV27",
+      },
     ],
   },
   {
@@ -1386,25 +1388,25 @@ export const projectData = [
     repo_fullname: "krayong/Study_Partner",
     // project_slack_channel: "proj_girlscriptcommunityapp",
     github: "https://www.github.com/krayong/Study_Partner",
-        email: "kgourisaria2001@gmail.com",
+    email: "kgourisaria2001@gmail.com",
     mentors_id: [
-        {
-          name: "Priyal Bhatewara",
-      //   github: "https://github.com/swat1998",
-          email: "priyalbhatewara2000@gmail.com",
-      //   slackId: "UUCAX8LF2",
+      {
+        name: "Priyal Bhatewara",
+        //   github: "https://github.com/swat1998",
+        email: "priyalbhatewara2000@gmail.com",
+        //   slackId: "UUCAX8LF2",
       },
-        {
-          name: "Shivani Kapoor",
-      //   github: "https://github.com/anushbhatia",
-          email: "kapoorshivani856@gmail.com",
-      //   slackId: "UUE14KJK1",
-        },
-        {
-          name: "Manas Uniyal",
-      //   github: "https://github.com/ousnik",
-          email: "manasuniyal100@gmail.com",
-      //   slackId: "UTZ5C3XJN",
+      {
+        name: "Shivani Kapoor",
+        //   github: "https://github.com/anushbhatia",
+        email: "kapoorshivani856@gmail.com",
+        //   slackId: "UUE14KJK1",
+      },
+      {
+        name: "Manas Uniyal",
+        //   github: "https://github.com/ousnik",
+        email: "manasuniyal100@gmail.com",
+        //   slackId: "UTZ5C3XJN",
       },
     ],
   },
@@ -1420,26 +1422,26 @@ export const projectData = [
     repo_fullname: "vigneshshettyin/Flask-Generate-Certificate",
     // project_slack_channel: "proj_footsteps-app",
     github: "https://github.com/vigneshshettyin/Flask-Generate-Certificate",
-        email: "vigneshshetty.in@gmail.com",
+    email: "vigneshshetty.in@gmail.com",
     mentors_id: [
-        {
-          name: "Antariksh Pratham",
-      //   github: "https://github.com/R3l3ntl3ss",
-        email: "a.pratham1998@gmail.com",
-      //   slackId: "UUAK5MGL8",
-        },
       {
-          name: "Saloni Gupta",
-      //   github: "https://github.com/praveenscience",
+        name: "Antariksh Pratham",
+        //   github: "https://github.com/R3l3ntl3ss",
+        email: "a.pratham1998@gmail.com",
+        //   slackId: "UUAK5MGL8",
+      },
+      {
+        name: "Saloni Gupta",
+        //   github: "https://github.com/praveenscience",
         email: "salonimark7@gmail.com",
-      //   slackId: "UU0AK1UQ3",
-        },
-        {
-          name: "Divakar",
-      //   github: "https://github.com/pydevsg",
-          email: "rexdivakar@hotmail.com",
-      //   slackId: "UU27ALM89",
-        },
+        //   slackId: "UU0AK1UQ3",
+      },
+      {
+        name: "Divakar",
+        //   github: "https://github.com/pydevsg",
+        email: "rexdivakar@hotmail.com",
+        //   slackId: "UU27ALM89",
+      },
     ],
   },
   {
@@ -1454,26 +1456,26 @@ export const projectData = [
     repo_fullname: "Namanl2001/MERN-Gurujii-dev",
     // project_slack_channel: "proj_footsteps-app",
     github: "https://github.com/Namanl2001/MERN-Gurujii-dev",
-        email: "namanlakhwani@gmail.com",
+    email: "namanlakhwani@gmail.com",
     mentors_id: [
-        {
-          name: "Harshit Gupta",
-      //   github: "https://github.com/R3l3ntl3ss",
-          email: "guptaji6489@gmail.com",
-      //   slackId: "UUAK5MGL8",
-        },
-        {
-          name: "Sagar Barapatre",
-      //   github: "https://github.com/praveenscience",
-          email: "sagarbarapatre.me@gmail.com",
-      //   slackId: "UU0AK1UQ3",
-        },
-        {
-          name: "Ashish Kumar",
-      //   github: "https://github.com/pydevsg",
-          email: "ashishkumar.cse18@chitkarauniversity.edu.in",
-      //   slackId: "UU27ALM89",
-        },
+      {
+        name: "Harshit Gupta",
+        //   github: "https://github.com/R3l3ntl3ss",
+        email: "guptaji6489@gmail.com",
+        //   slackId: "UUAK5MGL8",
+      },
+      {
+        name: "Sagar Barapatre",
+        //   github: "https://github.com/praveenscience",
+        email: "sagarbarapatre.me@gmail.com",
+        //   slackId: "UU0AK1UQ3",
+      },
+      {
+        name: "Ashish Kumar",
+        //   github: "https://github.com/pydevsg",
+        email: "ashishkumar.cse18@chitkarauniversity.edu.in",
+        //   slackId: "UU27ALM89",
+      },
     ],
   },
   {
@@ -1489,26 +1491,26 @@ export const projectData = [
     repo_fullname: "vikasdo/Book-Recommendation-Analysis",
     // project_slack_channel: "",
     // github: "vikasdo/Book-Recommendation-Analysis",
-        email: "donthulavikas1999@gmail.com",
+    email: "donthulavikas1999@gmail.com",
     mentors_id: [
-        {
-          name: "vamsi mudaliar",
-      //   github: "https://github.com/Smaranjitghose",
-          email: "vamsimudaliar@gmail.com",
-      //   slackId: "UTX0UKMKL",
-        },
-        {
-          name: "Akshay pendyala",
-      //   github: "https://github.com/swat1998",
-          email: "akshaypendyala@gmail.com",
-      //   slackId: "UUCAX8LF2",
-        },
-        {
-          name: "Kollipara Venkata Naga Hemanth",
-      //   github: "https://github.com/ousnik",
+      {
+        name: "vamsi mudaliar",
+        //   github: "https://github.com/Smaranjitghose",
+        email: "vamsimudaliar@gmail.com",
+        //   slackId: "UTX0UKMKL",
+      },
+      {
+        name: "Akshay pendyala",
+        //   github: "https://github.com/swat1998",
+        email: "akshaypendyala@gmail.com",
+        //   slackId: "UUCAX8LF2",
+      },
+      {
+        name: "Kollipara Venkata Naga Hemanth",
+        //   github: "https://github.com/ousnik",
         email: "venkata.nagahemanth2018@vitstudent.ac.in",
-      //   slackId: "UTZ5C3XJN",
-        }
+        //   slackId: "UTZ5C3XJN",
+      },
     ],
   },
   {
@@ -1520,33 +1522,32 @@ export const projectData = [
       "It's is a website on tourism which cover monument, shopping places and kid friendly places in Delhi.",
     // project_video_link:
     //   "A team and set of tools to guide and get curious beginners into tech! It is specially for training students to be industry ready with skills on MERN Stack and LAMP Stack.",
-    technology_used:
-      "Full Stack Tools",
+    technology_used: "Full Stack Tools",
     repo_fullname: "PoojaMittal2842/Delhi-Tourism",
     // project_slack_channel: "proj_cats_in_tech",
     github: "https://github.com/PoojaMittal2842/Delhi-Tourism",
-        email: "Poojamittal2842@gmail.com",
+    email: "Poojamittal2842@gmail.com",
     mentors_id: [
-        {
-          name: "Chintu Kumar",
-      //   github: "https://github.com/priyadharshinir1894/",
-          email: "chintustacks@gmail.com",
-        },
-        {
+      {
+        name: "Chintu Kumar",
+        //   github: "https://github.com/priyadharshinir1894/",
+        email: "chintustacks@gmail.com",
+      },
+      {
         name: "Konduru Viswanath Akhil",
-      //   github: "https://github.com/vermakhushboo",
-          email: "akkhill1910@gmail.com",
-        },
-        {
+        //   github: "https://github.com/vermakhushboo",
+        email: "akkhill1910@gmail.com",
+      },
+      {
         name: "Shiv Sharma",
-      //   github: "https://github.com/PrathibhaS",
-          email: "shivsharmavictory@gmail.com",
-        },
-        {
-          name: "Pritam Kumar",
-      //   github: "https://github.com/PrathibhaS",
-          email: "pritam1bnk@gmail.com",
-        },
+        //   github: "https://github.com/PrathibhaS",
+        email: "shivsharmavictory@gmail.com",
+      },
+      {
+        name: "Pritam Kumar",
+        //   github: "https://github.com/PrathibhaS",
+        email: "pritam1bnk@gmail.com",
+      },
     ],
   },
   {
@@ -1562,22 +1563,22 @@ export const projectData = [
     repo_fullname: "Praful932/Kitabe",
     // project_slack_channel: "proj_cats_in_tech",
     github: "https://github.com/Praful932/Kitabe",
-        email: "praful.mohanan@gmail.com",
+    email: "praful.mohanan@gmail.com",
     mentors_id: [
-        {
-          name: "Bharat Laxmanbhai Vora",
-      //   github: "https://github.com/priyadharshinir1894/",
-          email: "bharatvora814@gmail.com",
-        },
       {
-          name: "Tanuja Joshi",
-      //   github: "https://github.com/vermakhushboo",
-          email: "joshitanuja276@gmail.com",
-        },
-        {
+        name: "Bharat Laxmanbhai Vora",
+        //   github: "https://github.com/priyadharshinir1894/",
+        email: "bharatvora814@gmail.com",
+      },
+      {
+        name: "Tanuja Joshi",
+        //   github: "https://github.com/vermakhushboo",
+        email: "joshitanuja276@gmail.com",
+      },
+      {
         name: "Aditya Ashvin",
-      //   github: "https://github.com/PrathibhaS",
-          email: "adityaashvin2@gmail.com",
+        //   github: "https://github.com/PrathibhaS",
+        email: "adityaashvin2@gmail.com",
       },
     ],
   },
@@ -1589,36 +1590,37 @@ export const projectData = [
     project_description:
       "Provides a common platform to all the students of JSSATE(and other engineering colleges) to connect with each other , find all study related resources (can even contribute some) , read and add blogs . Engineering students can *Get books, notes and previous year papers. *Read and write Blogs that will help you and others too. *With our Built in Blog Previewer you can customize and design your blog in a way that seems more appealing and interesting. *Resources like books and notes(pdfs) sharing made easier. So you can help us in providing Resources that are helpful to engineering students.",
     project_video_link: "https://youtu.be/prXRpP6URgU",
-    technology_used: "Node JS, Express JS, Mongo DB, EJS, HTML5, CSS3, JAVASCRIPT",
+    technology_used:
+      "Node JS, Express JS, Mongo DB, EJS, HTML5, CSS3, JAVASCRIPT",
     repo_fullname: "threefreespirited/Jssconnect",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/threefreespirited/Jssconnect",
-        email: "harshitsharma9270@gmail.com",
+    email: "harshitsharma9270@gmail.com",
     mentors_id: [
-        {
-          name: "Shiva Singhal",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "singhalshiva936@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Anushka Garg",
-      //   github: "https://github.com/Jayashree-panda",
-        email: "anushkagarg0811@gmail.com",
-      //   slackId: "UUC8L15G8",
+      {
+        name: "Shiva Singhal",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "singhalshiva936@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
-          name: "Shweta Gurnani",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "18107@iiitu.ac.in",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Suraj Verma",
-      //   github: "https://github.com/laveesh",
-          email: "vsuraj2405@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Anushka Garg",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "anushkagarg0811@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Shweta Gurnani",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "18107@iiitu.ac.in",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Suraj Verma",
+        //   github: "https://github.com/laveesh",
+        email: "vsuraj2405@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1633,26 +1635,26 @@ export const projectData = [
     repo_fullname: "uniauth",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/uniauth",
-        email: "yk.verma2000@gmail.com",
+    email: "yk.verma2000@gmail.com",
     mentors_id: [
-        {
-          name: "Yash Kumar Verma",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "yk.verma2000@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Kishan Kumar",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "kishansharma1231@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Sarthak Kundra",
-      //   github: "https://github.com/laveesh",
-          email: "sarthakkundra21@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Yash Kumar Verma",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "yk.verma2000@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Kishan Kumar",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "kishansharma1231@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Sarthak Kundra",
+        //   github: "https://github.com/laveesh",
+        email: "sarthakkundra21@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1663,47 +1665,48 @@ export const projectData = [
     project_description:
       "Opportunity Calendar provides instant information on newly posted opportunities for techies. There are times when applicants miss deadlines or get to know about available opportunities only after the deadline of their application passes. Updates about the following opportunities are available: Full-Time Job Opportunities, Internship Opportunities, Scholarships, Tech-Conferences, Coding Competitions, Hackathons",
     project_video_link: "https://youtu.be/AMFKx5RG5Ws",
-    technology_used: "Frontend: Wireframing & Designing, AdobeXD Library, ReactJs Framework, React-Bootstrap",
+    technology_used:
+      "Frontend: Wireframing & Designing, AdobeXD Library, ReactJs Framework, React-Bootstrap",
     repo_fullname: "Girl-Code-It/Opportunity-Calendar-Frontend",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/Girl-Code-It/Opportunity-Calendar-Frontend",
-        email: "manvityagi770@gmail.com",
+    email: "manvityagi770@gmail.com",
     mentors_id: [
-        {
-          name: "Abdus S. Azad",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "abdus@abdus.net",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Suraj Bokade",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "a8870969@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
+      {
+        name: "Abdus S. Azad",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "abdus@abdus.net",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Suraj Bokade",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "a8870969@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
         name: "Vaishali Thakur",
-      //   github: "https://github.com/laveesh",
-          email: "vaishalithakur614@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   github: "https://github.com/laveesh",
+        email: "vaishalithakur614@gmail.com",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Deepanshi Dixit",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "deepanshi.1224@gmail.com",
-      //   slackId: "UUE2B5JHM",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "deepanshi.1224@gmail.com",
+        //   slackId: "UUE2B5JHM",
       },
       {
         name: "Vaibhav Kumar",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "vaibhavk@iitbhilai.ac.in",
-      //   slackId: "UUE2B5JHM",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "vaibhavk@iitbhilai.ac.in",
+        //   slackId: "UUE2B5JHM",
       },
       {
         name: "Shreya Garg",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "shreya00garg@gmail.com",
-      //   slackId: "UUE2B5JHM",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "shreya00garg@gmail.com",
+        //   slackId: "UUE2B5JHM",
       },
     ],
   },
@@ -1719,7 +1722,7 @@ export const projectData = [
     repo_fullname: "Girl-Code-It/Opportunity-Calendar-Backend",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/Girl-Code-It/Opportunity-Calendar-Backend",
-        email: "manvityagi770@gmail.com",
+    email: "manvityagi770@gmail.com",
     mentors_id: [
       // {
       //   name: "Jayshree Panda",
@@ -1756,36 +1759,37 @@ export const projectData = [
       "CodeTrophs is an open source project that provides an interactive user interface for beginners and aims at bridging the gap between students and research professors worldwide. Moreover, the platform plans on acting as a helping hand to individuals who are preparing for the coding interviews, providing them with real live interview experience. A distinguished point for the users is the application distinction feature that we provide to our users. This entails the bifurcation of projects based on the categorical arrangement in the language in which the code is written and its implementation for example, as kotlin links to android as python links to machine learning. The user will be able to save the repository that he/she wishes to explore more in their dashboard. The UI provides the user with the number of PR’s and issues in the repository that he/she is viewing. We are also expanding into the field of AI. We are aiming at making a feature on the platform that allows the student looking to intern under a professor to select a professor by assisting them with the professor's field of study, research papers and field of expertise, assigning each of his papers with specific tags given by the model and an abstract about each paper. Further we are opening a whole new avenue for the professors who are bombarded with emails from students willing to under him/her. This will be done by a list based on the professor's requirements from the student on the basis of his/her profile containing the skills, GPA, field of interest in a well categorised format created by them. In-short we are bridging the gap between a professor and a student, To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash",
     //   "To help mentors and mentees share knowledge in multiple different aspects. We also want to let the mentor and the mentee have power to get personalized knowledge from their mentors.",
     technology_used: "Machine Learning",
-    project_video_link:"https://drive.google.com/file/d/1-ccue_5_zjUGxP2PeMdQg3O3JwOmJWJo/view",
+    project_video_link:
+      "https://drive.google.com/file/d/1-ccue_5_zjUGxP2PeMdQg3O3JwOmJWJo/view",
     repo_fullname: "CodeTrophs",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/CodeTrophs",
-        email: "aryasoni98@gmail.com",
+    email: "aryasoni98@gmail.com",
     mentors_id: [
-        {
-          name: "Mohd Shoaib Asgar",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "shoaib.mca19.du@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Anurag Gupta",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "anuraggupta5086@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Soumik Chaudhuri",
-      //   github: "https://github.com/laveesh",
-          email: "soumik.chaudhuri2000@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
       {
-          name: "Juhi Gupta",
-      //   github: "https://github.com/laveesh",
-          email: "gupta.juhi941999@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        name: "Mohd Shoaib Asgar",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "shoaib.mca19.du@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Anurag Gupta",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "anuraggupta5086@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Soumik Chaudhuri",
+        //   github: "https://github.com/laveesh",
+        email: "soumik.chaudhuri2000@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "Juhi Gupta",
+        //   github: "https://github.com/laveesh",
+        email: "gupta.juhi941999@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1801,26 +1805,26 @@ export const projectData = [
     repo_fullname: "IndianOpenSourceFoundation/dynamic-cli",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/IndianOpenSourceFoundation/dynamic-cli",
-        email: "ping@iosf.in",
+    email: "ping@iosf.in",
     mentors_id: [
-        {
-          name: "Gourav",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "ping@iosf.in",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Ansh Srivastava",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "ansh_srtv@outlook.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Lakshyajit Laxmikant",
-      //   github: "https://github.com/laveesh",
-          email: "lakshyajit165@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Gourav",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "ping@iosf.in",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Ansh Srivastava",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "ansh_srtv@outlook.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Lakshyajit Laxmikant",
+        //   github: "https://github.com/laveesh",
+        email: "lakshyajit165@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1835,32 +1839,32 @@ export const projectData = [
     repo_fullname: "harshcasper/speaked",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/harshcasper/speaked",
-        email: "erbeusgriffincasper@gmail.com",
+    email: "erbeusgriffincasper@gmail.com",
     mentors_id: [
-        {
-          name: "Sarthak Kundra",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "sarthakkundra21@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Aishwarya Jain",
-      //   github: "https://github.com/Jayashree-panda",
-        email: "aish.96jain@gmail.com",
-      //   slackId: "UUC8L15G8",
-      },
-        {
-          name: "Araika Singh",
-      //   github: "https://github.com/avikantwadhwa",
-        email: "araikasingh@gmail.com",
-      //   slackId: "UTZH4BELS",
+      {
+        name: "Sarthak Kundra",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "sarthakkundra21@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
       {
-          name: "Aakansha Jain",
-      //   github: "https://github.com/laveesh",
-          email: "jainaakansha28@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        name: "Aishwarya Jain",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "aish.96jain@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Araika Singh",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "araikasingh@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Aakansha Jain",
+        //   github: "https://github.com/laveesh",
+        email: "jainaakansha28@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1869,39 +1873,39 @@ export const projectData = [
     github_username: "CodeFlow201",
     project_name: "Forest Tree Tagging",
     project_description:
-      "In this project, we are aiming to create an app (Android /Web) which could give user or forest official to have an tag over different species of trees and do data analysis over collected data. In this one could generate QR code for all trees one by one which would contain unique ID on local server and whole data on firebase.Further on proceeding to second element along wih making QR code we are having option to scan the QR code and locate all its discription. and also needs to locate it on live map once its being tagged and given unique id. In web app we will be training the model on data collected on single click functionality, taking predictions over updated model and that to on single click functionality.",// project_video_link:
+      "In this project, we are aiming to create an app (Android /Web) which could give user or forest official to have an tag over different species of trees and do data analysis over collected data. In this one could generate QR code for all trees one by one which would contain unique ID on local server and whole data on firebase.Further on proceeding to second element along wih making QR code we are having option to scan the QR code and locate all its discription. and also needs to locate it on live map once its being tagged and given unique id. In web app we will be training the model on data collected on single click functionality, taking predictions over updated model and that to on single click functionality.", // project_video_link:
     technology_used: "Flutter, Machine Learning, Deep Learning",
     repo_fullname: "CodeFlow201/forestTreesTagging",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/CodeFlow201/forestTreesTagging",
     email: "aroravaibhav102@gmail.com",
     mentors_id: [
-        {
-          name: "Gautam Behal",
-          email: "gautambeha20@gmail.com",
-        },
-        {
+      {
+        name: "Gautam Behal",
+        email: "gautambeha20@gmail.com",
+      },
+      {
         name: "Ritest Singh Soun",
         email: "sounritesh@gmail.com",
       },
-        {
+      {
         name: "Ritesh Yadav",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "daydreamingguy941@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Sameera S Kashyap",
-      //   github: "https://github.com/laveesh",
-          email: "lsameera.s.kashyap@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
-          name: "Vilsi Jain",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "Jainvilsi12@gmail.com",
-      //   slackId: "UUE2B5JHM",
-        },
+        //   github: "https://github.com/avikantwadhwa",
+        email: "daydreamingguy941@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Sameera S Kashyap",
+        //   github: "https://github.com/laveesh",
+        email: "lsameera.s.kashyap@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "Vilsi Jain",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "Jainvilsi12@gmail.com",
+        //   slackId: "UUE2B5JHM",
+      },
     ],
   },
   {
@@ -1917,26 +1921,26 @@ export const projectData = [
     repo_fullname: "rhythm98/Food-Ordering-Application",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/rhythm98/Food-Ordering-Application",
-        email: "rhythm.agrawal98@gmail.com",
+    email: "rhythm.agrawal98@gmail.com",
     mentors_id: [
-        {
-          name: "Falguni Raina",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "rainadiv01@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Manish Kumar",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "Kumarmanishbit@rediffmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
+      {
+        name: "Falguni Raina",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "rainadiv01@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Manish Kumar",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "Kumarmanishbit@rediffmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
         name: "Kunal Jain",
-      //   github: "https://github.com/laveesh",
-          email: "jainkunal209@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        //   github: "https://github.com/laveesh",
+        email: "jainkunal209@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -1944,42 +1948,43 @@ export const projectData = [
     owner_name: "Rohit Agarwal",
     github_username: "jackfrost13",
     project_name: "HITK Community Website",
-    project_description: "This project aims to build the official site for the community page so that any student can use the resources shared by us.",
+    project_description:
+      "This project aims to build the official site for the community page so that any student can use the resources shared by us.",
     technology_used: "MERN, AWS, React, Node, Express, MongoDB",
-    project_video_link:"https://youtu.be/CVwdzeWCgXo",
+    project_video_link: "https://youtu.be/CVwdzeWCgXo",
     repo_fullname: "HITK-TECH-Community/Community-Website",
-        email: "rohitagrl1302@gmail.com",
+    email: "rohitagrl1302@gmail.com",
     mentors_id: [
-        {
-          name: "Kajol Kumari",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "kajolkumarisingh222@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Naman Shankhydhar",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "naman.geek@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Mohit Bhat",
-      //   github: "https://github.com/laveesh",
-          email: "mbcse50@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
-          name: "Rohit Agarwal",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "rohitagrl1302@gmail.com",
-      //   slackId: "UUE2B5JHM",
-        },
       {
-          name: "Yadvi Bhalla",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "yadvibhalla2002@gmail.com",
-      //   slackId: "UUE2B5JHM",
-        },
+        name: "Kajol Kumari",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "kajolkumarisingh222@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Naman Shankhydhar",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "naman.geek@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Mohit Bhat",
+        //   github: "https://github.com/laveesh",
+        email: "mbcse50@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "Rohit Agarwal",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "rohitagrl1302@gmail.com",
+        //   slackId: "UUE2B5JHM",
+      },
+      {
+        name: "Yadvi Bhalla",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "yadvibhalla2002@gmail.com",
+        //   slackId: "UUE2B5JHM",
+      },
     ],
   },
   {
@@ -1990,36 +1995,37 @@ export const projectData = [
     project_description:
       "An app that is a one-stop destination for all the CS enthusiasts, providing resources like best YT channels, courses available free-of-cost, etc.  & knowledge about every domain and field that exists on the Internet related to Computer Science along with News, Jobs, and Internships opportunities in these domains along with valuable tips and hacks from mentors for a particular domain.",
     project_video_link: "https://youtu.be/dLgvWp7jiaI",
-    technology_used: "Android, Kotlin/Java, XML, Firebase Real Time Database, Firebase Fire Store, Firebase Authentication, Google Analytics, Material I/O",
+    technology_used:
+      "Android, Kotlin/Java, XML, Firebase Real Time Database, Firebase Fire Store, Firebase Authentication, Google Analytics, Material I/O",
     repo_fullname: "CSwala",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/CSwala",
-        email: "rrjain20122000@gmail.com",
+    email: "rrjain20122000@gmail.com",
     mentors_id: [
-        {
-          name: "Rituraj Jain",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "rrjain20122000@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Ritish Kr Singh",
-      //   github: "https://github.com/Jayashree-panda",
-        email: "ritish.rks@gmail.com",
-      //   slackId: "UUC8L15G8",
+      {
+        name: "Rituraj Jain",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "rrjain20122000@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
+      {
+        name: "Ritish Kr Singh",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "ritish.rks@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
         name: "Dishit Duggar",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "dduggar06@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Rachit Gupta",
-      //   github: "https://github.com/laveesh",
-          email: "guptarachit2004@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        //   github: "https://github.com/avikantwadhwa",
+        email: "dduggar06@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Rachit Gupta",
+        //   github: "https://github.com/laveesh",
+        email: "guptarachit2004@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2034,32 +2040,32 @@ export const projectData = [
     repo_fullname: "Vishal-raj-1/Awesome-JavaScript-Projects",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/Vishal-raj-1/Awesome-JavaScript-Projects",
-        email: "rajputvishal33786@gmail.com",
+    email: "rajputvishal33786@gmail.com",
     mentors_id: [
-        {
+      {
         name: "Harsh Gupta",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "hgreatgupta2001@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "hgreatgupta2001@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
+      {
         name: "Riddhi Suteri",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "ridsuteri@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Rajat Kumar",
-      //   github: "https://github.com/laveesh",
-          email: "991rajat@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
+        //   github: "https://github.com/avikantwadhwa",
+        email: "ridsuteri@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Rajat Kumar",
+        //   github: "https://github.com/laveesh",
+        email: "991rajat@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
         name: "Urvashi Anand",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "urvashianand0906@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-      }
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2070,8 +2076,7 @@ export const projectData = [
     project_description:
       "The GirlScript Foundation is a well-acclaimed organization in the EdTech field. It has been successfully equipping modern youth with the new age technologies that are revolutionising the world today.It is a sturdy initiative that inspires the youth to learn, grow and diversify their reach in the competitive world. Our mission is to impinge on every individual who has the zeal to learn more. Around the year we conduct several educational programs and offer internship opportunities to the youngsters so that they become industry-ready. Today our network has expanded to a great extent and has culminated the submit of success.",
     // project_video_link: "",
-    technology_used:
-      "MERN Stack, Django",
+    technology_used: "MERN Stack, Django",
     repo_fullname: "girlscript/Girscript-Community-Website",
     // project_slack_channel: "proj_cropai",
     // github: "",
@@ -2100,7 +2105,7 @@ export const projectData = [
         // github: "https://github.com/rajats98",
         email: "amishaagarwal1998@gmail.com",
         // slackId: "UUCRFPAJU",
-      }
+      },
     ],
   },
   {
@@ -2114,27 +2119,28 @@ export const projectData = [
     technology_used: "Android, Java, Firebase",
     repo_fullname: "Developer-Student-Clubs-VSSUT-Burla/College-Comrade",
     // project_slack_channel: "proj_mentorfix",
-    github: "https://github.com/Developer-Student-Clubs-VSSUT-Burla/College-Comrade",
-        email: "altamasbari@gmail.com",
+    github:
+      "https://github.com/Developer-Student-Clubs-VSSUT-Burla/College-Comrade",
+    email: "altamasbari@gmail.com",
     mentors_id: [
-        {
-          name: "Akhtar Raja Khan",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "aitik2000@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Atik Dandapat",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "aktarkhn07@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Rittik Biswal",
-      //   github: "https://github.com/laveesh",
-          email: "rittikbiswal2000@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Akhtar Raja Khan",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "aitik2000@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Atik Dandapat",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "aktarkhn07@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Rittik Biswal",
+        //   github: "https://github.com/laveesh",
+        email: "rittikbiswal2000@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2149,25 +2155,25 @@ export const projectData = [
     repo_fullname: "Developer-Student-Clubs-VSSUT-Burla/CamOps",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/Developer-Student-Clubs-VSSUT-Burla/CamOps",
-        email: "rittikbiswal2000@gmail.com",
+    email: "rittikbiswal2000@gmail.com",
     mentors_id: [
-        {
-          name: "Altamas Bari",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "aitik2000@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Atik Dandapat",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "aktarkhn07@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Aktar Rajja Khan",
-      //   github: "https://github.com/laveesh",
-          email: "altamasbari@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+      {
+        name: "Altamas Bari",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "aitik2000@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Atik Dandapat",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "aktarkhn07@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Aktar Rajja Khan",
+        //   github: "https://github.com/laveesh",
+        email: "altamasbari@gmail.com",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -2179,35 +2185,36 @@ export const projectData = [
     project_description:
       "A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually. It aims to create a free-for-all REST API service that is open-sourced so that developers can have the ease of making feature requests for a new end-point, or report a security bug. The code should be explicit and easy to contribute to for beginners with no or less apparent knowledge of REST APIs. The standalone API endpoints should be easy to use during development, with minimal setup effort.",
     project_video_link: "https://youtu.be/iafIbG0QB3w",
-    technology_used: "NodeJS, MongoDB, REST API, TypeScript, JavaScript, CI/CD, Docker, ReactJS",
+    technology_used:
+      "NodeJS, MongoDB, REST API, TypeScript, JavaScript, CI/CD, Docker, ReactJS",
     repo_fullname: "adityabisoi/REST-fetch",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/adityabisoi/REST-fetch",
-        email: "adityabisoi1999@gmail.com",
+    email: "adityabisoi1999@gmail.com",
     mentors_id: [
-        {
+      {
         name: "DEVANSHU VASHISHTHA",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "sharmadevanshu452@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Namrata Dakua",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "namrata.dakua@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
+        //   github: "https://github.com/Jayashree-panda",
+        email: "sharmadevanshu452@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Namrata Dakua",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "namrata.dakua@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
         name: "Shaurya Agarwal",
-      //   github: "https://github.com/laveesh",
-          email: "shauryaag14@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
+        //   github: "https://github.com/laveesh",
+        email: "shauryaag14@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
         name: "Param Siddharth",
-      //   github: "https://github.com/paramsiddharth",
-          email: "contact@paramsid.com",
-        },
+        //   github: "https://github.com/paramsiddharth",
+        email: "contact@paramsid.com",
+      },
     ],
   },
   {
@@ -2222,32 +2229,32 @@ export const projectData = [
     repo_fullname: "codezonediitj/pydatastructs",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/codezonediitj/pydatastructs",
-        email: "gdp.1807@gmail.com",
+    email: "gdp.1807@gmail.com",
     mentors_id: [
-        {
-          name: "Rajdeep Ghosh",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "ghoshrajdeep2000@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Vanshika Garg",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "vanshikagarg17@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Smit Lunagariya",
-      //   github: "https://github.com/laveesh",
-          email: "smitplunagariya@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
+      {
+        name: "Rajdeep Ghosh",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "ghoshrajdeep2000@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Vanshika Garg",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "vanshikagarg17@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Smit Lunagariya",
+        //   github: "https://github.com/laveesh",
+        email: "smitplunagariya@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
         name: "Vranda Chag",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "chagvranda@gmail.com",
-      //   slackId: "UUE2B5JHM",
-        },
+        //   github: "https://github.com/harsha-iiiv",
+        email: "chagvranda@gmail.com",
+        //   slackId: "UUE2B5JHM",
+      },
     ],
   },
   {
@@ -2262,26 +2269,26 @@ export const projectData = [
     repo_fullname: "FOSS-Cell-GECPKD/pixelvibe",
     // project_slack_channel: "proj_mentorfix",
     // github: "https://github.com/ankitapuri/pixelvibe",
-        email: "puriankita30@gmail.com",
+    email: "puriankita30@gmail.com",
     mentors_id: [
-        {
-          name: "Rishabh Singhal",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "Rishabh.singhal@research.iiit.ac.in",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Adarsh Vulli",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "adarshvulli007@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-            name: "Avinal Kumar",
-      //   github: "https://github.com/laveesh",
-          email: "185067@nith.ac.in",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Rishabh Singhal",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "Rishabh.singhal@research.iiit.ac.in",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Adarsh Vulli",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "adarshvulli007@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Avinal Kumar",
+        //   github: "https://github.com/laveesh",
+        email: "185067@nith.ac.in",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2292,34 +2299,35 @@ export const projectData = [
     project_description:
       "Share N Learn is a Common Platform for Students & Faculties to upload and share - files including all sorts of study material which will be accessible to all the registered members built using Django Framework. The Goal of the project is to create a secure and scalable platform common to both college students and faculties so that they can easily share the files / resources related to coursework , Competitive exams and others hence reducing the dependency on social media platforms. In future the platform can also serve as an e-library for the college students.",
     project_video_link: "https://youtu.be/8sBOdGHHJkc",
-    technology_used: " HTML5, CSS3, JS, JQuery, Bootstrap, Backend : Python(Django), Database : Sqlite3 (will be migrated to Postgres soon)",
+    technology_used:
+      " HTML5, CSS3, JS, JQuery, Bootstrap, Backend : Python(Django), Database : Sqlite3 (will be migrated to Postgres soon)",
     repo_fullname: "chiraag-kakar/sharenlearn",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/chiraag-kakar/sharenlearn",
-        email: "ck2222@cse.jgec.ac.in",
+    email: "ck2222@cse.jgec.ac.in",
     mentors_id: [
-        {
-          name: "Ayan Banerjee",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "ayanbabusona@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
+      {
+        name: "Ayan Banerjee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "ayanbabusona@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
         name: "Aman Prakash Jha",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "ap2301@it.jgec.ac.in",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "A V S ADITYA VARDHAN",
-      //   github: "https://github.com/laveesh",
-          email: "avsadityavardhan18bcs@iiitkottayam.ac.in",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
-          name: "S Harshita",
-          email: "harshita2216@gmail.com",
-        },
+        //   github: "https://github.com/avikantwadhwa",
+        email: "ap2301@it.jgec.ac.in",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "A V S ADITYA VARDHAN",
+        //   github: "https://github.com/laveesh",
+        email: "avsadityavardhan18bcs@iiitkottayam.ac.in",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "S Harshita",
+        email: "harshita2216@gmail.com",
+      },
     ],
   },
   {
@@ -2327,30 +2335,30 @@ export const projectData = [
     owner_name: "Vinit Shahdeo",
     github_username: "vinitshahdeo",
     project_name: "Network Scanner",
-    project_description: "A go-to tool for scanning network with following features:\n 1. Port Scanning\n 2. Token Scanning\n 3. Complete DNS Lookup\n 4. Vulnerability Scanner (SSRF, CSRF, etc.)\n 5. Intercept/Proxy requests.\n\n The idea here is to build an open-source version of Burp suite community edition",
+    project_description:
+      "A go-to tool for scanning network with following features:\n 1. Port Scanning\n 2. Token Scanning\n 3. Complete DNS Lookup\n 4. Vulnerability Scanner (SSRF, CSRF, etc.)\n 5. Intercept/Proxy requests.\n\n The idea here is to build an open-source version of Burp suite community edition",
     technology_used: "Python, SQL",
     repo_fullname: "vinitshahdeo/PortScanner",
-        email: "vinitshahdeo@gmail.com",
+    email: "vinitshahdeo@gmail.com",
     mentors_id: [
-        {
-            name: "Madhav Dihora",
+      {
+        name: "Madhav Dihora",
         //   github: "https://github.com/Jayashree-panda",
-            email: "madhavdihora33@gmail.com",
+        email: "madhavdihora33@gmail.com",
         //   slackId: "UUC8L15G8",
-          },
-          {
-            name: "Aditya Rana",
+      },
+      {
+        name: "Aditya Rana",
         //   github: "https://github.com/avikantwadhwa",
-            email: "mail2aditya.rana98@gmail.com",
+        email: "mail2aditya.rana98@gmail.com",
         //   slackId: "UTZH4BELS",
-          },
-          {
-            name: "NITISH AWASTHI",
+      },
+      {
+        name: "NITISH AWASTHI",
         //   github: "https://github.com/laveesh",
-            email: "ANITISH.225@GMAIL.COM",
+        email: "ANITISH.225@GMAIL.COM",
         //   slackId: "UU0PYRJ3V",
-          },
-        
+      },
     ],
   },
   {
@@ -2359,44 +2367,44 @@ export const projectData = [
     github_username: "ayan-biswas0412",
     project_name: "HotelonTouch",
     project_description:
-      "In Todays Generation the Hotel Industries are changing rapidly so this platform will manage the in house needs of hotels like laundry service, Room Service Management, Bar, Restraunt Order Management.There will be one customer end system and hotel end system and customer can request hotel for one of the above service. We will use the basic ReactJS, MongoDB and ExpressJS for the web development purpose and the entire project will be open source and free to use for the end users. This project aims to give a hands on experience to the beginners a hand on experience in the open source journey",				
+      "In Todays Generation the Hotel Industries are changing rapidly so this platform will manage the in house needs of hotels like laundry service, Room Service Management, Bar, Restraunt Order Management.There will be one customer end system and hotel end system and customer can request hotel for one of the above service. We will use the basic ReactJS, MongoDB and ExpressJS for the web development purpose and the entire project will be open source and free to use for the end users. This project aims to give a hands on experience to the beginners a hand on experience in the open source journey",
     project_video_link: "https://youtu.be/ZQyRe5jQ3Gs",
     technology_used: "ReactJS, MongoDB and ExpressJS, Firebase",
     repo_fullname: "ayan-biswas0412/gssoc2021-HotelOnTouch",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/ayan-biswas0412/gssoc2021-HotelOnTouch",
-        email: "ayanbiswas184@gmail.com",
+    email: "ayanbiswas184@gmail.com",
     mentors_id: [
-        {
-          name: "ABHISHEK SINGH",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "pratapabhishek0631@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Bhavita Nalli",
-      //   github: "https://github.com/Jayashree-panda",
-        email: "rbhavita24@gmail.com",
-      //   slackId: "UUC8L15G8",
+      {
+        name: "ABHISHEK SINGH",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "pratapabhishek0631@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
-          name: "Sahil Singh",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "sahilit27996@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Janvi Mahajan",
-      //   github: "https://github.com/laveesh",
-          email: "janvimahajan337@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
+      {
+        name: "Bhavita Nalli",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "rbhavita24@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Sahil Singh",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "sahilit27996@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Janvi Mahajan",
+        //   github: "https://github.com/laveesh",
+        email: "janvimahajan337@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
         name: "Abhishek Rajput",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "rajputabhisekhsingh53@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-      }
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2405,32 +2413,33 @@ export const projectData = [
     github_username: "shankhanil007",
     project_name: "EduHelp",
     project_description:
-      "Our project intends to make it easier for a person with any challenge of sight, hearing or physical amputation to attend online classes, webinars or courses. It captures the audio, unique screenshots and generates lecture notes during any online class, conference, etc. The audio is converted to text and a file containing its summary in .txt format as well as a braille scripted file is saved. The audio files can be used by a blind person for taking note of what happened during the class. The screenshots are stored in a PDF file and can be used by a deaf person or any other person for revisiting concepts they might have missed during a class. A TicTacToe game that can be played with slight eye movements was also developed. This project has the potential to be upgraded to a full scale application, useful for persons with disability. Contributors would have a good scope of improving the frontend UI, improving speech-to-text summarization using NLP, gesture control, working on backend and lots more. This project has received the likes of many people and we would love to see our idea turn into a full-scale Desktop Application at the hands of Open Source.",				
+      "Our project intends to make it easier for a person with any challenge of sight, hearing or physical amputation to attend online classes, webinars or courses. It captures the audio, unique screenshots and generates lecture notes during any online class, conference, etc. The audio is converted to text and a file containing its summary in .txt format as well as a braille scripted file is saved. The audio files can be used by a blind person for taking note of what happened during the class. The screenshots are stored in a PDF file and can be used by a deaf person or any other person for revisiting concepts they might have missed during a class. A TicTacToe game that can be played with slight eye movements was also developed. This project has the potential to be upgraded to a full scale application, useful for persons with disability. Contributors would have a good scope of improving the frontend UI, improving speech-to-text summarization using NLP, gesture control, working on backend and lots more. This project has received the likes of many people and we would love to see our idea turn into a full-scale Desktop Application at the hands of Open Source.",
     project_video_link: "https://youtu.be/K1oPvsSKjRk",
-    technology_used: "Python, OpenCV, NLTK, Electron.js ( Or any desktop app framework), speech-to-text",
+    technology_used:
+      "Python, OpenCV, NLTK, Electron.js ( Or any desktop app framework), speech-to-text",
     repo_fullname: "CrewMates-Open-Source/EduHelp",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/CrewMates-Open-Source/EduHelp",
-        email: "shankhanil974@gmail.com",
+    email: "shankhanil974@gmail.com",
     mentors_id: [
-        {
-          name: "Gaurav Kumar",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "gk74533@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Anshoo Rajput",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "rajanshoo25@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Apurva Sharma",
-      //   github: "https://github.com/laveesh",
-          email: "apurva.sharma2019@vitstudent.ac.in",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Gaurav Kumar",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "gk74533@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Anshoo Rajput",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "rajanshoo25@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Apurva Sharma",
+        //   github: "https://github.com/laveesh",
+        email: "apurva.sharma2019@vitstudent.ac.in",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2439,38 +2448,38 @@ export const projectData = [
     github_username: "praveenscience",
     project_name: "DevTernShip",
     project_description:
-      "We are in the mission of solving a crisis for a lot of small and medium enterprises, who are trying to recruit interns for their projects. This platform aims to onboard new interns, who have applied to the companies and help them understand the process and make the transition smooth.",				
+      "We are in the mission of solving a crisis for a lot of small and medium enterprises, who are trying to recruit interns for their projects. This platform aims to onboard new interns, who have applied to the companies and help them understand the process and make the transition smooth.",
     project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
     technology_used: "React JS, HTML, CSS, JavaScript",
     repo_fullname: "praveenscience/Internship-LMS-FrontEnd",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "gssoc21@praveen.science",
+    email: "gssoc21@praveen.science",
     mentors_id: [
       {
-          name: "Shashwat Mishra",
-      //   github: "https://github.com/praveenscience",
-          email: "ampsteric@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Aditya Pahilwani",
-      //   github: "https://github.com/praveenscience",
-          email: "aditya.pahilwani@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Tejan Singh",
-      //   github: "https://github.com/praveenscience",
-          email: "tstejan@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
-          name: "Aadhitya",
-      //   github: "https://github.com/praveenscience",
-          email: "aadhitya864@gmail.com"
-          //   slackId: "UU0PYRJ3V",
-        }
+        name: "Shashwat Mishra",
+        //   github: "https://github.com/praveenscience",
+        email: "ampsteric@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Aditya Pahilwani",
+        //   github: "https://github.com/praveenscience",
+        email: "aditya.pahilwani@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Tejan Singh",
+        //   github: "https://github.com/praveenscience",
+        email: "tstejan@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "Aadhitya",
+        //   github: "https://github.com/praveenscience",
+        email: "aadhitya864@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2485,26 +2494,27 @@ export const projectData = [
     repo_fullname: "knoldus/leaderboard",
     // project_slack_channel: "proj_mentorfix",
     github: "https://github.com/knoldus/leaderboard",
-        email: "manas.kashyap@knoldus.com , himanshu@knoldus.com , vikas@knoldus.com",
+    email:
+      "manas.kashyap@knoldus.com , himanshu@knoldus.com , vikas@knoldus.com",
     mentors_id: [
-        {
-          name: "Himanshu Gupta",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "himanshu.gupta@knoldus.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Manas Kashyap",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "manas.kashyap@knoldus.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Vikas",
-      //   github: "https://github.com/laveesh",
+      {
+        name: "Himanshu Gupta",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "himanshu.gupta@knoldus.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Manas Kashyap",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "manas.kashyap@knoldus.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Vikas",
+        //   github: "https://github.com/laveesh",
         //  email: "himanshu.gupta@knoldus.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   // {
@@ -2513,7 +2523,7 @@ export const projectData = [
   //   github_username: "imrathiii",
   //   project_name: "Hire Smart",
   //   project_description:
-  //   "Building a Web platform to analyze and gather information about your connections from different popular professional and social portals like LinkedIn, GitHub, Stack-overflow. To Scrape the data and use API from various social platforms and analyze and represent it according to our needs. It typically takes 52 days for hiring through many hiring channels along with traditional hiring ranges between $4k to $20k. But a referral who gets an interview has a 40% better chance of getting hired than any other sourced candidate and gets hired in 29 days. In the scenario with the referrals, hiring can be much faster with a reduction in cost per hire and a better chance of getting hired. It will make the process much faster as within some minutes the Recruiter will get the Data of Potential Candidates and thus make the hiring Process much faster, will reduce the cost of per hire and better chance for an individual to get hired. There are many peoples who lost their jobs in 2020 due the COVID-19 Pandemic and there are many IT professionals and individuals who are in urgent need of Jobs. So it will definitely help them a lot by taking their skills , experience and all the other information to the Right Person who can offer them a job. Thus establishing the connection between recruiter and job seeker faster. As the data gathered will be personal data of individuals So, we have to protect it from unfair use that's where Blockchain comes into the picture as we can put all the scraped data on Blockchain so that we cannot connect to data directly and it get stored on blockchain network and can be accessible only through smart contract.",        
+  //   "Building a Web platform to analyze and gather information about your connections from different popular professional and social portals like LinkedIn, GitHub, Stack-overflow. To Scrape the data and use API from various social platforms and analyze and represent it according to our needs. It typically takes 52 days for hiring through many hiring channels along with traditional hiring ranges between $4k to $20k. But a referral who gets an interview has a 40% better chance of getting hired than any other sourced candidate and gets hired in 29 days. In the scenario with the referrals, hiring can be much faster with a reduction in cost per hire and a better chance of getting hired. It will make the process much faster as within some minutes the Recruiter will get the Data of Potential Candidates and thus make the hiring Process much faster, will reduce the cost of per hire and better chance for an individual to get hired. There are many peoples who lost their jobs in 2020 due the COVID-19 Pandemic and there are many IT professionals and individuals who are in urgent need of Jobs. So it will definitely help them a lot by taking their skills , experience and all the other information to the Right Person who can offer them a job. Thus establishing the connection between recruiter and job seeker faster. As the data gathered will be personal data of individuals So, we have to protect it from unfair use that's where Blockchain comes into the picture as we can put all the scraped data on Blockchain so that we cannot connect to data directly and it get stored on blockchain network and can be accessible only through smart contract.",
   //   project_video_link: "https://drive.google.com/file/d/1kk53i-QvH3F9CO7riofupOeQgbSkAOnh/view?usp=sharing",
   //   technology_used: "Nodejs, Reactjs, Rest API's, MERN stack, Ethereum Blockchain, Solidity, UI/UX",
   //   repo_fullname: "imrathiii/Hire-Smart",
@@ -2549,31 +2559,32 @@ export const projectData = [
     project_video_link: "https://youtu.be/FsDV6a-L-wo",
     project_description:
       "The aim of the library is to ease the data exploration and preprocessing steps and provide a smart and automated technique for exploratory analysis of the data The library consists of following modules CSV Data Visualization CSV Data Preprocessing Image Data Visualization Image Data Preprocessing This project will assist the naive machine learning beginners with smart heuristics for data processing.",
-        // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
-    technology_used: "Python, Python Libraries - Matplotlib, Seaborn, Machine Learning",
+    // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
+    technology_used:
+      "Python, Python Libraries - Matplotlib, Seaborn, Machine Learning",
     repo_fullname: "klarEDA/klar-EDA",
     // project_slack_channel: "proj_mentorfix",
     //github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "ashishkshirsagar10@gmail.com",
+    email: "ashishkshirsagar10@gmail.com",
     mentors_id: [
-        {
-          name: "Harsha MS",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "sridharsha598@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Ishaan Bhallal",
-      //   github: "https://github.com/laveesh",
-          email: "ishaanbhallal21@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
+      {
+        name: "Harsha MS",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "sridharsha598@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Ishaan Bhallal",
+        //   github: "https://github.com/laveesh",
+        email: "ishaanbhallal21@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
         name: "Rishabh",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "rishabh5530@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-      }
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2583,37 +2594,37 @@ export const projectData = [
     project_name: "Jaisalmer E-Commerce",
     project_description:
       "A Full stack & Machine Learning based application Open-source E-Commerce Application for 1 Click-Store deploy. Covering all the basic functionality of a Online store, Jaisalmer E-Commerce offers superior feedback in the forms of graphs, user monitoring, administration and much more..",
-        // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
+    // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
     technology_used: "Django & React Tech Stack",
     repo_fullname: "gokulprathin8/Jaisalmer-E-Commerce",
     // project_slack_channel: "proj_mentorfix",
     //github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "gokulprathin8@gmail.com",
+    email: "gokulprathin8@gmail.com",
     mentors_id: [
-        {
-          name: "Tanmay Sharma",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "927tanmay@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-        name: "Rajkumar Sony",
-      //   github: "https://github.com/Jayashree-panda",
-        email: "raku19mca@cmrit.ac.in",
-      //   slackId: "UUC8L15G8",
+      {
+        name: "Tanmay Sharma",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "927tanmay@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
-          name: "Vaishnavi Dwivedi",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "vaishdw2207@gmail.co",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Deeksha Sharma",
-      //   github: "https://github.com/laveesh",
-          email: "sharmadeeksha325@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Rajkumar Sony",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "raku19mca@cmrit.ac.in",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Vaishnavi Dwivedi",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "vaishdw2207@gmail.co",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Deeksha Sharma",
+        //   github: "https://github.com/laveesh",
+        email: "sharmadeeksha325@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2628,26 +2639,26 @@ export const projectData = [
     repo_fullname: "vigneshshettyin/Bulk-Mailer",
     // project_slack_channel: "proj_mentorfix",
     //github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "vigneshshetty.in@gmail.com",
+    email: "vigneshshetty.in@gmail.com",
     mentors_id: [
-        {
-          name: "Shanwill Pinto",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "shanwillpinto@gmail.com",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Raksharaj Shetty",
-      //   github: "https://github.com/avikantwadhwa",
-        email: "shettyraksharaj@gmail.com",
-      //   slackId: "UTZH4BELS",
+      {
+        name: "Shanwill Pinto",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "shanwillpinto@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
-          name: "Laureen",
-      //   github: "https://github.com/laveesh",
-          email: "laureenfernandes212@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+      {
+        name: "Raksharaj Shetty",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shettyraksharaj@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Laureen",
+        //   github: "https://github.com/laveesh",
+        email: "laureenfernandes212@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2657,31 +2668,31 @@ export const projectData = [
     project_name: "Recess",
     project_description:
       "Recess - A Social Media Platform for students to share their experience/knowledge they gained in their free time.",
-      // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
+    // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
     technology_used: "ReactJS, Firebase",
     repo_fullname: "avinashkranjan/Recess",
     // project_slack_channel: "proj_mentorfix",
     //github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "ranjan.avinash@hotmail.com",
+    email: "ranjan.avinash@hotmail.com",
     mentors_id: [
-        {
-          name: "Abhishek Srivastava",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "abhisheksrivastavabbn@gmail.com",
-      //   slackId: "UUC8L15G8",
+      {
+        name: "Abhishek Srivastava",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "abhisheksrivastavabbn@gmail.com",
+        //   slackId: "UUC8L15G8",
       },
-        {
-          name: "Eshaan Khurana",
-      //   github: "https://github.com/avikantwadhwa",
+      {
+        name: "Eshaan Khurana",
+        //   github: "https://github.com/avikantwadhwa",
         email: "eshaany2k@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Utkarsh Singh",
-      //   github: "https://github.com/laveesh",
-          email: "lutkarsh.codes@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Utkarsh Singh",
+        //   github: "https://github.com/laveesh",
+        email: "lutkarsh.codes@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2691,37 +2702,37 @@ export const projectData = [
     project_name: "lifeMEDeasy",
     project_description:
       "Automating Healthcare Our Mission is to automate Healthcare and make Health facilities available to everyone regardless of their limitations Our Goals : 1. Automate Healthcare Medical Appointments 2. Online Disease Severity Prediction based on input symptoms through AI enabled chat-bots 3. Online Medical Document Storage for Doctor-Patient Interactions 4. e-Ambulance Tracking",
-      // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
+    // project_video_link: "https://youtu.be/Pm6o6M1Kg7A",
     technology_used: "ReactJS, Firebase, Django, Python, NLP",
     repo_fullname: "avinashkranjan/lifeMEDeasy",
     // project_slack_channel: "proj_mentorfix",
     //github: "https://github.com/praveenscience/Internship-LMS-FrontEnd",
-        email: "ranjan.avinash@hotmail.com",
+    email: "ranjan.avinash@hotmail.com",
     mentors_id: [
-        {
-          name: "Aastha Jain",
-      //   github: "https://github.com/Jayashree-panda",
-          email: "btbtc18095_aastha@banasthali.in",
-      //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Nikhil Barik",
-      //   github: "https://github.com/avikantwadhwa",
-          email: "nklmarch17@gmail.com",
-      //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Rahul Gorai",
-      //   github: "https://github.com/laveesh",
-          email: "rahul.gorai.3141@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-        },
-        {
-          name: "Chetan Banavikalmutt",
-      //   github: "https://github.com/harsha-iiiv",
-          email: "chetanrns1997@gmail.com",
-      //   slackId: "UUE2B5JHM",
-        },
+      {
+        name: "Aastha Jain",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "btbtc18095_aastha@banasthali.in",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Nikhil Barik",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "nklmarch17@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Rahul Gorai",
+        //   github: "https://github.com/laveesh",
+        email: "rahul.gorai.3141@gmail.com",
+        //   slackId: "UU0PYRJ3V",
+      },
+      {
+        name: "Chetan Banavikalmutt",
+        //   github: "https://github.com/harsha-iiiv",
+        email: "chetanrns1997@gmail.com",
+        //   slackId: "UUE2B5JHM",
+      },
     ],
   },
   {
@@ -2733,41 +2744,41 @@ export const projectData = [
       "A curated collection of Amazing Python scripts from Basics to Advance with automation task scripts. This is your Personal space to find or add any new script that can make Life Easier for you, as a Developer, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to download PDFs from an Online Source or just to randomly like everyone's Instagram Post.",
     technology_used: "Python, HTML, CSS, JS",
     repo_fullname: "avinashkranjan/Amazing-Python-Scripts",
-        email: "ranjan.avinash@hotmail.com",
+    email: "ranjan.avinash@hotmail.com",
     mentors_id: [
       {
         name: "MANIDIPA BHATTACHARJEE",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "manidipa522001@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Santushti Sharma",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "sharmasantushti1012@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Antriksh Misri",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "antrikshmisri@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
-          name: "Kushal Das",
-          email: "daskushal980@gmail.com",
+        name: "Kushal Das",
+        email: "daskushal980@gmail.com",
       },
       {
         name: "Kaustubh Gupta",
-      //   github: "https://github.com/harsha-iiiv",
+        //   github: "https://github.com/harsha-iiiv",
         email: "kaustubhgupta1828@gmail.com",
-      //   slackId: "UUE2B5JHM",
+        //   slackId: "UUE2B5JHM",
       },
       {
         name: "Tamanna Verma",
-      //   github: "https://github.com/harsha-iiiv",
+        //   github: "https://github.com/harsha-iiiv",
         email: "tamannav01@gmail.com",
-      //   slackId: "UUE2B5JHM",
+        //   slackId: "UUE2B5JHM",
       },
     ],
   },
@@ -2779,27 +2790,28 @@ export const projectData = [
     project_description:
       "Our project focuses on the young girls who are going to face their first periods or the females who have been facing problems with tracking their period dates and remembering their dates and end up embarrassing themselves when they face their periods at wrong time at wrong places. Our application periodo can help these girls and women by keeping a track of their periods and notifying them on their upcoming dates along with keeping track on the level of flow of their periods also helping them with their correct diet in their period dates. We have planned to add more features in the application as it grows with the help of contributors. The Project is very beginner friendly to contribute to as well as has a user-friendly interface which can help in attracting young audience.",
     project_video_link: "https://youtu.be/3dxa599SPT4",
-    technology_used: "Next-js, ReactJs, NodeJs, Html, CSS, Javascript, Figma, bootsrap, Material-Ui, Webpack",
+    technology_used:
+      "Next-js, ReactJs, NodeJs, Html, CSS, Javascript, Figma, bootsrap, Material-Ui, Webpack",
     repo_fullname: "Feminine-Divine/periodo",
-        email: "dpskhu13108@gmai.com, vaaishpra19@gmail.com",
+    email: "dpskhu13108@gmai.com, vaaishpra19@gmail.com",
     mentors_id: [
       {
         name: "Khushi Gautam",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "dpskhu13108@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Shipra Verma",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "vaaishpra19@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Vritika Vijaylal Naik",
-      //   github: "https://github.com/harsha-iiiv",
+        //   github: "https://github.com/harsha-iiiv",
         email: "vritikan@gmail.com",
-      //   slackId: "UUE2B5JHM",
+        //   slackId: "UUE2B5JHM",
       },
     ],
   },
@@ -2812,32 +2824,32 @@ export const projectData = [
       "Expanding the domain of the flutter package by adding more animated texts.",
     technology_used: "Flutter",
     repo_fullname: "aagarwal1012/Animated-Text-Kit",
-        email: "aagarwal9782@gmail.com",
+    email: "aagarwal9782@gmail.com",
     mentors_id: [
       {
         name: "Anthony Whitford",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "mail@anthonywhitford.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Darshan Rander",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "darshandrander@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Prince Srivastava",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "prince17.ps6@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Sameera S Kashyap",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "sameera.s.kashyap@gmail.com",
-      //   slackId: "UU0PYRJ3V",
-      }
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -2847,34 +2859,35 @@ export const projectData = [
     project_name: "SyntaxMeets",
     project_description:
       "SyntaxMeets is a real-time, collaborative coding platform to group with other members and code. A user can create/join a room. A code editor with 19 language support and 10+ themes, code compiler, Drawing pad to design algorithm, Chat Box to discuss and code.",
-    project_video_link:"https://youtu.be/XL-N4ocbqq8",
-    technology_used: "React - Frontend, Express - Backend, Socket-IO for Web RTC, Node JS, Javascript, HTML, CSS, Bootstrap, Material UI",
+    project_video_link: "https://youtu.be/XL-N4ocbqq8",
+    technology_used:
+      "React - Frontend, Express - Backend, Socket-IO for Web RTC, Node JS, Javascript, HTML, CSS, Bootstrap, Material UI",
     repo_fullname: "kothariji/SyntaxMeets",
-        email: "kotharidhruv25@gmail.com",
+    email: "kotharidhruv25@gmail.com",
     mentors_id: [
       {
         name: "Neha Parmar",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "ehaparmar1899@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Satyam Chaudhary",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "17157@iiitu.ac.in",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Sai Satwik Kokanti",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "saisatwik99@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Ayush Shrivastava",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "shrivastavayush32@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -2887,31 +2900,31 @@ export const projectData = [
       "Pro_Act provides you with an efficient way of managing your tasks. It works on the principals of divide and conquer, allows the user to enter tasks and then divide them further into sub-tasks and handle them efficiently! Additional features of adding time limit for completion and updating the amount of work that has been completed .Best when working with a large team to be updated of the amount of work done and the amount of work left to be completed .",
     technology_used: "Python, Angular, Django, HTML, Java, C, C++, Rust",
     repo_fullname: "sruti2024/PRO_Act",
-        email: "srutichatterjee2024@gmail.com",
+    email: "srutichatterjee2024@gmail.com",
     mentors_id: [
       {
         name: "Enjeck Mbeh Cleopatra",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "patrathewhiz@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Prakhar Shreyash",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "1905523@kiit.ac.in",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Dharmpal Chaudhary",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "chaudharydharmpal95@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Sai Sudha Vadisina",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "saisudhavadisina@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
     ],
   },
@@ -2922,28 +2935,28 @@ export const projectData = [
     project_name: "Project Sakura",
     project_description:
       "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-    project_video_link:"https://youtu.be/7k7nnAVBh9Y",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
     technology_used: "Javascript,Express Node ,Logo Design, Adobe XD",
     repo_fullname: "ProjectSakura/Mirai",
-        email: "teltia.arun18@gmail.com",
+    email: "teltia.arun18@gmail.com",
     mentors_id: [
       {
         name: "Rhythm Jayee",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "jayeerythm8@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Priyanshu Pandey",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "shen.priyanshu@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Yasharth Dubey",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "yashdubeywinner@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
     ],
   },
@@ -2953,36 +2966,38 @@ export const projectData = [
     github_username: "siv2r",
     project_name: "Kidney Exchange",
     project_description:
-        "Let's say a person wants to donate his/her kidney to a loved one but cannot do so because they have some medical incompatibility. This problem can be solved by curating similar patients and swapping the kidney within themselves. This problem is called the living donor kidney exchange problem, and in most places of India, doctors solve it manually. This project aims to automate a part of this process. This project's primary focus is to provide a platform to facilitate automized inter-hospital kidney transplants.This platform allows interested hospitals to register. The doctors from the registered hospitals can create their account and add their patients' (having kidney problems) medical details to this platform. After a doctor completes this process, this platform provides two main features. The first feature is an option to view only the essential details of a patient required for a kidney transplant. Second, for a given patient, all suitable matches from all the registered hospitals are displayed. These suitable matches are ranked from best to worst.",
+      "Let's say a person wants to donate his/her kidney to a loved one but cannot do so because they have some medical incompatibility. This problem can be solved by curating similar patients and swapping the kidney within themselves. This problem is called the living donor kidney exchange problem, and in most places of India, doctors solve it manually. This project aims to automate a part of this process. This project's primary focus is to provide a platform to facilitate automized inter-hospital kidney transplants.This platform allows interested hospitals to register. The doctors from the registered hospitals can create their account and add their patients' (having kidney problems) medical details to this platform. After a doctor completes this process, this platform provides two main features. The first feature is an option to view only the essential details of a patient required for a kidney transplant. Second, for a given patient, all suitable matches from all the registered hospitals are displayed. These suitable matches are ranked from best to worst.",
     technology_used: "PHP, Python, JavaScript, HTML, CSS",
-    project_video_link:"https://drive.google.com/file/d/1Wp6K0wRsPjxwvTWzIIVIQMqYhe1ZMX_0/view?usp=sharing",
+    project_video_link:
+      "https://drive.google.com/file/d/1Wp6K0wRsPjxwvTWzIIVIQMqYhe1ZMX_0/view?usp=sharing",
     repo_fullname: "siv2r/kidney-exchange",
-        email: "siv2ram@gmail.com",
-    project_slack_channel:"https://join.slack.com/t/kidney-exchange/shared_invite/zt-n54e89o7-yB5E6eZl7q3DAvLFdUAwgA",
+    email: "siv2ram@gmail.com",
+    project_slack_channel:
+      "https://join.slack.com/t/kidney-exchange/shared_invite/zt-n54e89o7-yB5E6eZl7q3DAvLFdUAwgA",
     mentors_id: [
       {
         name: "D Sivaram",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "siv2ram@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Shania Mitra",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "shaniamitra9@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Ria Tyagi",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "riatyagi28@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Priyanshu Agarwal",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "priyanshuone6@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -2991,34 +3006,35 @@ export const projectData = [
     owner_name: "Gaurav Das",
     github_username: "gauravdas014",
     project_name: "Feminist Bible (Phase 2)",
-    project_description: "A platform where the Feminist Bible community can interact by posting their stories, blogs, articles etc. This fullstack web app is built using ReactJS. Feminist Bible is an inclusive space for all. A place where we empathize, acknowledge, and promote diversity by creating an inclusive ecosystem powered by shared stories, culturally sensitive content, and equity-driven community philosophy",
+    project_description:
+      "A platform where the Feminist Bible community can interact by posting their stories, blogs, articles etc. This fullstack web app is built using ReactJS. Feminist Bible is an inclusive space for all. A place where we empathize, acknowledge, and promote diversity by creating an inclusive ecosystem powered by shared stories, culturally sensitive content, and equity-driven community philosophy",
     technology_used: "HTML, CSS(SCSS), React JS, Node JS, Mongo DB",
     repo_fullname: "girlscript/feminist-bible-phase-2",
-        email: "gauravdas014@gmail.com",
+    email: "gauravdas014@gmail.com",
     mentors_id: [
       {
         name: "Joshua Poddoku",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "joshuapoddoku@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
-      name: "Debasmita Das",
-    //   github: "https://github.com/Jayashree-panda",
-      email: "debasmitad76@gmail.com",
-    //   slackId: "UUC8L15G8",
-    },
+        name: "Debasmita Das",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "debasmitad76@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
       {
         name: "Shashank Motruri",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "shashank.m19@iiits.in",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Shubhadarshie Nanda",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "b518045@iiit-bh.ac.in",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3028,36 +3044,36 @@ export const projectData = [
     github_username: "yvkrishna",
     project_name: "Flow2Ml",
     project_description:
-        "Write only a Few Lines of Machine learning code using Flow2Ml Quickly design and customize pre-processing workflow in machine learning. Obtain training, validating samples with only 3 lines of code using Flow2ML toolkit Check Installation and sample code to flow into your ml model fastly. Flow2ML is an open source library to make machine learning process much simpler. It loads the image data and applies the selected filters and returns train data, train labels, validation data and validation labels. For all these steps it just take 3 lines of code. It mostly helps beginners in the field of machine learning and deep learning where the user would deal with image related data.",         
+      "Write only a Few Lines of Machine learning code using Flow2Ml Quickly design and customize pre-processing workflow in machine learning. Obtain training, validating samples with only 3 lines of code using Flow2ML toolkit Check Installation and sample code to flow into your ml model fastly. Flow2ML is an open source library to make machine learning process much simpler. It loads the image data and applies the selected filters and returns train data, train labels, validation data and validation labels. For all these steps it just take 3 lines of code. It mostly helps beginners in the field of machine learning and deep learning where the user would deal with image related data.",
     technology_used: "Python",
-    project_video_link:"https://youtu.be/xELBDOQVUjY",
+    project_video_link: "https://youtu.be/xELBDOQVUjY",
     repo_fullname: "flow2ml/Flow2ML",
     github: "https://github.com/flow2ml/Flow2ML",
-        email: "vedhakrishnapanchami@gmail.com",
+    email: "vedhakrishnapanchami@gmail.com",
     mentors_id: [
       {
         name: "Chebrolu Bala Sai Harika",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "chebroluharika@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Mostafa Wael",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "mostafa.w.k000@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Ashwin Kumar Ramaswamy",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "aashwin515@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Yogita Jaswani",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "jaswaniyogita@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3067,30 +3083,30 @@ export const projectData = [
     github_username: "garg3133",
     project_name: "Jagrati WebApp",
     project_description:
-        "Jagrati is an initiative by the students of IIITDM Jabalpur (started in 2009) to teach poor and under-privileged children of nearby villages at IIITDM Jabalpur, completely free of cost.Before COVID, we had around 100 students, from the 4 villages adopted by us in the vicinity of our institute, who used to come to our institute in the evening to take classes Apart from the basic classes, we also prepare students of Class 5 for Navodaya Entrance Examination and we've received great results in past years where one of our students got selected in Navodaya in 2018, one in 2019 and two in 2020.So, this project is a little initiative from my side to help volunteers manage the classes and other day-to-day operations at Jagrati in a better way and make it easier for them to keep track of students, classwork-homework given to them, their attendances and other things and focus more on teaching than these side activities.",
-    project_video_link:"https://youtu.be/J5emetcite4",
+      "Jagrati is an initiative by the students of IIITDM Jabalpur (started in 2009) to teach poor and under-privileged children of nearby villages at IIITDM Jabalpur, completely free of cost.Before COVID, we had around 100 students, from the 4 villages adopted by us in the vicinity of our institute, who used to come to our institute in the evening to take classes Apart from the basic classes, we also prepare students of Class 5 for Navodaya Entrance Examination and we've received great results in past years where one of our students got selected in Navodaya in 2018, one in 2019 and two in 2020.So, this project is a little initiative from my side to help volunteers manage the classes and other day-to-day operations at Jagrati in a better way and make it easier for them to keep track of students, classwork-homework given to them, their attendances and other things and focus more on teaching than these side activities.",
+    project_video_link: "https://youtu.be/J5emetcite4",
     technology_used: "Python/Django, HTML, CSS (+ Bootstrap 4), JavaScript",
     repo_fullname: "garg3133/JagratiWebApp",
-        email: "priyanshgarg30@gmail.com",
+    email: "priyanshgarg30@gmail.com",
     mentors_id: [
       {
-            name: "Tushar Maheshwari",
+        name: "Tushar Maheshwari",
         //   github: "https://github.com/Jayashree-panda",
-            email: "2019352@iiitdmj.ac.in",
+        email: "2019352@iiitdmj.ac.in",
         //   slackId: "UUC8L15G8",
-        },
-          {
-          name: "Ajay Sharma",
+      },
+      {
+        name: "Ajay Sharma",
         //   github: "https://github.com/avikantwadhwa",
-            email: "Ajaykrsharma132@gmail.com",
+        email: "Ajaykrsharma132@gmail.com",
         //   slackId: "UTZH4BELS",
-          },
-          {
-            name: "Vaibhav Mehta",
+      },
+      {
+        name: "Vaibhav Mehta",
         //   github: "https://github.com/laveesh",
-            email: "vdmehta36@gmail.com",
+        email: "vdmehta36@gmail.com",
         //   slackId: "UU0PYRJ3V",
-          },
+      },
     ],
   },
   {
@@ -3099,29 +3115,31 @@ export const projectData = [
     github_username: "Ayush-projects",
     project_name: "Chords",
     project_description:
-        "The basic idea is to develop a browser extension from scratch that will detect the mood of the user based on the input events emitted by the user and will stream in-browser music. It will consist all the basic music controls, basically when an user enters some keywords, an input event will be emitted, the input keywords will serve the purpose of input for the machine learning model and the model will process the output mood (i.e. Happy, Romantic), all this output will be processed locally, on the browser itself, so there will be no privacy concerns. NodeJs server will serve as backend and will stream music either through http or web socket protocol through mongoDB database.",
-    technology_used: "JavaScript, HTML, CSS, nodeJs, MongoDB, React.js, Tensorflow.js",
-    project_video_link:" https://drive.google.com/file/d/11HVgNiAKXNYP_kytF9EGDmZET4DS1C0f/view?usp=drivesdk",
+      "The basic idea is to develop a browser extension from scratch that will detect the mood of the user based on the input events emitted by the user and will stream in-browser music. It will consist all the basic music controls, basically when an user enters some keywords, an input event will be emitted, the input keywords will serve the purpose of input for the machine learning model and the model will process the output mood (i.e. Happy, Romantic), all this output will be processed locally, on the browser itself, so there will be no privacy concerns. NodeJs server will serve as backend and will stream music either through http or web socket protocol through mongoDB database.",
+    technology_used:
+      "JavaScript, HTML, CSS, nodeJs, MongoDB, React.js, Tensorflow.js",
+    project_video_link:
+      " https://drive.google.com/file/d/11HVgNiAKXNYP_kytF9EGDmZET4DS1C0f/view?usp=drivesdk",
     repo_fullname: "Ayush-projects/chords",
-        email: "kayush479@gmail.com",
+    email: "kayush479@gmail.com",
     mentors_id: [
       {
         name: "Anush Bhatia",
-    //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "anushbhatia1234@gmail.com",
-    //   slackId: "UUC8L15G8",
-    },
+        //   slackId: "UUC8L15G8",
+      },
       {
-      name: "Harsh Kumar",
-    //   github: "https://github.com/avikantwadhwa",
+        name: "Harsh Kumar",
+        //   github: "https://github.com/avikantwadhwa",
         email: "harshkumar9.in@gmail.com",
-    //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Priyanka Prasad",
-    //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "priyankaafssulur@gmail.com",
-    //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3130,8 +3148,7 @@ export const projectData = [
     owner_name: "Md Arshad Khan",
     github_username: "ADRE9",
     project_name: "Bunk Manager",
-    project_description:
-        `Managing Attendance in a university is a big problem when universities don't have their own attendance management system. This is a MERN stack Attendance manager app build on top of Material UI React framework and animation library Framer Motion is used. It uses the Redux state management library and the REST Api . The backend has been build on top of Express JS and MongoDB is used as a database. It's an open source project that is unfinished. It's main job is to help students easily balance their attendance had help them to manage it efficiently.
+    project_description: `Managing Attendance in a university is a big problem when universities don't have their own attendance management system. This is a MERN stack Attendance manager app build on top of Material UI React framework and animation library Framer Motion is used. It uses the Redux state management library and the REST Api . The backend has been build on top of Express JS and MongoDB is used as a database. It's an open source project that is unfinished. It's main job is to help students easily balance their attendance had help them to manage it efficiently.
         1.Material UI for frontend in React.
         2.Redux as state management library.
         3. Redux Thunk as frontend middleware.(for async fetching of data in React-Redux).
@@ -3141,35 +3158,36 @@ export const projectData = [
         8. Yup for form validation and Formik for handling forms.
         9.Framer Motion for animations
         10.MongoDB as database.`,
-    project_video_link:"https://youtu.be/7Gn7E0NikYo",
-    technology_used: "MongoDb, Express.js , Node.js , React.js , Mongoose, Material  UI ,Framer Motion",
+    project_video_link: "https://youtu.be/7Gn7E0NikYo",
+    technology_used:
+      "MongoDb, Express.js , Node.js , React.js , Mongoose, Material  UI ,Framer Motion",
     repo_fullname: "ADRE9/bunk-manager-mern",
-        email: "adrenine13@gmail.com",
+    email: "adrenine13@gmail.com",
     mentors_id: [
       {
         name: "MD Arshad Khan",
-    //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "kaifee000@gmail.com",
-    //   slackId: "UUC8L15G8",
-    },
+        //   slackId: "UUC8L15G8",
+      },
       {
-      name: "Mustafiz Kaifee Mumtaz",
-    //   github: "https://github.com/avikantwadhwa",
+        name: "Mustafiz Kaifee Mumtaz",
+        //   github: "https://github.com/avikantwadhwa",
         email: "sanyammehendiratta2000@gmail.com",
-    //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Sanyam Mehendiratta",
-    //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "adrenine13@gmail.com",
-    //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Kunal Jain",
-    //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "jainkunal209@gmail.com",
-    //   slackId: "UU0PYRJ3V",
-      }
+        //   slackId: "UU0PYRJ3V",
+      },
     ],
   },
   {
@@ -3178,29 +3196,29 @@ export const projectData = [
     github_username: "harshcasper",
     project_name: "Rotten Scripts",
     project_description:
-        "Rotten Scripts contains amazing and awesome scripts written in Python, JavaScript, Bash, Powershell, and more. Consider this repository as your personal space to find or add any new script that can make life easier for us and the Open Source community too, as a Developer, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to download PDFs from an Online Source or just to randomly like everyone's Instagram Post.",
+      "Rotten Scripts contains amazing and awesome scripts written in Python, JavaScript, Bash, Powershell, and more. Consider this repository as your personal space to find or add any new script that can make life easier for us and the Open Source community too, as a Developer, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to download PDFs from an Online Source or just to randomly like everyone's Instagram Post.",
     technology_used: "Python, Javascript, Golang, BASH",
-    project_video_link:"https://youtu.be/FYvD40kzapM",
+    project_video_link: "https://youtu.be/FYvD40kzapM",
     repo_fullname: "harshcasper/rotten-scripts",
-        email: "erbeusgriffincasper@gmail.com",
+    email: "erbeusgriffincasper@gmail.com",
     mentors_id: [
       {
         name: "Seema Saharan",
-    //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "seema.saharan1711@gmail.com",
-    //   slackId: "UUC8L15G8",
-    },
+        //   slackId: "UUC8L15G8",
+      },
       {
-      name: "Vybhav Chaturvedi",
-    //   github: "https://github.com/avikantwadhwa",
+        name: "Vybhav Chaturvedi",
+        //   github: "https://github.com/avikantwadhwa",
         email: "sohamshah456@gmail.com",
-    //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Soham Shah",
-    //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "vybhavchaturvedi@gmail.com",
-    //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3210,29 +3228,30 @@ export const projectData = [
     github_username: "fave77",
     project_name: "pbchess",
     project_description:
-        "An open-sourced free online chess platform for playing chess online with other members, practicing with a chess engine, learning about opening theories as well as endgame tactics, solving daily puzzles, and a lot more features. It has been only 6 months since this project's inception, and many of the above-mentioned features are yet to be implemented. Hence, the scope of the project is huge and there is a lot of ground to cover. Having said that, the project's features that did get implemented till now include - authentication, basic multiplayer socket-based gameplay, users can create or join games using game-ids, can check each other's profile, and also edit their profile. The roadmap of the project for the next 6 months include - creating timers for gameplay, categorizing games into Bullet, Blitz, or Rapid based on time, start implementing daily puzzle section, add blogs or video-based material on the learning section, create a record of all games by PGN, implement ranking in all the categories including puzzles, include matchmaking on the lobby based on ranking, and lastly integrate an open-sourced chess engine (possibly Stockfish) with our existing architecture for more features like analyzing games, and evaluation. ",
-    project_video_link:"https://youtu.be/_x-j_0rM1kI",
-    technology_used: "HTML, CSS, JavaScript, React, Bootstrap, Node.js, Express, Socket, Redis,  MongoDB, Jest",
+      "An open-sourced free online chess platform for playing chess online with other members, practicing with a chess engine, learning about opening theories as well as endgame tactics, solving daily puzzles, and a lot more features. It has been only 6 months since this project's inception, and many of the above-mentioned features are yet to be implemented. Hence, the scope of the project is huge and there is a lot of ground to cover. Having said that, the project's features that did get implemented till now include - authentication, basic multiplayer socket-based gameplay, users can create or join games using game-ids, can check each other's profile, and also edit their profile. The roadmap of the project for the next 6 months include - creating timers for gameplay, categorizing games into Bullet, Blitz, or Rapid based on time, start implementing daily puzzle section, add blogs or video-based material on the learning section, create a record of all games by PGN, implement ranking in all the categories including puzzles, include matchmaking on the lobby based on ranking, and lastly integrate an open-sourced chess engine (possibly Stockfish) with our existing architecture for more features like analyzing games, and evaluation. ",
+    project_video_link: "https://youtu.be/_x-j_0rM1kI",
+    technology_used:
+      "HTML, CSS, JavaScript, React, Bootstrap, Node.js, Express, Socket, Redis,  MongoDB, Jest",
     repo_fullname: "fave77/pbchess",
-        email: "pbiswas101b@gmail.com",
+    email: "pbiswas101b@gmail.com",
     mentors_id: [
       {
         name: "Aditya Gupta",
-    //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "adityag.ug19.cs@nitp.ac.in",
-    //   slackId: "UUC8L15G8",
-    },
+        //   slackId: "UUC8L15G8",
+      },
       {
-      name: "Shreya Kapoor",
-    //   github: "https://github.com/avikantwadhwa",
+        name: "Shreya Kapoor",
+        //   github: "https://github.com/avikantwadhwa",
         email: "shreyakapoor98@gmail.com",
-    //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Apurv Gupta",
-    //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "apurv3351@gmail.com",
-    //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3242,11 +3261,12 @@ export const projectData = [
     github_username: "ashishsahu1",
     project_name: "ML-Projectyard",
     project_description:
-        "ML-PROJECTYARD is a complete machine learning projects playlist, in which any one can find machine learning/deep learning/NLP/CV project with complete backend and frontend.",
-    project_video_link:"https://youtu.be/S-meVVjV3yw",
-    technology_used: "Python, machine learning, deep learning, frontend developement, backend development",
+      "ML-PROJECTYARD is a complete machine learning projects playlist, in which any one can find machine learning/deep learning/NLP/CV project with complete backend and frontend.",
+    project_video_link: "https://youtu.be/S-meVVjV3yw",
+    technology_used:
+      "Python, machine learning, deep learning, frontend developement, backend development",
     repo_fullname: "ashishsahu1/ML-ProjectYard",
-        email: "ashishsahu10428@gmail.com",
+    email: "ashishsahu10428@gmail.com",
     mentors_id: [
       {
         name: "Vaibhav Arora",
@@ -3265,7 +3285,7 @@ export const projectData = [
         // github: "https://github.com/Bhupesh-V",
         email: "priyagupta55@gmail.com",
         // slackId: "UUEA9F80P",
-      }
+      },
     ],
   },
   {
@@ -3274,10 +3294,10 @@ export const projectData = [
     github_username: "DhairyaBahl",
     project_name: "React Messenger App",
     project_description:
-        "This is a beginner friendly messenger app. Beginners can contribute to this app and improve its features and can even add more functionality. React and firebase are the skills required to contribute to this project. ( If someone knows react native then they can help in development of mobile application of this project )",
+      "This is a beginner friendly messenger app. Beginners can contribute to this app and improve its features and can even add more functionality. React and firebase are the skills required to contribute to this project. ( If someone knows react native then they can help in development of mobile application of this project )",
     technology_used: "React or react native and Firebase",
     repo_fullname: "DhairyaBahl/React-Messenger-App",
-        email: "dhairyabahl5@gmail.com",
+    email: "dhairyabahl5@gmail.com",
     mentors_id: [
       {
         name: "Aditya Teltia",
@@ -3296,7 +3316,7 @@ export const projectData = [
         // github: "https://github.com/Bhupesh-V",
         email: "yashhanda500@gmail.com",
         // slackId: "UUEA9F80P",
-      }
+      },
     ],
   },
   {
@@ -3305,11 +3325,11 @@ export const projectData = [
     github_username: "Spectrum-CETB",
     project_name: "LesKollab",
     project_description:
-        "LesKollab is a project sharing and collaborations application to help both beginners and veterans work together. Be it a beginner or a veteran, if you have an idea, you can post it and search for collaborators to work with. Not only that, if you are an explorer who has just started on a new stack, and want to work on it, you can search people as per your choice of interest, and request to work with them. It is a platform to connect developers of all levels to work together and gain more experience and knowledge.",
-    project_video_link:"https://youtu.be/rafmsDzHJOs",
+      "LesKollab is a project sharing and collaborations application to help both beginners and veterans work together. Be it a beginner or a veteran, if you have an idea, you can post it and search for collaborators to work with. Not only that, if you are an explorer who has just started on a new stack, and want to work on it, you can search people as per your choice of interest, and request to work with them. It is a platform to connect developers of all levels to work together and gain more experience and knowledge.",
+    project_video_link: "https://youtu.be/rafmsDzHJOs",
     technology_used: "HTML, CSS, Javascript, PHP",
     repo_fullname: "Spectrum-CETB/LesKollab",
-        email: "rupeshmohanty67@gmail.com",
+    email: "rupeshmohanty67@gmail.com",
     mentors_id: [
       {
         name: "Shubham Gautam",
@@ -3328,7 +3348,7 @@ export const projectData = [
         // github: "https://github.com/Bhupesh-V",
         email: "sakshi300699.b@gmail.com",
         // slackId: "UUEA9F80P",
-      }
+      },
     ],
   },
   {
@@ -3337,11 +3357,11 @@ export const projectData = [
     github_username: "pratyushmp",
     project_name: "Batua",
     project_description:
-        "A Personal App to track and manage your expenses! Batua is the best money manager and daily expense tracker to automatically and securely track your monthly spends. Stay within budget, pay bills on time and SAVE more money every month. Find out how much you spend on food, shopping, groceries, etc. and how you are saving month on month.",
-    project_video_link:"https://youtu.be/5VXx33iW4MY",
+      "A Personal App to track and manage your expenses! Batua is the best money manager and daily expense tracker to automatically and securely track your monthly spends. Stay within budget, pay bills on time and SAVE more money every month. Find out how much you spend on food, shopping, groceries, etc. and how you are saving month on month.",
+    project_video_link: "https://youtu.be/5VXx33iW4MY",
     technology_used: "Flutter, Firebase, REST",
     repo_fullname: "pratyushmp/Batua",
-        email: "mpratyush2008@gmail.com",
+    email: "mpratyush2008@gmail.com",
     mentors_id: [
       {
         name: "Aswin Gopinathan",
@@ -3366,7 +3386,7 @@ export const projectData = [
         // github: "https://github.com/Bhupesh-V",
         email: "vartikadadheech14nov@gmail.com",
         // slackId: "UUEA9F80P",
-      }
+      },
     ],
   },
   {
@@ -3375,10 +3395,10 @@ export const projectData = [
     github_username: "swapnilsparsh",
     project_name: "Rescue",
     project_description:
-        "Our project i.e a responsive website to help women in panic and unsafe situations. The website has an Emergency button. If the person feels unsafe in any situtation, then they can click on that emergency button and within no time an alert message will be sent to her Trusted contacts with her Location credentials that she is in need of help. Our main aim is to help women with the support of new technologies",
+      "Our project i.e a responsive website to help women in panic and unsafe situations. The website has an Emergency button. If the person feels unsafe in any situtation, then they can click on that emergency button and within no time an alert message will be sent to her Trusted contacts with her Location credentials that she is in need of help. Our main aim is to help women with the support of new technologies",
     technology_used: "HTML, CSS, Django",
     repo_fullname: "swapnilsparsh/Rescue",
-        email: "arezona.lucky55@gmail.com",
+    email: "arezona.lucky55@gmail.com",
     mentors_id: [
       {
         name: "Sakshi Khachane",
@@ -3406,28 +3426,28 @@ export const projectData = [
     github_username: "pankajkumarbij",
     project_name: "Easy Job Intern",
     project_description:
-        "The main motive behind the design of this project to provide the best job and internship opportunities. Companies can post here open application for job and internship so students can make own profile and apply in multiple companies.",
+      "The main motive behind the design of this project to provide the best job and internship opportunities. Companies can post here open application for job and internship so students can make own profile and apply in multiple companies.",
     technology_used: "MERN Stack (MongoDB, Express Js, React Js, Node.js",
     repo_fullname: "pankajkumarbij/easy-job-intern",
-        email: "pankajbijarniya2004@gmail.com",
+    email: "pankajbijarniya2004@gmail.com",
     mentors_id: [
       {
         name: "Vidit Jindal",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "viditjindals2000@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Asidipta Chaudhuri",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "asidiptachaudhuri@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Palash Gupta",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "palash@indaigold.co",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3437,28 +3457,28 @@ export const projectData = [
     github_username: "Tejas1510",
     project_name: "Athavani",
     project_description:
-        "Athavani/Memories is a full-stack MERN Tool built in order to save all your memories in a single place and rejoice them through the years.",
+      "Athavani/Memories is a full-stack MERN Tool built in order to save all your memories in a single place and rejoice them through the years.",
     technology_used: "MERN",
     repo_fullname: "Tejas1510/Athavani",
-        email: "tapasts@rknec.edu",
+    email: "tapasts@rknec.edu",
     mentors_id: [
       {
         name: "Sanjay Prajapati",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "sanjay270899@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Ashish Nagpal",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "ashishnagpal2498@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Rashi Sharma",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "sachi8791@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3468,29 +3488,30 @@ export const projectData = [
     github_username: "sairish2001",
     project_name: "Makes Math Easy",
     project_description:
-        "Web App for solving Various Math Problems along with Steps, The main aim of this Web app is Speed i.e. to solve all Problems at Client side only.It is so beginner friendly Project that a complete beginner can also contribute to it, only additional requirement is a good Problem Solving skills(Medium Level)",
-    project_video_link: "https://drive.google.com/file/d/1Ix7_RbJVZmzNSHx8kCfVJsN3OfLpVD16/view?usp=drivesdk",
+      "Web App for solving Various Math Problems along with Steps, The main aim of this Web app is Speed i.e. to solve all Problems at Client side only.It is so beginner friendly Project that a complete beginner can also contribute to it, only additional requirement is a good Problem Solving skills(Medium Level)",
+    project_video_link:
+      "https://drive.google.com/file/d/1Ix7_RbJVZmzNSHx8kCfVJsN3OfLpVD16/view?usp=drivesdk",
     technology_used: "JavaScript, HTML5, CSS3, Bootstrap, LaTeX",
     repo_fullname: "makesmatheasy/makesmatheasy",
-        email: "sairish2001@gmail.com",
+    email: "sairish2001@gmail.com",
     mentors_id: [
       {
         name: "Shrey Tripathi",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "shreytripathi27@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Apeksha Manchanda",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "manchanda.apeksha@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Nidhi Rajput",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "nidhirajput1301@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3543,28 +3564,28 @@ export const projectData = [
     github_username: "Developer-Student-Clubs-VSSUT-Burla",
     project_name: "Master PyAlgo",
     project_description:
-        "Master PyAlgo is a complete handbook for competitive coders using Python or PYPY as their primary language. Not only creating and designing algorithms but solving problems in a systematic manner is also required to crack tech giants. This project consists of data structure algorithms along with a set of questions (topic wise) with their solutions in python, pypy language.",
+      "Master PyAlgo is a complete handbook for competitive coders using Python or PYPY as their primary language. Not only creating and designing algorithms but solving problems in a systematic manner is also required to crack tech giants. This project consists of data structure algorithms along with a set of questions (topic wise) with their solutions in python, pypy language.",
     technology_used: "Python or PYPY",
     repo_fullname: "Developer-Student-Clubs-VSSUT-Burla/Master-PyAlgo",
-        email: "aitikdandapat@gmail.com",
+    email: "aitikdandapat@gmail.com",
     mentors_id: [
       {
         name: "Rohit Kumar srivastava",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "rohitsrivastava2303@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Joshitha Gandra",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "180020009@iitdh.ac.in",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Rasika Kedia",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "rashrey2308@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3603,29 +3624,30 @@ export const projectData = [
     owner_name: "Kaushik Rishi",
     github_username: "kaushik-rishi",
     project_name: "Rocket Competitive Programming",
-    project_description: "A command line client for parsing and making folders and files for test cases using the competitive companion extension and testing the solution. It listens to post requests from the competitve companion extension of the browser and parses the request and make folders and make files for testing the users solution. There is an aim of making it bigger by developing the own chrome extension and extending it futher to enable submissions to codeforces using http post requests. Building this with an 🎯 aim of making Competitive Programming More Productive.",
+    project_description:
+      "A command line client for parsing and making folders and files for test cases using the competitive companion extension and testing the solution. It listens to post requests from the competitve companion extension of the browser and parses the request and make folders and make files for testing the users solution. There is an aim of making it bigger by developing the own chrome extension and extending it futher to enable submissions to codeforces using http post requests. Building this with an 🎯 aim of making Competitive Programming More Productive.",
     project_video_link: "https://www.youtube.com/watch?v=3hCQKaUxKRQ",
     technology_used: "Node JS, Javascript, Bash",
     repo_fullname: "kaushik-rishi/rocketcp",
-        email: "rishi.cp01@gmail.com",
+    email: "rishi.cp01@gmail.com",
     mentors_id: [
       {
         name: "Aravind Challa",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "aravind.challa1823@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Adarsh Pandey",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "learner.adarsh@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Rachitt Shah",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "rachitt01@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
@@ -3651,12 +3673,12 @@ export const projectData = [
   //        email: "pratyushraj2f@gmail.com",
   //     //   slackId: "UTZH4BELS",
   //      },
-      
+
   //     {
   //       name: "Dishebh",
-      
+
   //        email: "dishebh27@gmail.com",
-      
+
   //      }
   //   ],
   // },
@@ -3666,262 +3688,265 @@ export const projectData = [
     github_username: "sairish2001",
     project_name: "Makes Math Easy Documentation",
     project_description:
-        "Web App for solving Various Math Problems along with Steps, The main aim of this Web app is Speed i.e. to solve all Problems at Client side only.It is so beginner friendly Project that a complete beginner can also contribute to it, only additional requirement is a good Problem Solving skills(Medium Level)",
-    project_video_link: "https://drive.google.com/file/d/1Ix7_RbJVZmzNSHx8kCfVJsN3OfLpVD16/view?usp=drivesdk",
+      "Web App for solving Various Math Problems along with Steps, The main aim of this Web app is Speed i.e. to solve all Problems at Client side only.It is so beginner friendly Project that a complete beginner can also contribute to it, only additional requirement is a good Problem Solving skills(Medium Level)",
+    project_video_link:
+      "https://drive.google.com/file/d/1Ix7_RbJVZmzNSHx8kCfVJsN3OfLpVD16/view?usp=drivesdk",
     technology_used: "JavaScript, HTML5, CSS3, Bootstrap, LaTeX",
     repo_fullname: "makesmatheasy/makesmatheasy-documentation",
-        email: "sairish2001@gmail.com",
+    email: "sairish2001@gmail.com",
     mentors_id: [
       {
         name: "Shrey Tripathi",
-      //   github: "https://github.com/Jayashree-panda",
+        //   github: "https://github.com/Jayashree-panda",
         email: "shreytripathi27@gmail.com",
-      //   slackId: "UUC8L15G8",
+        //   slackId: "UUC8L15G8",
       },
       {
         name: "Apeksha Manchanda",
-      //   github: "https://github.com/avikantwadhwa",
+        //   github: "https://github.com/avikantwadhwa",
         email: "manchanda.apeksha@gmail.com",
-      //   slackId: "UTZH4BELS",
+        //   slackId: "UTZH4BELS",
       },
       {
         name: "Nidhi Rajput",
-      //   github: "https://github.com/laveesh",
+        //   github: "https://github.com/laveesh",
         email: "nidhirajput1301@gmail.com",
-      //   slackId: "UU0PYRJ3V",
+        //   slackId: "UU0PYRJ3V",
       },
     ],
   },
   {
-      project_id: 100,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: "HTML,CSS,Javascript ,Logo Design, Adobe XD",
-      repo_fullname: "ProjectSakura/ProjectSakura.github.io",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
+    project_id: 100,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: "HTML,CSS,Javascript ,Logo Design, Adobe XD",
+    repo_fullname: "ProjectSakura/ProjectSakura.github.io",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
         //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
+        email: "jayeerythm8@gmail.com",
         //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-      project_id: 101,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: "React, Javascript,Logo Design, Adobe XD",
-      repo_fullname: "ProjectSakura/wiki",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
-        //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
-        //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-      project_id: 102,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: "React, Javascript ,Logo Design, Adobe XD",
-      repo_fullname: "ProjectSakura/contributors",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
-        //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
-        //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-      project_id: 103,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: " Vue, Javascript,Logo Design, Adobe XD",
-      repo_fullname: "ProjectSakura/download",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
-        //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
-        //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-      project_id: 104,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: "React, Javascript, Java, Node,Logo Design, Adobe XD",
-      repo_fullname: "ProjectSakura/maintainers",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
-        //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
-        //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-      project_id: 105,
-      owner_name: "Arun Teltia",
-      github_username: "projectsakura",
-      project_name: "Project Sakura",
-      project_description:
-        "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-      project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-      technology_used: "React,  Javascript, Postgresql Express Node Typescript ,Adobe XD",
-      repo_fullname: "ProjectSakura/kord-app",
-          email: "teltia.arun18@gmail.com",
-      mentors_id: [
-        {
-          name: "Rhythm Jayee",
-        //   github: "https://github.com/Jayashree-panda",
-          email: "jayeerythm8@gmail.com",
-        //   slackId: "UUC8L15G8",
-        },
-        {
-          name: "Priyanshu Pandey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "shen.priyanshu@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-        {
-          name: "Yasharth Dubey",
-        //   github: "https://github.com/avikantwadhwa",
-          email: "yashdubeywinner@gmail.com",
-        //   slackId: "UTZH4BELS",
-        },
-      ],
-    },
-    {
-        project_id: 105,
-        owner_name: "Arun Teltia",
-        github_username: "projectsakura",
-        project_name: "Project Sakura",
-        project_description:
-          "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
-        project_video_link:"https://youtu.be/7k7nnAVBh9Y",
-        technology_used: "React, Javascript,Adobe XD",
-        repo_fullname: "ProjectSakura/blog",
-            email: "teltia.arun18@gmail.com",
-        mentors_id: [
-          {
-            name: "Rhythm Jayee",
-          //   github: "https://github.com/Jayashree-panda",
-            email: "jayeerythm8@gmail.com",
-          //   slackId: "UUC8L15G8",
-          },
-          {
-            name: "Priyanshu Pandey",
-          //   github: "https://github.com/avikantwadhwa",
-            email: "shen.priyanshu@gmail.com",
-          //   slackId: "UTZH4BELS",
-          },
-          {
-            name: "Yasharth Dubey",
-          //   github: "https://github.com/avikantwadhwa",
-            email: "yashdubeywinner@gmail.com",
-          //   slackId: "UTZH4BELS",
-          },
-        ],
       },
       {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 101,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: "React, Javascript,Logo Design, Adobe XD",
+    repo_fullname: "ProjectSakura/wiki",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 102,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: "React, Javascript ,Logo Design, Adobe XD",
+    repo_fullname: "ProjectSakura/contributors",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 103,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: " Vue, Javascript,Logo Design, Adobe XD",
+    repo_fullname: "ProjectSakura/download",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 104,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: "React, Javascript, Java, Node,Logo Design, Adobe XD",
+    repo_fullname: "ProjectSakura/maintainers",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 105,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used:
+      "React,  Javascript, Postgresql Express Node Typescript ,Adobe XD",
+    repo_fullname: "ProjectSakura/kord-app",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
+    project_id: 105,
+    owner_name: "Arun Teltia",
+    github_username: "projectsakura",
+    project_name: "Project Sakura",
+    project_description:
+      "It is an open source custom rom building website that is being used by thousands of people and more than 92 k download. The project is originally based on android and there are 35 mobiles that are being maintained by 20 maintainers, I am the sole web developer and require some help , It would be awesome to help people get started with web development ",
+    project_video_link: "https://youtu.be/7k7nnAVBh9Y",
+    technology_used: "React, Javascript,Adobe XD",
+    repo_fullname: "ProjectSakura/blog",
+    email: "teltia.arun18@gmail.com",
+    mentors_id: [
+      {
+        name: "Rhythm Jayee",
+        //   github: "https://github.com/Jayashree-panda",
+        email: "jayeerythm8@gmail.com",
+        //   slackId: "UUC8L15G8",
+      },
+      {
+        name: "Priyanshu Pandey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "shen.priyanshu@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+      {
+        name: "Yasharth Dubey",
+        //   github: "https://github.com/avikantwadhwa",
+        email: "yashdubeywinner@gmail.com",
+        //   slackId: "UTZH4BELS",
+      },
+    ],
+  },
+  {
     project_id: 116,
     owner_name: "Praveen Kumar",
     github_username: "praveenscience",
     project_name: "EasyA Website",
-    project_description: "This is the source code for EasyA Website built for Enterprise entirely using React JS.",
+    project_description:
+      "This is the source code for EasyA Website built for Enterprise entirely using React JS.",
     project_video_link: null,
     technology_used: "React, JavaScript, SCSS",
     repo_fullname: "praveenscience/easya-website",
@@ -3930,25 +3955,25 @@ export const projectData = [
       {
         name: "Shashwat Mishra",
         //   github: "https://github.com/praveenscience",
-        email: "ampsteric@gmail.com"
+        email: "ampsteric@gmail.com",
         //   slackId: "UUC8L15G8",
       },
       {
         name: "Aditya Pahilwani",
         //   github: "https://github.com/praveenscience",
-        email: "aditya.pahilwani@gmail.com"
+        email: "aditya.pahilwani@gmail.com",
         //   slackId: "UTZH4BELS",
       },
       {
         name: "Tejan Singh",
         //   github: "https://github.com/praveenscience",
-        email: "tstejan@gmail.com"
+        email: "tstejan@gmail.com",
         //   slackId: "UU0PYRJ3V",
       },
       {
         name: "Aadhitya",
         //   github: "https://github.com/praveenscience",
-        email: "aadhitya864@gmail.com"
+        email: "aadhitya864@gmail.com",
         //   slackId: "UU0PYRJ3V",
       },
     ],
