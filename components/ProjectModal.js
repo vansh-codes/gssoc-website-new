@@ -19,7 +19,12 @@ const ProjectModal = ({ currProject }) => {
   const btnRef = React.useRef();
   return (
     <>
-      <Button ref={btnRef} onClick={onOpen}>
+      <Button ref={btnRef} onClick={onOpen} 
+        colorScheme="orange"
+        width="100%"
+        className="dark:text-black"
+        isFullWidth
+        >
         Project details
       </Button>
       <Modal
@@ -88,8 +93,7 @@ const ProjectModal = ({ currProject }) => {
             <div className="flex flex-row flex-wrap px-6 space-x-5 mt-5">
               {currProject.mentors_id.map((mentor, j) => {
                 return (
-                  <a target="_blank" rel="noreferrer" href={mentor.github}>
-                    {/* {console.log(mentor.github)} */}
+                  <a target="_blank" rel="noreferrer" href={mentor.github} key={j}>
                     <Button
                       key={j}
                       size="sm"

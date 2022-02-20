@@ -65,40 +65,40 @@ const Project = () => {
             }}
           ></input>
         </div> */}
-        <div className="flex justify-between items-center px-24">
-          <div>
-            <p className="text-primary_orange-0 flex dark:text-white font-sans text-5xl text center font-extrabold">
-              <p className="text-primary_orange-0 pr-2">Projects</p> - GSSOC'22
+        <div className="flex justify-between items-center px-24 w-screen">
+          <div className="flex items-center space-between">
+            <p className="text-primary_orange-0 flex dark:text-white font-sans text-2xl md:text-5xl text center font-extrabold">
+              <p className="text-primary_orange-0 pr-2">Projects</p> -
+              GSSOC&apos;22
             </p>
-          </div>
-          <div className="flex">
-            {theme === "light" ? (
-              <div className="border-b-2">
-                <Search2Icon color="black" />
-              </div>
-            ) : (
-              <div className="border-b-2">
-                <Search2Icon color="white" />
-              </div>
-            )}
-
-            <input
-              className="px-3 py-1 border-b-2 bg-transparent outline-none dark:text-white text-black"
-              type="search"
-              placeholder="search..."
-              name="search"
-              id="search"
-              onChange={(event) => {
-                setsearchtrm(event.target.value);
-              }}
-            />
+            <div className="flex">
+              {theme === "light" ? (
+                <div className="border-b-2">
+                  <Search2Icon color="black" />
+                </div>
+              ) : (
+                <div className="border-b-2">
+                  <Search2Icon color="white" />
+                </div>
+              )}
+              <input
+                className="px-3 py-1 border-b-2 bg-transparent outline-none dark:text-white text-black"
+                type="search"
+                placeholder="search..."
+                name="search"
+                id="search"
+                onChange={(event) => {
+                  setsearchtrm(event.target.value);
+                }}
+              />
+            </div>
           </div>
         </div>
-        <p className="dark:text-white font-sans text-4xl font-semibold text-black mt-20 px-24 mb-10">
+        <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
           “Unfinished projects are a symbol of progress, not of imperfection.”
         </p>
         <br />
-        <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 mt-9">
+        <div className="flex flex-row justify-center flex-wrap items-center gap-x-10 gap-y-10 mt-9">
           {data
             .filter((curElem, i) => {
               if (searchtrm == "") {
@@ -116,77 +116,27 @@ const Project = () => {
                   data-aos-duration="800"
                 >
                   <div className="shadow dark:bg-black rounded-lg">
-                    <div className="mb-2 overflow-hidden rounded-lg shadow-lg md:h-80 w-80 p-5 flex flex-col justify-between">
+                    <div className="mb-2 overflow-hidden rounded-lg md:h-72 w-80 p-5 flex flex-col justify-between">
                       <>
-                        {/*                 
-                <Button colorScheme='red' onClick={() => setIsOpen(true)}>
-        Delete Customer
-      </Button>
-      <AlertDialog
-        isOpen={isOpen}
-        leastDestructiveRef={cancelRef}
-        onClose={onClose}
-      >
-        <AlertDialogOverlay>
-          <AlertDialogContent>
-            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-              Delete Customer
-            </AlertDialogHeader>
-            <AlertDialogBody>
-              Are you sure? You can't undo this action afterwards.
-            </AlertDialogBody>
-            <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='red' onClick={onClose} ml={3}>
-                Delete
-              </Button>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialogOverlay>
-      </AlertDialog> */}
-
-                        {/* <Button onClick={onOpen}>Open Modal</Button> */}
-
-                        {/* <Modal isOpen={isOpen} onClose={onClose}>
-                        <ModalOverlay />
-                        <ModalContent>
-                          <ModalHeader>Modal Title</ModalHeader>
-                          <ModalCloseButton />
-                          <ModalBody>
-                            <h6> Duh </h6>
-                          </ModalBody>
-                          <ModalFooter>
-                            <Button colorScheme="blue" mr={3} onClick={onClose}>
-                              Close
-                            </Button>
-                            <Button variant="ghost">Secondary Action</Button>
-                          </ModalFooter>
-                        </ModalContent>
-                      </Modal> */}
-
-                        <div className="font-bold text-primary_orange-0 md:text-lg">
-                          {i + 1}. {curElem.project_name}
+                        <div className="flex flex-col justify-start gap-2">
+                          <div className="font-bold text-primary_orange-0 md:text-xl">
+                            {i + 1}. {curElem.project_name}
+                          </div>
+                          <div className="mb-3 text-sm dark:text-white md:text-md md:mb-4">
+                            By {curElem.owner_name}
+                          </div>
                         </div>
-                        <p className="mb-3 text-sm dark:text-white md:text-base md:mb-4">
-                          {curElem.owner_name}
-                        </p>
-
-                        {/* {curElem.mentors_id.map((mentor, j) => {
-                        return (
-                          <h6 className="mb-3 text-sm text-gray-400" key={j}>
-                            {j + 1}. {mentor.name}
-                          </h6>
-                        );
-                      })} */}
 
                         <ButtonGroup
-                          className="flex flex-row flex-wrap w-fit h-fit gap-4 mb-9 pl-7"
+                          className="flex flex-row flex-wrap w-fit h-fit gap-4 mb-9"
                           variant="outline"
-                          spacing="2"
+                          spacing="1"
                         >
-                          <SimpleGrid columns={2} spacing={5} margin={1}>
+                          <SimpleGrid
+                            columns={{ sm: 2, md: 3 }}
+                            spacing={5}
+                            margin={1}
+                          >
                             {curElem.technology_used
                               .split(",")
                               .map((techStk, k) => {
@@ -195,8 +145,12 @@ const Project = () => {
                                     size="sm"
                                     colorScheme="orange"
                                     width="100%"
-                                    className="dark:hover:bg-slate-700 dark:bg-stone-800"
+                                    className="dark:hover:bg-slate-700 dark:bg-stone-800 rounded-full"
+                                    borderRadius="30px"
                                     key={k}
+                                    onClick={() => {
+                                      setsearchtrm(techStk.trim());
+                                    }}
                                   >
                                     {techStk.trim()}
                                   </Button>
