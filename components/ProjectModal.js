@@ -38,7 +38,12 @@ const ProjectModal = ({ currProject }) => {
               {currProject.project_id}
               {"."}
             </p>
+            <a 
+            target="_blank"
+            rel="noreferrer"
+            href={currProject.project_link}>
             {currProject.project_name}
+            </a>
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
