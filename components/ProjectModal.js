@@ -84,7 +84,7 @@ const ProjectModal = ({ currProject }) => {
                 {currProject.project_description}
               </p>
             </div>
-            <p className="text-primary_orange-0 px-6 mt-5 font-semibold font-serif text-lg">
+            {/* <p className="text-primary_orange-0 px-6 mt-5 font-semibold font-serif text-lg">
               Mentors
             </p>
             <div className="flex flex-row flex-wrap px-6 space-x-5 mt-5">
@@ -110,7 +110,7 @@ const ProjectModal = ({ currProject }) => {
                   </a>
                 );
               })}
-            </div>
+            </div> */}
           </ModalBody>
         </ModalContent>
       </Modal>

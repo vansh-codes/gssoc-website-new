@@ -21,14 +21,22 @@ import {
 import { useDisclosure, Lorem } from "@chakra-ui/react";
 
 const Project = () => {
-  const [data, setData] = useState(projectData);
+  // const [data, setData] = useState(projectData);
+  const [data, setData] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [searchtrm, setsearchtrm] = useState("");
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+  const getProjects2022 = async () => {
+    const response = await fetch(
+      "https://opensheet.elk.sh/1k0C_FV-9dVZ8hnamUadFt1ZRqgrJdx8wvhAF-yyt2U0/Project2022"
+    );
+    setData(await response.json());
+  };
 
   useEffect(() => {
     setMounted(true);
+    getProjects2022();
   }, []);
   if (!mounted) return null;
   // const [isOpen, setIsOpen] = React.useState(false)
@@ -134,6 +142,8 @@ const Project = () => {
               );
             })}
         </div>
+        <br />
+        <br />
       </section>
     </>
   );
