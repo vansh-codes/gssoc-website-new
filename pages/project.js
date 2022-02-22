@@ -97,7 +97,7 @@ const Project = () => {
                   data-aos-duration="800"
                 >
                   <div className="shadow dark:bg-black rounded-lg">
-                    <div className="overflow-y-clip rounded-lg md:h-80 
+                    <div className="overflow-y-clip rounded-lg h-fit md:h-80 
                     w-80 flex flex-col justify-start 
                     shadow-lg shadow-black-200 relative">
                       <>
@@ -140,6 +140,7 @@ const Project = () => {
                               })}
                           </SimpleGrid>
                       </>
+                      <br/><br/>
                     <ProjectModal currProject={curElem} />
                     </div>
                   </div>
