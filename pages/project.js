@@ -29,7 +29,7 @@ const Project = () => {
   const { theme } = useTheme();
   const getProjects2022 = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1k0C_FV-9dVZ8hnamUadFt1ZRqgrJdx8wvhAF-yyt2U0/Project2022"
+      "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/Project2022"
     );
     setData(await response.json());
   };
@@ -102,9 +102,14 @@ const Project = () => {
                     shadow-lg shadow-black-200 relative">
                       <>
                         <div className="flex flex-col justify-start gap-2 px-5 py-3">
-                          <div className="font-bold text-primary_orange-0 md:text-xl">
-                            {i + 1}. {curElem.project_name}
-                          </div>
+                          <a 
+                          target="_blank"
+                          rel="noreferrer"
+                          href={curElem.project_link}>
+                            <div className="font-bold text-primary_orange-0 md:text-xl">
+                              {i + 1}. {curElem.project_name}
+                            </div>
+                          </a>
                           <div className="mb-3 text-sm dark:text-white md:text-md md:mb-4">
                             By {curElem.owner_name}
                           </div>
