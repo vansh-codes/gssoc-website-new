@@ -102,14 +102,14 @@ const Project = () => {
                     shadow-lg shadow-black-200 relative">
                       <>
                         <div className="flex flex-col justify-start gap-2 px-5 py-3">
-                          <a 
+                          <div className="font-bold text-primary_orange-0 md:text-xl">
+                            <a 
                           target="_blank"
                           rel="noreferrer"
                           href={curElem.project_link}>
-                            <div className="font-bold text-primary_orange-0 md:text-xl">
                               {i + 1}. {curElem.project_name}
-                            </div>
-                          </a>
+                            </a>
+                          </div>
                           <div className="mb-3 text-sm dark:text-white md:text-md md:mb-4">
                             By {curElem.owner_name}
                           </div>

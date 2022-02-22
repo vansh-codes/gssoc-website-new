@@ -143,11 +143,16 @@ export default function Home() {
               style={{ height: 600, width: 600 }}
             >
               <div className="img__container">
-                <img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13.svg"
+                {(theme==="light")?(<img
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
                   alt="hero-image"
-                  className="dark:invert dark:hue-rotate-180"
                 />
+                ):(
+                <img
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
+                  alt="hero-image"
+                />
+                )}
               </div>
             </Tilt>
           </div>
