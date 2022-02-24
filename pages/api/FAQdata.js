@@ -47,7 +47,7 @@ export const accordionData = [
     {
         id: 10,
         question: 'How will I know that I am selected?',
-        answer: 'The participants will be notified through email and the invite to the Slack workspace will be sent to them. '
+        answer: 'The participants will be notified through email and the invite to the Discord server will be sent to them. '
     },
     {
         id: 11,
