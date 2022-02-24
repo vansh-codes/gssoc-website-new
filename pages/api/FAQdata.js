@@ -17,12 +17,12 @@ export const accordionData = [
     {
         id: 4,
         question: 'How will we receive the prizes (if won) and certificate?',
-        answer: 'We’ll be providing all the participants with the digital certificate. The prize money to all the concerned students will be sent to their bank accounts.We’ll ask for the bank account details via an email after the conclusion of the event. '
+        answer: 'We’ll be providing all the participants with the digital certificate. The prize money to all the concerned students will be sent to their bank accounts. We’ll ask for the bank account details via an email after the conclusion of the event. '
     },
     {
         id: 5,
         question: 'By what time will the result come?',
-        answer: 'The results will be declared in the first week of June '
+        answer: 'The results will be declared in the first week of June. '
     },
     {
         id: 6,
@@ -32,7 +32,7 @@ export const accordionData = [
     {
         id: 7,
         question: 'Is it strictly for girls or can boys also participate?',
-        answer: 'GirlScript aims to assist anyone who is new in the field of development and it specifically supports an inclusive environment. Thereby GSSOC is open both for girls and for boys . Everyone can participate and contribute their part in the development of open source community and our initiative. '
+        answer: 'GirlScript aims to assist anyone who is new in the field of development and it specifically supports an inclusive environment. Thereby GSSoC is open both for girls and for boys. Everyone can participate and contribute their part in the development of open source community and our initiative. '
     },
     {
         id: 8,
@@ -42,7 +42,7 @@ export const accordionData = [
     {
         id: 9,
         question: 'How will participants communicate with mentors and admins?',
-        answer: 'All communication will happen on the corresponding channel for the particular project in the official GSSOC ’22 Discord server . '
+        answer: 'All communication will happen on the corresponding channel for the particular project in the official GSSoC ’22 Discord server. '
     },
     {
         id: 10,
