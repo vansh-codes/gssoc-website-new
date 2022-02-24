@@ -21,6 +21,7 @@ import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import Slider from "../components/Slider";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -143,15 +144,16 @@ export default function Home() {
               style={{ height: 600, width: 600 }}
             >
               <div className="img__container">
-                {(theme==="light")?(<img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
-                  alt="hero-image"
-                />
-                ):(
-                <img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
-                  alt="hero-image"
-                />
+                {theme === "light" ? (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
+                    alt="hero-image"
+                  />
+                ) : (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
+                    alt="hero-image"
+                  />
                 )}
               </div>
             </Tilt>
@@ -490,8 +492,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      
       {/* sponsors */}
       <div className="flex flex-row justify-center px-3">
         <div className="sponsors__wrapper flex flex-col">
@@ -610,6 +610,10 @@ export default function Home() {
             />
           )}
         </div>
+      </div>
+      {/* slider testing */}
+      <div className="mb-20 px-40">
+        <Slider />
       </div>
     </div>
   );
