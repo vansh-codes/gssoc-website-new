@@ -52,7 +52,7 @@ const Team = () => {
       <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2022()}
           >
             2022
@@ -60,7 +60,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2021()}
           >
             2021
@@ -68,7 +68,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2020()}
           >
             2020
@@ -76,7 +76,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2019()}
           >
             2019

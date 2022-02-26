@@ -35,13 +35,9 @@ const Project = () => {
   };
 
   const getProjects2021 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/Project2022"
-    );
-    setData(await response.json());
+    setData(projectData);
   };
 
-  
 
   useEffect(() => {
     setMounted(true);
@@ -90,7 +86,7 @@ const Project = () => {
       <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
             onClick={() => getProjects2022()}
           >
             2022
@@ -98,7 +94,7 @@ const Project = () => {
         </a>
         <a>
           <button
-            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
             onClick={() => getProjects2021()}
           >
             2021
