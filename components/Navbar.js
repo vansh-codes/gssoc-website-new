@@ -128,10 +128,10 @@ export const Navbar = () => {
             >
           <div >
       <div className="relative inline-block text-center" > 
-        <Menu>
+        {/* <Menu>
           {({ open }) => (
             <>
-              <span /*className="rounded-md shadow-sm"*/>
+              <span>
                 <Menu.Button    className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
                   <span>MORE</span>
                   <svg
@@ -213,7 +213,7 @@ export const Navbar = () => {
               </Transition>
             </>
           )}
-        </Menu>
+        </Menu> */}
        </div>
     </div>
             </a>
