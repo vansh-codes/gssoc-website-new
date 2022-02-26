@@ -34,6 +34,11 @@ const Project = () => {
     setData(await response.json());
   };
 
+  const getProjects2021 = async () => {
+    setData(projectData);
+  };
+
+
   useEffect(() => {
     setMounted(true);
     getProjects2022();
@@ -77,7 +82,26 @@ const Project = () => {
         <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
           “Unfinished projects are a symbol of progress, not of imperfection.”
         </p>
-        <br />
+        <Spacer mt={10} />
+      <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+        <a>
+          <button
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+            onClick={() => getProjects2022()}
+          >
+            2022
+          </button>
+        </a>
+        <a>
+          <button
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+            onClick={() => getProjects2021()}
+          >
+            2021
+          </button>
+        </a>
+      </div>
+      <Spacer mt={20} />
         <div className="flex flex-row justify-center flex-wrap items-center 
         gap-x-10 gap-y-10 mt-9">
           {data
