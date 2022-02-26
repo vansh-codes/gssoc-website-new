@@ -130,7 +130,7 @@ const Project = () => {
                             <a 
                           target="_blank"
                           rel="noreferrer"
-                          href={curElem.project_link}>
+                          href={curElem.project_link || curElem.github || "https://github.com/"+curElem.repo_fullname}>
                               {i + 1}. {curElem.project_name}
                             </a>
                           </div>
