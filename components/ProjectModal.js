@@ -41,7 +41,7 @@ const ProjectModal = ({ currProject }) => {
             <a 
             target="_blank"
             rel="noreferrer"
-            href={currProject.project_link}>
+            href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}>
             {currProject.project_name}
             </a>
           </ModalHeader>
