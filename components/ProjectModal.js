@@ -11,7 +11,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import { faBook } from '@fortawesome/free-solid-svg-icons'
 import { EmailIcon } from "@chakra-ui/icons";
 const ProjectModal = ({ currProject }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -56,9 +57,8 @@ const ProjectModal = ({ currProject }) => {
               >
                 <div className="flex items-center">
                   <FontAwesomeIcon
-                    className="w-10 h-10 text-youtube-0"
+                    className="w-10 h-10 text-youtube-0 dark:text-white"
                     icon={faYoutube}
-                    size="2x"
                   />
                   <p className="ml-2 font-serif font-medium text-base text-justify text-black dark:text-white">
                     Project Video
@@ -68,15 +68,33 @@ const ProjectModal = ({ currProject }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={"mailto:" + currProject.email}
+                href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}
               >
                 <div className="flex items-center">
-                  <EmailIcon color="orange.500" w={7} h={7} />
+                  <FontAwesomeIcon
+                    className="w-10 h-10 text-black dark:text-white "
+                    icon={faGitAlt}
+                  />
                   <p className="ml-2 font-serif font-medium text-base text-justify text-black dark:text-white">
-                    Admin E-mail
+                    Repository Link
                   </p>
                 </div>
               </a>
+              {/* <a
+                target="_blank"
+                rel="noreferrer"
+                href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}
+              >
+                <div className="flex items-center">
+                  <FontAwesomeIcon
+                    className="w-10 h-10 text-white "
+                    icon={faGitAlt}
+                  />
+                  <p className="ml-2 font-serif font-medium text-base text-justify text-black dark:text-white">
+                    Repository Link
+                  </p>
+                </div>
+              </a> */}
               <div>
                 <ModalCloseButton color="orange" />
               </div>
