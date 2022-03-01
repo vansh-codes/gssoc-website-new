@@ -19,9 +19,14 @@ const Content = () => {
             <div class="container">
               <div class="flex flex-col md:grid grid-cols-13 text-gray-50">
                 <div class="flex md:contents">
-                  <div class="list">
-                    <h3>{data.head}</h3>
-                    </div>
+                  <div class="list relative mb-10">
+                    <span className="absolute z-[1] bg-primary_orange-0 px-5 py-2 rounded-r-xl font-serif text-xl">
+                      {data.id}
+                    </span>
+                    <h3 className="relative  mt-5 ml-5 bg-slate-700 shadow-lg rounded-lg px-5 py-8 font-serif text-xl">
+                      {data.head}
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>

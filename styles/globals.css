@@ -146,15 +146,17 @@ html {
 }
 
 /* Test */
- .list >  h3,  .list >  h3::before {
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
-}
- .list {
+/* .list > span,
+.list > span::before {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+    0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+} */
+/* .list {
   counter-reset: gradient-counter;
   list-style: none;
   margin: 1.5rem 0;
-}
- .list >  h3 {
+} */
+/* .list > span {
   background: #464646;
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   counter-increment: gradient-counter;
@@ -164,10 +166,11 @@ html {
   position: relative;
   font-size: 18px;
 }
- .list >  h3::before,  .list >  h3::after {
-  background-color: #FF6900;
-  border-radius: 2rem;  
-  content: '';
+.list > span::before,
+.list > span::after {
+  background-color: #ff6900;
+  border-radius: 2rem;
+  content: "";
   height: 3rem;
   left: -1rem;
   overflow: hidden;
@@ -175,7 +178,8 @@ html {
   top: -1rem;
   width: 4rem;
 }
- .list >  h3::before {
+
+.list > span::before {
   align-items: center;
   content: counter(gradient-counter);
   color: #fff;
@@ -185,6 +189,6 @@ html {
   z-index: 1;
 }
 
- .list >  h3 +  h3 {
+.list > span + span {
   margin-top: 2rem;
-}
+} */
