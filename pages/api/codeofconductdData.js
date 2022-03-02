@@ -1,7 +1,7 @@
 const Datas = [
   {
     id: "1",
-    head: "Do not spam. If any member is found spamming on this server, then they will face severe consequences. Spamming includes excessive copy-pastes, picture/meme/links/GIF spam, reaction spam, any form of phishing link/NSFW/obscene content, and walls of text.",
+    head: "Do not spam. If any member is found spamming on this server, then they will face severe consequences. Spamming includes excessive copy-pastes, picture/ meme/ links/ GIF spam, reaction spam, any form of phishing link/NSFW/obscene content, and walls of text.",
   },
   {
     id: "2",
