@@ -37,12 +37,11 @@ const Footer = () => {
                     >
                       Past Programs
                     </a> */}
-                    <a
-                      href="https://drive.google.com/file/d/1AaD9wWaY4ZdzsI8J6ILXHg7MkmH-qZ3y/view"
-                      className="font-normal text-black py-1 block hover:underline"
-                    >
-                      Code of Conduct
-                    </a>
+                    <Link href="/codeofconduct">
+                      <a className="font-normal text-black py-1 block hover:underline">
+                        Code of Conduct
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="sm:flex-1 mt-4 sm:mt-0">
