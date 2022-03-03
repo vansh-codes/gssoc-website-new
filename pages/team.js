@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
+import Head from "next/head";
 
 const Team = () => {
   const [users, setUsers] = useState([]);
@@ -37,6 +38,16 @@ const Team = () => {
 
   return (
     <>
+      <Head>
+        <title>
+          Team | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+        </title>
+        <meta name="description" content="GirlScipt Summer of Code Team" />
+        {/* <link
+          rel="icon"
+          href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
+        /> */}
+      </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
           <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
@@ -52,7 +63,7 @@ const Team = () => {
       <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2022()}
           >
             2022
@@ -60,7 +71,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2021()}
           >
             2021
@@ -68,7 +79,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className=" focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2020()}
           >
             2020
@@ -76,7 +87,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="focus:bg-orange-300 bg-primary_orange-0 hover:bg-orange-600 text-md text-white font-bold px-12 py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers2019()}
           >
             2019
@@ -115,7 +126,7 @@ const Team = () => {
                         className="object-cover object-center w-full h-full"
                       />
                     </div>
-                    
+
                     <div className="flex flex-col items-center justify-center">
                       <div className="font-bold text-black md:text-xl">
                         {curElem["Name"]}
@@ -143,8 +154,9 @@ const Team = () => {
                               </svg>
                             </a>
                           )}
-                          {curElem.hasOwnProperty("Twitter")===false || curElem["Twitter"].trim() == ""? (
-                            <></> 
+                          {curElem.hasOwnProperty("Twitter") === false ||
+                          curElem["Twitter"].trim() == "" ? (
+                            <></>
                           ) : (
                             <a
                               target="_blank"

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 // import { Button, ButtonGroup } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
-import styles from "../styles/Home.module.css";
+// import { Box } from "@chakra-ui/react";
+// import { extendTheme } from "@chakra-ui/react";
+// import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Tilt from "react-tilt";
@@ -11,7 +11,7 @@ import ThemeChanger from "../components/Toggler";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import Bighex from "../components/BgAssets/Bighex";
 import EllipseBox from "../components/BgAssets/EllipseBox";
 import SmallHex from "../components/BgAssets/SmallHex";
@@ -143,11 +143,17 @@ export default function Home() {
               style={{ height: 600, width: 600 }}
             >
               <div className="img__container">
-                <img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Saly-13.svg"
-                  alt="hero-image"
-                  className="dark:invert dark:hue-rotate-180"
-                />
+                {theme === "light" ? (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
+                    alt="hero-image"
+                  />
+                ) : (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
+                    alt="hero-image"
+                  />
+                )}
               </div>
             </Tilt>
           </div>
@@ -485,8 +491,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      
       {/* sponsors */}
       <div className="flex flex-row justify-center px-3">
         <div className="sponsors__wrapper flex flex-col">
@@ -501,7 +505,8 @@ export default function Home() {
                 Previous Sponsors
               </p>
             </div>
-            <div className="sponsors__row__one flex lg:flex-row flex-col justify-between md:mb-0">
+
+            <div className="sponsors__row__one  flex lg:flex-row flex-col justify-between mb-10 lg:mb-0">
               <img
                 data-aos="fade-up"
                 className="h-12 md:mr-14 mb-5 md:mb-0"
