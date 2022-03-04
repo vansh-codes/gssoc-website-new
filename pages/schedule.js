@@ -1,22 +1,8 @@
 import Schedule from "../components/ScheduleMap";
-import Head from "next/head";
 
 function schedule() {
   return (
     <div>
-      <Head>
-        <title>
-          Schedule | GirlScipt Summer of Code 2022 | GirlScript Foundation India
-        </title>
-        <meta
-          name="description"
-          content="Schedule of GirlScipt Summer of Code"
-        />
-        {/* <link
-          rel="icon"
-          href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
-        /> */}
-      </Head>
       <div className="hidden lg:block 3xl:hidden">
         <div className="hor absolute top-32 left-0 right-0">
           <img
