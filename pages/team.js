@@ -137,7 +137,7 @@ const Team = () => {
 
                       <div className="flex">
                         <div className="flex gap-4">
-                          {curElem["GitHub Account"] == "" ? (
+                          {curElem["GitHub"] == "" ? (
                             <></>
                           ) : (
                             <a
