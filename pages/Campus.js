@@ -50,13 +50,9 @@ const Campus = () => {
       </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-            Meet The Campus Ambassadors
+          <p className="text-black text-5xl text center font-extrabold mb-10 dark:text-white">
+            Campus Ambassadors
           </p>
-        {/*  <p className=" text-primary_orange-0">
-            Individuals can and do make a difference, <br />
-            but it takes a team to really mess things up
-    </p> */}
         </p>
       </div>
       <Spacer mt={10} />
@@ -119,7 +115,7 @@ const Campus = () => {
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
                   <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300">
+                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-1" >
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
@@ -131,9 +127,7 @@ const Campus = () => {
                       <div className="font-bold text-black md:text-xl">
                         {curElem["Name"]}
                       </div>
-                    {/*  <p className="mb-3 text-lg text-white font-bold	md:text-base md:mb-4">
-                        {curElem["Designation"]}
-                      </p> */}
+                    
 
                       <div className="flex">
                         <div className="flex gap-4">
