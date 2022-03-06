@@ -4,14 +4,14 @@ import Head from "next/head";
 
 const Campus = () => {
   const [users, setUsers] = useState([]);
-  {/* *const getUsers2022 = async () => {
+  const getUsers2022 = async () => {
     const response = await fetch(
       "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2022"
     );
     setUsers(await response.json());
   };
 
-  const getUsers2021 = async () => {
+ {/* const getUsers2021 = async () => {
     const response = await fetch(
       "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2021"
     );
@@ -31,11 +31,11 @@ const Campus = () => {
     );
     setUsers(await response.json());
   };
-
+*/}
   useEffect(() => {
     getUsers2022();
   }, []);
-*/}
+
   return (
     <>
       <Head>
