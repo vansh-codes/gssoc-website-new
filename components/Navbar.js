@@ -220,13 +220,13 @@ export const Navbar = () => {
        </div>
     </div>
             </a> */}
-            <p className="hidden lg:block">
+            <div className="hidden lg:block">
               <Tooltip label="Change Theme" placement="bottom">
                 <div>
                   <ThemeChanger />
                 </div>
               </Tooltip>
-            </p>
+            </div>
           </div>
         </div>
       </nav>
