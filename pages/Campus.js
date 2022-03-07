@@ -91,16 +91,16 @@ const Campus = () => {
         </a>
       </div> */}
       <Spacer mt={20} />
-      <div className="flex flex-row justify-center flex-wrap items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-x-10 gap-y-10 w-100 ml-8">
+      <div className="flex flex-row justify-center flex-wrap items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 gap-x-10 gap-y-10 w-100 ml-16">
         {users.map((curElem, i) => {
           return (
             <>
               {curElem == null ? (
                 <div
-                  className="flex flex-col items-center justify-center w-80 h-80 gap-5"
+                  className="flex flex-col items-center justify-center w-80 h-80 gap-6"
                   key={i}
                 >
-                  <SkeletonCircle size="100" />
+                  <SkeletonCircle size="80" />
                   <br />
                   <Skeleton>
                     <Box className="text-center px={4}"> Cogito ergo Sum </Box>
@@ -113,9 +113,9 @@ const Campus = () => {
                   </Skeleton>
                 </div>
               ) : (
-                <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-1" >
+                <div className="flex items-center justify-center w-60" key={i}>
+                  <div className="p-3 justify-center shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
+                    <div className="justify-center h-max rounded-lg shadow-lg md:h-84 relative bottom-1" >
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
