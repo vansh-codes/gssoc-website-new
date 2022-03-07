@@ -36,5 +36,4 @@ const Content = () => {
     </>
   );
 };
-//fixed?
 export default Content;
