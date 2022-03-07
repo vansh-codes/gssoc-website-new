@@ -119,7 +119,7 @@ const Campus = () => {
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
-                        className="object-cover object-center w-full h-full"
+                        className="object-cover object-center w-full h-full rounded-lg "
                       />
                     </div>
 
