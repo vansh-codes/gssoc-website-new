@@ -91,7 +91,7 @@ const Campus = () => {
         </a>
       </div> */}
       <Spacer mt={20} />
-      <div className="flex flex-row justify-center flex-wrap items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-x-20 gap-y-10 w-100 ml-8">
+      <div className="flex flex-row justify-center flex-wrap items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-x-10 gap-y-10 w-100 ml-8">
         {users.map((curElem, i) => {
           return (
             <>
