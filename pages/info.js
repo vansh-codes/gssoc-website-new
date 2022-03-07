@@ -51,6 +51,31 @@ function info() {
           </p>
         </div>
       </div>
+      <div className="flex justify-around align-center items-center">
+        <button className="flex flex-start text-black bg-primary_orange-0 p-4">Participants</button>
+        <button className="flex flex-start text-black bg-primary_orange-0 p-4">Mentors</button>
+      </div>  
+      <div className="flex justify-around flex-row gap-40">
+          <div className="flex p-8">
+            <div className="flex" data-aos="flip-left" data-aos-duration="700">
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+            </div>
+            <div data-aos="flip-left" data-aos-duration="700">
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+            </div>
+          </div>
+      </div>
+      
     </div>
   );
 }
