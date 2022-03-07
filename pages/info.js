@@ -51,11 +51,45 @@ function info() {
           </p>
         </div>
       </div>
-      <div className="flex justify-around align-center items-center">
-        <button className="flex flex-start text-black bg-primary_orange-0 p-4">Participants</button>
-        <button className="flex flex-start text-black bg-primary_orange-0 p-4">Mentors</button>
-      </div>  
-      <div className="flex justify-around flex-row gap-40">
+      <div className="flex flex-row justify-around"> 
+        <div className="flex flex-col justify-around align-center items-center">
+          <button className="flex flex-col text-black bg-primary_orange-0 p-3 px-2 mx-8 rounded-lg w-full">Participants</button>
+          <div className="flex" data-aos="flip-left" data-aos-duration="700">
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+            </div>
+        </div>  
+        <div className="flex flex-col justify-evenly align-center items-center">
+          <button className="flex flex-col text-black bg-primary_orange-0 p-3 px-2 mt-5 rounded-lg w-full">Mentors</button>
+           <div className="flex" data-aos="flip-left" data-aos-duration="700">
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+            </div>
+        </div>  
+      </div>
+
+
+
+
+
+
+
+
+
+      {/* <div className="flex flex-col">
+       <div className="flex flex-row justify-around align-center items-center">
+        <button className="flex flex-start text-black bg-primary_orange-0 p-3 rounded-lg ">Participants</button>
+        <button className="flex flex-start text-black bg-primary_orange-0 p-3 rounded-lg ">Mentors</button>
+       </div>  
+       <div className="flex justify-around flex-row ">
           <div className="flex p-8">
             <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
@@ -74,7 +108,8 @@ function info() {
               />
             </div>
           </div>
-      </div>
+       </div>
+      </div> */}
       
     </div>
   );
