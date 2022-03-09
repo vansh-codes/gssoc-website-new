@@ -6,7 +6,7 @@ const Campus = () => {
   const [users, setUsers] = useState([]);
   const getUsers2022 = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2022"
+      "https://opensheet.elk.sh/1Pl4_0G2AILRaUsFoG71xA4AXUaN0_otl_S0hpal0bZs/CAshoutout"
     );
     setUsers(await response.json());
   };
