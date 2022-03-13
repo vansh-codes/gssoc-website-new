@@ -51,9 +51,9 @@ function info() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-around"> 
+      <div className="flex flex-row justify-around md:flex-col md:justify-center"> 
         <div className="flex flex-col justify-around align-center items-center">
-          <button className="flex flex-col text-black bg-primary_orange-0 p-3 px-2 mx-8 rounded-lg w-full">Participants</button>
+          <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 mx-8 rounded-lg max-w-md w-full">Participants</div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
@@ -64,15 +64,24 @@ function info() {
             </div>
         </div>  
         <div className="flex flex-col justify-evenly align-center items-center">
-          <button className="flex flex-col text-black bg-primary_orange-0 p-3 px-2 mt-5 rounded-lg w-full">Mentors</button>
+          <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Mentors</div>
            <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
-                // height="453"
+                // height="483"
                 // width="320"
                 alt="Rectangle light"
               />
             </div>
+            <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Project Admin</div>
+           <div className="flex" data-aos="flip-left" data-aos-duration="700">
+              <img
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/736b2e588142af26560791b90ee898b6de44bead/Logos/projectadmin.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+           </div>  
         </div>  
       </div>
 
@@ -86,7 +95,7 @@ function info() {
 
       {/* <div className="flex flex-col">
        <div className="flex flex-row justify-around align-center items-center">
-        <button className="flex flex-start text-black bg-primary_orange-0 p-3 rounded-lg ">Participants</button>
+        <div className="flex flex-start text-black bg-primary_orange-0 p-3 rounded-lg ">Participants</button>
         <button className="flex flex-start text-black bg-primary_orange-0 p-3 rounded-lg ">Mentors</button>
        </div>  
        <div className="flex justify-around flex-row ">
