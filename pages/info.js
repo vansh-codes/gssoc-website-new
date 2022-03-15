@@ -51,8 +51,8 @@ function info() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-around md:flex-col md:justify-center"> 
-        <div className="flex flex-col justify-around align-center items-center">
+      <div className="flex flex-row justify-around flex-wrap sm:flex-wrap"> 
+        <div className="flex flex-col justify-around align-center items-center sm:flex-col">
           <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 mx-8 rounded-lg max-w-md w-full">Participants</div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
@@ -63,7 +63,7 @@ function info() {
               />
             </div>
         </div>  
-        <div className="flex flex-col justify-evenly align-center items-center">
+        <div className="flex flex-col justify-evenly align-center items-center sm:flex-col">
           <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Mentors</div>
            <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
