@@ -75,8 +75,14 @@ function info() {
             </div>
             <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Project Admin</div>
            <div className="flex" data-aos="flip-left" data-aos-duration="700">
-              <img
+              <img className="h-0 w-0 dark:h-full dark:w-full invisible dark:visible"
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/736b2e588142af26560791b90ee898b6de44bead/Logos/projectadmin.svg"
+                // height="453"
+                // width="320"
+                alt="Rectangle light"
+              />
+               <img className="dark:hidden"
+                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/cbfaa0b0ff78f8fd0cf01a6b966ce6dc18271249/Logos/projectadmins.svg"
                 // height="453"
                 // width="320"
                 alt="Rectangle light"
