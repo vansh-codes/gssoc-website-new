@@ -4,6 +4,8 @@ import { useTheme } from "next-themes";
 import { Tooltip } from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
+import MoreMenu from "./MoreMenu";
+
 // import { Menu, Transition } from "@headlessui/react";
 
 /*import Dropdown from "@material-tailwind/react/Dropdown"
@@ -120,6 +122,10 @@ export const Navbar = () => {
             >
               CONTACT
             </a>
+            <div className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded">
+              <MoreMenu />
+            </div>
+
             {/* <a
               href="/"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
@@ -215,13 +221,13 @@ export const Navbar = () => {
        </div>
     </div>
             </a> */}
-            <p className="hidden lg:block">
+            <div className="hidden lg:block">
               <Tooltip label="Change Theme" placement="bottom">
                 <div>
                   <ThemeChanger />
                 </div>
               </Tooltip>
-            </p>
+            </div>
           </div>
         </div>
       </nav>
