@@ -31,7 +31,7 @@ const MoreMenu = () => {
       >
         <Menu.Items className="origin-top-right absolute -right-5 mt-2 w-56 rounded-md shadow-lg dark:bg-black ring-1 bg-white ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            <Link href="/comingsoon">
+            <Link href="/info">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -42,7 +42,7 @@ const MoreMenu = () => {
                       "block px-4 py-2 text-sm cursor-pointer"
                     )}
                   >
-                    TEAM
+                    HOW GSSOC WORKS ?
                   </a>
                 )}
               </Menu.Item>
@@ -63,7 +63,7 @@ const MoreMenu = () => {
                 )}
               </Menu.Item>
             </Link>
-            <Link href="/comingsoon">
+            <Link href="/Campus">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -74,7 +74,7 @@ const MoreMenu = () => {
                       "block px-4 py-2 text-sm cursor-pointer"
                     )}
                   >
-                    CA-PROGRAM
+                    CAMPUS AMBASSADORS
                   </a>
                 )}
               </Menu.Item>
