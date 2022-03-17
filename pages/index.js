@@ -491,98 +491,59 @@ export default function Home() {
         </div>
       </div>
 
-      {/* sponsors */}
-      <div className="flex flex-row justify-center px-3">
+{/* sponsors */}
+<div className="flex flex-row justify-center px-3">
         <div className="sponsors__wrapper flex flex-col">
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
             data-aos-duration="400"
-            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded"
+            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
           >
-            <div className="other__sponsors__title">
+            {/* <div className="other__sponsors__title">
               <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5">
-                Previous Sponsors
+                Our Sponsors
               </p>
-            </div>
-
-            <div className="sponsors__row__one  flex lg:flex-row flex-col justify-between mb-10 lg:mb-0">
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153582958-03443c3c-e45b-4417-891e-ff0d9c4391c7.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583059-6c1b79d8-6864-4d30-9def-56e632a8d5c1.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583153-34ea6fd9-e39e-4332-9376-9c5f88d5a392.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-28 relative lg:bottom-10 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
-                alt="logo"
-              />
-            </div>
-            <div className="sponsors__row__two flex lg:flex-row flex-col justify-between mb-10">
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583320-00c68bfa-c87c-4530-ad0b-c032e79c0ecc.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583378-5d469f23-f74d-42eb-bb92-d54fc7300047.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583438-f53fa828-8205-446c-952a-b503415a573f.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12"
-                src="https://user-images.githubusercontent.com/64256342/153583510-213f95eb-38ac-426c-ba91-3e422e4f5392.svg"
-                alt="logo"
-              />
-            </div>
-            <div className="sponsors__row__three flex lg:flex-row flex-col justify-between">
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583593-cfdfb521-f173-4baf-b073-d8abc741720f.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583661-56f3f8ad-30ab-432e-92de-e46d625e2067.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583716-67f3b8a1-305c-4587-853b-58d702f25b6c.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12"
-                src="https://user-images.githubusercontent.com/64256342/153583791-6f4b3c1e-876f-45d1-b6b0-f3653237e842.svg"
-                alt="logo"
-              />
+            </div> */}
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+                Platinum Sponsor
+            </h3>
+              <a href="https://moralis.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
+                  alt="Moralis"
+                />
+              </a>
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
+                In Kind Sponsors
+            </h3>
+            <div className="flex flex-col sm:flex-row justify-between gap-x-20 justify-between">
+              <a href="https://www.postman.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158829589-c2ef95b4-dc37-4038-a583-fcfd7c5ed0c5.png"
+                  alt="Postman"
+                />
+              </a>
+              <a href="https://fueler.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                  alt="Fueler"
+                />
+              </a>
+              <a href="https://www.jetbrains.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-28 relative lg:bottom-10"
+                  src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
+                  alt="JetBrains"
+                />
+              </a>
             </div>
           </div>
         </div>
