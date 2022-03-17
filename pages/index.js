@@ -78,19 +78,19 @@ export default function Home() {
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2 relative">
-            <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
+            <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
-              <p className="mt-2">is here!</p>
-            </p>
-            <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
+              <div className="mt-2">is here!</div>
+            </div>
+            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
               <b> 1st March - 31st May 2022 </b>
-            </p>
+            </div>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <a className="" href="#card-1">
                 <button
@@ -129,9 +129,9 @@ export default function Home() {
                 </Box> */}
               </a>
               <a data-aos="fade-down" href="#about-gssoc">
-                <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
+                <div className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
                   Learn More
-                </p>
+                </div>
               </a>
             </div>
           </div>
@@ -190,10 +190,10 @@ export default function Home() {
                 alt="logo"
               />
             )}
-            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
+            <div className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
-            </p>
+            </div>
             <p className="dark:text-white font-serif text-1xl text-black-100">
               The GirlScript Foundation is one of the leading foundations in
               India. It has successfully completed Five Years of educating young
@@ -232,14 +232,14 @@ export default function Home() {
                 alt="Learn More dark"
               />
             )}
-            <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
+            <div className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
               <h1 className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
                 GirlScript{" "}
               </h1>
               Summer of Code
-            </p>
+            </div>
             <p className="dark:text-white font-serif text-left text-xl">
               GirlScript Summer Of Code is a three-month-long Open-Source
               Program conducted every summer by the Girlscript Foundation. With
@@ -257,10 +257,10 @@ export default function Home() {
               <h1 className="mt-8 pt-6 pl-8 text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                 GSSoC 2021
               </h1>
-              <p className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
+              <div className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
                 {" "}
                 by the numbers
-              </p>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="statscol">
                   <div className="mt-4 pt-4 pl-8">
@@ -385,28 +385,28 @@ export default function Home() {
             )} */}
           </div>
         </div>
-        <div className="organisation mb-48 ">
+        <div className="organisation">
           <div className="hidden lg:block 3xl:hidden">
             <div className="absolute left-0 top-[130rem]">
               <Map />
             </div>
           </div>
 
-          <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
-            Some of the previous <br />
-            <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
-              participating organisations
-            </span>
-          </p>
+        {/* <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+          Some of the previous <br />
+          <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
+            participating organisations
+          </span>
+        </p> */}
           <div className="org__box flex flex-row items-center justify-center flex-wrap">
-            <img
+            {/* <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
-            <img
+             <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
@@ -426,14 +426,63 @@ export default function Home() {
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
-            />
-            <div className="mt-12 md:mt-0">
-              {/* <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
-                and more ...
-              </p> */}
+            /> */}
+          </div>
+        </div>
+
+        {/* sponsors */}
+      <div className="flex flex-row justify-center px-3 mb-20">
+        <div className="sponsors__wrapper flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="400"
+            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
+          >
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+                Platinum Sponsor
+            </h3>
+              <a href="https://moralis.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
+                  alt="Moralis"
+                />
+              </a>
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
+                In Kind Sponsors
+            </h3>
+            <div className="flex flex-col sm:flex-row justify-between gap-x-20 justify-between">
+              <a href="https://www.postman.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158829589-c2ef95b4-dc37-4038-a583-fcfd7c5ed0c5.png"
+                  alt="Postman"
+                />
+              </a>
+              <a href="https://fueler.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                  alt="Fueler"
+                />
+              </a>
+              <a href="https://www.jetbrains.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-28 relative lg:bottom-10"
+                  src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
+                  alt="JetBrains"
+                />
+              </a>
             </div>
           </div>
         </div>
+      </div>
+
         <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
@@ -491,65 +540,8 @@ export default function Home() {
         </div>
       </div>
 
-{/* sponsors */}
-<div className="flex flex-row justify-center px-3">
-        <div className="sponsors__wrapper flex flex-col">
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="400"
-            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
-          >
-            {/* <div className="other__sponsors__title">
-              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5">
-                Our Sponsors
-              </p>
-            </div> */}
-            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
-                Platinum Sponsor
-            </h3>
-              <a href="https://moralis.io/">
-                <img
-                  data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
-                  alt="Moralis"
-                />
-              </a>
-            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
-                In Kind Sponsors
-            </h3>
-            <div className="flex flex-col sm:flex-row justify-between gap-x-20 justify-between">
-              <a href="https://www.postman.com/">
-                <img
-                  data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/158829589-c2ef95b4-dc37-4038-a583-fcfd7c5ed0c5.png"
-                  alt="Postman"
-                />
-              </a>
-              <a href="https://fueler.io/">
-                <img
-                  data-aos="fade-up"
-                  className="h-16 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
-                  alt="Fueler"
-                />
-              </a>
-              <a href="https://www.jetbrains.com/">
-                <img
-                  data-aos="fade-up"
-                  className="h-28 relative lg:bottom-10"
-                  src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
-                  alt="JetBrains"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* Schedule */}
-      {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48 ">
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
