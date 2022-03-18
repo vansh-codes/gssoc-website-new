@@ -11,10 +11,10 @@ const MoreMenu = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
+        <Menu.Button className="lg:inline-flex lg:w-auto w-full py-2 text-center rounded text-grey-800 text-1xl font-medium hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
           MORE
           <ChevronDownIcon
-            className="-mr-1 mt-1 ml-2 h-10 w-10"
+            className="-mr-1 mt-1 ml-2 h-10 w-10 hover:motion-safe:animate-ping"
             aria-hidden="true"
           />
         </Menu.Button>

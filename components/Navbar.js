@@ -129,7 +129,7 @@ export const Navbar = () => {
             >
               CONTACT
             </a>
-            <div className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded">
+            <div className="lg:inline-flex lg:w-auto w-full px-2 text-center rounded link link-underline link-underline-black mr-3.5">
               <MoreMenu />
             </div>
 
