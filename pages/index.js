@@ -100,6 +100,7 @@ export default function Home() {
                 >
                   Register Here
                 </button>
+                
                 {/* <Box
                   as="button"
                   height="50px"
@@ -431,7 +432,7 @@ export default function Home() {
         </div>
 
         {/* sponsors */}
-      <div className="flex flex-row justify-center px-3 mb-20">
+      <div className="flex flex-row justify-center px-3 mb-20" id="Sponsors">
         <div className="sponsors__wrapper flex flex-col">
           <div
             data-aos="fade-up"

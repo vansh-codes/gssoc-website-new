@@ -1,24 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { projectData } from "./api/projectsData";
 import Head from "next/head";
-// import Image from "next/image";
 import { useTheme } from "next-themes";
-// import { Button, ButtonGroup } from "@chakra-ui/react";
-// import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SimpleGrid } from "@chakra-ui/react";
 import { Spacer } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import ProjectModal from "../components/ProjectModal";
-// import {
-//   Modal,
-//   ModalOverlay,
-//   ModalContent,
-//   ModalHeader,
-//   ModalFooter,
-//   ModalBody,
-//   ModalCloseButton,
-// } from "@chakra-ui/react";
 import { useDisclosure, Lorem } from "@chakra-ui/react";
 
 const Project = () => {

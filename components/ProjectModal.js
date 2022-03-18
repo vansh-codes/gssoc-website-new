@@ -12,8 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faGitAlt } from "@fortawesome/free-brands-svg-icons";
-import { faBook } from '@fortawesome/free-solid-svg-icons'
-import { EmailIcon } from "@chakra-ui/icons";
 const ProjectModal = ({ currProject }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const [scrollBehavior, setScrollBehavior] = React.useState("inside");
