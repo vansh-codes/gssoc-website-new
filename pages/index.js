@@ -454,21 +454,29 @@ export default function Home() {
             <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
                 In Kind Sponsors
             </h3>
-            <div className="flex flex-col sm:flex-row justify-between gap-x-20 justify-between">
-              <a href="https://www.postman.com/">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-20 justify-between">
+              <a href="https://www.taskade.com/">
                 <img
                   data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/158829589-c2ef95b4-dc37-4038-a583-fcfd7c5ed0c5.png"
-                  alt="Postman"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
+                  alt="Taskade"
                 />
               </a>
               <a href="https://fueler.io/">
                 <img
                   data-aos="fade-up"
-                  className="h-16 mb-5 md:mb-0"
+                  className="h-12 mb-5 md:mb-0 relative lg:top-1"
                   src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
                   alt="Fueler"
+                />
+              </a>
+              <a href="https://www.postman.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0 relative lg:bottom-3"
+                  src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
+                  alt="Postman"
                 />
               </a>
               <a href="https://www.jetbrains.com/">
@@ -477,6 +485,13 @@ export default function Home() {
                   className="h-28 relative lg:bottom-10"
                   src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                   alt="JetBrains"
+                />
+              </a>
+              <a href="https://www.oreilly.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-8  mb-5 md:mb-0"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
                 />
               </a>
             </div>
