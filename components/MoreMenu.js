@@ -47,7 +47,7 @@ const MoreMenu = () => {
                 )}
               </Menu.Item>
             </Link>
-            <Link href="/comingsoon">
+            <Link href="/info">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -79,7 +79,7 @@ const MoreMenu = () => {
                 )}
               </Menu.Item>
             </Link>
-            <Link href="/comingsoon">
+            <Link href="/Campus">
               <Menu.Item>
                 {({ active }) => (
                   <a

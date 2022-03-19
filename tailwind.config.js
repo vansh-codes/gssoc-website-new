@@ -37,6 +37,9 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
+      maxWidth: {
+        '1': '29rem',
+      }
     },
   },
   plugins: [],

@@ -3,15 +3,14 @@ function info() {
     <div>
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="items-center justify-center">
-          <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-            <p className="text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
+          <p className="font-sans text-center text-2xl font-extrabold">
+            <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               What {""}
               <span className="text-primary_orange-0">they</span> do ?
             </p>
           </p>
         </div>
-        <div className="first-section mb-10 flex flex-col md:flex-row">
-          <div className="flex justify-between items-center flex-wrap mb-24">
+          <div className="first-section mb-10 flex flex-col md:flex-row justify-between flex-auto items-center flex-wrap mb-24">
             <div data-aos="flip-left" data-aos-duration="700">
               <img
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/07bf179210769ea9a280f7e87e1f6e5cdc464953/Info/Triangle.svg"
@@ -41,19 +40,18 @@ function info() {
             </button> */}
             </div>
           </div>
-        </div>
         <div className="items-center justify-center">
           <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-            <p className="text-white text-5xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
+            <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               <span className="text-primary_orange-0">How </span>
               do they do ?
             </p>
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-around flex-wrap sm:flex-wrap"> 
+      <div className="flex flex-row justify-around flex-wrap sm:flex-wrap mb-28"> 
         <div className="flex flex-col justify-around align-center items-center sm:flex-col">
-          <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 mx-8 rounded-lg max-w-md w-full">Participants</div>
+          <div className="flex flex-col text-white dark:text-gray-800 text-2xl font-bold text-center bg-primary_orange-0 p-4 rounded-lg max-w-[29rem] w-full">Participants</div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
@@ -63,8 +61,8 @@ function info() {
               />
             </div>
         </div>  
-        <div className="flex flex-col justify-evenly align-center items-center sm:flex-col">
-          <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Mentors</div>
+        <div className="flex flex-col justify-evenly align-center items-center sm:flex-col mt-5">
+        <div className="flex m-auto flex-col text-white dark:text-gray-800 text-2xl font-bold text-center bg-primary_orange-0 p-4 mb-6 rounded-lg max-w-[29rem] w-full">Mentors</div>
            <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
@@ -73,7 +71,7 @@ function info() {
                 alt="Rectangle light"
               />
             </div>
-            <div className="flex flex-col text-black text-center bg-primary_orange-0 p-3 px-2 rounded-lg max-w-md w-full">Project Admin</div>
+            <div className="flex flex-col text-white dark:text-gray-800 text-2xl font-bold text-center bg-primary_orange-0 p-4 mb-6 rounded-lg max-w-[29rem] w-full">Project Admin</div>
            <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img className="h-0 w-0 dark:h-full dark:w-full invisible dark:visible"
                 src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/736b2e588142af26560791b90ee898b6de44bead/Logos/projectadmin.svg"
