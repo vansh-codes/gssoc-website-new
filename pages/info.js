@@ -6,7 +6,7 @@ function info() {
           <p className="font-sans text-center text-2xl font-extrabold">
             <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               What {""}
-              <span className="text-primary_orange-0">they</span> do ?
+              <span className="text-primary_orange-0">they</span> do?
             </p>
           </p>
         </div>
@@ -80,8 +80,8 @@ function info() {
         <div className="items-center justify-center">
           <p className="font-sans text-center text-2xl font-extrabold text-black-100">
             <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-              <span className="text-primary_orange-0">How </span>
-              do they do ?
+              <span className="text-primary_orange-0">How</span>
+              they do ?
             </p>
           </p>
         </div>
@@ -89,7 +89,7 @@ function info() {
       <div className="flex flex-row justify-around flex-wrap sm:flex-wrap mb-28">
         <div className="flex flex-col justify-around align-center items-center sm:flex-col">
           <div className="flex flex-col text-white dark:text-gray-800 text-2xl font-bold text-center bg-primary_orange-0 p-4 rounded-lg max-w-[29rem] w-full">
-            Participants
+            Contributors
           </div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
             <img
