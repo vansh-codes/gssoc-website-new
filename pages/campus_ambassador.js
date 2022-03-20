@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
 
-const Campus = () => {
+const CA = () => {
   const [users, setUsers] = useState([]);
   const getUsers2022 = async () => {
     const response = await fetch(
@@ -11,27 +11,6 @@ const Campus = () => {
     setUsers(await response.json());
   };
 
- {/* const getUsers2021 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2021"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2020 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2020"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2019 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2019"
-    );
-    setUsers(await response.json());
-  };
-*/}
   useEffect(() => {
     getUsers2022();
   }, []);
@@ -198,4 +177,4 @@ const Campus = () => {
   );
 };
 
-export default Campus;
+export default CA;
