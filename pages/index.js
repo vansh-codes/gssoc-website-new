@@ -519,15 +519,17 @@ export default function Home() {
               <Card
                 title="Start your Journey"
                 content="Participating in GSSoC’22 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and essential tools like Git and Github under the supervision of excellent mentors."
-                btntext="Register to Participate"
+                btntext="Participant Registration Closed"
                 link="https://forms.gle/FHtuuhW17hv2dqua8"
+                disabled="true"
               />
               {/* Card-2 */}
               <Card
                 title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
-                btntext="Register to Mentor"
+                btntext="Mentor Registration Closed"
                 link="https://forms.gle/4F3aBfdt6DC6bkVT6"
+                disabled="true"
               />
             </div>
           </div>
@@ -541,8 +543,9 @@ export default function Home() {
               <Card
                 title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
-                btntext="Submit your Project"
+                btntext="Project Submission Closed"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
+                disabled="true"
               />
               {/* Card-4 */}
               <Card
