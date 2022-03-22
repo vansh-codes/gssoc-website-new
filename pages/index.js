@@ -463,6 +463,14 @@ export default function Home() {
                   alt="Taskade"
                 />
               </a>
+              <a href="https://gen.xyz/">
+                <img
+                  data-aos="fade-up"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
+                  alt="dotXYZ"
+                />
+              </a>
               <a href="https://fueler.io/">
                 <img
                   data-aos="fade-up"
@@ -471,20 +479,20 @@ export default function Home() {
                   alt="Fueler"
                 />
               </a>
-              <a href="https://www.postman.com/">
-                <img
-                  data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0 relative lg:bottom-3"
-                  src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
-                  alt="Postman"
-                />
-              </a>
               <a href="https://www.jetbrains.com/">
                 <img
                   data-aos="fade-up"
                   className="h-28 relative lg:bottom-10"
                   src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                   alt="JetBrains"
+                />
+              </a>
+              <a href="https://www.postman.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0 relative lg:bottom-5"
+                  src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
+                  alt="Postman"
                 />
               </a>
               <a href="https://www.oreilly.com/">
