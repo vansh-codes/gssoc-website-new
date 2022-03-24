@@ -49,7 +49,7 @@ const Event = () => {
           <Chrono
             items={Eventdata}
             theme={{
-              primary: "#000000",
+              primary: "#f67621",
               secondary: "#f67621",
               cardBgColor: "#474747",
               cardForeColor: "white",
