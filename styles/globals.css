@@ -145,6 +145,15 @@ html {
   width: 200px;
 }
 
+.css-1blinku-TitleWrapper {
+  color: #fc9219;
+  font-size: xx-large;
+}
+
+.timeline-item-title .active {
+  font-size: xx-large;
+}
+
 #Sponsors {
   padding-top: 100px;
   margin-top: -100px;

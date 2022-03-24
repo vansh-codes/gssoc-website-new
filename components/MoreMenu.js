@@ -63,7 +63,7 @@ const MoreMenu = () => {
                 )}
               </Menu.Item>
             </Link>
-            <Link href="/comingsoon">
+            <Link href="/event">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -74,7 +74,7 @@ const MoreMenu = () => {
                       "block px-4 py-2 text-sm cursor-pointer"
                     )}
                   >
-                    BLOG
+                    EVENTS
                   </a>
                 )}
               </Menu.Item>
