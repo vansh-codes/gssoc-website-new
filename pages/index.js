@@ -452,7 +452,7 @@ export default function Home() {
                   alt="Moralis"
                 />
               </a>
-              <a href="https://moralis.io/">
+              <a href="https://protocol.ai/">
                 <img
                   data-aos="fade-up"
                   className="h-20 mb-5 md:mb-0"
