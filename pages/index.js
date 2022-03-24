@@ -441,8 +441,9 @@ export default function Home() {
             className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
           >
             <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
-                Platinum Sponsor
+                Platinum Sponsors
             </h3>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
               <a href="https://moralis.io/">
                 <img
                   data-aos="fade-up"
@@ -451,6 +452,15 @@ export default function Home() {
                   alt="Moralis"
                 />
               </a>
+              <a href="https://moralis.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/159930269-69195861-8608-4a49-ac04-ecc8c26c77aa.svg"
+                  alt="Protocol Labs"
+                />
+              </a>
+            </div>
             <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
                 In Kind Sponsors
             </h3>
