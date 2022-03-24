@@ -117,7 +117,7 @@ const Event = () => {
                     {curEvent.maintitle}
                   </figcaption>
                   <div>
-                    <p className="text-white text-lg font-sans">{curEvent.info}</p>
+                    <p className="text-white text-md">{curEvent.info}</p>
                   </div>
                   <div>
                     <a
@@ -203,7 +203,7 @@ const Event = () => {
                     {curEvent.maintitle}
                   </figcaption>
                   <div>
-                    <p className="text-white text-md">{curEvent.info}</p>
+                    <p className="text-white text-md font-semibold">{curEvent.info}</p>
                   </div>
                   <div>
                     <a
