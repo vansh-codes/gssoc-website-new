@@ -128,7 +128,7 @@ html {
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 1s ease-in-out;
+  transition: background-size 0.2s ease-in-out;
 }
 
 .link-underline-black {
@@ -144,6 +144,7 @@ html {
 .statscol {
   width: 200px;
 }
+
 .css-1blinku-TitleWrapper {
   color: #fc9219;
   font-size: xx-large;
@@ -151,4 +152,7 @@ html {
 
 .timeline-item-title .active {
   font-size: xx-large;
-}
+
+#Sponsors {
+  padding-top: 100px;
+  margin-top: -100px;

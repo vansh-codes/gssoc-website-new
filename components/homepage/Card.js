@@ -13,13 +13,18 @@ function Cards(props) {
         <footer className="flex items-center justify-between leading-none p-2 md:p-4">
           <a
             className="w-full"
-            href={props.link}
-            target="_blank"
+            href={props.disabled?"#":props.link}
+            target={props.disabled?"":"_blank"}
             rel="noreferrer"
           >
-            <button className="dark:text-black bg-gradient-to-b from-primary_orange-0 to-orange-600 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-white w-full font-bold py-3 px-5 rounded mb-3">
+            {!props.disabled?(<button className="dark:text-black bg-gradient-to-b from-primary_orange-0 to-orange-600 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-white w-full font-bold py-3 px-5 rounded mb-3">
               {props.btntext}
             </button>
+            ):(
+              <button className="dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-white w-full font-bold py-3 px-5 rounded mb-3">
+              {props.btntext}
+            </button>
+            )}
           </a>
         </footer>
       </article>

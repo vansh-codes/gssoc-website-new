@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 // import { Button, ButtonGroup } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
-import styles from "../styles/Home.module.css";
+// import { Box } from "@chakra-ui/react";
+// import { extendTheme } from "@chakra-ui/react";
+// import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
 import SocialFollow from "../components/homepage/SocialFollow";
 import Tilt from "react-tilt";
@@ -11,7 +11,7 @@ import ThemeChanger from "../components/Toggler";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Aos from "aos";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import Bighex from "../components/BgAssets/Bighex";
 import EllipseBox from "../components/BgAssets/EllipseBox";
 import SmallHex from "../components/BgAssets/SmallHex";
@@ -78,19 +78,19 @@ export default function Home() {
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2 relative">
-            <p className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
+            <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2022
-              <p className="mt-2">is here!</p>
-            </p>
-            <p className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
+              <div className="mt-2">is here!</div>
+            </div>
+            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
               <b> 1st March - 31st May 2022 </b>
-            </p>
+            </div>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <a className="" href="#card-1">
                 <button
@@ -100,6 +100,7 @@ export default function Home() {
                 >
                   Register Here
                 </button>
+                
                 {/* <Box
                   as="button"
                   height="50px"
@@ -129,9 +130,9 @@ export default function Home() {
                 </Box> */}
               </a>
               <a data-aos="fade-down" href="#about-gssoc">
-                <p className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
+                <div className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
                   Learn More
-                </p>
+                </div>
               </a>
             </div>
           </div>
@@ -143,15 +144,16 @@ export default function Home() {
               style={{ height: 600, width: 600 }}
             >
               <div className="img__container">
-                {(theme==="light")?(<img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
-                  alt="hero-image"
-                />
-                ):(
-                <img
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
-                  alt="hero-image"
-                />
+                {theme === "light" ? (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
+                    alt="hero-image"
+                  />
+                ) : (
+                  <img
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
+                    alt="hero-image"
+                  />
                 )}
               </div>
             </Tilt>
@@ -189,10 +191,10 @@ export default function Home() {
                 alt="logo"
               />
             )}
-            <p className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
+            <div className="text-black dark:text-white font-semibold text-4xl 2.25rem 3rem mb-5 font-sans">
               About <span className="text-primary_orange-0">GirlScript </span>
               Foundation
-            </p>
+            </div>
             <p className="dark:text-white font-serif text-1xl text-black-100">
               The GirlScript Foundation is one of the leading foundations in
               India. It has successfully completed Five Years of educating young
@@ -231,14 +233,14 @@ export default function Home() {
                 alt="Learn More dark"
               />
             )}
-            <p className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
+            <div className="text-primary_orange-0 text-left font-semibold font-sans text-4xl 2.25rem 3rem mb-10 lg:w-[570px]">
               <h1 className="dark:text-white text-black text-4xl 2.25rem 3rem">
                 About
                 <br />
                 GirlScript{" "}
               </h1>
               Summer of Code
-            </p>
+            </div>
             <p className="dark:text-white font-serif text-left text-xl">
               GirlScript Summer Of Code is a three-month-long Open-Source
               Program conducted every summer by the Girlscript Foundation. With
@@ -256,10 +258,10 @@ export default function Home() {
               <h1 className="mt-8 pt-6 pl-8 text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                 GSSoC 2021
               </h1>
-              <p className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
+              <div className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
                 {" "}
                 by the numbers
-              </p>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="statscol">
                   <div className="mt-4 pt-4 pl-8">
@@ -384,28 +386,28 @@ export default function Home() {
             )} */}
           </div>
         </div>
-        <div className="organisation mb-48 ">
+        <div className="organisation">
           <div className="hidden lg:block 3xl:hidden">
             <div className="absolute left-0 top-[130rem]">
               <Map />
             </div>
           </div>
 
-          <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
-            Some of the previous <br />
-            <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
-              participating organisations
-            </span>
-          </p>
+        {/* <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+          Some of the previous <br />
+          <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
+            participating organisations
+          </span>
+        </p> */}
           <div className="org__box flex flex-row items-center justify-center flex-wrap">
-            <img
+            {/* <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
-            <img
+             <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
@@ -425,14 +427,96 @@ export default function Home() {
               className="w-20 h-auto mr-12"
               src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
-            />
-            <div className="mt-12 md:mt-0">
-              {/* <p className="font-sans font-medium text-4xl dark:text-white text-gray-800">
-                and more ...
-              </p> */}
+            /> */}
+          </div>
+        </div>
+
+        {/* sponsors */}
+      <div className="flex flex-row justify-center px-3 mb-20" id="Sponsors">
+        <div className="sponsors__wrapper flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="400"
+            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
+          >
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+                Platinum Sponsors
+            </h3>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
+              <a href="https://moralis.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
+                  alt="Moralis"
+                />
+              </a>
+              <a href="https://protocol.ai/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/159930269-69195861-8608-4a49-ac04-ecc8c26c77aa.svg"
+                  alt="Protocol Labs"
+                />
+              </a>
+            </div>
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
+                In Kind Sponsors
+            </h3>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-20 justify-between">
+              <a href="https://www.taskade.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
+                  alt="Taskade"
+                />
+              </a>
+              <a href="https://gen.xyz/">
+                <img
+                  data-aos="fade-up"
+                  className="h-16 mb-5 md:mb-0"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
+                  alt="dotXYZ"
+                />
+              </a>
+              <a href="https://fueler.io/">
+                <img
+                  data-aos="fade-up"
+                  className="h-12 mb-5 md:mb-0 relative lg:top-1"
+                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                  alt="Fueler"
+                />
+              </a>
+              <a href="https://www.jetbrains.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-28 relative lg:bottom-10"
+                  src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
+                  alt="JetBrains"
+                />
+              </a>
+              <a href="https://www.postman.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-20 mb-5 md:mb-0 relative lg:bottom-5"
+                  src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
+                  alt="Postman"
+                />
+              </a>
+              <a href="https://www.oreilly.com/">
+                <img
+                  data-aos="fade-up"
+                  className="h-8  mb-5 md:mb-0"
+                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
+                />
+              </a>
             </div>
           </div>
         </div>
+      </div>
+
         <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
@@ -453,15 +537,17 @@ export default function Home() {
               <Card
                 title="Start your Journey"
                 content="Participating in GSSoC’22 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and essential tools like Git and Github under the supervision of excellent mentors."
-                btntext="Register to Participate"
+                btntext="Participant Registration Closed"
                 link="https://forms.gle/FHtuuhW17hv2dqua8"
+                disabled="true"
               />
               {/* Card-2 */}
               <Card
                 title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
-                btntext="Register to Mentor"
+                btntext="Mentor Registration Closed"
                 link="https://forms.gle/4F3aBfdt6DC6bkVT6"
+                disabled="true"
               />
             </div>
           </div>
@@ -475,8 +561,9 @@ export default function Home() {
               <Card
                 title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
-                btntext="Submit your Project"
+                btntext="Project Submission Closed"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
+                disabled="true"
               />
               {/* Card-4 */}
               <Card
@@ -491,105 +578,7 @@ export default function Home() {
       </div>
 
 
-      
-      {/* sponsors */}
-      <div className="flex flex-row justify-center px-3">
-        <div className="sponsors__wrapper flex flex-col">
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="400"
-            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded"
-          >
-            <div className="other__sponsors__title">
-              <p className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5">
-                Previous Sponsors
-              </p>
-            </div>
-
-            <div className="sponsors__row__one  flex lg:flex-row flex-col justify-between mb-10 lg:mb-0">
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153582958-03443c3c-e45b-4417-891e-ff0d9c4391c7.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583059-6c1b79d8-6864-4d30-9def-56e632a8d5c1.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 md:mr-14 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583153-34ea6fd9-e39e-4332-9376-9c5f88d5a392.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-28 relative lg:bottom-10 mb-5 md:mb-0"
-                src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
-                alt="logo"
-              />
-            </div>
-            <div className="sponsors__row__two flex lg:flex-row flex-col justify-between mb-10">
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583320-00c68bfa-c87c-4530-ad0b-c032e79c0ecc.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583378-5d469f23-f74d-42eb-bb92-d54fc7300047.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583438-f53fa828-8205-446c-952a-b503415a573f.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12"
-                src="https://user-images.githubusercontent.com/64256342/153583510-213f95eb-38ac-426c-ba91-3e422e4f5392.svg"
-                alt="logo"
-              />
-            </div>
-            <div className="sponsors__row__three flex lg:flex-row flex-col justify-between">
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583593-cfdfb521-f173-4baf-b073-d8abc741720f.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583661-56f3f8ad-30ab-432e-92de-e46d625e2067.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12 mb-5 md:mr-14"
-                src="https://user-images.githubusercontent.com/64256342/153583716-67f3b8a1-305c-4587-853b-58d702f25b6c.svg"
-                alt="logo"
-              />
-              <img
-                data-aos="fade-up"
-                className="h-12"
-                src="https://user-images.githubusercontent.com/64256342/153583791-6f4b3c1e-876f-45d1-b6b0-f3653237e842.svg"
-                alt="logo"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Schedule */}
-      {/* <Schedule /> */}
       <div className="schedule__container flex flex-col items-center mb-48 ">
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
