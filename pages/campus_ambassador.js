@@ -2,32 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
 
-const Team = () => {
+const CA = () => {
   const [users, setUsers] = useState([]);
   const getUsers2022 = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2022"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2021 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2021"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2020 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2020"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2019 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2019"
+      "https://opensheet.elk.sh/1Pl4_0G2AILRaUsFoG71xA4AXUaN0_otl_S0hpal0bZs/CAshoutout"
     );
     setUsers(await response.json());
   };
@@ -40,7 +19,7 @@ const Team = () => {
     <>
       <Head>
         <title>
-          Team | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+        Campus Ambassador | GirlScipt Summer of Code 2022 | GirlScript Foundation India
         </title>
         <meta name="description" content="GirlScipt Summer of Code Team" />
         {/* <link
@@ -50,17 +29,13 @@ const Team = () => {
       </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-            Meet The Team
-          </p>
-          <p className=" text-primary_orange-0">
-            Individuals can and do make a difference, <br />
-            but it takes a team to really mess things up
+          <p className="text-black text-5xl text center font-extrabold mb-10 dark:text-white">
+            Campus Ambassadors
           </p>
         </p>
       </div>
       <Spacer mt={10} />
-      <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+     {/* <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
@@ -93,9 +68,9 @@ const Team = () => {
             2019
           </button>
         </a>
-      </div>
+      </div> */}
       <Spacer mt={20} />
-      <div className="flex flex-row justify-center flex-wrap items-center gap-x-40 gap-y-10 w-100">
+      <div className="flex flex-row justify-center flex-wrap items-center gap-x-10 gap-y-10 w-100">
         {users.map((curElem, i) => {
           return (
             <>
@@ -104,7 +79,7 @@ const Team = () => {
                   className="flex flex-col items-center justify-center w-80 h-80 gap-5"
                   key={i}
                 >
-                  <SkeletonCircle size="100" />
+                  <SkeletonCircle size="80" />
                   <br />
                   <Skeleton>
                     <Box className="text-center px={4}"> Cogito ergo Sum </Box>
@@ -117,23 +92,21 @@ const Team = () => {
                   </Skeleton>
                 </div>
               ) : (
-                <div className="flex items-center justify-center w-80" key={i}>
-                  <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300">
+                <div className="flex items-center justify-center w-60" key={i}>
+                  <div className="p-3 justify-center shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
+                    <div className="h-max rounded-lg shadow-lg md:h-84 relative bottom-0" >
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
-                        className="object-cover object-center w-full h-full"
+                        className="object-cover object-center  h-full rounded-lg "
                       />
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
-                      <div className="font-bold text-black md:text-xl">
+                      <div className="font-bold text-center text-black md:text-xl">
                         {curElem["Name"]}
                       </div>
-                      <p className="mb-3 text-lg text-white font-bold	md:text-base md:mb-4">
-                        {curElem["Designation"]}
-                      </p>
+                    
 
                       <div className="flex">
                         <div className="flex gap-4">
@@ -204,4 +177,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default CA;

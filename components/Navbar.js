@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Tooltip } from "@chakra-ui/react";
 import React from "react";
-import Link from 'next/link';
-import { Menu, Transition } from '@headlessui/react'
+import Link from "next/link";
+import MoreMenu from "./MoreMenu";
 
+// import { Menu, Transition } from "@headlessui/react";
 
 /*import Dropdown from "@material-tailwind/react/Dropdown"
 import DropdownItem from "@material-tailwind/react/DropdownItem"
 import DropdownLink from "@material-tailwind/react/DropdownLink" */
 
-
 function MyLink(props) {
-  let { href, children, ...rest } = props
+  let { href, children, ...rest } = props;
   return (
     <Link href={href}>
       <a {...rest}>{children}</a>
     </Link>
-  )
+  );
 }
 
 export const Navbar = () => {
@@ -96,14 +96,21 @@ export const Navbar = () => {
                 ABOUT
               </a>
             </Link>
-            <Link href="/schedule">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
-                SCHEDULE
-              </a>
-            </Link>
             <Link href="/project">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2  text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
                 PROJECT
+              </a>
+            </Link>
+            <Link href="/#Sponsors">
+            <a
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+            >
+              SPONSORS
+            </a>
+            </Link>
+            <Link href="/schedule">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
+                SCHEDULE
               </a>
             </Link>
             <Link href="/faq">
@@ -122,11 +129,15 @@ export const Navbar = () => {
             >
               CONTACT
             </a>
+            <div className="lg:inline-flex lg:w-auto w-full px-2 text-center rounded link link-underline link-underline-black mr-3.5">
+              <MoreMenu />
+            </div>
+
             {/* <a
               href="/"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
             >
-          <div >
+          <div > 
       <div className="relative inline-block text-center" > 
         <Menu>
           {({ open }) => (
@@ -217,13 +228,13 @@ export const Navbar = () => {
        </div>
     </div>
             </a> */}
-            <p className="hidden lg:block">
+            <div className="hidden lg:block">
               <Tooltip label="Change Theme" placement="bottom">
                 <div>
                   <ThemeChanger />
                 </div>
               </Tooltip>
-            </p>
+            </div>
           </div>
         </div>
       </nav>
