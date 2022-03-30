@@ -239,31 +239,31 @@ function Leaderboard() {
             <CircularProgress color="inherit" />
           </Backdrop>
           <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
-            <div className="flex flex-wrap justify-between gap-2 items-center my-10">
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+            <div className="flex flex-col md:flex-row flex-wrap justify-between gap-2 items-center my-10">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4">
                 <img
-                  className="w-12 lg:w-24 rounded-full m-auto"
+                  className="w-16 lg:w-24 rounded-full m-auto"
                   src={rows[1] !== undefined ? rows[1].avatar : null}
                 />
-                <h3 className="text-black dark:text-primary_orange-0">
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
                   2. {rows[1] !== undefined ? rows[1].username[0] : null}
                 </h3>
               </div>
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-10 py-2 lg:px-20 lg:py-4 text-center">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4">
                 <img
-                  className="w-24 lg:w-36 rounded-full m-auto"
+                  className="w-28 lg:w-40 rounded-full m-auto"
                   src={rows[1] !== undefined ? rows[0].avatar : null}
                 />
-                <h3 className="text-black dark:text-primary_orange-0">
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
                   1. {rows[1] !== undefined ? rows[0].username[0] : null}
                 </h3>
               </div>
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-12 lg:py-4">
                 <img
-                  className="w-12 lg:w-24 rounded-full m-auto"
+                  className="w-16 lg:w-24 rounded-full m-auto"
                   src={rows[1] !== undefined ? rows[2].avatar : null}
                 />
-                <h3 className="text-black dark:text-primary_orange-0">
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
                   3. {rows[1] !== undefined ? rows[2].username[0] : null}
                 </h3>
               </div>
