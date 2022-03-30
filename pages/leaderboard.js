@@ -205,46 +205,46 @@ function Leaderboard() {
 
                     </div>
 
-                    <div className="bg-sky-100 px-1.5 py-1.5 rounded-md">
+                    <div className="bg-sky-100 px-1.5 py-1.5 rounded-md mb-3">
                         <p className="text-sky-700 text-sm">The leaderboard was last updated on: <b>{lastupdated}</b></p>
                     </div>
 
                     <Paper>
                         <TableContainer component={Paper}>
-                            <Table className={classes.table} aria-label="simple table">
-                                <TableHead>
-                                    <StyledTableRow>
+                            <div className="table w-full" aria-label="simple table">
+                                <div className="table-header-group ">
+                                    <div className="table-row">
                                         {columns.map((column) => (
-                                            <StyledTableCell
+                                            <div className="table-cell font-serif px-4 py-4 bg-black text-white dark:bg-primary_orange-0 dark:text-black"
                                                 key={column.id}
                                                 align={column.align}
                                                 style={{ minWidth: column.minWidth }}
                                             >
                                                 {column.label}
-                                            </StyledTableCell>
+                                            </div>
                                         ))}
-                                    </StyledTableRow>
-                                </TableHead>
-                                <TableBody>
+                                    </div>
+                                </div>
+                                <div className="table-row-group">
                                     {rows.map((row) => {
                                         return (
                                             // style = {{ display: rows.indexOf(row) === 0 || rows.indexOf(row) === 1 || rows.indexOf(row) === 2 ? "none" : null }
-                                            <StyledTableRow hover role="checkbox" tabIndex={-1} key={row.username}  >
+                                            <div className="table-row" hover role="checkbox" tabIndex={-1} key={row.username}  >
                                                 {columns.map((column) => {
                                                     const value = row[column.id];
                                                     return (
-                                                        <StyledTableCell key={column.id} align={column.align} onClick={() => { handleClickOpen(rows.indexOf(row)); }}>
-                                                            {column.id === 'avatar' ? <Avatar alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div style={{ display: "flex", alignItems: "center" }}><GitHubIcon style={{ marginRight: 20 }} /><a href={value[1]} style={{ textDecoration: "none", color: "black" }}>{value[0]}</a></div> : value}
+                                                        <div className="table-cell bg-leaderboardbg-0 text-black dark:bg-black dark:text-white" key={column.id} align={column.align} onClick={() => { handleClickOpen(rows.indexOf(row)); }}>
+                                                            {column.id === 'avatar' ? <Avatar className='m-auto' alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div className="flex items-center"><GitHubIcon className="mr-5"/><a href={value[1]} className="no-underline">{value[0]}</a></div> : value}
 
-                                                        </StyledTableCell>
+                                                        </div>
                                                     );
                                                         
                                                 })}
-                                            </StyledTableRow>
+                                            </div>
                                         );
                                     })}
-                                </TableBody>
-                            </Table>
+                                </div>
+                            </div>
                         </TableContainer>
                     </Paper>
                     <Dialog
