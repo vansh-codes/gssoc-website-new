@@ -157,13 +157,13 @@ function Leaderboard() {
         }
         let unique = prlinks.filter((item, i, ar) => ar.indexOf(item) === i);
         setLinks(unique)
-        setLeveldata({
-            level0: leaderss[num].level0,
-            level1: leaderss[num].level1,
-            level2: leaderss[num].level2,
-            level3: leaderss[num].level3,
-            level4: leaderss[num].level4,
-        });
+        // setLeveldata({
+        //     level0: leaderss[num].level0,
+        //     level1: leaderss[num].level1,
+        //     level2: leaderss[num].level2,
+        //     level3: leaderss[num].level3,
+        //     level4: leaderss[num].level4,
+        // });
         setLogin(leaderss[num].login);
         setAvatar(leaderss[num].avatar_url);
         setScore(leaderss[num].score);
