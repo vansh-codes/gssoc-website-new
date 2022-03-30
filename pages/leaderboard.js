@@ -20,19 +20,19 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const columns = [
     { id: 'position', label: 'Rank', minWidth: 50 },
-    { id: 'avatar', label: 'Avatar', minWidth: 100 },
+    { id: 'avatar', label: 'Avatar', minWidth: 50 },
     { id: 'username', label: 'GitHub Username', minWidth: 170 },
 
     {
         id: 'prnums',
         label: 'No. Of PRs',
-        minWidth: 170,
+        minWidth: 100,
         align: 'center'
     },
     {
         id: 'score',
         label: 'Score',
-        minWidth: 170,
+        minWidth: 100,
         align: 'right'
     }
 ];
@@ -184,94 +184,92 @@ function Leaderboard() {
                         </p>
                     </p>
                 </div>
-            <div>
-                <Backdrop className={classes.backdrop} open={openn}>
-                    <CircularProgress color="inherit" />
-                </Backdrop>
-                <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
-                    <div className="flex flex-wrap justify-between gap-2 items-center my-10">
-                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
-                            <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[1].avatar : null} />
-                            <h3 className="text-black dark:text-primary_orange-0">2. {rows[1] !== undefined ? rows[1].username[0] : null}</h3>
-                        </div>
-                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-10 py-2 lg:px-20 lg:py-4 text-center">
-                            <img className="w-24 lg:w-36 rounded-full m-auto" src={rows[1] !== undefined ? rows[0].avatar : null} />
-                            <h3 className="text-black dark:text-primary_orange-0">1. {rows[1] !== undefined ? rows[0].username[0] : null}</h3>
-                        </div>
-                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
-                            <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[2].avatar : null} />
-                            <h3 className="text-black dark:text-primary_orange-0">3. {rows[1] !== undefined ? rows[2].username[0] : null}</h3>
+                <div>
+                    <Backdrop className={classes.backdrop} open={openn}>
+                        <CircularProgress color="inherit" />
+                    </Backdrop>
+                    <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
+                        <div className="flex flex-wrap justify-between gap-2 items-center my-10">
+                            <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+                                <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[1].avatar : null} />
+                                <h3 className="text-black dark:text-primary_orange-0">2. {rows[1] !== undefined ? rows[1].username[0] : null}</h3>
+                            </div>
+                            <div className="bg-white shadow-2xl dark:bg-black rounded-md px-10 py-2 lg:px-20 lg:py-4 text-center">
+                                <img className="w-24 lg:w-36 rounded-full m-auto" src={rows[1] !== undefined ? rows[0].avatar : null} />
+                                <h3 className="text-black dark:text-primary_orange-0">1. {rows[1] !== undefined ? rows[0].username[0] : null}</h3>
+                            </div>
+                            <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+                                <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[2].avatar : null} />
+                                <h3 className="text-black dark:text-primary_orange-0">3. {rows[1] !== undefined ? rows[2].username[0] : null}</h3>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div className="bg-sky-100 px-1.5 py-1.5 rounded-md mb-3">
+                            <p className="text-sky-700 text-sm">The leaderboard was last updated on: <b>{lastupdated}</b></p>
+                        </div>
 
-                    <div className="bg-sky-100 px-1.5 py-1.5 rounded-md mb-3">
-                        <p className="text-sky-700 text-sm">The leaderboard was last updated on: <b>{lastupdated}</b></p>
-                    </div>
-
-                    <Paper>
-                        <TableContainer component={Paper}>
-                            <div className="table w-full" aria-label="simple table">
-                                <div className="table-header-group ">
-                                    <div className="table-row">
-                                        {columns.map((column) => (
-                                            <div className="table-cell font-serif px-4 py-4 bg-black text-white dark:bg-primary_orange-0 dark:text-black"
-                                                key={column.id}
-                                                align={column.align}
-                                                style={{ minWidth: column.minWidth }}
-                                            >
-                                                {column.label}
-                                            </div>
-                                        ))}
+                        <Paper>
+                            <TableContainer component={Paper}>
+                                <div className="table w-full">
+                                    <div className="table-header-group ">
+                                        <div className="table-row">
+                                            {columns.map((column) => (
+                                                <div className="table-cell font-serif px-4 py-4 bg-black text-white dark:bg-primary_orange-0 dark:text-black"
+                                                    key={column.id}
+                                                    align={column.align}
+                                                    style={{ minWidth: column.minWidth }}
+                                                >
+                                                    {column.label}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="table-row-group">
+                                        {rows.map((row) => {
+                                            return (
+                                                // style = {{ display: rows.indexOf(row) === 0 || rows.indexOf(row) === 1 || rows.indexOf(row) === 2 ? "none" : null }
+                                                <div className="table-row" hover role="checkbox" tabIndex={-1} key={row.username}  >
+                                                    {columns.map((column) => {
+                                                        const value = row[column.id];
+                                                        return (
+                                                            <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white" key={column.id} align={column.align} onClick={() => { handleClickOpen(rows.indexOf(row)); }}>
+                                                                {column.id === 'avatar' ? <Avatar className='m-auto' alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div className="flex justify-center"><GitHubIcon className="mr-5" /><a href={value[1]} className="no-underline">{value[0]}</a></div> : value}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
-                                <div className="table-row-group">
-                                    {rows.map((row) => {
-                                        return (
-                                            // style = {{ display: rows.indexOf(row) === 0 || rows.indexOf(row) === 1 || rows.indexOf(row) === 2 ? "none" : null }
-                                            <div className="table-row" hover role="checkbox" tabIndex={-1} key={row.username}  >
-                                                {columns.map((column) => {
-                                                    const value = row[column.id];
-                                                    return (
-                                                        <div className="table-cell bg-leaderboardbg-0 text-black dark:bg-black dark:text-white" key={column.id} align={column.align} onClick={() => { handleClickOpen(rows.indexOf(row)); }}>
-                                                            {column.id === 'avatar' ? <Avatar className='m-auto' alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div className="flex items-center"><GitHubIcon className="mr-5"/><a href={value[1]} className="no-underline">{value[0]}</a></div> : value}
-
-                                                        </div>
-                                                    );
-                                                        
-                                                })}
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </TableContainer>
-                    </Paper>
-                    <Dialog
-                        open={open}
-                        onClose={handleClose}
-                        aria-labelledby="alert-dialog-slide-title"
-                        aria-describedby="alert-dialog-slide-description"
-                    >
-                        <DialogTitle id="alert-dialog-slide-title">{login + "'s Stats"}</DialogTitle>
-                        <DialogContent>
-                            <DialogContentText id="alert-dialog-slide-description">
-                                <div style={{ display: "flex", alignItems: "center" }}>
-                                    <img alt="Remy Sharp" src={avatar} className={classes.leaderimg} />
-                                    <p className={classes.levelbadge} style={{ backgroundColor: "#ebfaeb", marginLeft: 20, fontSize: 25 }}>🏆 {score}</p>
-                                </div>
-                                <p style={{ "marginTop": 30 }}>List Of PRs: </p>
-                                {links}
-                            </DialogContentText>
-                        </DialogContent>
-                        <DialogActions>
-                            <button onClick={handleClose} color="primary" style={{ background: "#FA6329", border: "none", padding: 15, color: "white", borderRadius: 5, cursor: "pointer", marginRight: 10 }}>
-                                Close
-                            </button>
-                        </DialogActions>
-                    </Dialog>
+                            </TableContainer>
+                        </Paper>
+                        <Dialog
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="alert-dialog-slide-title"
+                            aria-describedby="alert-dialog-slide-description"
+                        >
+                            <DialogTitle id="alert-dialog-slide-title">{login + "'s Stats"}</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText id="alert-dialog-slide-description">
+                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                        <img alt="Remy Sharp" src={avatar} className={classes.leaderimg} />
+                                        <p className={classes.levelbadge} style={{ backgroundColor: "#ebfaeb", marginLeft: 20, fontSize: 25 }}>🏆 {score}</p>
+                                    </div>
+                                    <p style={{ "marginTop": 30 }}>List Of PRs: </p>
+                                    {links}
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <button onClick={handleClose} color="primary" style={{ background: "#FA6329", border: "none", padding: 15, color: "white", borderRadius: 5, cursor: "pointer", marginRight: 10 }}>
+                                    Close
+                                </button>
+                            </DialogActions>
+                        </Dialog>
+                    </div>
                 </div>
-            </div >
             </div>
         </>
     );
