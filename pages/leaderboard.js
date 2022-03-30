@@ -178,10 +178,10 @@ function Leaderboard() {
             <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
                 <div className="items-center justify-center">
                     <p className="font-sans text-center text-2xl font-extrabold">
-                        <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-                            <span className="text-primary_orange-0">GSSoC 2022 {""}</span>
+                        <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
+                            <span className="text-primary_orange-0"> GSSoC 2022 </span>
                             Top Performers
-                        </p>
+                        </div>
                     </p>
                 </div>
                 <div>
@@ -234,7 +234,7 @@ function Leaderboard() {
                                                         const value = row[column.id];
                                                         return (
                                                             <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white" key={column.id} align={column.align} onClick={() => { handleClickOpen(rows.indexOf(row)); }}>
-                                                                {column.id === 'avatar' ? <Avatar className='m-auto' alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div className="flex justify-center"><GitHubIcon className="mr-5" /><a href={value[1]} className="no-underline">{value[0]}</a></div> : value}
+                                                                {column.id === 'avatar' ? <Avatar className='m-auto' alt="Remy Sharp" src={value} /> : column.id === 'position' ? rows.indexOf(row) + 1 : column.id === 'username' ? <div className="flex relative left-0 md:left-12 lg:left-32"><GitHubIcon className="mr-5" /><a href={value[1]} className="no-underline">{value[0]}</a></div> : value}
                                                             </div>
                                                         );
                                                     })}
