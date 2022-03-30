@@ -19,15 +19,15 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const columns = [
-    { id: 'position', label: 'Position', minWidth: 50 },
+    { id: 'position', label: 'Rank', minWidth: 50 },
     { id: 'avatar', label: 'Avatar', minWidth: 100 },
-    { id: 'username', label: 'Username', minWidth: 170 },
+    { id: 'username', label: 'GitHub Username', minWidth: 170 },
 
     {
         id: 'prnums',
         label: 'No. Of PRs',
         minWidth: 170,
-        align: 'right'
+        align: 'center'
     },
     {
         id: 'score',
@@ -157,6 +157,13 @@ function Leaderboard() {
         }
         let unique = prlinks.filter((item, i, ar) => ar.indexOf(item) === i);
         setLinks(unique)
+        setLeveldata({
+            level0: leaderss[num].level0,
+            level1: leaderss[num].level1,
+            level2: leaderss[num].level2,
+            level3: leaderss[num].level3,
+            level4: leaderss[num].level4,
+        });
         setLogin(leaderss[num].login);
         setAvatar(leaderss[num].avatar_url);
         setScore(leaderss[num].score);
@@ -168,31 +175,38 @@ function Leaderboard() {
     };
     return (
         <>
+            <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
+                <div className="items-center justify-center">
+                    <p className="font-sans text-center text-2xl font-extrabold">
+                        <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
+                            <span className="text-primary_orange-0">GSSoC 2022 {""}</span>
+                            Top Performers
+                        </p>
+                    </p>
+                </div>
             <div>
                 <Backdrop className={classes.backdrop} open={openn}>
                     <CircularProgress color="inherit" />
                 </Backdrop>
-                <div style={{}} className={classes.mainroot}>
-                    <div style={{ marginBottom: 40, marginTop: 60, alignItems: "center", display: "flex", justifyContent: "space-between" }} className={classes.leaders}>
-
-                        <div>
-                            <img src={rows[1] !== undefined ? rows[1].avatar : null} className={classes.leaderimg} />
-                            <h3>2. {rows[1] !== undefined ? rows[1].username[0] : null}</h3>
-
+                <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
+                    <div className="flex flex-wrap justify-between gap-2 items-center my-10">
+                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+                            <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[1].avatar : null} />
+                            <h3 className="text-black dark:text-primary_orange-0">2. {rows[1] !== undefined ? rows[1].username[0] : null}</h3>
                         </div>
-                        <div style={{ textAlign: "center" }}>
-                            <img src={rows[1] !== undefined ? rows[0].avatar : null} className={classes.leaderimgbig} />
-                            <h3>1. {rows[1] !== undefined ? rows[0].username[0] : null}</h3>
+                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-10 py-2 lg:px-20 lg:py-4 text-center">
+                            <img className="w-24 lg:w-36 rounded-full m-auto" src={rows[1] !== undefined ? rows[0].avatar : null} />
+                            <h3 className="text-black dark:text-primary_orange-0">1. {rows[1] !== undefined ? rows[0].username[0] : null}</h3>
                         </div>
-                        <div>
-                            <img src={rows[1] !== undefined ? rows[2].avatar : null} className={classes.leaderimg} />
-                            <h3>3. {rows[1] !== undefined ? rows[2].username[0] : null}</h3>
+                        <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-6 lg:py-4">
+                            <img className="w-12 lg:w-24 rounded-full m-auto" src={rows[1] !== undefined ? rows[2].avatar : null} />
+                            <h3 className="text-black dark:text-primary_orange-0">3. {rows[1] !== undefined ? rows[2].username[0] : null}</h3>
                         </div>
 
                     </div>
 
-                    <div style={{ backgroundColor: "#E5F6FD", padding: 5, borderRadius: 5 }}>
-                        <p style={{ color: "#024361", fontSize: 15 }}>The leaderboard was last updated on: <b>{lastupdated}</b></p>
+                    <div className="bg-sky-100 px-1.5 py-1.5 rounded-md">
+                        <p className="text-sky-700 text-sm">The leaderboard was last updated on: <b>{lastupdated}</b></p>
                     </div>
 
                     <Paper>
@@ -224,7 +238,7 @@ function Leaderboard() {
 
                                                         </StyledTableCell>
                                                     );
-
+                                                        
                                                 })}
                                             </StyledTableRow>
                                         );
@@ -258,6 +272,7 @@ function Leaderboard() {
                     </Dialog>
                 </div>
             </div >
+            </div>
         </>
     );
 }
