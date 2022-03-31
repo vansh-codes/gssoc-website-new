@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
+// import { withStyles, makeStyles } from "@material-ui/core/styles";
+// import Paper from "@material-ui/core/Paper";
+// import Table from "@material-ui/core/Table";
+// import TableBody from "@material-ui/core/TableBody";
+// import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import Avatar from "@material-ui/core/Avatar";
+// import TableHead from "@material-ui/core/TableHead";
+// import TableRow from "@material-ui/core/TableRow";
+// import GitHubIcon from "@material-ui/icons/GitHub";
+// import Avatar from "@material-ui/core/Avatar";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import Backdrop from "@material-ui/core/Backdrop";
-import CircularProgress from "@material-ui/core/CircularProgress";
+// import Backdrop from "@material-ui/core/Backdrop";
+// import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
     faGithub,
-    faGithubSquare,
+    // faGithubSquare,
   } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -42,95 +42,95 @@ const columns = [
   },
 ];
 
-const StyledTableCell = withStyles((theme) => ({
-  head: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
-    cursor: "pointer",
-  },
-}))(TableCell);
+// const StyledTableCell = withStyles((theme) => ({
+//   head: {
+//     backgroundColor: theme.palette.common.black,
+//     color: theme.palette.common.white,
+//   },
+//   body: {
+//     fontSize: 14,
+//     cursor: "pointer",
+//   },
+// }))(TableCell);
 
-const StyledTableRow = withStyles((theme) => ({
-  root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
-    },
-  },
-}))(TableRow);
+// const StyledTableRow = withStyles((theme) => ({
+//   root: {
+//     "&:nth-of-type(odd)": {
+//       backgroundColor: theme.palette.action.hover,
+//     },
+//   },
+// }))(TableRow);
 
-const useStyles = makeStyles((theme) => {
-  return {
-    root: {
-      width: "100%",
-    },
-    container: {
-      maxHeight: 440,
-    },
-    appbar: {
-      padding: 25,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      background: "black",
-    },
-    leaderimg: {
-      width: 100,
-      borderRadius: 1000,
-      [theme.breakpoints.down(1200)]: {
-        width: 50,
-      },
-    },
-    leaderimgbig: {
-      width: 150,
-      borderRadius: 1000,
-      [theme.breakpoints.down(1200)]: {
-        width: 90,
-      },
-    },
-    popover: {
-      pointerEvents: "none",
-    },
-    levelbadge: {
-      padding: 10,
-      borderRadius: 5,
-      backgroundColor: "#f5f5f5",
-      marginRight: 10,
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: 12,
-      fontWeight: "bold",
-    },
-    leaders: {
-      [theme.breakpoints.down(1200)]: {
-        padding: "0px 50px",
-        fontSize: "12px",
-      },
-      [theme.breakpoints.down(700)]: {
-        padding: "0px 0px",
-      },
-    },
-    mainroot: {
-      paddingLeft: 100,
-      paddingRight: 100,
-      paddingTop: 0,
-      paddingBottom: 50,
-      textAlign: "center",
-      [theme.breakpoints.down(1200)]: {
-        padding: 20,
-      },
-    },
-    backdrop: {
-      zIndex: theme.zIndex.drawer + 1,
-      color: "#fff",
-    },
-  };
-});
+// const useStyles = makeStyles((theme) => {
+//   return {
+//     root: {
+//       width: "100%",
+//     },
+//     container: {
+//       maxHeight: 440,
+//     },
+//     appbar: {
+//       padding: 25,
+//       display: "flex",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       background: "black",
+//     },
+//     leaderimg: {
+//       width: 100,
+//       borderRadius: 1000,
+//       [theme.breakpoints.down(1200)]: {
+//         width: 50,
+//       },
+//     },
+//     leaderimgbig: {
+//       width: 150,
+//       borderRadius: 1000,
+//       [theme.breakpoints.down(1200)]: {
+//         width: 90,
+//       },
+//     },
+//     popover: {
+//       pointerEvents: "none",
+//     },
+//     levelbadge: {
+//       padding: 10,
+//       borderRadius: 5,
+//       backgroundColor: "#f5f5f5",
+//       marginRight: 10,
+//       alignItems: "center",
+//       justifyContent: "center",
+//       fontSize: 12,
+//       fontWeight: "bold",
+//     },
+//     leaders: {
+//       [theme.breakpoints.down(1200)]: {
+//         padding: "0px 50px",
+//         fontSize: "12px",
+//       },
+//       [theme.breakpoints.down(700)]: {
+//         padding: "0px 0px",
+//       },
+//     },
+//     mainroot: {
+//       paddingLeft: 100,
+//       paddingRight: 100,
+//       paddingTop: 0,
+//       paddingBottom: 50,
+//       textAlign: "center",
+//       [theme.breakpoints.down(1200)]: {
+//         padding: 20,
+//       },
+//     },
+//     backdrop: {
+//       zIndex: theme.zIndex.drawer + 1,
+//       color: "#fff",
+//     },
+//   };
+// });
 
 function Leaderboard() {
-  const classes = useStyles();
+  // const classes = useStyles();
   let [leaderss, setLeaderss] = useState({});
   let [links, setLinks] = useState("");
   let [login, setLogin] = useState("");
@@ -241,14 +241,14 @@ function Leaderboard() {
           </p>
         </div>
         <div>
-          <Backdrop className={classes.backdrop} open={openn}>
+          {/* <Backdrop className={classes.backdrop} open={openn}>
             <CircularProgress color="inherit" />
-          </Backdrop>
+          </Backdrop> */}
           <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
             <div className="flex flex-col md:flex-row flex-wrap justify-between gap-2 items-center my-10">
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4 relative inline-block">
                 <img
-                  className="w-16 lg:w-24 rounded-full m-auto inline-block object-cover rounded-full bg-white"
+                  className="w-16 lg:w-24 rounded-full m-auto inline-block object-cover bg-white"
                   src={rows[1] !== undefined ? rows[1].avatar : null}
                 />
                   <FontAwesomeIcon className="w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
@@ -284,8 +284,8 @@ function Leaderboard() {
               </p>
             </div>
 
-            <Paper>
-              <TableContainer component={Paper}>
+            {/* <Paper> */}
+              <TableContainer /*component={Paper}*/>
                 <div className="table w-full">
                   <div className="table-header-group ">
                     <div className="table-row">
@@ -326,16 +326,15 @@ function Leaderboard() {
                                   }}
                                 >
                                   {column.id === "avatar" ? (
-                                    <Avatar
-                                      className="m-auto bg-white"
-                                      alt="Remy Sharp"
+                                    <img
+                                      className="w-9 rounded-full m-auto bg-white"
                                       src={value}
                                     />
                                   ) : column.id === "position" ? (
                                     rows.indexOf(row) + 1
                                   ) : column.id === "username" ? (
                                     <div className="flex relative left-0 md:left-12 lg:left-32">
-                                      <GitHubIcon className="mr-5" />
+                                    <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
                                         className="no-underline"
@@ -370,16 +369,15 @@ function Leaderboard() {
                                   }}
                                 >
                                   {column.id === "avatar" ? (
-                                    <Avatar
-                                      className="m-auto bg-white"
-                                      alt="Remy Sharp"
+                                    <img
+                                      className="w-9 rounded-full m-auto bg-white"
                                       src={value}
                                     />
                                   ) : column.id === "position" ? (
                                     rows.indexOf(row) + 1
                                   ) : column.id === "username" ? (
                                     <div className="flex relative left-0 md:left-12 lg:left-32">
-                                      <GitHubIcon className="mr-5" />
+                                    <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
                                         className="no-underline"
@@ -401,7 +399,7 @@ function Leaderboard() {
                   </div>
                 </div>
               </TableContainer>
-            </Paper>
+            {/* </Paper> */}
             <Dialog
               open={open}
               onClose={handleClose}
@@ -417,10 +415,10 @@ function Leaderboard() {
                     <img
                       alt="Remy Sharp"
                       src={avatar}
-                      className={classes.leaderimg}
+                      className="w-12 rounded-full xl:w-24"
                     />
                     <p
-                      className={classes.levelbadge}
+                      className="w-24 rounded-full xl:w-36 p-3 text-center"
                       style={{
                         backgroundColor: "#ebfaeb",
                         marginLeft: 20,
