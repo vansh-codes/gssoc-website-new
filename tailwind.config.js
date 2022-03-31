@@ -28,10 +28,13 @@ module.exports = {
           0: "#00A0DC",
         },
         twitter:{
-          0: "#1DA1F2"
+          0: "#1DA1F2",
         },
         youtube:{
           0: "#FF0000",
+        },
+        leaderboardbg:{
+          0:"#FFECDE",
         }
       },
       screens: {
