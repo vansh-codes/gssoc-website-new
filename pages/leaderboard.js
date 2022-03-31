@@ -165,7 +165,7 @@ function Leaderboard() {
     };
   }
   useEffect(() => {
-    fetch("https://gssoc22leaderboard.herokuapp.com/OSLeaderboard")
+    fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")
       .then((res) => res.json())
       .then((data) => {
         data.leaderboard.sort(function (a, b) {
