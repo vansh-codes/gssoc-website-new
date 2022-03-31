@@ -4,16 +4,16 @@ import React, { useState, useEffect } from "react";
 // import Table from "@material-ui/core/Table";
 // import TableBody from "@material-ui/core/TableBody";
 // import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
+// import TableContainer from "@material-ui/core/TableContainer";
 // import TableHead from "@material-ui/core/TableHead";
 // import TableRow from "@material-ui/core/TableRow";
 // import GitHubIcon from "@material-ui/icons/GitHub";
 // import Avatar from "@material-ui/core/Avatar";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
+// import DialogActions from "@material-ui/core/DialogActions";
+// import DialogContent from "@material-ui/core/DialogContent";
+// import DialogContentText from "@material-ui/core/DialogContentText";
+// import DialogTitle from "@material-ui/core/DialogTitle";
 // import Backdrop from "@material-ui/core/Backdrop";
 // import CircularProgress from "@material-ui/core/CircularProgress";
 
@@ -285,7 +285,7 @@ function Leaderboard() {
             </div>
 
             {/* <Paper> */}
-              <TableContainer /*component={Paper}*/>
+              <div className="w-full overflow-x-auto" /*component={Paper}*/>
                 <div className="table w-full">
                   <div className="table-header-group ">
                     <div className="table-row">
@@ -398,7 +398,7 @@ function Leaderboard() {
                     })}
                   </div>
                 </div>
-              </TableContainer>
+              </div>
             {/* </Paper> */}
             <Dialog
               open={open}
@@ -406,11 +406,11 @@ function Leaderboard() {
               aria-labelledby="alert-dialog-slide-title"
               aria-describedby="alert-dialog-slide-description"
             >
-              <DialogTitle id="alert-dialog-slide-title">
+              <div className="flex m-0 py-4 px-6 font-medium text-lg leading-relaxed" id="alert-dialog-slide-title">
                 {login + "'s Stats"}
-              </DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-slide-description">
+              </div>
+              <div className="flex-auto py-2 px-6 overflow-y-auto">
+                <div id="alert-dialog-slide-description">
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <img
                       alt="Remy Sharp"
@@ -430,9 +430,9 @@ function Leaderboard() {
                   </div>
                   <p style={{ marginTop: 30 }}>List Of PRs: </p>
                   {links}
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
+                </div>
+              </div>
+              <div className="flex px-2 py-2 items-center justify-end">
                 <button
                   onClick={handleClose}
                   color="primary"
@@ -443,12 +443,11 @@ function Leaderboard() {
                     color: "white",
                     borderRadius: 5,
                     cursor: "pointer",
-                    marginRight: 10,
                   }}
                 >
                   Close
                 </button>
-              </DialogActions>
+              </div>
             </Dialog>
           </div>
         </div>
