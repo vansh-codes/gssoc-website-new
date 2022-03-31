@@ -233,12 +233,12 @@ function Leaderboard() {
     <>
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="items-center justify-center">
-          <p className="font-sans text-center text-2xl font-extrabold">
+          <div className="font-sans text-center text-2xl font-extrabold">
             <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               <span className="text-primary_orange-0"> GSSoC 2022 </span>
               Top Performers
             </div>
-          </p>
+          </div>
         </div>
         <div>
           {/* <Backdrop className={classes.backdrop} open={openn}>
@@ -309,7 +309,6 @@ function Leaderboard() {
                         {(i%2)?(
                             <div
                             className="table-row"
-                            hover
                             role="checkbox"
                             tabIndex={-1}
                             key={row.username}
@@ -352,7 +351,6 @@ function Leaderboard() {
                           ):(
                             <div
                             className="table-row"
-                            hover
                             role="checkbox"
                             tabIndex={-1}
                             key={row.username}
@@ -428,7 +426,7 @@ function Leaderboard() {
                       🏆 {score}
                     </p>
                   </div>
-                  <p style={{ marginTop: 30 }}>List Of PRs: </p>
+                  <div style={{ marginTop: 30 }}>List Of PRs: </div>
                   {links}
                 </div>
               </div>
