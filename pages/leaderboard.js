@@ -248,7 +248,7 @@ function Leaderboard() {
             <div className="flex flex-col md:flex-row flex-wrap justify-between gap-2 items-center my-10">
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4 relative inline-block">
                 <img
-                  className="w-16 lg:w-24 rounded-full m-auto inline-block object-cover rounded-full"
+                  className="w-16 lg:w-24 rounded-full m-auto inline-block object-cover rounded-full bg-white"
                   src={rows[1] !== undefined ? rows[1].avatar : null}
                 />
                   <FontAwesomeIcon className="w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
@@ -258,7 +258,7 @@ function Leaderboard() {
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4  relative inline-block">
                 <img
-                  className="w-28 lg:w-40 rounded-full m-auto"
+                  className="w-28 lg:w-40 rounded-full m-auto bg-white"
                   src={rows[1] !== undefined ? rows[0].avatar : null}
                 />
                 <FontAwesomeIcon className="w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
@@ -268,7 +268,7 @@ function Leaderboard() {
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-12 lg:py-4 relative inline-block">
                 <img
-                  className="w-16 lg:w-24 rounded-full m-auto"
+                  className="w-16 lg:w-24 rounded-full m-auto bg-white"
                   src={rows[1] !== undefined ? rows[2].avatar : null}
                 />
                 <FontAwesomeIcon className="w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
@@ -278,8 +278,8 @@ function Leaderboard() {
               </div>
             </div>
 
-            <div className="bg-sky-100 px-1.5 py-1.5 rounded-md mb-3">
-              <p className="text-sky-700 text-sm">
+            <div className="bg-sky-100 dark:bg-orange-200 px-1.5 py-1.5 rounded-md mb-3">
+              <p className="text-sky-700 dark:text-orange-900 text-sm">
                 The leaderboard was last updated on: <b>{lastupdated}</b>
               </p>
             </div>
@@ -327,7 +327,7 @@ function Leaderboard() {
                                 >
                                   {column.id === "avatar" ? (
                                     <Avatar
-                                      className="m-auto"
+                                      className="m-auto bg-white"
                                       alt="Remy Sharp"
                                       src={value}
                                     />
@@ -371,7 +371,7 @@ function Leaderboard() {
                                 >
                                   {column.id === "avatar" ? (
                                     <Avatar
-                                      className="m-auto"
+                                      className="m-auto bg-white"
                                       alt="Remy Sharp"
                                       src={value}
                                     />
