@@ -231,7 +231,7 @@ function Leaderboard() {
   };
   return (
     <>
-      <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
+      <div className="container transition-colors mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-10 lg:px-20 2xl:px-32 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold">
             <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
@@ -244,35 +244,35 @@ function Leaderboard() {
           {/* <Backdrop className={classes.backdrop} open={openn}>
             <CircularProgress color="inherit" />
           </Backdrop> */}
-          <div className="py-5 px-5  xl:pb-12 xl:px-24 xl:pt-0 text-center">
-            <div className="flex flex-col md:flex-row flex-wrap justify-between gap-2 items-center my-10">
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4 relative inline-block">
+          <div className="py-5 px-0 xl:pb-12 xl:px-24 xl:pt-0 text-center">
+            <div className="flex md:flex-row justify-between gap-y-1 gap-x-1 md:gap-x-2 items-center my-10">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 <img
-                  className="w-16 lg:w-24 rounded-full m-auto inline-block object-cover bg-white"
+                  className="w-12 md:w-16 lg:w-24 rounded-full m-auto inline-block object-cover bg-white"
                   src={rows[1] !== undefined ? rows[1].avatar : null}
                 />
-                  <FontAwesomeIcon className="w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
-                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
+                  <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
                   2. {rows[1] !== undefined ? rows[1].username[0] : null}
                 </h3>
               </div>
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-16 lg:py-4  relative inline-block">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4  relative inline-block w-28 md:w-auto">
                 <img
-                  className="w-28 lg:w-40 rounded-full m-auto bg-white"
+                  className="w-12 md:w-16 lg:w-40 rounded-full m-auto bg-white"
                   src={rows[1] !== undefined ? rows[0].avatar : null}
                 />
-                <FontAwesomeIcon className="w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
-                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
+                <FontAwesomeIcon className="invisible lg:visible w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-4 text-xs sm:text-sm md:text-md">
                   1. {rows[1] !== undefined ? rows[0].username[0] : null}
                 </h3>
               </div>
-              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-3 py-2 lg:px-12 lg:py-4 relative inline-block">
+              <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 <img
-                  className="w-16 lg:w-24 rounded-full m-auto bg-white"
+                  className="w-12 md:w-16 lg:w-24 rounded-full m-auto bg-white"
                   src={rows[1] !== undefined ? rows[2].avatar : null}
                 />
-                <FontAwesomeIcon className="w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
-                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2">
+                <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
+                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
                   3. {rows[1] !== undefined ? rows[2].username[0] : null}
                 </h3>
               </div>
