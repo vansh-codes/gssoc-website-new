@@ -75,7 +75,7 @@ const blog = () => {
                       
                   <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 rounded-lg lg:my-2 lg:px-2 lg:py-2 ">
             <div className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md rounded-lg my-1 px-1 w-34 sm:w-fit">
-              <div className=" pl-8 text-md text-white 1.5rem 1.5rem ">
+              <div className="dark:text-black pl-8 text-md text-white 1.5rem 1.5rem ">
                 {" "}
                 What is the GirlScript Summer of code ?
                 GSSoC is only for girls
