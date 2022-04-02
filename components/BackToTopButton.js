@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ButtonContainer = styled.span`
   position: fixed;
   bottom: 32px;
-  right: 75em;
+  left: 32px;
   align-items: center;
   height: 32px;
   width: 32px;
