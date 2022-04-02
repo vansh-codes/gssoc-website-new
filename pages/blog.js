@@ -83,12 +83,16 @@ const blog = () => {
             </div>
           </div>
                     
-
-                    <div className="flex flex-col items-center justify-center ">
+                      <div className="flex flex-col items-center justify-center ">
+                      <div className="font-bold text-center text-white md:text-xl border-orange-500 border rounded-md my-1 px-6">
+                        {curElem["Name"]}
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center w-full ">
                       <div className="font-bold text-center text-black md:text-xl">
                         {curElem["Name"]}
                         <button ref={btnRef} onClick={onOpen} 
-        className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full"
+        className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full bottom-0"
         >
         Read More
       </button>
