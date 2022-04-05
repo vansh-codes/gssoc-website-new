@@ -145,10 +145,10 @@ html {
   width: 200px;
 }
 
-.css-1blinku-TitleWrapper {
+/* .css-1blinku-TitleWrapper {
   color: #fc9219;
   font-size: xx-large;
-}
+} */
 
 .timeline-item-title .active {
   font-size: xx-large;
@@ -157,4 +157,22 @@ html {
 #Sponsors {
   padding-top: 100px;
   margin-top: -100px;
+}
+
+/* media queries for the date part of chrono */
+@media screen and (max-width: 600px) {
+  .css-1blinku-TitleWrapper {
+    color: #fc9219;
+    font-size: xx-small !important;
+    text-align: left !important;
+    /* font-weight: bold !important; */
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .css-1blinku-TitleWrapper {
+    color: #fc9219;
+    /* font-size: xx-large !important; */
+    /* text-align: left !important; */
+  }
 }

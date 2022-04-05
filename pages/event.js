@@ -44,7 +44,7 @@ const Event = () => {
       <h1 className="text-4xl font-sans text-center dark:text-white font-semibold mb-10">
         Events in GSSoC&apos;22
       </h1>
-      <div className="w-full">
+      <div className=" hidden md:block w-full">
         {theme === "dark" ? (
           <Chrono
             items={Eventdata}
@@ -109,10 +109,14 @@ const Event = () => {
                       allowFullScreen
                     ></iframe>
                   ) : (
-                    <img width="600"
-                    height="350" src={curEvent.poster} alt="poster" />
+                    <img
+                      width="600"
+                      height="350"
+                      src={curEvent.poster}
+                      alt="poster"
+                    />
                   )}
-                  <br/>
+                  <br />
                   <figcaption className="text-white text-2xl font-bold font-sans">
                     {curEvent.maintitle}
                   </figcaption>
@@ -195,15 +199,222 @@ const Event = () => {
                       allowFullScreen
                     ></iframe>
                   ) : (
-                    <img width="600"
-                    height="350" src={curEvent.poster} alt="poster" />
+                    <img
+                      width="600"
+                      height="350"
+                      src={curEvent.poster}
+                      alt="poster"
+                    />
                   )}
-                  <br/>
+                  <br />
                   <figcaption className="text-2xl font-semibold">
                     {curEvent.maintitle}
                   </figcaption>
                   <div>
-                    <p className="text-white text-md font-semibold">{curEvent.info}</p>
+                    <p className="text-white text-md font-semibold">
+                      {curEvent.info}
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      className="text-black text-lg font-semibold hover:text-white"
+                      href={curEvent.rec_link}
+                    >
+                      Link here »
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </Chrono>
+        )}
+      </div>
+      {/* ................................................................................... */}
+      {/* For Mobile Devices */}
+      {/* ................................................................................... */}
+      <div className="md:hidden w-full">
+        {theme === "dark" ? (
+          <Chrono
+            items={Eventdata}
+            theme={{
+              primary: "#f67621",
+              secondary: "#f67621",
+              cardBgColor: "#474747",
+              cardForeColor: "white",
+              titleColor: "white",
+            }}
+            hideControls="true"
+            // cardHeight={250}
+            mode="VERTICAL"
+            cardHeight={350}
+            // cardWidth={350}
+            // scrollable={{ scrollbar: false }}
+          >
+            <div className="chrono-icons">
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              <img
+                className="p-[1px]"
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
+              <img
+                className="p-[1px]"
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
+              <img
+                className="p-[1px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              {/* <img
+              src="https://img.icons8.com/ios-filled/50/000000/mailbox-closed-flag-down.png"
+              alt="mail-box"
+            />
+            <img
+              src="https://img.icons8.com/ios-filled/50/000000/pinterest.png"
+              alt="pinterest"
+            />
+            <img
+              src="https://img.icons8.com/ios-filled/100/000000/reddit.png"
+              alt="reddit"
+            /> */}
+            </div>
+            {Event.map((curEvent, i) => {
+              return (
+                <div className="wrapper font-sans w-full" key={i}>
+                  {curEvent.fmt === "video" ? (
+                    <iframe
+                      className="h-auto w-52 px-0"
+                      // width="320"
+                      // height="180"
+                      src={curEvent.poster}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <img
+                      width="600"
+                      height="350"
+                      src={curEvent.poster}
+                      alt="poster"
+                    />
+                  )}
+                  <br />
+                  <figcaption className="text-white text-2xl font-bold font-sans">
+                    {curEvent.maintitle}
+                  </figcaption>
+                  <div>
+                    <p className="text-white text-md">{curEvent.info}</p>
+                  </div>
+                  <div>
+                    <a
+                      className="text-orange-400 text-lg font-semibold hover:text-white"
+                      href={curEvent.rec_link}
+                    >
+                      Link here »
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </Chrono>
+        ) : (
+          <Chrono
+            items={Eventdata}
+            theme={{
+              primary: "#f67621",
+              secondary: "#f67621",
+              cardBgColor: "#f67621",
+              cardForeColor: "white",
+              titleColor: "white",
+            }}
+            hideControls="true"
+            // cardHeight={250}
+            mode="VERTICAL"
+            cardHeight={350}
+            // scrollable={{ scrollbar: false }}
+          >
+            <div className="chrono-icons">
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
+              <img
+                className="p-[2px]"
+                src="https://img.icons8.com/android/344/twitter.png"
+                alt="twitter"
+              />
+              {/* <img
+              src="https://img.icons8.com/ios-filled/50/000000/mailbox-closed-flag-down.png"
+              alt="mail-box"
+            />
+            <img
+              src="https://img.icons8.com/ios-filled/50/000000/pinterest.png"
+              alt="pinterest"
+            />
+            <img
+              src="https://img.icons8.com/ios-filled/100/000000/reddit.png"
+              alt="reddit"
+            /> */}
+            </div>
+            {Event.map((curEvent, i) => {
+              return (
+                <div className="wrapper font-sans w-full" key={i}>
+                  {curEvent.fmt === "video" ? (
+                    <iframe
+                      className="h-auto w-52 px-0"
+                      // width="600"
+                      // height="350"
+                      src={curEvent.poster}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <img
+                      width="600"
+                      height="350"
+                      src={curEvent.poster}
+                      alt="poster"
+                    />
+                  )}
+                  <br />
+                  <figcaption className="text-2xl font-semibold">
+                    {curEvent.maintitle}
+                  </figcaption>
+                  <div>
+                    <p className="text-white text-md font-semibold">
+                      {curEvent.info}
+                    </p>
                   </div>
                   <div>
                     <a
