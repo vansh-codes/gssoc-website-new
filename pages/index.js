@@ -452,23 +452,38 @@ export default function Home() {
                   alt="Moralis"
                 />
               </a>
-              <a href="https://protocol.ai/">
+              <a href="https://filecoin.io/">
                 <img
                   data-aos="fade-up"
                   className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/159930269-69195861-8608-4a49-ac04-ecc8c26c77aa.svg"
-                  alt="Protocol Labs"
+                  src="https://user-images.githubusercontent.com/63473496/163260977-e0a5e8bd-618f-4691-ae13-02b878819def.png"
+                  alt="Filecoin"
+                />
+              </a>
+            </div>
+            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+                Silver Sponsors
+            </h3>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
+              <a href="https://mentro.tech/">
+                <img
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-24 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/163266199-53c5a68a-e6ee-4fc9-8b3d-689d4e32a43b.png"
+                  alt="Mentro"
                 />
               </a>
             </div>
             <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
                 In Kind Sponsors
             </h3>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-20 justify-between">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly">
               <a href="https://www.taskade.com/">
                 <img
                   data-aos="fade-up"
-                  className="h-16 mb-5 md:mb-0"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-16"
                   src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
                   alt="Taskade"
                 />
@@ -476,40 +491,73 @@ export default function Home() {
               <a href="https://gen.xyz/">
                 <img
                   data-aos="fade-up"
-                  className="h-16 mb-5 md:mb-0"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-16"
                   src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
-                  alt="dotXYZ"
+                  alt=".XYZ"
                 />
               </a>
-              <a href="https://fueler.io/">
+              <a href="https://teleporthq.io/">
                 <img
                   data-aos="fade-up"
-                  className="h-12 mb-5 md:mb-0 relative lg:top-1"
-                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
-                  alt="Fueler"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-16"
+                  src="https://user-images.githubusercontent.com/63473496/163260136-1e4eb2d0-a217-4d7e-a0f5-dcd63d9ba6a8.svg"
+                  alt="TeleportHQ"
                 />
               </a>
               <a href="https://www.jetbrains.com/">
                 <img
                   data-aos="fade-up"
-                  className="h-28 relative lg:bottom-10"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-28 relative lg:bottom-8"
                   src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
                   alt="JetBrains"
+                />
+              </a>
+              <a href="http://www.datacamp.com/donates">
+                <img
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-12"
+                  src="https://user-images.githubusercontent.com/63473496/163257043-e2472c13-905c-4f64-8cbc-f2e3c7b7a59c.png"
+                  alt="DataCamp"
                 />
               </a>
               <a href="https://www.postman.com/">
                 <img
                   data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0 relative lg:bottom-5"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-20 relative lg:bottom-3"
                   src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
                   alt="Postman"
+                />
+              </a>
+              <a href="https://fueler.io/">
+                <img
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-12 relative lg:top-1"
+                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                  alt="Fueler"
+                />
+              </a>
+              <a href="https://www.packtpub.com/">
+                <img
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  className="h-12 relative lg:bottom-2 mb-5 md:mb-0"
+                  src="https://user-images.githubusercontent.com/63473496/163258089-e49de008-dbf3-4c25-ae43-54dab9fdeb51.png"
+                  alt="Packt"
                 />
               </a>
               <a href="https://www.oreilly.com/">
                 <img
                   data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
                   className="h-8  mb-5 md:mb-0"
                   src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
+                  alt="O'Reilly"
                 />
               </a>
             </div>
