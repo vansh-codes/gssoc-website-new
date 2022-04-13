@@ -537,7 +537,7 @@ export default function Home() {
                 <img
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom"
-                  className="h-12 relative lg:top-1"
+                  className="h-12 relative lg:bottom-1"
                   src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
                   alt="Fueler"
                 />
