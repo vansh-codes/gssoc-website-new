@@ -17,7 +17,7 @@ const Project = () => {
   const { theme } = useTheme();
   const getProjects2022 = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/Project2022"
+      "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/JSON_EndPoint"
     );
     setData(await response.json());
   };
