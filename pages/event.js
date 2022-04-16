@@ -82,6 +82,14 @@ const Event = () => {
                 src="https://img.icons8.com/android/344/twitter.png"
                 alt="twitter"
               />
+              <img
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
+              <img
+                src="https://img.icons8.com/material/344/start.png"
+                alt="YouTube"
+              />
               {/* <img
               src="https://img.icons8.com/ios-filled/50/000000/mailbox-closed-flag-down.png"
               alt="mail-box"

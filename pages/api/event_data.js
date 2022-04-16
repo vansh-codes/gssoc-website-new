@@ -33,8 +33,8 @@ const items = [
     title: "5th Match 2022",
     poster:
       "https://www.youtube.com/embed/AH3fLqHly_Q",
-    maintitle: "Community Bonding Session",
-    rec_link: "https://youtu.be/AH3fLqHly_Q",
+    maintitle: "Community Bonding Session - Git & GitHub",
+    rec_link: "https://www.youtube.com/embed/AH3fLqHly_Q",
     info: "GSSoC’22 hosted the Community Bonding Session to introduce open-source to beginners. We were privileged to host a beginner-friendly workshop on Git and GitHub under the guidance of Mr. Praveen Kumar and Mr. Rohan Kulkarni.",
     medium: "Youtube",
     fmt:"video",
@@ -48,6 +48,26 @@ const items = [
     info: "To celebrate International Women’s Day, GSSoC’22 hosted a twitter space to have a conversation with Women In Tech. The speakers, Jahnavi Shah, Program Manager at GSSoC’21, Sujata, Lead Developer at JavaScript Mastery, and Ms. Mahak Makharia, Designer and Developer graced the occasion as they shared their experiences, and spoke about the peaks and valleys they have faced throughout their journey.",
     medium: "Twitter",
     fmt:"image",
+  },
+  {
+    title: "5th Match 2022",
+    poster:
+      "https://www.youtube.com/embed/yC_m_VOZ3Ow",
+    maintitle: "Community Bonding Session - Intro To BlockChain",
+    rec_link: "https://www.youtube.com/embed/yC_m_VOZ3Ow",
+    info: "Open Source has enhanced the technology growth speed exponentially. Currently one of the fastest-growing industries is BLOCKCHAIN. Bitcoin, Ethereum, NFT, To the moon ? Don\'t feel the FOMO of not knowing about it? We got you covered. Join us at GirlScript Summer of Code 2022 in a beginner-friendly session on Introduction to Blockchain with some experienced Blockchain Developers. Let\'s deep dive together, shall we? Speakers: Anmol Arora & Yash Garg",
+    medium: "Youtube",
+    fmt:"video",
+  },
+  {
+    title: "5th Match 2022",
+    poster:
+      "https://www.youtube.com/embed/cxWnls_HmP4",
+    maintitle: "How to Develop Games on Blockchain? presented by Moralis",
+    rec_link: "https://www.youtube.com/embed/cxWnls_HmP4",
+    info: "The buzzwords for the 21st century Blockchain, NFTs, Defi and what not. Blockchain Games are the next big thing in the Gaming sector. But how does one build one? Well that's what we have set up. A Hands-on coding experience where you will be able to code a complete blockchain game with Moralis and add it under your Projects Portfolio on Github. ",
+    medium: "Youtube",
+    fmt:"video",
   },
 ];
 
