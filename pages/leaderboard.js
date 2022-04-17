@@ -131,12 +131,14 @@ const columns = [
 
 function Leaderboard() {
   // const classes = useStyles();
+  let [totalData, setTotalData] = useState({});
   let [leaderss, setLeaderss] = useState({});
   let [links, setLinks] = useState("");
   let [login, setLogin] = useState("");
   let [score, setScore] = useState("");
   let [avatar, setAvatar] = useState("");
   let [lastupdated, setLastupdated] = useState("");
+  let [filter, setFilter] = useState("");
   const [openn, setOpenn] = React.useState(true);
   let rows = [];
   function createData(
@@ -144,24 +146,28 @@ function Leaderboard() {
     avatar,
     prnums,
     score,
+    profile_url,
     prlinks,
     level0,
     level1,
     level2,
     level3,
-    level4
+    level4,
+    rank,
   ) {
     return {
       username,
       avatar,
       prnums,
       score,
+      profile_url,
       prlinks,
       level0,
       level1,
       level2,
       level3,
       level4,
+      rank,
     };
   }
   useEffect(() => {
@@ -179,7 +185,9 @@ function Leaderboard() {
             a.login < b.login
           );
         });
-        setLeaderss(data.leaderboard);
+        const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
+        setLeaderss(rankedData);
+        setTotalData(rankedData);
         setOpenn(false);
         setLastupdated(data.updatedTimestring);
       });
@@ -199,7 +207,8 @@ function Leaderboard() {
         leaderss[leader].level1,
         leaderss[leader].level2,
         leaderss[leader].level3,
-        leaderss[leader].level4
+        leaderss[leader].level4,
+        leaderss[leader].rank,
       )
     );
   }
@@ -225,13 +234,22 @@ function Leaderboard() {
     setScore(leaderss[num].score);
   };
 
+  const filterData = () => {
+    if(filter === "" && leaderss.length !== totalData.length){
+      setLeaderss(totalData);
+    } else{
+      const filtered = totalData.filter((leader) => leader.login.toLowerCase().includes(filter.toLowerCase()));
+      setLeaderss(filtered);
+    }
+  }
+
   const handleClose = () => {
     prlinks = [];
     setOpen(false);
   };
   return (
     <>
-      <div className="container transition-colors mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-10 lg:px-20 2xl:px-32 dark:bg-darkmode_gray-0 dark:transition-colors ">
+      <div className="container transition-colors mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-10 lg:px-20 2xl:px-32 dark:bg-darkmode_gray-0 dark:transition-colors " style={{margin:"auto"}}>
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold">
             <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
@@ -249,35 +267,52 @@ function Leaderboard() {
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 <img
                   className="w-12 md:w-16 lg:w-24 rounded-full m-auto inline-block object-cover bg-white"
-                  src={rows[1] !== undefined ? rows[1].avatar : null}
+                  src={totalData[1] !== undefined ? totalData[1].avatar_url : null}
                 />
                   <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
                 <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
-                  2. {rows[1] !== undefined ? rows[1].username[0] : null}
+                  2. {totalData[1] !== undefined ? totalData[1].login : null}
                 </h3>
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4  relative inline-block w-28 md:w-auto">
                 <img
                   className="w-12 md:w-16 lg:w-40 rounded-full m-auto bg-white"
-                  src={rows[1] !== undefined ? rows[0].avatar : null}
+                  src={totalData[0] !== undefined ? totalData[0].avatar_url : null}
                 />
                 <FontAwesomeIcon className="invisible lg:visible w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
                 <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-4 text-xs sm:text-sm md:text-md">
-                  1. {rows[1] !== undefined ? rows[0].username[0] : null}
+                  1. {totalData[0] !== undefined ? totalData[0].login : null}
                 </h3>
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 <img
                   className="w-12 md:w-16 lg:w-24 rounded-full m-auto bg-white"
-                  src={rows[1] !== undefined ? rows[2].avatar : null}
+                  src={totalData[2] !== undefined ? totalData[2].avatar_url : null}
                 />
                 <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
                 <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
-                  3. {rows[1] !== undefined ? rows[2].username[0] : null}
+                  3. {totalData[2] !== undefined ? totalData[2].login : null}
                 </h3>
               </div>
             </div>
 
+            <div className="mt-20">
+              <div className="flex justify-end">
+                <div className="mb-3 xl:w-96">
+                  <div className="input-group relative flex flex-wrap items-stretch w-full mb-4 justify-end">
+                    <div className="relative flex search-container">
+                      <input onChange={(e)=>{setFilter(e.target.value)}} type="search" className="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-400 focus:outline-none dark:placeholder-neutral-300" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" onKeyUp={(e) => {e.key === "Enter" ? filterData() : ""}} />
+                      <span className="search-count dark:text-neutral-300">{leaderss.length}</span>
+                    </div>
+                    <button onClick={()=>{filterData()}} className="btn inline-block px-6 py-2.5 bg-gray-300 dark:bg-neutral-600 text-gray-600 font-medium text-xs leading-tight uppercase hover:text-gray-800 focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2" style={{padding: "10px 18px", maxWidth: "50px", width: "20%"}}>
+                      <svg className="w-4 fill-neutral-600 hover:fill-neutral-800 dark:fill-neutral-300 dark:hover:fill-neutral-100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="bg-sky-100 dark:bg-orange-200 px-1.5 py-1.5 rounded-md mb-3">
               <p className="text-sky-700 dark:text-orange-900 text-sm">
                 The leaderboard was last updated on: <b>{lastupdated}</b>
@@ -330,7 +365,7 @@ function Leaderboard() {
                                       src={value}
                                     />
                                   ) : column.id === "position" ? (
-                                    rows.indexOf(row) + 1
+                                    row.rank
                                   ) : column.id === "username" ? (
                                     <div className="flex relative left-0 md:left-12 lg:left-32">
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
@@ -372,7 +407,7 @@ function Leaderboard() {
                                       src={value}
                                     />
                                   ) : column.id === "position" ? (
-                                    rows.indexOf(row) + 1
+                                    row.rank
                                   ) : column.id === "username" ? (
                                     <div className="flex relative left-0 md:left-12 lg:left-32">
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
