@@ -239,6 +239,18 @@ html {
   text-align: center;
 }
 
+.skeleton-circle-lg{
+  height: 160px !important;
+  width: 160px !important;
+  margin: auto;
+}
+
+.skeleton-circle-md{
+  height: 80px !important;
+  width: 80px !important;
+  margin: auto;
+}
+
 /* media queries for the date part of chrono */
 @media screen and (max-width: 600px) {
   .css-1blinku-TitleWrapper {
@@ -262,11 +274,41 @@ html {
     max-width: 200px;
     width: 80%;
   }
+  .loader-group{
+    height: 150px;
+    width: 150px;
+  }
+  
+  .table-cell{
+    vertical-align: middle;
+  }
+  
+  .loader{
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+  
+  .loading-msg{
+    color: black;
+    margin-top: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .skeleton-circle-lg, .skeleton-circle-md{
+    height: 65px !important;
+    width: 65px !important;
+  }
 }
 
 @media screen and (max-width: 400px){
   .search-container{
     max-width: unset;
     width: 80%;
+  }
+  .skeleton-circle-lg, .skeleton-circle-md{
+    height: 54px !important;
+    width: 54px !important;
   }
 }

@@ -187,30 +187,37 @@ function Leaderboard() {
     fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.")
-        setTimeout(function(){setIsLoading(false), 4000})
+        setTimeout(function(){setIsLoading(false), 8000})
         return res.json()
       })
       .then((data) => {
-        setIsLoading(false);
-        data.leaderboard.sort(function (a, b) {
-          return (
-            b.score - a.score ||
-            b.level4 - a.level4 ||
-            b.level3 - a.level3 ||
-            b.level2 - a.level2 ||
-            b.level1 - a.level1 ||
-            b.level0 - a.level0 ||
-            a.login < b.login
-          );
-        });
-        const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
-        setLeaderss(rankedData);
-        setIsLboardLoading(false);
-        setTotalData(rankedData);
-        setOpenn(false);
-        setLastupdated(data.updatedTimestring);
-        setShowConfetti(true);
-        setTimeout(function (){setShowConfetti(false)}, 15000);
+        if(data.leaderboard.length === 0 && data.success === true){
+          setIsLoading(false)
+          setIsLboardLoading(false)
+          setLastupdated(null);
+        }
+        else{
+          data.leaderboard.sort(function (a, b) {
+            return (
+              b.score - a.score ||
+              b.level4 - a.level4 ||
+              b.level3 - a.level3 ||
+              b.level2 - a.level2 ||
+              b.level1 - a.level1 ||
+              b.level0 - a.level0 ||
+              a.login < b.login
+            );
+          });
+          const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
+          setLeaderss(rankedData);
+          setIsLboardLoading(false);
+          setIsLoading(false);
+          setTotalData(rankedData);
+          setOpenn(false);
+          setLastupdated(data.updatedTimestring);
+          setShowConfetti(true);
+          setTimeout(function (){setShowConfetti(false)}, 15000);
+        }
       });
   }, []);
 
@@ -276,9 +283,9 @@ function Leaderboard() {
       {
         isLoading && 
         <div className="loader-div">
-          <div className="overlay"></div>
+          <div className="overlay dark:bg-darkmode_gray-0"></div>
           <div className="loader-group-container">
-            <div className="loader-group">
+            <div className="loader-group dark:bg-black">
               <Spinner
                 className="loader"
                 thickness='6px'
@@ -287,7 +294,7 @@ function Leaderboard() {
                 color='orange.500'
                 size='xl'
               />
-              <span className="loading-msg">{loadingMsg}</span>
+              <span className="loading-msg dark:text-white">{loadingMsg}</span>
             </div>
           </div>
         </div>}
@@ -315,7 +322,7 @@ function Leaderboard() {
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 {(totalData[1] === undefined) && 
                   <>
-                    <SkeletonCircle size='20' />
+                    <SkeletonCircle className="skeleton-circle-md" />
                     <SkeletonText mt='4' noOfLines={1} spacing='4' />
                   </>
                 }
@@ -332,7 +339,7 @@ function Leaderboard() {
 
                 {(totalData[0] === undefined) && 
                   <>
-                    <SkeletonCircle style={{height: "120px", width: "120px"}} />
+                    <SkeletonCircle className="skeleton-circle-lg" />
                     <SkeletonText mt='4' noOfLines={1} spacing='4' />
                   </>
                 }
@@ -354,7 +361,7 @@ function Leaderboard() {
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
                 {(totalData[2] === undefined) && 
                     <>
-                      <SkeletonCircle size='20' />
+                      <SkeletonCircle className="skeleton-circle-md" />
                       <SkeletonText mt='4' noOfLines={1} spacing='4' />
                     </>
                 }
@@ -391,7 +398,8 @@ function Leaderboard() {
             </div>
             <div className="bg-sky-100 dark:bg-orange-200 px-1.5 py-1.5 rounded-md mb-3">
               <p className="text-sky-700 dark:text-orange-900 text-sm">
-                The leaderboard was last updated on: <b>{lastupdated}</b>
+                {isLoading === false && lastupdated !== "" && <>The leaderboard was last updated on: <b>{lastupdated}</b></>}
+                {isLoading === false && lastupdated === null && <>The server is updating. Please comeback after 5-10 mins</>}
               </p>
             </div>
 
@@ -509,7 +517,7 @@ function Leaderboard() {
                     })}
                   </div>}
                 </div>
-                {(rows.length === 0) && 
+                {isLboardLoading && 
                       <Stack style={{marginTop: "10px"}}>
                         <Skeleton height='40px' />
                         <Skeleton height='40px' />
