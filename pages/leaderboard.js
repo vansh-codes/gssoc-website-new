@@ -16,6 +16,9 @@ import Dialog from "@material-ui/core/Dialog";
 // import DialogTitle from "@material-ui/core/DialogTitle";
 // import Backdrop from "@material-ui/core/Backdrop";
 // import CircularProgress from "@material-ui/core/CircularProgress";
+import { Spinner } from '@chakra-ui/react'
+import Confetti from 'react-confetti'
+import { Skeleton, SkeletonCircle, SkeletonText, Stack } from '@chakra-ui/react'
 
 import {
     faGithub,
@@ -139,6 +142,10 @@ function Leaderboard() {
   let [avatar, setAvatar] = useState("");
   let [lastupdated, setLastupdated] = useState("");
   let [filter, setFilter] = useState("");
+  let [isLoading, setIsLoading] = useState(false);
+  let [isLboardLoading, setIsLboardLoading] = useState(false);
+  let [loadingMsg, setLoadingMsg] = useState("Sent request to the server");
+  let [showConfetti, setShowConfetti] = useState(false);
   const [openn, setOpenn] = React.useState(true);
   let rows = [];
   function createData(
@@ -171,9 +178,20 @@ function Leaderboard() {
     };
   }
   useEffect(() => {
+    setIsLoading(true);
+    setIsLboardLoading(true);
+    setTimeout(function(){
+      setLoadingMsg("Waiting for response from server")
+    }, 600);
+    // clearTimeout(timeout)
     fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")
-      .then((res) => res.json())
+      .then((res) => {
+        setLoadingMsg("Data received. Starting to populate.")
+        setTimeout(function(){setIsLoading(false), 4000})
+        return res.json()
+      })
       .then((data) => {
+        setIsLoading(false);
         data.leaderboard.sort(function (a, b) {
           return (
             b.score - a.score ||
@@ -187,9 +205,12 @@ function Leaderboard() {
         });
         const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
         setLeaderss(rankedData);
+        setIsLboardLoading(false);
         setTotalData(rankedData);
         setOpenn(false);
         setLastupdated(data.updatedTimestring);
+        setShowConfetti(true);
+        setTimeout(function (){setShowConfetti(false)}, 15000);
       });
   }, []);
 
@@ -235,11 +256,14 @@ function Leaderboard() {
   };
 
   const filterData = () => {
+    setIsLboardLoading(true)
     if(filter === "" && leaderss.length !== totalData.length){
       setLeaderss(totalData);
+      setIsLboardLoading(false);
     } else{
       const filtered = totalData.filter((leader) => leader.login.toLowerCase().includes(filter.toLowerCase()));
       setLeaderss(filtered);
+      setIsLboardLoading(false);
     }
   }
 
@@ -249,6 +273,30 @@ function Leaderboard() {
   };
   return (
     <>
+      {
+        isLoading && 
+        <div className="loader-div">
+          <div className="overlay"></div>
+          <div className="loader-group-container">
+            <div className="loader-group">
+              <Spinner
+                className="loader"
+                thickness='6px'
+                speed='0.65s'
+                emptyColor='gray.200'
+                color='orange.500'
+                size='xl'
+              />
+              <span className="loading-msg">{loadingMsg}</span>
+            </div>
+          </div>
+        </div>}
+      {
+        showConfetti && 
+        <Confetti
+          className="fullscreen"
+        />
+      }
       <div className="container transition-colors mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-10 lg:px-20 2xl:px-32 dark:bg-darkmode_gray-0 dark:transition-colors " style={{margin:"auto"}}>
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold">
@@ -265,34 +313,62 @@ function Leaderboard() {
           <div className="py-5 px-0 xl:pb-12 xl:px-24 xl:pt-0 text-center">
             <div className="flex md:flex-row justify-between gap-y-1 gap-x-1 md:gap-x-2 items-center my-10">
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
-                <img
+                {(totalData[1] === undefined) && 
+                  <>
+                    <SkeletonCircle size='20' />
+                    <SkeletonText mt='4' noOfLines={1} spacing='4' />
+                  </>
+                }
+                {totalData[1] !== undefined && <><img
                   className="w-12 md:w-16 lg:w-24 rounded-full m-auto inline-block object-cover bg-white"
                   src={totalData[1] !== undefined ? totalData[1].avatar_url : null}
                 />
                   <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-amber-300 inline-block" icon={faGithub} size="2x" />
                 <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
                   2. {totalData[1] !== undefined ? totalData[1].login : null}
-                </h3>
+                </h3></>}
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4  relative inline-block w-28 md:w-auto">
-                <img
-                  className="w-12 md:w-16 lg:w-40 rounded-full m-auto bg-white"
-                  src={totalData[0] !== undefined ? totalData[0].avatar_url : null}
-                />
-                <FontAwesomeIcon className="invisible lg:visible w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
-                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-4 text-xs sm:text-sm md:text-md">
-                  1. {totalData[0] !== undefined ? totalData[0].login : null}
-                </h3>
+
+                {(totalData[0] === undefined) && 
+                  <>
+                    <SkeletonCircle style={{height: "120px", width: "120px"}} />
+                    <SkeletonText mt='4' noOfLines={1} spacing='4' />
+                  </>
+                }
+
+                {
+                  totalData[0] !== undefined && 
+                  <>
+                    <img
+                      className="w-12 md:w-16 lg:w-40 rounded-full m-auto bg-white"
+                      src={totalData[0] !== undefined ? totalData[0].avatar_url : null}
+                    />
+                    <FontAwesomeIcon className="invisible lg:visible w-10 h-10 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-cyan-200 inline-block" icon={faGithub} size="3x" />
+                    <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-4 text-xs sm:text-sm md:text-md">
+                      1. {totalData[0] !== undefined ? totalData[0].login : null}
+                    </h3>
+                  </>
+                }
               </div>
               <div className="bg-white shadow-2xl dark:bg-black rounded-md px-0 sm:px-3 py-2 md:px-16 lg:py-4 relative inline-block w-28 md:w-auto">
-                <img
-                  className="w-12 md:w-16 lg:w-24 rounded-full m-auto bg-white"
-                  src={totalData[2] !== undefined ? totalData[2].avatar_url : null}
-                />
-                <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
-                <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
-                  3. {totalData[2] !== undefined ? totalData[2].login : null}
-                </h3>
+                {(totalData[2] === undefined) && 
+                    <>
+                      <SkeletonCircle size='20' />
+                      <SkeletonText mt='4' noOfLines={1} spacing='4' />
+                    </>
+                }
+                {totalData[2] !== undefined &&
+                <>
+                  <img
+                    className="w-12 md:w-16 lg:w-24 rounded-full m-auto bg-white"
+                    src={totalData[2] !== undefined ? totalData[2].avatar_url : null}
+                  />
+                  <FontAwesomeIcon className="invisible lg:visible w-8 h-8 rounded-full border-5 border-white absolute bottom-1/4 right-1/4 bg-zinc-100 inline-block" icon={faGithub} size="2x" />
+                  <h3 className="text-black dark:text-primary_orange-0 font-semibold mt-2 text-xs sm:text-sm md:text-md">
+                    3. {totalData[2] !== undefined ? totalData[2].login : null}
+                  </h3>
+                </>}
               </div>
             </div>
 
@@ -336,6 +412,7 @@ function Leaderboard() {
                       ))}
                     </div>
                   </div>
+                  {!isLboardLoading &&
                   <div className="table-row-group">
                     {rows.map((row, i) => {
                       return (
@@ -355,6 +432,7 @@ function Leaderboard() {
                                   className="table-cell px-4 py-2 bg-orange-50 text-black  dark:bg-neutral-900 dark:text-white font-medium"
                                   key={column.id}
                                   align={column.align}
+                                  style={{verticalAlign: "middle"}}
                                   onClick={() => {
                                     handleClickOpen(rows.indexOf(row));
                                   }}
@@ -429,8 +507,16 @@ function Leaderboard() {
                         </>
                       );
                     })}
-                  </div>
+                  </div>}
                 </div>
+                {(rows.length === 0) && 
+                      <Stack style={{marginTop: "10px"}}>
+                        <Skeleton height='40px' />
+                        <Skeleton height='40px' />
+                        <Skeleton height='40px' />
+                        <Skeleton height='40px' />
+                      </Stack>
+                  }
               </div>
             {/* </Paper> */}
             <Dialog
