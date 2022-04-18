@@ -458,6 +458,7 @@ function Leaderboard() {
                                       <a
                                         href={value[1]}
                                         className="no-underline"
+                                        style={{alignSelf : "center"}}
                                       >
                                         {value[0]}
                                       </a>
@@ -500,6 +501,7 @@ function Leaderboard() {
                                       <a
                                         href={value[1]}
                                         className="no-underline"
+                                        style={{alignSelf : "center"}}
                                       >
                                         {value[0]}
                                       </a>
