@@ -12,7 +12,7 @@ jobs:
         name: A job to automate contrib in readme
         steps:
             - name: Contribute List
-              uses: Suvraneel/contributors-readme-action@@v2.3.4
+              uses: Suvraneel/contributors-readme-action@v2.3.4
               with:
                   readme_path: "contributors.md"
               env:
