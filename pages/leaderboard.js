@@ -19,6 +19,7 @@ import Dialog from "@material-ui/core/Dialog";
 import { Spinner } from '@chakra-ui/react'
 import Confetti from 'react-confetti'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack } from '@chakra-ui/react'
+import { useTheme } from "next-themes";
 
 import {
     faGithub,
@@ -43,6 +44,12 @@ const columns = [
     minWidth: 100,
     align: "right",
   },
+  {
+    id: "viewBtn",
+    label: "",
+    minWidth: 100,
+    align: "right"
+  }
 ];
 
 // const StyledTableCell = withStyles((theme) => ({
@@ -134,9 +141,10 @@ const columns = [
 
 function Leaderboard() {
   // const classes = useStyles();
+  const { theme } = useTheme();
   let [totalData, setTotalData] = useState({});
   let [leaderss, setLeaderss] = useState({});
-  let [links, setLinks] = useState("");
+  let [links, setLinks] = useState([]);
   let [login, setLogin] = useState("");
   let [score, setScore] = useState("");
   let [avatar, setAvatar] = useState("");
@@ -441,9 +449,6 @@ function Leaderboard() {
                                   key={column.id}
                                   align={column.align}
                                   style={{verticalAlign: "middle"}}
-                                  onClick={() => {
-                                    handleClickOpen(rows.indexOf(row));
-                                  }}
                                 >
                                   {column.id === "avatar" ? (
                                     <img
@@ -457,13 +462,32 @@ function Leaderboard() {
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
-                                        className="no-underline"
-                                        style={{alignSelf : "center"}}
+                                        className="no-underline username"
+                                        style={{alignSelf : "center", cursor: "pointer"}}
                                       >
                                         {value[0]}
                                       </a>
                                     </div>
-                                  ) : (
+                                  )  : column.id === "viewBtn" ? (
+                                    <button
+                                      onClick={() => {
+                                        handleClickOpen(rows.indexOf(row));
+                                      }}
+                                      color="primary"
+                                      className="view-btn"
+                                      style={{
+                                        background: "#FA6329",
+                                        border: "none",
+                                        padding: "5px 12px",
+                                        color: "white",
+                                        borderRadius: 5,
+                                        cursor: "pointer",
+                                        fontSize: "17px"
+                                      }}
+                                    >
+                                      View
+                                    </button>
+                                  )  : (
                                     value
                                   )}
                                 </div>
@@ -479,14 +503,12 @@ function Leaderboard() {
                           >
                             {columns.map((column) => {
                               const value = row[column.id];
+                              console.log(value)
                               return (
                                 <div
                                   className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium"
                                   key={column.id}
                                   align={column.align}
-                                  onClick={() => {
-                                    handleClickOpen(rows.indexOf(row));
-                                  }}
                                 >
                                   {column.id === "avatar" ? (
                                     <img
@@ -500,12 +522,31 @@ function Leaderboard() {
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
-                                        className="no-underline"
+                                        className="no-underline username"
                                         style={{alignSelf : "center"}}
                                       >
                                         {value[0]}
                                       </a>
                                     </div>
+                                  ) : column.id === "viewBtn" ? (
+                                    <button
+                                      onClick={() => {
+                                        handleClickOpen(rows.indexOf(row));
+                                      }}
+                                      color="primary"
+                                      className="view-btn"
+                                      style={{
+                                        background: "#FA6329",
+                                        border: "none",
+                                        padding: "5px 12px",
+                                        color: "white",
+                                        borderRadius: 5,
+                                        cursor: "pointer",
+                                        fontSize: "17px"
+                                      }}
+                                    >
+                                      View
+                                    </button>
                                   ) : (
                                     value
                                   )}
@@ -534,8 +575,9 @@ function Leaderboard() {
               onClose={handleClose}
               aria-labelledby="alert-dialog-slide-title"
               aria-describedby="alert-dialog-slide-description"
+              className={theme==='dark'?"dark-modal":""}
             >
-              <div className="flex m-0 py-4 px-6 font-medium text-lg leading-relaxed" id="alert-dialog-slide-title">
+              <div className="dark:text-white flex m-0 py-4 px-6 font-medium text-lg leading-relaxed" id="alert-dialog-slide-title">
                 {login + "'s Stats"}
               </div>
               <div className="flex-auto py-2 px-6 overflow-y-auto">
@@ -547,31 +589,29 @@ function Leaderboard() {
                       className="w-12 rounded-full xl:w-24"
                     />
                     <p
-                      className="w-24 rounded-full xl:w-36 p-3 text-center"
-                      style={{
-                        backgroundColor: "#ebfaeb",
-                        marginLeft: 20,
-                        fontSize: 25,
-                      }}
+                      className="dark:bg-neutral-900 dark:text-white w-24 rounded-full xl:w-36 p-3 text-center modal-score"
                     >
                       🏆 {score}
                     </p>
                   </div>
-                  <div style={{ marginTop: 30 }}>List Of PRs: </div>
-                  {links}
+                  <div className="dark:text-white" style={{ marginTop: 30 }}>List Of PRs: </div>
+                  {links.length !== 0 && links.map((link) => <a className="pr-links" href={link} key={link}>{link}</a>)}
+                  {/* {console.log(links)} */}
                 </div>
               </div>
               <div className="flex px-2 py-2 items-center justify-end">
                 <button
                   onClick={handleClose}
                   color="primary"
+                  className="close-btn"
                   style={{
                     background: "#FA6329",
                     border: "none",
-                    padding: 15,
+                    padding: "10px 20px",
                     color: "white",
                     borderRadius: 5,
                     cursor: "pointer",
+                    fontSize: "18px"
                   }}
                 >
                   Close
