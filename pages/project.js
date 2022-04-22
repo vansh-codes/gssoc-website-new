@@ -69,7 +69,7 @@ const Project = () => {
               <input
                 className="px-3 py-1 border-b-2 bg-transparent outline-none dark:text-white text-black"
                 type="search"
-                placeholder="Search..."
+                placeholder="Filter by Tech Stack..."
                 name="search"
                 id="search"
                 onChange={(event) => {
