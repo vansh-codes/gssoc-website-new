@@ -458,7 +458,7 @@ function Leaderboard() {
                                   ) : column.id === "position" ? (
                                     row.rank
                                   ) : column.id === "username" ? (
-                                    <div className="flex relative left-0 md:left-12 lg:left-32">
+                                    <div className="flex relative left-6 md:left-12 lg:left-24">
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
@@ -503,7 +503,6 @@ function Leaderboard() {
                           >
                             {columns.map((column) => {
                               const value = row[column.id];
-                              console.log(value)
                               return (
                                 <div
                                   className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium"
@@ -518,7 +517,7 @@ function Leaderboard() {
                                   ) : column.id === "position" ? (
                                     row.rank
                                   ) : column.id === "username" ? (
-                                    <div className="flex relative left-0 md:left-12 lg:left-32">
+                                    <div className="flex relative left-6 md:left-12 lg:left-24">
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
@@ -596,7 +595,6 @@ function Leaderboard() {
                   </div>
                   <div className="dark:text-white" style={{ marginTop: 30 }}>List Of PRs: </div>
                   {links.length !== 0 && links.map((link) => <a className="pr-links" href={link} key={link}>{link}</a>)}
-                  {/* {console.log(links)} */}
                 </div>
               </div>
               <div className="flex px-2 py-2 items-center justify-end">
