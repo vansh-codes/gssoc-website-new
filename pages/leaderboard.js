@@ -20,12 +20,13 @@ import { Spinner } from '@chakra-ui/react'
 import Confetti from 'react-confetti'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack } from '@chakra-ui/react'
 import { useTheme } from "next-themes";
-
+import Pagination from "react-js-pagination";
 import {
     faGithub,
     // faGithubSquare,
   } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faList } from "@fortawesome/free-solid-svg-icons";
 
 const columns = [
   { id: "position", label: "Rank", minWidth: 50 },
@@ -142,8 +143,9 @@ const columns = [
 function Leaderboard() {
   // const classes = useStyles();
   const { theme } = useTheme();
-  let [totalData, setTotalData] = useState({});
-  let [leaderss, setLeaderss] = useState({});
+  let [totalData, setTotalData] = useState([]);
+  let [leaderss, setLeaderss] = useState([]);
+  let [searchData, setSearchData] = useState([]);
   let [links, setLinks] = useState([]);
   let [login, setLogin] = useState("");
   let [score, setScore] = useState("");
@@ -155,6 +157,7 @@ function Leaderboard() {
   let [loadingMsg, setLoadingMsg] = useState("Sent request to the server");
   let [showConfetti, setShowConfetti] = useState(false);
   const [openn, setOpenn] = React.useState(true);
+  const [activePage, setActivePage] = useState(1);
   let rows = [];
   function createData(
     username,
@@ -217,10 +220,11 @@ function Leaderboard() {
             );
           });
           const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
-          setLeaderss(rankedData);
+          setLeaderss(rankedData.slice(0, 10));
           setIsLboardLoading(false);
           setIsLoading(false);
           setTotalData(rankedData);
+          setSearchData(rankedData);
           setOpenn(false);
           setLastupdated(data.updatedTimestring);
           setShowConfetti(true);
@@ -273,11 +277,13 @@ function Leaderboard() {
   const filterData = () => {
     setIsLboardLoading(true)
     if(filter === "" && leaderss.length !== totalData.length){
-      setLeaderss(totalData);
+      setSearchData(totalData);
+      setActivePage(1);
       setIsLboardLoading(false);
     } else{
       const filtered = totalData.filter((leader) => leader.login.toLowerCase().includes(filter.toLowerCase()));
-      setLeaderss(filtered);
+      setSearchData(filtered);
+      setActivePage(1);
       setIsLboardLoading(false);
     }
   }
@@ -286,6 +292,21 @@ function Leaderboard() {
     prlinks = [];
     setOpen(false);
   };
+
+  const handlePageChange = (pageNumber) => {
+    console.log(`active page is ${pageNumber}`);
+    setActivePage(pageNumber);
+  }
+
+  useEffect(()=>{
+    if(((activePage-1)*10)+10<searchData.length){
+      setLeaderss(searchData.slice((activePage-1)*10, ((activePage-1)*10)+10));
+    } else{
+      setLeaderss(searchData.slice((activePage-1)*10));
+    }
+    
+  }, [activePage, searchData])
+
   return (
     <>
       {
@@ -393,7 +414,7 @@ function Leaderboard() {
                   <div className="input-group relative flex flex-wrap items-stretch w-full mb-4 justify-end">
                     <div className="relative flex search-container">
                       <input onChange={(e)=>{setFilter(e.target.value)}} type="search" className="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-400 focus:outline-none dark:placeholder-neutral-300" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" onKeyUp={(e) => {e.key === "Enter" ? filterData() : ""}} />
-                      <span className="search-count dark:text-neutral-300">{leaderss.length}</span>
+                      <span className="search-count dark:text-neutral-300">{searchData.length}</span>
                     </div>
                     <button onClick={()=>{filterData()}} className="btn inline-block px-6 py-2.5 bg-gray-300 dark:bg-neutral-600 text-gray-600 font-medium text-xs leading-tight uppercase hover:text-gray-800 focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2" style={{padding: "10px 18px", maxWidth: "50px", width: "20%"}}>
                       <svg className="w-4 fill-neutral-600 hover:fill-neutral-800 dark:fill-neutral-300 dark:hover:fill-neutral-100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -429,6 +450,7 @@ function Leaderboard() {
                     </div>
                   </div>
                   {!isLboardLoading &&
+                  <>
                   <div className="table-row-group">
                     {rows.map((row, i) => {
                       return (
@@ -485,7 +507,7 @@ function Leaderboard() {
                                         fontSize: "17px"
                                       }}
                                     >
-                                      View
+                                      <FontAwesomeIcon icon={faList} />
                                     </button>
                                   )  : (
                                     value
@@ -544,7 +566,7 @@ function Leaderboard() {
                                         fontSize: "17px"
                                       }}
                                     >
-                                      View
+                                      <FontAwesomeIcon icon={faList} />
                                     </button>
                                   ) : (
                                     value
@@ -557,7 +579,8 @@ function Leaderboard() {
                         </>
                       );
                     })}
-                  </div>}
+                  </div>
+                </>}
                 </div>
                 {isLboardLoading && 
                       <Stack style={{marginTop: "10px"}}>
@@ -567,7 +590,23 @@ function Leaderboard() {
                         <Skeleton height='40px' />
                       </Stack>
                   }
-              </div>
+                </div>
+                <div className="pagination-holder">
+                      <Pagination
+                        innerClass={theme==='dark'?"dark-theme pagination":"pagination"}
+                        itemClass="page-item"
+                        linkClass="page-link"
+                        activePage={activePage}
+                        activeClass="active-page"
+                        itemsCountPerPage={10}
+                        totalItemsCount={searchData.length}
+                        pageRangeDisplayed={5}
+                        onChange={(e)=>{
+                          console.log(e)
+                          handlePageChange(e)
+                        }}
+                      />
+                    </div>
             {/* </Paper> */}
             <Dialog
               open={open}
