@@ -312,3 +312,35 @@ html {
     width: 54px !important;
   }
 }
+
+.pr-links{
+  color:#2563eb;
+  opacity: 0.9;
+}
+.dark-modal .pr-links{
+  color: #dbeafe;
+}
+
+.pr-links:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.close-btn:hover, .view-btn:hover{
+  background-color: #fa500c !important;
+}
+
+.dark-modal .MuiDialog-paper{
+  background-color: #303030;
+  background-color: black;
+}
+
+.modal-score{
+  background-color: #ebfaeb;
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.username:hover{
+  text-decoration: underline;
+}
