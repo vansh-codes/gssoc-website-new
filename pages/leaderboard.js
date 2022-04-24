@@ -27,7 +27,7 @@ import {
   } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
-
+import { useCallback } from 'react'
 const columns = [
   { id: "position", label: "Rank", minWidth: 50 },
   { id: "avatar", label: "Avatar", minWidth: 50 },
@@ -144,14 +144,14 @@ function useWindowDimensions() {
 
   const hasWindow = typeof window !== 'undefined';
 
-  function getWindowDimensions() {
+  var getWindowDimensions = useCallback(() => {
     const width = hasWindow ? window.innerWidth : null;
     const height = hasWindow ? window.innerHeight : null;
     return {
       width,
       height,
     };
-  }
+  }, [hasWindow])
 
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
@@ -164,7 +164,7 @@ function useWindowDimensions() {
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }
-  }, [hasWindow]);
+  }, [getWindowDimensions, hasWindow]);
 
   return windowDimensions;
 }
@@ -188,7 +188,7 @@ function Leaderboard() {
   const [openn, setOpenn] = React.useState(true);
   const [activePage, setActivePage] = useState(1);
   const { height, width } = useWindowDimensions();
-  console.log("Width : ", width);
+  // console.log("Width : ", width);
   let rows = [];
   function createData(
     username,
@@ -251,7 +251,7 @@ function Leaderboard() {
             );
           });
           const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
-          setLeaderss(rankedData.slice(0, 10));
+          setLeaderss(rankedData.slice(0, 50));
           setIsLboardLoading(false);
           setIsLoading(false);
           setTotalData(rankedData);
@@ -259,7 +259,7 @@ function Leaderboard() {
           setOpenn(false);
           setLastupdated(data.updatedTimestring);
           setShowConfetti(true);
-          setTimeout(function (){setShowConfetti(false)}, 15000);
+          setTimeout(function (){setShowConfetti(false)}, 5000);
         }
       });
   }, []);
@@ -330,10 +330,10 @@ function Leaderboard() {
   }
 
   useEffect(()=>{
-    if(((activePage-1)*10)+10<searchData.length){
-      setLeaderss(searchData.slice((activePage-1)*10, ((activePage-1)*10)+10));
+    if(((activePage-1)*50)+50<searchData.length){
+      setLeaderss(searchData.slice((activePage-1)*50, ((activePage-1)*50)+50));
     } else{
-      setLeaderss(searchData.slice((activePage-1)*10));
+      setLeaderss(searchData.slice((activePage-1)*50));
     }
     
   }, [activePage, searchData])
@@ -515,8 +515,9 @@ function Leaderboard() {
                                     <FontAwesomeIcon  className="mr-5" icon={faGithub} size="2x" />
                                       <a
                                         href={value[1]}
+                                        target="_blank"
                                         className="no-underline username"
-                                        style={{alignSelf : "center", cursor: "pointer"}}
+                                        style={{alignSelf : "center", cursor: "pointer"}} rel="noreferrer"
                                       >
                                         {value[0]}
                                       </a>
@@ -629,7 +630,7 @@ function Leaderboard() {
                         linkClass="page-link"
                         activePage={activePage}
                         activeClass="active-page"
-                        itemsCountPerPage={10}
+                        itemsCountPerPage={50}
                         totalItemsCount={searchData.length}
                         pageRangeDisplayed={width<600 ? 3 : 5}
                         onChange={(e)=>{
