@@ -140,6 +140,35 @@ const columns = [
 //   };
 // });
 
+function useWindowDimensions() {
+
+  const hasWindow = typeof window !== 'undefined';
+
+  function getWindowDimensions() {
+    const width = hasWindow ? window.innerWidth : null;
+    const height = hasWindow ? window.innerHeight : null;
+    return {
+      width,
+      height,
+    };
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    if (hasWindow) {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [hasWindow]);
+
+  return windowDimensions;
+}
+
 function Leaderboard() {
   // const classes = useStyles();
   const { theme } = useTheme();
@@ -158,6 +187,8 @@ function Leaderboard() {
   let [showConfetti, setShowConfetti] = useState(false);
   const [openn, setOpenn] = React.useState(true);
   const [activePage, setActivePage] = useState(1);
+  const { height, width } = useWindowDimensions();
+  console.log("Width : ", width);
   let rows = [];
   function createData(
     username,
@@ -600,7 +631,7 @@ function Leaderboard() {
                         activeClass="active-page"
                         itemsCountPerPage={10}
                         totalItemsCount={searchData.length}
-                        pageRangeDisplayed={5}
+                        pageRangeDisplayed={width<600 ? 3 : 5}
                         onChange={(e)=>{
                           console.log(e)
                           handlePageChange(e)
