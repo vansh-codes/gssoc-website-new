@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Money } from "@material-ui/icons";
 
-export default () => {
+function Carousel(){
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -34,7 +34,7 @@ export default () => {
           if (mouseOver) return;
           timeout = setTimeout(() => {
             slider.next();
-          }, 1000);
+          }, 2000);
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
@@ -70,7 +70,7 @@ export default () => {
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
                   Top 3 Contributors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none md:text-lg">
                   <li className="mb-2">
                     <span className="pr-2">💲</span>
                     Cash Prizes
@@ -122,7 +122,7 @@ export default () => {
                 <p className="text-3xl mb-5 text-white font-sans font-semibold">
                   Top 10 Contributors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none  md:text-lg">
                   {/* <li className="mb-2">
                     <span className="pr-2">
                       💲
@@ -162,7 +162,7 @@ export default () => {
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
                   Top 25 Contributors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none md:text-lg">
                   <li className="mb-2">
                     <span className="pr-2">👕</span>
                     Cool T-shirts and Schwag Kits
@@ -206,7 +206,7 @@ export default () => {
                 <p className="text-3xl mb-5 text-white font-sans font-semibold">
                   Top 50 Contributors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none md:text-lg">
                   <li className="mb-2">
                     <span className="pr-2">🔊</span>
                     Shout outs on Socials
@@ -232,10 +232,14 @@ export default () => {
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
                   Top 100 Contributors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none md:text-lg">
                   <li className="mb-2">
                     <span className="pr-2">🏅</span>
                     Certificate of Appreciation
+                  </li>
+                  <li className="mb-2">
+                    <span className="pr-2">😎</span>
+                    Subscriptions from In-Kind Sponsors
                   </li>
                 </ol>
               </div>
@@ -263,7 +267,7 @@ export default () => {
                 <p className="text-3xl mb-5 text-white font-sans font-semibold">
                   Rewards for Active Project Admins and Mentors
                 </p>
-                <ol className="list-none">
+                <ol className="list-none md:text-lg">
                   <li className="mb-2">
                     <span className="pr-2">👕</span>
                     Cool T-shirts and Schwag Kits
@@ -330,3 +334,5 @@ function Arrow(props) {
     </svg>
   );
 }
+
+export default Carousel;
