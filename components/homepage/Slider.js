@@ -61,7 +61,10 @@ export default () => {
           ref={sliderRef}
           className="keen-slider cursor-grab rounded-xl h-96"
         >
-          <div className="keen-slider__slide number-slide1 flex flex-col items-center justify-center bg-black p-10">
+          <div
+            id="BlackCon"
+            className="keen-slider__slide number-slide1 flex flex-col items-center justify-center p-10"
+          >
             <div className="flex justify-between items-center text-white text-md">
               <div className="left__container md:mr-20">
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
@@ -103,7 +106,10 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="keen-slider__slide number-slide2 bg-primary_orange-0 flex items-center p-10 justify-center">
+          <div
+            id="BlobCon"
+            className="keen-slider__slide number-slide2  flex items-center p-10 justify-center"
+          >
             <div className="flex justify-between items-center text-white text-md">
               <div className="left__container hidden md:block">
                 <img
@@ -147,7 +153,10 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="keen-slider__slide number-slide3 bg-black flex items-center justify-center">
+          <div
+            id="BlackCon"
+            className="keen-slider__slide number-slide3 flex items-center justify-center"
+          >
             <div className="flex justify-between items-center p-10 text-white text-md">
               <div className="left__container md:mr-20">
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
@@ -181,7 +190,10 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="keen-slider__slide number-slide4 bg-primary_orange-0 flex items-center p-10 justify-center">
+          <div
+            id="OrangeCon"
+            className="keen-slider__slide number-slide4  flex items-center p-10 justify-center"
+          >
             <div className="flex justify-between items-center text-white text-md">
               <div className="left__container hidden md:block">
                 <img
@@ -211,7 +223,10 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="keen-slider__slide number-slide5 bg-black flex items-center p-10 justify-center">
+          <div
+            id="BlackCon"
+            className="keen-slider__slide number-slide5  flex items-center p-10 justify-center"
+          >
             <div className="flex justify-between items-center text-white text-md">
               <div className="left__container md:mr-20">
                 <p className="text-3xl mb-5 text-primary_orange-0 font-sans font-semibold">
@@ -233,7 +248,10 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="keen-slider__slide number-slide6 bg-primary_orange-0 flex items-center p-10 justify-center">
+          <div
+            id="PNGCon"
+            className="keen-slider__slide number-slide6 flex items-center p-10 justify-center"
+          >
             <div className="flex justify-between items-center text-white text-md">
               <div className="left__container hidden md:block">
                 <img
