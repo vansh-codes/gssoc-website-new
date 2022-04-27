@@ -21,6 +21,7 @@ import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import Slider from "../components/homepage/Slider";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -100,7 +101,7 @@ export default function Home() {
                 >
                   Register Here
                 </button>
-                
+
                 {/* <Box
                   as="button"
                   height="50px"
@@ -393,7 +394,7 @@ export default function Home() {
             </div>
           </div>
 
-        {/* <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
+          {/* <p className="font-sans font-semibold dark:text-white text-center text-gray-800 text-4xl 2.25rem 3rem mb-8">
           Some of the previous <br />
           <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
             participating organisations
@@ -432,138 +433,143 @@ export default function Home() {
         </div>
 
         {/* sponsors */}
-      <div className="flex flex-row justify-center px-3 mb-20" id="Sponsors">
-        <div className="sponsors__wrapper flex flex-col">
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            data-aos-duration="400"
-            className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
-          >
-            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+        <div className="flex flex-row justify-center px-3 mb-20" id="Sponsors">
+          <div className="sponsors__wrapper flex flex-col">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="400"
+              className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
+            >
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
                 Platinum Sponsors
-            </h3>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
-              <a href="https://moralis.io/">
-                <img
-                  data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
-                  alt="Moralis"
-                />
-              </a>
-              <a href="https://filecoin.io/">
-                <img
-                  data-aos="fade-up"
-                  className="h-20 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/163260977-e0a5e8bd-618f-4691-ae13-02b878819def.png"
-                  alt="Filecoin"
-                />
-              </a>
-            </div>
-            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
+                <a href="https://moralis.io/">
+                  <img
+                    data-aos="fade-up"
+                    className="h-20 mb-5 md:mb-0"
+                    src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
+                    alt="Moralis"
+                  />
+                </a>
+                <a href="https://filecoin.io/">
+                  <img
+                    data-aos="fade-up"
+                    className="h-20 mb-5 md:mb-0"
+                    src="https://user-images.githubusercontent.com/63473496/163260977-e0a5e8bd-618f-4691-ae13-02b878819def.png"
+                    alt="Filecoin"
+                  />
+                </a>
+              </div>
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
                 Silver Sponsors
-            </h3>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
-              <a href="https://mentro.tech/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-24 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/163266199-53c5a68a-e6ee-4fc9-8b3d-689d4e32a43b.png"
-                  alt="Mentro"
-                />
-              </a>
-            </div>
-            <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
+                <a href="https://mentro.tech/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-24 mb-5 md:mb-0"
+                    src="https://user-images.githubusercontent.com/63473496/163266199-53c5a68a-e6ee-4fc9-8b3d-689d4e32a43b.png"
+                    alt="Mentro"
+                  />
+                </a>
+              </div>
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
                 In Kind Sponsors
-            </h3>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly">
-              <a href="https://www.taskade.com/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-16"
-                  src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
-                  alt="Taskade"
-                />
-              </a>
-              <a href="https://gen.xyz/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-16"
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
-                  alt=".XYZ"
-                />
-              </a>
-              <a href="https://teleporthq.io/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-16"
-                  src="https://user-images.githubusercontent.com/63473496/163260136-1e4eb2d0-a217-4d7e-a0f5-dcd63d9ba6a8.svg"
-                  alt="TeleportHQ"
-                />
-              </a>
-              <a href="https://www.jetbrains.com/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-28 relative lg:bottom-8"
-                  src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
-                  alt="JetBrains"
-                />
-              </a>
-              <a href="http://www.datacamp.com/donates">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-12"
-                  src="https://user-images.githubusercontent.com/63473496/163257043-e2472c13-905c-4f64-8cbc-f2e3c7b7a59c.png"
-                  alt="DataCamp"
-                />
-              </a>
-              <a href="https://www.postman.com/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-20 relative lg:bottom-3"
-                  src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
-                  alt="Postman"
-                />
-              </a>
-              <a href="https://fueler.io/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-12 relative lg:bottom-1"
-                  src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
-                  alt="Fueler"
-                />
-              </a>
-              <a href="https://www.packtpub.com/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-12 relative lg:bottom-2 mb-5 md:mb-0"
-                  src="https://user-images.githubusercontent.com/63473496/163258089-e49de008-dbf3-4c25-ae43-54dab9fdeb51.png"
-                  alt="Packt"
-                />
-              </a>
-              <a href="https://www.oreilly.com/">
-                <img
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="h-8  mb-5 md:mb-0"
-                  src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
-                  alt="O'Reilly"
-                />
-              </a>
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly">
+                <a href="https://www.taskade.com/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
+                    alt="Taskade"
+                  />
+                </a>
+                <a href="https://gen.xyz/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
+                    alt=".XYZ"
+                  />
+                </a>
+                <a href="https://teleporthq.io/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="https://user-images.githubusercontent.com/63473496/163260136-1e4eb2d0-a217-4d7e-a0f5-dcd63d9ba6a8.svg"
+                    alt="TeleportHQ"
+                  />
+                </a>
+                <a href="https://www.jetbrains.com/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-28 relative lg:bottom-8"
+                    src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
+                    alt="JetBrains"
+                  />
+                </a>
+                <a href="http://www.datacamp.com/donates">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-12"
+                    src="https://user-images.githubusercontent.com/63473496/163257043-e2472c13-905c-4f64-8cbc-f2e3c7b7a59c.png"
+                    alt="DataCamp"
+                  />
+                </a>
+                <a href="https://www.postman.com/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-20 relative lg:bottom-3"
+                    src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
+                    alt="Postman"
+                  />
+                </a>
+                <a href="https://fueler.io/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-12 relative lg:bottom-1"
+                    src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                    alt="Fueler"
+                  />
+                </a>
+                <a href="https://www.packtpub.com/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-12 relative lg:bottom-2 mb-5 md:mb-0"
+                    src="https://user-images.githubusercontent.com/63473496/163258089-e49de008-dbf3-4c25-ae43-54dab9fdeb51.png"
+                    alt="Packt"
+                  />
+                </a>
+                <a href="https://www.oreilly.com/">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-8  mb-5 md:mb-0"
+                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
+                    alt="O'Reilly"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        {/* Slider */}
+        <div className="mb-20">
+          <Slider />
+        </div>
 
         <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
@@ -624,7 +630,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
 
       {/* Schedule */}
       <div className="schedule__container flex flex-col items-center mb-48 ">
