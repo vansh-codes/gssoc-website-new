@@ -230,7 +230,7 @@ function Leaderboard() {
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.")
         setTimeout(function(){setIsLoading(false), 8000})
-        return res.json()
+        return res.json();
       })
       .then((data) => {
         if(data.leaderboard.length === 0 && data.success === true){
@@ -249,8 +249,12 @@ function Leaderboard() {
               b.level0 - a.level0 ||
               a.login < b.login
             );
-          });
-          const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
+          })
+          let blacklist = ["Mrjoy832", "gurjeetsinghvirdee"];
+          console.log("Disqualified : ", blacklist);
+          const rankedData = data.leaderboard.filter((usr) => {
+            return (blacklist.includes(usr.login) === false);
+          }).map((contributorData, idx) => ({...contributorData, rank: idx+1}));
           setLeaderss(rankedData.slice(0, 50));
           setIsLboardLoading(false);
           setIsLoading(false);
