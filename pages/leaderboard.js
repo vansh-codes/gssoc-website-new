@@ -250,7 +250,7 @@ function Leaderboard() {
               a.login < b.login
             );
           })
-          let blacklist = ["Mrjoy832", "gurjeetsinghvirdee"];
+          let blacklist = ["gurjeetsinghvirdee"];
           console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard.filter((usr) => {
             return (blacklist.includes(usr.login) === false);
