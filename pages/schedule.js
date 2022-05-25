@@ -6,11 +6,11 @@ function schedule() {
     <div>
       <Head>
         <title>
-          Schedule | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+          Schedule | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
         <meta
           name="description"
-          content="Schedule of GirlScipt Summer of Code"
+          content="Schedule of GirlScript Summer of Code"
         />
         {/* <link
           rel="icon"
