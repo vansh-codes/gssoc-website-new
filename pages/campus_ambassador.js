@@ -19,9 +19,9 @@ const CA = () => {
     <>
       <Head>
         <title>
-        Campus Ambassador | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+        Campus Ambassador | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
-        <meta name="description" content="GirlScipt Summer of Code Team" />
+        <meta name="description" content="GirlScript Summer of Code Team" />
         {/* <link
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"

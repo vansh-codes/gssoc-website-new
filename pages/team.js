@@ -4,45 +4,26 @@ import Head from "next/head";
 
 const Team = () => {
   const [users, setUsers] = useState([]);
-  const getUsers2022 = async () => {
+  const getUsers = async (year) => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2022"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2021 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2021"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2020 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2020"
-    );
-    setUsers(await response.json());
-  };
-
-  const getUsers2019 = async () => {
-    const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team2019"
+      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team"+year
     );
     setUsers(await response.json());
   };
 
   useEffect(() => {
-    getUsers2022();
+    var customQuery = window.location.href.split("#")[1];    // Direct link to /team#20XX
+    // Note - Only change 2022 with current year of GSSoC
+    customQuery ? getUsers(customQuery) : getUsers("2022");
   }, []);
 
   return (
     <>
       <Head>
         <title>
-          Team | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+          Team | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
-        <meta name="description" content="GirlScipt Summer of Code Team" />
+        <meta name="description" content="GirlScript Summer of Code Team" />
         {/* <link
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
@@ -64,7 +45,7 @@ const Team = () => {
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
-            onClick={() => getUsers2022()}
+            onClick={() => getUsers(2022)}
           >
             2022
           </button>
@@ -72,7 +53,7 @@ const Team = () => {
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
-            onClick={() => getUsers2021()}
+            onClick={() => getUsers(2021)}
           >
             2021
           </button>
@@ -80,7 +61,7 @@ const Team = () => {
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
-            onClick={() => getUsers2020()}
+            onClick={() => getUsers(2020)}
           >
             2020
           </button>
@@ -88,7 +69,7 @@ const Team = () => {
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
-            onClick={() => getUsers2019()}
+            onClick={() => getUsers(2019)}
           >
             2019
           </button>

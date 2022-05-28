@@ -1,21 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { withStyles, makeStyles } from "@material-ui/core/styles";
-// import Paper from "@material-ui/core/Paper";
-// import Table from "@material-ui/core/Table";
-// import TableBody from "@material-ui/core/TableBody";
-// import TableCell from "@material-ui/core/TableCell";
-// import TableContainer from "@material-ui/core/TableContainer";
-// import TableHead from "@material-ui/core/TableHead";
-// import TableRow from "@material-ui/core/TableRow";
-// import GitHubIcon from "@material-ui/icons/GitHub";
-// import Avatar from "@material-ui/core/Avatar";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogActions from "@material-ui/core/DialogActions";
-// import DialogContent from "@material-ui/core/DialogContent";
-// import DialogContentText from "@material-ui/core/DialogContentText";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import Backdrop from "@material-ui/core/Backdrop";
-// import CircularProgress from "@material-ui/core/CircularProgress";
 import { Spinner } from '@chakra-ui/react'
 import Confetti from 'react-confetti'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack } from '@chakra-ui/react'
@@ -53,93 +37,6 @@ const columns = [
   }
 ];
 
-// const StyledTableCell = withStyles((theme) => ({
-//   head: {
-//     backgroundColor: theme.palette.common.black,
-//     color: theme.palette.common.white,
-//   },
-//   body: {
-//     fontSize: 14,
-//     cursor: "pointer",
-//   },
-// }))(TableCell);
-
-// const StyledTableRow = withStyles((theme) => ({
-//   root: {
-//     "&:nth-of-type(odd)": {
-//       backgroundColor: theme.palette.action.hover,
-//     },
-//   },
-// }))(TableRow);
-
-// const useStyles = makeStyles((theme) => {
-//   return {
-//     root: {
-//       width: "100%",
-//     },
-//     container: {
-//       maxHeight: 440,
-//     },
-//     appbar: {
-//       padding: 25,
-//       display: "flex",
-//       alignItems: "center",
-//       justifyContent: "center",
-//       background: "black",
-//     },
-//     leaderimg: {
-//       width: 100,
-//       borderRadius: 1000,
-//       [theme.breakpoints.down(1200)]: {
-//         width: 50,
-//       },
-//     },
-//     leaderimgbig: {
-//       width: 150,
-//       borderRadius: 1000,
-//       [theme.breakpoints.down(1200)]: {
-//         width: 90,
-//       },
-//     },
-//     popover: {
-//       pointerEvents: "none",
-//     },
-//     levelbadge: {
-//       padding: 10,
-//       borderRadius: 5,
-//       backgroundColor: "#f5f5f5",
-//       marginRight: 10,
-//       alignItems: "center",
-//       justifyContent: "center",
-//       fontSize: 12,
-//       fontWeight: "bold",
-//     },
-//     leaders: {
-//       [theme.breakpoints.down(1200)]: {
-//         padding: "0px 50px",
-//         fontSize: "12px",
-//       },
-//       [theme.breakpoints.down(700)]: {
-//         padding: "0px 0px",
-//       },
-//     },
-//     mainroot: {
-//       paddingLeft: 100,
-//       paddingRight: 100,
-//       paddingTop: 0,
-//       paddingBottom: 50,
-//       textAlign: "center",
-//       [theme.breakpoints.down(1200)]: {
-//         padding: 20,
-//       },
-//     },
-//     backdrop: {
-//       zIndex: theme.zIndex.drawer + 1,
-//       color: "#fff",
-//     },
-//   };
-// });
-
 function useWindowDimensions() {
 
   const hasWindow = typeof window !== 'undefined';
@@ -170,7 +67,6 @@ function useWindowDimensions() {
 }
 
 function Leaderboard() {
-  // const classes = useStyles();
   const { theme } = useTheme();
   let [totalData, setTotalData] = useState([]);
   let [leaderss, setLeaderss] = useState([]);
@@ -188,7 +84,6 @@ function Leaderboard() {
   const [openn, setOpenn] = React.useState(true);
   const [activePage, setActivePage] = useState(1);
   const { height, width } = useWindowDimensions();
-  // console.log("Width : ", width);
   let rows = [];
   function createData(
     username,
@@ -230,7 +125,7 @@ function Leaderboard() {
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.")
         setTimeout(function(){setIsLoading(false), 8000})
-        return res.json()
+        return res.json();
       })
       .then((data) => {
         if(data.leaderboard.length === 0 && data.success === true){
@@ -249,8 +144,14 @@ function Leaderboard() {
               b.level0 - a.level0 ||
               a.login < b.login
             );
-          });
-          const rankedData = data.leaderboard.map((contributorData, idx) => ({...contributorData, rank: idx+1}));
+          })
+          let blacklist = [];
+          // console.log("Disqualified : ", blacklist);
+          const rankedData = data.leaderboard
+          // .filter((usr) => {
+          //   return (blacklist.includes(usr.login) === false);
+          // })
+          .map((contributorData, idx) => ({...contributorData, rank: idx+1}));
           setLeaderss(rankedData.slice(0, 50));
           setIsLboardLoading(false);
           setIsLoading(false);

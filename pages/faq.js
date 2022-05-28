@@ -9,9 +9,9 @@ function Faq() {
     <>
       <Head>
         <title>
-          FAQs | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+          FAQs | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
-        <meta name="description" content="FAQs of GirlScipt Summer of Code" />
+        <meta name="description" content="FAQs of GirlScript Summer of Code" />
         {/* <link
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
