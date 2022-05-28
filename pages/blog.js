@@ -72,31 +72,33 @@ const blog = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-60" key={i}>
-                  <div className="p-2 justify-center shadow  bg-black rounded-xl w-full md:h-fit">
+                  <div className="justify-center shadow  bg-black rounded-xl w-full md:h-fit">
                       
-                    <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 rounded-lg lg:my-2 lg:px-2 lg:py-2 ">
+                    <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 ">
                       <div className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md rounded-lg my-1 px-1 w-34 sm:w-fit">
                         <div className="dark:text-black pl-8 text-md text-white 1.5rem 1.5rem ">
                           {curElem["title"]}
                         </div>
                       </div>
-                  </div>
+                    </div>
                     
-                      <div className="flex flex-col items-center justify-center ">
-                      <div className="font-bold text-center text-white md:text-xl border-orange-500 border rounded-md my-1 px-6">
+                    <div className="flex flex-col items-center justify-center lg:px-1 lg:py-5 ">
+                      <div className="font-bold text-center text-white md:text-xl border-orange-500 border my-1 px-6">
                         {curElem["author"]}
                       </div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                      <div className="font-bold text-center text-black md:text-xl">
+                      <div className="font-bold text-center text-black md:text-xl w-full">
                         <button
                           ref={btnRef} 
                           onClick={onOpen} 
-                          className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-x1 text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full top-3"
+                          className=" bottom-0 bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full"
                         > 
-                        <Link href={curElem.link}>
-                          Read More
-                        </Link>
+                          <Link 
+                            href={curElem.link}
+                          >
+                            Read More
+                          </Link>
                         </button>
                       </div>
                     </div>

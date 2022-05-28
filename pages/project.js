@@ -38,11 +38,11 @@ const Project = () => {
     <>
       <Head>
         <title>
-          Projects | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+          Projects | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
         <meta
           name="description"
-          content="Projects of GirlScipt Summer of Code"
+          content="Projects of GirlScript Summer of Code"
         />
         {/* <link
           rel="icon"
