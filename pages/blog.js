@@ -71,17 +71,17 @@ const Blog = () => {
                     </div>
                     <div className="flex flex-col items-center justify-center">
                       <div className="font-bold text-center text-black md:text-xl w-full">
+                          <Link 
+                            href={curElem.link}
+                          >
                         <button
                           ref={btnRef} 
                           onClick={onOpen} 
                           className=" bottom-0 bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full"
                         > 
-                          <Link 
-                            href={curElem.link}
-                          >
-                            Read More
-                          </Link>
+                            Read Blog
                         </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
