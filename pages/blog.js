@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
+import Link from 'next/link';
 import React from "react";
 import {
   Modal,
@@ -23,7 +24,7 @@ const blog = () => {
 
   const getUsers2022 = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1Pl4_0G2AILRaUsFoG71xA4AXUaN0_otl_S0hpal0bZs/CAshoutout"
+      "https://opensheet.elk.sh/1a9fZ_tljime8Dsr2nSFLLQKtCwE9-LB_hZqFd-4B8Cc/Sheet1"
     );
     setUsers(await response.json());
   };
@@ -36,9 +37,9 @@ const blog = () => {
     <>
       <Head>
         <title>
-        Blog | GirlScipt Summer of Code 2022 | GirlScript Foundation India
+        Blog | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
-        <meta name="description" content="GirlScipt Summer of Code Team" />
+        <meta name="description" content="GirlScript Summer of Code Team" />
       </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
@@ -73,29 +74,30 @@ const blog = () => {
                 <div className="flex items-center justify-center w-60" key={i}>
                   <div className="p-2 justify-center shadow  bg-black rounded-xl w-full md:h-fit">
                       
-                  <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 rounded-lg lg:my-2 lg:px-2 lg:py-2 ">
-            <div className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md rounded-lg my-1 px-1 w-34 sm:w-fit">
-              <div className="dark:text-black pl-8 text-md text-white 1.5rem 1.5rem ">
-                {" "}
-                What is the GirlScript Summer of code ?
-                GSSoC is only for girls
-              </div>
-            </div>
-          </div>
+                    <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 rounded-lg lg:my-2 lg:px-2 lg:py-2 ">
+                      <div className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md rounded-lg my-1 px-1 w-34 sm:w-fit">
+                        <div className="dark:text-black pl-8 text-md text-white 1.5rem 1.5rem ">
+                          {curElem["title"]}
+                        </div>
+                      </div>
+                  </div>
                     
                       <div className="flex flex-col items-center justify-center ">
                       <div className="font-bold text-center text-white md:text-xl border-orange-500 border rounded-md my-1 px-6">
-                        {curElem["Name"]}
+                        {curElem["author"]}
                       </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center w-full ">
+                    <div className="flex flex-col items-center justify-center">
                       <div className="font-bold text-center text-black md:text-xl">
-                        {curElem["Name"]}
-                        <button ref={btnRef} onClick={onOpen} 
-        className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full bottom-0"
-        >
-        Read More
-      </button>
+                        <button
+                          ref={btnRef} 
+                          onClick={onOpen} 
+                          className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-x1 text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full top-3"
+                        > 
+                        <Link href={curElem.link}>
+                          Read More
+                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>
