@@ -17,20 +17,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faGitAlt } from "@fortawesome/free-brands-svg-icons";
 
-const blog = () => {
-  const [users, setUsers] = useState([]);
+const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
   const btnRef = React.useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const getUsers2022 = async () => {
+  const getBlogs = async () => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1a9fZ_tljime8Dsr2nSFLLQKtCwE9-LB_hZqFd-4B8Cc/Sheet1"
+      "https://opensheet.elk.sh/1yAcu1TICHh2BHOTk82WjD68oukbPwAQPWJCKdNxlAss/Blogs2022"
     );
-    setUsers(await response.json());
+    setBlogs(await response.json());
   };
 
   useEffect(() => {
-    getUsers2022();
+    getBlogs();
   }, []);
 
   return (
@@ -49,41 +49,23 @@ const blog = () => {
         </p>
       </div>
       <Spacer mt={20} />
-      <div className="flex flex-row justify-center flex-wrap items-center gap-x-60 gap-y-10 w-100">
-        {users.map((curElem, i) => {
+      <div className="flex flex-row justify-center flex-wrap items-center gap-x-32 gap-y-10 w-100">
+        {blogs.map((curElem, i) => {
           return (
             <>
-              {curElem == null ? (
-                <div
-                  className="flex flex-col items-center justify-center w-80 h-80 gap-3"
-                  key={i}
-                >
-                  <SkeletonCircle size="80" />
-                  <br />
-                  <Skeleton>
-                    <Box className="text-center px={4}"> Cogito ergo Sum </Box>
-                  </Skeleton>
-                  <Skeleton>
-                    <Box className="text-center px={4}">
-                      {" "}
-                      Connection is power - DedSec
-                    </Box>
-                  </Skeleton>
-                </div>
-              ) : (
                 <div className="flex items-center justify-center w-60" key={i}>
-                  <div className="justify-center shadow  bg-black rounded-xl w-full md:h-fit">
+                  <div className="justify-center shadow dark:bg-black text-black dark:text-white rounded-xl w-full overflow-y-clip rounded-lg h-fit md:h-60 shadow-xl dark:shadow-none shadow-slate-400">
                       
-                    <div className="mb-4 mt-4 pr-2 font-semibold px-1 pt-3 ">
-                      <div className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md rounded-lg my-1 px-1 w-34 sm:w-fit">
-                        <div className="dark:text-black pl-8 text-md text-white 1.5rem 1.5rem ">
+                    <div className="flex items-center justify-center mb-4 font-semibold px-1 pt-2">
+                      <div className="flex justify-center bg-orange-100 dark:bg-gradient-to-b dark:from-primary_orange-0 to-orange-600 text-md rounded-lg m-2 h-28">
+                        <div className="text-primary_orange-0 dark:text-black text-md m-2">
                           {curElem["title"]}
                         </div>
                       </div>
                     </div>
                     
-                    <div className="flex flex-col items-center justify-center lg:px-1 lg:py-5 ">
-                      <div className="font-bold text-center text-white md:text-xl border-orange-500 border my-1 px-6">
+                    <div className="flex flex-col items-center justify-center pb-3.5 px-3">
+                      <div className="flex flex-col items-center justify-center font-bold text-center dark:text-white md:text-lg light:bg-orange-50 border-orange-500 border my-1 w-full rounded-lg">
                         {curElem["author"]}
                       </div>
                     </div>
@@ -104,8 +86,6 @@ const blog = () => {
                     </div>
                   </div>
                 </div>
-                
-              )}
             </>
           );
         })}
@@ -115,4 +95,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;
