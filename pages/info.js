@@ -13,7 +13,7 @@ function info() {
         <div className="first-section mb-10 flex flex-col md:flex-row justify-between flex-auto items-center flex-wrap mb-24">
           <div data-aos="flip-left" data-aos-duration="500">
             <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/07bf179210769ea9a280f7e87e1f6e5cdc464953/Info/Triangle.svg"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/07bf179210769ea9a280f7e87e1f6e5cdc464953/Info/Triangle.svg"
               // height="453"
               // width="320"
               alt="Rectangle light"
@@ -93,7 +93,7 @@ function info() {
           </div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
             <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
               // height="453"
               // width="320"
               alt="Rectangle light"
@@ -106,7 +106,7 @@ function info() {
           </div>
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
             <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
               // height="483"
               // width="320"
               alt="Rectangle light"
@@ -118,14 +118,14 @@ function info() {
           <div className="flex" data-aos="flip-left" data-aos-duration="700">
             <img
               className="h-0 w-0 dark:h-full dark:w-full invisible dark:visible"
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/736b2e588142af26560791b90ee898b6de44bead/Logos/projectadmin.svg"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/736b2e588142af26560791b90ee898b6de44bead/Logos/projectadmin.svg"
               // height="453"
               // width="320"
               alt="Rectangle light"
             />
             <img
               className="dark:hidden"
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/cbfaa0b0ff78f8fd0cf01a6b966ce6dc18271249/Logos/projectadmins.svg"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/cbfaa0b0ff78f8fd0cf01a6b966ce6dc18271249/Logos/projectadmins.svg"
               // height="453"
               // width="320"
               alt="Rectangle light"
@@ -143,7 +143,7 @@ function info() {
           <div className="flex p-8">
             <div className="flex" data-aos="flip-left" data-aos-duration="700">
               <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
+                src="https://raw.githubusercontent.com/girlscript/gssoc-assets/8eba35cb8c2fefb3c64cc489d191c4f5a8e4d5a6/Logos/participantinfo.svg"
                 // height="453"
                 // width="320"
                 alt="Rectangle light"
@@ -151,7 +151,7 @@ function info() {
             </div>
             <div data-aos="flip-left" data-aos-duration="700">
               <img
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
+                src="https://raw.githubusercontent.com/girlscript/gssoc-assets/b30ac90ea12dc937c2aa57c77e1dbe904b83d0dd/Logos/mentors-info.svg"
                 // height="453"
                 // width="320"
                 alt="Rectangle light"

@@ -147,12 +147,12 @@ export default function Home() {
               <div className="img__container">
                 {theme === "light" ? (
                   <img
-                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-lite.svg"
+                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/hero-lite.svg"
                     alt="hero-image"
                   />
                 ) : (
                   <img
-                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/hero-dark.svg"
+                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/hero-dark.svg"
                     alt="hero-image"
                   />
                 )}
@@ -168,7 +168,7 @@ export default function Home() {
             data-aos-duration="700"
           >
             <img
-              src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/Rectangle%20(1).png"
+              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/Rectangle%20(1).png"
               height="453"
               width="420"
               alt="Rectangle light"
@@ -177,18 +177,18 @@ export default function Home() {
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
             {/* <img
               className=" mt-4 mb-8 md:mb-9 md:mt-0"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+              src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
             /> */}
             {theme === "light" ? (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GirlScript_logo_Black.png?raw=true"
+                src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GirlScript_logo_Black.png?raw=true"
                 alt="logo"
               />
             ) : (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/Logos/GsLogo_White.png"
+                src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/GsLogo_White.png"
                 alt="logo"
               />
             )}
@@ -223,14 +223,14 @@ export default function Home() {
               <img
                 id="Learn_more"
                 className="mb-10"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
+                src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
                 alt="Learn More light"
               />
             ) : (
               <img
                 id="Learn_more"
                 className="mb-10"
-                src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
+                src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GS_logo_White.png?raw=true"
                 alt="Learn More dark"
               />
             )}
@@ -405,28 +405,28 @@ export default function Home() {
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
+              src="https://github.com/girlscript/gssoc-assets/blob/main/Participating_projects/logo1.png?raw=true"
               alt="logo"
             />
              <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12 mb-10 md:mb-0"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
+              src="https://github.com/girlscript/gssoc-assets/blob/main/Participating_projects/logo2.png?raw=true"
               alt="logo"
             />
             <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
+              src="https://github.com/girlscript/gssoc-assets/blob/main/Participating_projects/logo3.png?raw=true"
               alt="logo"
             />
             <img
               data-aos="fade-right"
               data-aos-duration="500"
               className="w-20 h-auto mr-12"
-              src="https://github.com/GSSoC-Web/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
+              src="https://github.com/girlscript/gssoc-assets/blob/main/Participating_projects/logo4.png?raw=true"
               alt="logo"
             /> */}
           </div>
@@ -494,7 +494,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-16"
-                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/xyz-logo-color.png"
+                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/sponsors/xyz-logo-color.png"
                     alt=".XYZ"
                   />
                 </a>
@@ -557,7 +557,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-8  mb-5 md:mb-0"
-                    src="https://raw.githubusercontent.com/GSSoC-Web/gssoc-assets/main/sponsors/o%20reilly.png"
+                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/sponsors/o%20reilly.png"
                     alt="O'Reilly"
                   />
                 </a>
