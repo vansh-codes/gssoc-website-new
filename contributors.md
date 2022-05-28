@@ -69,6 +69,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/gurjeetsinghvirdee">
+            <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
+            <br />
+            <sub><b>Gurjeet Singh Virdee</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/monizb">
             <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
@@ -81,7 +88,8 @@
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
