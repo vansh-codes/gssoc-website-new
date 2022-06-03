@@ -121,7 +121,8 @@ function Leaderboard() {
       setLoadingMsg("Waiting for response from server")
     }, 600);
     // clearTimeout(timeout)
-    fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")
+    // fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")  // Actual request source
+    fetch("https://raw.githubusercontent.com/girlscript/gssoc-website-new/main/pages/api/leaderboard.json")
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.")
         setTimeout(function(){setIsLoading(false), 8000})
