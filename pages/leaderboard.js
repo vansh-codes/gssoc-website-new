@@ -128,6 +128,7 @@ function Leaderboard() {
         return res.json();
       })
       .then((data) => {
+        // console.log(data.leaderboard);
         if(data.leaderboard.length === 0 && data.success === true){
           setIsLoading(false)
           setIsLboardLoading(false)
