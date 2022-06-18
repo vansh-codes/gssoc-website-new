@@ -21,6 +21,7 @@ I'VE USED NEUTRAL COLOR THEMES FOR BASE CHRONO COMPONENT, SO THAT IT DOESN'T ODD
 import React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Head from "next/head";
 import { Chrono } from "react-chrono";
 import Eventdata from "./api/event_data";
 
@@ -41,6 +42,12 @@ const Event = () => {
   if (!mounted) return null;
   return (
     <div className="wrapper">
+      <Head>
+        <title>
+        Events | GirlScript Summer of Code 2022 | GirlScript Foundation India
+        </title>
+        <meta name="description" content="GirlScript Summer of Code Certificates" />
+      </Head>
       <h1 className="text-4xl font-sans text-center dark:text-white font-semibold mb-10">
         Events in GSSoC&apos;22
       </h1>

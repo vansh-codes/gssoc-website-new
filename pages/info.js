@@ -1,6 +1,13 @@
+import Head from "next/head";
 function info() {
   return (
     <div>
+      <Head>
+        <title>
+        How GSSoC Works? | GirlScript Summer of Code 2022 | GirlScript Foundation India
+        </title>
+        <meta name="description" content="GirlScript Summer of Code Certificates" />
+      </Head>
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="items-center justify-center">
           <p className="font-sans text-center text-2xl font-extrabold">

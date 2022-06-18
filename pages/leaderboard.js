@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import Dialog from "@material-ui/core/Dialog";
 import { Spinner } from '@chakra-ui/react'
 import Confetti from 'react-confetti'
@@ -243,6 +244,12 @@ function Leaderboard() {
 
   return (
     <>
+      <Head>
+        <title>
+        Leaderboard | GirlScript Summer of Code 2022 | GirlScript Foundation India
+        </title>
+        <meta name="description" content="GirlScript Summer of Code Certificates" />
+      </Head>
       {
         isLoading && 
         <div className="loader-div">
