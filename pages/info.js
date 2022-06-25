@@ -10,12 +10,12 @@ function info() {
       </Head>
       <div className="container transition-colors mx-auto mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-12 lg:px-40 2xl:px-50 dark:bg-darkmode_gray-0 dark:transition-colors ">
         <div className="items-center justify-center">
-          <p className="font-sans text-center text-2xl font-extrabold">
+          <div className="font-sans text-center text-2xl font-extrabold">
             <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               What {""}
               <span className="text-primary_orange-0">they</span> do?
             </p>
-          </p>
+          </div>
         </div>
         <div className="first-section mb-10 flex flex-col md:flex-row justify-between flex-auto items-center flex-wrap mb-24">
           <div data-aos="flip-left" data-aos-duration="500">
@@ -85,12 +85,12 @@ function info() {
           </div>
         </div>
         <div className="items-center justify-center">
-          <p className="font-sans text-center text-2xl font-extrabold text-black-100">
+          <div className="font-sans text-center text-2xl font-extrabold text-black-100">
             <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
               <span className="text-primary_orange-0">How</span>
               they do ?
             </p>
-          </p>
+          </div>
         </div>
       </div>
       <div className="flex flex-row justify-around flex-wrap sm:flex-wrap mb-28">

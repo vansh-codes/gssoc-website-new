@@ -3,9 +3,7 @@ import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import FileSaver from "file-saver";
-import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+// import FileSaver from "file-saver";
 // import CertImg from "../components/cert.svg";
 import Image from 'next/image';
 import { exportComponentAsPNG } from "react-component-export-image";
@@ -66,7 +64,7 @@ const Cert = () => {
         </div>
       </div>
       <Spacer mt={20} />
-      <div className="flex flex-col bg-white shadow-2xl dark:bg-black rounded-md mx-2 sm:mx-10 md:mx-10 lg:mx-40 px-10 py-2">
+      <div className="flex flex-col bg-white shadow-2xl dark:bg-black rounded-md mx-2 sm:mx-10 md:mx-10 lg:mx-20 px-10 py-2">
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
           Enter GitHub Username
         </label>
@@ -103,6 +101,7 @@ const Cert = () => {
           <div id="contrib_name" className="contrib_name text-big-orange">{Name}</div>
           </div>
         </div>
+        <h6 id="no-mobile-alert" className="text-black dark:text-white">* Please download the certificate on the desktop website</h6>
         <Spacer mt={20} />
         <button
           type="button"

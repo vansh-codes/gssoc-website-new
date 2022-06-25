@@ -517,6 +517,8 @@ html {
 .banner {
   display: block;
   background: url(/cert.png) no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
   /* background-size: cover; */
   width: 1000px; /* Width of new image */
   height: 707px; /* Height of new image */
@@ -525,20 +527,57 @@ html {
 
 .contrib_name {
   position: absolute;
-  top: 48%;
-  left: 62vw;
+  top: 47%;
+  left: 63%;
   transform: translate(-50%, -50%);
 }
 
 .text-big-orange{
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bold;
   color: #fd7617;
   font-family: 'Playfair Display', sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-  .banner, .contrib_name {
+#no-mobile-alert {
+  display: none;
+}
+
+@media only screen and (max-width: 1250px) {
+  .contrib_name{
+    top: 47%;
+    left: 65%;
+  }
+  .text-big-orange{
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1160px) {
+  .banner {
     transform: scale(0.8);
+  }
+  .contrib_name{
+    top: 33%;
+    left: 70%;
+  }
+  .text-big-orange{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .contrib_name{
+    top: 31%;
+    left: 70%;
+  }
+  .text-big-orange{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .contrib_name, .banner, .text-big-orange{
+    display: none;
+  }
+  #no-mobile-alert {
+    display: block;
   }
 }
