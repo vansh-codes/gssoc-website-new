@@ -14,31 +14,31 @@ const Cert = () => {
   const [Name, setName] = useState("");
   const downloadImage = 
 
-  // () => {
-  //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
-  //   FileSaver.saveAs(image_url, "Cert_GSSoC.png");
-  // }
+  () => {
+    var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
+    FileSaver.saveAs(image_url, "Cert_GSSoC.png");
+  }
 
   /* Note to future devs 
   Directly downloading doesn't seem to work because the CSS breaks when downloading th Blog.
   Hence the source of download is entirely different
   */
-  useCallback(() => {
-    if (ref.current === null) {
-      return
-    }
+  // useCallback(() => {
+  //   if (ref.current === null) {
+  //     return
+  //   }
 
-    toPng(ref.current, { cacheBust: true, })
-      .then((dataUrl) => {
-        const link = document.createElement('a')
-        link.download = Name+"Cert GSSOC2022.png"
-        link.href = dataUrl
-        link.click()
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [ref]);
+  //   toPng(ref.current, { cacheBust: true, })
+  //     .then((dataUrl) => {
+  //       const link = document.createElement('a')
+  //       link.download = Name+"Cert GSSOC2022.png"
+  //       link.href = dataUrl
+  //       link.click()
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // }, [ref]);
   return (
     <>
       <Head>
