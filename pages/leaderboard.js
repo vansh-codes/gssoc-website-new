@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Dialog from "@material-ui/core/Dialog";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+} from '@chakra-ui/react'
 import { Spinner } from "@chakra-ui/react";
 import Confetti from "react-confetti";
 import {
@@ -202,10 +211,10 @@ function Leaderboard() {
     );
   }
 
-  const [open, setOpen] = React.useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
   let prlinks = [];
   let handleClickOpen = (num) => {
-    setOpen(true);
+    onOpen(true);
     for (let link in leaderss[num].pr_urls) {
       prlinks.push(leaderss[num].pr_urls[link] + "\n\n\n\n");
     }
@@ -241,7 +250,8 @@ function Leaderboard() {
 
   const handleClose = () => {
     prlinks = [];
-    setOpen(false);
+    onOpen(false);
+    onClose();
   };
 
   const handlePageChange = (pageNumber) => {
@@ -654,25 +664,29 @@ function Leaderboard() {
                 }}
               />
             </div>
-            {/* </Paper> */}
-            <Dialog
-              open={open}
+            {theme==="dark"?
+            (<Modal
+              isOpen={isOpen}
               onClose={handleClose}
+              size="xl"
               aria-labelledby="alert-dialog-slide-title"
               aria-describedby="alert-dialog-slide-description"
-              className={theme === "dark" ? "dark-modal" : ""}
+              backgroundColor='#000'
             >
-              <div
+              <ModalOverlay/>
+              <ModalContent backgroundColor='#000000'>
+              <ModalHeader 
                 className="dark:text-white flex m-0 py-4 px-6 font-medium text-lg leading-relaxed"
                 id="alert-dialog-slide-title"
               >
                 {login + "'s Stats"}
-              </div>
+              </ModalHeader>
+              <ModalBody>
               <div className="flex-auto py-2 px-6 overflow-y-auto">
                 <div id="alert-dialog-slide-description">
-                  <div style={{ display: "flex", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center",}}>
                     <img
-                      alt="Remy Sharp"
+                      alt="Suvraneel Bhuin"
                       src={avatar}
                       className="w-12 rounded-full xl:w-24"
                     />
@@ -680,12 +694,12 @@ function Leaderboard() {
                       🏆 {score}
                     </p>
                   </div>
-                  <div className="dark:text-white" style={{ marginTop: 30 }}>
+                  <div style={{ marginTop: 30, fontWeight: "bolder", color: "white"}}>
                     List Of PRs:{" "}
                   </div>
                   {links.length !== 0 &&
                     links.map((link) => (
-                      <a className="pr-links" href={link} key={link}>
+                      <a className="pr-links text-white" href={link} key={link}>
                         {link}
                       </a>
                     ))}
@@ -709,7 +723,69 @@ function Leaderboard() {
                   Close
                 </button>
               </div>
-            </Dialog>
+              </ModalBody>
+              </ModalContent>
+            </Modal>):
+            (<Modal
+              isOpen={isOpen}
+              onClose={handleClose}
+              size="xl"
+              aria-labelledby="alert-dialog-slide-title"
+              aria-describedby="alert-dialog-slide-description"
+            >
+              <ModalOverlay />
+              <ModalContent>
+              <ModalHeader 
+                className="dark:text-white flex m-0 py-4 px-6 font-medium text-lg leading-relaxed"
+                id="alert-dialog-slide-title"
+              >
+                {login + "'s Stats"}
+              </ModalHeader>
+              <ModalBody>
+              <div className="flex-auto py-2 px-6 overflow-y-auto">
+                <div id="alert-dialog-slide-description">
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Suvraneel Bhuin"
+                      src={avatar}
+                      className="w-12 rounded-full xl:w-24"
+                    />
+                    <p className="bg-orange-100 dark:bg-neutral-900 dark:text-white w-24 rounded-full xl:w-36 p-3 text-center modal-score">
+                      🏆 {score}
+                    </p>
+                  </div>
+                  <div style={{ marginTop: 30, fontWeight: "bolder" }}>
+                    List Of PRs:{" "}
+                  </div>
+                  {links.length !== 0 &&
+                    links.map((link) => (
+                      <a className="pr-links text-black" href={link} key={link}>
+                        {link}
+                      </a>
+                    ))}
+                </div>
+              </div>
+              <div className="flex px-2 py-2 items-center justify-end">
+                <button
+                  onClick={handleClose}
+                  color="primary"
+                  className="close-btn"
+                  style={{
+                    background: "#FA6329",
+                    border: "none",
+                    padding: "10px 20px",
+                    color: "white",
+                    borderRadius: 5,
+                    cursor: "pointer",
+                    fontSize: "18px",
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+              </ModalBody>
+              </ModalContent>
+            </Modal>)}
           </div>
         </div>
       </div>

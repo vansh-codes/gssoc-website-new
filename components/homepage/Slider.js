@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { Money } from "@material-ui/icons";
 
 function Carousel(){
   const [currentSlide, setCurrentSlide] = useState(0);

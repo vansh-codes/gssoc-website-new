@@ -6,7 +6,7 @@ import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 import Card from "../components/homepage/Card";
 import SocialFollow from "../components/homepage/SocialFollow";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import ThemeChanger from "../components/Toggler";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";

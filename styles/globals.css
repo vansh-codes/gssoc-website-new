@@ -257,6 +257,8 @@ html {
   color:#2563eb;
   opacity: 0.9;
 }
+
+
 .dark-modal .pr-links{
   color: #dbeafe;
 }
@@ -270,9 +272,8 @@ html {
   background-color: #fa500c !important;
 }
 
-.dark-modal .MuiDialog-paper{
-  background-color: #303030;
-  background-color: black;
+.dark-modal{
+  background-color: #000000 !important;
 }
 
 .modal-score{
