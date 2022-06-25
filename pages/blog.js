@@ -42,11 +42,11 @@ const Blog = () => {
         <meta name="description" content="GirlScript Summer of Code Team" />
       </Head>
       <div className="items-center justify-center">
-        <p className="font-sans text-center text-2xl font-extrabold text-black-100">
+        <div className="font-sans text-center text-2xl font-extrabold text-black-100">
           <p className="text-black text-5xl text center font-extrabold mb-10 dark:text-white">
             Blogs
           </p>
-        </p>
+        </div>
       </div>
       <Spacer mt={20} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-x-32 gap-y-10 w-100">
