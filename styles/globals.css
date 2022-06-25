@@ -1,6 +1,7 @@
 /* Global fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
@@ -511,4 +512,33 @@ html {
 .skeleton-circle-lg, .skeleton-circle-md{
   height: 54px !important;
   width: 54px !important;
+}
+
+.banner {
+  display: block;
+  background: url(/cert.png) no-repeat;
+  /* background-size: cover; */
+  width: 1000px; /* Width of new image */
+  height: 707px; /* Height of new image */
+  padding-left: 180px; /* Equal to width of new image */
+}
+
+.contrib_name {
+  position: absolute;
+  top: 48%;
+  left: 62vw;
+  transform: translate(-50%, -50%);
+}
+
+.text-big-orange{
+  font-size: 38px;
+  font-weight: bold;
+  color: #fd7617;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner, .contrib_name {
+    transform: scale(0.8);
+  }
 }
