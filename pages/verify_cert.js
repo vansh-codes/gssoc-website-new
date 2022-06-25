@@ -8,16 +8,23 @@ import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 // import CertImg from "../components/cert.svg";
 import Image from 'next/image';
-
+import { exportComponentAsPNG } from "react-component-export-image";
 const Cert = () => {
-  const ref = useRef();
+  const certificateWrapper = React.createRef();
   const [Name, setName] = useState("");
   const downloadImage = 
-
-  () => {
-    var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
-    FileSaver.saveAs(image_url, "Cert_GSSoC.png");
+  (e) => {
+    e.preventDefault();
+    exportComponentAsPNG(certificateWrapper, 
+      {fileName: Name + "_Cert_GSSoC2022.png"},{
+        html2CanvasOptions: { backgroundColor: null },
+    });
   }
+
+  // () => {
+  //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
+  //   FileSaver.saveAs(image_url, "Cert_GSSoC.png");
+  // }
 
   /* Note to future devs 
   Directly downloading doesn't seem to work because the CSS breaks when downloading th Blog.
@@ -92,7 +99,7 @@ const Cert = () => {
         /> */}
         <div className="flex justify-center" id="cert">
           {/* <Image src="/cert.png" height="700" width="1000" alt="Certificate"/> */}
-          <div className="banner" ref={ref}>
+          <div className="banner" ref={certificateWrapper}>
           <div id="contrib_name" className="contrib_name text-big-orange">{Name}</div>
           </div>
         </div>
