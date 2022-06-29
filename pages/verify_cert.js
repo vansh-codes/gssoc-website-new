@@ -6,18 +6,16 @@ import React from "react";
 // import FileSaver from "file-saver";
 // import CertImg from "../components/cert.svg";
 import Image from 'next/image';
-import { exportComponentAsPNG } from "react-component-export-image";
+import dynamic from 'next/dynamic';
+// const exportComponentAsPNG = dynamic(import('react-component-export-image'), { ssr: false }); 
+import html2canvas from "html2canvas";
+
+const Certi_Comp = dynamic(() => import("../components/Certi_Comp"), { ssr: false });
+
+
 const Cert = () => {
-  const certificateWrapper = React.createRef();
   const [Name, setName] = useState("");
-  const downloadImage = 
-  (e) => {
-    e.preventDefault();
-    exportComponentAsPNG(certificateWrapper, 
-      {fileName: Name + "_Cert_GSSoC2022.png"},{
-        html2CanvasOptions: { backgroundColor: null },
-    });
-  }
+  const [Role, setRole] = useState("Contributor");
 
   // () => {
   //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
@@ -84,10 +82,11 @@ const Cert = () => {
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
           Select Role in GSSoC 2022
         </label>
-        <select className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg">
-          <option value="">Contributor</option>
-          <option value="">Mentor</option>
-          <option value="">Project Admin</option>
+        <select className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg" defaultValue="Contributor" onChange={(e) => setRole(e.target.value)}>
+          <option value="Contributor">Contributor</option>
+          <option value="Top Contributor">Top 100 Contributor</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Project Admin">Project Admin</option>
         </select>
         <Spacer mt={20} />
         {/* <img
@@ -95,21 +94,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <div className="flex justify-center" id="cert">
-          {/* <Image src="/cert.png" height="700" width="1000" alt="Certificate"/> */}
-          <div className="banner" ref={certificateWrapper}>
-          <div id="contrib_name" className="contrib_name text-big-orange">{Name}</div>
-          </div>
-        </div>
-        <h6 id="no-mobile-alert" className="text-black dark:text-white">* Please download the certificate on the desktop website</h6>
-        <Spacer mt={20} />
-        <button
-          type="button"
-          className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
-          onClick={downloadImage}
-        >
-          Verify
-        </button>
+        <Certi_Comp Name={Name} Role={Role}/>
       </div>
     </>
   );
