@@ -517,7 +517,6 @@ html {
 
 .banner {
   display: block;
-  background: url(/cert.png) no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
   /* background-size: cover; */
@@ -526,9 +525,25 @@ html {
   padding-left: 180px; /* Equal to width of new image */
 }
 
+.cert-ca{
+  background: url(/GSSoC_CA_Cert.png) no-repeat;
+}
+.cert-contrib{
+  background: url(/GSSoC_Contrib_Cert.png) no-repeat;
+}
+.cert-topcontrib{
+  background: url(/GSSoC_TopContrib_Cert.png) no-repeat;
+}
+.cert-mentor{
+  background: url(/GSSoC_Mentor_Cert.png) no-repeat;
+}
+.cert-pa{
+  background: url(/GSSoC_PA_Cert.png) no-repeat;
+}
+
 .contrib_name {
   position: absolute;
-  top: 47%;
+  top: 46%;
   left: 63%;
   transform: translate(-50%, -50%);
 }
@@ -546,35 +561,47 @@ html {
 
 @media only screen and (max-width: 1250px) {
   .contrib_name{
-    top: 47%;
-    left: 65%;
+    top: 46%;
+    left: 67%;
   }
   .text-big-orange{
     font-size: 25px;
   }
 }
-@media only screen and (max-width: 1160px) {
-  .banner {
-    transform: scale(0.8);
+@media only screen and (max-width: 1210px) {
+  .banner{
+    background-size: calc(100% - 100px);
   }
   .contrib_name{
-    top: 33%;
-    left: 70%;
+    top: 44%;
+    left: 60%;
+  }
+  .text-big-orange{
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 1175px) {
+  .contrib_name{
+    top: 43%;
+    left: 60%;
   }
   .text-big-orange{
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1080px) {
+  /* .contrib_name, .banner, .text-big-orange{
+    display: none;
+  } */
   .contrib_name{
-    top: 31%;
-    left: 70%;
+    top: 41%;
+    left: 60%;
   }
-  .text-big-orange{
-    font-size: 20px;
+  #no-mobile-alert {
+    display: block;
   }
 }
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 1080px) {
   .contrib_name, .banner, .text-big-orange{
     display: none;
   }
