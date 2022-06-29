@@ -95,8 +95,8 @@ const MoreMenu = () => {
                 )}
               </Menu.Item>
             </Link>
-            <Link href="verify_cert">
-            {/* <Link href="comingsoon"> */}
+            {/* <Link href="verify_cert"> */}
+            <Link href="comingsoon">
               <Menu.Item>
                 {({ active }) => (
                   <a
