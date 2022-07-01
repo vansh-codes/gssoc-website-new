@@ -611,3 +611,11 @@ html {
     display: block;
   }
 }
+
+#IPFSCon {
+  background-color: #041A2A;
+  opacity: 1;
+  background-image: linear-gradient(to right, #041A2A, #0F2F4F);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+}

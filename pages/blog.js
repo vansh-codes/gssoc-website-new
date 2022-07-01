@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import SliderBlog from "../components/SliderBlog";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -47,6 +48,10 @@ const Blog = () => {
             Blogs
           </p>
         </div>
+      </div>
+      <Spacer mt={20} />
+      <div className="items-center justify-center px-20">
+        <SliderBlog />
       </div>
       <Spacer mt={20} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-x-32 gap-y-10 w-100">
