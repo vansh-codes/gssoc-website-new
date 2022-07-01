@@ -48,17 +48,17 @@
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/rebs-becca15">
-            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebs-becca15"/>
-            <br />
-            <sub><b>Rebecca Elisabeth Falcao</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/rebs-becca15">
+            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebs-becca15"/>
+            <br />
+            <sub><b>Rebecca Elisabeth Falcao</b></sub>
         </a>
     </td>
     <td align="center">
