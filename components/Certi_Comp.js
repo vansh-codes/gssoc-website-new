@@ -39,7 +39,7 @@ const Certi_Comp = (props) => {
               {props.Name}
             </div>
           </div>
-        ) : props.Role === "PA" ? (
+        ) : props.Role === "Project Admin" ? (
           <div className="banner cert-contrib" ref={certificateWrapper}>
             <div id="contrib_name" className="contrib_name text-big-orange">
               {props.Name}

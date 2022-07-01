@@ -156,7 +156,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role} />
+        <Certi_Comp Name={Name} Role={Role}/>
       </div>
     </>
   );
