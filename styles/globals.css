@@ -522,11 +522,13 @@ html {
   /* background-size: cover; */
   width: 1000px; /* Width of new image */
   height: 707px; /* Height of new image */
-  padding-left: 180px; /* Equal to width of new image */
 }
 
 .cert-ca{
   background: url(/GSSoC_CA_Cert.png) no-repeat;
+}
+.cert-speaker{
+  background: url(/GSSoC_OSAdvocate_Cert.png) no-repeat;
 }
 .cert-contrib{
   background: url(/GSSoC_Contrib_Cert.png) no-repeat;

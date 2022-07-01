@@ -40,18 +40,25 @@ const Certi_Comp = (props) => {
             </div>
           </div>
         ) : props.Role === "Project Admin" ? (
-          <div className="banner cert-contrib" ref={certificateWrapper}>
+          <div className="banner cert-pa" ref={certificateWrapper}>
             <div id="contrib_name" className="contrib_name text-big-orange">
               {props.Name}
             </div>
           </div>
-        ) : (
+        ) : props.Role === "Campus Ambassador" ? (
             <div className="banner cert-ca" ref={certificateWrapper}>
             <div id="contrib_name" className="contrib_name text-big-orange">
               {props.Name}
             </div>
           </div>
-        )}
+        ) : props.Role === "Speaker" ? (
+          <div className="banner cert-speaker" ref={certificateWrapper}>
+          <div id="contrib_name" className="contrib_name text-big-orange">
+            {props.Name}
+          </div>
+        </div>
+      ) : <></>
+          }
       </div>
       <h6 id="no-mobile-alert" className="text-black dark:text-white">
         * Please download the certificate on the desktop website

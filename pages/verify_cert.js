@@ -149,6 +149,8 @@ const Cert = () => {
           <option value="Top Contributor">Top 100 Contributor</option>
           <option value="Mentor">Mentor</option>
           <option value="Project Admin">Project Admin</option>
+          <option value="Campus Ambassador">Campus Ambassador</option>
+          <option value="Speaker">Speaker</option>
         </select>
         <Spacer mt={20} />
         {/* <img

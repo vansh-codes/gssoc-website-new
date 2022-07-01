@@ -498,7 +498,7 @@ export default function Home() {
                     alt=".XYZ"
                   />
                 </a>
-                <a href="https://teleporthq.io/">
+                {/* <a href="https://teleporthq.io/">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -506,7 +506,7 @@ export default function Home() {
                     src="https://user-images.githubusercontent.com/63473496/163260136-1e4eb2d0-a217-4d7e-a0f5-dcd63d9ba6a8.svg"
                     alt="TeleportHQ"
                   />
-                </a>
+                </a> */}
                 <a href="https://www.jetbrains.com/">
                   <img
                     data-aos="fade-up"
@@ -543,7 +543,7 @@ export default function Home() {
                     alt="Fueler"
                   />
                 </a>
-                <a href="https://www.packtpub.com/">
+                {/* <a href="https://www.packtpub.com/">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -551,7 +551,7 @@ export default function Home() {
                     src="https://user-images.githubusercontent.com/63473496/163258089-e49de008-dbf3-4c25-ae43-54dab9fdeb51.png"
                     alt="Packt"
                   />
-                </a>
+                </a> */}
                 <a href="https://www.oreilly.com/">
                   <img
                     data-aos="fade-up"
