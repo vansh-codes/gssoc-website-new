@@ -12,13 +12,19 @@ import html2canvas from "html2canvas";
 import { ethers } from "ethers";
 import keccak256 from "keccak256";
 import MerkleTree from "merkletreejs";
-// import ABI from "./JSON/ABI.json";
-// import contributors from "./JSON/Contributors.json";
+import ABI from "./JSON/ABI.json";
+import Contributors from "./JSON/Contributors.json";
+import Top100 from "./JSON/Top100.json";
+import Mentors from "./JSON/Mentors.json";
+import CampusAmbassadors from "./JSON/CampusAmbassadors.json";
+import ProjectAdmins from "./JSON/ProjectAdmins.json";
+import OpenSourceAdvocates from "./JSON/OpenSourceAdvocates.json";
+import OrganizingTeam from "./JSON/OrganizingTeam.json";
 
 const Certi_Comp = dynamic(() => import("../components/Certi_Comp"), {
   ssr: false,
 });
-const contractAddress = "0xB594ab41070EFbA162354e20305Cf63E7CA48d75";
+const contractAddress = "0x71a894ce35a8a4bfe05a0b967a77ae2da3b49a3f";
 
 const Cert = () => {
   const [Name, setName] = useState("");
@@ -50,55 +56,63 @@ const Cert = () => {
   //     })
   // }, [ref]);
 
-  // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
+  const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
   const privateKey =
     "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
-  // add funds for ME please.
+  // add funds for ME please.xD
 
-  // const wallet = new ethers.Wallet(privateKey, provider);
+  const wallet = new ethers.Wallet(privateKey, provider);
   // console.log(wallet.address);
-  // const contract = new ethers.Contract(contractAddress, ABI, provider);
+  const contract = new ethers.Contract(contractAddress, ABI, provider);
   // console.log(contract);
-  // const contractWithWallet = contract.connect(wallet);
+  const contractWithWallet = contract.connect(wallet);
 
-  // let participantDataArray = [];
-  // for (let key in contributors) {
-  //   participantDataArray.push(
-  //     keccak256(JSON.stringify(contributors[key])).toString("hex")
-  //   );
-  // }
-  // const leaves = participantDataArray.map((participant) =>
-  //   keccak256(participant)
-  // );
-  // const tree = new MerkleTree(leaves, keccak256, { sort: true });
-  // const treeData = JSON.stringify(tree);
+  function treeMaker(file) {
+    let data = file;
+    let participantDataArray = [];
+    for (let key in data) {
+      participantDataArray.push(
+        keccak256(JSON.stringify(data[key])).toString("hex")
+      );
+    }
+    const leaves = participantDataArray.map((participant) =>
+      keccak256(participant)
+    );
+    const tree = new MerkleTree(leaves, keccak256, { sort: true });
+    return tree;
+  }
 
-  // // console.log("tree: ", tree);
-  // const merkleRoot = tree.getHexRoot();
-  // const checkerGitHub = "DragasdasonUncaged";
-  // const checkerEmail = "emailforreal.ankit@gmail.com";
+  const projectAdminsTree = treeMaker(ProjectAdmins);
+  const mentorsTree = treeMaker(Mentors);
+  const contributorsTree = treeMaker(Contributors);
+  const top100Tree = treeMaker(Top100);
+  const campusAmbassadorsTree = treeMaker(CampusAmbassadors);
+  const openSourceAdvocatesTree = treeMaker(OpenSourceAdvocates);
+  const oranizingTeamTree = treeMaker(OrganizingTeam);
 
-  // const singleParticipant = keccak256(
-  //   JSON.stringify({
-  //     github: checkerGitHub,
-  //     email: checkerEmail,
-  //   })
-  // ).toString("hex");
-  // // console.log("singleParticipant", singleParticipant);
+  async function checker(tree, email) {
+    let singleParticipant = keccak256(
+      JSON.stringify({
+        email: email,
+      })
+    ).toString("hex");
+    const merkleProof = tree.getHexProof(keccak256(singleParticipant));
+    // console.log("merkleProof", merkleProof);
+    // console.log("singleParticipant", singleParticipant);
+    const tx = await contractWithWallet
+      .verifyOrgTeam(merkleProof, singleParticipant)
+      .then((res) => {
+        if (res == true) {
+          console.log("verified " + email);
+        }
+      });
+  }
 
-  // const merkleProof = tree.getHexProof(keccak256(singleParticipant));
-  // // console.log("merkleProof", merkleProof);
-  async function something() {}
-  // async function something() {
-  //   console.log(merkleProof);
-  //   const tx = await contractWithWallet
-  //     .verify(merkleProof, singleParticipant)
-  //     .then((res) => {
-  //       console.log(res);
-  //       if (res == true) alert("You are awesome");
-  //       else console.log("You are not awesome");
-  //     });
-  // }
+  function hello() {
+    console.log("hello");
+    checker(oranizingTeamTree, "harshghodkar@gmail.com");
+  }
+
   return (
     <>
       <Head>
@@ -120,7 +134,7 @@ const Cert = () => {
       </div>
       <Spacer mt={20} />
       <div className="flex flex-col bg-white shadow-2xl dark:bg-black rounded-md mx-2 sm:mx-10 md:mx-10 lg:mx-20 px-10 py-2">
-        <button onClick={something}> Hello Blockchain</button>
+        <button onClick={hello}> Hello Blockchain</button>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
           Enter GitHub Username
         </label>
@@ -158,7 +172,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role}/>
+        <Certi_Comp Name={Name} Role={Role} />
       </div>
     </>
   );
