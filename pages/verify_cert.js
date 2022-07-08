@@ -6,7 +6,6 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 // const exportComponentAsPNG = dynamic(import('react-component-export-image'), { ssr: false });
 
-
 const Certi_Comp = dynamic(() => import("../components/Certi_Comp"), {
   ssr: false,
 });
