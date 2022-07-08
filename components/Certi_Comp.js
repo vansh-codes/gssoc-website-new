@@ -101,7 +101,7 @@ const Certi_Comp = (props) => {
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
     if (tx) setVerified(true);
-    else console.log("Never gonna give you up");
+    else console.log("Never gonna give you up...");
   }
 
   const Switcher = () => {
@@ -185,10 +185,12 @@ const Certi_Comp = (props) => {
       >
         Verify
       </button>
+      <Spacer mt={5} />
       <button
         type="button"
-        className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        className={verified?"bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3":"dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"}
         onClick={DownloadImage}
+        disabled={!verified}
       >
         Download Certificate
       </button>
