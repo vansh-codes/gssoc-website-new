@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { exportComponentAsPNG } from "react-component-export-image";
 import { Spacer } from "@chakra-ui/react";
 import { ethers } from "ethers";
@@ -18,10 +18,9 @@ const contractAddress = "0x71a894ce35a8a4bfe05a0b967a77ae2da3b49a3f";
 const Certi_Comp = (props) => {
   const [verified, setVerified] = useState(false);
   const certificateWrapper = React.createRef();
-  console.log(props.Role);
   const DownloadImage = (e) => {
     e.preventDefault();
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && verified===true) {
       exportComponentAsPNG(
         certificateWrapper,
         { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
@@ -31,6 +30,21 @@ const Certi_Comp = (props) => {
       );
     }
   };
+
+  // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
+  const provider = new ethers.providers.JsonRpcProvider(
+    "https://speedy-nodes-nyc.moralis.io/867f93e946c2f8c7a99f2169/polygon/mumbai"
+  );
+  const privateKey =
+    "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
+  // add funds for ME please.xD
+
+  const wallet = new ethers.Wallet(privateKey, provider);
+  // console.log(wallet.address);
+  const contract = new ethers.Contract(contractAddress, ABI, provider);
+  // console.log(contract);
+  const contractWithWallet = contract.connect(wallet);
+
 
   function treeMaker(file) {
     let data = file;
@@ -67,27 +81,27 @@ const Certi_Comp = (props) => {
     const tx =
       props.Role === "Contributor"
         ? await contractWithWallet.verifyContributors(
-          merkleProof,
-          singleParticipant
-        )
+            merkleProof,
+            singleParticipant
+          )
         : props.Role === "Top Contributor"
-          ? await contractWithWallet.verifyTop100(merkleProof, singleParticipant)
-          : props.Role === "Mentor"
-            ? await contractWithWallet.verifyMentors(merkleProof, singleParticipant)
-            : props.Role === "Project Admin"
-              ? await contractWithWallet.verifyPAs(merkleProof, singleParticipant)
-              : props.Role === "Campus Ambassador"
-                ? await contractWithWallet.verifyCAs(merkleProof, singleParticipant)
-                : props.Role === "Speaker"
-                  ? await contractWithWallet.verifySpeakers(
-                    merkleProof,
-                    singleParticipant
-                  )
-                  : props.Role === "Organising Team"
-                    ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
-                    : false;
-          if (tx) setVerified(true);
-          else console.log("Never gonna give you up")
+        ? await contractWithWallet.verifyTop100(merkleProof, singleParticipant)
+        : props.Role === "Mentor"
+        ? await contractWithWallet.verifyMentors(merkleProof, singleParticipant)
+        : props.Role === "Project Admin"
+        ? await contractWithWallet.verifyPAs(merkleProof, singleParticipant)
+        : props.Role === "Campus Ambassador"
+        ? await contractWithWallet.verifyCAs(merkleProof, singleParticipant)
+        : props.Role === "Speaker"
+        ? await contractWithWallet.verifySpeakers(
+            merkleProof,
+            singleParticipant
+          )
+        : props.Role === "Organising Team"
+        ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
+        : false;
+    if (tx) setVerified(true);
+    else console.log("Never gonna give you up");
   }
 
   const Switcher = () => {
@@ -95,19 +109,19 @@ const Certi_Comp = (props) => {
       props.Role === "Contributor"
         ? contributorsTree
         : props.Role === "Top Contributor"
-          ? top100Tree
-          : props.Role === "Mentor"
-            ? mentorsTree
-            : props.Role === "Project Admin"
-              ? projectAdminsTree
-              : props.Role === "Campus Ambassador"
-                ? campusAmbassadorsTree
-                : props.Role === "Speaker"
-                  ? openSourceAdvocatesTree
-                  : props.Role === "Organising Team"
-                    ? organizingTeamTree
-                    : "Diablo";
-      Checker(actor, props.Email);
+        ? top100Tree
+        : props.Role === "Mentor"
+        ? mentorsTree
+        : props.Role === "Project Admin"
+        ? projectAdminsTree
+        : props.Role === "Campus Ambassador"
+        ? campusAmbassadorsTree
+        : props.Role === "Speaker"
+        ? openSourceAdvocatesTree
+        : props.Role === "Organising Team"
+        ? organizingTeamTree
+        : "Diablo";
+    Checker(actor, props.Email);
   };
 
   return (
