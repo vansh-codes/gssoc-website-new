@@ -13,14 +13,14 @@ import OrganizingTeam from "../pages/JSON/OrganizingTeam.json";
 import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
 
-const contractAddress = "0x71a894ce35a8a4bfe05a0b967a77ae2da3b49a3f";
+const contractAddress = "0x9Cc7E7ea69DA9c905D86e181a8bDbf9C1e90c558";
 
 const Certi_Comp = (props) => {
   const [verified, setVerified] = useState(false);
   const certificateWrapper = React.createRef();
   const DownloadImage = (e) => {
     e.preventDefault();
-    if (typeof window !== "undefined" && verified===true) {
+    if (typeof window !== "undefined" && verified === true) {
       exportComponentAsPNG(
         certificateWrapper,
         { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
@@ -32,9 +32,7 @@ const Certi_Comp = (props) => {
   };
 
   // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
-  const provider = new ethers.providers.JsonRpcProvider(
-    "https://speedy-nodes-nyc.moralis.io/867f93e946c2f8c7a99f2169/polygon/mumbai"
-  );
+  const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
   const privateKey =
     "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
   // add funds for ME please.xD
@@ -44,7 +42,6 @@ const Certi_Comp = (props) => {
   const contract = new ethers.Contract(contractAddress, ABI, provider);
   // console.log(contract);
   const contractWithWallet = contract.connect(wallet);
-
 
   function treeMaker(file) {
     let data = file;
@@ -93,15 +90,20 @@ const Certi_Comp = (props) => {
         : props.Role === "Campus Ambassador"
         ? await contractWithWallet.verifyCAs(merkleProof, singleParticipant)
         : props.Role === "Speaker"
-        ? await contractWithWallet.verifySpeakers(
+        ? await contractWithWallet.verifyOpenSourceAdvocates(
             merkleProof,
             singleParticipant
           )
         : props.Role === "Organising Team"
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
-    if (tx) setVerified(true);
-    else console.log("Never gonna give you up");
+    if (tx) {
+      setVerified(true);
+      alert("You can download your certificate!");
+    } else {
+      console.log("Never gonna give you up");
+      alert("Entered incorrect details!");
+    }
   }
 
   const Switcher = () => {
