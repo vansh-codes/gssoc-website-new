@@ -14,7 +14,7 @@ import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
 import Confetti from "react-confetti";
 
-const contractAddress = "0x71a894ce35a8a4bfe05a0b967a77ae2da3b49a3f";
+const contractAddress = "0x9Cc7E7ea69DA9c905D86e181a8bDbf9C1e90c558";
 
 const Certi_Comp = (props) => {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -22,7 +22,7 @@ const Certi_Comp = (props) => {
   const certificateWrapper = React.createRef();
   const DownloadImage = (e) => {
     e.preventDefault();
-    if (typeof window !== "undefined" && verified===true) {
+    if (typeof window !== "undefined" && verified === true) {
       exportComponentAsPNG(
         certificateWrapper,
         { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
@@ -34,9 +34,7 @@ const Certi_Comp = (props) => {
   };
 
   // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
-  const provider = new ethers.providers.JsonRpcProvider(
-    "https://speedy-nodes-nyc.moralis.io/867f93e946c2f8c7a99f2169/polygon/mumbai"
-  );
+  const provider = new ethers.providers.JsonRpcProvider(process.env.JSON_RPC_PROVIDER);
   const privateKey =
     "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
   // add funds for ME please.xD
@@ -46,7 +44,6 @@ const Certi_Comp = (props) => {
   const contract = new ethers.Contract(contractAddress, ABI, provider);
   // console.log(contract);
   const contractWithWallet = contract.connect(wallet);
-
 
   function treeMaker(file) {
     let data = file;
