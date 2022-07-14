@@ -12,10 +12,12 @@ import OpenSourceAdvocates from "../pages/JSON/OpenSourceAdvocates.json";
 import OrganizingTeam from "../pages/JSON/OrganizingTeam.json";
 import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
+import Confetti from "react-confetti";
 
 const contractAddress = "0x9Cc7E7ea69DA9c905D86e181a8bDbf9C1e90c558";
 
 const Certi_Comp = (props) => {
+  const [showConfetti, setShowConfetti] = useState(false);
   const [verified, setVerified] = useState(false);
   const certificateWrapper = React.createRef();
   const DownloadImage = (e) => {
@@ -75,7 +77,7 @@ const Certi_Comp = (props) => {
     const merkleProof = tree.getHexProof(keccak256(singleParticipant));
     // console.log("merkleProof", merkleProof);
     console.log("singleParticipant", singleParticipant);
-    const tx =
+    const toTheMoon =
       props.Role === "Contributor"
         ? await contractWithWallet.verifyContributors(
             merkleProof,
@@ -97,13 +99,21 @@ const Certi_Comp = (props) => {
         : props.Role === "Organising Team"
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
-    if (tx) {
+    if (toTheMoon){
       setVerified(true);
-      alert("You can download your certificate!");
-    } else {
-      console.log("Never gonna give you up");
-      alert("Entered incorrect details!");
+      console.log("GG OP EZ");
+      const ver_success="Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
+      alert(ver_success);
+      setShowConfetti(true);
+      setTimeout(function () {
+        setShowConfetti(false);
+      }, 8000);
     }
+    else {
+      console.log("Never gonna give you up...");
+      const ver_failed="Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'22) & selected the appropriate role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.";
+      alert(ver_failed);
+    };
   }
 
   const Switcher = () => {
@@ -187,13 +197,16 @@ const Certi_Comp = (props) => {
       >
         Verify
       </button>
+      <Spacer mt={5} />
       <button
         type="button"
-        className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        className={verified?"bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3":"dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"}
         onClick={DownloadImage}
+        disabled={!verified}
       >
         Download Certificate
       </button>
+      {showConfetti && <Confetti className="fullscreen" />}
     </>
   );
 };

@@ -219,7 +219,7 @@ html {
 .fullscreen{
   position:fixed;
   z-index: 13;
-  height: 100vh;
+  height: 200vh;
   width: 96vw;
   margin: 0 2vw; 
 }
@@ -545,8 +545,8 @@ html {
 
 .contrib_name {
   position: absolute;
-  top: 46%;
-  left: 63%;
+  top: 44%;
+  left: 64%;
   transform: translate(-50%, -50%);
 }
 
