@@ -34,13 +34,9 @@ const Certi_Comp = (props) => {
   };
 
   // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
-<<<<<<< HEAD
   const provider = new ethers.providers.JsonRpcProvider(
     process.env.JSON_RPC_PROVIDER
   );
-=======
-  const provider = new ethers.providers.JsonRpcProvider(process.env.JSON_RPC_PROVIDER);
->>>>>>> 586c49b10564f96e32d1b910725826faf80b6b2b
   const privateKey =
     "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
   // add funds for ME please.xD
@@ -105,21 +101,22 @@ const Certi_Comp = (props) => {
         : props.Role === "Organising Team"
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
-    if (toTheMoon){
+    if (toTheMoon) {
       setVerified(true);
       console.log("GG OP EZ");
-      const ver_success="Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
+      const ver_success =
+        "Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
       alert(ver_success);
       setShowConfetti(true);
       setTimeout(function () {
         setShowConfetti(false);
       }, 8000);
-    }
-    else {
+    } else {
       console.log("Never gonna give you up...");
-      const ver_failed="Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'22) & selected the appropriate role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.";
+      const ver_failed =
+        "Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'22) & selected the appropriate role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.";
       alert(ver_failed);
-    };
+    }
   }
 
   const Switcher = () => {
@@ -206,7 +203,11 @@ const Certi_Comp = (props) => {
       <Spacer mt={5} />
       <button
         type="button"
-        className={verified?"bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3":"dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"}
+        className={
+          verified
+            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+            : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        }
         onClick={DownloadImage}
         disabled={!verified}
       >
