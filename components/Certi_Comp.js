@@ -34,7 +34,7 @@ const Certi_Comp = (props) => {
   };
 
   // const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
-  const provider = new ethers.providers.JsonRpcProvider("JSON_RPC_PROVIDER");
+  const provider = new ethers.providers.JsonRpcProvider(process.env.JSON_RPC_PROVIDER);
   const privateKey =
     "0x2183467634e8e797c30f4a502ec8eab1a6e648ab8256668300092c4768bffc1d";
   // add funds for ME please.xD
