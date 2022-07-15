@@ -55,16 +55,16 @@ const Cert = () => {
       </Head>
       <div className="items-center justify-center">
         <div className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+          <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
             <h1 className="text-primary_orange-0">Verify&nbsp;</h1>
             <h1>Certifications</h1>
-          </p>
+          </div>
         </div>
       </div>
       <Spacer mt={20} />
       <div className="flex flex-col bg-white shadow-2xl dark:bg-black rounded-md mx-2 sm:mx-10 md:mx-10 lg:mx-20 px-10 py-2">
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
-          Enter Registered Email
+          Enter Registered Email*
         </label>
         <input
           type="text"
@@ -72,7 +72,7 @@ const Cert = () => {
           onChange={(e) => setEmail(e.target.value)}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
-          Enter Name
+          Enter Name*
         </label>
         <input
           type="text"
