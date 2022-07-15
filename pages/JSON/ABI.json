@@ -1,46 +1,5 @@
 [
   {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootProjectAdmins",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootMentors",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRoot100Contributors",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootContributors",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootCampusAmbassadors",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootOpenSourceAdvocates",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRootOrganizingTeam",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
     "inputs": [],
     "name": "merkleRoot100Contributors",
     "outputs": [

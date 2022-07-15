@@ -28,6 +28,8 @@ jobs:
         cache: 'npm'
       
     - run: npm ci
+    - run: touch .env.local
+    - run: echo JSON_RPC_PROVIDER=${{ secrets.JSON_RPC_PROVIDER }} >> .env.local
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
