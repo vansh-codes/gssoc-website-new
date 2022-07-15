@@ -6,13 +6,14 @@ const Team = () => {
   const [users, setUsers] = useState([]);
   const getUsers = async (year) => {
     const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team"+year
+      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team" +
+        year
     );
     setUsers(await response.json());
   };
 
   useEffect(() => {
-    var customQuery = window.location.href.split("#")[1];    // Direct link to /team#20XX
+    var customQuery = window.location.href.split("#")[1]; // Direct link to /team#20XX
     // Note - Only change 2022 with current year of GSSoC
     customQuery ? getUsers(customQuery) : getUsers("2022");
   }, []);
@@ -31,8 +32,9 @@ const Team = () => {
       </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-primary_orange-0 text-5xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-            Meet The Team
+          <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+            <h1 className="text-primary_orange-0">Meet the&nbsp;</h1>
+            <h1>Team </h1>
           </p>
           <p className=" text-primary_orange-0">
             Individuals can and do make a difference, <br />

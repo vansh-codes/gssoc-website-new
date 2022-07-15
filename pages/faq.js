@@ -18,9 +18,12 @@ function Faq() {
         /> */}
       </Head>
       <section className="flex flex-col items-center">
-        <h1 className="font-sans text-center flex flex-col text-orange-500 text-5xl font-bold m-3 underline underline-offset-4 decoration-primary_orange-0">
-          Frequently Asked Questions (FAQS)
-        </h1>
+        <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+          <h1 className="text-primary_orange-0">
+            Frequently Asked Questions&nbsp;
+          </h1>
+          <h1>(FAQs) </h1>
+        </p>
         <br />
         <div className="flex justify-around md:gap-1 w-11/12">
           <div className="w-6/12">

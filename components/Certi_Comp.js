@@ -22,7 +22,7 @@ const Certi_Comp = (props) => {
   const certificateWrapper = React.createRef();
   const DownloadImage = (e) => {
     e.preventDefault();
-    if (typeof window !== "undefined" && verified===true) {
+    if (typeof window !== "undefined" && verified === true) {
       exportComponentAsPNG(
         certificateWrapper,
         { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
@@ -46,7 +46,6 @@ const Certi_Comp = (props) => {
   const contract = new ethers.Contract(contractAddress, ABI, provider);
   // console.log(contract);
   const contractWithWallet = contract.connect(wallet);
-
 
   function treeMaker(file) {
     let data = file;
@@ -102,21 +101,22 @@ const Certi_Comp = (props) => {
         : props.Role === "Organising Team"
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
-    if (toTheMoon){
+    if (toTheMoon) {
       setVerified(true);
       console.log("GG OP EZ");
-      const ver_success="Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
+      const ver_success =
+        "Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
       alert(ver_success);
       setShowConfetti(true);
       setTimeout(function () {
         setShowConfetti(false);
       }, 8000);
-    }
-    else {
+    } else {
       console.log("Never gonna give you up...");
-      const ver_failed="Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'22) & selected the appropriate role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.";
+      const ver_failed =
+        "Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'22) & selected the appropriate role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.";
       alert(ver_failed);
-    };
+    }
   }
 
   const Switcher = () => {
@@ -180,7 +180,7 @@ const Certi_Comp = (props) => {
             </div>
           </div>
         ) : props.Role === "Organising Team" ? (
-          <div className="banner cert-speaker" ref={certificateWrapper}>
+          <div className="banner cert-orgteam" ref={certificateWrapper}>
             <div id="contrib_name" className="contrib_name text-big-orange">
               {props.Name}
             </div>
@@ -203,7 +203,11 @@ const Certi_Comp = (props) => {
       <Spacer mt={5} />
       <button
         type="button"
-        className={verified?"bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3":"dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"}
+        className={
+          verified
+            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+            : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        }
         onClick={DownloadImage}
         disabled={!verified}
       >

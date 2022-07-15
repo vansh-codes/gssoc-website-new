@@ -19,7 +19,8 @@ const CA = () => {
     <>
       <Head>
         <title>
-        Campus Ambassador | GirlScript Summer of Code 2022 | GirlScript Foundation India
+          Campus Ambassador | GirlScript Summer of Code 2022 | GirlScript
+          Foundation India
         </title>
         <meta name="description" content="GirlScript Summer of Code Team" />
         {/* <link
@@ -29,13 +30,14 @@ const CA = () => {
       </Head>
       <div className="items-center justify-center">
         <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-black text-5xl text center font-extrabold mb-10 dark:text-white">
-            Campus Ambassadors
+          <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+            <h1 className="text-primary_orange-0">Campus&nbsp;</h1>
+            <h1>Ambassadors </h1>
           </p>
         </p>
       </div>
       <Spacer mt={10} />
-     {/* <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+      {/* <div className="flex flex-row justify-center flex-wrap items-center gap-5">
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
@@ -94,7 +96,7 @@ const CA = () => {
               ) : (
                 <div className="flex items-center justify-center w-60" key={i}>
                   <div className="p-3 justify-center shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-84 relative bottom-0" >
+                    <div className="h-max rounded-lg shadow-lg md:h-84 relative bottom-0">
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
@@ -106,7 +108,6 @@ const CA = () => {
                       <div className="font-bold text-center text-black md:text-xl">
                         {curElem["Name"]}
                       </div>
-                    
 
                       <div className="flex">
                         <div className="flex gap-4">

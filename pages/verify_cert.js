@@ -55,9 +55,10 @@ const Cert = () => {
       </Head>
       <div className="items-center justify-center">
         <div className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <div className="text-black text-5xl text center font-extrabold mb-10 dark:text-white">
-            Verify Certificates
-          </div>
+          <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+            <h1 className="text-primary_orange-0">Verify&nbsp;</h1>
+            <h1>Certifications</h1>
+          </p>
         </div>
       </div>
       <Spacer mt={20} />
@@ -101,7 +102,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role} Email={Email}/>
+        <Certi_Comp Name={Name} Role={Role} Email={Email} />
       </div>
     </>
   );

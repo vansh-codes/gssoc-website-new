@@ -87,7 +87,7 @@ function info() {
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold text-black-100">
             <p className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-              <span className="text-primary_orange-0">How</span>
+              <span className="text-primary_orange-0">How&nbsp;</span>
               they do ?
             </p>
           </div>

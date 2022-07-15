@@ -12,7 +12,7 @@ const Project = () => {
   // const [data, setData] = useState(projectData);
   const [data, setData] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [searchtrm, setsearchtrm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const getProjects2022 = async () => {
@@ -73,7 +73,7 @@ const Project = () => {
                 name="search"
                 id="search"
                 onChange={(event) => {
-                  setsearchtrm(event.target.value);
+                  setSearchTerm(event.target.value);
                 }}
               />
             </div>
@@ -108,12 +108,12 @@ const Project = () => {
         >
           {data
             .filter((curElem, i) => {
-              if (searchtrm == "") {
+              if (searchTerm == "") {
                 return curElem;
               } else if (
                 curElem.technology_used
                   .toLowerCase()
-                  .includes(searchtrm.toLowerCase())
+                  .includes(searchTerm.toLowerCase())
               ) {
                 return curElem;
               }
@@ -168,7 +168,7 @@ const Project = () => {
                                     text-orange-600 drop-shadow-md font-semibold"
                                   key={k}
                                   onClick={() => {
-                                    setsearchtrm(techStk.trim());
+                                    setSearchTerm(techStk.trim());
                                   }}
                                 >
                                   {techStk.trim()}
