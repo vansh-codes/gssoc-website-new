@@ -14,7 +14,11 @@ const Cert = () => {
   const [Email, setEmail] = useState("");
   const [Name, setName] = useState("");
   const [Role, setRole] = useState("Contributor");
-
+  const [verified, setVerified] = useState(false);
+  const setVerifiedTrue = () => {
+    setVerified(true);
+    console.log("verified");
+  }
   // () => {
   //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
   //   FileSaver.saveAs(image_url, "Cert_GSSoC.png");
@@ -70,6 +74,7 @@ const Cert = () => {
           type="text"
           className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           onChange={(e) => setEmail(e.target.value)}
+          disabled={verified}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
           Enter Name*
@@ -79,6 +84,7 @@ const Cert = () => {
           className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           value={Name}
           onChange={(e) => setName(e.target.value)}
+          disabled={verified}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
           Select Role in GSSoC 2022
@@ -87,6 +93,7 @@ const Cert = () => {
           className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           defaultValue="Contributor"
           onChange={(e) => setRole(e.target.value)}
+          disabled={verified}
         >
           <option value="Contributor">Contributor</option>
           <option value="Top Contributor">Top 100 Contributor</option>
@@ -102,7 +109,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role} Email={Email} />
+        <Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue}/>
       </div>
     </>
   );

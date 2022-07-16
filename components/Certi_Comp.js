@@ -18,11 +18,10 @@ const contractAddress = "0x9Cc7E7ea69DA9c905D86e181a8bDbf9C1e90c558";
 
 const Certi_Comp = (props) => {
   const [showConfetti, setShowConfetti] = useState(false);
-  const [verified, setVerified] = useState(false);
   const certificateWrapper = React.createRef();
   const DownloadImage = (e) => {
     e.preventDefault();
-    if (typeof window !== "undefined" && verified === true) {
+    if (typeof window !== "undefined" && props.verified === true) {
       exportComponentAsPNG(
         certificateWrapper,
         { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
@@ -70,6 +69,9 @@ const Certi_Comp = (props) => {
   const openSourceAdvocatesTree = treeMaker(OpenSourceAdvocates);
   const organizingTeamTree = treeMaker(OrganizingTeam);
 
+  const setVerifiedTrue = () => {
+    props.setVerified();
+  }
   async function Checker(tree, email) {
     let singleParticipant = keccak256(
       JSON.stringify({
@@ -102,7 +104,7 @@ const Certi_Comp = (props) => {
         ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
         : false;
     if (toTheMoon) {
-      setVerified(true);
+      setVerifiedTrue();
       console.log("GG OP EZ");
       const ver_success =
         "Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
@@ -195,8 +197,13 @@ const Certi_Comp = (props) => {
       <Spacer mt={20} />
       <button
         type="button"
-        className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        className={
+          !props.verified
+            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+            : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+        }
         onClick={Switcher}
+        disabled={props.verified}
       >
         Verify
       </button>
@@ -204,12 +211,12 @@ const Certi_Comp = (props) => {
       <button
         type="button"
         className={
-          verified
+          props.verified
             ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
             : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
         }
         onClick={DownloadImage}
-        disabled={!verified}
+        disabled={!props.verified}
       >
         Download Certificate
       </button>
