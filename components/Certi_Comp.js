@@ -14,7 +14,7 @@ import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
 import Confetti from "react-confetti";
 
-const contractAddress = "0x9Cc7E7ea69DA9c905D86e181a8bDbf9C1e90c558";
+const contractAddress = "0xe43396673abba702652e4e4c1cfa53c2925cf2d6";
 
 const Certi_Comp = (props) => {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -71,7 +71,7 @@ const Certi_Comp = (props) => {
 
   const setVerifiedTrue = () => {
     props.setVerified();
-  }
+  };
   async function Checker(tree, email) {
     let singleParticipant = keccak256(
       JSON.stringify({
