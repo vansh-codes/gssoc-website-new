@@ -14,7 +14,7 @@ import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
 import Confetti from "react-confetti";
 
-const contractAddress = "0xe43396673abba702652e4e4c1cfa53c2925cf2d6";
+const contractAddress = "0x0E2195E4292458eaA9Ee30242Fce440b5a722944";
 
 const Certi_Comp = (props) => {
   const [showConfetti, setShowConfetti] = useState(false);
