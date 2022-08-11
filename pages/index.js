@@ -508,7 +508,7 @@ export default function Home() {
                 Community Partners
               </h3>
               <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
-                <a href="https://filecoin.io/#gssoc22">
+                <a href="https://www.bluelearn.in/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -517,7 +517,7 @@ export default function Home() {
                     alt="Bluelearn"
                   />
                 </a>
-                <a href="https://moralis.io/#gssoc22">
+                <a href="https://techrity.org/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
