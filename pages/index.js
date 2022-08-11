@@ -101,34 +101,6 @@ export default function Home() {
                 >
                   Register Here
                 </button>
-
-                {/* <Box
-                  as="button"
-                  height="50px"
-                  width="200px"
-                  lineHeight="1.2"
-                  transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-                  border="0px"
-                  px="8px"
-                  borderRadius="15px"
-                  fontSize="24px"
-                  fontWeight="semibold"
-                  bg="#FF7A19"
-                  borderColor="##b55712"
-                  color="#ffffff"
-                  _hover={{ bg: "#b55712" }}
-                  _active={{
-                    bg: "#FF7A19",
-                    transform: "scale(0.98)",
-                    borderColor: "#bec3c9",
-                  }}
-                  _focus={{
-                    boxShadow:
-                      "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-                  }}
-                >
-                  Register Here
-                </Box> */}
               </a>
               <a data-aos="fade-down" href="#about-gssoc">
                 <div className="font-serif font-medium text-md text-primary_orange-0 ml-9 md:text-2xl">
@@ -371,20 +343,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/*   {theme === "light" ? (
-              <img
-                className="mt-3 mb-3 md:mt-0"
-                id="Learn_more"
-                src="https://user-images.githubusercontent.com/64256342/152652343-d9c8d7c0-2cb4-401e-aef0-f4aed14f7731.svg"
-              />
-            ) : (
-              <img
-                className="mt-3 mb-3 md:mt-0"
-                id="Learn_more"
-                src="https://user-images.githubusercontent.com/64256342/152652299-9d3ac037-628b-46bb-ba07-fe5f2d4587b9.svg"
-              />
-            )} */}
           </div>
         </div>
         <div className="organisation">
@@ -437,50 +395,61 @@ export default function Home() {
           <div className="sponsors__wrapper flex flex-col">
             <div
               data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
+              data-aos-anchor-placement="top-bottom"
               data-aos-duration="400"
               className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
             >
               <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
                 Platinum Sponsors
               </h3>
-              <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
-                <a href="https://moralis.io/">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
+                <a href="https://moralis.io/#gssoc22">
                   <img
                     data-aos="fade-up"
-                    className="h-20 mb-5 md:mb-0"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-20"
                     src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
                     alt="Moralis"
                   />
                 </a>
-                <a href="https://filecoin.io/">
+                <a href="https://filecoin.io/#gssoc22">
                   <img
                     data-aos="fade-up"
-                    className="h-20 mb-5 md:mb-0"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-20"
                     src="https://user-images.githubusercontent.com/63473496/163260977-e0a5e8bd-618f-4691-ae13-02b878819def.png"
                     alt="Filecoin"
                   />
                 </a>
               </div>
               <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
-                Silver Sponsors
+                Hiring Partners
               </h3>
-              <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-x-28 justify-between mb-5">
-                <a href="https://mentro.tech/">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
+                <a href="https://mentro.tech/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    className="h-24 mb-5 md:mb-0"
+                    className="h-24"
                     src="https://user-images.githubusercontent.com/63473496/163266199-53c5a68a-e6ee-4fc9-8b3d-689d4e32a43b.png"
                     alt="Mentro"
+                  />
+                </a>
+                <a href="https://www.priceline.com/#gssoc22">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="https://user-images.githubusercontent.com/63473496/184183081-28a7ce26-cb1a-4ba9-9d5f-8d9efd4722a3.png"
+                    alt="Priceline"
                   />
                 </a>
               </div>
               <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
                 In Kind Sponsors
               </h3>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly">
-                <a href="https://www.taskade.com/">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly items-center mb-5">
+                <a href="https://www.taskade.com/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -489,7 +458,7 @@ export default function Home() {
                     alt="Taskade"
                   />
                 </a>
-                <a href="https://gen.xyz/">
+                <a href="https://gen.xyz/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -498,25 +467,7 @@ export default function Home() {
                     alt=".XYZ"
                   />
                 </a>
-                {/* <a href="https://teleporthq.io/">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-16"
-                    src="https://user-images.githubusercontent.com/63473496/163260136-1e4eb2d0-a217-4d7e-a0f5-dcd63d9ba6a8.svg"
-                    alt="TeleportHQ"
-                  />
-                </a> */}
-                <a href="https://www.jetbrains.com/">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-28 relative lg:bottom-8"
-                    src="https://user-images.githubusercontent.com/64256342/153583220-9fb4a9c2-0b1d-4bce-98f6-37e07125b4d8.svg"
-                    alt="JetBrains"
-                  />
-                </a>
-                <a href="http://www.datacamp.com/donates">
+                <a href="http://www.datacamp.com/donates#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -525,40 +476,54 @@ export default function Home() {
                     alt="DataCamp"
                   />
                 </a>
-                <a href="https://www.postman.com/">
+                <a href="https://www.postman.com/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    className="h-20 relative lg:bottom-3"
+                    className="h-20"
                     src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
                     alt="Postman"
                   />
                 </a>
-                <a href="https://fueler.io/">
+                <a href="https://fueler.io/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    className="h-12 relative lg:bottom-1"
+                    className="h-12"
                     src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
                     alt="Fueler"
                   />
                 </a>
-                {/* <a href="https://www.packtpub.com/">
+                <a href="https://www.oreilly.com/#gssoc22">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    className="h-12 relative lg:bottom-2 mb-5 md:mb-0"
-                    src="https://user-images.githubusercontent.com/63473496/163258089-e49de008-dbf3-4c25-ae43-54dab9fdeb51.png"
-                    alt="Packt"
-                  />
-                </a> */}
-                <a href="https://www.oreilly.com/">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-8  mb-5 md:mb-0"
+                    className="h-8"
                     src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/sponsors/o%20reilly.png"
                     alt="O'Reilly"
+                  />
+                </a>
+              </div>
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center mt-5">
+                Community Partners
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
+                <a href="https://filecoin.io/#gssoc22">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-12"
+                    src="https://user-images.githubusercontent.com/63473496/184188447-479c6a1b-e6f5-407c-8db5-bea5950e854c.png"
+                    alt="Bluelearn"
+                  />
+                </a>
+                <a href="https://moralis.io/#gssoc22">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-24"
+                    src="https://user-images.githubusercontent.com/63473496/184188460-aa6b940e-4369-46a7-9d0f-f20f50adc534.png"
+                    alt="Techrity"
                   />
                 </a>
               </div>
