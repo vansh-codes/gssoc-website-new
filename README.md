@@ -1,6 +1,7 @@
-![](https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Navbar%20logo/GS_logo_White.png)
-# GirlScript Summer of Code
-## Official website repo of GSSoC '22
+![GSSoC Logo Light](https://user-images.githubusercontent.com/63473496/213306239-9e8fc317-ce2f-4127-8bfe-17f5df06ee99.png#gh-light-mode-only)
+![GSSoC Logo Dark](https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only)
+
+# Official website repository for the GirlScript Summer of Code 2022 (GSSoC'22)
 
 GirlScript Summer Of Code is a three-month-long Open-Source Program conducted every summer by the Girlscript Foundation.  
 With constant efforts, participants contribute to numerous projects under the extreme guidance of skilled mentors over these months. With such exposure, students begin to contribute to real-world projects from the comfort of their homes. GirlScript Summer Of Code has witnessed active participation over the years, and the 2023 edition aims to carry the legacy with a promising impact.
@@ -67,10 +68,17 @@ The `styles/globals.css` file consists of all the custom css used apart from inl
 
 The website was designed to support both light and dark themes. It reads the current theme preference of the client browser and accordingly applies the state throughout the website.
 
-### Dark Mode
-![Home - Dark Mode](https://user-images.githubusercontent.com/63473496/213293448-54a58694-2472-46e2-a12c-5dbfa30ef8cc.png)  
-### Light Mode
-![Home - Light Mode](https://user-images.githubusercontent.com/63473496/213293463-9aec4ef9-8955-4fb4-a72a-27622e27d667.png)
+### Dark Mode  
+
+<details> <summary>Toggle me to Preview!</summary>
+<img src="https://user-images.githubusercontent.com/63473496/213293448-54a58694-2472-46e2-a12c-5dbfa30ef8cc.png"/>  
+</details>
+
+### Light Mode  
+
+<details> <summary>Toggle me to Preview!</summary>
+<img src="https://user-images.githubusercontent.com/63473496/213293463-9aec4ef9-8955-4fb4-a72a-27622e27d667.png"/>
+</details>
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
@@ -85,19 +93,24 @@ The website in our case was deployed on GitHub pages using a custom workflow tha
 
 At the time of writing this project, GitHub did not provide GitHub pages configuration for Next.js by default and thus, had to be deployed using the [next-pages](https://github.com/marketplace/actions/next-pages) workflow from the [Github Actions marketplace](https://github.com/marketplace?category=&query=&type=actions&verification=)
 
+## Participating Projects List
+![Project List](https://user-images.githubusercontent.com/63473496/213307997-43920dbd-3042-468b-97df-93d22f17e61b.png)
+
+The list of participating projects for the GirlScript Summer of Code 2022 as well as in the previous editions is made available through the JSON Endpoint available **[HERE](https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/JSON_EndPoint)** which is actually the raw version of the selected project list available in **[THIS](https://docs.google.com/spreadsheets/d/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/edit#gid=0)** Google Sheet.
+
 ## Leaderboard
 
-![image](https://user-images.githubusercontent.com/63473496/213297009-6faeff7e-5e4b-442a-b67d-7a3de9c17dcd.png)
+![Leaderboard](https://user-images.githubusercontent.com/63473496/213297009-6faeff7e-5e4b-442a-b67d-7a3de9c17dcd.png)
 
 The leaderboard's backend is hosted in [Heroku](https://www.heroku.com/) and is developed in a separate repository which can be found **[HERE](https://github.com/girlscript/gssoc22-leaderboard-backend)**.  
 This uses the [GitHub OctoKit SDK](https://github.com/octokit/octokit.js) documented **[HERE](https://github.com/octokit/octokit.js)** to fetch merged PR data for each contributor in the program and calculates their global rank as per labels assigned by the project owners/maintainers as per the following scoring system:  
 
-![image](https://user-images.githubusercontent.com/63473496/213296737-9da733f4-9a0c-4f26-b880-119227a092c4.png)
+![Discord Scoring System](https://user-images.githubusercontent.com/63473496/213296737-9da733f4-9a0c-4f26-b880-119227a092c4.png)
 
 ##### Note - The dynamic leaderboard was disconnected at the last date of the program at midnight (ie, 6/2/2022, 23:59:52 PM) and replaced using the static `json` of contributors' final ranking data. It can found at `pages\api\leaderboard.json`
 
 ## Onchain Certificate Verification  
-![image](https://user-images.githubusercontent.com/63473496/213298847-2c58c58b-e528-4807-b477-bcc7a6775cf1.png)
+![Certificate Verifier](https://user-images.githubusercontent.com/63473496/213298847-2c58c58b-e528-4807-b477-bcc7a6775cf1.png)
 
 The website includes a feature of onchain certificate verification to provide convinient download of certificates for eligible participants in each role:
 namely Top 100 Contributors, Top Mentors, Top Project Admins, Top Campus Ambassadors and the organising team. The data of eligible open-sourecerers can be checked under `pages\JSON` directory  
