@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { projectData } from "./api/projectsData";
-import Head from "next/head";
-import { useTheme } from "next-themes";
-import { SimpleGrid } from "@chakra-ui/react";
-import { Spacer } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
+import { SimpleGrid, Spacer, useDisclosure } from "@chakra-ui/react";
+import { useTheme } from "next-themes";
+import Head from "next/head";
+import React, { useEffect, useState } from "react";
 import ProjectModal from "../components/ProjectModal";
-import { useDisclosure, Lorem } from "@chakra-ui/react";
+import { projectData } from "./api/projectsData";
 
 const Project = () => {
   // const [data, setData] = useState(projectData);

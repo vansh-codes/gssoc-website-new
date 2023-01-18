@@ -1,27 +1,21 @@
-import Head from "next/head";
-import Image from "next/image";
-// import { Button, ButtonGroup } from "@chakra-ui/react";
-// import { Box } from "@chakra-ui/react";
-// import { extendTheme } from "@chakra-ui/react";
-// import styles from "../styles/Home.module.css";
-import Card from "../components/homepage/Card";
-import SocialFollow from "../components/homepage/SocialFollow";
-import Tilt from "react-parallax-tilt";
-import ThemeChanger from "../components/Toggler";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import Aos from "aos";
-// import "aos/dist/aos.css";
+import { useTheme } from "next-themes";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import CountUp from "react-countup";
+import Tilt from "react-parallax-tilt";
+import VisibilitySensor from "react-visibility-sensor";
 import Bighex from "../components/BgAssets/Bighex";
 import EllipseBox from "../components/BgAssets/EllipseBox";
-import SmallHex from "../components/BgAssets/SmallHex";
 import EllipseBox2 from "../components/BgAssets/EllipseBox2";
 import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import SmallHex from "../components/BgAssets/SmallHex";
+import ThemeChanger from "../components/Toggler";
+import Card from "../components/homepage/Card";
 import Slider from "../components/homepage/Slider";
+import SocialFollow from "../components/homepage/SocialFollow";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -116,18 +110,16 @@ export default function Home() {
               options={{ max: 25 }}
               style={{ height: 600, width: 600 }}
             >
-              <div className="img__container">
-                {theme === "light" ? (
+              <div className="img__container">{
+                theme === 'light' ?
                   <img
-                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/hero-lite.svg"
+                    src={"./Hero_Image_Lite_Theme.svg"}
                     alt="hero-image"
-                  />
-                ) : (
+                  /> :
                   <img
-                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/hero-dark.svg"
+                    src={"./Hero_Image_Dark_Theme.svg"}
                     alt="hero-image"
-                  />
-                )}
+                  />}
               </div>
             </Tilt>
           </div>
@@ -140,27 +132,23 @@ export default function Home() {
             data-aos-duration="700"
           >
             <img
-              src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/Rectangle%20(1).png"
+              src="./GirlScript_Group_Photo.svg"
               height="453"
               width="420"
-              alt="Rectangle light"
+              alt="GirlScript Group Photo"
             />
           </div>
           <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
-            {/* <img
-              className=" mt-4 mb-8 md:mb-9 md:mt-0"
-              src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GS_logo_Black.png?raw=true"
-            /> */}
             {theme === "light" ? (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://github.com/girlscript/gssoc-assets/blob/main/Logos/GirlScript_logo_Black.png?raw=true"
+                src="./GS_Foundation_logo_Black.svg"
                 alt="logo"
               />
             ) : (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
-                src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/Logos/GsLogo_White.png"
+                src="./GS_Foundation_logo_White.svg"
                 alt="logo"
               />
             )}
@@ -180,9 +168,6 @@ export default function Home() {
               promoting, sharing, and spreading knowledge equally to every
               individual.
             </p>
-            {/* <button className="bg-primary_orange-0 rounded-xl font-bold py-3 w-full text-white dark:text-gray-800 mt-5">
-              Wanna know more about GIRLSCRIPT?
-            </button> */}
           </div>
         </div>
 
@@ -408,7 +393,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-20"
-                    src="https://user-images.githubusercontent.com/63473496/158809544-c659c3be-79b7-4884-be11-76dcb3874733.png"
+                    src="./Sponsors/Moralis.png"
                     alt="Moralis"
                   />
                 </a>
@@ -417,7 +402,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-20"
-                    src="https://user-images.githubusercontent.com/63473496/163260977-e0a5e8bd-618f-4691-ae13-02b878819def.png"
+                    src="./Sponsors/FileCoin.png"
                     alt="Filecoin"
                   />
                 </a>
@@ -431,7 +416,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-24"
-                    src="https://user-images.githubusercontent.com/63473496/163266199-53c5a68a-e6ee-4fc9-8b3d-689d4e32a43b.png"
+                    src="./Sponsors/Mentro.png"
                     alt="Mentro"
                   />
                 </a>
@@ -440,7 +425,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-16"
-                    src="https://user-images.githubusercontent.com/63473496/184183081-28a7ce26-cb1a-4ba9-9d5f-8d9efd4722a3.png"
+                    src="./Sponsors/Priceline.png"
                     alt="Priceline"
                   />
                 </a>
@@ -454,7 +439,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-16"
-                    src="https://user-images.githubusercontent.com/63473496/159113176-704ef486-2091-4440-a89d-1630f6df9cf7.png"
+                    src="./Sponsors/Taskade.png"
                     alt="Taskade"
                   />
                 </a>
@@ -463,7 +448,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-16"
-                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/sponsors/xyz-logo-color.png"
+                    src="./Sponsors/dotXYZ.png"
                     alt=".XYZ"
                   />
                 </a>
@@ -472,7 +457,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-12"
-                    src="https://user-images.githubusercontent.com/63473496/163257043-e2472c13-905c-4f64-8cbc-f2e3c7b7a59c.png"
+                    src="./Sponsors/DataCamp.png"
                     alt="DataCamp"
                   />
                 </a>
@@ -481,7 +466,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-20"
-                    src="https://user-images.githubusercontent.com/63473496/159116990-1674fc0e-c011-405e-a40f-ea9d61d182cf.png"
+                    src="./Sponsors/Postman.png"
                     alt="Postman"
                   />
                 </a>
@@ -490,7 +475,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-12"
-                    src="https://user-images.githubusercontent.com/63473496/158831706-df3cc62b-74c4-491b-85f3-60d92d94f18a.png"
+                    src="./Sponsors/Fueler.png"
                     alt="Fueler"
                   />
                 </a>
@@ -499,7 +484,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-8"
-                    src="https://raw.githubusercontent.com/girlscript/gssoc-assets/main/sponsors/o%20reilly.png"
+                    src="./Sponsors/O'Reilly.png"
                     alt="O'Reilly"
                   />
                 </a>
@@ -513,7 +498,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-12"
-                    src="https://user-images.githubusercontent.com/63473496/184188447-479c6a1b-e6f5-407c-8db5-bea5950e854c.png"
+                    src="./Sponsors/BlueLearn.png"
                     alt="Bluelearn"
                   />
                 </a>
@@ -522,7 +507,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-24"
-                    src="https://user-images.githubusercontent.com/63473496/184188460-aa6b940e-4369-46a7-9d0f-f20f50adc534.png"
+                    src="./Sponsors/Techrity.png"
                     alt="Techrity"
                   />
                 </a>

@@ -109,7 +109,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue}/>
+        <Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue} />
       </div>
     </>
   );

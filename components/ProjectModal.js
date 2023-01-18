@@ -1,26 +1,24 @@
-import React from "react";
 import {
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button,
-  useDisclosure,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure
 } from "@chakra-ui/react";
+import { faGitAlt, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 const ProjectModal = ({ currProject }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const [scrollBehavior, setScrollBehavior] = React.useState("inside");
   const btnRef = React.useRef();
   return (
     <div className="w-full absolute bottom-0">
-      <button ref={btnRef} onClick={onOpen} 
+      <button ref={btnRef} onClick={onOpen}
         className=" bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md py-1 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 w-full"
-        >
+      >
         Project Details
       </button>
       <Modal
@@ -37,11 +35,11 @@ const ProjectModal = ({ currProject }) => {
               {currProject.project_id}
               {"."}
             </p>
-            <a 
-            target="_blank"
-            rel="noreferrer"
-            href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}>
-            {currProject.project_name}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={currProject.project_link || currProject.github || "https://github.com/" + currProject.repo_fullname}>
+              {currProject.project_name}
             </a>
           </ModalHeader>
           <ModalCloseButton />
@@ -66,7 +64,7 @@ const ProjectModal = ({ currProject }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}
+                href={currProject.project_link || currProject.github || "https://github.com/" + currProject.repo_fullname}
               >
                 <div className="flex items-center">
                   <FontAwesomeIcon

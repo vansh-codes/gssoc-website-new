@@ -1,32 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import {
   Modal,
-  ModalOverlay,
+  ModalBody,
   ModalContent,
   ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-} from '@chakra-ui/react'
-import { Spinner } from "@chakra-ui/react";
-import Confetti from "react-confetti";
-import {
+  ModalOverlay,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
+  Spinner,
   Stack,
-} from "@chakra-ui/react";
-import { useTheme } from "next-themes";
-import Pagination from "react-js-pagination";
+  useDisclosure
+} from '@chakra-ui/react';
 import {
   faGithub,
-  // faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
-import { useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTheme } from "next-themes";
+import Head from "next/head";
+import React, { useCallback, useEffect, useState } from "react";
+import Confetti from "react-confetti";
+import Pagination from "react-js-pagination";
 const columns = [
   { id: "position", label: "Rank", minWidth: 50 },
   { id: "avatar", label: "Avatar", minWidth: 50 },

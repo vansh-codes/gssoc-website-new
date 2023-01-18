@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import React, { useState } from "react";
 
 function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -70,16 +70,16 @@ function Carousel() {
                   Deep Dive on Filecoin & IPFS use cases in the Solana ecosystem
                 </div>
                 <div className="text-sm md:text-md lg:text-xl mb-5 text-white">
-                 <em className="font-bold">What are Filecoin and IPFS, and what problems it&quot;s solving in the blockchain ecosystem?</em>
-                <ol className="hidden md:block">
-                  <li>• Using IPFS to store NFTs and metadata of Candy Machine V2</li>
-                  <li>• Using the various IPFS libraries for storage in your dapps</li>
-                  <li>• Deploying and hosting dapps on IPFS</li>
-                </ol>
-                <div className="hidden md:block">
-                  <em className="font-bold">Awesome Developer Tools:</em>
-                &nbsp;&nbsp; • Pinata &nbsp;&nbsp; • Fleek &nbsp;&nbsp; • Web3.Storage &nbsp;&nbsp; • NFT.Storage
-                </div>
+                  <em className="font-bold">What are Filecoin and IPFS, and what problems it&quot;s solving in the blockchain ecosystem?</em>
+                  <ol className="hidden md:block">
+                    <li>• Using IPFS to store NFTs and metadata of Candy Machine V2</li>
+                    <li>• Using the various IPFS libraries for storage in your dapps</li>
+                    <li>• Deploying and hosting dapps on IPFS</li>
+                  </ol>
+                  <div className="hidden md:block">
+                    <em className="font-bold">Awesome Developer Tools:</em>
+                    &nbsp;&nbsp; • Pinata &nbsp;&nbsp; • Fleek &nbsp;&nbsp; • Web3.Storage &nbsp;&nbsp; • NFT.Storage
+                  </div>
                 </div>
                 <a className="text-primary_orange-0 hover:text-white text-lg font-bold" href="https://9yearoldtechkid.medium.com/deep-dive-on-filecoin-ipfs-use-cases-in-the-solana-ecosystem-decff70c60af">Read More here &gt;&gt;</a>
               </div>
@@ -299,9 +299,8 @@ function Arrow(props) {
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabeld}`}
+      className={`arrow ${props.left ? "arrow--left" : "arrow--right"
+        } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >

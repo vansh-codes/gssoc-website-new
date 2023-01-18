@@ -2,15 +2,30 @@
 # GirlScript Summer of Code
 ## Official website repo of GSSoC '22
 
-GirlScript Summer of Code is the 3 month long Open Source program during summers conducted by GirlScript Foundation, started in 2018, with an aim to help beginners get started with Open Source Development while encouraging diversity. Throughout the program, participants contribute to different projects under guidance of experienced mentors. Top participants get exciting goodies and opportunities.  
+GirlScript Summer Of Code is a three-month-long Open-Source Program conducted every summer by the Girlscript Foundation.  
+With constant efforts, participants contribute to numerous projects under the extreme guidance of skilled mentors over these months. With such exposure, students begin to contribute to real-world projects from the comfort of their homes. GirlScript Summer Of Code has witnessed active participation over the years, and the 2023 edition aims to carry the legacy with a promising impact.
   
 ---
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-  
+- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).  
+- Subsequently this was designed from scratch purely using [TailwindCSS](https://tailwindcss.com/) framework and does not use any predefined UI library or design system.
+- The brand palette and prototype was designed in [Figma](https://figma.com) and can be found **[HERE](https://www.figma.com/file/aXL6autoWxlLLqLyYTTLVB/GirlScript-Summer-of-Code?t=IGeoI4nib4u0ejJf-0)**
 
+## Preview
+
+[gssoc-website.webm](https://user-images.githubusercontent.com/63473496/213291499-67c96070-0a8a-4fd7-986d-e72b226a6be6.webm)
+
+## Setting Up the Development Environment
+First, install the node modules & dependencies:
+
+```bash
+npm i
+# or
+yarn
+```
 ## Getting Started
 
-First, run the development server:
+
+Next, run the development server:
 
 ```bash
 npm run dev
@@ -18,20 +33,44 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.  
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+.
+├── .github
+│   └── workflows
+│       ├── gssoc-deploy.yml
+│       └── contributors.yml
+├── public/*
+├── components/*
+├── pages/*
+├── styles/*
+├── package.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── README.md
+├── LICENCE
+└── contributors.md
+```
+- [x] You can start editing the homepage by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [x] All the other pages under the pages directory are a part of the sitemap and represent the different webpages in the website.
+- [x] [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [x] The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [x] The various components used in the pages have been defined under `components` directory   
+- [x] `public` directory contains all the assets used in the project (including images, certificates, graphics and logos)
+The `styles/globals.css` file consists of all the custom css used apart from inline Tailwind styles.  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Theming and Dual Modes
 
-## Learn More
+The website was designed to support both light and dark themes. It reads the current theme preference of the client browser and accordingly applies the state throughout the website.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Dark Mode
+![Home - Dark Mode](https://user-images.githubusercontent.com/63473496/213293448-54a58694-2472-46e2-a12c-5dbfa30ef8cc.png)  
+### Light Mode
+![Home - Light Mode](https://user-images.githubusercontent.com/63473496/213293463-9aec4ef9-8955-4fb4-a72a-27622e27d667.png)
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
@@ -40,3 +79,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Deploy on GitHub pages  
+The website in our case was deployed on GitHub pages using a custom workflow that can be found at `.github\workflows\gssoc-deploy.yml`  
+
+At the time of writing this project, GitHub did not provide GitHub pages configuration for Next.js by default and thus, had to be deployed using the [next-pages](https://github.com/marketplace/actions/next-pages) workflow from the [Github Actions marketplace](https://github.com/marketplace?category=&query=&type=actions&verification=)
+
+## Leaderboard
+
+![image](https://user-images.githubusercontent.com/63473496/213297009-6faeff7e-5e4b-442a-b67d-7a3de9c17dcd.png)
+
+The leaderboard's backend is hosted in [Heroku](https://www.heroku.com/) and is developed in a separate repository which can be found **[HERE](https://github.com/girlscript/gssoc22-leaderboard-backend)**.  
+This uses the [GitHub OctoKit SDK](https://github.com/octokit/octokit.js) documented **[HERE](https://github.com/octokit/octokit.js)** to fetch merged PR data for each contributor in the program and calculates their global rank as per labels assigned by the project owners/maintainers as per the following scoring system:  
+
+![image](https://user-images.githubusercontent.com/63473496/213296737-9da733f4-9a0c-4f26-b880-119227a092c4.png)
+
+##### Note - The dynamic leaderboard was disconnected at the last date of the program at midnight (ie, 6/2/2022, 23:59:52 PM) and replaced using the static `json` of contributors' final ranking data. It can found at `pages\api\leaderboard.json`
+
+## Onchain Certificate Verification  
+![image](https://user-images.githubusercontent.com/63473496/213298847-2c58c58b-e528-4807-b477-bcc7a6775cf1.png)
+
+The website includes a feature of onchain certificate verification to provide convinient download of certificates for eligible participants in each role:
+namely Top 100 Contributors, Top Mentors, Top Project Admins, Top Campus Ambassadors and the organising team. The data of eligible open-sourecerers can be checked under `pages\JSON` directory  
+
+The smart contract and ABI used to achieve this can be found at `pages\JSON\Certificates.sol` and `pages\JSON\ABI.json` respectively.  
+
+## Learn More on Next.js
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.

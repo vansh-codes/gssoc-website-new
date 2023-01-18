@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { accordionData } from "./api/FAQdata";
-import DiabloAccordion from "../components/diabloAccordion";
 import Head from "next/head";
+import React, { useState } from "react";
+import DiabloAccordion from "../components/diabloAccordion";
+import { accordionData } from "./api/FAQdata";
 
 function Faq() {
   const [data] = useState(accordionData);
@@ -12,10 +12,6 @@ function Faq() {
           FAQs | GirlScript Summer of Code 2022 | GirlScript Foundation India
         </title>
         <meta name="description" content="FAQs of GirlScript Summer of Code" />
-        {/* <link
-          rel="icon"
-          href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
-        /> */}
       </Head>
       <section className="flex flex-col items-center">
         <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">

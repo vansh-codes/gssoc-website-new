@@ -18,10 +18,9 @@ TAILWIND DARK CLASSES WILL ONLY TAKE EFFECT INSIDE THE ACTUAL CHRONO-COMPONENT, 
 I'VE USED NEUTRAL COLOR THEMES FOR BASE CHRONO COMPONENT, SO THAT IT DOESN'T ODD OUT ON BOTH DARK AND LIGHT THEMES.
 */
 
-import React from "react";
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Head from "next/head";
+import React, { useEffect, useState } from "react";
 import { Chrono } from "react-chrono";
 import Eventdata from "./api/event_data";
 

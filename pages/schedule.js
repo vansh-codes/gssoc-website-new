@@ -1,5 +1,5 @@
-import Schedule from "../components/ScheduleMap";
 import Head from "next/head";
+import Schedule from "../components/ScheduleMap";
 
 function schedule() {
   return (

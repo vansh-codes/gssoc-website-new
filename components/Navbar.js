@@ -1,16 +1,9 @@
-import ThemeChanger from "./Toggler";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import { Tooltip } from "@chakra-ui/react";
-import React from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import MoreMenu from "./MoreMenu";
-
-// import { Menu, Transition } from "@headlessui/react";
-
-/*import Dropdown from "@material-tailwind/react/Dropdown"
-import DropdownItem from "@material-tailwind/react/DropdownItem"
-import DropdownLink from "@material-tailwind/react/DropdownLink" */
+import ThemeChanger from "./Toggler";
 
 function MyLink(props) {
   let { href, children, ...rest } = props;
@@ -51,14 +44,14 @@ export const Navbar = () => {
                 <img
                   style={{ width: "200px" }}
                   id="Learn_more"
-                  src="https://github.com/girlscript/gssoc-assets/blob/main/Navbar%20logo/GS_logo_Black1.png?raw=true"
+                  src="./GS_logo_Black.svg"
                   alt="GSSoC logo light"
                 />
               ) : (
                 <img
                   style={{ width: "200px" }}
                   id="Learn_more"
-                  src="https://github.com/girlscript/gssoc-assets/blob/main/Navbar%20logo/GS_logo_White.png?raw=true"
+                  src="./GS_logo_White.svg"
                   alt="GSSoC logo dark"
                 />
               )}
@@ -86,9 +79,8 @@ export const Navbar = () => {
         </button>
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
-          className={`${
-            active ? "" : "hidden"
-          }   w-full lg:inline-flex lg:flex-grow lg:w-auto text-center mr-8`}
+          className={`${active ? "" : "hidden"
+            }   w-full lg:inline-flex lg:flex-grow lg:w-auto text-center mr-8`}
         >
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center content-center items-start  flex flex-col lg:h-auto mr-3.5">
             <Link href="/">
@@ -102,11 +94,11 @@ export const Navbar = () => {
               </a>
             </Link>
             <Link href="/#Sponsors">
-            <a
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
-            >
-              SPONSORS
-            </a>
+              <a
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-30 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+              >
+                SPONSORS
+              </a>
             </Link>
             <Link href="/schedule">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
@@ -115,7 +107,7 @@ export const Navbar = () => {
             </Link>
             <Link href="/leaderboard">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
-              LEADERBOARD
+                LEADERBOARD
               </a>
             </Link>
             <Link href="/faq">

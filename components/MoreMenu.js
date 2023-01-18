@@ -31,7 +31,7 @@ const MoreMenu = () => {
       >
         <Menu.Items className="origin-top-right absolute -right-5 mt-2 w-56 rounded-md shadow-lg dark:bg-black ring-1 bg-white ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-          <Link href="/codeofconduct">
+            <Link href="/codeofconduct">
               <Menu.Item>
                 {({ active }) => (
                   <a

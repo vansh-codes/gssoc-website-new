@@ -7,7 +7,7 @@ const Team = () => {
   const getUsers = async (year) => {
     const response = await fetch(
       "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team" +
-        year
+      year
     );
     setUsers(await response.json());
   };
@@ -138,7 +138,7 @@ const Team = () => {
                             </a>
                           )}
                           {curElem.hasOwnProperty("Twitter") === false ||
-                          curElem["Twitter"].trim() == "" ? (
+                            curElem["Twitter"].trim() == "" ? (
                             <></>
                           ) : (
                             <a
