@@ -75,8 +75,8 @@ export default function Home() {
           <div className="basis-1/2 relative">
             <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
-              2022
-              <div className="mt-2">is here!</div>
+              2023
+              <div className="mt-2">is back!</div>
             </div>
             <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
               GirlScript Summer of Code is a 3-month long
@@ -549,7 +549,7 @@ export default function Home() {
               <Card
                 title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
-                btntext="Mentor Registration Closed"
+                btntext="Mentor Registration Opening Soon"
                 link="https://forms.gle/4F3aBfdt6DC6bkVT6"
                 disabled="true"
               />
@@ -565,7 +565,7 @@ export default function Home() {
               <Card
                 title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
-                btntext="Project Submission Closed"
+                btntext="Project Submission Opening Soon"
                 link="https://forms.gle/vbLVda6KNQGSbzZ59"
                 disabled="true"
               />
@@ -574,7 +574,7 @@ export default function Home() {
                 title="Add a Shade to GSSOC"
                 content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly, to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors. Sponsor us to add a bright shade to our program."
                 btntext="Sponsor Us"
-                link="https://forms.gle/fkzq3xQ7nh2CbrA78"
+                link="https://forms.gle/Eqi4MYb5A3Qw5g5A8"
               />
             </div>
           </div>
@@ -586,7 +586,7 @@ export default function Home() {
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
-            2022!
+            2023!
           </p>
           {theme === "light" ? (
             <img
