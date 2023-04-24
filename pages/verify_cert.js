@@ -49,7 +49,7 @@ const Cert = () => {
     <>
       <Head>
         <title>
-          Verify Certifications | GirlScript Summer of Code 2022 | GirlScript
+          Verify Certifications | GirlScript Summer of Code 2023 | GirlScript
           Foundation India
         </title>
         <meta

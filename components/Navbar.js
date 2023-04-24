@@ -100,16 +100,16 @@ export const Navbar = () => {
                 SPONSORS
               </a>
             </Link>
-            <Link href="/schedule">
+            {/* <Link href="/schedule">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
                 SCHEDULE
               </a>
-            </Link>
-            <Link href="/leaderboard">
+            </Link> */}
+            {/* <Link href="/leaderboard">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
                 LEADERBOARD
               </a>
-            </Link>
+            </Link> */}
             <Link href="/faq">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 text-center rounded text-grey-800 text-1xl font-medium mr-3.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
                 FAQ
