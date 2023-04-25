@@ -55,8 +55,8 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/rebs-becca15">
-            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebs-becca15"/>
+        <a href="https://github.com/rebsfalcao15">
+            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
             <br />
             <sub><b>Rebecca Elisabeth Falcao</b></sub>
         </a>
@@ -83,13 +83,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/nawed2611">
+            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
+            <br />
+            <sub><b>Nawed Ali</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/Ardent10">
             <img src="https://avatars.githubusercontent.com/u/73132031?v=4" width="100;" alt="Ardent10"/>
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
