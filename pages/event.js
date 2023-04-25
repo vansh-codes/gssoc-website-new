@@ -43,7 +43,7 @@ const Event = () => {
     <div className="wrapper">
       <Head>
         <title>
-          Events | GirlScript Summer of Code 2022 | GirlScript Foundation India
+          Events | GirlScript Summer of Code 2023 | GirlScript Foundation India
         </title>
         <meta
           name="description"

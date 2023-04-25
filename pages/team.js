@@ -22,7 +22,7 @@ const Team = () => {
     <>
       <Head>
         <title>
-          Team | GirlScript Summer of Code 2022 | GirlScript Foundation India
+          Team | GirlScript Summer of Code 2023 | GirlScript Foundation India
         </title>
         <meta name="description" content="GirlScript Summer of Code Team" />
         {/* <link
@@ -37,8 +37,7 @@ const Team = () => {
             <h1>Team </h1>
           </p>
           <p className=" text-primary_orange-0">
-            Individuals can and do make a difference, <br />
-            but it takes a team to really mess things up
+            2023 Team will be announced soon!
           </p>
         </p>
       </div>

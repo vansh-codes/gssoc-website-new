@@ -36,7 +36,7 @@ const Project = () => {
     <>
       <Head>
         <title>
-          Projects | GirlScript Summer of Code 2022 | GirlScript Foundation India
+          Projects | GirlScript Summer of Code 2023 | GirlScript Foundation India
         </title>
         <meta
           name="description"
@@ -52,7 +52,7 @@ const Project = () => {
           <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
             <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
               <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
-              <h1>-&nbsp;GSSOC&apos;22 </h1>
+              <h1>-&nbsp;GSSOC&apos;23 </h1>
             </p>
             <div className="flex object-right">
               {theme === "light" ? (
@@ -78,7 +78,7 @@ const Project = () => {
           </div>
         </div>
         <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
-          “Unfinished projects are a symbol of progress, not of imperfection.”
+          2023 Projects are coming soon!
         </p>
         <Spacer mt={10} />
         <div className="flex flex-row justify-center flex-wrap items-center gap-5">
