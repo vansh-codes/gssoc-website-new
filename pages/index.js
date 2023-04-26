@@ -544,9 +544,9 @@ export default function Home() {
               <Card
                 title="Start your Journey"
                 content="Participating in GSSoC’23 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and essential tools like Git and Github under the supervision of excellent mentors."
-                btntext="Participant Registration Opening Soon"
-                link="https://forms.gle/FHtuuhW17hv2dqua8"
-                disabled="true"
+                btntext="Apply as a Contributor"
+                link="https://forms.gle/aXSG5y1Qxz2cYK9S6"
+
               />
               {/* Card-2 */}
               <Card
