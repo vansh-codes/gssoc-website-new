@@ -129,7 +129,7 @@ const CA = () => {
                             </a>
                           )}
                           {curElem.hasOwnProperty("Twitter") === false ||
-                          curElem["Twitter"].trim() == "" ? (
+                            curElem["Twitter"].trim() == "" ? (
                             <></>
                           ) : (
                             <a
