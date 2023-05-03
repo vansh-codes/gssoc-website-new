@@ -55,6 +55,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/nawed2611">
+            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
+            <br />
+            <sub><b>Nawed Ali</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/rebsfalcao15">
             <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
             <br />
@@ -66,13 +73,6 @@
             <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
             <br />
             <sub><b>Hemant Sachdeva</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/nawed2611">
-            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
-            <br />
-            <sub><b>Nawed Ali</b></sub>
         </a>
     </td>
     <td align="center">
