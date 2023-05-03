@@ -569,7 +569,7 @@ export default function Home() {
                 title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
                 btntext="Apply as an Organization/Project Admin"
-                link="https://forms.ghttps://forms.gle/mYx1Max3xQnjPZSe7le/vbLVda6KNQGSbzZ59"
+                link="https://forms.gle/4F2PCMut9Ebi2GPY8"
               />
               {/* Card-4 */}
               <Card
