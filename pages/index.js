@@ -552,9 +552,8 @@ export default function Home() {
               <Card
                 title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
-                btntext="Mentor Registration Opening Soon"
-                link="https://forms.gle/4F3aBfdt6DC6bkVT6"
-                disabled="true"
+                btntext="Apply as a mentor"
+                link="https://forms.gle/M6JqocE8x1RJTJHk8"
               />
             </div>
           </div>
