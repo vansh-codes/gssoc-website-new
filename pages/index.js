@@ -84,7 +84,7 @@ export default function Home() {
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 20th May - 20th August 2023 </b>
+              <b> 20th May - 10th August 2023 </b>
             </div>
             <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
               <a className="" href="#card-1">
@@ -583,7 +583,7 @@ export default function Home() {
       </div>
 
       {/* Schedule */}
-      {/* <div className="schedule__container flex flex-col items-center mb-48 ">
+      <div className="schedule__container flex flex-col items-center mb-48 ">
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
@@ -593,17 +593,17 @@ export default function Home() {
             <img
               id="Learn_more"
               className="mb-10"
-              src="https://user-images.githubusercontent.com/64256342/152652419-27cc707a-628e-4f6e-bc80-e7157ecfcfe1.svg"
+              src="https://user-images.githubusercontent.com/83456083/236680082-9182439e-633a-4269-a5bb-9720c87a57b2.png"
             />
           ) : (
             <img
               id="Learn_more"
               className="mb-10"
-              src="https://user-images.githubusercontent.com/64256342/152650154-ddc67996-9855-45e8-b2bc-287a8b07b2fc.svg"
+              src="https://user-images.githubusercontent.com/83456083/236680214-b1f29e4a-bf08-496e-bbb3-8776c9f1c8cf.png"
             />
           )}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
