@@ -68,16 +68,16 @@ The `styles/globals.css` file consists of all the custom css used apart from inl
 
 The website was designed to support both light and dark themes. It reads the current theme preference of the client browser and accordingly applies the state throughout the website.
 
-### Dark Mode  
-
-<details> <summary>Toggle me to Preview!</summary>
-<img src="https://user-images.githubusercontent.com/63473496/213293448-54a58694-2472-46e2-a12c-5dbfa30ef8cc.png"/>  
-</details>
-
 ### Light Mode  
 
 <details> <summary>Toggle me to Preview!</summary>
-<img src="https://user-images.githubusercontent.com/63473496/213293463-9aec4ef9-8955-4fb4-a72a-27622e27d667.png"/>
+![image](https://user-images.githubusercontent.com/83456083/236680082-9182439e-633a-4269-a5bb-9720c87a57b2.png) 
+</details>
+
+### Dark Mode  
+
+<details> <summary>Toggle me to Preview!</summary>
+![image](https://user-images.githubusercontent.com/83456083/236680214-b1f29e4a-bf08-496e-bbb3-8776c9f1c8cf.png)
 </details>
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
