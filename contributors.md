@@ -40,25 +40,25 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/nawed2611">
+            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
+            <br />
+            <sub><b>Nawed Ali</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
             <sub><b>Gaganpreet Kaur Kalsi</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/nawed2611">
-            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
-            <br />
-            <sub><b>Nawed Ali</b></sub>
         </a>
     </td>
     <td align="center">
