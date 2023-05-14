@@ -38,12 +38,23 @@ export default function Home() {
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
         /> */}
-        <link rel="icon" type="image/png" href="https://gssoc.girlscript.tech/GS_logo_Black.svg" />
-        <meta property="og:title" content="GirlScript Summer of Code ’23" />
-        <meta property="og:site_name" content="GirlScript Summer of Code ’23" />
-        <meta property="og:description" content="GirlScript Summer of Code ’23." />
+
+
+        <meta property="og:url" content="https://gssoc.girlscript.tech/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://gssoc.girlscript.tech/GS_logo_Black.svg" />
+        <meta property="og:title" content="GirlScript Summer of Code'23" />
+        <meta property="og:description" content="GSSoC'23 is back!" />
+        <meta property="og:image" content="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" />
+
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="gssoc.girlscript.tech" />
+        <meta property="twitter:url" content="https://gssoc.girlscript.tech/" />
+        <meta name="twitter:title" content="GirlScript Summer of Code'23" />
+        <meta name="twitter:description" content="GSSoC'23 is back!" />
+        <meta name="twitter:image" content="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" />
+
+
       </Head>
       {/* Bg assets */}
       <div className="hidden lg:block 3xl:hidden">
