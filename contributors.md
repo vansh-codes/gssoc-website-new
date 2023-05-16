@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/isayakmondal">
+            <img src="https://avatars.githubusercontent.com/u/51121313?v=4" width="100;" alt="isayakmondal"/>
+            <br />
+            <sub><b>Sayak Mondal ⚡</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ardent10">
             <img src="https://avatars.githubusercontent.com/u/73132031?v=4" width="100;" alt="Ardent10"/>
             <br />
