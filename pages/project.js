@@ -91,7 +91,7 @@ const Project = () => {
           2023 Projects are here!
         </p>
         <Spacer mt={10} />
-        <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+        {/* <div className="flex flex-row justify-center flex-wrap items-center gap-5">
           <a>
             <button
               className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md  px-10 py-3 rounded md:text-2xl md:py-4"
@@ -108,7 +108,7 @@ const Project = () => {
               2021
             </button>
           </a>
-        </div>
+        </div> */}
         <Spacer mt={20} />
         <div
           className="flex flex-row justify-center flex-wrap items-center 
