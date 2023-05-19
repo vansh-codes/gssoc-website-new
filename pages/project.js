@@ -13,6 +13,16 @@ const Project = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+  const [project, setProject] = useState([]);
+
+  const getProjects2023 = async () => {
+    const response = await fetch(
+      "https://opensheet.elk.sh/1v7VqK6i_xJK4nJ6GKzoeafwrnlJR8Y5-8v0Qfsh3gqo/Shortlisted"
+    );
+    setProject(await response.json());
+    console.log(project);
+  };
+
   const getProjects2022 = async () => {
     const response = await fetch(
       "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/JSON_EndPoint"
@@ -26,7 +36,7 @@ const Project = () => {
 
   useEffect(() => {
     setMounted(true);
-    getProjects2022();
+    getProjects2023();
   }, []);
   if (!mounted) return null;
   // const [isOpen, setIsOpen] = React.useState(false)
@@ -50,10 +60,10 @@ const Project = () => {
       <section>
         <div className="flex flex-col md:flex-row justify-between items-center px-24 w-full">
           <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
-            <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
+            <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
               <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
               <h1>-&nbsp;GSSOC&apos;23 </h1>
-            </p>
+            </div>
             <div className="flex object-right">
               {theme === "light" ? (
                 <div className="border-b-2">
@@ -78,13 +88,13 @@ const Project = () => {
           </div>
         </div>
         <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
-          2023 Projects are coming soon!
+          2023 Projects are here!
         </p>
         <Spacer mt={10} />
         <div className="flex flex-row justify-center flex-wrap items-center gap-5">
           <a>
             <button
-              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md  px-10 py-3 rounded md:text-2xl md:py-4"
               onClick={() => getProjects2022()}
             >
               2022
@@ -92,7 +102,7 @@ const Project = () => {
           </a>
           <a>
             <button
-              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 rounded md:text-2xl md:py-4"
               onClick={() => getProjects2021()}
             >
               2021
@@ -104,12 +114,12 @@ const Project = () => {
           className="flex flex-row justify-center flex-wrap items-center 
         gap-x-10 gap-y-10 mt-9"
         >
-          {data
+          {project
             .filter((curElem, i) => {
               if (searchTerm == "") {
                 return curElem;
               } else if (
-                curElem.technology_used
+                curElem["Tech/Stack"]
                   .toLowerCase()
                   .includes(searchTerm.toLowerCase())
               ) {
@@ -137,16 +147,15 @@ const Project = () => {
                               target="_blank"
                               rel="noreferrer"
                               href={
-                                curElem.project_link ||
-                                curElem.github ||
-                                "https://github.com/" + curElem.repo_fullname
+
+                                "https://github.com/" + curElem["Github repo."]
                               }
                             >
-                              {i + 1}. {curElem.project_name}
+                              {i + 1}. {curElem["Project Name"]}
                             </a>
                           </div>
                           <div className="mb-3 text-sm dark:text-white md:text-md md:mb-4">
-                            By {curElem.owner_name}
+                            By {curElem["Admin Name "]}
                           </div>
                         </div>
 
@@ -156,7 +165,7 @@ const Project = () => {
                           margin={1}
                           className="px-2"
                         >
-                          {curElem.technology_used
+                          {curElem["Tech/Stack"]
                             .split(",")
                             .sort((a, b) => a.length - b.length)
                             .map((techStk, k) => {

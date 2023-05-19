@@ -30,23 +30,25 @@ const ProjectModal = ({ currProject }) => {
       >
         <ModalOverlay />
         <ModalContent className="dark:bg-darkmode_gray-0 h-96">
-          <ModalHeader className="flex text-primary_orange-0">
-            <p className="mr-3">
-              {currProject.project_id}
-              {"."}
-            </p>
+          <ModalHeader className="flex flex-col text-primary_orange-0">
             <a
               target="_blank"
               rel="noreferrer"
-              href={currProject.project_link || currProject.github || "https://github.com/" + currProject.repo_fullname}>
-              {currProject.project_name}
+              className="font-bold text-2xl capitalize"
+              href={currProject["Github repo."] || currProject.github || "https://github.com/" + currProject["Project Name"]}>
+              {currProject["Project Name"]}
             </a>
+            <div className="">
+              <p className="text-sm mt-1">
+                By {currProject["Admin Name "]}
+              </p>
+            </div>
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {/* <Lorem count={15} /> */}
             <div className="flex flex-row justify-between px-6">
-              <a
+              {/* <a
                 target="_blank"
                 rel="noreferrer"
                 href={currProject.project_video_link}
@@ -60,11 +62,11 @@ const ProjectModal = ({ currProject }) => {
                     Project Video
                   </p>
                 </div>
-              </a>
+              </a> */}
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={currProject.project_link || currProject.github || "https://github.com/" + currProject.repo_fullname}
+                href={currProject["Github repo."] || currProject.github || "https://github.com/" + currProject["Project Name"]}
               >
                 <div className="flex items-center">
                   <FontAwesomeIcon
@@ -79,7 +81,7 @@ const ProjectModal = ({ currProject }) => {
               {/* <a
                 target="_blank"
                 rel="noreferrer"
-                href={currProject.project_link || currProject.github || "https://github.com/"+currProject.repo_fullname}
+                href={currProject["Github repo."] || currProject.github || "https://github.com/"+currProject["Project Name"]}
               >
                 <div className="flex items-center">
                   <FontAwesomeIcon
@@ -100,7 +102,7 @@ const ProjectModal = ({ currProject }) => {
                 Description
               </p>
               <p className="font-serif text-base dark:text-white">
-                {currProject.project_description}
+                {currProject["Description"]}
               </p>
             </div>
             {/* <p className="text-primary_orange-0 px-6 mt-5 font-semibold font-serif text-lg">
