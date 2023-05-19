@@ -9,10 +9,10 @@ import { projectData } from "./api/projectsData";
 const Project = () => {
   // const [data, setData] = useState(projectData);
   const [data, setData] = useState([]);
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const [searchTerm, setSearchTerm] = useState("");
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+
   const getProjects2022 = async () => {
     const response = await fetch(
       "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/JSON_EndPoint"
@@ -20,13 +20,21 @@ const Project = () => {
     setData(await response.json());
   };
 
+  const getProjects2023 = async () => {
+    const response = await fetch(
+      "https://opensheet.elk.sh/1v7VqK6i_xJK4nJ6GKzoeafwrnlJR8Y5-8v0Qfsh3gqo/Shortlisted"
+    );
+    setData(await response.json());
+  };
+
+
   const getProjects2021 = async () => {
     setData(projectData);
   };
 
   useEffect(() => {
     setMounted(true);
-    getProjects2022();
+    getProjects2023();
   }, []);
   if (!mounted) return null;
   // const [isOpen, setIsOpen] = React.useState(false)
@@ -78,13 +86,21 @@ const Project = () => {
           </div>
         </div>
         <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
-          2023 Projects are coming soon!
+          2023 Projects are here!
         </p>
         <Spacer mt={10} />
         <div className="flex flex-row justify-center flex-wrap items-center gap-5">
           <a>
             <button
-              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+              onClick={() => getProjects2023()}
+            >
+              2023
+            </button>
+          </a>
+          <a>
+            <button
+              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
               onClick={() => getProjects2022()}
             >
               2022
@@ -92,7 +108,7 @@ const Project = () => {
           </a>
           <a>
             <button
-              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+              className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg  dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
               onClick={() => getProjects2021()}
             >
               2021
