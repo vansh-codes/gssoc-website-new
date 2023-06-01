@@ -105,6 +105,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/shobhitexe">
+            <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
+            <br />
+            <sub><b>Shobhit Gupta</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ardent10">
             <img src="https://avatars.githubusercontent.com/u/73132031?v=4" width="100;" alt="Ardent10"/>
             <br />
