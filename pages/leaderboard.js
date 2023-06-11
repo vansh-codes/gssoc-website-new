@@ -131,9 +131,8 @@ function Leaderboard() {
       setLoadingMsg("Waiting for response from server");
     }, 600);
     // clearTimeout(timeout)
-    // fetch("https://gssoc22-leaderboard.herokuapp.com/OSLeaderboard")  // Actual request source
     fetch(
-      "https://raw.githubusercontent.com/girlscript/gssoc-website-new/main/pages/api/leaderboard.json"
+      "https://gssoc23-leaderboard.onrender.com/OSLeaderboard"
     )
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.");
@@ -301,7 +300,7 @@ function Leaderboard() {
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold">
             <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-              <span className="text-primary_orange-0"> GSSoC 2022 </span>
+              <span className="text-primary_orange-0"> GSSoC 2023 </span>
               Top Performers
             </div>
           </div>
