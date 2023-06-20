@@ -98,6 +98,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/thisisharsh7">
+            <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
+            <br />
+            <sub><b>Harsh Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/krishstwt">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="krishstwt"/>
             <br />
@@ -124,15 +131,15 @@
             <br />
             <sub><b>Shobhit Gupta</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Ardent10">
             <img src="https://avatars.githubusercontent.com/u/73132031?v=4" width="100;" alt="Ardent10"/>
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
