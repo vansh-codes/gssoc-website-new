@@ -159,12 +159,12 @@ function Leaderboard() {
               a.login < b.login
             );
           });
-          let blacklist = [];
-          // console.log("Disqualified : ", blacklist);
+          let blacklist = ["0xabdulkhalid"];
+          console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
-            // .filter((usr) => {
-            //   return (blacklist.includes(usr.login) === false);
-            // })
+            .filter((usr) => {
+              return (blacklist.includes(usr.login) === false);
+            })
             .map((contributorData, idx) => ({
               ...contributorData,
               rank: idx + 1,
