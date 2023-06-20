@@ -69,17 +69,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/HemantSachdeva">
-            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
-            <br />
-            <sub><b>Hemant Sachdeva</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/gurjeetsinghvirdee">
             <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
             <br />
             <sub><b>Gurjeet Singh Virdee</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/HemantSachdeva">
+            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
+            <br />
+            <sub><b>Hemant Sachdeva</b></sub>
         </a>
     </td>
     <td align="center">
