@@ -1,6 +1,6 @@
 function Cards(props) {
   return (
-    <div className="dark:bg-black flex bg-white shadow-lg rounded-lg  h-500px my-1 px-1 w-560px md:w-1/2 lg:my-4 lg:px-4 lg:w-2/5 ">
+    <div className="dark:bg-black flex bg-white shadow-lg rounded-lg  h-500px my-1 px-1 lg:my-4 lg:px-4 w-full md:w-[48%]">
       <article className="overflow-hidden rounded-lg flex justify-between flex-col">
         <div>
           <header className="flex items-center p-2 md:p-4">
@@ -15,17 +15,18 @@ function Cards(props) {
         <footer className="flex items-center justify-between leading-none p-2 md:p-4">
           <a
             className="w-full"
-            href={props.disabled?"#":props.link}
-            target={props.disabled?"":"_blank"}
+            href={props.disabled ? "#" : props.link}
+            target={props.disabled ? "" : "_blank"}
             rel="noreferrer"
           >
-            {!props.disabled?(<button className="dark:text-black bg-gradient-to-b from-primary_orange-0 to-orange-600 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-white w-full font-bold py-3 px-5 rounded mb-3">
-              {props.btntext}
-            </button>
-            ):(
+            {!props.disabled ? (
+              <button className="dark:text-black bg-gradient-to-b from-primary_orange-0 to-orange-600 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-white w-full font-bold py-3 px-5 rounded mb-3">
+                {props.btntext}
+              </button>
+            ) : (
               <button className="dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-white w-full font-bold py-3 px-5 rounded mb-3">
-              {props.btntext}
-            </button>
+                {props.btntext}
+              </button>
             )}
           </a>
         </footer>
