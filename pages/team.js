@@ -101,7 +101,7 @@ const Team = () => {
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
                   <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300">
+                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300 hover:cursor-pointer">
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
