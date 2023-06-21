@@ -112,6 +112,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/MisterMickey">
+            <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="MisterMickey"/>
+            <br />
+            <sub><b>Shubham Singodiya</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/mhdamaan79">
             <img src="https://avatars.githubusercontent.com/u/118375524?v=4" width="100;" alt="mhdamaan79"/>
             <br />
@@ -124,15 +131,15 @@
             <br />
             <sub><b>Sayak Mondal ⚡</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/shobhitexe">
             <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
             <br />
             <sub><b>Shobhit Gupta</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Ardent10">
             <img src="https://avatars.githubusercontent.com/u/73132031?v=4" width="100;" alt="Ardent10"/>
