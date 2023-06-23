@@ -159,7 +159,11 @@ function Leaderboard() {
               a.login < b.login
             );
           });
-          let blacklist = ["0xabdulkhalid", "S-ishita"];
+          let blacklist = [
+            "0xabdulkhalid", 
+            "S-ishita",
+            "PoulavBhowmick03"
+          ];
           console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
             .filter((usr) => {
