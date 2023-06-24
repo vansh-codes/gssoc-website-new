@@ -757,7 +757,7 @@ function Leaderboard() {
                   </div>
                   {links.length !== 0 &&
                     links.map((link) => (
-                      <a className="pr-links text-black" href={link} key={link} target=_blank>
+                      <a className="pr-links text-black" href={link} key={link}>
                         {link}
                       </a>
                     ))}
