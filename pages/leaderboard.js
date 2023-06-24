@@ -162,7 +162,8 @@ function Leaderboard() {
           let blacklist = [
             "0xabdulkhalid", 
             "S-ishita",
-            "k-deepak04"
+            "k-deepak04",
+            "raj03kumar"
           ];
           console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
