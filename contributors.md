@@ -48,6 +48,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/gurjeetsinghvirdee">
+            <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
+            <br />
+            <sub><b>Gurjeet Singh Virdee</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
@@ -59,13 +66,6 @@
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/gurjeetsinghvirdee">
-            <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
-            <br />
-            <sub><b>Gurjeet Singh Virdee</b></sub>
         </a>
     </td>
     <td align="center">
