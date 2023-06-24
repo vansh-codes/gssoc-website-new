@@ -161,7 +161,8 @@ function Leaderboard() {
           });
           let blacklist = [
             "0xabdulkhalid", 
-            "S-ishita"
+            "S-ishita",
+            "k-deepak04"
           ];
           console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
