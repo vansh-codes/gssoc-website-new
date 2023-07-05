@@ -86,10 +86,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <p className="dark:text-white font-sans text-2xl md:text-4xl font-semibold text-black mt-20 px-24 mb-10">
-          2023 Projects are here!
-        </p>
-        <Spacer mt={10} />
+        <Spacer mt={16} />
         <div className="flex flex-row justify-center flex-wrap items-center gap-5">
           <a>
             <button
