@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/shobhitexe">
+            <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
+            <br />
+            <sub><b>Shobhit Gupta</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/monizb">
             <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
@@ -124,20 +131,13 @@
             <br />
             <sub><b>Mohd Amaan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/isayakmondal">
             <img src="https://avatars.githubusercontent.com/u/51121313?v=4" width="100;" alt="isayakmondal"/>
             <br />
             <sub><b>Sayak Mondal ⚡</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/shobhitexe">
-            <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
-            <br />
-            <sub><b>Shobhit Gupta</b></sub>
         </a>
     </td>
     <td align="center">
