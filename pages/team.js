@@ -5,9 +5,9 @@ import Head from "next/head";
 const Team = () => {
   const [users, setUsers] = useState([]);
   const getUsers = async (year) => {
+    let url = year == 2023 ? "https://opensheet.elk.sh/1D-7233yRtSKEGbCCNkw2YuXRW8qREviMxtsWZv1-c9E/1" : ("https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team" + year);
     const response = await fetch(
-      "https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team" +
-      year
+      url
     );
     setUsers(await response.json());
   };
@@ -15,7 +15,7 @@ const Team = () => {
   useEffect(() => {
     var customQuery = window.location.href.split("#")[1]; // Direct link to /team#20XX
     // Note - Only change 2022 with current year of GSSoC
-    customQuery ? getUsers(customQuery) : getUsers("2022");
+    customQuery ? getUsers(customQuery) : getUsers("2023");
   }, []);
 
   return (
@@ -37,12 +37,20 @@ const Team = () => {
             <h1>Team </h1>
           </p>
           <p className=" text-primary_orange-0">
-            2023 Team will be announced soon!
+            2023 Team is here to make your journey memorable!
           </p>
         </p>
       </div>
       <Spacer mt={10} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+        <a>
+          <button
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            onClick={() => getUsers(2023)}
+          >
+            2023
+          </button>
+        </a>
         <a>
           <button
             className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
@@ -116,7 +124,6 @@ const Team = () => {
                       <p className="mb-3 text-lg text-white font-bold	md:text-base md:mb-4">
                         {curElem["Designation"]}
                       </p>
-
                       <div className="flex">
                         <div className="flex gap-4">
                           {curElem["GitHub"] == "" ? (
