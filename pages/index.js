@@ -34,12 +34,11 @@ export default function Home() {
         <title>
           GirlScript Summer of Code 2023 | GirlScript Foundation India
         </title>
-        <meta name="GSSoC'23" content="GSSoC'23 is back! Register Now!" />
-        {/* <link
+        <meta name="GSSoC'23" content="GSSoC'23 is back!" />
+        <link
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
-        /> */}
-
+        />
 
         <meta property="og:url" content="https://gssoc.girlscript.tech/" />
         <meta property="og:type" content="website" />
