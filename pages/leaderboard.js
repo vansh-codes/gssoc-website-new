@@ -159,7 +159,7 @@ function Leaderboard() {
               a.login < b.login
             );
           });
-          let blacklist = ["raj03kumar"];
+          let blacklist = ["raj03kumar", "chinmoy12c"];
           console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
             .filter((usr) => {
