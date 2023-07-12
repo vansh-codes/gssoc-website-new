@@ -18,7 +18,7 @@ const Team = () => {
   useEffect(() => {
     var customQuery = window.location.href.split("#")[1]; // Direct link to /team#20XX
     // Note - Only change 2022 with current year of GSSoC
-    customQuery ? getUsers(customQuery) : getUsers("2022");
+    customQuery ? getUsers(customQuery) : getUsers("2023");
   }, []);
 
   return (
