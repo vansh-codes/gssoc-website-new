@@ -134,6 +134,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/RitiChandak">
+            <img src="https://avatars.githubusercontent.com/u/96969496?v=4" width="100;" alt="RitiChandak"/>
+            <br />
+            <sub><b>Riti Chandak</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/isayakmondal">
             <img src="https://avatars.githubusercontent.com/u/51121313?v=4" width="100;" alt="isayakmondal"/>
             <br />
