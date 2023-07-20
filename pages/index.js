@@ -517,7 +517,7 @@ export default function Home() {
                     alt="Balsamiq Cloud"
                   />
                 </a>
-                <a href="https://vercel.com/#2023">
+                <a href="https://vercel.com/#gssoc23">
                   <img 
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
