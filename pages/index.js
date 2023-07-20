@@ -463,7 +463,7 @@ export default function Home() {
                     alt="Taskade"
                   />
                 </a>
-                <a href="https://gen.xyz/#gssoc22">
+                <a href="https://gen.xyz/#gssoc23">
                   <img
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
@@ -506,6 +506,24 @@ export default function Home() {
                     className="h-8"
                     src="./Sponsors/O'Reilly.png"
                     alt="O'Reilly"
+                  />
+                </a>
+                <a href="https://balsamiq.cloud/#gssoc23">
+                  <img 
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-20"
+                    src="./Sponsors/Balsamiq.png"
+                    alt="Balsamiq Cloud"
+                  />
+                </a>
+                <a href="https://vercel.com/">
+                  <img 
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-10"
+                    src="./Sponsors/Vercel.png"
+                    alt="Vercel"
                   />
                 </a>
               </div>
