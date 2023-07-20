@@ -477,7 +477,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     className="h-12"
-                    src="./Sponsors/DataCamp.png"
+                    src="./Sponsors/Datacamp.png"
                     alt="DataCamp"
                   />
                 </a>
