@@ -85,9 +85,10 @@ function Faq() {
                         data-aos-duration="700"
                     >
                         <img
-                            src="./GirlScript_Group_Photo.svg"
-                            height="453"
+                            src="https://s3-alpha-sig.figma.com/img/897e/ab3a/986a2f2028b034178d5d5dd3a22fbdb1?Expires=1692576000&Signature=jMV31O19bqD1~SzNKggc9lhAaUTQJyJNZYYmFq5l-HDsW573O4yJwElm3O-nuFDcoS-c638k-aNWDtCSP98BS8xnQZVZh7YcT7BhKBy3-Wzv1wxqUUpr~IRAmKPk3-fBeiuIKnzIU7Be6ip8HOr9AX17THWLq0f3XXEu2RuV6paZlnoslLYrPefK8CR47su8qbs53U8HjlpNVGtXFcb0M~5~pyVoKJo6D66mPloEGHl3O2VJpcfhW~HH5w~4pKgJ3eA7V1VVgoBL46Ooc9JvaM1gypwj8BNu7sczPVEI~3MqKckO0mgcCopznzrbC39uTBY2YnS0FeYTSvoj47bhuw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            height="653"
                             width="420"
+                            className="w-[33vw]"
                             alt="GirlScript Group Photo"
                         />
                     </div>
