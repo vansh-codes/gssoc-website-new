@@ -51,7 +51,7 @@ export default function Home() {
         <meta property="twitter:domain" content="gssoc.girlscript.tech" />
         <meta property="twitter:url" content="https://gssoc.girlscript.tech/" />
         <meta name="twitter:title" content="GirlScript Summer of Code'23" />
-        <meta name="twitter:description" content="GSSoC'23 is back!" />
+        <meta name="twitter:description" content="GSSoC'23 is here!" />
         <meta name="twitter:image" content="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" />
 
 
@@ -93,9 +93,10 @@ export default function Home() {
             <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
               2023
-              <div className="mt-2">is back!</div>
+              <div className="mt-2">is here!</div>
             </div>
-            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-24">
+
+            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-12">
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
@@ -103,8 +104,12 @@ export default function Home() {
               <br />
               <b> 20th May - 10th August 2023 </b>
             </div>
-            <div className="flex items-center mb-10 md:mb-52 lg:mb-56">
-              <a className="" href="#card-1">
+
+            <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
+              <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem"><b>GSSoC&apos;23 Job Fair</b> is coming soon!</h2>
+            </div>
+            <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
+              <a className="" href="https://forms.gle/8K4K3zqUK1KJbqQPA">
                 <button
                   id="CTA-button"
                   data-aos="fade-down"
@@ -142,6 +147,7 @@ export default function Home() {
           </div>
         </div>
 
+
         <div className="flex justify-between items-center flex-wrap mb-24">
           <div
             className="border-8 rounded drop-shadow-xl border-black dark:border-white"
@@ -155,7 +161,7 @@ export default function Home() {
               alt="GirlScript Group Photo"
             />
           </div>
-          <div className="basis-full md:basis-6/12 md:order-last lg:basis-1/2 lg:order-last relative">
+          <div className="basis-full md:basis-6/12 md:order-first lg:basis-1/2 lg:order-first relative">
             {theme === "light" ? (
               <img
                 className=" mt-4 mb-8 md:mb-9 md:mt-0"
@@ -192,7 +198,7 @@ export default function Home() {
           className="flex flex-row justify-between items-center bg-[#FFECDE] dark:bg-black flex-wrap rounded-xl mb-24"
           id="about-gssoc"
         >
-          <div className="w-560px px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
+          <div className="px-4 pt-3 lg:text-right rounded-xl md:w-1/2 lg:my-4 lg:px-10 lg:py-10 lg:w-1/2">
             {theme === "light" ? (
               <img
                 id="Learn_more"
@@ -228,8 +234,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pr-8 font-semibold px-4 pt-3 rounded-lg lg:my-4 lg:px-10 lg:py-10 ">
-            <div className="dark:bg-darkmode_gray-0 dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-64 sm:w-fit">
+          <div className="pr-4 font-semibold pt-3 rounded-lg lg:my-4 lg:px-2 lg:py-10 ">
+            <div className="dark:bg-black  dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-64 sm:w-fit">
               <h1 className="mt-8 pt-6 pl-8 text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
                 GSSoC 2023
               </h1>
@@ -301,7 +307,7 @@ export default function Home() {
                       >
                         {({ isVisible }) => (
                           <div>
-                            {isVisible ? <CountUp end={13000} /> : null}+
+                            {isVisible ? <CountUp end={5500} /> : null}+
                           </div>
                         )}
                       </VisibilitySensor>
@@ -401,11 +407,67 @@ export default function Home() {
               data-aos-duration="400"
               className="dark:bg-orange-100 bg-white other__sponsors px-9 py-9 shadow-xl rounded flex flex-col justify-center items-center"
             >
-              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-bold text-4xl  mb-12 place-content-center">
-                Previous Year Sponsors
-              </h3>
-              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center">
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-4xl  mb-5 place-content-center">
                 Platinum Sponsors
+              </h3>
+
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
+                <a href="https://quine.sh/?utm_source=gssocc">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-20"
+                    src="https://quine.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F156089b0-a252-474d-9a70-3ca3d1700807%2FProperty_1Variant4.svg?table=block&id=976f5669-d89e-449f-9d80-7aa14df8229c&spaceId=a8bb25df-0bb7-49ae-b3bb-6496fd5b7326&userId=&cache=v2"
+                    alt="Quine"
+                  />
+                </a>
+              </div>
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
+                In Kind Sponsors
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly items-center mb-5">
+                <a href="https://www.taskade.com/#gssoc22">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="./Sponsors/Taskade.png"
+                    alt="Taskade"
+                  />
+                </a>
+
+                <a href="https://vercel.com">
+                  <svg aria-label="Vercel logotype" height="64" role="img" viewBox="0 0 283 64" width="283"><path d="M141.68 16.25c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.46 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zm117.14-14.5c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.45 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zm-39.03 3.5c0 6 3.92 10 10 10 4.12 0 7.21-1.87 8.8-4.92l7.68 4.43c-3.18 5.3-9.14 8.49-16.48 8.49-11.05 0-19-7.2-19-18s7.96-18 19-18c7.34 0 13.29 3.19 16.48 8.49l-7.68 4.43c-1.59-3.05-4.68-4.92-8.8-4.92-6.07 0-10 4-10 10zm82.48-29v46h-9v-46h9zM37.59.25l36.95 64H.64l36.95-64zm92.38 5l-27.71 48-27.71-48h10.39l17.32 30 17.32-30h10.39zm58.91 12v9.69c-1-.29-2.06-.49-3.2-.49-5.81 0-10 4-10 10v14.8h-9v-34h9v9.2c0-5.08 5.91-9.2 13.2-9.2z" fill="black"></path></svg>
+                </a>
+
+                <a href="https://gen.xyz/#gssoc23">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-16"
+                    src="./Sponsors/dotXYZ.png"
+                    alt=".XYZ"
+                  />
+                </a>
+              </div>
+
+              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center mt-5">
+                Hiring Partner
+              </h3>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
+                <a href="https://www.bluelearn.in/#gssoc22">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    className="h-12"
+                    src="./Sponsors/BlueLearn.png"
+                    alt="Bluelearn"
+                  />
+                </a>
+              </div>
+
+              <h3 className="mt-24 dark:text-gray-800 text-[#ff7a19] font-sans font-bold text-4xl  mb-12 place-content-center">
+                Previous Year Sponsors
               </h3>
               <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
                 <a href="https://moralis.io/#gssoc22">
@@ -450,106 +512,7 @@ export default function Home() {
                   />
                 </a>
               </div>
-              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-10 place-content-center mt-5">
-                In Kind Sponsors
-              </h3>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-x-20 gap-y-4 md:gap-y-8 justify-evenly items-center mb-5">
-                <a href="https://www.taskade.com/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-16"
-                    src="./Sponsors/Taskade.png"
-                    alt="Taskade"
-                  />
-                </a>
-                <a href="https://gen.xyz/#gssoc23">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-16"
-                    src="./Sponsors/dotXYZ.png"
-                    alt=".XYZ"
-                  />
-                </a>
-                <a href="http://www.datacamp.com/donates#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-12"
-                    src="./Sponsors/Datacamp.png"
-                    alt="DataCamp"
-                  />
-                </a>
-                <a href="https://www.postman.com/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-20"
-                    src="./Sponsors/Postman.png"
-                    alt="Postman"
-                  />
-                </a>
-                <a href="https://fueler.io/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-12"
-                    src="./Sponsors/Fueler.png"
-                    alt="Fueler"
-                  />
-                </a>
-                <a href="https://www.oreilly.com/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-8"
-                    src="./Sponsors/O'Reilly.png"
-                    alt="O'Reilly"
-                  />
-                </a>
-                <a href="https://balsamiq.cloud/#gssoc23">
-                  <img 
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-20"
-                    src="./Sponsors/Balsamiq.png"
-                    alt="Balsamiq Cloud"
-                  />
-                </a>
-                <a href="https://vercel.com/#gssoc23">
-                  <img 
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-10"
-                    src="./Sponsors/Vercel.png"
-                    alt="Vercel"
-                  />
-                </a>
-              </div>
-              <h3 className=" dark:text-gray-800 text-[#ff7a19] font-sans font-semibold text-3xl  mb-5 place-content-center mt-5">
-                Community Partners
-              </h3>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-x-28 justify-between items-center mb-5">
-                <a href="https://www.bluelearn.in/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-12"
-                    src="./Sponsors/BlueLearn.png"
-                    alt="Bluelearn"
-                  />
-                </a>
-                <a href="https://techrity.org/#gssoc22">
-                  <img
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    className="h-24"
-                    src="./Sponsors/Techrity.png"
-                    alt="Techrity"
-                  />
-                </a>
-              </div>
+
             </div>
           </div>
         </div>
