@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
-              <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem"><b>GSSoC&apos;23 Job Fair</b> is coming soon!</h2>
+              <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;23 Job Fair</b> is coming soon!</h2>
             </div>
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
               <a className="" href="https://forms.gle/8K4K3zqUK1KJbqQPA">
@@ -307,7 +307,7 @@ export default function Home() {
                       >
                         {({ isVisible }) => (
                           <div>
-                            {isVisible ? <CountUp end={5500} /> : null}+
+                            {isVisible ? <CountUp end={13000} /> : null}+
                           </div>
                         )}
                       </VisibilitySensor>
