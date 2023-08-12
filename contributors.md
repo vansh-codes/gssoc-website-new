@@ -83,25 +83,25 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/monizb">
+            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
+            <br />
+            <sub><b>Monish Basaniwal</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/HemantSachdeva">
             <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
             <br />
             <sub><b>Hemant Sachdeva</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/shobhitexe">
             <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
             <br />
             <sub><b>Shobhit Gupta</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/monizb">
-            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
-            <br />
-            <sub><b>Monish Basaniwal</b></sub>
         </a>
     </td>
     <td align="center">
