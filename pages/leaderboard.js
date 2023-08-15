@@ -161,7 +161,6 @@ function Leaderboard() {
             );
           });
           let blacklist = ["raj03kumar", "chinmoy12c", "nidhi-rathore"];
-          console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
             .filter((usr) => {
               return (blacklist.includes(usr.login) === false);
