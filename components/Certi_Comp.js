@@ -12,6 +12,7 @@ import OpenSourceAdvocates from "../pages/JSON/OpenSourceAdvocates.json";
 import OrganizingTeam from "../pages/JSON/OrganizingTeam.json";
 import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
 import Top100 from "../pages/JSON/Top100.json";
+import top100 from "../pages/JSON/2023 Contributors/top100.json"
 import Confetti from "react-confetti";
 
 const contractAddress = "0x0E2195E4292458eaA9Ee30242Fce440b5a722944";
@@ -64,7 +65,7 @@ const Certi_Comp = (props) => {
   const projectAdminsTree = treeMaker(ProjectAdmins);
   const mentorsTree = treeMaker(Mentors);
   const contributorsTree = treeMaker(Contributors);
-  const top100Tree = treeMaker(Top100);
+  const top100Tree = treeMaker(top100);
   const campusAmbassadorsTree = treeMaker(CampusAmbassadors);
   const openSourceAdvocatesTree = treeMaker(OpenSourceAdvocates);
   const organizingTeamTree = treeMaker(OrganizingTeam);
@@ -101,7 +102,7 @@ const Certi_Comp = (props) => {
                     merkleProof,
                     singleParticipant
                   )
-                  : props.Role === "Organising Team"
+                  : props.Role === "Organizing Team"
                     ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
                     : false;
 
@@ -138,7 +139,7 @@ const Certi_Comp = (props) => {
                 ? campusAmbassadorsTree
                 : props.Role === "Speaker"
                   ? openSourceAdvocatesTree
-                  : props.Role === "Organising Team"
+                  : props.Role === "Organizing Team"
                     ? organizingTeamTree
                     : "Diablo";
     Checker(actor, props.Email);
@@ -184,7 +185,7 @@ const Certi_Comp = (props) => {
               {props.Name}
             </div>
           </div>
-        ) : props.Role === "Organising Team" ? (
+        ) : props.Role === "Organizing Team" ? (
           <div className="banner cert-orgteam" ref={certificateWrapper}>
             <div id="contrib_name" className="contrib_name text-big-orange">
               {props.Name}

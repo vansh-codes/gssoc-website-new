@@ -102,7 +102,7 @@ const Cert = () => {
           <option value="Project Admin">Project Admin</option>
           <option value="Campus Ambassador">Campus Ambassador</option>
           <option value="Speaker">Speaker</option>
-          <option value="Organising Team">Organising Team</option>
+          <option value="Organizing Team">Organizing Team</option>
         </select>
         <Spacer mt={20} />
         {/* <img
