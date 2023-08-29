@@ -119,8 +119,8 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/MisterMickey">
-            <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="MisterMickey"/>
+        <a href="https://github.com/singodiyashubham87">
+            <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="singodiyashubham87"/>
             <br />
             <sub><b>Shubham Singodiya</b></sub>
         </a>
