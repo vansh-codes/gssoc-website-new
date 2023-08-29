@@ -24,7 +24,7 @@ const Certi_Comp = (props) => {
     if (typeof window !== "undefined" && props.verified === true) {
       exportComponentAsPNG(
         certificateWrapper,
-        { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2022.png" },
+        { fileName: props.Name + "_Cert_" + props.Role + "_GSSoC2023.png" },
         {
           html2CanvasOptions: { backgroundColor: null },
         }
@@ -84,25 +84,25 @@ const Certi_Comp = (props) => {
     const toTheMoon =
       props.Role === "Contributor"
         ? await contractWithWallet.verifyContributors(
-            merkleProof,
-            singleParticipant
-          )
+          merkleProof,
+          singleParticipant
+        )
         : props.Role === "Top Contributor"
-        ? await contractWithWallet.verifyTop100(merkleProof, singleParticipant)
-        : props.Role === "Mentor"
-        ? await contractWithWallet.verifyMentors(merkleProof, singleParticipant)
-        : props.Role === "Project Admin"
-        ? await contractWithWallet.verifyPAs(merkleProof, singleParticipant)
-        : props.Role === "Campus Ambassador"
-        ? await contractWithWallet.verifyCAs(merkleProof, singleParticipant)
-        : props.Role === "Speaker"
-        ? await contractWithWallet.verifyOpenSourceAdvocates(
-            merkleProof,
-            singleParticipant
-          )
-        : props.Role === "Organising Team"
-        ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
-        : false;
+          ? await contractWithWallet.verifyTop100(merkleProof, singleParticipant)
+          : props.Role === "Mentor"
+            ? await contractWithWallet.verifyMentors(merkleProof, singleParticipant)
+            : props.Role === "Project Admin"
+              ? await contractWithWallet.verifyPAs(merkleProof, singleParticipant)
+              : props.Role === "Campus Ambassador"
+                ? await contractWithWallet.verifyCAs(merkleProof, singleParticipant)
+                : props.Role === "Speaker"
+                  ? await contractWithWallet.verifyOpenSourceAdvocates(
+                    merkleProof,
+                    singleParticipant
+                  )
+                  : props.Role === "Organising Team"
+                    ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
+                    : false;
     if (toTheMoon) {
       setVerifiedTrue();
       console.log("GG OP EZ");
@@ -126,18 +126,18 @@ const Certi_Comp = (props) => {
       props.Role === "Contributor"
         ? contributorsTree
         : props.Role === "Top Contributor"
-        ? top100Tree
-        : props.Role === "Mentor"
-        ? mentorsTree
-        : props.Role === "Project Admin"
-        ? projectAdminsTree
-        : props.Role === "Campus Ambassador"
-        ? campusAmbassadorsTree
-        : props.Role === "Speaker"
-        ? openSourceAdvocatesTree
-        : props.Role === "Organising Team"
-        ? organizingTeamTree
-        : "Diablo";
+          ? top100Tree
+          : props.Role === "Mentor"
+            ? mentorsTree
+            : props.Role === "Project Admin"
+              ? projectAdminsTree
+              : props.Role === "Campus Ambassador"
+                ? campusAmbassadorsTree
+                : props.Role === "Speaker"
+                  ? openSourceAdvocatesTree
+                  : props.Role === "Organising Team"
+                    ? organizingTeamTree
+                    : "Diablo";
     Checker(actor, props.Email);
   };
 
@@ -199,7 +199,7 @@ const Certi_Comp = (props) => {
         type="button"
         className={
           !props.verified
-            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md  dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
             : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
         }
         onClick={Switcher}
@@ -212,7 +212,7 @@ const Certi_Comp = (props) => {
         type="button"
         className={
           props.verified
-            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md text-white dark:text-black font-medium rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
+            ? "bg-gradient-to-b from-primary_orange-0 to-orange-600 text-md dark:text-black  rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
             : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
         }
         onClick={DownloadImage}

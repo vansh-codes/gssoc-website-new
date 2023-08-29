@@ -96,7 +96,7 @@ export default function Home() {
               <div className="mt-2">is here!</div>
             </div>
 
-            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white mb-12">
+            <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white">
               GirlScript Summer of Code is a 3-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
@@ -104,10 +104,10 @@ export default function Home() {
               <br />
               <b> 20th May - 10th August 2023 </b>
             </div>
-
+{/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
               <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;23 Job Fair</b> is coming soon!</h2>
-            </div>
+            </div> */}
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
               <a className="" href="https://forms.gle/8K4K3zqUK1KJbqQPA">
                 <button

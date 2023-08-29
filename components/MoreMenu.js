@@ -96,7 +96,7 @@ const MoreMenu = () => {
               </Menu.Item>
             </Link> */}
             {/* <Link href="verify_cert"> */}
-            {/* <Link href="/verify_cert">
+            <Link href="/verify_cert">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -111,7 +111,7 @@ const MoreMenu = () => {
                   </a>
                 )}
               </Menu.Item>
-            </Link> */}
+            </Link>
           </div>
         </Menu.Items>
       </Transition>

@@ -87,7 +87,7 @@ const Cert = () => {
           disabled={verified}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
-          Select Role in GSSoC 2022
+          Select Role in GSSoC 2023
         </label>
         <select
           className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
