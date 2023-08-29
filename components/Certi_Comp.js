@@ -11,10 +11,9 @@ import Mentors from "../pages/JSON/Mentors.json";
 import OpenSourceAdvocates from "../pages/JSON/OpenSourceAdvocates.json";
 import OrganizingTeam from "../pages/JSON/OrganizingTeam.json";
 import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
-import Top100 from "../pages/JSON/Top100.json";
-import top100 from "../pages/JSON/2023 Contributors/top100.json"
+// import Top100 from "../pages/JSON/Top100.json";
+import Top100 from "../pages/JSON/2023 Contributors/Top100.json"
 import Confetti from "react-confetti";
-
 const contractAddress = "0x0E2195E4292458eaA9Ee30242Fce440b5a722944";
 
 const Certi_Comp = (props) => {
@@ -65,7 +64,7 @@ const Certi_Comp = (props) => {
   const projectAdminsTree = treeMaker(ProjectAdmins);
   const mentorsTree = treeMaker(Mentors);
   const contributorsTree = treeMaker(Contributors);
-  const top100Tree = treeMaker(top100);
+  const top100Tree = treeMaker(Top100);
   const campusAmbassadorsTree = treeMaker(CampusAmbassadors);
   const openSourceAdvocatesTree = treeMaker(OpenSourceAdvocates);
   const organizingTeamTree = treeMaker(OrganizingTeam);
