@@ -15,6 +15,7 @@ const Cert = () => {
   const [Name, setName] = useState("");
   const [Role, setRole] = useState("Contributor");
   const [verified, setVerified] = useState(false);
+
   const setVerifiedTrue = () => {
     setVerified(true);
     console.log("verified");
