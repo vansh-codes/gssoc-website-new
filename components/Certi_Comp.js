@@ -79,7 +79,7 @@ const Certi_Comp = (props) => {
       })
     ).toString("hex");
     const merkleProof = tree.getHexProof(keccak256(singleParticipant));
-    // console.log("merkleProof", merkleProof);
+
     console.log("singleParticipant", singleParticipant);
 
     const toTheMoon =
@@ -105,14 +105,13 @@ const Certi_Comp = (props) => {
                     ? await contractWithWallet.verifyOrgTeam(merkleProof, singleParticipant)
                     : false;
 
-    console.log("toTheMoon", toTheMoon);
-
     if (toTheMoon) {
       setVerifiedTrue();
       console.log("GG OP EZ");
       const ver_success =
         "Verification successful.\n Achievement Unlocked 🎊!!! \n Proceed to download your hard-earned certificate from below. \n\nHope you had a great time learning & contributing with us. All the best for your future endeavors.";
       alert(ver_success);
+
       setShowConfetti(true);
       setTimeout(function () {
         setShowConfetti(false);
