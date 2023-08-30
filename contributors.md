@@ -26,17 +26,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mehakagg1313">
-            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
-            <br />
-            <sub><b>MEHAK AGGARWAL</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/gurjeetsinghvirdee">
             <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
             <br />
             <sub><b>Gurjeet Singh Virdee</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/mehakagg1313">
+            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
+            <br />
+            <sub><b>MEHAK AGGARWAL</b></sub>
         </a>
     </td>
     <td align="center">
