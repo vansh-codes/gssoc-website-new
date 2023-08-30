@@ -6,13 +6,14 @@ import keccak256 from "keccak256";
 import MerkleTree from "merkletreejs";
 import ABI from "../pages/JSON/ABI.json";
 import CampusAmbassadors from "../pages/JSON/CampusAmbassadors.json";
-import Contributors from "../pages/JSON/Contributors.json";
 import Mentors from "../pages/JSON/Mentors.json";
 import OpenSourceAdvocates from "../pages/JSON/OpenSourceAdvocates.json";
 import OrganizingTeam from "../pages/JSON/OrganizingTeam.json";
 import ProjectAdmins from "../pages/JSON/ProjectAdmins.json";
-// import Top100 from "../pages/JSON/Top100.json";
-import Top100 from "../pages/JSON/2023 Contributors/Top100.json"
+// import Top100 from "../pages/JSON/Top100.json";                // Data From 2022
+// import Contributors from "../pages/JSON/Contributors.json";    // Data From 2022
+import Contributors from "../pages/JSON/2023 Contributors/Contributors.json"; 
+import Top100 from "../pages/JSON/2023 Contributors/Top100.json";
 import Confetti from "react-confetti";
 const contractAddress = "0x0E2195E4292458eaA9Ee30242Fce440b5a722944";
 
