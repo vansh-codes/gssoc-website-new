@@ -76,12 +76,14 @@ const Certi_Comp = (props) => {
   };
 
   const checkIfVerified = (email) => {
-    // check if email is in the verified json
+    const lowerCaseEmail = email.toLowerCase(); // Convert email to lowercase 
+    
+    // check if lowerCaseEmail is in the verified json
     // if yes, setVerifiedTrue()
 
     if (props.Role === "Contributor") {
       for (let i = 0; i < Contributors.length; i++) {
-        if (Contributors[i].email === email) {
+        if (Contributors[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -90,7 +92,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Top Contributor") {
       for (let i = 0; i < Top100.length; i++) {
-        if (Top100[i].email === email) {
+        if (Top100[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -99,7 +101,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Mentor") {
       for (let i = 0; i < Mentors.length; i++) {
-        if (Mentors[i].email === email) {
+        if (Mentors[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -108,7 +110,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Project Admin") {
       for (let i = 0; i < ProjectAdmins.length; i++) {
-        if (ProjectAdmins[i].email === email) {
+        if (ProjectAdmins[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -117,7 +119,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Campus Ambassador") {
       for (let i = 0; i < CampusAmbassadors.length; i++) {
-        if (CampusAmbassadors[i].email === email) {
+        if (CampusAmbassadors[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -126,7 +128,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Speaker") {
       for (let i = 0; i < OpenSourceAdvocates.length; i++) {
-        if (OpenSourceAdvocates[i].email === email) {
+        if (OpenSourceAdvocates[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
@@ -135,7 +137,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Organizing Team") {
       for (let i = 0; i < OrganizingTeam.length; i++) {
-        if (OrganizingTeam[i].email === email) {
+        if (OrganizingTeam[i].email.toLowerCase === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
