@@ -137,7 +137,7 @@
         <a href="https://github.com/palakag29">
             <img src="https://avatars.githubusercontent.com/u/112793075?v=4" width="100;" alt="palakag29"/>
             <br />
-            <sub><b>palakag29</b></sub>
+            <sub><b>Palakag29</b></sub>
         </a>
     </td>
     <td align="center">
