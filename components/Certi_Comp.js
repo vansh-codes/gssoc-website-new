@@ -137,7 +137,7 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Organizing Team") {
       for (let i = 0; i < OrganizingTeam.length; i++) {
-        if (OrganizingTeam[i].email.toLowerCase === lowerCaseEmail) {
+        if (OrganizingTeam[i].email.toLowerCase() === lowerCaseEmail) {
           setVerifiedTrue();
           return true;
         }
