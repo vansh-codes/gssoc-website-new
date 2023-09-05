@@ -287,7 +287,7 @@ export default function Home() {
                       >
                         {({ isVisible }) => (
                           <div>
-                            {isVisible ? <CountUp end={10000} /> : null}+
+                            {isVisible ? <CountUp end={11000} /> : null}+
                           </div>
                         )}
                       </VisibilitySensor>
