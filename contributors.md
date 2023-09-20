@@ -33,17 +33,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mehakagg1313">
-            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
-            <br />
-            <sub><b>MEHAK AGGARWAL</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/nawed2611">
             <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
             <br />
             <sub><b>Nawed Ali</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/mehakagg1313">
+            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
+            <br />
+            <sub><b>MEHAK AGGARWAL</b></sub>
         </a>
     </td></tr>
 <tr>
