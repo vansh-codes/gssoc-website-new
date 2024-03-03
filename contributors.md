@@ -69,10 +69,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Aman-Manwani">
-            <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
+        <a href="https://github.com/monizb">
+            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
-            <sub><b>AMAN MANWANI</b></sub>
+            <sub><b>Monish Basaniwal</b></sub>
         </a>
     </td>
     <td align="center">
@@ -83,10 +83,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/monizb">
-            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
+        <a href="https://github.com/Aman-Manwani">
+            <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
-            <sub><b>Monish Basaniwal</b></sub>
+            <sub><b>AMAN MANWANI</b></sub>
         </a>
     </td></tr>
 <tr>
