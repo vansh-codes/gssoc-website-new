@@ -4,14 +4,10 @@ import Head from "next/head";
 
 const Team = () => {
   const [users, setUsers] = useState([]);
-  const [year, setYear] = useState(2022);
 
   const getUsers = async (year) => {
-    setYear(year == 2023 ? 2023 : year == 2022 ? 2022 : year == 2021 ? 2021 : year == 2020 ? 2020 : 2019);
-    let url = year == 2023 ? "https://opensheet.elk.sh/1D-7233yRtSKEGbCCNkw2YuXRW8qREviMxtsWZv1-c9E/1" : ("https://opensheet.elk.sh/1lbMJu8ZMBXcx66n0pkZI1eb8-fi8kBDQdwPoiIPPSRY/team" + year);
-    const response = await fetch(
-      url
-    );
+    let url = `/team_data/team${year}.json`;
+    const response = await fetch(url);
     setUsers(await response.json());
   };
 
@@ -148,7 +144,7 @@ const Team = () => {
                             </a>
                           )}
                           {curElem.hasOwnProperty("Twitter") === false ||
-                            curElem["Twitter"].trim() == "" ? (
+                          curElem["Twitter"].trim() == "" ? (
                             <></>
                           ) : (
                             <a
