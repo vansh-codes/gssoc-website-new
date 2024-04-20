@@ -105,6 +105,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Princegupta101">
+            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
+            <br />
+            <sub><b>Prince Gupta</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/thisisharsh7">
             <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
             <br />
@@ -124,15 +131,15 @@
             <br />
             <sub><b>Shubham Singodiya</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/mhdamaan79">
             <img src="https://avatars.githubusercontent.com/u/118375524?v=4" width="100;" alt="mhdamaan79"/>
             <br />
             <sub><b>Mohd Amaan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/palakag29">
             <img src="https://avatars.githubusercontent.com/u/112793075?v=4" width="100;" alt="palakag29"/>
