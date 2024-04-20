@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import Tilt from "react-parallax-tilt";
 import VisibilitySensor from "react-visibility-sensor";
+
 import Bighex from "../components/BgAssets/Bighex";
 import EllipseBox from "../components/BgAssets/EllipseBox";
 import EllipseBox2 from "../components/BgAssets/EllipseBox2";
@@ -12,10 +13,10 @@ import Hex1 from "../components/BgAssets/Hex1";
 import Hex2 from "../components/BgAssets/Hex2";
 import Map from "../components/BgAssets/Map";
 import SmallHex from "../components/BgAssets/SmallHex";
-import ThemeChanger from "../components/Toggler";
 import Card from "../components/homepage/Card";
 import Slider from "../components/homepage/Slider";
 import SocialFollow from "../components/homepage/SocialFollow";
+import ThemeChanger from "../components/Toggler";
 import Image from '../public/GSSoC_Schedule_Light_Mode.png'
 
 export default function Home() {
@@ -32,9 +33,9 @@ export default function Home() {
     <div>
       <Head>
         <title>
-          GirlScript Summer of Code 2023 | GirlScript Foundation India
+          GirlScript Summer of Code 2024 | GirlScript Foundation India
         </title>
-        <meta name="GSSoC'23" content="GSSoC'23 is back!" />
+        <meta name="GSSoC'24" content="GSSoC'24 is back!" />
         <link
           rel="icon"
           href="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
@@ -42,16 +43,16 @@ export default function Home() {
 
         <meta property="og:url" content="https://gssoc.girlscript.tech/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="GirlScript Summer of Code'23" />
-        <meta property="og:description" content="GSSoC'23 is back!" />
+        <meta property="og:title" content="GirlScript Summer of Code'24" />
+        <meta property="og:description" content="GSSoC'24 is back!" />
         <meta property="og:image" content="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" />
 
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="gssoc.girlscript.tech" />
         <meta property="twitter:url" content="https://gssoc.girlscript.tech/" />
-        <meta name="twitter:title" content="GirlScript Summer of Code'23" />
-        <meta name="twitter:description" content="GSSoC'23 is here!" />
+        <meta name="twitter:title" content="GirlScript Summer of Code'24" />
+        <meta name="twitter:description" content="GSSoC'24 is here!" />
         <meta name="twitter:image" content="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" />
 
 
@@ -92,7 +93,7 @@ export default function Home() {
           <div className="basis-1/2 relative">
             <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
               <span className="text-primary_orange-0">GSSoC </span>
-              2023
+              2024
               <div className="mt-2">is here!</div>
             </div>
 
@@ -102,11 +103,11 @@ export default function Home() {
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 20th May - 10th August 2023 </b>
+              <b> 20th May - 10th August 2024 </b>
             </div>
 {/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
-              <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;23 Job Fair</b> is coming soon!</h2>
+              <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;24 Job Fair</b> is coming soon!</h2>
             </div> */}
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
               <a className="" href="https://forms.gle/8K4K3zqUK1KJbqQPA">
@@ -230,14 +231,14 @@ export default function Home() {
               With such exposure, students begin to contribute to real-world
               projects from the comfort of their homes. GirlScript Summer Of
               Code has witnessed active participation over the years, and the
-              2023 edition aims to carry the legacy with a promising impact.
+              2024 edition aims to carry the legacy with a promising impact.
             </p>
           </div>
 
           <div className="pr-4 font-semibold pt-3 rounded-lg lg:my-4 lg:px-2 lg:py-10 ">
             <div className="dark:bg-black  dark:transition-colors bg-stone-50 shadow-lg rounded-lg my-1 px-1 w-64 sm:w-fit">
               <h1 className="mt-8 pt-6 pl-8 text-3xl xl:text-4xl text-primary_orange-0 3rem 3rem ">
-                GSSoC 2023
+                GSSoC 2024
               </h1>
               <div className="pl-8 text-2xl text-primary_orange-0 1.5rem 2rem ">
                 {" "}
@@ -527,7 +528,7 @@ export default function Home() {
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
-            GSSoC 2023
+            GSSoC 2024
           </p>
           <div
             data-aos="flip-left"
@@ -588,7 +589,7 @@ export default function Home() {
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
-            2023!
+            2024!
           </p>
           {theme === "light" ? (
             <img
