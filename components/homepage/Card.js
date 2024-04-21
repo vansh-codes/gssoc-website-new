@@ -15,8 +15,8 @@ function Cards(props) {
         <footer className="flex items-center justify-between leading-none p-2 md:p-4">
           <a
             className="w-full"
-            href={props.disabled ? "#" : props.link}
-            target={props.disabled ? "" : "_blank"}
+            href={ props.link}
+            target={ "_blank"}
             rel="noreferrer"
           >
             {!props.disabled ? (
