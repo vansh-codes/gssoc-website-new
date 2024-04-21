@@ -55,6 +55,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Princegupta101">
+            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
+            <br />
+            <sub><b>Prince Gupta</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
@@ -66,13 +73,6 @@
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Princegupta101">
-            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
-            <br />
-            <sub><b>Prince Gupta</b></sub>
         </a>
     </td>
     <td align="center">
