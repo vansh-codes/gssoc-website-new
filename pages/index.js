@@ -554,7 +554,7 @@ export default function Home() {
                 title="Lead the Pack"
                 content="Mentors are the experts and take the lead of the open-source project team. They guide the fellow participants at each stage in a road map of the project. They are the backbone of team and are available throughout the summer to review the pull requests and suggest betterment. Apply to be a mentor at Girlscript summer of code and be the foundation of your team."
                 btntext="Apply as a mentor"
-                link="https://bit.ly/GSSoC24-Projects"
+                link="https://bit.ly/gssoc-mentor"
               />
             </div>
           </div>
