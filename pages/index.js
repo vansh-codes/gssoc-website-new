@@ -570,7 +570,7 @@ export default function Home() {
                 title="Inviting Projects &amp; NGOs"
                 content="If you are an organization with a project idea in mind, a website or an app then this is the golden opportunity to become a part of an awesome community. The budding developers under the guidance of expert mentors will work on your projects and strive to achieve the best version. Apply and let’s collaborate together because Together Everyone Achieves More."
                 btntext="Apply as an Organization/Project Admin"
-                link="https://bit.ly/GSSoC24-Projects"
+                link="https://bit.ly/GSSoC24-Projects" 
               />
               {/* Card-4 */}
               <Card
