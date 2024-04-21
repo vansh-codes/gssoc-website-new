@@ -543,7 +543,7 @@ export default function Home() {
               <Card
                 disabled
                 title="Start your Journey"
-                content="Participating in GSSoC’23 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and essential tools like Git and Github under the supervision of excellent mentors."
+                content="Participating in GSSoC’24 is an opportunity to upgrade your Github profile. Enrich yourselves to learn, explore, improve, enhance, build connections and become a team player to nourish your skills and personality. Don’t miss a chance to get well-versed with Open-Source and essential tools like Git and Github under the supervision of excellent mentors."
                 btntext="Apply as a Contributor"
                 link="https://forms.gle/aXSG5y1Qxz2cYK9S6"
 
@@ -585,7 +585,7 @@ export default function Home() {
       </div>
 
       {/* Schedule */}
-      <div className="schedule__container flex flex-col items-center mb-48 ">
+      <div className="schedule__container flex flex-col items-center mb-48 mx-20 ">
         <div className="schedule__overview mt-24 relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
@@ -594,14 +594,14 @@ export default function Home() {
           {theme === "light" ? (
             <img
               id="Learn_more"
-              className="mb-10"
-              src="/GSSoC_Schedule_Light_Mode.png"
+              className=" my-7 mb-10 "
+              src="/GSSoC_Schedule_Light_Mode-2024.png"
             />
           ) : (
             <img
               id="Learn_more"
               className="mb-10"
-              src="/GSSoC_Schedule_Dark_Mode.png"
+              src="/GSSoC_Schedule_Dark_Mode-2024.png"
             />
           )}
         </div>
