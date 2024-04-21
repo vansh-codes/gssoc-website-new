@@ -110,7 +110,7 @@ export default function Home() {
               <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;24 Job Fair</b> is coming soon!</h2>
             </div> */}
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
-              <a className="" href="https://forms.gle/8K4K3zqUK1KJbqQPA">
+              <a className="" href="https://swiy.co/contributors">
                 <button
                   id="CTA-button"
                   data-aos="fade-down"
