@@ -22,6 +22,7 @@ import { useTheme } from "next-themes";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { Chrono } from "react-chrono";
+
 import Eventdata from "./api/event_data";
 
 const Event = () => {
@@ -43,7 +44,7 @@ const Event = () => {
     <div className="wrapper">
       <Head>
         <title>
-          Events | GirlScript Summer of Code 2023 | GirlScript Foundation India
+          Events | GirlScript Summer of Code 2024 | GirlScript Foundation India
         </title>
         <meta
           name="description"
@@ -52,7 +53,7 @@ const Event = () => {
       </Head>
       <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
         <h1 className="text-primary_orange-0">Events in&nbsp;</h1>
-        <h1>GSSoC&apos;22 </h1>
+        <h1>GSSoC&apos;24 </h1>
       </p>
       <div className=" hidden md:block w-full">
         {theme === "dark" ? (
