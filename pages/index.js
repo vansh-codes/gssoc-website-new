@@ -103,7 +103,7 @@ export default function Home() {
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 20th May - 10th August 2024 </b>
+              <b> 5th May - 10th August 2024 </b>
             </div>
 {/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
@@ -585,8 +585,8 @@ export default function Home() {
       </div>
 
       {/* Schedule */}
-      <div className="schedule__container flex flex-col items-center mb-48 mx-20 ">
-        <div className="schedule__overview mt-24 relative">
+      <div className="schedule__container flex flex-col items-center  mb-20  mx-5 md:mx-20  "> 
+        <div className="schedule__overview  relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
             2024!
@@ -594,13 +594,11 @@ export default function Home() {
           {theme === "light" ? (
             <img
               id="Learn_more"
-              className=" my-7 mb-10 "
               src="/GSSoC_Schedule_Light_Mode-2024.png"
             />
           ) : (
             <img
-              id="Learn_more"
-              className="mb-10"
+              id="Learn_more"       
               src="/GSSoC_Schedule_Dark_Mode-2024.png"
             />
           )}
