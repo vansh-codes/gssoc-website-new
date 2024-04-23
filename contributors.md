@@ -55,6 +55,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Princegupta101">
+            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
+            <br />
+            <sub><b>Prince Gupta</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
@@ -81,15 +88,15 @@
             <br />
             <sub><b>Rebecca Elisabeth Falcao</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Aman-Manwani">
             <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
             <sub><b>AMAN MANWANI</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/HemantSachdeva">
             <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
@@ -112,12 +119,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/HemantKr071">
+            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
+            <br />
+            <sub><b>Hemant Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/xkrishguptaa">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="xkrishguptaa"/>
             <br />
             <sub><b>Krish Gupta</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/singodiyashubham87">
             <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="singodiyashubham87"/>
@@ -131,8 +146,7 @@
             <br />
             <sub><b>Mohd Amaan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/palakag29">
             <img src="https://avatars.githubusercontent.com/u/112793075?v=4" width="100;" alt="palakag29"/>
@@ -160,7 +174,8 @@
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
