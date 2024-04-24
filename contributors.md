@@ -112,17 +112,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/thisisharsh7">
-            <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
-            <br />
-            <sub><b>Harsh Kumar</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/HemantKr071">
             <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
             <sub><b>Hemant Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/thisisharsh7">
+            <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
+            <br />
+            <sub><b>Harsh Kumar</b></sub>
         </a>
     </td>
     <td align="center">
