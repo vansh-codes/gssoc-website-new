@@ -62,17 +62,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/GaganpreetKaurKalsi">
-            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
-            <br />
-            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/GaganpreetKaurKalsi">
+            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
+            <br />
+            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
         </a>
     </td>
     <td align="center">
@@ -112,6 +112,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/kpriyanshu2003">
+            <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
+            <br />
+            <sub><b>Kumar Priyanshu</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/HemantKr071">
             <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
@@ -124,20 +131,13 @@
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/xkrishguptaa">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="xkrishguptaa"/>
             <br />
             <sub><b>Krish Gupta</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/kpriyanshu2003">
-            <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
-            <br />
-            <sub><b>Kumar Priyanshu</b></sub>
         </a>
     </td>
     <td align="center">
