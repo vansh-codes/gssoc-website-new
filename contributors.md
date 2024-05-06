@@ -126,13 +126,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/hustler0109">
+            <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
+            <br />
+            <sub><b>Shristy Joshi Thakur</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/thisisharsh7">
             <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/xkrishguptaa">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="xkrishguptaa"/>
@@ -167,27 +174,20 @@
             <br />
             <sub><b>Riti Chandak</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/sanjay-kv">
             <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
             <sub><b>Sanjay Viswanathan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/isayakmondal">
             <img src="https://avatars.githubusercontent.com/u/51121313?v=4" width="100;" alt="isayakmondal"/>
             <br />
             <sub><b>Sayak Mondal ⚡</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/hustler0109">
-            <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
-            <br />
-            <sub><b>Shristy Joshi Thakur</b></sub>
         </a>
     </td>
     <td align="center">
