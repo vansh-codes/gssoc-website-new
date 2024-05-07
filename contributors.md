@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/HemantKr071">
+            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
+            <br />
+            <sub><b>Hemant Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Aman-Manwani">
             <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
@@ -109,13 +116,6 @@
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/HemantKr071">
-            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
-            <br />
-            <sub><b>Hemant Kumar</b></sub>
         </a>
     </td>
     <td align="center">
