@@ -103,7 +103,7 @@ export default function Home() {
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 5th May - 10th August 2024 </b>
+              <b> 10th May - 10th August 2024 </b>
             </div>
 {/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
