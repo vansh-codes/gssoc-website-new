@@ -76,25 +76,25 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/HemantKr071">
+            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
+            <br />
+            <sub><b>Hemant Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/monizb">
             <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
             <sub><b>Monish Basaniwal</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/rebsfalcao15">
             <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
             <br />
             <sub><b>Rebecca Elisabeth Falcao</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/HemantKr071">
-            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
-            <br />
-            <sub><b>Hemant Kumar</b></sub>
         </a>
     </td>
     <td align="center">
@@ -105,17 +105,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/HemantSachdeva">
-            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
-            <br />
-            <sub><b>Hemant Sachdeva</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/kpriyanshu2003">
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/HemantSachdeva">
+            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
+            <br />
+            <sub><b>Hemant Sachdeva</b></sub>
         </a>
     </td>
     <td align="center">
