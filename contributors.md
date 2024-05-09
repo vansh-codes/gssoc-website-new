@@ -134,6 +134,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/sanjay-kv">
+            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+            <br />
+            <sub><b>Sanjay Viswanathan</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/thisisharsh7">
             <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
             <br />
@@ -167,20 +174,13 @@
             <br />
             <sub><b>Palakag29</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/RitiChandak">
             <img src="https://avatars.githubusercontent.com/u/96969496?v=4" width="100;" alt="RitiChandak"/>
             <br />
             <sub><b>Riti Chandak</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/sanjay-kv">
-            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
-            <br />
-            <sub><b>Sanjay Viswanathan</b></sub>
         </a>
     </td>
     <td align="center">
