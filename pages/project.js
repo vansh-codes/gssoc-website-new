@@ -12,6 +12,7 @@ const Project = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [year, setYear] = useState("24");
   const { theme } = useTheme();
 
   const getProjects2024 = async () => {
@@ -42,6 +43,7 @@ const Project = () => {
   useEffect(() => {
     setMounted(true);
     getProjects2024();
+    setYear("24");
   }, []);
 
   if (!mounted) return null;
@@ -70,7 +72,7 @@ const Project = () => {
           <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
             <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
               <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
-              <h1>-&nbsp;GSSOC&apos;23 </h1>
+              <h1>-&nbsp;GSSOC&apos;{year} </h1>
             </p>
             <div className="flex object-right">
               {theme === "light" ? (
@@ -100,7 +102,7 @@ const Project = () => {
           <a>
             <button
               className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-              onClick={() => getProjects2024()}
+              onClick={() => {getProjects2024();setYear("24")}}
             >
               2024
             </button>
@@ -108,7 +110,7 @@ const Project = () => {
           <a>
             <button
               className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-              onClick={() => getProjects2023()}
+              onClick={() => {getProjects2023();setYear("23")}}
             >
               2023
             </button>
@@ -116,7 +118,7 @@ const Project = () => {
           <a>
             <button
               className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-              onClick={() => getProjects2022()}
+              onClick={() => {getProjects2022();setYear("22")}}
             >
               2022
             </button>
@@ -124,7 +126,7 @@ const Project = () => {
           <a>
             <button
               className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg  dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-              onClick={() => getProjects2021()}
+              onClick={() => {getProjects2021();setYear("21")}}
             >
               2021
             </button>
