@@ -225,6 +225,13 @@
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/aswinikalyan30">
+            <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
+            <br />
+            <sub><b>Aswini Kalyan</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
