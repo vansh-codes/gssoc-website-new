@@ -266,7 +266,7 @@ function Leaderboard() {
     <>
       <Head>
         <title>
-          Leaderboard | GirlScript Summer of Code 2023 | GirlScript Foundation
+          Leaderboard | GirlScript Summer of Code 2024 | GirlScript Foundation
           India
         </title>
         <meta
