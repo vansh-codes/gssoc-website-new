@@ -255,13 +255,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Harshit7492">
+            <img src="https://avatars.githubusercontent.com/u/114082380?v=4" width="100;" alt="Harshit7492"/>
+            <br />
+            <sub><b>Harshit Singh</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/thisisharsh7">
             <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/aswinikalyan30">
             <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
