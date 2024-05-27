@@ -158,11 +158,12 @@ function Leaderboard() {
               a.login < b.login
             );
           });
-          let blacklist = ["raj03kumar", "chinmoy12c", "nidhi-rathore"];
+          let blacklist = [];
+          // console.log("Disqualified : ", blacklist);
           const rankedData = data.leaderboard
-            .filter((usr) => {
-              return blacklist.includes(usr.login) === false;
-            })
+            // .filter((usr) => {
+            //   return (blacklist.includes(usr.login) === false);
+            // })
             .map((contributorData, idx) => ({
               ...contributorData,
               rank: idx + 1,
