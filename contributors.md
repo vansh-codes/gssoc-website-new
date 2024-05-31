@@ -277,6 +277,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/dhairyathedev">
+            <img src="https://avatars.githubusercontent.com/u/65452005?v=4" width="100;" alt="dhairyathedev"/>
+            <br />
+            <sub><b>Dhairya Shah</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/aswinikalyan30">
             <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
             <br />
