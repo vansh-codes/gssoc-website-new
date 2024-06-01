@@ -62,13 +62,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Saviour1001">
-            <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
-            <br />
-            <sub><b>Harsh Ghodkar</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
@@ -76,10 +69,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/kartikmehta18">
-            <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
+        <a href="https://github.com/Saviour1001">
+            <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
-            <sub><b>Kartik Mehta</b></sub>
+            <sub><b>Harsh Ghodkar</b></sub>
         </a>
     </td>
     <td align="center">
@@ -87,6 +80,13 @@
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kartikmehta18">
+            <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
+            <br />
+            <sub><b>Kartik Mehta</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -98,24 +98,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/monizb">
-            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
+        <a href="https://github.com/Aman-Manwani">
+            <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
-            <sub><b>Monish Basaniwal</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/rebsfalcao15">
-            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
-            <br />
-            <sub><b>Rebecca Elisabeth Falcao</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/khAja13">
-            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
-            <br />
-            <sub><b>KhAja</b></sub>
+            <sub><b>AMAN MANWANI</b></sub>
         </a>
     </td>
     <td align="center">
@@ -126,10 +112,24 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Aman-Manwani">
-            <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
+        <a href="https://github.com/khAja13">
+            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
             <br />
-            <sub><b>AMAN MANWANI</b></sub>
+            <sub><b>KhAja</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/rebsfalcao15">
+            <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
+            <br />
+            <sub><b>Rebecca Elisabeth Falcao</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/monizb">
+            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
+            <br />
+            <sub><b>Monish Basaniwal</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -148,10 +148,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/sanjay-kv">
-            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+        <a href="https://github.com/Tanay-ErrorCode">
+            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
             <br />
-            <sub><b>Sanjay Viswanathan</b></sub>
+            <sub><b>Tanay</b></sub>
         </a>
     </td>
     <td align="center">
@@ -162,10 +162,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Tanay-ErrorCode">
-            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
+        <a href="https://github.com/sanjay-kv">
+            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
-            <sub><b>Tanay</b></sub>
+            <sub><b>Sanjay Viswanathan</b></sub>
         </a>
     </td>
     <td align="center">
@@ -255,13 +255,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Hemu21">
+            <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
+            <br />
+            <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/iamhvsharma">
             <img src="https://avatars.githubusercontent.com/u/123243221?v=4" width="100;" alt="iamhvsharma"/>
             <br />
             <sub><b>Harshvardhan Sharma </b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Harshit7492">
             <img src="https://avatars.githubusercontent.com/u/114082380?v=4" width="100;" alt="Harshit7492"/>
