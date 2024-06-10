@@ -62,17 +62,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/GaganpreetKaurKalsi">
-            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
-            <br />
-            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/GaganpreetKaurKalsi">
+            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
+            <br />
+            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
         </a>
     </td>
     <td align="center">
@@ -134,10 +134,10 @@
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/HemantSachdeva">
-            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
+        <a href="https://github.com/sanjay-kv">
+            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
-            <sub><b>Hemant Sachdeva</b></sub>
+            <sub><b>Sanjay Viswanathan</b></sub>
         </a>
     </td>
     <td align="center">
@@ -148,10 +148,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Tanay-ErrorCode">
-            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
+        <a href="https://github.com/HemantSachdeva">
+            <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
             <br />
-            <sub><b>Tanay</b></sub>
+            <sub><b>Hemant Sachdeva</b></sub>
         </a>
     </td>
     <td align="center">
@@ -162,10 +162,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/sanjay-kv">
-            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+        <a href="https://github.com/Tanay-ErrorCode">
+            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
             <br />
-            <sub><b>Sanjay Viswanathan</b></sub>
+            <sub><b>Tanay</b></sub>
         </a>
     </td>
     <td align="center">
