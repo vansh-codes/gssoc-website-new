@@ -238,7 +238,7 @@ function Leaderboard() {
             );
           });
           
-          let blacklist = ["sanjay-kv"];
+          let blacklist = ["Ajay-Dhangar"];
 
           const rankedData = data.leaderboard
             .filter((usr) => {
