@@ -191,6 +191,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/partha120804">
+            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
+            <br />
+            <sub><b>partha120804</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
             <br />
@@ -210,15 +217,15 @@
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/vinayak-vohra">
             <img src="https://avatars.githubusercontent.com/u/80148777?v=4" width="100;" alt="vinayak-vohra"/>
             <br />
             <sub><b>Vinayak Vohra</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/SrinivasDevolper">
             <img src="https://avatars.githubusercontent.com/u/121508628?v=4" width="100;" alt="SrinivasDevolper"/>
@@ -253,15 +260,15 @@
             <br />
             <sub><b>Mohd Amaan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/singodiyashubham87">
             <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="singodiyashubham87"/>
             <br />
             <sub><b>Shubham Singodiya</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/fi-krish">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="fi-krish"/>
@@ -296,15 +303,15 @@
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/dhairyathedev">
             <img src="https://avatars.githubusercontent.com/u/65452005?v=4" width="100;" alt="dhairyathedev"/>
             <br />
             <sub><b>Dhairya Shah</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/aswinikalyan30">
             <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
