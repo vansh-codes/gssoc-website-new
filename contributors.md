@@ -105,17 +105,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/monizb">
-            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
-            <br />
-            <sub><b>Monish Basaniwal</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/sanjay-kv">
             <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
             <sub><b>Sanjay Viswanathan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/monizb">
+            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
+            <br />
+            <sub><b>Monish Basaniwal</b></sub>
         </a>
     </td>
     <td align="center">
