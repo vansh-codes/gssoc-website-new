@@ -169,13 +169,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/partha120804">
+            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
+            <br />
+            <sub><b>Partha120804</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/Vyomrana02">
             <img src="https://avatars.githubusercontent.com/u/87069619?v=4" width="100;" alt="Vyomrana02"/>
             <br />
             <sub><b>Vyom Rana</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/MastanSayyad">
             <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
@@ -188,13 +195,6 @@
             <img src="https://avatars.githubusercontent.com/u/68495520?v=4" width="100;" alt="abhinav2712"/>
             <br />
             <sub><b>Abhinav Kumar</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/partha120804">
-            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
-            <br />
-            <sub><b>Partha120804</b></sub>
         </a>
     </td>
     <td align="center">
