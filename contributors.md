@@ -162,17 +162,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Tanay-ErrorCode">
-            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
-            <br />
-            <sub><b>Tanay</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/partha120804">
             <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
             <br />
             <sub><b>Partha120804</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Tanay-ErrorCode">
+            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
+            <br />
+            <sub><b>Tanay</b></sub>
         </a>
     </td></tr>
 <tr>
