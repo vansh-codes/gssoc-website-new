@@ -258,7 +258,7 @@
         <a href="https://github.com/sau-mili">
             <img src="https://avatars.githubusercontent.com/u/146661411?v=4" width="100;" alt="sau-mili"/>
             <br />
-            <sub><b>sau-mili</b></sub>
+            <sub><b>Sau-mili</b></sub>
         </a>
     </td></tr>
 <tr>
