@@ -55,17 +55,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Anubhavdevv">
-            <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
-            <br />
-            <sub><b>Anubhav</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Anubhavdevv">
+            <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
+            <br />
+            <sub><b>Anubhav</b></sub>
         </a>
     </td>
     <td align="center">
