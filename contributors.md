@@ -291,8 +291,8 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/fi-krish">
-            <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="fi-krish"/>
+        <a href="https://github.com/kkrishguptaa">
+            <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="kkrishguptaa"/>
             <br />
             <sub><b>Krish Gupta</b></sub>
         </a>
