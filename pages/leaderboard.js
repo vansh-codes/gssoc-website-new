@@ -138,9 +138,12 @@ function useWindowDimensions() {
 function Leaderboard() {
   const { theme } = useTheme();
   let [totalData, setTotalData] = useState([]);
+  let [modalTimeUpdated,setModalLastUpdated]=useState('')
   let [leaderss, setLeaderss] = useState([]);
   let [searchData, setSearchData] = useState([]);
   let [links, setLinks] = useState([]);
+  let [isStatsModal, setIsStatsModal] = useState(false);
+  let [row,setRow]=useState(-1)
   let [badges, setBadges] = useState([]);
   let [login, setLogin] = useState("");
   let [score, setScore] = useState("");
@@ -156,6 +159,7 @@ function Leaderboard() {
   const { height, width } = useWindowDimensions();
   const [itemsPerPage, setItemsPerPage] = useState(50); // default items per page
   const [imageClicked, setImageClicked] = useState(false); // used in badge sharing
+  const [userPrData,setUserPrData]=useState([])
   let rows = [];
 
   function createData(
@@ -187,7 +191,6 @@ function Leaderboard() {
       rank,
     };
   }
-
   function createBadgesList(score) {
     const badgeColumn = columns.find(column => column.id === 'badge');
     let badges = [];
@@ -203,7 +206,23 @@ function Leaderboard() {
 
     return badges
   }
+  function formatDateTime(dateString) {
+    const date = new Date(dateString);
 
+    // Extract date components
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();
+
+    // Extract time components
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    return `${day} ${month} ${year}, ${hours}:${minutes} ${ampm}`;
+}
   useEffect(() => {
     setIsLoading(true);
     setIsLboardLoading(true);
@@ -258,6 +277,7 @@ function Leaderboard() {
           setSearchData(rankedData);
           setOpenn(false);
           setLastupdated(data.updatedTimestring);
+          setModalLastUpdated(formatDateTime(data.updatedTimestring))
           setShowConfetti(true);
           setTimeout(function () {
             setShowConfetti(false);
@@ -286,12 +306,73 @@ function Leaderboard() {
     );
   }
 
+async   function statsmodal(num){
+    for (let link in leaderss[num].pr_urls) {
+      
+      prlinks.push(leaderss[num].pr_urls[link]);
+    }
+    let unique = prlinks.filter((item, i, ar) => ar.indexOf(item) === i);
+    console.log(unique)
+    let arr1=[]
+    unique.map(async (data)=>{
+      arr1.push(data)
+    })
+    setBadges(createBadgesList(leaderss[num].score));
+    arr1=await JSON.stringify(arr1)
+    localStorage.setItem('data',arr1)
+  
+    setLogin(leaderss[num].login);
+    setAvatar(leaderss[num].avatar_url);
+    setScore(leaderss[num].score);
+    localStorage.setItem('avatar',leaderss[num].avatar_url)
+    localStorage.setItem('login',leaderss[num].login)
+    localStorage.setItem('time',modalTimeUpdated)
+    window.location.href=`/user/${leaderss[num].login}`
+  }
   const { isOpen, onOpen, onClose } = useDisclosure();
   let prlinks = [];
+  function formatDate(dateString) {
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', options);
+}
+function extractTitle(title) {
+  // Split the title by '#'
+  const parts = title.split('#');
 
+  // Get the first part, remove dashes, and trim any extra whitespace
+  const extractedTitle = parts[0].replace(/-/g, ' ').trim();
+
+  return extractedTitle;
+}
+  async function fetchPRDetails(prUrl) {
+    try {
+      const apiUrl = prUrl.replace('github.com', 'api.github.com/repos').replace('/pull/', '/pulls/');
+      let response = await fetch(apiUrl,{method:"GET",headers: {
+        'Accept': 'application/vnd.github.v3+json'
+      }});
+      response=await response.json()
+
+      const labels = response.labels.map(label => label.name);
+      const levelLabel = labels.find(label => label.toLowerCase().includes('level'));
+      const issueNumber ="#"+ response.issue_url.match(/\/(\d+)$/)[1];
+      const commitCount = response.commits;
+      const commentCount = response.comments;
+      let title=extractTitle(response.title)
+const date=formatDate(response.merged_at)
+      const repositoryName = response.base.repo.name;
+      let arr=[title,levelLabel,commitCount,commentCount,date,response.issue_url,issueNumber,repositoryName]
+     
+      setLinks((prev)=>[...prev,arr]);
+      return arr
+    } catch (error) {
+      console.error(`Error fetching PR details: ${error.message}`);
+      return null;
+    }
+  }
   let handleClickOpen = (num) => {
     onOpen(true);
-
+    setRow(num)
     for (let link in leaderss[num].pr_urls) {
       prlinks.push(leaderss[num].pr_urls[link] + "\n\n\n\n");
     }
@@ -329,10 +410,13 @@ function Leaderboard() {
 
   const handleClose = () => {
     prlinks = [];
+    setLinks([])
+    setIsStatsModal(false)
+    console.log("Setting Links")
     onOpen(false);
     onClose();
   };
-
+ 
   const handlePageChange = (pageNumber) => {
     // console.log(`active page is ${pageNumber}`);
     setActivePage(pageNumber);
@@ -771,8 +855,11 @@ function Leaderboard() {
                                     >
                                       {column.id === "avatar" ? (
                                         <img
-                                          className="w-9 rounded-full m-auto bg-white"
+                                          className="w-9 cursor-pointer rounded-full m-auto bg-white"
                                           src={value}
+                                          onClick={()=>{
+                                            statsmodal(rows.indexOf(row))
+                                          }}
                                           alt=""
                                         />
                                       ) : column.id === "position" ? (
@@ -785,7 +872,7 @@ function Leaderboard() {
                                             size="2x"
                                           />
                                           <a
-                                            href={value[1]}
+                                            
                                             target="_blank"
                                             className="no-underline username"
                                             style={{
@@ -895,8 +982,11 @@ function Leaderboard() {
                                     >
                                       {column.id === "avatar" ? (
                                         <img
-                                          className="w-9 rounded-full m-auto bg-white"
+                                          className="w-9 cursor-pointer rounded-full m-auto bg-white"
                                           src={value}
+                                          onClick={()=>{
+                                            statsmodal(rows.indexOf(row))
+                                          }}
                                           alt=""
                                         />
                                       ) : column.id === "position" ? (
@@ -910,7 +1000,8 @@ function Leaderboard() {
                                           />
                                           <a
                                             href={value[1]}
-                                            className="no-underline username"
+                                           
+                                            className="no-underline username cursor-pointer"
                                             style={{ alignSelf: "center" }}
                                           >
                                             {value[0]}
@@ -1058,6 +1149,7 @@ function Leaderboard() {
                               alt="Avatar Image"
                               src={avatar}
                               className="w-24 rounded-full xl:w-28"
+                              onClick={()=>statsmodal(row)}
                             />
                             <p className="bg-orange-100 dark:bg-neutral-900 dark:text-white rounded-full p-3 text-center modal-score">
                               🏆 {score}
@@ -1169,6 +1261,8 @@ function Leaderboard() {
                               alt="Suvraneel Bhuin"
                               src={avatar}
                               className="w-24 rounded-full xl:w-28"
+                              onClick={()=>statsmodal(row)}
+
                             />
                             <p className="bg-orange-100 dark:bg-neutral-900 dark:text-white rounded-full p-3 text-center modal-score">
                               🏆 {score}
@@ -1251,6 +1345,7 @@ function Leaderboard() {
                 </ModalContent>
               </Modal>
             )}
+           
           </div>
         </div>
       </div>
