@@ -6,7 +6,7 @@ import { Spinner } from "@chakra-ui/react";
 const Page = () => {
   const router = useRouter();
   const { username } = router.query;
-  
+
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
 
