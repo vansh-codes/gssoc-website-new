@@ -126,13 +126,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/devXprite">
+            <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
+            <br />
+            <sub><b>Prateek</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/hustler0109">
             <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
             <br />
             <sub><b>Shristy Joshi Thakur</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/khAja13">
             <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
@@ -159,13 +166,6 @@
             <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
             <br />
             <sub><b>Hemant Sachdeva</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/devXprite">
-            <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
-            <br />
-            <sub><b>Prateek</b></sub>
         </a>
     </td>
     <td align="center">
