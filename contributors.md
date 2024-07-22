@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/sanjay-kv">
+            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+            <br />
+            <sub><b>Sanjay Viswanathan</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/kpriyanshu2003">
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
@@ -105,10 +112,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/sanjay-kv">
-            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+        <a href="https://github.com/khAja13">
+            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
             <br />
-            <sub><b>Sanjay Viswanathan</b></sub>
+            <sub><b>KhAja</b></sub>
         </a>
     </td>
     <td align="center">
@@ -124,27 +131,20 @@
             <br />
             <sub><b>AMAN MANWANI</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/devXprite">
             <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
             <br />
             <sub><b>Prateek</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/hustler0109">
             <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
             <br />
             <sub><b>Shristy Joshi Thakur</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/khAja13">
-            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
-            <br />
-            <sub><b>KhAja</b></sub>
         </a>
     </td>
     <td align="center">
