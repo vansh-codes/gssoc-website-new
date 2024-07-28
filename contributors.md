@@ -48,17 +48,17 @@
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/Princegupta101">
-            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
-            <br />
-            <sub><b>Prince Gupta</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Princegupta101">
+            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
+            <br />
+            <sub><b>Prince Gupta</b></sub>
         </a>
     </td>
     <td align="center">
