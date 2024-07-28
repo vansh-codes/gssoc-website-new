@@ -53,7 +53,7 @@ const PopupBanner = ({ onClose }) => {
                 data-aos="fade-down"
                 className=" bg-gradient-to-b w-full from-primary_orange-0 to-orange-600 text-md text-white font-semibold px-4 py-4 rounded-2xl md:text-2xl md:py-2 hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600"
               >
-                Documentation Help
+                Instructions Link
               </button>
             </a>
           </div>
