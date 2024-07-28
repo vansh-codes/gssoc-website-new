@@ -69,10 +69,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/kartikmehta18">
-            <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
+        <a href="https://github.com/GaganpreetKaurKalsi">
+            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
-            <sub><b>Kartik Mehta</b></sub>
+            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
         </a>
     </td>
     <td align="center">
@@ -83,20 +83,13 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/GaganpreetKaurKalsi">
-            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
+        <a href="https://github.com/kartikmehta18">
+            <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
             <br />
-            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
+            <sub><b>Kartik Mehta</b></sub>
         </a>
     </td></tr>
 <tr>
-    <td align="center">
-        <a href="https://github.com/kpriyanshu2003">
-            <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
-            <br />
-            <sub><b>Kumar Priyanshu</b></sub>
-        </a>
-    </td>
     <td align="center">
         <a href="https://github.com/sanjay-kv">
             <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
@@ -105,17 +98,24 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/partha120804">
-            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
+        <a href="https://github.com/kpriyanshu2003">
+            <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
-            <sub><b>Partha120804</b></sub>
+            <sub><b>Kumar Priyanshu</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/khAja13">
-            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
+        <a href="https://github.com/HemantKr071">
+            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
-            <sub><b>KhAja</b></sub>
+            <sub><b>Hemant Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/devXprite">
+            <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
+            <br />
+            <sub><b>Prateek</b></sub>
         </a>
     </td>
     <td align="center">
@@ -126,18 +126,18 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/devXprite">
-            <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
+        <a href="https://github.com/khAja13">
+            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
             <br />
-            <sub><b>Prateek</b></sub>
+            <sub><b>KhAja</b></sub>
         </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/HemantKr071">
-            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
+        <a href="https://github.com/partha120804">
+            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
             <br />
-            <sub><b>Hemant Kumar</b></sub>
+            <sub><b>Partha120804</b></sub>
         </a>
     </td>
     <td align="center">
