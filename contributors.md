@@ -105,6 +105,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/khAja13">
+            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
+            <br />
+            <sub><b>KhAja</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/HemantKr071">
             <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
@@ -123,13 +130,6 @@
             <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
             <br />
             <sub><b>Shristy Joshi Thakur</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/khAja13">
-            <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
-            <br />
-            <sub><b>KhAja</b></sub>
         </a>
     </td></tr>
 <tr>
