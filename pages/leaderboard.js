@@ -271,7 +271,7 @@ function Leaderboard() {
             );
           });
 
-          let blacklist = ["Ajay-Dhangar"];
+          let blacklist = ["Ajay-Dhangar","Unnimaya6122004"];
 
           const rankedData = data.leaderboard
             .filter((usr) => {
