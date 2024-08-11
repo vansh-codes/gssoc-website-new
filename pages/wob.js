@@ -47,7 +47,10 @@ export default function Wob() {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="gssoc.girlscript.tech" />
-        <meta property="twitter:url" content="https://gssoc.girlscript.tech/wob" />
+        <meta
+          property="twitter:url"
+          content="https://gssoc.girlscript.tech/wob"
+        />
         <meta
           name="twitter:title"
           content="GirlScript Winter of Blockchain'24"
@@ -78,8 +81,12 @@ export default function Wob() {
               <b> 25th September - 25th November 2024 </b>
             </div>
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
-              <a href="">
-                <button className="bg-gradient-to-r from-[#00008B] to-[#85C6DC] text-md text-white font-semibold px-4 py-4 rounded-[8px] md:text-2xl md:py-2">
+              <a href="https://forms.gle/JMtvx1hVMkqyCm4s7">
+                <button
+                  id="CTA-button-wob"
+                  data-aos="fade-down"
+                  className="bg-gradient-to-r from-[#00008B] to-[#85C6DC] text-md text-white font-semibold px-4 py-4 rounded-[8px] md:text-2xl md:py-2"
+                >
                   Register Here
                 </button>
               </a>
@@ -211,9 +218,7 @@ export default function Wob() {
                         offset={{ bottom: 0 }}
                       >
                         {({ isVisible }) => (
-                          <div>
-                            {isVisible ? <CountUp end={400} /> : null}+
-                          </div>
+                          <div>{isVisible ? <CountUp end={400} /> : null}+</div>
                         )}
                       </VisibilitySensor>
                     </h1>
@@ -245,9 +250,7 @@ export default function Wob() {
                         offset={{ bottom: 0 }}
                       >
                         {({ isVisible }) => (
-                          <div>
-                            {isVisible ? <CountUp end={300} /> : null}+
-                          </div>
+                          <div>{isVisible ? <CountUp end={300} /> : null}+</div>
                         )}
                       </VisibilitySensor>
                     </h1>
@@ -265,9 +268,7 @@ export default function Wob() {
                         offset={{ bottom: 0 }}
                       >
                         {({ isVisible }) => (
-                          <div>
-                            {isVisible ? <CountUp end={400} /> : null}+
-                          </div>
+                          <div>{isVisible ? <CountUp end={400} /> : null}+</div>
                         )}
                       </VisibilitySensor>
                     </h1>

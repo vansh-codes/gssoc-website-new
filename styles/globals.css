@@ -99,12 +99,22 @@ html {
   transition: ease-in-out 1s;
   margin-left: -1px;
   margin-right: 10px;
-  
 }
 #CTA-button:hover {
   /* transform: scale(1.2, 1.2); */
   transform: scale(1.1, 1.1);
   box-shadow: 0px 0px 20px #ff7a19;
+}
+
+#CTA-button-wob {
+  transition: ease-in-out 1s;
+  margin-left: -1px;
+  margin-right: 10px;
+}
+#CTA-button-wob:hover {
+  /* transform: scale(1.2, 1.2); */
+  transform: scale(1.1, 1.1);
+  box-shadow: 0px 0px 20px #85C6DC;
 }
 
 #CTA-button1 {
