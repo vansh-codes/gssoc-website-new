@@ -123,7 +123,7 @@ const Cert = () => {
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        {year=="2024"?<p className="text-primary_orange-0 text-center mb-10 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg">{`For GSSoC'24 Participants Certificates will be available from August 15 2024`}</p>:<Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue} year={year} />}
+        <Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue} year={year} />
       </div>
     </>
   );

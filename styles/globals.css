@@ -559,13 +559,13 @@ html {
 
 .contrib_name {
   position: absolute;
-  top: 46%;
+  top: 45.75%;
   left: 64%;
   transform: translate(-50%, -50%);
 }
 
 .export-mode .contrib_name {
-  top: 31.25%;
+  top: 30.5%;
   left: 64%;
   transform: translate(-50%, -50%);
 }
