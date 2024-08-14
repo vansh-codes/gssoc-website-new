@@ -76,7 +76,6 @@ const Certi_Comp = (props) => {
   const DownloadImage = (e) => {
     e.preventDefault();
     if (typeof window !== "undefined" && props.verified === true) {
-
       exportComponentAsPNG(
         certificateWrapper,
         {
@@ -293,7 +292,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Top Contributor" ? (
@@ -305,7 +304,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Mentor" ? (
@@ -317,7 +316,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Project Admin" ? (
@@ -329,7 +328,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Campus Ambassador" ? (
@@ -341,7 +340,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Speaker" ? (
@@ -353,7 +352,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : props.Role === "Organizing Team" ? (
@@ -365,7 +364,7 @@ const Certi_Comp = (props) => {
             ref={certificateWrapper}
           >
             <div id="contrib_name" className="contrib_name text-big-orange">
-              {props.Name}
+              {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
         ) : (
