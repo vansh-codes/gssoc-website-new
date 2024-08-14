@@ -531,8 +531,8 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
   /* background-size: cover; */
-  width: 1000px;
-  height: 707px;
+  width: 998px;
+  height: 704px;
 }
 
 .cert-contrib {
@@ -559,7 +559,7 @@ html {
 
 .contrib_name {
   position: absolute;
-  top: 45.75%;
+  top: 45.35%;
   left: 64%;
   transform: translate(-50%, -50%);
 }

@@ -16,6 +16,7 @@ import ABI from "../pages/JSON/ABI.json";
 // import Top100 from "../pages/JSON/2023/Top100.json";
 import Confetti from "react-confetti";
 import axios from "axios";
+import html2canvas from "html2canvas";
 const contractAddress = "0x0E2195E4292458eaA9Ee30242Fce440b5a722944";
 
 const Certi_Comp = (props) => {
@@ -76,18 +77,14 @@ const Certi_Comp = (props) => {
   const DownloadImage = (e) => {
     e.preventDefault();
     if (typeof window !== "undefined" && props.verified === true) {
-      exportComponentAsPNG(
-        certificateWrapper,
-        {
-          fileName:
-            props.Name + "_Cert_" + props.Role + `_GSSoC${props.year}.png`,
-        },
-        {
-          html2CanvasOptions: { backgroundColor: null },
-        }
-      ).then(() => {
-        // Remove the export-specific class after exporting
-      });
+      html2canvas(certificateWrapper.current).then((canva)=>{
+        const base64 = canva.toDataURL("image/png")
+        var anchor = document.createElement("a")
+        anchor.setAttribute("href",base64)
+        anchor.setAttribute("download",props.Name + "_Cert_" + props.Role + `_GSSoC${props.year}.png`)
+        anchor.click()
+        anchor.remove()
+      }).catch((err)=>console.log(err))
     }
   };
 
