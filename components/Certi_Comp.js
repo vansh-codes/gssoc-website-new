@@ -76,7 +76,6 @@ const Certi_Comp = (props) => {
   const DownloadImage = (e) => {
     e.preventDefault();
     if (typeof window !== "undefined" && props.verified === true) {
-      certificateWrapper.current.classList.add("export-mode");
 
       exportComponentAsPNG(
         certificateWrapper,
@@ -89,7 +88,6 @@ const Certi_Comp = (props) => {
         }
       ).then(() => {
         // Remove the export-specific class after exporting
-        certificateWrapper.current.classList.remove("export-mode");
       });
     }
   };
