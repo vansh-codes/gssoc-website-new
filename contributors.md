@@ -26,17 +26,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/swapnilsparsh">
-            <img src="https://avatars.githubusercontent.com/u/69387608?v=4" width="100;" alt="swapnilsparsh"/>
-            <br />
-            <sub><b>Swapnil Srivastava</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/swapnilsparsh">
+            <img src="https://avatars.githubusercontent.com/u/69387608?v=4" width="100;" alt="swapnilsparsh"/>
+            <br />
+            <sub><b>Swapnil Srivastava</b></sub>
         </a>
     </td>
     <td align="center">
