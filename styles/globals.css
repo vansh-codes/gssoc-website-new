@@ -652,10 +652,21 @@ html {
   }
 }
 @media only screen and (max-width: 1080px) {
-  .contrib_name,
-  .banner,
+  .banner{
+    display: block;
+    background-size:contain;
+    width: 998px;
+    position: absolute;
+    height: 704px;
+  }
+  .contrib_name{
+    top:250px;
+    left:790px;
+    width:400px;
+    transform: translate(-50%, -50%);
+  }
   .text-big-orange {
-    display: none;
+    font-size: 35px;
   }
   #no-mobile-alert {
     display: block;

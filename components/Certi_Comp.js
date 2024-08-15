@@ -278,7 +278,7 @@ const Certi_Comp = (props) => {
 
   return (
     <>
-      <div className="flex justify-center" id="cert">
+      <div className="flex justify-center relative overflow-hidden" id="cert">
         {/* <Image src="/cert.png" height="700" width="1000" alt="Certificate"/> */}
         {props.Role === "Contributor" ? (
           <div
