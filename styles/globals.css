@@ -531,8 +531,9 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
   /* background-size: cover; */
-  width: 998px;
-  height: 704px;
+  width: 975px;
+  height: 688px;
+  position: relative;
 }
 
 .cert-contrib {
@@ -557,10 +558,21 @@ html {
   background-size: contain;
 }
 
-.contrib_name {
+.contrib_name_2024 {
   position: absolute;
-  top: 45.35%;
-  left: 64%;
+  top: 45%;
+  left: 63%;
+  text-align: center;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.contrib_name_2023 {
+  position: absolute;
+  top: 36%;
+  left: 70%;
+  text-align: center;
+  width: 60%;
   transform: translate(-50%, -50%);
 }
 .export-mode .contrib_name {

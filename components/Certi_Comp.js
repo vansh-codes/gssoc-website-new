@@ -288,7 +288,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-contrib bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -300,7 +300,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-topcontrib bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -312,7 +312,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-mentor bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -324,7 +324,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-pa bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -336,7 +336,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-ca bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -348,7 +348,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-speaker bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
@@ -360,7 +360,7 @@ const Certi_Comp = (props) => {
             className={`banner cert-orgteam bg-no-repeat`}
             ref={certificateWrapper}
           >
-            <div id="contrib_name" className="contrib_name text-big-orange">
+            <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
           </div>
