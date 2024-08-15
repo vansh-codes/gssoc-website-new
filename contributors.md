@@ -26,17 +26,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/swapnilsparsh">
-            <img src="https://avatars.githubusercontent.com/u/69387608?v=4" width="100;" alt="swapnilsparsh"/>
-            <br />
-            <sub><b>Swapnil Srivastava</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/swapnilsparsh">
+            <img src="https://avatars.githubusercontent.com/u/69387608?v=4" width="100;" alt="swapnilsparsh"/>
+            <br />
+            <sub><b>Swapnil Srivastava</b></sub>
         </a>
     </td>
     <td align="center">
@@ -148,6 +148,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/MastanSayyad">
+            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
+            <br />
+            <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/rebsfalcao15">
             <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
             <br />
@@ -166,13 +173,6 @@
             <img src="https://avatars.githubusercontent.com/u/66035497?v=4" width="100;" alt="HemantSachdeva"/>
             <br />
             <sub><b>Hemant Sachdeva</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/MastanSayyad">
-            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
-            <br />
-            <sub><b>Mastan Sayyad</b></sub>
         </a>
     </td></tr>
 <tr>
