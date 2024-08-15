@@ -19,17 +19,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/gurjeetsinghvirdee">
-            <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
-            <br />
-            <sub><b>Gurjeet Singh Virdee</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/gurjeetsinghvirdee">
+            <img src="https://avatars.githubusercontent.com/u/73753957?v=4" width="100;" alt="gurjeetsinghvirdee"/>
+            <br />
+            <sub><b>Gurjeet Singh Virdee</b></sub>
         </a>
     </td>
     <td align="center">
