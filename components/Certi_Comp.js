@@ -303,7 +303,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Top Contributor" ? (
@@ -321,7 +321,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Mentor" ? (
@@ -339,7 +339,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Project Admin" ? (
@@ -357,7 +357,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Campus Ambassador" ? (
@@ -375,7 +375,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Speaker" ? (
@@ -393,7 +393,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : props.Role === "Organizing Team" ? (
@@ -411,7 +411,7 @@ const Certi_Comp = (props) => {
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
             <h5 className="issue_2024 text-sm  font-bold">
-              Issue Date: <span className="font-normal">{"August 2024"}</span>
+              ISSUED: <span className="font-normal">{"August 2024"}</span>
             </h5>
           </div>
         ) : (
