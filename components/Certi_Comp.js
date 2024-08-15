@@ -68,6 +68,7 @@ const Certi_Comp = (props) => {
         setOrganizingTeam(dataOT);
         setProjectAdmins(dataPA);
         setTop100(dataT100);
+        console.log(dataM)
       } catch (error) {
         console.log(error);
       }
@@ -158,7 +159,8 @@ const Certi_Comp = (props) => {
 
     if (props.Role === "Mentor") {
       for (let i = 0; i < Mentors.length; i++) {
-        if (Mentors[i].email.toLowerCase() === lowerCaseEmail) {
+        console.log(Mentors[i]?.email)
+        if (Mentors[i]?.email?.toLowerCase() === lowerCaseEmail) {
           setCertificateId(Mentors[i]?.cert_id)
           setVerifiedTrue();
           return true;
