@@ -253,7 +253,7 @@ function Leaderboard() {
     getLeaderboard();
   }, [year]);
   useEffect(()=>{
-    setYear(router.query.year)
+    setYear(router.query.year||"2024")
   },[])
   const getLeaderboard = async () => {
     await fetch(leaderboards[year])
