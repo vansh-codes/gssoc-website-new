@@ -22,6 +22,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import Pagination from "react-js-pagination";
 import { data } from "autoprefixer";
+import { useRouter } from "next/router";
+
+const leaderboards = {
+  2024: "/leaderboards/leaderboard24.json",
+  2023: "/leaderboards/leaderboard23.json",
+};
+
 const columns = [
   { id: "position", label: "Rank", minWidth: 50 },
   { id: "avatar", label: "Avatar", minWidth: 50 },
@@ -168,6 +175,8 @@ function Leaderboard() {
   const [imageClicked, setImageClicked] = useState(false); // used in badge sharing
   const [userPrData, setUserPrData] = useState([]);
   let rows = [];
+  const [year, setYear] = useState("2024");
+  const router = useRouter()
 
   function createData(
     username,
@@ -231,7 +240,6 @@ function Leaderboard() {
     const ampm = hours >= 12 ? "PM" : "AM";
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
-    console.log(`${day} ${month} ${year}, ${hours}:${minutes} ${ampm}`);
     return `${day} ${month} ${year}, ${hours}:${minutes} ${ampm}`;
   }
   useEffect(() => {
@@ -242,9 +250,13 @@ function Leaderboard() {
     }, 600);
     // clearTimeout(timeout)
     // "https://gssoc23-leaderboard.onrender.com/OSLeaderboard" Original Source of fetching PRs
-    fetch(
-      "https://gssoc24-leaderboard-backend-production-dfe3.up.railway.app/OSLeaderboard"
-    )
+    getLeaderboard();
+  }, [year]);
+  useEffect(()=>{
+    setYear(router.query.year)
+  },[])
+  const getLeaderboard = async () => {
+    await fetch(leaderboards[year])
       .then((res) => {
         setLoadingMsg("Data received. Starting to populate.");
         setTimeout(function () {
@@ -271,7 +283,12 @@ function Leaderboard() {
             );
           });
 
-          let blacklist = ["Ajay-Dhangar","Unnimaya6122004","chaanakyaaM","Tanmay-Mirgal"];
+          let blacklist = [
+            "Ajay-Dhangar",
+            "Unnimaya6122004",
+            "chaanakyaaM",
+            "Tanmay-Mirgal",
+          ];
 
           const rankedData = data.leaderboard
             .filter((usr) => {
@@ -295,8 +312,7 @@ function Leaderboard() {
           }, 5000);
         }
       });
-  }, []);
-
+  };
   for (let leader in leaderss) {
     rows.push(
       createData(
@@ -323,7 +339,6 @@ function Leaderboard() {
       prlinks.push(leaderss[num].pr_urls[link]);
     }
     let unique = prlinks.filter((item, i, ar) => ar.indexOf(item) === i);
-    console.log(unique);
     let arr1 = [];
     unique.map(async (data) => {
       arr1.push(data);
@@ -635,10 +650,26 @@ function Leaderboard() {
         className="container transition-colors mt-12 mb-0 md:mb-12 p-8 sm:px-10 md:px-10 lg:px-20 2xl:px-32 dark:bg-darkmode_gray-0 dark:transition-colors "
         style={{ margin: "auto" }}
       >
+        <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+          {Object.keys(leaderboards)
+            .reverse()
+            .map((year) => {
+              return (
+                <button
+                  key={year}
+                  className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+                  onClick={() => {setYear(year);router.push(`/leaderboard?year=${year}`)}}
+                >
+                  {year}
+                </button>
+              );
+            })}
+        </div>
+        <div className="h-10" />
         <div className="items-center justify-center">
           <div className="font-sans text-center text-2xl font-extrabold">
             <div className="text-black dark:text-white text-4xl text center font-extrabold mb-10 underline underline-offset-4 decoration-primary_orange-0">
-              <span className="text-primary_orange-0"> GSSoC 2024 </span>
+              <span className="text-primary_orange-0"> GSSoC {`${year}`} </span>
               Top Performers
             </div>
           </div>
