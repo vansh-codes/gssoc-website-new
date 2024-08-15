@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Skeleton, Stack } from "@chakra-ui/react";
+import { customDecrypt } from "../components/Funtion";
 
 const columns = [
   { id: "No", label: "No", minWidth: 50 },
@@ -60,7 +61,7 @@ export default function Stats() {
   }, []);
 
   async function fetchPRDetails(prUrl) {
-    console.log(process.env.GH_ACCESS_TOKEN?`true`:`false`);
+    const token = customDecrypt("TSK_qBobuXRLMOoeCTArdBFwBkaRwlQiA13xcgX4")
     try {
       const apiUrl = prUrl
         .replace("github.com", "api.github.com/repos")
@@ -69,7 +70,7 @@ export default function Stats() {
         method: "GET",
         headers: {
           Accept: "application/vnd.github.v3+json",
-          Authorization: `token ${process.env.GH_ACCESS_TOKEN}`,
+          Authorization: `token ${token}`,
         },
       });
       response = await response.json();
