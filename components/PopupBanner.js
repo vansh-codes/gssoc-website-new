@@ -24,7 +24,7 @@ const PopupBanner = ({ onClose }) => {
             Postman Challenge is live now!!!
           </p>
           <p className="text-lg text-gray-700">
-            Get Postman Badge +500 points on GSSoC Leaderboard
+            Get Postman Badge
           </p>
 
           <div className="mt-4 gap-5 flex max-md:flex-col w-full items-center justify-center">
