@@ -40,18 +40,18 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mehakagg1313">
-            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
-            <br />
-            <sub><b>MEHAK AGGARWAL</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/mehakagg1313">
+            <img src="https://avatars.githubusercontent.com/u/77895187?v=4" width="100;" alt="mehakagg1313"/>
+            <br />
+            <sub><b>MEHAK AGGARWAL</b></sub>
         </a>
     </td>
     <td align="center">
