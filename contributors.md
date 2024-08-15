@@ -12,17 +12,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/code-reaper08">
-            <img src="https://avatars.githubusercontent.com/u/64256342?v=4" width="100;" alt="code-reaper08"/>
-            <br />
-            <sub><b>Vishwa.R</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/code-reaper08">
+            <img src="https://avatars.githubusercontent.com/u/64256342?v=4" width="100;" alt="code-reaper08"/>
+            <br />
+            <sub><b>Vishwa.R</b></sub>
         </a>
     </td>
     <td align="center">
