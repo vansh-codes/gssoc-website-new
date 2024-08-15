@@ -29,6 +29,7 @@ const Certi_Comp = (props) => {
   const [OrganizingTeam, setOrganizingTeam] = useState([]);
   const [ProjectAdmins, setProjectAdmins] = useState([]);
   const [Top100, setTop100] = useState([]);
+  const [certificateId,setCertificateId] = useState("")
   useEffect(() => {
     const getCertificateData = async () => {
       try {
@@ -138,6 +139,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Contributor") {
       for (let i = 0; i < Contributors.length; i++) {
         if (Contributors[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(Contributors[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -147,6 +149,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Top Contributor") {
       for (let i = 0; i < Top100.length; i++) {
         if (Top100[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(Top100[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -156,6 +159,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Mentor") {
       for (let i = 0; i < Mentors.length; i++) {
         if (Mentors[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(Mentors[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -165,6 +169,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Project Admin") {
       for (let i = 0; i < ProjectAdmins.length; i++) {
         if (ProjectAdmins[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(ProjectAdmins[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -174,6 +179,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Campus Ambassador") {
       for (let i = 0; i < CampusAmbassadors.length; i++) {
         if (CampusAmbassadors[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(CampusAmbassadors[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -183,6 +189,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Speaker") {
       for (let i = 0; i < OpenSourceAdvocates.length; i++) {
         if (OpenSourceAdvocates[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(OpenSourceAdvocates[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -192,6 +199,7 @@ const Certi_Comp = (props) => {
     if (props.Role === "Organizing Team") {
       for (let i = 0; i < OrganizingTeam.length; i++) {
         if (OrganizingTeam[i].email.toLowerCase() === lowerCaseEmail) {
+          setCertificateId(OrganizingTeam[i]?.cert_id)
           setVerifiedTrue();
           return true;
         }
@@ -291,6 +299,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Top Contributor" ? (
           <div
@@ -303,6 +317,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Mentor" ? (
           <div
@@ -315,6 +335,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Project Admin" ? (
           <div
@@ -327,6 +353,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Campus Ambassador" ? (
           <div
@@ -339,6 +371,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Speaker" ? (
           <div
@@ -351,6 +389,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : props.Role === "Organizing Team" ? (
           <div
@@ -363,6 +407,12 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <h5 className="cert_id_2024 text-sm  font-bold">
+              Certificate ID: <span className="font-normal">{certificateId}</span>
+            </h5>
+            <h5 className="issue_2024 text-sm  font-bold">
+              Issue Date: <span className="font-normal">{"August 2024"}</span>
+            </h5>
           </div>
         ) : (
           <></>
