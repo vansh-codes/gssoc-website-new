@@ -74,7 +74,7 @@ const Cert = () => {
         </label>
         <input
           type="text"
-          className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
+          className="text-primary_orange-0 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           onChange={(e) => setEmail(e.target.value)}
           disabled={verified}
         ></input>
@@ -83,7 +83,7 @@ const Cert = () => {
         </label>
         <input
           type="text"
-          className="text-primary_orange-0 dark:text-white font-semibold mt-2 text-xs sm:text-sm md:text-lg"
+          className="text-primary_orange-0 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           value={Name}
           onChange={(e) => setName(e.target.value)}
           disabled={verified}
