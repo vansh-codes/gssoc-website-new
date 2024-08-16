@@ -212,20 +212,13 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/sau-mili">
-            <img src="https://avatars.githubusercontent.com/u/146661411?v=4" width="100;" alt="sau-mili"/>
-            <br />
-            <sub><b>Sau-mili</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/BRAVO68WEB">
             <img src="https://avatars.githubusercontent.com/u/41448663?v=4" width="100;" alt="BRAVO68WEB"/>
             <br />
             <sub><b>Jyotirmoy Bandyopadhyaya [Bravo68]</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/nehal-5">
             <img src="https://avatars.githubusercontent.com/u/130452338?v=4" width="100;" alt="nehal-5"/>
@@ -260,15 +253,15 @@
             <br />
             <sub><b>Siddharth Bramhecha</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/shreyash3087">
             <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
             <br />
             <sub><b>Shreyash</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/isayakmondal">
             <img src="https://avatars.githubusercontent.com/u/51121313?v=4" width="100;" alt="isayakmondal"/>
@@ -303,15 +296,15 @@
             <br />
             <sub><b>Shubham Singodiya</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kkrishguptaa">
             <img src="https://avatars.githubusercontent.com/u/135469703?v=4" width="100;" alt="kkrishguptaa"/>
             <br />
             <sub><b>Krish Gupta</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/ips610">
             <img src="https://avatars.githubusercontent.com/u/116909403?v=4" width="100;" alt="ips610"/>
@@ -346,15 +339,15 @@
             <br />
             <sub><b>Harsh Kumar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/dhairyathedev">
             <img src="https://avatars.githubusercontent.com/u/65452005?v=4" width="100;" alt="dhairyathedev"/>
             <br />
             <sub><b>Dhairya Shah</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/aswinikalyan30">
             <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
