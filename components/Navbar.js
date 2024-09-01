@@ -17,7 +17,7 @@ export const Navbar = () => {
   const [active, setActive] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
-  const wobLink =  "https://gssoc.girlscript.tech"
+  const wobLink =  "https://gs-wob.vercel.app"
 
   const handleClick = () => {
     setActive(!active);
