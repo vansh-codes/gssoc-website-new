@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Tooltip } from "@chakra-ui/react";
 import MoreMenu from "./MoreMenu";
 import ThemeChanger from "./Toggler";
+
 function MyLink(props) {
   let { href, children, ...rest } = props;
   return (
@@ -17,8 +18,6 @@ export const Navbar = () => {
   const [active, setActive] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
-  const wobLink =  "https://gs-wob.vercel.app"
-
   const handleClick = () => {
     setActive(!active);
   };
@@ -86,13 +85,13 @@ export const Navbar = () => {
                 ABOUT
               </a>
             </Link>
-              <a
+              <Link
                 onClick={handleClick}
-                href={`${wobLink}/wob`}
+                href={`/wob`}
                 className="lg:inline-flex lg:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
               >
                 WOB
-              </a>
+              </Link>
             <Link href="/project">
               <a
                 onClick={handleClick}

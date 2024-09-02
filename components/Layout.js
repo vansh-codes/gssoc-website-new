@@ -13,7 +13,9 @@ const Layout = ({ children }) => {
   const [showPopup, setShowPopup] = useState(false);
   useEffect(() => {
     // Show the popup when the component is mounted
-    setShowPopup(true);
+    if(router.pathname!="/wob"){
+      setShowPopup(true);
+    }
   }, [router]);
 
   const handleClosePopup = () => {
