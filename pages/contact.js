@@ -110,7 +110,7 @@ function Contact() {
                   </div>
                 </Link>
                 <Link href="mailto:gssoc@girlscript.tech">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 cursor-pointer">
                     <Email /> gssoc@girlscript.tech
                   </div>
                 </Link>
