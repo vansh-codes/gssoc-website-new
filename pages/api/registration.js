@@ -7,7 +7,6 @@ import ProjectAdmin from '../../utils/models/projectAdminSchema';
 export default async function handler(req, res) {
   const { method } = req;
 
-  // Connect to the database
   await dbConnect();
 
   if (method === 'POST') {
@@ -32,14 +31,13 @@ export default async function handler(req, res) {
           return res.status(400).json({ success: false, message: 'Invalid role' });
       }
 
-      // Return success response
       return res.status(201).json({ success: true, data: savedData });
     } catch (error) {
-      // Error response
+
       return res.status(400).json({ success: false, error: error.message });
     }
   } else {
-    // Handle invalid methods
+
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 }

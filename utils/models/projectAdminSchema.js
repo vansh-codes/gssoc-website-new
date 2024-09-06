@@ -45,13 +45,8 @@ const projectAdminSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  address: {
-    type: String,
-    required: true,
-    trim: true
-  },
   techStacks: {
-    type: [String],
+    type: String,
     required: true
   },
   projectName: {

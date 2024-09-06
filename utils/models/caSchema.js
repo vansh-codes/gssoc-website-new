@@ -8,6 +8,7 @@ const caSchema = new mongoose.Schema({
   },
   gender: {
     type: String,
+    enum: ['Male', 'Female', 'Others'], 
     required: true,
     trim: true
   },
@@ -46,15 +47,38 @@ const caSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  experienceAsCA: {
+  state: {
     type: String,
+    required: true,
+    trim: true
+  },
+  city: {
+    type: String,
+    trim: true
+  },
+  year: {
+    type: String,
+    enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
+    required: true
+  },
+  fieldOfStudy: {
+    type: String,
+    trim: true
+  },
+  gitHubProfileUrl: {
+    type: String,
+    required: true,
     trim: true
   },
   reason: {
     type: String,
     required: true,
     trim: true
-  }
+  },
+  experience: {
+    type: String, 
+    trim: true
+  },
 }, { timestamps: true });
 
 const CA = mongoose.models.ca || mongoose.model("ca", caSchema);

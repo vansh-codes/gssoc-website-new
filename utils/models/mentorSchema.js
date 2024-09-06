@@ -9,6 +9,7 @@ const mentorSchema = new mongoose.Schema({
   gender: {
     type: String,
     required: true,
+    enum: ['Male', 'Female', 'Others'], 
     trim: true
   },
   email: {
@@ -22,7 +23,7 @@ const mentorSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  college: {
+  collegeOrOffice: {
     type: String,
     required: true,
     trim: true
@@ -50,13 +51,26 @@ const mentorSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  address: {
+  state: {
     type: String,
     required: true,
     trim: true
   },
+  city: {
+    type: String,
+    trim: true
+  },
+  year: {
+    type: String,
+    enum: ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Graduate'],
+    required: true
+  },
+  fieldOfStudy: {
+    type: String,
+    trim: true
+  },
   techStacks: {
-    type: [String],
+    type: String,
     required: true
   },
   reason: {
