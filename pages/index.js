@@ -115,7 +115,7 @@ export default function Home() {
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
               <a
                 className=""
-                href="https://docs.google.com/forms/d/e/1FAIpQLScl2zoD7dOYnftAc9csfY4SD72WJbM1c0XMWAq-4Z7X5k45NA/viewform"
+                href="/registration"
               >
                 <button
                   id="CTA-button"
