@@ -14,7 +14,7 @@ const Team = () => {
   useEffect(() => {
     var customQuery = window.location.href.split("#")[1]; // Direct link to /team#20XX
     // Note - Only change 2022 with current year of GSSoC
-    customQuery ? getUsers(customQuery) : getUsers("2024");
+    customQuery ? getUsers(customQuery) : getUsers("2024Extd");
   }, []);
 
   return (
@@ -30,21 +30,29 @@ const Team = () => {
         /> */}
       </Head>
       <div className="items-center justify-center">
-        <p className="font-sans text-center text-2xl font-extrabold text-black-100">
-          <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+        <div className="font-sans text-center text-2xl font-extrabold text-black-100">
+          <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
             <h1 className="text-primary_orange-0">Meet the&nbsp;</h1>
             <h1>Team </h1>
-          </p>
+          </div>
           <p className=" text-primary_orange-0">
-            2024 Team is here to make your journey memorable!
+            2024 Extended GSSoC Team is here to make your journey memorable!
           </p>
-        </p>
+        </div>
       </div>
       <Spacer mt={10} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-5">
       <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 rounded md:text-2xl md:py-6"
+            onClick={() => getUsers("2024Extd")}
+          >
+            2024-Extd
+          </button>
+        </a>
+      <a>
+          <button
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 rounded md:py-4 md:text-2xl md:py-6"
             onClick={() => getUsers(2024)}
           >
             2024
@@ -52,7 +60,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 rounded md:py-4 md:text-2xl md:py-6"
             onClick={() => getUsers(2023)}
           >
             2023
@@ -60,7 +68,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers(2022)}
           >
             2022
@@ -68,7 +76,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers(2021)}
           >
             2021
@@ -76,7 +84,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers(2020)}
           >
             2020
@@ -84,7 +92,7 @@ const Team = () => {
         </a>
         <a>
           <button
-            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 rounded md:text-2xl md:py-6"
+            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg text-white dark:text-black font-medium hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md px-10 py-3 md:py-4 rounded md:text-2xl md:py-6"
             onClick={() => getUsers(2019)}
           >
             2019
