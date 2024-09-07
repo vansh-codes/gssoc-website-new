@@ -13,7 +13,7 @@ const Registration = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [errors, setErrors] = useState({});
   const router = useRouter();
-
+  const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(false);
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -601,7 +601,20 @@ const Registration = () => {
         return null;
     }
   };
-
+  if (!isRegistrationsOpen) {
+    return (
+      <div className="min-h-screen bg-gray-100 p-10 flex items-center justify-center">
+        <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
+          <h1 className="text-2xl font-semibold text-center mb-6">
+            Coming Soon
+          </h1>
+          <p className="text-center text-gray-700">
+            Registrations are not open at the moment. Please check back later.
+          </p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen p-10 bg-gray-100 flex items-center justify-center">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
