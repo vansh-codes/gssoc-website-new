@@ -26,18 +26,11 @@
     },
     {
       "Name": "Sanjay Viswanathan",
-      "Designation": "Program Manager",
+      "Designation": "Senior Program Manager",
       "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Sanjay%20Viswanathan.jpg?raw=true",
       "GitHub": "https://github.com/sanjay-kv",
       "Twitter": "https://twitter.com/sanjay_kv_",
       "LinkedIn": "https://www.linkedin.com/in/sanjay-k-v/"
-    },
-    {
-      "Name": "Radhika Malpani",
-      "Designation": "Program Manager",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Radhika%20Malpani.jpeg?raw=true",
-      "GitHub": "https://github.com/RadhikaMalpani1702",
-      "LinkedIn": "https://www.linkedin.com/in/radhikamalpani1702/"
     },
     {
       "Name": "Mastan Sayyad",
@@ -47,9 +40,16 @@
       "LinkedIn": "https://www.linkedin.com/in/mastan-sayyad-126904223/"
     },
     {
+      "Name": "Radhika Malpani",
+      "Designation": "Program Manager",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Radhika%20Malpani.jpeg?raw=true",
+      "GitHub": "https://github.com/RadhikaMalpani1702",
+      "LinkedIn": "https://www.linkedin.com/in/radhikamalpani1702/"
+    },
+    {
       "Name": "Suhani Singh Paliwal",
       "Designation": "Program Manager",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Suhani%20Singh%20Paliwal.png?raw=true",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Suhani%20Singh%20Paliwal.jpg?raw=true",
       "GitHub": "https://github.com/suhanipaliwal",
       "Twitter": "https://x.com/suhanispaliwal",
       "LinkedIn": "https://www.linkedin.com/in/suhani-singh-paliwal"
@@ -57,7 +57,7 @@
     {
       "Name": "Hemanth Kumar",
       "Designation": "Program Manager",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Hemath%20Kumar.jpeg?raw=true",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Hemanth%20Kumar.jpg?raw=true",
       "GitHub": "https://github.com/Hemu21",
       "Twitter": " https://x.com/Hemu21_",
       "LinkedIn": " https://www.linkedin.com/in/hemu21"
@@ -65,7 +65,7 @@
     {
         "Name": "Siddheya Kulkarni",
         "Designation": "Web developer",
-        "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Siddheya%20Kulkarni.jpeg?raw=true",
+        "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Siddheya%20Kulkarni.jpg?raw=true",
         "GitHub": " https://github.com/Asymtode712",
         "Twitter": "https://x.com/SidKulkarni712",
         "LinkedIn": "https://www.linkedin.com/in/siddheya-kulkarni/"
@@ -112,7 +112,7 @@
     {
       "Name": "Meet Jain",
       "Designation": "Public Relations Officer",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Meet%20Jain.png?raw=true",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Meet%20Jain.jpg?raw=true",
       "GitHub": " https://github.com/Meetjain1",
       "Twitter": "https://twitter.com/Meetjain_100",
       "LinkedIn": "https://linkedin.com/in/meet-jain-413015265/"
@@ -120,7 +120,7 @@
     {
       "Name": "Aditya Bhaumik",
       "Designation": "Community Manager",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Aditya%20Bhaumik.jpeg?raw=true",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Aditya%20Bhaumik.jpg?raw=true",
       "GitHub": " https://github.com/aditya-bhaumik",
       "Twitter": "https://twitter.com/cricketaditya30",
       "LinkedIn": " https://www.linkedin.com/in/aditya-bhaumik-62b6b2220/"
@@ -144,7 +144,7 @@
     {
       "Name": "Nikita Tiwari",
       "Designation": "Content Writer",
-      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Nikita%20Tiwari.png?raw=true",
+      "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Nikita%20Tiwari.jpg?raw=true",
       "GitHub": "https://github.com/nikki-05",
       "LinkedIn": "https://www.linkedin.com/in/nikita-tewari-56999b249"
     },
