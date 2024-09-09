@@ -15,9 +15,6 @@ export default async function handler(req, res) {
     try {
       const { role, ...formData } = req.body;
 
-      console.log(`Role: ${role}`);
-      console.log(`Form data: ${JSON.stringify(formData)}`);
-
       let savedData;
       switch (role) {
         case 'CA':

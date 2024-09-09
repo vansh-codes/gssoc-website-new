@@ -309,7 +309,7 @@ const Registration = () => {
             </div>
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER FOR GSSOC'24 EXTD.
+                REGISTER FOR GSSOC&apos24 EXTD.
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
@@ -618,7 +618,7 @@ const Registration = () => {
 
                     <h2 className="text-2xl font-semibold mb-4">Submission Successful !!</h2>
                     <p className="text-lg mb-12 max-w-xl w-full">
-                      Get ready to embark on a exciting open source journey with GSSoC'24 Extended Program.
+                      Get ready to embark on a exciting open source journey with GSSoC&apos24 Extended Program.
                       Our team will review your submission and get back to you soon.
                     </p>
 
