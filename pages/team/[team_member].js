@@ -1,11 +1,71 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import memberData from "../../public/team_member_data/member_data.json";
+import { useEffect } from "react";
+
 
 const TeamMember = () => {
     const router = useRouter();
     const { team_member } = router.query;
     const member = memberData.find((m) => m[team_member]);
+
+    const details = member ? member[team_member] : {};
+    const githubUsername = details.GitHub
+        ? details.GitHub.split("/").pop()
+        : "";
+
+    useEffect(() => {   // to embed topmate widget link
+        if (details.TopmateService) {
+            const script = document.createElement("script");
+            script.src =
+                "https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js";
+            script.async = true;
+            script.defer = true;
+
+            const isMobile = window.innerWidth <= 640; // Mobile screen (640px and below)
+            const isMedium = window.innerWidth > 640 && window.innerWidth <= 1024; // Medium screen (between 640px and 1024px)
+
+            let positionRight = "80px";
+            let positionBottom = "30px";
+            let fontSize = "16px";
+            let customWidth = "160px";
+
+            if (isMobile) {
+                positionRight = "5px";
+                positionBottom = "5px";
+                fontSize = "14px";
+                customWidth = "140px";
+            } else if (isMedium) {
+                positionRight = "60px";
+                positionBottom = "40px";
+                fontSize = "15px";
+                customWidth = "150px";
+            }
+
+            script.setAttribute(
+                "user-profile",
+                `${details.TopmateService}?embed=true&theme=F97316`
+            );
+            script.setAttribute(
+                "btn-style",
+                '{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}'
+            );
+            script.setAttribute("embed-version", "v1");
+            script.setAttribute("button-text", "Let's Connect");
+            script.setAttribute("position-right", positionRight);
+            script.setAttribute("position-bottom", positionBottom);
+            script.setAttribute("custom-padding", "0px");
+            script.setAttribute("custom-font-size", fontSize);
+            script.setAttribute("custom-font-weight", "500");
+            script.setAttribute("custom-width", customWidth);
+
+            document.body.appendChild(script);
+            return () => {
+                document.body.removeChild(script);
+            };
+        }
+    }, [details.TopmateService]);
+    // console.log(githubUsername);
 
     if (!member) {
         return (
@@ -22,12 +82,6 @@ const TeamMember = () => {
             </div>
         );
     }
-
-    const details = member[team_member];
-    const githubUsername = details.GitHub
-        ? details.GitHub.split("/").pop()
-        : "";
-    // console.log(githubUsername);
 
     const languageStyles = {
         NextJS: {
@@ -63,6 +117,11 @@ const TeamMember = () => {
         TailwindCSS: {
             logo: "tailwind-css",
             bgColor: "%2338B2AC",
+            logoColor: "white",
+        },
+        Bootstrap: {
+            logo: "bootstrap",
+            bgColor: "%238511FA",
             logoColor: "white",
         },
         JavaScript: {
@@ -160,6 +219,46 @@ const TeamMember = () => {
             bgColor: "%23000000",
             logoColor: "white",
         },
+        VSCode: {
+            logo: "VS Code",
+            bgColor: "0078d7",
+            logoColor: "white",
+        },
+        Eclipse: {
+            logo: "eclipse",
+            bgColor: "FE7A16",
+            logoColor: "white",
+        },
+        Postman: {
+            logo: "postman",
+            bgColor: "FF6C37",
+            logoColor: "white",
+        },
+        Canva: {
+            logo: "canva",
+            bgColor: "%2300C4CC",
+            logoColor: "white",
+        },
+        R: {
+            logo: "r",
+            bgColor: "%23276DC3",
+            logoColor: "white",
+        },
+        Markdown: {
+            logo: "markdown",
+            bgColor: "%23000000",
+            logoColor: "white",
+        },
+        MermaidJS: {
+            logo: "mermaid",
+            bgColor: "ff3670",
+            logoColor: "white",
+        },
+        Oracle: {
+            logo: "oracle",
+            bgColor: "F80000",
+            logoColor: "white",
+        },
     };
 
     return (
@@ -217,7 +316,7 @@ const TeamMember = () => {
                         {details.Languages && details.Languages.length > 0 && (
                             <div className="text-gray-800 mb-6 text-center lg:text-left dark:text-white">
                                 <h2 className="text-lg font-semibold mb-2">
-                                    Languages
+                                    Languages/Tools
                                 </h2>
                                 <ul className="flex flex-wrap justify-center lg:justify-start list-none p-0 m-0">
                                     {details.Languages &&
@@ -267,6 +366,19 @@ const TeamMember = () => {
                                 {details.Bio || "N/A"}
                             </p>
                         </div>
+
+                        {/* {details.Sponsor && (
+                            <div className="mb-6">
+                                <a
+                                    href={details.Sponsor}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-4 py-2 text-white bg-orange-400 rounded-lg hover:bg-orange-500 transition-colors duration-300 focus:outline-none focus:ring focus:ring-orange-600 dark:focus:ring-orange-800 shadow-lg"
+                                >
+                                    &#9829; Sponsor
+                                </a>
+                            </div>
+                        )} */}
 
                         <div className="mb-6">
                             <h2 className="text-2xl font-semibold text-gray-900 mb-2 rounded-md inline-block dark:text-white">
@@ -394,15 +506,10 @@ const TeamMember = () => {
                                                 href={details.Topmate}
                                             >
                                                 <div className="w-12 h-12 flex items-center justify-center bg-black rounded-md">
-                                                    <span className="text-[#303030] font-bold text-3xl">
+                                                    <span className="text-white dark:text-[#303030] font-bold text-3xl">
                                                         T
                                                     </span>
                                                 </div>
-                                                {/* <img
-                                                    className="w-12 h-12 text-black fill-current"
-                                                    src="/instagram.svg"
-                                                    alt="Twitter"
-                                                /> */}
                                             </a>
                                         )}
                                     {details.GoogleDeveloper &&
@@ -447,20 +554,26 @@ const TeamMember = () => {
                             </div>
                         )}
 
-                        {details.RecentActivity && details.RecentActivity.length > 0 && (
-                            <div>
-                                <h2 className="text-2xl font-semibold text-gray-900 mb-2 mt-4 dark:text-white">
-                                    Recent Activity
-                                </h2>
-                                <p className="text-gray-800 text-xl dark:text-white" title="visit leaderboard">
-                                    <a href="https://gssoc.girlscript.tech/" 
-                                    target="_blank"
-                                    rel="noreferrer">
-                                        {details.RecentActivity || "N/A"}
-                                    </a>
-                                </p>
-                            </div>
-                        )}
+                        {details.RecentActivity &&
+                            details.RecentActivity.length > 0 && (
+                                <div>
+                                    <h2 className="text-2xl font-semibold text-gray-900 mb-2 mt-4 dark:text-white">
+                                        Recent Activity
+                                    </h2>
+                                    <p
+                                        className="text-gray-800 text-xl dark:text-white"
+                                        title="visit leaderboard"
+                                    >
+                                        <a
+                                            href="https://gssoc.girlscript.tech/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {details.RecentActivity || "N/A"}
+                                        </a>
+                                    </p>
+                                </div>
+                            )}
                     </div>
                 </div>
             </div>
