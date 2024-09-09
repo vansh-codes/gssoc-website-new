@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { Box, Skeleton, SkeletonCircle, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
 
@@ -124,12 +125,15 @@ const Team = () => {
               ) : (
                 <div className="flex items-center justify-center w-80" key={i}>
                   <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
-                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300 hover:cursor-pointer">
+                    <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300 hover:cursor-pointer" 
+                         title={`Visit ${curElem["Name"]}'s Profile`}>
+                      <Link href={`/team/${curElem["Name"].replace(/\s+/g, '')}`}>
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
                         className="object-cover object-center w-full h-full"
                       />
+                      </Link>
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
