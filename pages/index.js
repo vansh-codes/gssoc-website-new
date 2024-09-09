@@ -33,7 +33,7 @@ export default function Home() {
     <div>
       <Head>
         <title>
-          GirlScript Summer of Code 2024 | GirlScript Foundation India
+          GirlScript Summer of Code 2024 Extd | GirlScript Foundation India
         </title>
         <meta name="GSSoC'24" content="GSSoC'24 is back!" />
         <link
@@ -95,18 +95,17 @@ export default function Home() {
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2 relative">
             <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
-              <span className="text-primary_orange-0">GSSoC </span>
-              2024
+            <span className="text-primary_orange-0">GSSoC </span>
+              2024 Extd
               <div className="mt-2">is here!</div>
             </div>
-
             <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white">
-              GirlScript Summer of Code is a 3-month long
+              GirlScript Summer of Code Extd is a 1-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 10th May - 10th August 2024 </b>
+              <b> 1st Oct - 10th Nov 2024 </b>
             </div>
             {/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
@@ -607,7 +606,7 @@ export default function Home() {
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
-            GSSoC 2024
+            GSSoC 2024 Extd
           </p>
           <div
             data-aos="flip-left"
@@ -667,7 +666,7 @@ export default function Home() {
         <div className="schedule__overview  relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
-            2024!
+            2024 Extd!
           </p>
           {theme === "light" ? (
             <img id="Learn_more" src="/GSSoC_Schedule_Light_Mode-2024.png" />
