@@ -109,11 +109,11 @@ function Sponsorus() {
           OUR PREVIOUS SPONSORS
         </div>
         <div className="flex w-full flex-wrap gap-12 justify-between max-lg:justify-center">
-          <div className="bg-gray-200 w-36 h-40"></div>
-          <div className="bg-gray-200 w-36 h-40"></div>
-          <div className="bg-gray-200 w-36 h-40"></div>
-          <div className="bg-gray-200 w-36 h-40"></div>
-          <div className="bg-gray-200 w-36 h-40"></div>
+          <div className="flex justify-center items-center w-36 h-40"><img src="/Sponsors/Postman.png" alt="Postman" /></div>
+          <div className="flex justify-center items-center w-36 h-40"><img src="/Sponsors/Vercel.png" alt="" /></div>
+          <div className="flex justify-center items-center w-40 h-40"><img src="/Sponsors/BlueLearn.png" alt="" /></div>
+          <div className="flex justify-center items-center w-24 h-40"><img src="/Sponsors/dotXYZ.png" alt="" /></div>
+          <div className="flex justify-center items-center w-36 h-40"><img src="https://quine.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F156089b0-a252-474d-9a70-3ca3d1700807%2FProperty_1Variant4.svg?table=block&id=976f5669-d89e-449f-9d80-7aa14df8229c&spaceId=a8bb25df-0bb7-49ae-b3bb-6496fd5b7326&userId=&cache=v2" alt="" /></div>
         </div>
         <div className="text-3xl my-8 text-center font-medium">
           WISH TO CONTRIBUTE IN OUR ENDEAVOUR? SPONSOR US
