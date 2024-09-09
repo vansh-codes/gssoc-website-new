@@ -28,7 +28,11 @@ const caSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  referralCode: {
+  referral: {
+    type: String,
+    trim: true
+  },
+  partOfProgramBefore: {
     type: String,
     trim: true
   },
@@ -73,10 +77,6 @@ const caSchema = new mongoose.Schema({
   reason: {
     type: String,
     required: true,
-    trim: true
-  },
-  experience: {
-    type: String, 
     trim: true
   },
 }, { timestamps: true });
