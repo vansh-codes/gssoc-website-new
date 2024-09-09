@@ -9,6 +9,8 @@ function Sponsorus() {
     phoneNumber: "",
     notes: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     window.scrollTo({
       top: document.body.scrollHeight / 2 - window.innerHeight / 2,
@@ -27,6 +29,7 @@ function Sponsorus() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/sponsor", {
         method: "POST",
@@ -42,7 +45,7 @@ function Sponsorus() {
       }
 
       const result = await response.json();
-
+      setIsSubmitting(false);
       if (response.ok) {
         console.log("Form submitted successfully", result);
         setShowPopup(true);
@@ -61,10 +64,9 @@ function Sponsorus() {
       console.error("Unexpected error", error);
     }
   };
-
   const handleClosePopup = () => {
     setShowPopup(false);
-    window.location.href = "/"
+    window.location.href = "/";
   };
 
   return (
@@ -109,11 +111,24 @@ function Sponsorus() {
           OUR PREVIOUS SPONSORS
         </div>
         <div className="flex w-full flex-wrap gap-12 justify-between max-lg:justify-center">
-          <div className="flex justify-center items-center w-36 h-40"><img src="/Sponsors/Postman.png" alt="Postman" /></div>
-          <div className="flex justify-center items-center w-36 h-40"><img src="/Sponsors/Vercel.png" alt="" /></div>
-          <div className="flex justify-center items-center w-40 h-40"><img src="/Sponsors/BlueLearn.png" alt="" /></div>
-          <div className="flex justify-center items-center w-24 h-40"><img src="/Sponsors/dotXYZ.png" alt="" /></div>
-          <div className="flex justify-center items-center w-36 h-40"><img src="https://quine.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F156089b0-a252-474d-9a70-3ca3d1700807%2FProperty_1Variant4.svg?table=block&id=976f5669-d89e-449f-9d80-7aa14df8229c&spaceId=a8bb25df-0bb7-49ae-b3bb-6496fd5b7326&userId=&cache=v2" alt="" /></div>
+          <div className="flex justify-center items-center w-36 h-40">
+            <img src="/Sponsors/Postman.png" alt="Postman" />
+          </div>
+          <div className="flex justify-center items-center w-36 h-40">
+            <img src="/Sponsors/Vercel.png" alt="" />
+          </div>
+          <div className="flex justify-center items-center w-40 h-40">
+            <img src="/Sponsors/BlueLearn.png" alt="" />
+          </div>
+          <div className="flex justify-center items-center w-24 h-40">
+            <img src="/Sponsors/dotXYZ.png" alt="" />
+          </div>
+          <div className="flex justify-center items-center w-36 h-40">
+            <img
+              src="https://quine.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F156089b0-a252-474d-9a70-3ca3d1700807%2FProperty_1Variant4.svg?table=block&id=976f5669-d89e-449f-9d80-7aa14df8229c&spaceId=a8bb25df-0bb7-49ae-b3bb-6496fd5b7326&userId=&cache=v2"
+              alt=""
+            />
+          </div>
         </div>
         <div className="text-3xl my-8 text-center font-medium">
           WISH TO CONTRIBUTE IN OUR ENDEAVOUR? SPONSOR US
@@ -229,7 +244,7 @@ function Sponsorus() {
             <div className="flex justify-end mt-4 max-md:justify-center">
               <button
                 type="submit"
-                className="bg-[#df551a] rounded-lg text-white text-xl font-medium w-36 py-2 px-4 text-center"
+                className="bg-[#df551a] hover:bg-[#e36b38] rounded-lg text-white text-lg font-medium w-36 py-2 px-4 text-center"
               >
                 SUBMIT
               </button>
@@ -239,15 +254,37 @@ function Sponsorus() {
       </div>
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+          <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
+            <div className="h-40 overflow-hidden flex items-center justify-center">
+              <img
+                src="https://github.com/user-attachments/assets/c5a4d3b9-a507-499f-8909-e6b69abd9b8a"
+                alt="Banner"
+                width={400}
+              />
+            </div>
+
             <h2 className="text-2xl font-semibold mb-4">Thank You!</h2>
-            <p className="text-lg mb-6">
-              Thank you for your interest in sponsoring us. We will contact you
-              soon!
+            <hr/>
+            <p className="text-lg mb-12 max-w-xl w-full">
+              We truly appreciate your interest in sponsoring us! Our team will
+              get in touch with you within the next 5 days.
+              <br/>
+              In the meantime, feel free to explore our{" "}
+              <strong>Sponsor Deck</strong> to learn more about the exciting
+              opportunities we offer.
             </p>
+
+            <a
+              href="https://github.com/user-attachments/files/16929232/GSSoC.24.Sponsorship.deck-indian.2.pdf"
+              download
+              className="inline-block bg-[#F96727] hover:bg-[#e36b38] text-white py-2 px-4 rounded-lg mb-4 mr-2"
+            >
+              Download Sponsor Deck
+            </a>
+
             <button
               onClick={handleClosePopup}
-              className="bg-[#F96727] text-white py-2 px-4 rounded-lg"
+              className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg"
             >
               Close
             </button>
