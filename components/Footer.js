@@ -2,11 +2,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Footer = () => {
-  const { pathname } = useRouter(); 
-
-  if (pathname === "/sponsor_us") {
-    return null;
-  }
 
   return (
     <footer id="Contact">

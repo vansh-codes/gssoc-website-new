@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { SiGithubsponsors } from "react-icons/si";
 
-function Sponsorus() {
+function SponsorUs() {
   const [formData, setFormData] = useState({
     organizationName: "",
     organizationEmail: "",
@@ -251,7 +252,26 @@ function Sponsorus() {
             </div>
           </form>
         </div>
+        <div className="mt-10">
+          <div className="flex flex-col justify-center items-center gap-5 p-5">
+            <h5 className="font-bold text-lg text-center">
+              Want to support our organization? Sponsor us on GitHub
+              through github sponsors
+            </h5>
+            <a
+              href="https://github.com/sponsors/GSSoC24"
+              rel="noreferrer"
+              target="_blank"
+              className=" no-underline "
+            >
+              <button className="bg-[#df551a] flex justify-center items-center gap-5 p-5 border-2 w-auto hover:bg-[#e36b38] rounded-lg text-white text-lg font-medium py-2 px-4 text-center">
+              <SiGithubsponsors /> Sponsor Us
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
+
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
@@ -264,11 +284,11 @@ function Sponsorus() {
             </div>
 
             <h2 className="text-2xl font-semibold mb-4">Thank You!</h2>
-            <hr/>
+            <hr />
             <p className="text-lg mb-12 max-w-xl w-full">
               We truly appreciate your interest in sponsoring us! Our team will
               get in touch with you within the next 5 days.
-              <br/>
+              <br />
               In the meantime, feel free to explore our{" "}
               <strong>Sponsor Deck</strong> to learn more about the exciting
               opportunities we offer.
@@ -295,4 +315,4 @@ function Sponsorus() {
   );
 }
 
-export default Sponsorus;
+export default SponsorUs;
