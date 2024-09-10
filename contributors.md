@@ -91,10 +91,10 @@
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/sanjay-kv">
-            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+        <a href="https://github.com/shreyash3087">
+            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
             <br />
-            <sub><b>Sanjay Viswanathan</b></sub>
+            <sub><b>Shreyash</b></sub>
         </a>
     </td>
     <td align="center">
@@ -105,17 +105,17 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/sanjay-kv">
+            <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
+            <br />
+            <sub><b>Sanjay Viswanathan</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/kpriyanshu2003">
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/shreyash3087">
-            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
-            <br />
-            <sub><b>Shreyash</b></sub>
         </a>
     </td>
     <td align="center">
@@ -169,25 +169,18 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/monizb">
-            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
-            <br />
-            <sub><b>Monish Basaniwal</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/rebsfalcao15">
             <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
             <br />
             <sub><b>Rebecca Elisabeth Falcao</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
-        <a href="https://github.com/shobhitexe">
-            <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
+        <a href="https://github.com/monizb">
+            <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
-            <sub><b>Shobhit Gupta</b></sub>
+            <sub><b>Monish Basaniwal</b></sub>
         </a>
     </td>
     <td align="center">
@@ -198,17 +191,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Ayushmaanagarwal1211">
-            <img src="https://avatars.githubusercontent.com/u/118350936?v=4" width="100;" alt="Ayushmaanagarwal1211"/>
+        <a href="https://github.com/shobhitexe">
+            <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
             <br />
-            <sub><b>Ayushmaan Agarwal</b></sub>
+            <sub><b>Shobhit Gupta</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Meetjain1">
-            <img src="https://avatars.githubusercontent.com/u/133582566?v=4" width="100;" alt="Meetjain1"/>
+        <a href="https://github.com/Tanay-ErrorCode">
+            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
             <br />
-            <sub><b>Meet Jain</b></sub>
+            <sub><b>Tanay</b></sub>
         </a>
     </td>
     <td align="center">
@@ -217,13 +210,20 @@
             <br />
             <sub><b>Vyom Rana</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Meetjain1">
+            <img src="https://avatars.githubusercontent.com/u/133582566?v=4" width="100;" alt="Meetjain1"/>
+            <br />
+            <sub><b>Meet Jain</b></sub>
+        </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/Tanay-ErrorCode">
-            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
+        <a href="https://github.com/Ayushmaanagarwal1211">
+            <img src="https://avatars.githubusercontent.com/u/118350936?v=4" width="100;" alt="Ayushmaanagarwal1211"/>
             <br />
-            <sub><b>Tanay</b></sub>
+            <sub><b>Ayushmaan Agarwal</b></sub>
         </a>
     </td>
     <td align="center">
@@ -270,6 +270,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/suhanipaliwal">
+            <img src="https://avatars.githubusercontent.com/u/161575955?v=4" width="100;" alt="suhanipaliwal"/>
+            <br />
+            <sub><b>Suhani Singh Paliwal</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/SrinivasDevolper">
             <img src="https://avatars.githubusercontent.com/u/121508628?v=4" width="100;" alt="SrinivasDevolper"/>
             <br />
@@ -296,15 +303,15 @@
             <br />
             <sub><b>Riti Chandak</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/palakag29">
             <img src="https://avatars.githubusercontent.com/u/112793075?v=4" width="100;" alt="palakag29"/>
             <br />
             <sub><b>Palakag29</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/mhdamaan79">
             <img src="https://avatars.githubusercontent.com/u/118375524?v=4" width="100;" alt="mhdamaan79"/>
@@ -339,15 +346,15 @@
             <br />
             <sub><b>Heli Detroja</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/iamhvsharma">
             <img src="https://avatars.githubusercontent.com/u/123243221?v=4" width="100;" alt="iamhvsharma"/>
             <br />
             <sub><b>Harshvardhan Sharma </b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Harshit7492">
             <img src="https://avatars.githubusercontent.com/u/114082380?v=4" width="100;" alt="Harshit7492"/>
