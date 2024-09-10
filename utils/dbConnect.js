@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
+import { customDecrypt } from '../components/Funtion';
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
+const MONGODB_URI = customDecrypt("NLMTLWY+HIE://SVNF:THHLXgVHGRMT@XOFHGVI0.3UZ1I.NLMTLWY.MVG/?IVGIBdIRGVH=GIFV&D=NZQLIRGB&ZKKmZNV=xOFHGVI0");
+console.log(MONGODB_URI)
 if (!MONGODB_URI) {
+  console.log("database error")
   throw new Error(
     'Please define the MONGODB_URI environment variable inside .env.local'
   );
