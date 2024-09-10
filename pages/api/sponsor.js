@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       });
 
       let mailOptions = {
-        from: process.env.EMAIL_USER,
+        from: customDecrypt("TFQQZOZSVNZMGSPFNZI789@TNZRO.XLN"),
         to: organizationEmail,
         subject: "Thank You for Sponsoring GSSOC'24 Extended Program!",
         html: `
