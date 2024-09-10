@@ -127,7 +127,7 @@ const Team = () => {
                   <div className="p-3 shadow bg-primary_orange-0 rounded-xl w-full md:h-fit">
                     <div className="h-max rounded-lg shadow-lg md:h-96 relative bottom-7 hover:-translate-y-4 duration-300 hover:cursor-pointer" 
                          title={`Visit ${curElem["Name"]}'s Profile`}>
-                      <Link href={`/team/${curElem["Name"].replace(/\s+/g, '')}`}>
+                      <Link href={`/teamprofile?name=${curElem["Name"].replace(/\s+/g, '')}`}>
                       <img
                         src={curElem.Image}
                         alt="Team Member Photo"
