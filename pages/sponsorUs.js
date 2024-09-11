@@ -33,7 +33,7 @@ function SponsorUs() {
     setIsSubmitting(true);
     try {
       const response = await fetch(
-        "/api/sponsor/",
+        "https://gssoc-website-new-rho.vercel.app/api/sponsor/",
         {
           method: "POST",
           headers: {
