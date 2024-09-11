@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
   if (req.method === "POST") {
     try {
-      const sponsor = new Sponsor(req.body);
+      const sponsor = new Sponsor(JSON.parse(req.body));
       await sponsor.save();
 
       const { organizationEmail } = req.body;
