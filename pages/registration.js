@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import CountryStateSelect from "../components/CountryStateSelect";
@@ -13,7 +14,7 @@ const Registration = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [errors, setErrors] = useState({});
   const router = useRouter();
-  const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(true);
+  const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [isFocused, setIsFocused] = useState(false);
   const handleFocus = () => setIsFocused(true);
@@ -22,6 +23,66 @@ const Registration = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
+  useEffect(() => {
+    setSelectedTimer(caTimeLeft);
+  }, [1000]);
+  const [selectedTimer, setSelectedTimer] = useState({
+    hours: "00",
+    minutes: "00",
+  });
+  const [caTimeLeft, setCaTimeLeft] = useState({ hours: "00", minutes: "00" });
+  const [paTimeLeft, setPaTimeLeft] = useState({ hours: "00", minutes: "00" });
+  const [contributorTimeLeft, setContributorTimeLeft] = useState({
+    hours: "00",
+    minutes: "00",
+  });
+  const [mentorTimeLeft, setMentorTimeLeft] = useState({
+    hours: "00",
+    minutes: "00",
+  });
+  const [isTimeUp, setIsTimeUp] = useState(false);
+
+  const caTargetDate = new Date(2024, 8, 11, 18, 30, 0);
+  const paTargetDate = new Date(2024, 8, 15, 18, 30, 0);
+  const contributorTargetDate = new Date(2024, 8, 14, 18, 30, 0);
+  const mentorTargetDate = new Date(2024, 8, 15, 18, 30, 0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+
+      const calculateTimeLeft = (target) => {
+        const distance = target - now;
+        if (distance < 0) return { hours: "00", minutes: "00" };
+
+        const totalHours = String(
+          Math.floor(distance / (1000 * 60 * 60))
+        ).padStart(2, "0");
+        const minutes = String(
+          Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        ).padStart(2, "0");
+
+        return { hours: totalHours, minutes };
+      };
+      setCaTimeLeft(calculateTimeLeft(caTargetDate));
+      setPaTimeLeft(calculateTimeLeft(paTargetDate));
+      setContributorTimeLeft(calculateTimeLeft(contributorTargetDate));
+      setMentorTimeLeft(calculateTimeLeft(mentorTargetDate));
+      if (caTargetDate - now < 0 && !isTimeUp) {
+        setIsTimeUp(true);
+        setIsRegistrationsOpen(true);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [caTargetDate, paTargetDate, contributorTargetDate, mentorTargetDate]);
+
+  const isRoleTimerUp = {
+    CA: caTargetDate - new Date() < 0,
+    Contributor: contributorTargetDate - new Date() < 0,
+    Mentor: mentorTargetDate - new Date() < 0,
+    ProjectAdmin: paTargetDate - new Date() < 0,
+  };
+
   const handleNext = () => {
     if (!role) {
       setErrors((prevErrors) => ({
@@ -30,6 +91,27 @@ const Registration = () => {
       }));
       return;
     }
+
+    if (role !== "CA" && !isRoleTimerUp[role]) {
+      const timerState = {
+        CA: caTimeLeft,
+        Contributor: contributorTimeLeft,
+        Mentor: mentorTimeLeft,
+        ProjectAdmin: paTimeLeft,
+      }[role];
+
+      setCurrentStep(1);
+      setSelectedTimer(timerState);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        role: `Please wait until the ${role} timer hits 0. Time left: ${formatTimeLeft(
+          timerState
+        )}`,
+      }));
+      setIsNext(true);
+      return;
+    }
+    setIsNext(true);
     setCurrentStep(currentStep + 1);
     setErrors((prevErrors) => ({
       ...prevErrors,
@@ -37,12 +119,19 @@ const Registration = () => {
     }));
   };
 
+  const formatTimeLeft = (timeLeft) => {
+    const { hours, minutes } = timeLeft;
+    return `${hours} hours and ${minutes} minutes`;
+  };
+
   const handleBack = () => {
     setCurrentStep(currentStep - 1);
   };
+
   const handleRoleChange = (e) => {
     setRole(e.target.value);
     setFormData({});
+    setIsNext(false);
   };
 
   const handleCountryChange = (selectedCountry) => {
@@ -78,6 +167,7 @@ const Registration = () => {
       });
     }
   };
+
   const handlePhoneChange = (value, countryData) => {
     const formattedPhone = `+${countryData.dialCode} ${value.slice(
       countryData.dialCode.length
@@ -138,7 +228,10 @@ const Registration = () => {
     delete finalData.lastName;
 
     try {
-      const response = await axios.post("/api/registration", finalData);
+      const response = await axios.post(
+        "https://gssoc-website-new-lovat.vercel.app/api/registration",
+        finalData
+      );
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error registering. Please try again.");
@@ -147,10 +240,16 @@ const Registration = () => {
       setShowSuccess(true);
     }
   };
+
   const handleClosePopup = () => {
     setShowSuccess(false);
     window.location.href = "/";
   };
+  const [isNext, setIsNext] = useState(false);
+  const timerDigits = [
+    ...selectedTimer.hours.split(""),
+    ...selectedTimer.minutes.split(""),
+  ];
   const renderForm = () => {
     switch (currentStep) {
       case 1:
@@ -196,69 +295,96 @@ const Registration = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
-              <div className="relative">
-                <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl"></div>
-                <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl"></div>
+            {!isTimeUp && (
+              <div>
+                <h1 className="text-2xl font-semibold text-center mb-12">
+                Are You Excited? Countdown with Us
+                </h1>
+                <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
+                  {timerDigits.map((digit, index) => (
+                    <div
+                      className="flex justify-center items-center gap-4"
+                      key={index}
+                    >
+                      <div className="relative">
+                        <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                        <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
+                          <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
+                            {digit}
+                          </span>
+                        </div>
+                      </div>
+                      {index !== timerDigits.length - 1 && (
+                        <div className="flex flex-col gap-4">
+                          <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                          <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+            )}
+            {role !== "CA" && role !== "" && isNext && (
+              <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
+                {timerDigits.map((digit, index) => (
+                  <div
+                    className="flex justify-center items-center gap-4"
+                    key={index}
+                  >
+                    <div className="relative">
+                      <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                      <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
+                        <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
+                          {digit}
+                        </span>
+                      </div>
+                    </div>
+                    {index === timerDigits.length - 3 && (
+                      <div className="flex flex-col gap-4">
+                        <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                        <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-              <div className="relative">
-                <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl"></div>
-                <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl"></div>
+            )}
+            {isRegistrationsOpen && (
+              <div className="shadow-lg rounded-xl p-8 max-w-6xl border-[1px] border-black w-full z-40">
+                <h1 className="text-2xl font-semibold text-center mb-6">
+                  REGISTER
+                </h1>
+                <div className="mb-6">
+                  <label className="text-sm font-medium text-gray-700 flex gap-1 items-center my-2">
+                    CHOOSE YOUR PREFERRED ROLE{" "}
+                    <span className="text-xs text-red-500">(required)</span>
+                  </label>
+                  <select
+                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33]"
+                    onChange={handleRoleChange}
+                    value={role}
+                  >
+                    <option value="" disabled>
+                      Which role do you wish to apply for?
+                    </option>
+                    <option value="CA">CA (Campus Ambassador)</option>
+                    <option value="Contributor">Contributor</option>
+                    <option value="Mentor">Mentor</option>
+                    <option value="ProjectAdmin">Project Admin</option>
+                  </select>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <button
+                    className="bg-[#f57d33] text-white py-2 px-4 rounded-lg shadow hover:bg-[#F26611] w-40"
+                    onClick={handleNext}
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-              </div>
-              <div className="relative">
-                <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl"></div>
-                <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl"></div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-              </div>
-              <div className="relative">
-                <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl"></div>
-                <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl"></div>
-              </div>
-            </div>
-            <div className="shadow-lg rounded-xl p-8 max-w-6xl border-[1px] border-black w-full z-40">
-              <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER
-              </h1>
-              <div className="mb-6">
-                <label className="text-sm font-medium text-gray-700 flex gap-1 items-center my-2">
-                  CHOOSE YOUR PREFERRED ROLE{" "}
-                  <span className="text-xs text-red-500">(required)</span>
-                </label>
-                <select
-                  className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33]"
-                  onChange={handleRoleChange}
-                  value={role}
-                >
-                  <option value="" disabled>
-                    Which role do you wish to apply for?
-                  </option>
-                  <option value="CA">CA (Campus Ambassador)</option>
-                  {/* <option value="Contributor">Contributor</option>
-              <option value="Mentor">Mentor</option>
-              <option value="ProjectAdmin">Project Admin</option> */}
-                </select>
-              </div>
-              <div className="mt-6 flex justify-end">
-                <button
-                  className="bg-[#f57d33] text-white py-2 px-4 rounded-lg shadow hover:bg-[#F26611] w-40"
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-            <div className="flex w-full flex-wrap gap-24 max-sm:gap-4  justify-center z-40 max-lg:justify-center">
+            )}
+            <div className="flex w-full flex-wrap gap-24 max-sm:gap-4 my-10 justify-center z-40 max-lg:justify-center">
               <div className="flex justify-center items-center w-36">
                 <img src="/Sponsors/Vercel.png" alt="" />
               </div>
@@ -532,7 +658,9 @@ const Registration = () => {
               </h1>
 
               <div className="flex flex-col md:flex-row items-center">
-                <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 bg-gray-300 mb-6 md:mb-0"></div>
+                <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
+                  <img src="https://github.com/user-attachments/assets/451e5965-5142-4b13-bcfe-95ce77f7cd36" alt="Banner" />
+                </div>
 
                 <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10">
                   <h1 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6"></h1>
@@ -588,49 +716,38 @@ const Registration = () => {
         return null;
     }
   };
-  if (!isRegistrationsOpen) {
-    return (
-      <div className="min-h-screen bg-gray-100 p-10 flex items-center justify-center">
-        <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
-          <h1 className="text-2xl font-semibold text-center mb-6">
-            Coming Soon
-          </h1>
-          <p className="text-center text-gray-700">
-            Registrations are not open at the moment. Please check back later.
-          </p>
-        </div>
-      </div>
-    );
-  }
   return (
     <div className="min-h-screen p-10 bg-gray-100 relative flex flex-col gap-10 items-center justify-center">
       {renderForm()}
       {showSuccess && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                  <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
-                    <div className="h-40 overflow-hidden flex items-center justify-center">
-                      <img
-                        src="https://github.com/user-attachments/assets/c5a4d3b9-a507-499f-8909-e6b69abd9b8a"
-                        alt="Banner"
-                        width={400}
-                      />
-                    </div>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
+            <div className="h-40 overflow-hidden flex items-center justify-center">
+              <img
+                src="https://github.com/user-attachments/assets/c5a4d3b9-a507-499f-8909-e6b69abd9b8a"
+                alt="Banner"
+                width={400}
+              />
+            </div>
 
-                    <h2 className="text-2xl font-semibold mb-4">Submission Successful !!</h2>
-                    <p className="text-lg mb-12 max-w-xl w-full">
-                      Get ready to embark on a exciting open source journey with GSSoC&apos24 Extended Program.
-                      Our team will review your submission and get back to you soon.
-                    </p>
+            <h2 className="text-2xl font-semibold mb-4">
+              Submission Successful !!
+            </h2>
+            <p className="text-lg mb-12 max-w-xl w-full">
+              Get ready to embark on a exciting open source journey with
+              GSSoC&apos24 Extended Program. Our team will review your
+              submission and get back to you soon.
+            </p>
 
-                    <button
-                      onClick={handleClosePopup}
-                      className=" bg-[#F96727] hover:bg-[#e36b38] text-white py-2 px-6 rounded-lg"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              )}
+            <button
+              onClick={handleClosePopup}
+              className=" bg-[#F96727] hover:bg-[#e36b38] text-white py-2 px-6 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
