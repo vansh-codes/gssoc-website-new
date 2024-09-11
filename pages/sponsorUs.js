@@ -41,7 +41,7 @@ function SponsorUs() {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
           },
-          body: JSON.stringify(formData),
+          body: formData,
         }
       );
 
