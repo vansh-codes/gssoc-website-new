@@ -177,13 +177,20 @@ export default async function handler(req, res) {
       } catch (emailError) {
         console.error("Error sending email:", emailError);
       }
-
-      res.status(200).json({
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Access-Control-Allow-Methods", "GET,POST");
+      res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Content-Type, Authorization"
+      );
+      return res.status(200).json({
         message: "Sponsor data saved successfully. Email sending attempted.",
       });
     } catch (err) {
       console.error("Error saving sponsor data:", err);
-      res.status(500).json({ error: "Error saving sponsor data",message: err });
+      return res
+        .status(500)
+        .json({ error: "Error saving sponsor data", message: err });
     }
   } else {
     console.warn(`Method ${req.method} not allowed`);
