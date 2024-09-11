@@ -1,29 +1,28 @@
 import dbConnect from "../../utils/dbConnect";
 import Sponsor from "../../utils/models/sponsorSchema";
 import nodemailer from "nodemailer";
-import Cors from "cors";
 
-// Initialize the cors middleware
-const cors = Cors({
-  methods: ["GET", "POST"], // Allow GET, POST, and OPTIONS methods
-  origin: "*", // Allow requests from any origin
-});
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
 
-// Helper function to run middleware
-function runMiddleware(req, res, fn) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-      return resolve(result);
-    });
-  });
-}
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
 
-export default async function handler(req, res) {
-  await runMiddleware(req, res, cors);
+  return await fn(req, res);
+};
 
+const handler = async (req, res) => {
   await dbConnect();
 
   if (req.method === "POST") {
@@ -177,24 +176,19 @@ export default async function handler(req, res) {
       } catch (emailError) {
         console.error("Error sending email:", emailError);
       }
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Access-Control-Allow-Methods", "GET,POST");
-      res.setHeader(
-        "Access-Control-Allow-Headers",
-        "Content-Type, Authorization"
-      );
-      return res.status(200).json({
+
+      res.status(201).json({
         message: "Sponsor data saved successfully. Email sending attempted.",
       });
-    } catch (err) {
-      console.error("Error saving sponsor data:", err);
-      return res
-        .status(500)
-        .json({ error: "Error saving sponsor data", message: err });
+    } catch (dbError) {
+      console.error("Error saving sponsor data:", dbError);
+      res.status(500).json({ error: "Error saving sponsor data" });
     }
   } else {
     console.warn(`Method ${req.method} not allowed`);
     res.setHeader("Allow", ["POST"]);
-    res.status(500).json({ error: "cors error" });
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-}
+};
+
+export default allowCors(handler);
