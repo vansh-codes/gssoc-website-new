@@ -34,19 +34,19 @@ function SponsorUs() {
     setIsSubmitting(true);
     try {
       const response = await fetch(
-        "https://gssoc-website-new-rho.vercel.app/api/sponsor/",
+        "https://gssoc-website-new-lovat.vercel.app/api/sponsor",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: formData,
+          body: JSON.stringify(formData),
         }
       );
 
       console.log(response);
       setIsSubmitting(false);
-      if (response.status == 200) {
+      if (response.status == 200 || response.status ==  201) {
         setShowPopup(true);
         setFormData({
           organizationName: "",
@@ -54,8 +54,8 @@ function SponsorUs() {
           contactName: "",
           contactEmail: "",
           phoneNumber: "",
-          notes: "",
-        });
+          notes: "",
+        });
       } else {
         let _res = await response.json();
         console.log("error", _res);
