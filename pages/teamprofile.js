@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import memberData from "../../public/team_member_data/member_data.json";
+import memberData from "../public/team_member_data/member_data.json";
 import { useEffect } from "react";
 
 
 const TeamMember = () => {
     const router = useRouter();
-    const { team_member } = router.query;
-    const member = memberData.find((m) => m[team_member]);
+    const { name } = router.query;
+    const member = memberData.find((m) => m[name]);
 
-    const details = member ? member[team_member] : {};
+    const details = member ? member[name] : {};
     const githubUsername = details.GitHub
         ? details.GitHub.split("/").pop()
         : "";
@@ -51,7 +51,7 @@ const TeamMember = () => {
                 '{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}'
             );
             script.setAttribute("embed-version", "v1");
-            script.setAttribute("button-text", "Let's Connect");
+            script.setAttribute("button-text", "1:1 Mentorship");
             script.setAttribute("position-right", positionRight);
             script.setAttribute("position-bottom", positionBottom);
             script.setAttribute("custom-padding", "0px");
@@ -61,11 +61,11 @@ const TeamMember = () => {
 
             document.body.appendChild(script);
             return () => {
-                document.body.removeChild(script);
+                if(script)
+                    document.body.removeChild(script);
             };
         }
-    }, [details.TopmateService]);
-    // console.log(githubUsername);
+    }, [details.TopmateService, router.query]);
 
     if (!member) {
         return (

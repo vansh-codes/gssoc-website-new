@@ -69,6 +69,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/vansh-codes">
+            <img src="https://avatars.githubusercontent.com/u/114163734?v=4" width="100;" alt="vansh-codes"/>
+            <br />
+            <sub><b>Vansh Chaurasiya</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/GaganpreetKaurKalsi">
             <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
             <br />
@@ -81,27 +88,20 @@
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kartikmehta18">
             <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
             <br />
             <sub><b>Kartik Mehta</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/shreyash3087">
             <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
             <br />
             <sub><b>Shreyash</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/vansh-codes">
-            <img src="https://avatars.githubusercontent.com/u/114163734?v=4" width="100;" alt="vansh-codes"/>
-            <br />
-            <sub><b>Vansh Chaurasiya</b></sub>
         </a>
     </td>
     <td align="center">

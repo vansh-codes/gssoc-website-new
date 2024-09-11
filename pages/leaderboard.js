@@ -463,6 +463,11 @@ function Leaderboard() {
     setActivePage(pageNumber);
   };
 
+  const handleJumpToPage = (pageNumber) => {
+      setActivePage(pageNumber);
+  };
+  
+
   const handleItemsPerPageChange = (event) => {
     setItemsPerPage(Number(event.target.value));
     handlePageChange(0);
@@ -1195,22 +1200,42 @@ function Leaderboard() {
               )}
             </div>
             <div className="pagination-holder">
-              <Pagination
-                innerClass={
-                  theme === "dark" ? "dark-theme pagination" : "pagination"
-                }
-                itemClass="page-item"
-                linkClass="page-link"
-                activePage={activePage}
-                activeClass="active-page"
-                itemsCountPerPage={itemsPerPage}
-                totalItemsCount={searchData.length}
-                pageRangeDisplayed={width < 600 ? 3 : 5}
-                onChange={(e) => {
-                  // console.log(e);
-                  handlePageChange(e);
-                }}
-              />
+              <div className="flex sm:space-y-4 justify-between items-center w-full py-4">
+                {/* Left side for current range */}
+                <div className="text-gray-700 dark:text-gray-300 md:text-base md:text-left sm:text-sm">
+                  {`${(activePage - 1) * itemsPerPage + 1}-${Math.min(
+                    activePage * itemsPerPage,
+                    searchData.length
+                  )}/${searchData.length}`}
+                </div>
+
+                {/* Center for Page Numbers */}
+                <div className="flex justify-center w-full md:w-auto">
+                  <Pagination
+                    innerClass={theme === "dark" ? "dark-theme pagination" : "pagination"}
+                    itemClass="page-item"
+                    linkClass="page-link"
+                    activePage={activePage}
+                    activeClass="active-page"
+                    itemsCountPerPage={itemsPerPage}
+                    totalItemsCount={searchData.length}
+                    pageRangeDisplayed={width < 600 ? 3 : 5}
+                    onChange={handlePageChange}
+                  />
+                  </div>
+
+                {/* Right side for Jump to page */}
+                <div className="flex items-center justify-center w-full md:w-auto">
+                  <input
+                    type="number"
+                    placeholder="Jump to page"
+                    min="1"
+                    max={Math.ceil(searchData.length / itemsPerPage)}
+                    className="w-full sm:w-24 md:w-32 px-2 py-2 border rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white dark:outline-gray-800 dark:outline-text-white md:text-left"
+                    onChange={(e) => handleJumpToPage(() => Math.abs(e.target.value) || 1)}
+                  />
+                </div>
+              </div>
             </div>
             {theme === "dark" ? (
               <Modal
