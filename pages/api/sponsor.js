@@ -1,12 +1,12 @@
 import dbConnect from "../../utils/dbConnect";
 import Sponsor from "../../utils/models/sponsorSchema";
 import nodemailer from "nodemailer";
-import Cors from 'cors';
+import Cors from "cors";
 
 // Initialize the cors middleware
 const cors = Cors({
-  methods: ['GET', 'POST'], // Allow GET, POST, and OPTIONS methods
-  origin: '*', // Allow requests from any origin
+  methods: ["GET", "POST"], // Allow GET, POST, and OPTIONS methods
+  origin: "*", // Allow requests from any origin
 });
 
 // Helper function to run middleware
@@ -22,7 +22,6 @@ function runMiddleware(req, res, fn) {
 }
 
 export default async function handler(req, res) {
-
   await runMiddleware(req, res, cors);
 
   await dbConnect();
@@ -32,7 +31,7 @@ export default async function handler(req, res) {
       const sponsor = new Sponsor(JSON.parse(req.body));
       await sponsor.save();
 
-      const { organizationEmail } = req.body;
+      const { organizationEmail } = JSON.parse(req.body);
 
       let transporter = nodemailer.createTransport({
         service: "gmail",
@@ -179,18 +178,16 @@ export default async function handler(req, res) {
         console.error("Error sending email:", emailError);
       }
 
-      res
-        .status(201)
-        .json({
-          message: "Sponsor data saved successfully. Email sending attempted.",
-        });
-    } catch (dbError) {
-      console.error("Error saving sponsor data:", dbError);
-      res.status(500).json({ error: "Error saving sponsor data" });
+      res.status(201).json({
+        message: "Sponsor data saved successfully. Email sending attempted.",
+      });
+    } catch (err) {
+      console.error("Error saving sponsor data:", err);
+      res.status(500).json({ error: "Error saving sponsor data",message: err });
     }
   } else {
     console.warn(`Method ${req.method} not allowed`);
     res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    res.status(500).json({ error: "cors error" });
   }
 }
