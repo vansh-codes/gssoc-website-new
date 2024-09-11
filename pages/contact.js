@@ -28,7 +28,6 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(data);
       const result = await axios.post("/api/email/send-email", data);
       if (result.error) {
         console.error(result.error);

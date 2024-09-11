@@ -2,7 +2,27 @@ import dbConnect from "../../utils/dbConnect";
 import Sponsor from "../../utils/models/sponsorSchema";
 import nodemailer from "nodemailer";
 
-export default async function handler(req, res) {
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+
+  return await fn(req, res);
+};
+
+const handler = async (req, res) => {
   await dbConnect();
 
   if (req.method === "POST") {
@@ -23,6 +43,7 @@ export default async function handler(req, res) {
       let mailOptions = {
         from: process.env.EMAIL_USER,
         to: organizationEmail,
+        cc: "gssoc@girlscript.tech",
         subject: "Thank You for Sponsoring GSSOC'24 Extended Program!",
         html: `
 <body style="padding: 0; margin: 0; background-color: #f1f1f1; width: 100%; height: 100%;">
@@ -156,11 +177,9 @@ export default async function handler(req, res) {
         console.error("Error sending email:", emailError);
       }
 
-      res
-        .status(201)
-        .json({
-          message: "Sponsor data saved successfully. Email sending attempted.",
-        });
+      res.status(201).json({
+        message: "Sponsor data saved successfully. Email sending attempted.",
+      });
     } catch (dbError) {
       console.error("Error saving sponsor data:", dbError);
       res.status(500).json({ error: "Error saving sponsor data" });
@@ -170,4 +189,6 @@ export default async function handler(req, res) {
     res.setHeader("Allow", ["POST"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-}
+};
+
+export default allowCors(handler);
