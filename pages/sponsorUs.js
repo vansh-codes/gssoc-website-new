@@ -32,24 +32,22 @@ function SponsorUs() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://gssoc-website-new-rho.vercel.app/api/sponsor/", {
-        method: "POST",
-        mode:"no-cors",
-        headers: {
-          "Content-Type": "application/json",
-          'Access-Control-Allow-Origin': '*',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://gssoc-website-new-rho.vercel.app/api/sponsor/",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-      const contentType = response.headers.get("Content-Type");
-      if (!contentType || !contentType.includes("application/json")) {
-        throw new Error("Unexpected response type");
-      }
-
-      const result = await response.json();
+      console.log(response);
       setIsSubmitting(false);
-      if (response.ok) {
+      if (response.status == 200) {
         setShowPopup(true);
         setFormData({
           organizationName: "",
@@ -60,7 +58,8 @@ function SponsorUs() {
           notes: "",
         });
       } else {
-        console.error("Form submission error", result);
+        let _res = await response.json();
+        console.log("error", _res);
       }
     } catch (error) {
       console.error("Unexpected error", error);
@@ -266,7 +265,7 @@ function SponsorUs() {
               className=" no-underline "
             >
               <button className="bg-[#df551a] flex justify-center items-center gap-5 p-5 border-2 w-auto hover:bg-[#e36b38] rounded-lg text-white text-lg font-medium py-2 px-4 text-center">
-              <SiGithubsponsors /> Sponsor Us
+                <SiGithubsponsors /> Sponsor Us
               </button>
             </a>
           </div>

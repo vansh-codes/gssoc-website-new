@@ -178,7 +178,7 @@ export default async function handler(req, res) {
         console.error("Error sending email:", emailError);
       }
 
-      res.status(201).json({
+      res.status(200).json({
         message: "Sponsor data saved successfully. Email sending attempted.",
       });
     } catch (err) {
