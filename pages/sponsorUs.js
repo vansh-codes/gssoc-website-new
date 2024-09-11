@@ -32,7 +32,7 @@ function SponsorUs() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/sponsor", {
+      const response = await fetch("https://gssoc-website-new-rho.vercel.app/api/sponsor/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,6 @@ function SponsorUs() {
       const result = await response.json();
       setIsSubmitting(false);
       if (response.ok) {
-        console.log("Form submitted successfully", result);
         setShowPopup(true);
         setFormData({
           organizationName: "",

@@ -59,7 +59,6 @@ const Certi_Comp = (props) => {
         setOrganizingTeam(dataOT);
         setProjectAdmins(dataPA);
         setTop100(dataT100);
-        console.log(dataM)
       } catch (error) {
         console.log(error);
       }

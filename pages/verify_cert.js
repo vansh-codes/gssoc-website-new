@@ -19,7 +19,6 @@ const Cert = () => {
 
   const setVerifiedTrue = () => {
     setVerified(true);
-    console.log("verified");
   }
   // () => {
   //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"

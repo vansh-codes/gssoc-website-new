@@ -1,4 +1,3 @@
-import { customDecrypt } from "../../components/Funtion";
 import dbConnect from "../../utils/dbConnect";
 import Sponsor from "../../utils/models/sponsorSchema";
 import nodemailer from "nodemailer";
@@ -16,14 +15,15 @@ export default async function handler(req, res) {
       let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: customDecrypt("TFQQZOZSVNZMGSPFNZI789@TNZRO.XLN"),
-          pass: customDecrypt("NVTHBAGVJCTAMWSE"),
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_APP_PASS,
         },
       });
 
       let mailOptions = {
-        from: customDecrypt("TFQQZOZSVNZMGSPFNZI789@TNZRO.XLN"),
+        from: process.env.EMAIL_USER,
         to: organizationEmail,
+        cc: "gssoc@girlscript.tech",
         subject: "Thank You for Sponsoring GSSOC'24 Extended Program!",
         html: `
 <body style="padding: 0; margin: 0; background-color: #f1f1f1; width: 100%; height: 100%;">

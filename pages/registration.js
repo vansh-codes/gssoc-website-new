@@ -70,8 +70,6 @@ const Registration = () => {
     setIsSubmitting(true);
 
 
-    console.log("Form data before validation:", formData);
-
     let newErrors = {};
 
     if (!formData.gender) newErrors.gender = "Gender is required.";
@@ -107,12 +105,9 @@ const Registration = () => {
     };
 
 
-    console.log("Form data after validation and before submission:", finalData);
 
     try {
       const response = await axios.post("/api/registration", finalData);
-
-      console.log("Server response:", response);
 
       setShowSuccess(true);
       setTimeout(() => {
