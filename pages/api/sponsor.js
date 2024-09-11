@@ -1,8 +1,30 @@
 import dbConnect from "../../utils/dbConnect";
 import Sponsor from "../../utils/models/sponsorSchema";
 import nodemailer from "nodemailer";
+import Cors from 'cors';
+
+// Initialize the cors middleware
+const cors = Cors({
+  methods: ['GET', 'POST'], // Allow GET, POST, and OPTIONS methods
+  origin: '*', // Allow requests from any origin
+});
+
+// Helper function to run middleware
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+}
 
 export default async function handler(req, res) {
+
+  await runMiddleware(req, res, cors);
+
   await dbConnect();
 
   if (req.method === "POST") {

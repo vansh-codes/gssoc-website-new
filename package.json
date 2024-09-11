@@ -27,6 +27,7 @@
     "axios": "^0.27.2",
     "canvas": "^2.11.2",
     "classnames": "^2.5.1",
+    "cors": "^2.8.5",
     "country-state-city": "^3.2.1",
     "ethers": "^5.7.2",
     "file-saver": "^2.0.5",
