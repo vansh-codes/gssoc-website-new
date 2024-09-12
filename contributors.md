@@ -62,6 +62,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/shreyash3087">
+            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
+            <br />
+            <sub><b>Shreyash</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Anubhavdevv">
             <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
             <br />
@@ -81,27 +88,20 @@
             <br />
             <sub><b>Gaganpreet Kaur Kalsi</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
             <sub><b>Harsh Ghodkar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kartikmehta18">
             <img src="https://avatars.githubusercontent.com/u/125860170?v=4" width="100;" alt="kartikmehta18"/>
             <br />
             <sub><b>Kartik Mehta</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/shreyash3087">
-            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
-            <br />
-            <sub><b>Shreyash</b></sub>
         </a>
     </td>
     <td align="center">
