@@ -6,6 +6,7 @@ import CountryStateSelect from "../components/CountryStateSelect";
 import PropTypes from "prop-types";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Head from "next/head";
 
 const Registration = () => {
   const [role, setRole] = useState("");
@@ -315,8 +316,11 @@ const Registration = () => {
                   <span className="font-bold text-[#f57d33]">
                     Are you excited?
                   </span>{" "}
-                  The countdown to become a <span className="font-bold text-[#f57d33]">Campus Ambassador</span> with us has
-                  started!
+                  The countdown to become a{" "}
+                  <span className="font-bold text-[#f57d33]">
+                    Campus Ambassador
+                  </span>{" "}
+                  with us has started!
                 </h1>
                 <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
                   {timerDigits.map((digit, index) => (
@@ -366,8 +370,7 @@ const Registration = () => {
                         </span>
                       </div>
                     </div>
-                      {index % 2 !== 0 &&
-                          index !== timerDigits.length - 1 && (
+                    {index % 2 !== 0 && index !== timerDigits.length - 1 && (
                       <div className="flex flex-col gap-4">
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
@@ -747,38 +750,50 @@ const Registration = () => {
     }
   };
   return (
-    <div className="min-h-screen p-10 bg-gray-100 relative flex flex-col gap-10 items-center justify-center">
-      {renderForm()}
-      {showSuccess && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
-            <div className="h-40 overflow-hidden flex items-center justify-center">
-              <img
-                src="https://github.com/user-attachments/assets/c5a4d3b9-a507-499f-8909-e6b69abd9b8a"
-                alt="Banner"
-                width={400}
-              />
+    <>
+      <Head>
+        <title>
+          Register | GirlScript Summer of Code 2024 | GirlScript
+          Foundation India
+        </title>
+        <meta
+          name="description"
+          content="Register of GirlScript Summer of Code"
+        />
+      </Head>
+      <div className="min-h-screen p-10 bg-gray-100 relative flex flex-col gap-10 items-center justify-center">
+        {renderForm()}
+        {showSuccess && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center relative border-2 border-black border-dotted">
+              <div className="h-40 overflow-hidden flex items-center justify-center">
+                <img
+                  src="https://github.com/user-attachments/assets/c5a4d3b9-a507-499f-8909-e6b69abd9b8a"
+                  alt="Banner"
+                  width={400}
+                />
+              </div>
+
+              <h2 className="text-2xl font-semibold mb-4">
+                Submission Successful !!
+              </h2>
+              <p className="text-lg mb-12 max-w-xl w-full">
+                Get ready to embark on a exciting open source journey with
+                GSSoC&apos24 Extended Program. Our team will review your
+                submission and get back to you soon.
+              </p>
+
+              <button
+                onClick={handleClosePopup}
+                className=" bg-[#F96727] hover:bg-[#e36b38] text-white py-2 px-6 rounded-lg"
+              >
+                Close
+              </button>
             </div>
-
-            <h2 className="text-2xl font-semibold mb-4">
-              Submission Successful !!
-            </h2>
-            <p className="text-lg mb-12 max-w-xl w-full">
-              Get ready to embark on a exciting open source journey with
-              GSSoC&apos24 Extended Program. Our team will review your
-              submission and get back to you soon.
-            </p>
-
-            <button
-              onClick={handleClosePopup}
-              className=" bg-[#F96727] hover:bg-[#e36b38] text-white py-2 px-6 rounded-lg"
-            >
-              Close
-            </button>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 
