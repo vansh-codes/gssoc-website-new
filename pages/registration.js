@@ -117,7 +117,7 @@ const Registration = () => {
       setSelectedTimer(paTimeLeft);
     }
   }, [caTimeLeft]);
-  const caTargetDate = new Date(2024, 8, 13, 18, 0, 0);
+  const caTargetDate = new Date(2024, 8, 11, 18, 0, 0);
   const paTargetDate = new Date(2024, 8, 15, 18, 0, 0);
   const contributorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
   const mentorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
@@ -452,7 +452,7 @@ const Registration = () => {
                   </span>{" "}
                   Registrations for{" "}
                   <span className="font-bold text-[#f57d33]">{role}</span>{" "}
-                  haven't opened yet. Stay tuned, and check back soon for
+                  haven&apos;t opened yet. Stay tuned, and check back soon for
                   updates.
                 </h1>
                 <div>
@@ -573,7 +573,7 @@ const Registration = () => {
             </div>
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER FOR GSSOC' EXTD.
+                REGISTER FOR GSSOC&apos; EXTD.
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
