@@ -64,7 +64,7 @@ const Registration = () => {
 
       const calculateTimeLeft = (target) => {
         const distance = target - now;
-        if (distance < 0) return { hours: "00", minutes: "00" };
+          if (distance < 0) return { hours: "00", minutes: "00",seconds:"00" };
 
         const totalHours = String(
           Math.floor(distance / (1000 * 60 * 60))
