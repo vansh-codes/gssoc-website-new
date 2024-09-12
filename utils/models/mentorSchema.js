@@ -28,7 +28,7 @@ const mentorSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  referralCode: {
+  referral: {
     type: String,
     trim: true
   },
@@ -39,6 +39,7 @@ const mentorSchema = new mongoose.Schema({
   },
   linkedInProfileUrl: {
     type: String,
+    required: true,
     trim: true
   },
   discordUsername: {
@@ -48,12 +49,10 @@ const mentorSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    required: true,
     trim: true
   },
   state: {
     type: String,
-    required: true,
     trim: true
   },
   city: {
@@ -77,7 +76,17 @@ const mentorSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
-  }
+  },
+  resumeUpload: {
+    type: String,
+    trim: true
+  },
+  startupServices: {
+    type: String,
+    enum: ['', 'YES', 'NO'],
+    default: ''
+  },
+  
 }, { timestamps: true });
 
 const Mentor = mongoose.models.mentor || mongoose.model("mentor", mentorSchema);
