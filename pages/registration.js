@@ -23,9 +23,7 @@ const Registration = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
-  useEffect(() => {
-    setSelectedTimer(caTimeLeft);
-  }, [1000]);
+
   const [selectedTimer, setSelectedTimer] = useState({
     hours: "00",
     minutes: "00",
@@ -41,7 +39,9 @@ const Registration = () => {
     minutes: "00",
   });
   const [isTimeUp, setIsTimeUp] = useState(false);
-
+  useEffect(() => {
+    setSelectedTimer(caTimeLeft);
+  }, [caTimeLeft]);
   const caTargetDate = new Date(2024, 8, 13, 18, 30, 0);
   const paTargetDate = new Date(2024, 8, 15, 18, 30, 0);
   const contributorTargetDate = new Date(2024, 8, 14, 18, 30, 0);
@@ -314,7 +314,7 @@ const Registration = () => {
                           </span>
                         </div>
                       </div>
-                      {index !== timerDigits.length - 1 && (
+                          {index === timerDigits.length - 3 && (
                         <div className="flex flex-col gap-4">
                           <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
                           <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
