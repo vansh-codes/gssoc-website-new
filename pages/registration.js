@@ -370,7 +370,8 @@ const Registration = () => {
                         </span>
                       </div>
                     </div>
-                    {index === timerDigits.length - 3 && (
+                      {index % 2 !== 0 &&
+                          index !== timerDigits.length - 1 && (
                       <div className="flex flex-col gap-4">
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
