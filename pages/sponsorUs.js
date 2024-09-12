@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { SiGithubsponsors } from "react-icons/si";
+import Link from "next/link";
 
 function SponsorUs() {
   const [formData, setFormData] = useState({
@@ -105,6 +106,9 @@ function SponsorUs() {
           contribute, and grow in the field of open-source development. By
           sponsoring GSSoC, you help empower future tech innovators, promote
           diversity, and contribute to creating a more inclusive community.
+        </div>
+        <div className="text-xl my-8 text-center font-medium dark:text-white">
+          Visit <span className="text-primary_orange-0 hover:underline"><Link href="/whySponsorUs">WHY SPONSOR US?</Link></span> for more information
         </div>
         <div className="text-3xl my-8 text-center font-medium">
           OUR PREVIOUS SPONSORS
