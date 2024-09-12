@@ -101,7 +101,7 @@ export const Navbar = () => {
                 PROJECT
               </a>
             </Link>
-            <Link href="/sponsor_us">
+            <Link href="/sponsorUs">
               <a
                 onClick={handleClick}
                 className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
