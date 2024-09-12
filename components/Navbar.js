@@ -28,7 +28,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between transition-colors flex-wrap bg-white drop-shadow-xl p-1 dark:bg-black dark:text-white dark:transition-colors sticky top-0 z-10">
+      <nav className="flex items-center z-40 justify-between transition-colors flex-wrap bg-white drop-shadow-xl p-1 dark:bg-black dark:text-white dark:transition-colors sticky top-0">
         <div className="flex items-center p-1.5 ml-5">
           <Link href="/">
             <a className="inline-flex items-center">
@@ -101,7 +101,7 @@ export const Navbar = () => {
                 PROJECT
               </a>
             </Link>
-            <Link href="/sponsorUs">
+            <Link href="/sponsor_us">
               <a
                 onClick={handleClick}
                 className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
