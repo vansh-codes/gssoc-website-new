@@ -117,7 +117,7 @@ const Registration = () => {
       setSelectedTimer(paTimeLeft);
     }
   }, [caTimeLeft]);
-  const caTargetDate = new Date(2024, 8, 11, 18, 0, 0);
+  const caTargetDate = new Date(2024, 8, 13, 18, 0, 0);
   const paTargetDate = new Date(2024, 8, 15, 18, 0, 0);
   const contributorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
   const mentorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
