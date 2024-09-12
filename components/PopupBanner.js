@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const PopupBanner = ({ onClose }) => {
@@ -42,9 +43,9 @@ const PopupBanner = ({ onClose }) => {
   
   useEffect(() => {
     const targetDates = {
-      ca: new Date(2024, 8, 13, 17, 30, 0),
-      paandmentor: new Date(2024, 8, 14, 17, 30, 0),
-      contributor: new Date(2024, 8, 15, 17, 30, 0),
+      ca: new Date(2024, 8, 13, 18, 0, 0),
+      paandmentor: new Date(2024, 8, 14, 18, 0, 0),
+      contributor: new Date(2024, 8, 15, 18, 0, 0),
     };
   
     const interval = setInterval(() => {
@@ -83,6 +84,14 @@ const PopupBanner = ({ onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-white p-8 rounded-lg relative shadow-lg text-center animate-fadeIn">
+        <Image 
+          src="/favicon.ico" 
+          layout="fill" 
+          objectFit="cover" 
+          alt="GSSOC Logo" 
+          className="opacity-10 clip-sharp-rotated"
+          draggable="false"
+        />
         <button onClick={onClose} className="absolute top-2 right-6 text-gray-500 hover:text-gray-800 h-7 w-7 text-2xl">
           &times;
         </button>
