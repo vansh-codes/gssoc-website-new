@@ -152,7 +152,7 @@ const PopupBanner = ({ onClose }) => {
             <div className="flex justify-center items-center">
               <Link href="/registration">
                 <a className="bg-[#f57d33] text-white px-6 py-2 rounded-lg text-xl font-bold">
-                  Visit here
+                  Register here
                 </a>
               </Link>
             </div>
