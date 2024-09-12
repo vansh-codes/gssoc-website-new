@@ -42,9 +42,9 @@ const PopupBanner = ({ onClose }) => {
   
   useEffect(() => {
     const targetDates = {
-      ca: new Date(2024, 8, 12, 18, 30, 0),
-      paandmentor: new Date(2024, 8, 12, 9, 0, 0),
-      contributor: new Date(2024, 8, 12, 9, 0, 0),
+      ca: new Date(2024, 8, 13, 18, 30, 0),
+      paandmentor: new Date(2024, 8, 14, 18, 30, 0),
+      contributor: new Date(2024, 8, 15, 18, 30, 0),
     };
   
     const interval = setInterval(() => {
@@ -83,7 +83,7 @@ const PopupBanner = ({ onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-white p-8 rounded-lg relative shadow-lg text-center animate-fadeIn">
-        <button onClick={onClose} className="absolute top-2 right-4 text-gray-500 hover:text-gray-800 h-7 w-7 text-2xl">
+        <button onClick={onClose} className="absolute top-2 right-6 text-gray-500 hover:text-gray-800 h-7 w-7 text-2xl">
           &times;
         </button>
         <div>
@@ -99,7 +99,8 @@ const PopupBanner = ({ onClose }) => {
             </div>
           </h1>) : 
           (
-          <h1 className="text-2xl font-normal text-center max-[400px] mt-20 mb-16 w-full max-w-3xl m-auto">
+          <h1 className="text-2xl font-normal text-center max-[400px] mt-10 mb-16 w-full max-w-3xl m-auto">
+            <h1 className="text-4xl font-bold text-[#f57d33] mb-8">GSSoC'24 Extended is here!</h1>
             <span className="font-bold text-[#f57d33]">
               Are you excited?
             </span>{" "}
