@@ -54,10 +54,10 @@ const Registration = () => {
   useEffect(() => {
     setSelectedTimer(caTimeLeft);
   }, [caTimeLeft]);
-  const caTargetDate = new Date(2024, 8, 13, 18, 30, 0);
-  const paTargetDate = new Date(2024, 8, 15, 18, 30, 0);
-  const contributorTargetDate = new Date(2024, 8, 14, 18, 30, 0);
-  const mentorTargetDate = new Date(2024, 8, 15, 18, 30, 0);
+  const caTargetDate = new Date(2024, 8, 13, 17, 30, 0);
+  const paTargetDate = new Date(2024, 8, 15, 17, 30, 0);
+  const contributorTargetDate = new Date(2024, 8, 14, 17, 30, 0);
+  const mentorTargetDate = new Date(2024, 8, 15, 17, 30, 0);
 
   useEffect(() => {
     const interval = setInterval(() => {

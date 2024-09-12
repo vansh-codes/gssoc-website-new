@@ -42,9 +42,9 @@ const PopupBanner = ({ onClose }) => {
   
   useEffect(() => {
     const targetDates = {
-      ca: new Date(2024, 8, 13, 18, 30, 0),
-      paandmentor: new Date(2024, 8, 14, 18, 30, 0),
-      contributor: new Date(2024, 8, 15, 18, 30, 0),
+      ca: new Date(2024, 8, 13, 17, 30, 0),
+      paandmentor: new Date(2024, 8, 14, 17, 30, 0),
+      contributor: new Date(2024, 8, 15, 17, 30, 0),
     };
   
     const interval = setInterval(() => {
