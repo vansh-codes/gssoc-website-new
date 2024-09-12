@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { SiGithubsponsors } from "react-icons/si";
 import Link from "next/link";
 import Head from "next/head";
+import { Spinner } from "@chakra-ui/react";
 
 function SponsorUs() {
   const [formData, setFormData] = useState({
@@ -44,8 +45,6 @@ function SponsorUs() {
           body: JSON.stringify(formData),
         }
       );
-
-      console.log(response);
       setIsSubmitting(false);
       if (response.status == 200 || response.status == 201) {
         setShowPopup(true);
@@ -82,6 +81,24 @@ function SponsorUs() {
           content="Sponsor Us of GirlScript Summer of Code"
         />
       </Head>
+      {isSubmitting && (
+        <div className="loader-div">
+          <div className="overlay dark:bg-darkmode_gray-0"></div>
+          <div className="loader-group-container">
+            <div className="loader-group dark:bg-black">
+              <Spinner
+                className="loader"
+                thickness="6px"
+                speed="0.65s"
+                emptyColor="gray.200"
+                color="orange.500"
+                size="xl"
+              />
+              <span className="loading-msg dark:text-white">loading...</span>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="w-full h-full relative">
         <div className="w-full h-full absolute">
           <div className="relative h-full w-full">
