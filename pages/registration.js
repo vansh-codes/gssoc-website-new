@@ -27,30 +27,20 @@ const Registration = () => {
   const [selectedTimer, setSelectedTimer] = useState({
     hours: "00",
     minutes: "00",
-    seconds: "00",
   });
-  const [caTimeLeft, setCaTimeLeft] = useState({
-    hours: "00",
-    minutes: "00",
-    seconds: "00",
-  });
-  const [paTimeLeft, setPaTimeLeft] = useState({
-    hours: "00",
-    minutes: "00",
-    seconds: "00",
-  });
+  const [caTimeLeft, setCaTimeLeft] = useState({ hours: "00", minutes: "00" });
+  const [paTimeLeft, setPaTimeLeft] = useState({ hours: "00", minutes: "00" });
   const [contributorTimeLeft, setContributorTimeLeft] = useState({
     hours: "00",
     minutes: "00",
-    seconds: "00",
   });
   const [mentorTimeLeft, setMentorTimeLeft] = useState({
     hours: "00",
     minutes: "00",
-    seconds: "00",
   });
   const [isTimeUp, setIsTimeUp] = useState(false);
   useEffect(() => {
+    console.log(caTimeLeft);
     setSelectedTimer(caTimeLeft);
   }, [caTimeLeft]);
   const caTargetDate = new Date(2024, 8, 13, 18, 30, 0);
@@ -64,7 +54,7 @@ const Registration = () => {
 
       const calculateTimeLeft = (target) => {
         const distance = target - now;
-          if (distance < 0) return { hours: "00", minutes: "00",seconds:"00" };
+        if (distance < 0) return { hours: "00", minutes: "00" };
 
         const totalHours = String(
           Math.floor(distance / (1000 * 60 * 60))
@@ -72,10 +62,8 @@ const Registration = () => {
         const minutes = String(
           Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
         ).padStart(2, "0");
-        const seconds = String(
-          Math.floor((distance % (1000 * 60)) / 1000)
-        ).padStart(2, "0");
-        return { hours: totalHours, minutes, seconds };
+
+        return { hours: totalHours, minutes };
       };
       setCaTimeLeft(calculateTimeLeft(caTargetDate));
       setPaTimeLeft(calculateTimeLeft(paTargetDate));
@@ -262,7 +250,6 @@ const Registration = () => {
   const timerDigits = [
     ...selectedTimer.hours.split(""),
     ...selectedTimer.minutes.split(""),
-    ...selectedTimer.seconds.split(""),
   ];
   const renderForm = () => {
     switch (currentStep) {
@@ -315,43 +302,44 @@ const Registration = () => {
                   <span className="font-bold text-[#f57d33]">
                     Are you excited?
                   </span>{" "}
-                  The countdown to become a <span className="font-bold text-[#f57d33]">Campus Ambassador</span> with us has
-                  started!
+                  The countdown to become a{" "}
+                  <span className="font-bold text-[#f57d33]">
+                    Campus Ambassador
+                  </span>{" "}
+                  with us has started!
                 </h1>
-                <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
+                <div className="flex justify-center gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
                   {timerDigits.map((digit, index) => (
                     <div
                       className="flex flex-col justify-center items-center gap-4"
                       key={index}
                     >
-                      <div className="flex justify-center items-center gap-4">
+                      <div
+                        className="flex justify-center items-center gap-4"
+                        key={index}
+                      >
                         <div className="relative">
-                          <div className="bg-[#f57d33] w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
-                          <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] border-2 rounded-xl">
-                            <span className="text-black text-2xl max-sm:font-semibold font-bold flex justify-center items-center h-full">
+                          <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                          <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
+                            <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
                               {digit}
                             </span>
                           </div>
                         </div>
-                        {index % 2 !== 0 &&
-                          index !== timerDigits.length - 1 && (
-                            <div className="flex flex-col gap-4">
-                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
-                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
-                            </div>
-                          )}
-                      </div>
-                      <div className="text-center font-normal text-[#676767] text-2xl">
-                        {index === 0 || index === 1 ? (
-                          <span>H</span>
-                        ) : index === 2 || index === 3 ? (
-                          <span>M</span>
-                        ) : (
-                          <span>S</span>
+                        {index === timerDigits.length - 3 && (
+                          <div className="flex flex-col gap-4">
+                            <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                            <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                          </div>
                         )}
                       </div>
                     </div>
                   ))}
+                </div>
+                <div className="text-center flex justify-around items-center w-full mt-6 underline max-w-xl m-auto font-normal text-[#676767] text-2xl">
+                  <span>Hours</span>
+
+                  <span>Mins</span>
                 </div>
               </div>
             )}
@@ -370,8 +358,7 @@ const Registration = () => {
                         </span>
                       </div>
                     </div>
-                      {index % 2 !== 0 &&
-                          index !== timerDigits.length - 1 && (
+                    {index === timerDigits.length - 3 && (
                       <div className="flex flex-col gap-4">
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
                         <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
