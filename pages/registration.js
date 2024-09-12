@@ -42,7 +42,7 @@ const Registration = () => {
   });
   const [isTimeUp, setIsTimeUp] = useState(false);
 
-  const caTargetDate = new Date(2024, 8, 11, 18, 30, 0);
+  const caTargetDate = new Date(2024, 8, 13, 18, 30, 0);
   const paTargetDate = new Date(2024, 8, 15, 18, 30, 0);
   const contributorTargetDate = new Date(2024, 8, 14, 18, 30, 0);
   const mentorTargetDate = new Date(2024, 8, 15, 18, 30, 0);
