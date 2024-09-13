@@ -61,7 +61,6 @@ const caSchema = new mongoose.Schema({
   year: {
     type: String,
     enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
-    required: true
   },
   fieldOfStudy: {
     type: String,

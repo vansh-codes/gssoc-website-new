@@ -261,7 +261,6 @@ const Registration = () => {
     if (!formData.collegeOrOffice)
       newErrors.collegeOrOffice = "College/Office is required.";
     if (!formData.gender) newErrors.gender = "Gender is required.";
-    if (!formData.year) newErrors.year = "Year is required.";
     if (!formData.gitHubProfileUrl)
       newErrors.gitHubProfileUrl = "Github Profile is required.";
     if (!formData.discordUsername)
@@ -656,7 +655,7 @@ const Registration = () => {
                       handleChange={handleInputChange}
                       value={formData.year}
                       error={errors.year}
-                      required={true}
+                      required={false}
                     />
                     <InputField
                       label="Field of Study"
