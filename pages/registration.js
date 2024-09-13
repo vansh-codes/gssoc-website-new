@@ -506,7 +506,7 @@ const Registration = () => {
                     <span className="text-xs text-red-500">(required)</span>
                   </label>
                   <select
-                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33]"
+                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33] dark:text-white"
                     onChange={handleRoleChange}
                     value={role}
                   >
