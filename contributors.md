@@ -105,6 +105,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/MastanSayyad">
+            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
+            <br />
+            <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/sanjay-kv">
             <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
@@ -116,13 +123,6 @@
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/MastanSayyad">
-            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
-            <br />
-            <sub><b>Mastan Sayyad</b></sub>
         </a>
     </td>
     <td align="center">
