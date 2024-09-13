@@ -466,24 +466,26 @@ const Registration = () => {
                   <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
                     {timerDigits.map((digit, index) => (
                       <div
-                        className="flex justify-center items-center gap-4"
+                        className="flex flex-col justify-center items-center gap-4"
                         key={index}
                       >
-                        <div className="relative">
-                          <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
-                          <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
-                            <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
-                              {digit}
-                            </span>
-                          </div>
-                        </div>
-                        {index % 2 !== 0 &&
-                          index !== timerDigits.length - 1 && (
-                            <div className="flex flex-col gap-4">
-                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                        <div className="flex justify-center items-center gap-4">
+                          <div className="relative">
+                            <div className="bg-[#f57d33] w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                            <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] border-2 rounded-xl">
+                              <span className="text-black text-2xl max-sm:font-semibold font-bold flex justify-center items-center h-full">
+                                {digit}
+                              </span>
                             </div>
-                          )}
+                          </div>
+                          {index % 2 !== 0 &&
+                            index !== timerDigits.length - 1 && (
+                              <div className="flex flex-col gap-4">
+                                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
+                                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
+                              </div>
+                            )}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -584,7 +586,7 @@ const Registration = () => {
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
-                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-100">
+                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-100 dark:text-white">
                   <div className="flex max-lg:flex-wrap gap-4 items-center">
                     <InputField
                       label="First Name"
@@ -677,7 +679,7 @@ const Registration = () => {
                 </div>
                 <div className="max-w-5xl w-full">
                   <div className="my-2 font-medium">CONTACT DETAILS</div>
-                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100">
+                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100 dark:text-white">
                     <div className="flex max-lg:flex-wrap gap-4">
                       <div className="flex-grow">
                         <InputField
@@ -812,32 +814,20 @@ const Registration = () => {
               <div className="flex flex-col justify-center w-full md:flex-row items-center">
                 <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
                   {role === "CA" && (
-                    <img
-                      src="./register/caBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/caBanner.webp" alt="Banner" />
                   )}
                   {role === "Contributor" && (
-                    <img
-                      src="./register/contributorBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/contributorBanner.webp" alt="Banner" />
                   )}
                   {role === "ProjectAdmin" && (
-                    <img
-                      src="./register/paBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/paBanner.webp" alt="Banner" />
                   )}
                   {role === "Mentor" && (
-                    <img
-                      src="./register/mentorBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/mentorBanner.webp" alt="Banner" />
                   )}
                 </div>
 
-                <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10">
+                <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10 dark:text-white">
                   {role === "CA" && (
                     <>
                       <TextAreaField

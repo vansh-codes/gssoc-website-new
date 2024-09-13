@@ -119,20 +119,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/MastanSayyad">
+            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
+            <br />
+            <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/khAja13">
             <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
             <br />
             <sub><b>KhAja</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/HemantKr071">
             <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
             <sub><b>Hemant Kumar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/devXprite">
             <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
@@ -159,13 +166,6 @@
             <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
             <sub><b>AMAN MANWANI</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/MastanSayyad">
-            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
-            <br />
-            <sub><b>Mastan Sayyad</b></sub>
         </a>
     </td>
     <td align="center">
@@ -381,6 +381,13 @@
             <img src="https://avatars.githubusercontent.com/u/76677408?v=4" width="100;" alt="aswinikalyan30"/>
             <br />
             <sub><b>Aswini Kalyan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/AkshitGarg24">
+            <img src="https://avatars.githubusercontent.com/u/153659573?v=4" width="100;" alt="AkshitGarg24"/>
+            <br />
+            <sub><b>Akshit Garg</b></sub>
         </a>
     </td></tr>
 </table>
