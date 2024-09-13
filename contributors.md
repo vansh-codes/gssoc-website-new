@@ -62,6 +62,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/vansh-codes">
+            <img src="https://avatars.githubusercontent.com/u/114163734?v=4" width="100;" alt="vansh-codes"/>
+            <br />
+            <sub><b>Vansh Chaurasiya</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Princegupta101">
             <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
             <br />
@@ -73,13 +80,6 @@
             <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
             <br />
             <sub><b>Anubhav</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/vansh-codes">
-            <img src="https://avatars.githubusercontent.com/u/114163734?v=4" width="100;" alt="vansh-codes"/>
-            <br />
-            <sub><b>Vansh Chaurasiya</b></sub>
         </a>
     </td>
     <td align="center">
