@@ -586,7 +586,7 @@ const Registration = () => {
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
-                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-100 dark:text-white">
+                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-10">
                   <div className="flex max-lg:flex-wrap gap-4 items-center">
                     <InputField
                       label="First Name"
@@ -679,7 +679,7 @@ const Registration = () => {
                 </div>
                 <div className="max-w-5xl w-full">
                   <div className="my-2 font-medium">CONTACT DETAILS</div>
-                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100 dark:text-white">
+                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100">
                     <div className="flex max-lg:flex-wrap gap-4">
                       <div className="flex-grow">
                         <InputField
