@@ -16,13 +16,13 @@
             "Twitter": "https://twitter.com/13_Saanjh",
             "LinkedIn": "https://www.linkedin.com/in/mohitvaru/"
         },
-        "SuvraneelBhuin": {
-            "Name": "Suvraneel Bhuin",
-            "Designation": "GirlScript Summer of Code'23 Advisor",
-            "Image": "https://github.com/Suvraneel.png",
-            "GitHub": "https://github.com/Suvraneel",
-            "Twitter": "https://twitter.com/SuvraneelB",
-            "LinkedIn": "https://www.linkedin.com/in/suvraneel"
+        "SowmiyaVenkatesan": {
+            "Name": "Sowmiya Venkatesan",
+            "Designation": "WOB'24 Advisor",
+            "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Sowmiya.jpeg?raw=true",
+            "GitHub": "https://github.com/sowmiyeh",
+            "Twitter": "https://x.com/sowmiyeh",
+            "LinkedIn": "https://www.linkedin.com/in/sowmiyavenkatesan/"
         },
         "SanjayViswanathan": {
             "Name": "Sanjay Viswanathan",
@@ -277,7 +277,7 @@
             "Instagram": "https://www.instagram.com/adityabhaumik123?igsh=MXAxb2k2ZXlmZGVncg==",
             "Topmate": "https://topmate.io/aditya1",
             "TopmateService": "https://topmate.io/aditya1/1202127/pay",
-            "Skills": ["Github", "Management", "Problem Solving"],
+            "Skills": ["Github", "Management", "Problem Solving", "Conflict Resolution", "Documentation", "Critical Thinking", "Data Analytics", "Machine Learning"],
             "Languages": ["HTML5", "CSS3", "JavaScript", "MySQL", "Python"],
             "RecentActivity":"🏆Ranked #10 in GSSoC'24",
             "Sponsor": ""
@@ -311,20 +311,6 @@
             "Skills": ["Web Development", "Problem Solving", "Communication"],
             "Languages": ["Python", "C++", "Java", "HTML5", "CSS3", "JavaScript", "SQL", "MongoDB", "NodeJS"],
             "RecentActivity": "🏆Ranked #496 in GSSoC'24",
-            "Sponsor": ""
-        },
-        "NikitaTiwari": {
-            "Name": "Nikita Tiwari",
-            "Designation": "Content Writer",
-            "Image": "https://github.com/GSSoC24/.github/blob/main/assets/Nikita%20Tiwari.jpg?raw=true",
-            "Bio": "I'm a developer passionate about programming and enjoy tackling challenges in data structures, algorithms, and web development. I'm constantly working on enhancing my skills through coding and aptitude challenges.",
-            "University": "College Of Engineering Roorkee, Haridwar, Uttarakhand",
-            "Location": "Uttar Pradesh",
-            "GitHub": "https://github.com/nikki-05",
-            "LinkedIn": "https://www.linkedin.com/in/nikita-tewari-56999b249",
-            "Skills": ["Problem Solving", "Team Collaboration", "Adaptability"],
-            "Languages": ["Java", "HTML5", "CSS3", "JavaScript", "ReactJS", "NodeJS", "PowerBI"],
-            "RecentActivity": "🏆Ranked #159 in GSSoC'24",
             "Sponsor": ""
         },
         "AslamSayyad": {
