@@ -10,22 +10,27 @@ import Head from "next/head";
 
 const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
   const [file, setFile] = useState(null);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isUploaded, setIsUploaded] = useState(false);
 
   const handleChange = (event) => {
     const selectedFile = event.target.files[0];
+    console.log(selectedFile);
     if (selectedFile) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64Url = reader.result;
-        setFile(base64Url);
-        setError('');
-        setIsUploaded(true);
-        setuploadedFile(base64Url);
-        onChange(event); 
-      };
-      reader.readAsDataURL(selectedFile);
+      if (selectedFile.size > 1266126) {
+        setError("* File size should be less than 1 MB");
+      } else {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64Url = reader.result;
+          setFile(base64Url);
+          setError("");
+          setIsUploaded(true);
+          setuploadedFile(base64Url);
+          onChange(event);
+        };
+        reader.readAsDataURL(selectedFile);
+      }
     }
   };
 
@@ -35,7 +40,7 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
         htmlFor={name}
         className="bg-[#F86F26] px-4 rounded-lg py-2 cursor-pointer text-white font-semibold"
       >
-        {isUploaded ? 'Uploaded' : label}
+        {isUploaded ? "Uploaded" : label}
       </label>
       <input
         type="file"
@@ -44,7 +49,7 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
         onChange={handleChange}
         className="hidden"
       />
-      {error && <p className="error">{error}</p>}
+      {error && <p className="error text-red-600 mt-3">{error}</p>}
       {file && (
         <a
           href={file}
@@ -55,7 +60,7 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
           {preview ? (
             <embed src={file} type="application/pdf" width="600" height="400" />
           ) : (
-            'View File'
+            "View File"
           )}
         </a>
       )}
@@ -117,7 +122,7 @@ const Registration = () => {
       setSelectedTimer(paTimeLeft);
     }
   }, [caTimeLeft]);
-  const caTargetDate = new Date(2024, 8, 13, 18, 0, 0);
+  const caTargetDate = new Date(2024, 8, 11, 18, 0, 0);
   const paTargetDate = new Date(2024, 8, 15, 18, 0, 0);
   const contributorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
   const mentorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
@@ -321,7 +326,10 @@ const Registration = () => {
     delete finalData.lastName;
 
     try {
-      const response = await axios.post("https://gssoc-website-new-lovat.vercel.app/api/registration", finalData);
+      const response = await axios.post(
+        "https://gssoc-website-new-lovat.vercel.app/api/registration",
+        finalData
+      );
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error registering. Please try again.");
@@ -341,7 +349,7 @@ const Registration = () => {
     ...selectedTimer.minutes.split(""),
     ...selectedTimer.seconds.split(""),
   ];
-  const [uploadedFile,setuploadedFile] = useState("")
+  const [uploadedFile, setuploadedFile] = useState("");
   useEffect(() => {
     if (uploadedFile) {
       setFormData({
@@ -351,9 +359,9 @@ const Registration = () => {
     }
   }, [uploadedFile]);
   const handleFileChange = (e) => {
-    console.log("")
+    console.log("");
   };
-  
+
   const renderForm = () => {
     switch (currentStep) {
       case 1:
@@ -806,25 +814,25 @@ const Registration = () => {
                 <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
                   {role === "CA" && (
                     <img
-                      src="https://github.com/user-attachments/assets/451e5965-5142-4b13-bcfe-95ce77f7cd36"
+                      src="./register/caBanner.webp"
                       alt="Banner"
                     />
                   )}
                   {role === "Contributor" && (
                     <img
-                      src="https://github.com/user-attachments/assets/b5b1f992-aaeb-408c-a795-a81e9623c45f"
+                      src="./register/contributorBanner.webp"
                       alt="Banner"
                     />
                   )}
                   {role === "ProjectAdmin" && (
                     <img
-                      src="https://github.com/user-attachments/assets/39f7fd52-a14e-47ea-811b-8a3e3f3132ed"
+                      src="./register/paBanner.webp"
                       alt="Banner"
                     />
                   )}
                   {role === "Mentor" && (
                     <img
-                      src="https://github.com/user-attachments/assets/5f4cf256-1ce4-4712-a353-ba28cb25b2ed"
+                      src="./register/mentorBanner.webp"
                       alt="Banner"
                     />
                   )}
