@@ -48,12 +48,10 @@ const caSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    required: true,
     trim: true
   },
   state: {
     type: String,
-    required: true,
     trim: true
   },
   city: {
@@ -76,8 +74,17 @@ const caSchema = new mongoose.Schema({
   },
   reason: {
     type: String,
-    required: true,
+    required:true,
     trim: true
+  },
+  resumeUpload: {
+    type: String,
+    trim: true
+  },
+  startupServices: {
+    type: String,
+    enum: ['', 'YES', 'NO'],
+    default: ''
   },
 }, { timestamps: true });
 

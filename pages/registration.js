@@ -8,6 +8,61 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Head from "next/head";
 
+const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState('');
+  const [isUploaded, setIsUploaded] = useState(false);
+
+  const handleChange = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Url = reader.result;
+        setFile(base64Url);
+        setError('');
+        setIsUploaded(true);
+        setuploadedFile(base64Url);
+        onChange(event); 
+      };
+      reader.readAsDataURL(selectedFile);
+    }
+  };
+
+  return (
+    <div className="upload-field">
+      <label
+        htmlFor={name}
+        className="bg-[#F86F26] px-4 rounded-lg py-2 cursor-pointer text-white font-semibold"
+      >
+        {isUploaded ? 'Uploaded' : label}
+      </label>
+      <input
+        type="file"
+        id={name}
+        name={name}
+        onChange={handleChange}
+        className="hidden"
+      />
+      {error && <p className="error">{error}</p>}
+      {file && (
+        <a
+          href={file}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-4"
+        >
+          {preview ? (
+            <embed src={file} type="application/pdf" width="600" height="400" />
+          ) : (
+            'View File'
+          )}
+        </a>
+      )}
+    </div>
+  );
+};
+
 const Registration = () => {
   const [role, setRole] = useState("");
   const [formData, setFormData] = useState({});
@@ -52,20 +107,27 @@ const Registration = () => {
   });
   const [isTimeUp, setIsTimeUp] = useState(false);
   useEffect(() => {
-    setSelectedTimer(caTimeLeft);
+    if (role == "") {
+      setSelectedTimer(caTimeLeft);
+    } else if (role == "Contributor") {
+      setSelectedTimer(contributorTimeLeft);
+    } else if (role == "Mentor") {
+      setSelectedTimer(mentorTimeLeft);
+    } else if (role == "ProjectAdmin") {
+      setSelectedTimer(paTimeLeft);
+    }
   }, [caTimeLeft]);
-  const caTargetDate = new Date(2024, 8, 13, 17, 30, 0);
-  const paTargetDate = new Date(2024, 8, 15, 17, 30, 0);
-  const contributorTargetDate = new Date(2024, 8, 14, 17, 30, 0);
-  const mentorTargetDate = new Date(2024, 8, 15, 17, 30, 0);
-
+  const caTargetDate = new Date(2024, 8, 13, 18, 0, 0);
+  const paTargetDate = new Date(2024, 8, 15, 18, 0, 0);
+  const contributorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
+  const mentorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
 
       const calculateTimeLeft = (target) => {
         const distance = target - now;
-          if (distance < 0) return { hours: "00", minutes: "00",seconds:"00" };
+        if (distance < 0) return { hours: "00", minutes: "00", seconds: "00" };
 
         const totalHours = String(
           Math.floor(distance / (1000 * 60 * 60))
@@ -141,7 +203,6 @@ const Registration = () => {
   const handleBack = () => {
     setCurrentStep(currentStep - 1);
   };
-
   const handleRoleChange = (e) => {
     setRole(e.target.value);
     setFormData({});
@@ -181,7 +242,6 @@ const Registration = () => {
       });
     }
   };
-
   const handlePhoneChange = (value, countryData) => {
     const formattedPhone = `+${countryData.dialCode} ${value.slice(
       countryData.dialCode.length
@@ -202,12 +262,31 @@ const Registration = () => {
       newErrors.collegeOrOffice = "College/Office is required.";
     if (!formData.gender) newErrors.gender = "Gender is required.";
     if (!formData.year) newErrors.year = "Year is required.";
-    if (!formData.state) newErrors.state = "State is required.";
-    if (!formData.country) newErrors.country = "Country is required.";
     if (!formData.gitHubProfileUrl)
       newErrors.gitHubProfileUrl = "Github Profile is required.";
     if (!formData.discordUsername)
       newErrors.discordUsername = "Discord username is required.";
+    if (!formData.linkedInProfileUrl)
+      newErrors.linkedInProfileUrl = "Linkedin Profile is required.";
+    if (!formData.phoneNumber)
+      newErrors.phoneNumber = "phoneNumber is Required";
+    if (formData.phoneNumber == "+91")
+      newErrors.phoneNumber = "phoneNumber is Required";
+    if (role === "ProjectAdmin") {
+      if (!formData.projectName)
+        newErrors.projectName = "Project Name is Required";
+      if (!formData.techStacks) newErrors.techStacks = "Tech Stack is Required";
+      if (!formData.repositoryUrl)
+        newErrors.repositoryUrl = "Repository URL is Required";
+      if (!formData.projectDescription)
+        newErrors.projectDescription = "Project Description is Required";
+    }
+    if (role != "ProjectAdmin") {
+      if (!formData.reason) newErrors.reason = "Reason is Required";
+    }
+    if (role === "Mentor") {
+      if (!formData.techStacks) newErrors.techStacks = "Tech Stack is Required";
+    }
 
     if (!validateEmail(formData.email)) {
       newErrors.email = "Please enter a valid email address.";
@@ -242,10 +321,7 @@ const Registration = () => {
     delete finalData.lastName;
 
     try {
-      const response = await axios.post(
-        "https://gssoc-website-new-lovat.vercel.app/api/registration",
-        finalData
-      );
+      const response = await axios.post("https://gssoc-website-new-lovat.vercel.app/api/registration", finalData);
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error registering. Please try again.");
@@ -265,6 +341,19 @@ const Registration = () => {
     ...selectedTimer.minutes.split(""),
     ...selectedTimer.seconds.split(""),
   ];
+  const [uploadedFile,setuploadedFile] = useState("")
+  useEffect(() => {
+    if (uploadedFile) {
+      setFormData({
+        ...formData,
+        resumeUpload: uploadedFile,
+      });
+    }
+  }, [uploadedFile]);
+  const handleFileChange = (e) => {
+    console.log("")
+  };
+  
   const renderForm = () => {
     switch (currentStep) {
       case 1:
@@ -356,28 +445,47 @@ const Registration = () => {
               </div>
             )}
             {role !== "CA" && role !== "" && isNext && (
-              <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
-                {timerDigits.map((digit, index) => (
-                  <div
-                    className="flex justify-center items-center gap-4"
-                    key={index}
-                  >
-                    <div className="relative">
-                      <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
-                      <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
-                        <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
-                          {digit}
-                        </span>
+              <div>
+                <h1 className="text-2xl font-normal text-center mt-20 mb-16 w-full max-w-3xl mx-auto">
+                  <span className="font-bold text-[#f57d33]">
+                    Please Wait !
+                  </span>{" "}
+                  Registrations for{" "}
+                  <span className="font-bold text-[#f57d33]">{role}</span>{" "}
+                  haven&apos;t opened yet. Stay tuned, and check back soon for
+                  updates.
+                </h1>
+                <div>
+                  <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
+                    {timerDigits.map((digit, index) => (
+                      <div
+                        className="flex justify-center items-center gap-4"
+                        key={index}
+                      >
+                        <div className="relative">
+                          <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                          <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
+                            <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
+                              {digit}
+                            </span>
+                          </div>
+                        </div>
+                        {index % 2 !== 0 &&
+                          index !== timerDigits.length - 1 && (
+                            <div className="flex flex-col gap-4">
+                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                            </div>
+                          )}
                       </div>
-                    </div>
-                    {index % 2 !== 0 && index !== timerDigits.length - 1 && (
-                      <div className="flex flex-col gap-4">
-                        <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                        <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
-                      </div>
-                    )}
+                    ))}
                   </div>
-                ))}
+                  <div className="text-center flex justify-around items-center w-full mt-6 max-w-3xl m-auto font-normal text-[#676767] text-2xl">
+                    <span>Hours</span>
+                    <span>Mins</span>
+                    <span>Seconds</span>
+                  </div>
+                </div>
               </div>
             )}
             {isRegistrationsOpen && (
@@ -465,7 +573,7 @@ const Registration = () => {
             </div>
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER FOR GSSOC&apos24 EXTD.
+                REGISTER FOR GSSOC&apos; EXTD.
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
@@ -606,7 +714,9 @@ const Registration = () => {
                         />
 
                         {errors.phoneNumber && (
-                          <span className="error">{errors.phoneNumber}</span>
+                          <span className="mt-1 text-xs text-red-600">
+                            {errors.phoneNumber}
+                          </span>
                         )}
                       </div>
                     </div>
@@ -624,7 +734,6 @@ const Registration = () => {
                         value={formData.linkedInProfileUrl}
                         handleChange={handleInputChange}
                         error={errors.linkedInProfileUrl}
-                        required={true}
                       />
                       <InputField
                         label="Discord Username"
@@ -682,44 +791,292 @@ const Registration = () => {
               </div>
             </div>
 
-            <div className="min-h-screen p-6 md:p-10 bg-gray-100 flex flex-col items-center justify-center">
+            <div className="min-h-screen w-full p-6 md:p-10 bg-gray-100 flex flex-col items-center justify-center">
               <h1 className="text-2xl md:text-3xl font-medium text-center mb-8 md:mb-12 z-20">
-                BECOME A CAMPUS AMBASSADOR
+                {role === "CA"
+                  ? "BECOME A CAMPUS AMBASSADOR"
+                  : role === "Contributor"
+                  ? "BECOME A CONTRIBUTOR"
+                  : role === "ProjectAdmin"
+                  ? "BECOME A PROJECT ADMIN"
+                  : "BECOME A MENTOR"}
               </h1>
 
-              <div className="flex flex-col md:flex-row items-center">
+              <div className="flex flex-col justify-center w-full md:flex-row items-center">
                 <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
-                  <img
-                    src="https://github.com/user-attachments/assets/451e5965-5142-4b13-bcfe-95ce77f7cd36"
-                    alt="Banner"
-                  />
+                  {role === "CA" && (
+                    <img
+                      src="https://github.com/user-attachments/assets/451e5965-5142-4b13-bcfe-95ce77f7cd36"
+                      alt="Banner"
+                    />
+                  )}
+                  {role === "Contributor" && (
+                    <img
+                      src="https://github.com/user-attachments/assets/b5b1f992-aaeb-408c-a795-a81e9623c45f"
+                      alt="Banner"
+                    />
+                  )}
+                  {role === "ProjectAdmin" && (
+                    <img
+                      src="https://github.com/user-attachments/assets/39f7fd52-a14e-47ea-811b-8a3e3f3132ed"
+                      alt="Banner"
+                    />
+                  )}
+                  {role === "Mentor" && (
+                    <img
+                      src="https://github.com/user-attachments/assets/5f4cf256-1ce4-4712-a353-ba28cb25b2ed"
+                      alt="Banner"
+                    />
+                  )}
                 </div>
 
                 <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10">
-                  <h1 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6"></h1>
+                  {role === "CA" && (
+                    <>
+                      <TextAreaField
+                        label="WHY DO YOU WISH TO BECOME A CAMPUS AMBASSADOR?"
+                        name="reason"
+                        handleChange={handleInputChange}
+                        error={errors.reason}
+                      />
 
-                  <TextAreaField
-                    label="WHY DO YOU WISH TO BECOME A CAMPUS AMBASSADOR?"
-                    name="reason"
-                    handleChange={handleInputChange}
-                    error={errors.reason}
-                  />
+                      <TextAreaField
+                        label="DO YOU HAVE ANY PAST EXPERIENCE AS A CAMPUS AMBASSADOR? 
+                  SHARE YOUR EXPERIENCE BRIEFLY"
+                        name="partOfProgramBefore"
+                        handleChange={handleInputChange}
+                        error={errors.partOfProgramBefore}
+                        required={false}
+                      />
 
-                  <TextAreaField
-                    label="DO YOU HAVE ANY PAST EXPERIENCE AS A CAMPUS AMBASSADOR? 
-                      SHARE YOUR EXPERIENCE BRIEFLY"
-                    name="partOfProgramBefore"
-                    handleChange={handleInputChange}
-                    error={errors.partOfProgramBefore}
-                  />
+                      <InputField
+                        label="REFERRAL CODE (Optional)"
+                        name="referral"
+                        handleChange={handleInputChange}
+                        error={errors.referral}
+                        required={false}
+                      />
+                      <SelectField
+                        label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
+                        name="startupServices"
+                        options={["", "YES", "NO"]}
+                        handleChange={handleInputChange}
+                        error={errors.startupServices}
+                        required={false}
+                      />
+                      {formData.gender && formData.gender === "Female" && (
+                        <div className="mb-4">
+                          <div className="block text-sm font-semibold text-gray-800 mb-4">
+                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                          </div>
+                          <UploadField
+                            name="resume"
+                            label="Upload Resume"
+                            onChange={handleFileChange}
+                            preview={false}
+                            setuploadedFile={setuploadedFile}
+                          />
+                        </div>
+                      )}
+                    </>
+                  )}
 
-                  <InputField
-                    label="REFERRAL CODE (Optional)"
-                    name="referral"
-                    handleChange={handleInputChange}
-                    error={errors.referral}
-                    required={false}
-                  />
+                  {role === "Contributor" && (
+                    <>
+                      <TextAreaField
+                        label="WHY DO YOU WISH TO BECOME A CONTRIBUTOR?"
+                        name="reason"
+                        handleChange={handleInputChange}
+                        error={errors.reason}
+                      />
+                      <InputField
+                        label="DO YOU HAVE ANY PAST EXPERIENCE AS AN OPEN-SOURCE CONTRIBUTOR 
+SHARE YOUR EXPERIENCE BRIEFLY"
+                        name="partOfProgramBefore"
+                        handleChange={handleInputChange}
+                        error={errors.partOfProgramBefore}
+                        required={false}
+                      />
+                      <InputField
+                        label="REFERRAL CODE (Optional)"
+                        name="referral"
+                        handleChange={handleInputChange}
+                        error={errors.referral}
+                        required={false}
+                      />
+                      <SelectField
+                        label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
+                        name="startupServices"
+                        options={["", "YES", "NO"]}
+                        handleChange={handleInputChange}
+                        error={errors.startupServices}
+                        required={false}
+                      />
+                      {formData.gender && formData.gender === "Female" && (
+                        <div className="mb-4">
+                          <div className="block text-sm font-semibold text-gray-800 mb-4">
+                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                          </div>
+                          <UploadField
+                            name="resume"
+                            label="Upload Resume"
+                            onChange={handleFileChange}
+                            preview={false}
+                          />
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                  {role === "ProjectAdmin" && (
+                    <>
+                      <div className="flex gap-10">
+                        <InputField
+                          label="NAME OF THE PROJECT"
+                          name="projectName"
+                          handleChange={handleInputChange}
+                          error={errors.projectName}
+                          gap={"mb-2"}
+                          required={true}
+                        />
+                        <InputField
+                          label="TECHSTACK"
+                          name="techStacks"
+                          handleChange={handleInputChange}
+                          error={errors.techStacks}
+                          gap={"mb-2"}
+                          required={true}
+                        />
+                      </div>
+                      <div className="flex gap-10">
+                        <InputField
+                          label="NAME OF THE ORGANIZATION"
+                          name="organisationName"
+                          handleChange={handleInputChange}
+                          error={errors.organisationName}
+                          required={false}
+                          gap={"mb-2"}
+                        />
+                        <InputField
+                          label="REPOSITORY URL"
+                          name="repositoryUrl"
+                          handleChange={handleInputChange}
+                          error={errors.repositoryUrl}
+                          gap={"mb-2"}
+                          required={true}
+                        />
+                      </div>
+                      <InputField
+                        label="PROJECT DESCRIPTION"
+                        name="projectDescription"
+                        handleChange={handleInputChange}
+                        error={errors.projectDescription}
+                        gap={"mb-2"}
+                        required={true}
+                      />
+                      <InputField
+                        label="ORGANISATION DESCRIPTION"
+                        name="organistationDescription"
+                        handleChange={handleInputChange}
+                        error={errors.organistationDescription}
+                        required={false}
+                        gap={"mb-2"}
+                      />
+                      <InputField
+                        label="DEPLOYMENT LINK"
+                        name="deploymentLink"
+                        handleChange={handleInputChange}
+                        error={errors.deploymentLink}
+                        required={false}
+                        gap={"mb-2"}
+                      />
+                      <InputField
+                        label="EXPECTED NUMBER OF MENTORS REQUIRED"
+                        name="expectedMentors"
+                        handleChange={handleInputChange}
+                        error={errors.expectedMentors}
+                        required={false}
+                        gap={"mb-2"}
+                      />
+                      <InputField
+                        label="REFERRAL CODE"
+                        name="referral"
+                        handleChange={handleInputChange}
+                        error={errors.referral}
+                        required={false}
+                        gap={"mb-2"}
+                      />
+                      <SelectField
+                        label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
+                        name="startupServices"
+                        options={["", "YES", "NO"]}
+                        handleChange={handleInputChange}
+                        error={errors.startupServices}
+                        required={false}
+                      />
+                      {formData.gender && formData.gender === "Female" && (
+                        <div className="mb-4">
+                          <div className="block text-sm font-semibold text-gray-800 mb-4">
+                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                          </div>
+                          <UploadField
+                            name="resume"
+                            label="Upload Resume"
+                            onChange={handleFileChange}
+                            preview={false}
+                          />
+                        </div>
+                      )}
+                    </>
+                  )}
+                  {role === "Mentor" && (
+                    <>
+                      <TextAreaField
+                        label="BRIEFLY, EXPLAIN YOUR TECH-STACK, AND YOUR EXPERTISE."
+                        name="techStacks"
+                        handleChange={handleInputChange}
+                        error={errors.techStacks}
+                      />
+                      <InputField
+                        label="WHY DO YOU WISH TO BECOME A GSSOC MENTOR?"
+                        name="reason"
+                        handleChange={handleInputChange}
+                        error={errors.reason}
+                      />
+                      <InputField
+                        label="REFERRAL CODE (Optional)"
+                        name="referral"
+                        handleChange={handleInputChange}
+                        error={errors.referral}
+                        required={false}
+                      />
+                      <SelectField
+                        label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
+                        name="startupServices"
+                        options={["", "YES", "NO"]}
+                        handleChange={handleInputChange}
+                        error={errors.startupServices}
+                        required={false}
+                      />
+                      {formData.gender && formData.gender === "Female" && (
+                        <div className="mb-4">
+                          <div className="block text-sm font-semibold text-gray-800 mb-4">
+                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                          </div>
+                          <UploadField
+                            name="resume"
+                            label="Upload Resume"
+                            onChange={handleFileChange}
+                            preview={false}
+                          />
+                        </div>
+                      )}
+                    </>
+                  )}
 
                   <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-end">
                     <button
@@ -753,8 +1110,8 @@ const Registration = () => {
     <>
       <Head>
         <title>
-          Register | GirlScript Summer of Code 2024 | GirlScript
-          Foundation India
+          Register | GirlScript Summer of Code 2024 | GirlScript Foundation
+          India
         </title>
         <meta
           name="description"
@@ -806,8 +1163,9 @@ const InputField = ({
   error,
   value,
   required = true,
+  gap = "mb-6",
 }) => (
-  <div className="mb-6 w-full">
+  <div className={`${gap} w-full`}>
     <label
       htmlFor={name}
       className="block text-sm font-semibold text-gray-800 mb-2"
@@ -849,6 +1207,7 @@ InputField.propTypes = {
   handleChange: PropTypes.func,
   error: PropTypes.string,
 };
+
 const SelectField = ({
   label,
   name,
