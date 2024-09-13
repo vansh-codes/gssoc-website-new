@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Box, Skeleton, SkeletonCircle, Spacer, Avatar } from "@chakra-ui/react";
 import Head from "next/head";
 import { useTheme } from "next-themes";
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Confetti from 'react-confetti';
-import Image from 'next/image';
 
 const DynamicPagination = dynamic(() => import('react-js-pagination'), {
   ssr: false,
@@ -48,16 +46,11 @@ const CALeaderboard = () => {
         );
         const data = await response.json();
         const processedData = data.map(user => ({
-          Timestamp: user.Timestamp || '',
           Name: user.Name || 'N/A',
-          Referrals: 0,
-          'E-mail Id': user['E-mail Id'] || '',
-          LinkedIn: user.LinkedIn || '',
-          Twitter: user.Twitter || '',
-          GitHub: user.GitHub || '',
           Image: user.Image || '',
-          'Number of Workshops Conducted ': parseInt(user['Number of Workshops Conducted '] || '0'),
-          score: calculateScore(parseInt(user['Number of Workshops Conducted '] || '0'))
+          ReferralCode: user.ReferralCode || 'abc',
+          ReferralCount: parseInt(user.ReferralCount || '0'),
+          score: calculateScore(parseInt(user.ReferralCount || '0'))
         }));
         processedData.sort((a, b) => b.score - a.score);
         setUsers(processedData);
@@ -72,8 +65,8 @@ const CALeaderboard = () => {
     getUsers();
   }, [year]);
 
-  const calculateScore = (workshops) => {
-    return workshops * 10;
+  const calculateScore = (referralCount) => {
+    return referralCount * 10;
   };
 
   const handlePageChange = (pageNumber) => {
@@ -95,12 +88,10 @@ const CALeaderboard = () => {
 
   const columns = [
     { id: "position", label: "Rank", minWidth: 50 },
-    { id: "username", label: "Name", minWidth: 170 },
-    { id: "prnums", label: "Workshops Conducted", minWidth: 100 },
+    { id: "name", label: "Name", minWidth: 200 },
+    { id: "referralCode", label: "Referral Code", minWidth: 100 },
+    { id: "referralCount", label: "Referral Count", minWidth: 100 },
     { id: "score", label: "Score", minWidth: 100 },
-    { id: "referrals", label: "Referrals", minWidth: 100 },
-    { id: "socials", label: "Socials", minWidth: 100 },
-    
   ];
 
   const years = ["Extended", 2024, 2023]; 
@@ -116,38 +107,24 @@ const CALeaderboard = () => {
       </Head>
       {showConfetti && <Confetti width={windowWidth} height={windowHeight} />}
       <div className="items-center justify-center">
-        <div className="font-sans text-center text-2xl font-extrabold text-black-100">
+        <div className="font-sans text-center text-md font-extrabold text-black-100 mt-5">
+          <div className="flex justify-center mb-5">
+          {years.map((y) => (
+            <button
+              key={y}
+              className={`bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 mx-2 ${year === y ? 'ring-2 ring-white' : ''}`}
+              onClick={() => {setYear(y);router.push(`/ca_leaderboard?year=${y}`)}}
+            >
+              {y}
+            </button>
+          ))}
+        </div>
           <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
             <h1 className="text-primary_orange-0 mt-5">Top Campus Ambassadors&nbsp;</h1>
           </div>
         </div>
       </div>
       <Spacer mt={10} />
-      <div className="flex justify-center mb-5">
-        {years.map((y) => (
-          <button
-            key={y}
-            className={`bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 mx-2 ${year === y ? 'ring-2 ring-white' : ''}`}
-            onClick={() => {setYear(y);router.push(`/ca_leaderboard?year=${y}`)}}
-          >
-            {y}
-          </button>
-        ))}
-      </div>
-
-      {/* Top 3 Leaderboard */}
-      <div className="flex flex-nowrap overflow-x-auto justify-center items-center my-15 h-[300px] scrollbar-hide">
-        {searchData.slice(0, 3).map((user, index) => (
-          <div key={index} className={`flex-shrink-0 bg-white shadow-2xl dark:bg-black rounded-lg px-4 py-4 md:px-6 lg:py-6 relative mx-2 ${index === 0 ? 'md:order-2 md:transform md:scale-110' : index === 1 ? 'md:order-1' : 'md:order-3'}`}>
-            <div className="relative">
-              <img className={`w-20 md:w-28 ${index === 0 ? 'lg:w-36' : 'lg:w-28'} rounded-full mx-auto bg-white border-4 ${index === 0 ? 'border-yellow-400' : index === 1 ? 'border-gray-300' : 'border-orange-600'}`} src={user.Image} alt={user.Name} />
-              <div className={`absolute -top-2 -left-2 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${index === 0 ? 'bg-yellow-400' : index === 1 ? 'bg-gray-300' : 'bg-orange-600'}`}>{index + 1}</div>
-            </div>
-            <h3 className="text-black dark:text-primary_orange-0 font-bold mt-3 text-base sm:text-lg md:text-xl text-center">{user.Name}</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-center mt-1 text-sm">Score: {user.score}</p>
-          </div>
-        ))}
-      </div>
 
       <div className="flex mb-5">
         <div className="input-group relative flex flex-wrap items-stretch w-full">
@@ -212,50 +189,47 @@ const CALeaderboard = () => {
           </div>
           {!isLoading && (
             <div className="table-row-group">
-              {searchData.slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage).map((user, index) => (
+              {searchData.slice(0, 3).map((user, index) => (
                 <div className="table-row" key={index}>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
-                    {(activePage - 1) * itemsPerPage + index + 1}
+                    {index + 1}
                   </div>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
                     <div className="flex items-center">
-                      <Avatar src={user.Image} name={user.Name} size="sm" marginRight="2" />
-                      {user.LinkedIn ? (
-                        <a href={user.LinkedIn} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                          {user.Name}
-                        </a>
-                      ) : (
-                        user.Name
-                      )}
+                      <Avatar src={user.Image} name={user.Name} size="sm" />
+                      <span className="ml-2">{user.Name}</span>
                     </div>
                   </div>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
-                    {user["Number of Workshops Conducted "]}
+                    {user.ReferralCode}
+                  </div>
+                  <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
+                    {user.ReferralCount}
                   </div>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
                     {user.score}
                   </div>
+                </div>
+              ))}
+              {searchData.slice(3).slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage).map((user, index) => (
+                <div className="table-row" key={index + 3}>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
-                    {user.Referrals}
+                    {index + 4}
                   </div>
                   <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
-                    <div className="flex space-x-2">
-                      {user.Twitter && (
-                        <a href={user.Twitter} target="_blank" rel="noopener noreferrer">
-                          <FaTwitter className="text-blue-400" />
-                        </a>
-                      )}
-                      {user.LinkedIn && (
-                        <a href={user.LinkedIn} target="_blank" rel="noopener noreferrer">
-                          <FaLinkedin className="text-blue-700" />
-                        </a>
-                      )}
-                      {user.GitHub && (
-                        <a href={user.GitHub} target="_blank" rel="noopener noreferrer">
-                          <FaGithub className="text-black dark:text-white" />
-                        </a>
-                      )}
+                    <div className="flex items-center">
+                      <Avatar src={user.Image} name={user.Name} size="sm" />
+                      <span className="ml-2">{user.Name}</span>
                     </div>
+                  </div>
+                  <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
+                    {user.ReferralCode}
+                  </div>
+                  <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
+                    {user.ReferralCount}
+                  </div>
+                  <div className="table-cell px-4 py-2 bg-leaderboardbg-0 text-black dark:bg-black dark:text-white font-medium">
+                    {user.score}
                   </div>
                 </div>
               ))}
@@ -282,7 +256,7 @@ const CALeaderboard = () => {
             activePage={activePage}
             activeClass="active-page"
             itemsCountPerPage={itemsPerPage}
-            totalItemsCount={searchData.length}
+            totalItemsCount={searchData.length - 3}
             pageRangeDisplayed={windowWidth < 600 ? 3 : 5}
             onChange={handlePageChange}
           />
