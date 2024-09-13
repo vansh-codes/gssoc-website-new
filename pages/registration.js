@@ -932,6 +932,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                             label="Upload Resume"
                             onChange={handleFileChange}
                             preview={false}
+                            setuploadedFile={setuploadedFile}
                           />
                         </div>
                       )}
@@ -1035,6 +1036,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                             label="Upload Resume"
                             onChange={handleFileChange}
                             preview={false}
+                            setuploadedFile={setuploadedFile}
                           />
                         </div>
                       )}
@@ -1080,6 +1082,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                             label="Upload Resume"
                             onChange={handleFileChange}
                             preview={false}
+                            setuploadedFile={setuploadedFile}
                           />
                         </div>
                       )}
