@@ -134,6 +134,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/MastanSayyad">
+            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
+            <br />
+            <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/devXprite">
             <img src="https://avatars.githubusercontent.com/u/80192140?v=4" width="100;" alt="devXprite"/>
             <br />
@@ -159,13 +166,6 @@
             <img src="https://avatars.githubusercontent.com/u/104587833?v=4" width="100;" alt="Aman-Manwani"/>
             <br />
             <sub><b>AMAN MANWANI</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/MastanSayyad">
-            <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
-            <br />
-            <sub><b>Mastan Sayyad</b></sub>
         </a>
     </td>
     <td align="center">
