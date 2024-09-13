@@ -109,7 +109,7 @@ const PopupBanner = ({ onClose }) => {
           </h1>) : 
           (
           <h1 className="text-2xl font-normal text-center max-[400px] mt-10 mb-16 w-full max-w-3xl m-auto">
-            <h1 className="text-4xl font-bold text-[#f57d33] mb-8">GSSoC'24 Extended is here!</h1>
+            <h1 className="text-4xl font-bold text-[#f57d33] mb-8">GSSoC&apos;24 Extended is here!</h1>
             <span className="font-bold text-[#f57d33]">
               Are you excited?
             </span>{" "}

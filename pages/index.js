@@ -191,7 +191,7 @@ export default function Home() {
             </div>
             <p className="dark:text-white font-serif text-1xl text-black-100">
               The GirlScript Foundation is one of the leading foundations in
-              India. It has successfully completed Five Years of educating young
+              India. It has successfully completed Seven Years of educating young
               minds through robust initiatives. It aims to change lives by
               imparting tech education and relevant skills while fostering
               diversity. Apart from this, the Foundation is one of the world’s
@@ -601,7 +601,7 @@ export default function Home() {
           <Slider />
         </div>
 
-        <div className="be-part-of">
+        {/* <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
@@ -617,7 +617,6 @@ export default function Home() {
               className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4 md:justify-items-stretch"
               id="card-1"
             >
-              {/* Card-1 */}
               <Card
                 disabled
                 title="Start your Journey"
@@ -625,7 +624,6 @@ export default function Home() {
                 btntext="Apply as a Contributor"
                 link="https://swiy.co/contributors"
               />
-              {/* Card-2 */}
               <Card
                 disabled
                 title="Lead the Pack"
@@ -641,7 +639,6 @@ export default function Home() {
             className="container my-12 mx-auto "
           >
             <div className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4">
-              {/* Card-3 */}
               <Card
                 disabled
                 title="Inviting Projects &amp; NGOs"
@@ -649,7 +646,6 @@ export default function Home() {
                 btntext="Apply as an Organization/Project Admin"
                 link="https://bit.ly/GSSoC24-Projects"
               />
-              {/* Card-4 */}
               <Card
                 title="Add a Shade to GSSOC"
                 content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly, to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors. Sponsor us to add a bright shade to our program."
@@ -658,7 +654,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Schedule */}
