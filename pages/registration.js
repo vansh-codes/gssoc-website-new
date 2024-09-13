@@ -508,7 +508,7 @@ const Registration = () => {
                     <span className="text-xs text-red-500">(required)</span>
                   </label>
                   <select
-                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33] dark:text-white"
+                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33] dark:bg-white"
                     onChange={handleRoleChange}
                     value={role}
                   >
@@ -582,11 +582,11 @@ const Registration = () => {
             </div>
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER FOR GSSOC&apos; EXTD.
+                REGISTER FOR GSSOC&apos;2024 EXTD.
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
-                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-100 dark:text-white">
+                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-10">
                   <div className="flex max-lg:flex-wrap gap-4 items-center">
                     <InputField
                       label="First Name"
@@ -679,7 +679,7 @@ const Registration = () => {
                 </div>
                 <div className="max-w-5xl w-full">
                   <div className="my-2 font-medium">CONTACT DETAILS</div>
-                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100 dark:text-white">
+                  <div className="border-[1px] border-gray-400 rounded-lg p-8 w-full z-10 bg-gray-100">
                     <div className="flex max-lg:flex-wrap gap-4">
                       <div className="flex-grow">
                         <InputField
@@ -1181,7 +1181,7 @@ const InputField = ({
       name={name}
       value={value}
       placeholder={placeholder}
-      className={`block w-full py-2 px-3 border border-black rounded-md shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
+      className={`block w-full py-2 px-3 border border-black dark:bg-white rounded-md shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
         error
           ? "border-red-500 focus:border-red-500"
           : "focus:border-indigo-500"
@@ -1231,7 +1231,7 @@ const SelectField = ({
       id={name}
       name={name}
       value={value}
-      className={`block w-full py-2 px-3 border border-black rounded-md shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
+      className={`block w-full py-2 px-3 border dark:bg-white border-black rounded-md shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
         error
           ? "border-red-500 focus:border-red-500"
           : "focus:border-indigo-500"
