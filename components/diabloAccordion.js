@@ -5,13 +5,20 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useTheme } from "next-themes";
 import { FaQuestionCircle } from "react-icons/fa";
 
 const DiabloAccordion = ({ question, answer }) => {
-  const { theme } = useTheme();
-  const isDarkMode = theme === "dark";
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDarkMode = resolvedTheme === "dark";
+  if (!mounted) return null;
 
   return (
     <>
