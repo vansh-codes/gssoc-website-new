@@ -104,6 +104,23 @@ const MoreMenu = ({ handleClick }) => {
                 )}
               </Menu.Item>
             </Link>
+            <Link href={"/badgeId"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                    className={classNames(
+                      active
+                        ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                        : `hover:text-primary_orange-0 dark:text-white`,
+                      "block px-4 py-2 text-sm cursor-pointer"
+                    )}
+                    onClick={handleClick}
+                  >
+                    GET YOUR BADGE
+                  </a>
+                )}
+              </Menu.Item>
+            </Link>
             <Link href={"/whySponsorUs"}>
               <Menu.Item>
                 {({ active }) => (

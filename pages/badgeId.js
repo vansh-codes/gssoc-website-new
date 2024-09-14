@@ -62,7 +62,7 @@ const Badge = () => {
                 />
             </Head>
             <div className="items-center justify-center">
-                <div className="font-sans text-center text-2xl font-extrabold text-black-100">
+                <div className="mt-5 font-sans text-center text-2xl font-extrabold text-black-100">
                     <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
                         <h1>Get your&nbsp;</h1>
                         <h1 className="text-primary_orange-0">Badge</h1>

@@ -108,7 +108,7 @@ const PopupBanner = ({ onClose }) => {
             </div>
           </h1>) : 
           (
-          <h1 className="text-2xl font-normal text-center max-[400px] mt-10 mb-16 w-full max-w-3xl m-auto">
+          <div className="text-2xl font-normal text-center max-[400px] mt-10 mb-16 w-full max-w-3xl m-auto">
             <h1 className="text-4xl font-bold text-[#f57d33] mb-8">GSSoC&apos;24 Extended is here!</h1>
             <span className="font-bold text-[#f57d33]">
               Are you excited?
@@ -118,7 +118,7 @@ const PopupBanner = ({ onClose }) => {
               {currentEvent}
             </span>{" "}
             with us has started!
-          </h1>
+          </div>
           )}
           <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
             {timerDigits.map((digit, index) => (
