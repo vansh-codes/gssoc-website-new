@@ -79,7 +79,7 @@ const CALeaderboard = () => {
         setLoadingMsg("Waiting for response from server");
       }, 600);
       try {
-        const response = await fetch(`http://localhost:3001/CALeaderboard`);
+        const response = await fetch(`https://gssoc24-leaderboard-backend-production-dfe3.up.railway.app/CALeaderboard`);
         const data = await response.json();
         console.log(data.leaderboard);
         const processedData = data.leaderboard.map((user) => ({
@@ -218,7 +218,7 @@ const CALeaderboard = () => {
             <button
               className={`bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4 mx-2`}
             >
-              2024 EXTD.
+              2024 EXTD
             </button>
           </div>
           <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
