@@ -188,7 +188,7 @@ const BadgeID_Comp = (props) => {
                         >
                             GirlScript Summer of Code Extd is a 1-month long <br/>
                             Open-Source program by GirlScript Foundation. <br/>
-                            <span className="font-bold">1st Oct 2024 - 10th Nov 2024</span>
+                            <span className="font-bold">1st Oct 2024 - 30th Oct 2024</span>
                         </div>
                         <div
                             id="contrib_name"
