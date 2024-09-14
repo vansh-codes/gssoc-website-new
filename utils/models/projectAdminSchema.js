@@ -22,7 +22,7 @@ const projectAdminSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  referralCode: {
+  referral: {
     type: String,
     trim: true
   },
@@ -33,6 +33,7 @@ const projectAdminSchema = new mongoose.Schema({
   },
   linkedInProfileUrl: {
     type: String,
+    required: true,
     trim: true
   },
   discordUsername: {
@@ -40,9 +41,29 @@ const projectAdminSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  country: {
+  collegeOrOffice: {
     type: String,
     required: true,
+    trim: true
+  },
+  country: {
+    type: String,
+    trim: true
+  },
+  state: {
+    type: String,
+    trim: true
+  },
+  city: {
+    type: String,
+    trim: true
+  },
+  year: {
+    type: String,
+    enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
+  },
+  fieldOfStudy: {
+    type: String,
     trim: true
   },
   techStacks: {
@@ -56,18 +77,20 @@ const projectAdminSchema = new mongoose.Schema({
   },
   projectDescription: {
     type: String,
+    required: true,
     trim: true
   },
-  organizationName: {
+  organisationName: {
     type: String,
     trim: true
   },
-  organizationDescription: {
+  organisationDescription: {
     type: String,
     trim: true
   },
   repositoryUrl: {
     type: String,
+    required: true,
     trim: true
   },
   deploymentLink: {
@@ -77,7 +100,16 @@ const projectAdminSchema = new mongoose.Schema({
   expectedMentors: {
     type: Number,
     trim: true
-  }
+  },
+  resumeUpload: {
+    type: String,
+    trim: true
+  },
+  startupServices: {
+    type: String,
+    enum: ['', 'YES', 'NO'],
+    default: ''
+  },
 }, { timestamps: true });
 
 const ProjectAdmin = mongoose.models.projectAdmin || mongoose.model("projectAdmin", projectAdminSchema);

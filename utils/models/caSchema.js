@@ -28,7 +28,11 @@ const caSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  referralCode: {
+  referral: {
+    type: String,
+    trim: true
+  },
+  partOfProgramBefore: {
     type: String,
     trim: true
   },
@@ -44,12 +48,10 @@ const caSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    required: true,
     trim: true
   },
   state: {
     type: String,
-    required: true,
     trim: true
   },
   city: {
@@ -59,7 +61,6 @@ const caSchema = new mongoose.Schema({
   year: {
     type: String,
     enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
-    required: true
   },
   fieldOfStudy: {
     type: String,
@@ -72,12 +73,17 @@ const caSchema = new mongoose.Schema({
   },
   reason: {
     type: String,
-    required: true,
+    required:true,
     trim: true
   },
-  experience: {
-    type: String, 
+  resumeUpload: {
+    type: String,
     trim: true
+  },
+  startupServices: {
+    type: String,
+    enum: ['', 'YES', 'NO'],
+    default: ''
   },
 }, { timestamps: true });
 

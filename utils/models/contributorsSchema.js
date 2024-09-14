@@ -28,7 +28,7 @@ const contributorsSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  referralCode: {
+  referral: {
     type: String,
     trim: true
   },
@@ -39,6 +39,7 @@ const contributorsSchema = new mongoose.Schema({
   },
   linkedInProfileUrl: {
     type: String,
+    required: true,
     trim: true
   },
   discordUsername: {
@@ -48,12 +49,10 @@ const contributorsSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    required: true,
     trim: true
   },
   state: {
     type: String,
-    required: true,
     trim: true
   },
   city: {
@@ -63,7 +62,6 @@ const contributorsSchema = new mongoose.Schema({
   year: {
     type: String,
     enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
-    required: true
   },
   fieldOfStudy: {
     type: String,
@@ -75,13 +73,22 @@ const contributorsSchema = new mongoose.Schema({
   },
   reason: {
     type: String,
-    required: true,
+    required:true,
     trim: true
   },
   partOfProgramBefore: {
     type: String,
     trim: true
-  }
+  },
+  resumeUpload: {
+    type: String,
+    trim: true
+  },
+  startupServices: {
+    type: String,
+    enum: ['', 'YES', 'NO'],
+    default: ''
+  },
 }, { timestamps: true });
 
 const Contributors = mongoose.models.contributors || mongoose.model("contributors", contributorsSchema);

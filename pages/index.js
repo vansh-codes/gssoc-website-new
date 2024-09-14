@@ -33,7 +33,7 @@ export default function Home() {
     <div>
       <Head>
         <title>
-          GirlScript Summer of Code 2024 | GirlScript Foundation India
+          GirlScript Summer of Code 2024 Extd | GirlScript Foundation India
         </title>
         <meta name="GSSoC'24" content="GSSoC'24 is back!" />
         <link
@@ -95,18 +95,17 @@ export default function Home() {
         <div className="first-section mb-10 flex flex-col md:flex-row">
           <div className="basis-1/2 relative">
             <div className="text-black dark:text-white text-6xl font-sans font-semibold 2.25rem 3rem mb-10">
-              <span className="text-primary_orange-0">GSSoC </span>
-              2024
+            <span className="text-primary_orange-0">GSSoC </span>
+              2024 Extd
               <div className="mt-2">is here!</div>
             </div>
-
             <div className="font-serif font-medium text-2xl 1.5rem 2rem text-gray-800 dark:text-white">
-              GirlScript Summer of Code is a 3-month long
+              GirlScript Summer of Code Extd is a 1-month long
               <br />
               <span className="text-primary_orange-0">#OpenSource &nbsp;</span>
               program by GirlScript Foundation.
               <br />
-              <b> 10th May - 10th August 2024 </b>
+              <b> 1st Oct - 10th Nov 2024 </b>
             </div>
             {/* 
             <div className="ring mb-4 ring-primary_orange-0 text-white ring-offset-4 ring-offset-white dark:ring-offset-darkmode_gray-0 rounded-2xl w-full h-20 flex items-center justify-center drop-shadow-2xl">
@@ -192,7 +191,7 @@ export default function Home() {
             </div>
             <p className="dark:text-white font-serif text-1xl text-black-100">
               The GirlScript Foundation is one of the leading foundations in
-              India. It has successfully completed Five Years of educating young
+              India. It has successfully completed Seven Years of educating young
               minds through robust initiatives. It aims to change lives by
               imparting tech education and relevant skills while fostering
               diversity. Apart from this, the Foundation is one of the world’s
@@ -602,12 +601,12 @@ export default function Home() {
           <Slider />
         </div>
 
-        <div className="be-part-of">
+        {/* <div className="be-part-of">
           <p className="font-sans font-semibold text-center dark:text-white text-gray-800 text-4xl 2.25rem 3rem ">
             <span className="text-primary_orange-0 text-4xl 2.25rem 3rem">
               Be a part of{" "}
             </span>
-            GSSoC 2024
+            GSSoC 2024 Extd
           </p>
           <div
             data-aos="flip-left"
@@ -618,7 +617,6 @@ export default function Home() {
               className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4 md:justify-items-stretch"
               id="card-1"
             >
-              {/* Card-1 */}
               <Card
                 disabled
                 title="Start your Journey"
@@ -626,7 +624,6 @@ export default function Home() {
                 btntext="Apply as a Contributor"
                 link="https://swiy.co/contributors"
               />
-              {/* Card-2 */}
               <Card
                 disabled
                 title="Lead the Pack"
@@ -642,7 +639,6 @@ export default function Home() {
             className="container my-12 mx-auto "
           >
             <div className="flex flex-wrap justify-between md:justify-around -mx-1 lg:-mx-4">
-              {/* Card-3 */}
               <Card
                 disabled
                 title="Inviting Projects &amp; NGOs"
@@ -650,7 +646,6 @@ export default function Home() {
                 btntext="Apply as an Organization/Project Admin"
                 link="https://bit.ly/GSSoC24-Projects"
               />
-              {/* Card-4 */}
               <Card
                 title="Add a Shade to GSSOC"
                 content="Sponsors with their precious resources make it possible for GirlScript to conduct the entire event smoothly, to encourage talent by enabling us to give perks to our top participants. Hence as a token of gratitude, we provide great publicity on our social platforms and exposure on media about our sponsors. Sponsor us to add a bright shade to our program."
@@ -659,7 +654,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Schedule */}
@@ -667,7 +662,7 @@ export default function Home() {
         <div className="schedule__overview  relative">
           <p className="font-sans font-semibold text-3xl ml-5 mb-4 dark:text-white">
             <span className="text-primary_orange-0">Schedule</span> of GSSoC
-            2024!
+            2024 Extd!
           </p>
           {theme === "light" ? (
             <img id="Learn_more" src="/GSSoC_Schedule_Light_Mode-2024.png" />

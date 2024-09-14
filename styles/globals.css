@@ -302,12 +302,13 @@ html {
 
 .pagination {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+  justify-content: center;
+  /* margin-top: 10px; */
   width: fit-content;
   width: -moz-fit-content;
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
+  /* right: 0; */
+  margin-left: 25px;
   background-color: #f3f4f6;
   padding: 5px;
   border-radius: 100px;
@@ -349,6 +350,12 @@ html {
   align-self: center;
   justify-content: center;
   transition: all 0.5s ease-in-out 0s;
+}
+
+.clip-sharp-rotated {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 100% 0); /* Sharp right-angled triangle */
+  transform: rotate(45deg); /* Rotate to align with the right border */
+  transform-origin: top right; /* Anchor rotation to the top-right corner */
 }
 
 /* media queries for the date part of chrono */
@@ -841,4 +848,29 @@ html {
   background-image: linear-gradient(to right, #041a2a, #0f2f4f);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+  border: 3px solid #faf5f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkorange;
+}
+
+/* For Firefox browser */
+html {
+    scrollbar-color: orange #f0f0f0; /* Thumb color, track color */
+    scrollbar-width: thin; /* Thin scrollbar */
 }
