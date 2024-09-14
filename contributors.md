@@ -55,17 +55,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/shreyash3087">
-            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
-            <br />
-            <sub><b>Shreyash</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/vansh-codes">
             <img src="https://avatars.githubusercontent.com/u/114163734?v=4" width="100;" alt="vansh-codes"/>
             <br />
             <sub><b>Vansh Chaurasiya</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/shreyash3087">
+            <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
+            <br />
+            <sub><b>Shreyash</b></sub>
         </a>
     </td>
     <td align="center">
@@ -76,17 +76,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Anubhavdevv">
-            <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
-            <br />
-            <sub><b>Anubhav</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/MastanSayyad">
             <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
             <br />
             <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Anubhavdevv">
+            <img src="https://avatars.githubusercontent.com/u/72249059?v=4" width="100;" alt="Anubhavdevv"/>
+            <br />
+            <sub><b>Anubhav</b></sub>
         </a>
     </td></tr>
 <tr>
