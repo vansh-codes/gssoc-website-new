@@ -754,6 +754,7 @@ html.dark::-webkit-scrollbar-thumb:hover {
   /* box-shadow: 0 0 8px rgba(230, 126, 34, 0.7) !important;  */
 }
 
+
 html.dark::-webkit-scrollbar-thumb:active {
   background-color: #f06000 !important;
 }
