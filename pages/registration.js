@@ -329,12 +329,12 @@ const Registration = () => {
         "https://gssoc-website-new-lovat.vercel.app/api/registration",
         finalData
       );
+      setShowSuccess(true);
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error registering. Please try again.");
     } finally {
       setIsSubmitting(false);
-      setShowSuccess(true);
     }
   };
 
@@ -1001,11 +1001,12 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         gap={"mb-2"}
                       />
                       <InputField
-                        label="EXPECTED NUMBER OF MENTORS REQUIRED"
+                        label="EXPECTED NUMBER OF MENTORS"
                         name="expectedMentors"
                         handleChange={handleInputChange}
                         error={errors.expectedMentors}
-                        required={false}
+                        required={true}
+                        type="number"
                         gap={"mb-2"}
                       />
                       <InputField
