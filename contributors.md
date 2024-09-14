@@ -212,13 +212,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Vyomrana02">
+            <img src="https://avatars.githubusercontent.com/u/87069619?v=4" width="100;" alt="Vyomrana02"/>
+            <br />
+            <sub><b>Vyom Rana</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/Tanay-ErrorCode">
+            <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
+            <br />
+            <sub><b>Tanay</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/abhinav2712">
             <img src="https://avatars.githubusercontent.com/u/68495520?v=4" width="100;" alt="abhinav2712"/>
             <br />
             <sub><b>Abhinav Kumar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/sau-mili">
             <img src="https://avatars.githubusercontent.com/u/146661411?v=4" width="100;" alt="sau-mili"/>
@@ -246,7 +260,8 @@
             <br />
             <sub><b>Zaky</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/vinayak-vohra">
             <img src="https://avatars.githubusercontent.com/u/80148777?v=4" width="100;" alt="vinayak-vohra"/>
@@ -260,8 +275,7 @@
             <br />
             <sub><b>Suhani Singh Paliwal</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/SrinivasDevolper">
             <img src="https://avatars.githubusercontent.com/u/121508628?v=4" width="100;" alt="SrinivasDevolper"/>
@@ -289,7 +303,8 @@
             <br />
             <sub><b>Riti Chandak</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/palakag29">
             <img src="https://avatars.githubusercontent.com/u/112793075?v=4" width="100;" alt="palakag29"/>
@@ -303,8 +318,7 @@
             <br />
             <sub><b>Mohd Amaan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/singodiyashubham87">
             <img src="https://avatars.githubusercontent.com/u/93720428?v=4" width="100;" alt="singodiyashubham87"/>
@@ -332,7 +346,8 @@
             <br />
             <sub><b>Heli Detroja</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/iamhvsharma">
             <img src="https://avatars.githubusercontent.com/u/123243221?v=4" width="100;" alt="iamhvsharma"/>
@@ -346,8 +361,7 @@
             <br />
             <sub><b>Harshit Singh</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/thisisharsh7">
             <img src="https://avatars.githubusercontent.com/u/95894045?v=4" width="100;" alt="thisisharsh7"/>
