@@ -1147,7 +1147,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
               </h2>
               <p className="text-lg mb-12 max-w-xl w-full">
                 Get ready to embark on a exciting open source journey with
-                GSSoC&apos24 Extended Program. Our team will review your
+                GSSoC&apos;24 Extended Program. Our team will review your
                 submission and get back to you soon.
               </p>
 
