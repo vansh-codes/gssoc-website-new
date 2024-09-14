@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Spacer } from "@chakra-ui/react";
-import Confetti from "react-confetti";
 import html2canvas from "html2canvas";
+import axios from "axios";
 
 const BadgeID_Comp = (props) => {
-    const [showConfetti, setShowConfetti] = useState(false);
     const badgeWrapper = React.createRef();
     const [CampusAmbassadors, setCampusAmbassadors] = useState([]);
     const [Contributors, setContributors] = useState([]);
@@ -14,25 +13,18 @@ const BadgeID_Comp = (props) => {
     useEffect(() => {
         const getBadgeData = async () => {
             try {
-                const resCA = await fetch(
-                    `/badgesData/2024Extd/CampusAmbassadors.json`
-                );
-                const dataCA = await resCA.json();
-                const resC = await fetch(
-                    `/badgesData/2024Extd/Contributors.json`
-                );
-                const dataC = await resC.json();
-                const resM = await fetch(`/badgesData/2024Extd/Mentors.json`);
-                const dataM = await resM.json();
-                const resPA = await fetch(
-                    `/badgesData/2024Extd/ProjectAdmins.json`
-                );
-                const dataPA = await resPA.json();
+                const resCA = await axios.get(`https://opensheet.elk.sh/1v7G6EICAMtZtf1B4KuzJI_VNQE2YmKjNusu_wPPOw6g/1`);
+                const dataCA = await resCA.data;
+                const resC = await axios.get(`https://opensheet.elk.sh/1rCkCtw-DS8q2awBcFFM1KtAYen2HZD2hHg41v7ek2lA/1`);
+                const dataC = await resC.data;
+                const resM = await axios.get(`https://opensheet.elk.sh/1YK8yZQ43C9r8ucXs3m3hDzt6ksDwz89WHyaIt7U7RlE/1`)
+                const dataM = await resM.data;
+                const resPA = await axios.get(`https://opensheet.elk.sh/1DDCsq3V_nlLfscZf8fzwsotQm65YxJMMliUz7D-VCMQ/1`);
+                const dataPA = await resPA.data;
                 setCampusAmbassadors(dataCA);
                 setContributors(dataC);
                 setMentors(dataM);
                 setProjectAdmins(dataPA);
-                // console.log(dataM)
             } catch (error) {
                 console.log(error);
             }
@@ -50,9 +42,9 @@ const BadgeID_Comp = (props) => {
                     anchor.setAttribute("href", base64);
                     anchor.setAttribute(
                         "download",
-                        props.Name +
+                        props.Name.replace(/\s+/g, "_") +
                             "_Badge_" +
-                            props.Role +
+                            props.Role.replace(/\s+/g, "_") +
                             `_GSSoC2024-Extd.png`
                     );
                     anchor.click();
@@ -119,24 +111,22 @@ const BadgeID_Comp = (props) => {
 
         if (verified) {
             setVerifiedTrue();
-            console.log("Verification successful.");
             const ver_success =
                 "Verification successful.\n Badge Unlocked 🎊!!! \n Proceed to download your badge from below. \n\nHope you have a great time learning & contributing with us. All the best for your future endeavors.";
             alert(ver_success);
-
-            setShowConfetti(true);
-            setTimeout(function () {
-                setShowConfetti(false);
-            }, 8000);
         } else {
-            console.log("Never gonna give you up...");
             const ver_failed = `Verification failed.💀\nPlease recheck if you have entered the correct email (used to register in GSSoC'2024 Extended & selected the appropriate allocated role from the dropdown. \n\nIf you still feel something is wrong, feel free to make a ticket on the official server regarding the same.`;
             alert(ver_failed);
         }
     }
 
     const Switcher = () => {
-        Checker(props.Email);
+        if(props.Email && props.Name && props.Github && props.image){
+            Checker(props.Email);
+            return true;
+        }
+        alert("Please enter all the fields.");
+        return false;
     };
 
     return (
@@ -151,32 +141,72 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/Contributor.png)`,
                         }}
-                        className={`banner cert-contrib bg-no-repeat`}
+                        className={`badge-banner cert-contrib bg-no-repeat`}
                         ref={badgeWrapper}
                     >
-                      <div className="image-wrapper">
-                        {props.verified ? (
-                          <Image
-                          src={
-                            props.verified
-                            ? props.image
-                            : ""
-                          }
-                          alt={`${props.Role} Badge`}
-                          height={175}
-                          width={175}
-                          className="badge-img"
-                          draggable="false"
-                          />
-                        ) : <></>}
+                        <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/Signatures.png"
+                                alt="Signature"
+                                height={65}
+                                width={200}
+                                className={`${props.verified ? "signature" : "unverified-signature"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className={`${props.verified ? "QR-code-wrapper" : "unverified-QR-code-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/IDBadge_QR.png"
+                                alt="QR"
+                                height={100}
+                                width={100}
+                                className={`${props.verified ? "QR-code" : "unverified-QR-code"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className="image-wrapper">
+                            {props.verified ? (
+                                <Image
+                                    src={props.verified ? props.image : ""}
+                                    alt={`${props.Role} Badge`}
+                                    height={175}
+                                    width={175}
+                                    className="badge-img"
+                                    draggable="false"
+                                />
+                            ) : (
+                                <></>
+                            )}
+                        </div>
+                        <div
+                            id="content"
+                            className={`${
+                                props.verified
+                                    ? "badge-content"
+                                    : "unverified-badge-content"
+                            } text-white leading-3 text-center`}
+                        >
+                            GirlScript Summer of Code Extd is a 1-month long <br/>
+                            Open-Source program by GirlScript Foundation. <br/>
+                            <span className="font-bold">1st Oct 2024 - 10th Nov 2024</span>
                         </div>
                         <div
                             id="contrib_name"
-                            className="badge_name text-2xl text-white leading-5"
+                            className={`${
+                                props.verified
+                                    ? "badge-name"
+                                    : "unverified-badge-name"
+                            } text-2xl text-white leading-5 `}
                         >
                             {props.verified ? props.Name : "Your Name"}
                         </div>
-                        <h5 className="badge-github text-sm font-bold text-white">
+                        <h5
+                            className={`${
+                                props.verified
+                                    ? "badge-github"
+                                    : "unverified-badge-github"
+                            } text-sm font-bold text-white`}
+                        >
                             <span className="font-normal">
                                 {props.verified
                                     ? props.Github
@@ -189,20 +219,77 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/Mentor.png)`,
                         }}
-                        className={`banner cert-mentor bg-no-repeat`}
+                        className={`badge-banner cert-mentor bg-no-repeat`}
                         ref={badgeWrapper}
                     >
+                        <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/Signatures.png"
+                                alt="Signature"
+                                height={65}
+                                width={200}
+                                className={`${props.verified ? "signature" : "unverified-signature"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className={`${props.verified ? "QR-code-wrapper" : "unverified-QR-code-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/IDBadge_QR.png"
+                                alt="QR"
+                                height={100}
+                                width={100}
+                                className={`${props.verified ? "QR-code" : "unverified-QR-code"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className="image-wrapper">
+                            {props.verified ? (
+                                <Image
+                                    src={props.verified ? props.image : ""}
+                                    alt={`${props.Role} Badge`}
+                                    height={175}
+                                    width={175}
+                                    className="badge-img"
+                                    draggable="false"
+                                />
+                            ) : (
+                                <></>
+                            )}
+                        </div>
+                        <div
+                            id="content"
+                            className={`${
+                                props.verified
+                                    ? "badge-content"
+                                    : "unverified-badge-content"
+                            } text-white leading-3 text-center`}
+                        >
+                            GirlScript Summer of Code Extd is a 1-month long <br/>
+                            Open-Source program by GirlScript Foundation. <br/>
+                            <span className="font-bold">1st Oct 2024 - 10th Nov 2024</span>
+                        </div>
                         <div
                             id="contrib_name"
-                            className="badge_name text-big-orange"
+                            className={`${
+                                props.verified
+                                    ? "badge-name"
+                                    : "unverified-badge-name"
+                            } text-2xl text-white leading-5 `}
                         >
-                            {props.verified
-                                ? props.Name
-                                : "X".repeat(props.Name.length)}
+                            {props.verified ? props.Name : "Your Name"}
                         </div>
-                        <h5 className="issue_2024 text-sm  font-bold">
-                            ISSUED:{" "}
-                            <span className="font-normal">{"August 2024"}</span>
+                        <h5
+                            className={`${
+                                props.verified
+                                    ? "badge-github"
+                                    : "unverified-badge-github"
+                            } text-sm font-bold text-white`}
+                        >
+                            <span className="font-normal">
+                                {props.verified
+                                    ? props.Github
+                                    : "Github username"}
+                            </span>
                         </h5>
                     </div>
                 ) : props.Role === "Project Admin" ? (
@@ -210,20 +297,77 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/ProjectAdmin.png)`,
                         }}
-                        className={`banner cert-pa bg-no-repeat`}
+                        className={`badge-banner cert-pa bg-no-repeat`}
                         ref={badgeWrapper}
                     >
+                        <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/Signatures.png"
+                                alt="Signature"
+                                height={65}
+                                width={200}
+                                className={`${props.verified ? "signature" : "unverified-signature"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className={`${props.verified ? "QR-code-wrapper" : "unverified-QR-code-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/IDBadge_QR.png"
+                                alt="QR"
+                                height={100}
+                                width={100}
+                                className={`${props.verified ? "QR-code" : "unverified-QR-code"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className="image-wrapper">
+                            {props.verified ? (
+                                <Image
+                                    src={props.verified ? props.image : ""}
+                                    alt={`${props.Role} Badge`}
+                                    height={175}
+                                    width={175}
+                                    className="badge-img"
+                                    draggable="false"
+                                />
+                            ) : (
+                                <></>
+                            )}
+                        </div>
+                        <div
+                            id="content"
+                            className={`${
+                                props.verified
+                                    ? "badge-content"
+                                    : "unverified-badge-content"
+                            } text-white leading-3 text-center`}
+                        >
+                            GirlScript Summer of Code Extd is a 1-month long <br/>
+                            Open-Source program by GirlScript Foundation. <br/>
+                            <span className="font-bold">1st Oct 2024 - 10th Nov 2024</span>
+                        </div>
                         <div
                             id="contrib_name"
-                            className="badge_name text-big-orange"
+                            className={`${
+                                props.verified
+                                    ? "badge-name"
+                                    : "unverified-badge-name"
+                            } text-2xl text-white leading-5 `}
                         >
-                            {props.verified
-                                ? props.Name
-                                : "X".repeat(props.Name.length)}
+                            {props.verified ? props.Name : "Your Name"}
                         </div>
-                        <h5 className="issue_2024 text-sm  font-bold">
-                            ISSUED:{" "}
-                            <span className="font-normal">{"August 2024"}</span>
+                        <h5
+                            className={`${
+                                props.verified
+                                    ? "badge-github"
+                                    : "unverified-badge-github"
+                            } text-sm font-bold text-white`}
+                        >
+                            <span className="font-normal">
+                                {props.verified
+                                    ? props.Github
+                                    : "Github username"}
+                            </span>
                         </h5>
                     </div>
                 ) : props.Role === "Campus Ambassador" ? (
@@ -231,23 +375,77 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/CampusAmbassador.png)`,
                         }}
-                        className={`banner cert-ca bg-no-repeat`}
+                        className={`badge-banner cert-ca bg-no-repeat`}
                         ref={badgeWrapper}
                     >
+                        <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/Signatures.png"
+                                alt="Signature"
+                                height={65}
+                                width={200}
+                                className={`${props.verified ? "signature" : "unverified-signature"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className={`${props.verified ? "QR-code-wrapper" : "unverified-QR-code-wrapper"}`}>
+                            <Image
+                                src="/badges/2024Extd/IDBadge_QR.png"
+                                alt="QR"
+                                height={100}
+                                width={100}
+                                className={`${props.verified ? "QR-code" : "unverified-QR-code"}`}
+                                draggable="false"
+                            />
+                        </div>
+                        <div className="image-wrapper">
+                            {props.verified ? (
+                                <Image
+                                    src={props.verified ? props.image : ""}
+                                    alt={`${props.Role} Badge`}
+                                    height={175}
+                                    width={175}
+                                    className="badge-img"
+                                    draggable="false"
+                                />
+                            ) : (
+                                <></>
+                            )}
+                        </div>
+                        <div
+                            id="content"
+                            className={`${
+                                props.verified
+                                    ? "badge-content"
+                                    : "unverified-badge-content"
+                            } text-white leading-3 text-center`}
+                        >
+                            GirlScript Summer of Code Extd is a 1-month long <br/>
+                            Open-Source program by GirlScript Foundation. <br/>
+                            <span className="font-bold">1st Oct 2024 - 10th Nov 2024</span>
+                        </div>
                         <div
                             id="contrib_name"
-                            className="badge_name text-big-orange"
+                            className={`${
+                                props.verified
+                                    ? "badge-name"
+                                    : "unverified-badge-name"
+                            } text-2xl text-white leading-5 `}
                         >
-                            {props.verified
-                                ? props.Name
-                                : "X".repeat(props.Name.length)}
+                            {props.verified ? props.Name : "Your Name"}
                         </div>
-                        <h5 className="cert_id_2024 text-sm  font-bold">
-                            {/* ////Certificate ID: <span className="font-normal">{certificateId}</span> */}
-                        </h5>
-                        <h5 className="issue_2024 text-sm  font-bold">
-                            ISSUED:{" "}
-                            <span className="font-normal">{"August 2024"}</span>
+                        <h5
+                            className={`${
+                                props.verified
+                                    ? "badge-github"
+                                    : "unverified-badge-github"
+                            } text-sm font-bold text-white`}
+                        >
+                            <span className="font-normal">
+                                {props.verified
+                                    ? props.Github
+                                    : "Github username"}
+                            </span>
                         </h5>
                     </div>
                 ) : (
@@ -267,6 +465,7 @@ const BadgeID_Comp = (props) => {
                 }
                 onClick={Switcher}
                 disabled={props.verified}
+                title={props.Email && props.Name && props.Github && props.image ? null : "Please enter all values"}
             >
                 Verify
             </button>
@@ -283,7 +482,6 @@ const BadgeID_Comp = (props) => {
             >
                 Download Badge
             </button>
-            {showConfetti && <Confetti className="fullscreen" />}
         </>
     );
 };
