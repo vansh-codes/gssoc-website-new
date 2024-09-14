@@ -15,7 +15,7 @@ function Faq() {
         <meta name="description" content="FAQs of GirlScript Summer of Code" />
       </Head>
       <>
-      <div className="flex flex-row dark:text-white font-sans text-3xl md:text-5xl text-center font-extrabold flex-wrap justify-center items-center">
+      <div className="flex flex-row mt-4 dark:text-white font-sans text-3xl md:text-5xl text-center font-extrabold flex-wrap justify-center items-center">
        <h1 className=" underline">
        <span style={{ color:'#f97316' }}>Frequently Asked Questions</span>
         </h1>
@@ -23,7 +23,7 @@ function Faq() {
       </div>
 
 
-        <div className="flex flex-col w-full justify-center px-16 mt-20 mb-10">
+        <div className="flex flex-col w-full justify-center px-16 mt-16 mb-10">
           {data.map((curElem) => (
             <DiabloAccordion key={curElem.id} {...curElem} />
           ))}
