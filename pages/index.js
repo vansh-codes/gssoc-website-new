@@ -18,6 +18,7 @@ import Slider from "../components/homepage/Slider";
 import SocialFollow from "../components/homepage/SocialFollow";
 import ThemeChanger from "../components/Toggler";
 import Image from "../public/GSSoC_Schedule_Light_Mode.png";
+import Link from "next/link";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -112,10 +113,7 @@ export default function Home() {
               <h2 className="font-serif text-center font-medium text-2xl 1.5rem 2rem text-black dark:text-white"><b>GSSoC&apos;24 Job Fair</b> is coming soon!</h2>
             </div> */}
             <div className="flex items-center mt-2 mb-10 md:mb-52 lg:mb-56">
-              <a
-                className=""
-                href="/registration"
-              >
+              <Link href="/registration">
                 <button
                   id="CTA-button"
                   data-aos="fade-down"
@@ -123,8 +121,8 @@ export default function Home() {
                 >
                   Register Here
                 </button>
-              </a>
-              <a className="" href="#about-gssoc">
+              </Link>
+              <a href="#about-gssoc">
                 <button
                   id="CTA-button1"
                   data-aos="fade-down"
