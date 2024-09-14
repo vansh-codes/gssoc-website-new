@@ -123,9 +123,9 @@ const Registration = () => {
     }
   }, [caTimeLeft]);
   const caTargetDate = new Date(2024, 8, 13, 17, 30, 0);
-  const paTargetDate = new Date(2024, 8, 14, 18, 0, 0);
+  const paTargetDate = new Date(2024, 8, 13, 18, 0, 0);
   const contributorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
-  const mentorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
+  const mentorTargetDate = new Date(2024, 8, 13, 18, 0, 0);
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -466,26 +466,24 @@ const Registration = () => {
                   <div className="flex gap-6 max-sm:gap-3 max-sm:mt-20 items-center">
                     {timerDigits.map((digit, index) => (
                       <div
-                        className="flex flex-col justify-center items-center gap-4"
+                        className="flex justify-center items-center gap-4"
                         key={index}
                       >
-                        <div className="flex justify-center items-center gap-4">
-                          <div className="relative">
-                            <div className="bg-[#f57d33] w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
-                            <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-12 max-sm:h-12 max-[400px]:h-10 max-[400px]:w-10 border-[#f57d33] border-2 rounded-xl">
-                              <span className="text-black text-2xl max-sm:font-semibold font-bold flex justify-center items-center h-full">
-                                {digit}
-                              </span>
-                            </div>
+                        <div className="relative">
+                          <div className="bg-[#f57d33] w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] z-20 border-2 rounded-xl flex items-center justify-center"></div>
+                          <div className="bg-white absolute bottom-2 right-2 z-10 w-24 h-24 max-sm:w-16 max-sm:h-16 border-[#f57d33] border-2 rounded-xl">
+                            <span className="text-black text-2xl font-bold flex justify-center items-center h-full">
+                              {digit}
+                            </span>
                           </div>
-                          {index % 2 !== 0 &&
-                            index !== timerDigits.length - 1 && (
-                              <div className="flex flex-col gap-4">
-                                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
-                                <div className="bg-[#f57d33] w-4 h-4 max-sm:w-2 max-sm:h-2 rounded-full"></div>
-                              </div>
-                            )}
                         </div>
+                        {index % 2 !== 0 &&
+                          index !== timerDigits.length - 1 && (
+                            <div className="flex flex-col gap-4">
+                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                              <div className="bg-[#f57d33] w-4 h-4 max-sm:w-3 max-sm:h-3 rounded-full"></div>
+                            </div>
+                          )}
                       </div>
                     ))}
                   </div>
@@ -508,7 +506,7 @@ const Registration = () => {
                     <span className="text-xs text-red-500">(required)</span>
                   </label>
                   <select
-                    className="block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33] dark:bg-white"
+                    className="block w-full p-3 border bg-white border-gray-600 rounded-md shadow-sm focus:ring-[#f57d33] focus:border-[#f57d33]"
                     onChange={handleRoleChange}
                     value={role}
                   >
@@ -582,11 +580,11 @@ const Registration = () => {
             </div>
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
-                REGISTER FOR GSSOC&apos;2024 EXTD.
+                REGISTER FOR GSSOC&apos; EXTD.
               </h1>
               <div className="max-w-5xl w-full">
                 <div className="my-2 font-medium">PERSONAL DETAILS</div>
-                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-10">
+                <div className="border-[1px] border-gray-400 rounded-lg p-4 w-full bg-gray-100">
                   <div className="flex max-lg:flex-wrap gap-4 items-center">
                     <InputField
                       label="First Name"
@@ -814,20 +812,32 @@ const Registration = () => {
               <div className="flex flex-col justify-center w-full md:flex-row items-center">
                 <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
                   {role === "CA" && (
-                    <img src="./register/caBanner.webp" alt="Banner" />
+                    <img
+                      src="./register/caBanner.webp"
+                      alt="Banner"
+                    />
                   )}
                   {role === "Contributor" && (
-                    <img src="./register/contributorBanner.webp" alt="Banner" />
+                    <img
+                      src="./register/contributorBanner.webp"
+                      alt="Banner"
+                    />
                   )}
                   {role === "ProjectAdmin" && (
-                    <img src="./register/paBanner.webp" alt="Banner" />
+                    <img
+                      src="./register/paBanner.webp"
+                      alt="Banner"
+                    />
                   )}
                   {role === "Mentor" && (
-                    <img src="./register/mentorBanner.webp" alt="Banner" />
+                    <img
+                      src="./register/mentorBanner.webp"
+                      alt="Banner"
+                    />
                   )}
                 </div>
 
-                <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10 dark:text-white">
+                <div className="p-4 md:p-8 max-w-lg md:max-w-3xl w-full z-10">
                   {role === "CA" && (
                     <>
                       <TextAreaField
@@ -1282,7 +1292,7 @@ const TextAreaField = ({
       id={name}
       name={name}
       placeholder={placeholder}
-      className={`block w-full py-2 min-h-24 px-3 border border-black rounded-lg shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
+      className={`block w-full py-2 min-h-24 px-3 dark:bg-white border border-black rounded-lg shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
         error
           ? "border-red-500 focus:border-red-500"
           : "focus:border-indigo-500"
