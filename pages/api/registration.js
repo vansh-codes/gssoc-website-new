@@ -213,7 +213,7 @@ const handler = async (req, res) => {
 
     <div style="height: auto; text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
       <h1 style="font-size: 1.8em; color: #515151;">
-        Thank you for applying to be a Campus Ambassador for GSSoC '24 Extended!
+        Thank You for Applying to GSSoC '24 Extended!
       </h1>
     </div>
 
@@ -360,7 +360,7 @@ In the meantime, help spread the word by telling your friends, college peers, an
 
     <div style="height: auto; text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
       <h1 style="font-size: 1.8em; color: #515151;">
-        Thank you for applying to be a Campus Ambassador for GSSoC '24 Extended!
+       Thank You for Applying as a Mentor for GSSoC '24 Extended!
       </h1>
     </div>
 
@@ -507,7 +507,7 @@ In the meantime, we encourage you to let your friends, colleagues, and networks 
 
     <div style="height: auto; text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 10px;">
       <h1 style="font-size: 1.8em; color: #515151;">
-        Thank you for applying to be a Campus Ambassador for GSSoC '24 Extended!
+        Thank You for Applying as a Project Admin and Submitting Your Project for GSSoC '24 Extended!
       </h1>
     </div>
 
