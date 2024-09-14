@@ -123,9 +123,9 @@ const Registration = () => {
     }
   }, [caTimeLeft]);
   const caTargetDate = new Date(2024, 8, 13, 17, 30, 0);
-  const paTargetDate = new Date(2024, 8, 14, 18, 0, 0);
+  const paTargetDate = new Date(2024, 8, 14, 17, 30, 0);
   const contributorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
-  const mentorTargetDate = new Date(2024, 8, 14, 18, 0, 0);
+  const mentorTargetDate = new Date(2024, 8, 14, 17, 30, 0);
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
