@@ -76,11 +76,11 @@ export const Navbar = () => {
             active ? " " : "hidden"
           }   w-full xl:inline-flex xl:flex-grow xl:w-auto text-center`}
         >
-          <div className="flex flex-col xl:flex-row xl:ml-auto xl:w-auto items-center mr-6">
+          <div className="flex flex-col xl:flex-row xl:ml-auto xl:w-auto items-center mr-4">
             <Link href="/">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 ABOUT
               </a>
@@ -88,7 +88,7 @@ export const Navbar = () => {
             <Link href="/wob">
               <a
               onClick={handleClick}
-              className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+              className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 WOB
               </a>
@@ -96,7 +96,7 @@ export const Navbar = () => {
             <Link href="/project">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 PROJECT
               </a>
@@ -104,7 +104,7 @@ export const Navbar = () => {
             <Link href="/sponsorUs">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 SPONSOR US
               </a>
@@ -112,7 +112,7 @@ export const Navbar = () => {
             <Link href="/leaderboard">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 LEADERBOARD
               </a>
@@ -120,25 +120,25 @@ export const Navbar = () => {
             <Link href="/caLeaderboard">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 CA LEADERBOARD
               </a>
             </Link>
             <Link href="/jobfair">
-              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
+              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
                 JOB FAIR
               </a>
             </Link>
             <Link href="/faq">
-              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
+              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
                 FAQ
               </a>
             </Link>
             <Link href="/team">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 TEAM
               </a>
@@ -146,7 +146,7 @@ export const Navbar = () => {
             <Link href="/blog">
               <a
                 onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 BLOG
               </a>
@@ -154,7 +154,7 @@ export const Navbar = () => {
             <a
               onClick={handleClick}
               href="/contact"
-              className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
+              className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
             >
               CONTACT
             </a>
