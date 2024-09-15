@@ -79,7 +79,7 @@ const CALeaderboard = () => {
         setLoadingMsg("Waiting for response from server");
       }, 600);
       try {
-        const response = await fetch(`https://gssoc24-leaderboard-backend-production-dfe3.up.railway.app/CALeaderboard`);
+        const response = await fetch(``);
         const data = await response.json();
         console.log(data.leaderboard);
         const processedData = data.leaderboard.map((user) => ({
