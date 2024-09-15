@@ -352,12 +352,6 @@ html {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.clip-sharp-rotated {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 100% 0); /* Sharp right-angled triangle */
-  transform: rotate(45deg); /* Rotate to align with the right border */
-  transform-origin: top right; /* Anchor rotation to the top-right corner */
-}
-
 /* media queries for the date part of chrono */
 @media screen and (max-width: 600px) {
   .css-1blinku-TitleWrapper {
