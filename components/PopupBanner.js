@@ -101,7 +101,7 @@ const PopupBanner = ({ onClose }) => {
             Registrations are now open 🎉
             <div className="flex justify-center items-center mt-8">
               <Link href="/registration">
-                <a className="bg-[#f57d33] text-white px-6 py-2 rounded-lg text-xl font-bold">
+                <a className="bg-[#f57d33] z-10 text-white px-6 cursor-pointer py-2 rounded-lg text-xl font-bold">
                   Visit here
                 </a>
               </Link>
