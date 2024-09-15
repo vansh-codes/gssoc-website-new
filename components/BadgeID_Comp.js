@@ -133,15 +133,13 @@ const BadgeID_Comp = (props) => {
         <>
             <div
                 className="flex justify-center relative overflow-hidden"
-                id="cert"
             >
-                {/* <Image src="/cert.png" height="700" width="1000" alt="Certificate"/> */}
                 {props.Role === "Contributor" ? (
                     <div
                         style={{
                             backgroundImage: `url(/badges/2024Extd/Contributor.png)`,
                         }}
-                        className={`badge-banner cert-contrib bg-no-repeat`}
+                        className={`badge-banner max-[900px]:absolute badge-contrib bg-no-repeat`}
                         ref={badgeWrapper}
                     >
                         <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
@@ -219,7 +217,7 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/Mentor.png)`,
                         }}
-                        className={`badge-banner cert-mentor bg-no-repeat`}
+                        className={`badge-banner max-[900px]:absolute badge-mentor bg-no-repeat`}
                         ref={badgeWrapper}
                     >
                         <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
@@ -297,7 +295,7 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/ProjectAdmin.png)`,
                         }}
-                        className={`badge-banner cert-pa bg-no-repeat`}
+                        className={`badge-banner max-[900px]:absolute badge-pa bg-no-repeat`}
                         ref={badgeWrapper}
                     >
                         <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
@@ -375,7 +373,7 @@ const BadgeID_Comp = (props) => {
                         style={{
                             backgroundImage: `url(/badges/2024Extd/CampusAmbassador.png)`,
                         }}
-                        className={`badge-banner cert-ca bg-no-repeat`}
+                        className={`badge-banner max-[900px]:absolute badge-ca bg-no-repeat`}
                         ref={badgeWrapper}
                     >
                         <div className={`${props.verified ? "signature-wrapper" : "unverified-signature-wrapper"}`}>
@@ -453,7 +451,7 @@ const BadgeID_Comp = (props) => {
                 )}
             </div>
             <h6 id="no-mobile-alert" className="text-black dark:text-white">
-                * Please download the certificate on the desktop website
+                * Please download the badge certificate on the desktop website
             </h6>
             <Spacer mt={20} />
             <button

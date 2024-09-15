@@ -564,6 +564,27 @@ html {
 .cert-orgteam {
   background-size: contain;
 }
+.badge-contrib {
+  background-size: 680px;
+}
+.badge-topcontrib {
+  background-size: 680px;
+}
+.badge-mentor {
+  background-size: 680px;
+}
+.badge-pa {
+  background-size: 680px;
+}
+.badge-ca {
+  background-size: 680px;
+}
+.badge-speaker {
+  background-size: 680px;
+}
+.badge-orgteam {
+  background-size: 680px;
+}
 
 .contrib_name_2024 {
   position: absolute;
@@ -617,8 +638,6 @@ html {
 
 .badge-banner {
   display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 680px;
   height: 680px;
   position: relative;
