@@ -124,8 +124,17 @@ const Registration = () => {
   }, [caTimeLeft]);
   const caTargetDate = new Date(2024, 8, 13, 17, 30, 0);
   const paTargetDate = new Date(2024, 8, 14, 17, 30, 0);
-  const contributorTargetDate = new Date(2024, 8, 15, 18, 0, 0);
+  const contributorTargetDate = new Date(2024, 8, 15, 17, 30, 0);
   const mentorTargetDate = new Date(2024, 8, 14, 17, 30, 0);
+  useEffect(()=>{
+    if(router?.query?.referral){
+      setFormData({
+        ...formData,
+        "referral": router?.query?.referral,
+      });
+    }
+  },[router?.query])
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -172,7 +181,12 @@ const Registration = () => {
       }));
       return;
     }
-
+    if(router?.query?.referral){
+      setFormData({
+        ...formData,
+        "referral": router?.query?.referral,
+      });
+    }
     if (role !== "CA" && !isRoleTimerUp[role]) {
       const timerState = {
         CA: caTimeLeft,
@@ -862,6 +876,7 @@ const Registration = () => {
                         handleChange={handleInputChange}
                         error={errors.referral}
                         required={false}
+                        value={formData.referral||""}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -911,6 +926,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         handleChange={handleInputChange}
                         error={errors.referral}
                         required={false}
+                        value={formData.referral||""}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -1016,6 +1032,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.referral}
                         required={false}
                         gap={"mb-2"}
+                        value={formData.referral||""}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -1062,6 +1079,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         handleChange={handleInputChange}
                         error={errors.referral}
                         required={false}
+                        value={formData.referral||""}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
