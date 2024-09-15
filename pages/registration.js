@@ -126,14 +126,14 @@ const Registration = () => {
   const paTargetDate = new Date(2024, 8, 14, 17, 30, 0);
   const contributorTargetDate = new Date(2024, 8, 15, 17, 30, 0);
   const mentorTargetDate = new Date(2024, 8, 14, 17, 30, 0);
-  useEffect(()=>{
-    if(router?.query?.referral){
+  useEffect(() => {
+    if (router?.query?.referral) {
       setFormData({
         ...formData,
-        "referral": router?.query?.referral,
+        referral: router?.query?.referral,
       });
     }
-  },[router?.query])
+  }, [router?.query]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -181,10 +181,10 @@ const Registration = () => {
       }));
       return;
     }
-    if(router?.query?.referral){
+    if (router?.query?.referral) {
       setFormData({
         ...formData,
-        "referral": router?.query?.referral,
+        referral: router?.query?.referral,
       });
     }
     if (role !== "CA" && !isRoleTimerUp[role]) {
@@ -826,28 +826,16 @@ const Registration = () => {
               <div className="flex flex-col justify-center w-full md:flex-row items-center">
                 <div className="w-72 h-72 md:w-96 md:h-[450px] z-30 my-12">
                   {role === "CA" && (
-                    <img
-                      src="./register/caBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/caBanner.webp" alt="Banner" />
                   )}
                   {role === "Contributor" && (
-                    <img
-                      src="./register/contributorBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/contributorBanner.webp" alt="Banner" />
                   )}
                   {role === "ProjectAdmin" && (
-                    <img
-                      src="./register/paBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/paBanner.webp" alt="Banner" />
                   )}
                   {role === "Mentor" && (
-                    <img
-                      src="./register/mentorBanner.webp"
-                      alt="Banner"
-                    />
+                    <img src="./register/mentorBanner.webp" alt="Banner" />
                   )}
                 </div>
 
@@ -873,10 +861,11 @@ const Registration = () => {
                       <InputField
                         label="REFERRAL CODE (Optional)"
                         name="referral"
-                        handleChange={handleInputChange}
+                        handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
                         required={false}
-                        value={formData.referral||""}
+                        value={formData.referral || ""}
+                        readonly={router?.query?.referral ? true : false}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -923,10 +912,11 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                       <InputField
                         label="REFERRAL CODE (Optional)"
                         name="referral"
-                        handleChange={handleInputChange}
+                        handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
                         required={false}
-                        value={formData.referral||""}
+                        value={formData.referral || ""}
+                        readonly={router?.query?.referral ? true : false}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -1028,11 +1018,12 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                       <InputField
                         label="REFERRAL CODE"
                         name="referral"
-                        handleChange={handleInputChange}
+                        handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
                         required={false}
                         gap={"mb-2"}
-                        value={formData.referral||""}
+                        value={formData.referral || ""}
+                        readonly={router?.query?.referral ? true : false}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -1076,10 +1067,11 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                       <InputField
                         label="REFERRAL CODE (Optional)"
                         name="referral"
-                        handleChange={handleInputChange}
+                        handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
                         required={false}
-                        value={formData.referral||""}
+                        value={formData.referral || ""}
+                        readonly={router?.query?.referral ? true : false}
                       />
                       <SelectField
                         label="DO YOU HAVE A STARTUP AND ARE SEEKING SERVICES? SELECT 'YES' TO RECEIVE FUTURE BULDER.AI UPDATES (OPTIONAL)"
@@ -1192,6 +1184,7 @@ const InputField = ({
   error,
   value,
   required = true,
+  readonly = false,
   gap = "mb-6",
 }) => (
   <div className={`${gap} w-full`}>
@@ -1210,6 +1203,7 @@ const InputField = ({
       name={name}
       value={value}
       placeholder={placeholder}
+      readOnly={readonly}
       className={`block w-full py-2 px-3 border border-black dark:bg-white rounded-md shadow-sm focus:outline-none focus:border-gray-100 focus:ring-1 focus:ring-[#ff7e34] transition-all ${
         error
           ? "border-red-500 focus:border-red-500"
