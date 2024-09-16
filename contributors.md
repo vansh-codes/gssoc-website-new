@@ -69,17 +69,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Princegupta101">
-            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
-            <br />
-            <sub><b>Prince Gupta</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/MastanSayyad">
             <img src="https://avatars.githubusercontent.com/u/101971980?v=4" width="100;" alt="MastanSayyad"/>
             <br />
             <sub><b>Mastan Sayyad</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Princegupta101">
+            <img src="https://avatars.githubusercontent.com/u/125169311?v=4" width="100;" alt="Princegupta101"/>
+            <br />
+            <sub><b>Prince Gupta</b></sub>
         </a>
     </td>
     <td align="center">
