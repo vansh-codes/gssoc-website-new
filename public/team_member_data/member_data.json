@@ -258,9 +258,11 @@
             "GitHub": " https://github.com/Meetjain1",
             "Twitter": "https://twitter.com/Meetjain_100",
             "LinkedIn": "https://linkedin.com/in/meet-jain-413015265/",
+            "Topmate": "https://topmate.io/meet_jain10",
+            "TopmateService": "https://topmate.io/meet_jain10/1209100/pay",
             "Instagram": "https://www.instagram.com/m.jain_17/",
             "Skills": ["Full-stack development", "CyberSecurity", "Blockchain development", "Problem Solving", "DSA"],
-            "Languages": ["C++", "JavaScript", "Python", "TypeScript", "MERN", "NextJS", "SvelteJS", "NestJS"],
+            "Languages": ["C++", "JavaScript", "Python", "TypeScript", "NextJS", "SvelteJS", "NestJS","NodeJS","ExpressJS","MongoDB","ReactJS"],
             "RecentActivity": "🏆Ranked #40 in GSSoC'24",
             "Sponsor": ""
         },
