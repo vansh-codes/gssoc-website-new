@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     return (
       <div className="transition-colors dark:bg-darkmode_gray-0 dark:transition-colors">
         <Navbar />
-        {showPopup && router.pathname!="/registration" && <PopupBanner onClose={handleClosePopup} />} {children}
+        {showPopup && router.pathname!="/registration" && router.pathname!=="/gssoc_academy" && <PopupBanner onClose={handleClosePopup} />} {children}
         <div className="hidden lg:block">
           <ScrollToTop />
         </div>
