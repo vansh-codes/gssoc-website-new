@@ -117,24 +117,6 @@ export const Navbar = () => {
                 LEADERBOARD
               </a>
             </Link>
-            <Link href="/caLeaderboard">
-              <a
-                onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
-              >
-                CA LEADERBOARD
-              </a>
-            </Link>
-            <Link href="/jobfair">
-              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
-                JOB FAIR
-              </a>
-            </Link>
-            <Link href="/faq">
-              <a className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black">
-                FAQ
-              </a>
-            </Link>
             <Link href="/team">
               <a
                 onClick={handleClick}
@@ -143,21 +125,6 @@ export const Navbar = () => {
                 TEAM
               </a>
             </Link>
-            <Link href="/blog">
-              <a
-                onClick={handleClick}
-                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
-              >
-                BLOG
-              </a>
-            </Link>
-            <a
-              onClick={handleClick}
-              href="/contact"
-              className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
-            >
-              CONTACT
-            </a>
             <div className="xl:inline-flex xl:w-auto w-full px-2 text-center rounded">
               <MoreMenu handleClick={handleClick} />
             </div>
