@@ -288,41 +288,40 @@ const Project = () => {
         /> */}
       </Head>
       <section>
-        <div className="flex flex-col md:flex-row justify-between items-center px-24 w-full">
-          <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
-            <p className="text-primary_orange-0 mt-4 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
-              <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
-              <h1>-&nbsp;GSSOC&apos;{year} </h1>
-            </p>
-            <div className="flex object-right border-b-2 items-center">
-              <Search2Icon color={theme === "light" ? "black" : "white"} />
-              <input
-                className="px-3 py-1 bg-transparent outline-none dark:text-white text-black"
-                type="search"
-                placeholder="Search projects..."
-                name="search"
-                id="search"
-                onChange={(event) => setSearchTerm(event.target.value)}
-              />
-            </div>
+      <div className="flex flex-col items-center w-full gap-2">
+          <div className="text-primary_orange-0 mt-4 dark:text-white font-sans text-3xl md:text-5xl text-center font-extrabold">
+            <h1 className="text-primary_orange-0">Projects - GSSoC&apos;{year}</h1>
           </div>
-        </div>
-        <Spacer mt={16} />
-        <div className="flex flex-row justify-center flex-wrap items-center gap-5">
-          {Object.keys(projectLinks)
-            .reverse()
-            .map((year) => {
-              return (
-                <button
-                  key={year}
-                  className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-                  onClick={() => getProjects(year)}
-                >
-                  {year}
-                </button>
-              );
-            })}
-        </div>
+            <Spacer mt={16} />
+                  <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+                    {Object.keys(projectLinks)
+                      .reverse()
+                      .map((year) => {
+                        return (
+                          <button
+                            key={year}
+                            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+                            onClick={() => getProjects(year)}
+                          >
+                            {year}
+                          </button>
+                        );
+                      })}
+                  </div>
+            <div className="flex w-full justify-end items-center mt-4">
+              <div className="flex border-b-2 items-center ml-auto mr-4">
+                <Search2Icon color={theme === "light" ? "black" : "white"} />
+                <input
+                  className="px-3 py-1 bg-transparent outline-none dark:text-white text-black"
+                  type="search"
+                  placeholder="Search projects..."
+                  name="search"
+                  id="search"
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                />
+              </div>
+            </div>
+          </div>       
         {year==="2024-Extd" && (      // remove this when full code when leaderboard display time
             <div className="flex justify-center items-center mt-16 px-4">
               <div className="text-xl text-center text-black dark:text-white w-full max-w-3xl">
