@@ -48,17 +48,17 @@
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/nawed2611">
-            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
-            <br />
-            <sub><b>Nawed Ali</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/shreyash3087">
             <img src="https://avatars.githubusercontent.com/u/72603662?v=4" width="100;" alt="shreyash3087"/>
             <br />
             <sub><b>Shreyash</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/nawed2611">
+            <img src="https://avatars.githubusercontent.com/u/83456083?v=4" width="100;" alt="nawed2611"/>
+            <br />
+            <sub><b>Nawed Ali</b></sub>
         </a>
     </td>
     <td align="center">
