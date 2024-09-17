@@ -859,7 +859,7 @@ const Registration = () => {
                       />
 
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -910,7 +910,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         required={false}
                       />
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -1016,7 +1016,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         gap={"mb-2"}
                       />
                       <InputField
-                        label="REFERRAL CODE"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -1065,7 +1065,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.reason}
                       />
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
