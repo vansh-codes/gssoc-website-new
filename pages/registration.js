@@ -173,46 +173,84 @@ const Registration = () => {
     ProjectAdmin: paTargetDate - new Date() < 0,
   };
 
-  const handleNext = () => {
-    if (!role) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        role: "Please select a role before proceeding.",
-      }));
-      return;
-    }
-    if (router?.query?.referral) {
-      setFormData({
-        ...formData,
-        referral: router?.query?.referral,
-      });
-    }
-    if (role !== "CA" && !isRoleTimerUp[role]) {
-      const timerState = {
-        CA: caTimeLeft,
-        Contributor: contributorTimeLeft,
-        Mentor: mentorTimeLeft,
-        ProjectAdmin: paTimeLeft,
-      }[role];
-
-      setCurrentStep(1);
-      setSelectedTimer(timerState);
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        role: `Please wait until the ${role} timer hits 0. Time left: ${formatTimeLeft(
-          timerState
-        )}`,
-      }));
+   const handleNext = () => {
+    if (currentStep === 1) {
+      if (!role) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          role: "Please select a role before proceeding.",
+        }));
+        return;
+      }
+      if (router?.query?.referral) {
+        setFormData({
+          ...formData,
+          referral: router?.query?.referral,
+        });
+      }
+  
+      if (role !== "CA" && !isRoleTimerUp[role]) {
+        const timerState = {
+          CA: caTimeLeft,
+          Contributor: contributorTimeLeft,
+          Mentor: mentorTimeLeft,
+          ProjectAdmin: paTimeLeft,
+        }[role];
+  
+        setCurrentStep(2);
+        setSelectedTimer(timerState);
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          role: `Please wait until the ${role} timer hits 0. Time left: ${formatTimeLeft(
+            timerState
+          )}`,
+        }));
+        setIsNext(true);
+        return;
+      }
+  
       setIsNext(true);
+      setCurrentStep(currentStep + 1);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        role: "",
+      }));
       return;
     }
-    setIsNext(true);
-    setCurrentStep(currentStep + 1);
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      role: "",
-    }));
+
+    if (currentStep === 2) {
+      let newErrors = {};
+
+      if (!formData.firstName) newErrors.firstName = "Name is required.";
+      if (!formData.collegeOrOffice)
+        newErrors.collegeOrOffice = "College/Office is required.";
+      if (!formData.gender) newErrors.gender = "Gender is required.";
+      if (!formData.gitHubProfileUrl)
+        newErrors.gitHubProfileUrl = "Github Profile is required.";
+      if (!formData.discordUsername)
+        newErrors.discordUsername = "Discord username is required.";
+      if (!formData.linkedInProfileUrl)
+        newErrors.linkedInProfileUrl = "LinkedIn Profile is required.";
+      if (!formData.phoneNumber)
+        newErrors.phoneNumber = "Phone number is required.";
+      if (formData.phoneNumber === "+91")
+        newErrors.phoneNumber = "Phone number is required.";
+      if (!formData.email) newErrors.email = "Email is required.";
+      if (Object.keys(newErrors).length > 0) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          ...newErrors,
+        }));
+        return; 
+      }
+      setIsNext(true);
+      setCurrentStep(currentStep + 1);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+      }));
+    }
   };
+  
 
   const formatTimeLeft = (timeLeft) => {
     const { hours, minutes } = timeLeft;
