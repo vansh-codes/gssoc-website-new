@@ -757,7 +757,7 @@ const Registration = () => {
                         error={errors.linkedInProfileUrl}
                       />
                       <InputField
-                        label="Discord Username"
+                        label="Discord Username (If none, enter N/A)"
                         name="discordUsername"
                         value={formData.discordUsername}
                         handleChange={handleInputChange}
