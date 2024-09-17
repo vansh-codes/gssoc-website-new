@@ -126,13 +126,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/aslams2020">
+            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
+            <br />
+            <sub><b>Sayyad Aslam</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/khAja13">
             <img src="https://avatars.githubusercontent.com/u/50286911?v=4" width="100;" alt="khAja13"/>
             <br />
             <sub><b>KhAja</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/HemantKr071">
             <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
@@ -167,15 +174,15 @@
             <br />
             <sub><b>AMAN MANWANI</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/monizb">
             <img src="https://avatars.githubusercontent.com/u/46259712?v=4" width="100;" alt="monizb"/>
             <br />
             <sub><b>Monish Basaniwal</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/rebsfalcao15">
             <img src="https://avatars.githubusercontent.com/u/75599919?v=4" width="100;" alt="rebsfalcao15"/>
@@ -195,13 +202,6 @@
             <img src="https://avatars.githubusercontent.com/u/29349136?v=4" width="100;" alt="shobhitexe"/>
             <br />
             <sub><b>Shobhit Gupta</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/aslams2020">
-            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
-            <br />
-            <sub><b>Sayyad Aslam</b></sub>
         </a>
     </td>
     <td align="center">
