@@ -113,7 +113,7 @@ const MoreMenu = ({ handleClick }) => {
                       ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
                       : `hover:text-primary_orange-0 dark:text-white`,
                     "block px-4 py-2 text-sm cursor-pointer"
-                  )}
+                  )} 
                 >
                   CONTACT
                 </a>
