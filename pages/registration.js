@@ -505,7 +505,7 @@ const Registration = () => {
             )}
             {role !== "CA" && role !== "" && isNext && (
               <div>
-                <h1 className="text-2xl font-normal text-center mt-20 mb-16 w-full max-w-3xl mx-auto">
+                {/* <h1 className="text-2xl font-normal text-center mt-20 mb-16 w-full max-w-3xl mx-auto">
                   <span className="font-bold text-[#f57d33]">
                     Please Wait !
                   </span>{" "}
@@ -544,7 +544,7 @@ const Registration = () => {
                     <span>Mins</span>
                     <span>Seconds</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             )}
             {isRegistrationsOpen && (
