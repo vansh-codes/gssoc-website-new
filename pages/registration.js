@@ -75,7 +75,7 @@ const Registration = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [errors, setErrors] = useState({});
   const router = useRouter();
-  const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(false);
+  const [isRegistrationsOpen, setIsRegistrationsOpen] = useState(true);
   const [currentStep, setCurrentStep] = useState(1);
   const [isFocused, setIsFocused] = useState(false);
   const handleFocus = () => setIsFocused(true);
@@ -420,7 +420,7 @@ const Registration = () => {
                 />
               </div>
             </div>
-            {!isTimeUp && (
+            {!isTimeUp && !isRegistrationsOpen && (
               <div>
                 <h1 className="text-2xl font-normal text-center max-[400px] mt-20 mb-16 w-full max-w-3xl m-auto">
                   <span className="font-bold text-[#f57d33]">
