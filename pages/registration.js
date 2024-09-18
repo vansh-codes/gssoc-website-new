@@ -565,6 +565,7 @@ const Registration = () => {
                     <option value="" disabled>
                       Which role do you wish to apply for?
                     </option>
+                    <option value="CA">Campus Ambassador</option>
                     <option value="Contributor">Contributor</option>
                     <option value="Mentor">Mentor</option>
                     <option value="ProjectAdmin">Project Admin</option>
@@ -629,6 +630,7 @@ const Registration = () => {
                 />
               </div>
             </div>
+            {role != "CA" ? (
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
                 REGISTER FOR GSSOC&apos; EXTD.
@@ -822,7 +824,23 @@ const Registration = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>) : (
+      <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
+        <img src="https://github.com/user-attachments/assets/6ba0f38c-a28d-4d22-835a-93779f126e46" alt="Closed" width={240}/>
+      <h1 className="text-2xl font-semibold text-center mb-6">
+        <span className="text-[#f57d33] font-bold">Registrations</span> for  <span className="text-[#f57d33] font-bold">Campus Ambassadors</span> in GSSoC 2024 Extd are <span className="text-[#f57d33] font-bold">closed</span>.
+      </h1>
+      <p className="text-lg text-center mb-6 w-full max-w-2xl">
+      We warmly invite you to join us as a Contributor and be part of GSSoC 2024 Extended. We encourage you to register and make an impact!
+      </p>
+      <button
+        className="bg-[#f57d33] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#F26611]"
+        onClick={handleBack}
+      >
+        Go Back
+      </button>
+      </div>
+    )}
           </>
         );
       case 3:
