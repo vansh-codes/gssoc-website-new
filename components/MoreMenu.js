@@ -36,6 +36,90 @@ const MoreMenu = ({ handleClick }) => {
       >
         <Menu.Items className="origin-top-right absolute -right-5 mt-2 w-56 rounded-md shadow-lg dark:bg-black ring-1 bg-white ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
+            <Link href={"/caLeaderboard"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                  onClick={handleClick}
+                  className={classNames(
+                    active
+                      ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                      : `hover:text-primary_orange-0 dark:text-white`,
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                >
+                  CA LEADERBOARD
+                </a>
+                )}
+              </Menu.Item>
+            </Link>
+            <Link href={"/jobfair"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                  onClick={handleClick}
+                   className={classNames(
+                    active
+                      ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                      : `hover:text-primary_orange-0 dark:text-white`,
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}>
+                  JOB FAIR
+                </a>
+                )}
+              </Menu.Item>
+            </Link>
+            <Link href={"/faq"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                  onClick={handleClick}
+                  className={classNames(
+                    active
+                      ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                      : `hover:text-primary_orange-0 dark:text-white`,
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}>
+                    FAQ
+                  </a>
+                )}
+              </Menu.Item>
+            </Link>
+            <Link href={"/blog"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                  onClick={handleClick}
+                  className={classNames(
+                    active
+                      ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                      : `hover:text-primary_orange-0 dark:text-white`,
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                >
+                  BLOG
+                </a>
+                )}
+              </Menu.Item>
+            </Link>
+            <Link href={"/contact"}>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                  onClick={handleClick}
+                  href="/contact"
+                  className={classNames(
+                    active 
+                      ? `hover:text-primary_orange-0 dark:hover:text-primary_orange-0 dark:text-white`
+                      : `hover:text-primary_orange-0 dark:text-white`,
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )} 
+                >
+                  CONTACT
+                </a>
+                )}
+              </Menu.Item>
+            </Link>
             <Link href={"/codeofconduct"}>
               <Menu.Item>
                 {({ active }) => (

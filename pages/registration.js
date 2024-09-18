@@ -173,46 +173,84 @@ const Registration = () => {
     ProjectAdmin: paTargetDate - new Date() < 0,
   };
 
-  const handleNext = () => {
-    if (!role) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        role: "Please select a role before proceeding.",
-      }));
-      return;
-    }
-    if (router?.query?.referral) {
-      setFormData({
-        ...formData,
-        referral: router?.query?.referral,
-      });
-    }
-    if (role !== "CA" && !isRoleTimerUp[role]) {
-      const timerState = {
-        CA: caTimeLeft,
-        Contributor: contributorTimeLeft,
-        Mentor: mentorTimeLeft,
-        ProjectAdmin: paTimeLeft,
-      }[role];
-
-      setCurrentStep(1);
-      setSelectedTimer(timerState);
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        role: `Please wait until the ${role} timer hits 0. Time left: ${formatTimeLeft(
-          timerState
-        )}`,
-      }));
+   const handleNext = () => {
+    if (currentStep === 1) {
+      if (!role) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          role: "Please select a role before proceeding.",
+        }));
+        return;
+      }
+      if (router?.query?.referral) {
+        setFormData({
+          ...formData,
+          referral: router?.query?.referral,
+        });
+      }
+  
+      if (role !== "CA" && !isRoleTimerUp[role]) {
+        const timerState = {
+          CA: caTimeLeft,
+          Contributor: contributorTimeLeft,
+          Mentor: mentorTimeLeft,
+          ProjectAdmin: paTimeLeft,
+        }[role];
+  
+        setCurrentStep(2);
+        setSelectedTimer(timerState);
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          role: `Please wait until the ${role} timer hits 0. Time left: ${formatTimeLeft(
+            timerState
+          )}`,
+        }));
+        setIsNext(true);
+        return;
+      }
+  
       setIsNext(true);
+      setCurrentStep(currentStep + 1);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        role: "",
+      }));
       return;
     }
-    setIsNext(true);
-    setCurrentStep(currentStep + 1);
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      role: "",
-    }));
+
+    if (currentStep === 2) {
+      let newErrors = {};
+
+      if (!formData.firstName) newErrors.firstName = "Name is required.";
+      if (!formData.collegeOrOffice)
+        newErrors.collegeOrOffice = "College/Office is required.";
+      if (!formData.gender) newErrors.gender = "Gender is required.";
+      if (!formData.gitHubProfileUrl)
+        newErrors.gitHubProfileUrl = "Github Profile is required.";
+      if (!formData.discordUsername)
+        newErrors.discordUsername = "Discord username is required.";
+      if (!formData.linkedInProfileUrl)
+        newErrors.linkedInProfileUrl = "LinkedIn Profile is required.";
+      if (!formData.phoneNumber)
+        newErrors.phoneNumber = "Phone number is required.";
+      if (formData.phoneNumber === "+91")
+        newErrors.phoneNumber = "Phone number is required.";
+      if (!formData.email) newErrors.email = "Email is required.";
+      if (Object.keys(newErrors).length > 0) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          ...newErrors,
+        }));
+        return; 
+      }
+      setIsNext(true);
+      setCurrentStep(currentStep + 1);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+      }));
+    }
   };
+  
 
   const formatTimeLeft = (timeLeft) => {
     const { hours, minutes } = timeLeft;
@@ -527,7 +565,7 @@ const Registration = () => {
                     <option value="" disabled>
                       Which role do you wish to apply for?
                     </option>
-                    <option value="CA">CA (Campus Ambassador)</option>
+                    <option value="CA">Campus Ambassador</option>
                     <option value="Contributor">Contributor</option>
                     <option value="Mentor">Mentor</option>
                     <option value="ProjectAdmin">Project Admin</option>
@@ -592,6 +630,7 @@ const Registration = () => {
                 />
               </div>
             </div>
+            {role != "CA" ? (
             <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
               <h1 className="text-2xl font-semibold text-center mb-6">
                 REGISTER FOR GSSOC&apos; EXTD.
@@ -757,7 +796,7 @@ const Registration = () => {
                         error={errors.linkedInProfileUrl}
                       />
                       <InputField
-                        label="Discord Username"
+                        label="Discord Username (If none, enter N/A)"
                         name="discordUsername"
                         value={formData.discordUsername}
                         handleChange={handleInputChange}
@@ -785,7 +824,23 @@ const Registration = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>) : (
+      <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
+        <img src="https://github.com/user-attachments/assets/6ba0f38c-a28d-4d22-835a-93779f126e46" alt="Closed" width={240}/>
+      <h1 className="text-2xl font-semibold text-center mb-6">
+        <span className="text-[#f57d33] font-bold">Registrations</span> for  <span className="text-[#f57d33] font-bold">Campus Ambassadors</span> in GSSoC 2024 Extd are <span className="text-[#f57d33] font-bold">closed</span>.
+      </h1>
+      <p className="text-lg text-center mb-6 w-full max-w-2xl">
+      We warmly invite you to join us as a Contributor and be part of GSSoC 2024 Extended. We encourage you to register and make an impact!
+      </p>
+      <button
+        className="bg-[#f57d33] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#F26611]"
+        onClick={handleBack}
+      >
+        Go Back
+      </button>
+      </div>
+    )}
           </>
         );
       case 3:
@@ -859,7 +914,7 @@ const Registration = () => {
                       />
 
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -910,7 +965,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         required={false}
                       />
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -1016,7 +1071,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         gap={"mb-2"}
                       />
                       <InputField
-                        label="REFERRAL CODE"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
@@ -1065,7 +1120,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.reason}
                       />
                       <InputField
-                        label="REFERRAL CODE (Optional)"
+                        label="REFERRAL CODE (If none, enter N/A)"
                         name="referral"
                         handleChange={router?.query?.referral ?()=>{} :handleInputChange}
                         error={errors.referral}
