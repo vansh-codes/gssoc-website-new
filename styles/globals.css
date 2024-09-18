@@ -916,3 +916,26 @@ html.dark::-webkit-scrollbar-thumb:hover {
 html.dark::-webkit-scrollbar-thumb:active {
   background-color: #f06000 !important;
 } 
+
+.rank_display_2024 {
+  position: absolute;
+  top: 56%;  
+  left: 12%; 
+  text-align: center;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
+.text-big-black {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111111;
+  font-family:sans-serif;
+}
+.toprank_display_2024 {
+  position: absolute;
+  top: 57%;  
+  left: 12%; 
+  text-align: center;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
