@@ -227,6 +227,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/RadhikaMalpani1702">
+            <img src="https://avatars.githubusercontent.com/u/163530398?v=4" width="100;" alt="RadhikaMalpani1702"/>
+            <br />
+            <sub><b>Radhika Malpani</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Vyomrana02">
             <img src="https://avatars.githubusercontent.com/u/87069619?v=4" width="100;" alt="Vyomrana02"/>
             <br />
@@ -245,13 +252,6 @@
             <img src="https://avatars.githubusercontent.com/u/90561803?v=4" width="100;" alt="Tanay-ErrorCode"/>
             <br />
             <sub><b>Tanay</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/RadhikaMalpani1702">
-            <img src="https://avatars.githubusercontent.com/u/163530398?v=4" width="100;" alt="RadhikaMalpani1702"/>
-            <br />
-            <sub><b>Radhika Malpani</b></sub>
         </a>
     </td>
     <td align="center">
