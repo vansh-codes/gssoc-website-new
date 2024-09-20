@@ -129,6 +129,23 @@ const BadgeID_Comp = (props) => {
         return false;
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                alert("Please download the badge certificate on the desktop website");
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Initial check
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <>
             <div
