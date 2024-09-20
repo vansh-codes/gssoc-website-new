@@ -34,11 +34,20 @@ const Badge = () => {
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         const fileTypes = ["image/png", "image/jpeg", "image/jpg"];
+        const maxSize = 5 * 1024 * 1024; // 5MB
 
-        if (file && fileTypes.includes(file.type)) {
+        if (file) {
+            if (!fileTypes.includes(file.type)) {
+                alert("Please upload a valid image file (png, jpg, jpeg).");
+                return;
+            }
+
+            if (file.size > maxSize) {
+                alert("File size exceeds 5MB. Please upload a file less than 5MB.");
+                return;
+            }
+
             setImage(URL.createObjectURL(file)); // Temporary URL for preview, can pass to component
-        } else {
-            alert("Please upload a valid image file (png, jpg, jpeg).");
         }
     };
 
@@ -127,7 +136,7 @@ const Badge = () => {
                 </select>
                 <Box mt={4}>
                     <FormLabel className="text-black dark:text-primary_orange-0 font-semibold mt-4">
-                        Upload Your Image (PNG, JPG, JPEG)
+                        Upload Your Image (PNG, JPG, JPEG) Max-size: 5MB
                     </FormLabel>
                     <Button
                         leftIcon={<Icon as={AiOutlineCloudUpload} />}
