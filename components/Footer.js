@@ -1,6 +1,13 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Footer = () => {
+  const { pathname } = useRouter(); 
+
+  if (pathname === "/sponsor_us" || pathname ==="/registration") {
+    return null;
+  }
+
   return (
     <footer id="Contact">
       <div className="footer-2 bg-gradient-to-b from-[#FF8500] to-[#FF6701] pt-6 md:pt-8">
@@ -9,7 +16,7 @@ const Footer = () => {
             <div className="footer-info lg:w-1/3 md:px-4">
               {/* <h4 className="text-white text-2xl font-medium mb-4">
                 Made with ❤️ by GirlScript India
-  </h4>*/}
+              </h4> */}
               <Link href="https://gssoc.girlscript.tech/contact">
                 <img
                   className="cursor-pointer"
@@ -121,4 +128,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;

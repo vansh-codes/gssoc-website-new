@@ -1,6 +1,6 @@
 import { Spacer } from "@chakra-ui/react";
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import FileSaver from "file-saver";
 // import CertImg from "../components/cert.svg";
 import dynamic from "next/dynamic";
@@ -16,10 +16,11 @@ const Cert = () => {
   const [Role, setRole] = useState("Contributor");
   const [verified, setVerified] = useState(false);
   const [year, setYear] = useState("2024");
+  const [githubId, setGithubId] = useState("");
+  const [rank, setRank] = useState("");
 
   const setVerifiedTrue = () => {
     setVerified(true);
-    console.log("verified");
   }
   // () => {
   //   var image_url = "https://res.cloudinary.com/dqjtoo2h2/image/upload/co_rgb:FD7617,l_text:Playfair%20Display_80_bold_normal_left:"+Name+"/fl_layer_apply,g_center,x_0.2,y_-0.12/GSSoC2022_Cert_nf09fu.png"
@@ -46,6 +47,37 @@ const Cert = () => {
   //       console.log(err)
   //     })
   // }, [ref]);
+
+  useEffect(() => {
+    const verifyGithubId = async () => {
+      if (!githubId) return; 
+
+      try {
+        const response = await fetch("/leaderboards/leaderboard24.json");
+        const leaderboard = await response.json();
+
+        const userIndex = leaderboard.leaderboard.findIndex(
+          (user) => user.login.toLowerCase() === githubId.toLowerCase()
+        );
+
+        if (userIndex === -1) {
+          setRank(""); 
+          setVerified(false);
+          return;
+        }
+
+        const rank = userIndex + 1;
+        setRank(rank); 
+        setVerified(true);
+      } catch (error) {
+        console.error("Error verifying GitHub ID:", error);
+        setRank(""); 
+        setVerified(false); 
+      }
+    };
+
+    verifyGithubId();
+  }, [githubId]);
 
   return (
     <>
@@ -117,13 +149,32 @@ const Cert = () => {
           <option value="Speaker">Speaker</option>
           <option value="Organizing Team">Organizing Team</option>
         </select>
-        <Spacer mt={20} />
+        <Spacer mt={3} />
         {/* <img
           src="https://res.cloudinary.com/dqjtoo2h2/image/upload/l_text:helvetica_72_bold_normal_left:Contributor/fl_layer_apply,g_center,x_0.2,y_-0.1/CA_Speaker_certificate_oqydmx.jpg"
           className="w-full h-auto mt-4"
           id="canvas"
         /> */}
-        <Certi_Comp Name={Name} Role={Role} Email={Email} verified={verified} setVerified={setVerifiedTrue} year={year} />
+        <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
+          Enter GitHub ID*
+        </label>
+        <input
+          type="text"
+          className="text-primary_orange-0 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
+          value={githubId}
+          onChange={(e) => setGithubId(e.target.value)}
+          disabled={verified}
+        ></input>
+        <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
+          Rank
+        </label>
+        <input
+          type="text"
+          className="text-primary_orange-0 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
+          value={rank}
+          disabled
+        ></input>
+        <Certi_Comp Name={Name} Role={Role} Email={Email} Rank={rank} verified={verified} setVerified={setVerifiedTrue} year={year} />
       </div>
     </>
   );

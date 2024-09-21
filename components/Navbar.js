@@ -28,7 +28,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between transition-colors flex-wrap bg-white drop-shadow-xl p-1 mb-10 dark:bg-black dark:text-white dark:transition-colors sticky top-0 z-10">
+      <nav className="flex items-center z-40 justify-between transition-colors flex-wrap bg-white drop-shadow-xl p-1 dark:bg-black dark:text-white dark:transition-colors sticky top-0">
         <div className="flex items-center p-1.5 ml-5">
           <Link href="/">
             <a className="inline-flex items-center">
@@ -53,7 +53,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <button
-          className="inline-flex p-2.5 hover:bg-orange-600 rounded lg:hidden text-grey-700 dark:text-white"
+          className="inline-flex p-2.5 hover:bg-orange-600 rounded xl:hidden text-grey-700 dark:text-white"
           onClick={handleClick}
         >
           <svg
@@ -74,13 +74,13 @@ export const Navbar = () => {
         <div
           className={`${
             active ? " " : "hidden"
-          }   w-full lg:inline-flex lg:flex-grow lg:w-auto text-center`}
+          }   w-full xl:inline-flex xl:flex-grow xl:w-auto text-center`}
         >
-          <div className="flex flex-col lg:flex-row lg:ml-auto lg:w-auto items-center mr-6">
+          <div className="flex flex-col xl:flex-row xl:ml-auto xl:w-auto items-center mr-4">
             <Link href="/">
               <a
                 onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 ABOUT
               </a>
@@ -88,7 +88,7 @@ export const Navbar = () => {
             <Link href="/wob">
               <a
               onClick={handleClick}
-              className="lg:inline-flex lg:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+              className="xl:inline-flex xl:w-auto w-full px-2 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 WOB
               </a>
@@ -96,64 +96,39 @@ export const Navbar = () => {
             <Link href="/project">
               <a
                 onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 PROJECT
               </a>
             </Link>
-            <Link href="/#Sponsors">
+            <Link href="/sponsorUs">
               <a
                 onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
-                SPONSORS
+                SPONSOR US
               </a>
             </Link>
             <Link href="/leaderboard">
               <a
                 onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 LEADERBOARD
-              </a>
-            </Link>
-            <Link href="/jobfair">
-              <a className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
-                JOB FAIR
-              </a>
-            </Link>
-            <Link href="/faq">
-              <a className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black">
-                FAQ
               </a>
             </Link>
             <Link href="/team">
               <a
                 onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
+                className="xl:inline-flex xl:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-1 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-xl transition-all link link-underline link-underline-black"
               >
                 TEAM
               </a>
             </Link>
-            <Link href="/blog">
-              <a
-                onClick={handleClick}
-                className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
-              >
-                BLOG
-              </a>
-            </Link>
-            <a
-              onClick={handleClick}
-              href="/contact"
-              className="lg:inline-flex lg:w-auto w-full px-2.5 py-2 text-center rounded text-grey-700 text-1xl font-medium mr-2.5 hover:text-primary_orange-0 dark:hover:text-primary_orange-0 hover:text-lg transition-all link link-underline link-underline-black"
-            >
-              CONTACT
-            </a>
-            <div className="lg:inline-flex lg:w-auto w-full px-2 text-center rounded">
+            <div className="xl:inline-flex xl:w-auto w-full px-2 text-center rounded">
               <MoreMenu handleClick={handleClick} />
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <Tooltip label="Change Theme" placement="bottom">
                 <div>
                   <ThemeChanger />

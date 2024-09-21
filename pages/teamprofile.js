@@ -1,71 +1,95 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import memberData from "../public/team_member_data/member_data.json";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 const TeamMember = () => {
     const router = useRouter();
     const { name } = router.query;
-    const member = memberData.find((m) => m[name]);
-
+    const member = name ? memberData.find((m) => m[name]) : null;
     const details = member ? member[name] : {};
     const githubUsername = details.GitHub
         ? details.GitHub.split("/").pop()
-        : "";
+        : "No GitHub Username";
+    const [isModalOpen, setIsModalOpen] = useState(false); 
 
-    useEffect(() => {   // to embed topmate widget link
+    useEffect(() => {
+        const buttonId = 'topmate-mentorship-button';
+
         if (details.TopmateService) {
-            const script = document.createElement("script");
-            script.src =
-                "https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js";
-            script.async = true;
-            script.defer = true;
+            if (!document.getElementById(buttonId)) {
+                const button = document.createElement("button");
+                button.id = buttonId;
+                button.textContent = "1:1 Mentorship";
+                button.style.position = "fixed";
+                button.style.right = "30px";
+                button.style.bottom = "30px";
+                button.style.backgroundColor = "#000";
+                button.style.color = "#fff";
+                button.style.padding = "10px 20px";
+                button.style.borderRadius = "5px";
+                button.style.zIndex = "1000";
+                button.onclick = () => setIsModalOpen(true); 
 
-            const isMobile = window.innerWidth <= 640; // Mobile screen (640px and below)
-            const isMedium = window.innerWidth > 640 && window.innerWidth <= 1024; // Medium screen (between 640px and 1024px)
-
-            let positionRight = "80px";
-            let positionBottom = "30px";
-            let fontSize = "16px";
-            let customWidth = "160px";
-
-            if (isMobile) {
-                positionRight = "5px";
-                positionBottom = "5px";
-                fontSize = "14px";
-                customWidth = "140px";
-            } else if (isMedium) {
-                positionRight = "60px";
-                positionBottom = "40px";
-                fontSize = "15px";
-                customWidth = "150px";
+                document.body.appendChild(button);
             }
-
-            script.setAttribute(
-                "user-profile",
-                `${details.TopmateService}?embed=true&theme=F97316`
-            );
-            script.setAttribute(
-                "btn-style",
-                '{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}'
-            );
-            script.setAttribute("embed-version", "v1");
-            script.setAttribute("button-text", "1:1 Mentorship");
-            script.setAttribute("position-right", positionRight);
-            script.setAttribute("position-bottom", positionBottom);
-            script.setAttribute("custom-padding", "0px");
-            script.setAttribute("custom-font-size", fontSize);
-            script.setAttribute("custom-font-weight", "500");
-            script.setAttribute("custom-width", customWidth);
-
-            document.body.appendChild(script);
-            return () => {
-                if(script)
-                    document.body.removeChild(script);
-            };
         }
-    }, [details.TopmateService, router.query]);
+
+        return () => {
+            const existingButton = document.getElementById(buttonId);
+            if (existingButton) {
+                document.body.removeChild(existingButton);
+            }
+        };
+    }, [details.TopmateService]);
+
+    useEffect(() => {
+        if (isModalOpen) {
+            const modalDiv = document.createElement("div");
+            modalDiv.id = 'topmate-modal';
+            modalDiv.style.position = "fixed";
+            modalDiv.style.top = "50%";
+            modalDiv.style.left = "50%";
+            modalDiv.style.transform = "translate(-50%, -50%)";
+            modalDiv.style.width = "80%";
+            modalDiv.style.maxWidth = "600px";
+            modalDiv.style.height = "80%";
+            modalDiv.style.maxHeight = "800px";
+            modalDiv.style.backgroundColor = "white";
+            modalDiv.style.border = "1px solid #ccc";
+            modalDiv.style.borderRadius = "10px";
+            modalDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+            modalDiv.style.zIndex = "1000";
+            modalDiv.style.overflow = "auto";
+            modalDiv.style.padding = "20px";
+            document.body.appendChild(modalDiv);
+
+            const closeButton = document.createElement("button");
+            closeButton.textContent = "Close";
+            closeButton.style.position = "absolute";
+            closeButton.style.top = "10px";
+            closeButton.style.right = "10px";
+            closeButton.style.backgroundColor = "#000";
+            closeButton.style.color = "#fff";
+            closeButton.style.border = "none";
+            closeButton.style.borderRadius = "5px";
+            closeButton.style.padding = "5px 10px";
+            closeButton.style.cursor = "pointer";
+            closeButton.onclick = () => {
+                setIsModalOpen(false);
+                document.body.removeChild(modalDiv);
+            };
+            modalDiv.appendChild(closeButton);
+
+            const iframe = document.createElement("iframe");
+            iframe.src = `${details.TopmateService}?embed=true`;
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            modalDiv.appendChild(iframe);
+        }
+    }, [isModalOpen, details.TopmateService]);
 
     if (!member) {
         return (

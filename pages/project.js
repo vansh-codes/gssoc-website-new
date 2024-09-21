@@ -231,6 +231,7 @@ import { projectData } from "./api/projectsData";
 import SearchTags from "../components/SearchTags";
 
 const projectLinks = {
+  "2024-Extd": "add project list link here",
   2024: "https://opensheet.elk.sh/1JiqHjGyf43NNkou4PBe7WT4KEyueuFJct2p322nNMNw/JSON",
   2023: "https://opensheet.elk.sh/1v7VqK6i_xJK4nJ6GKzoeafwrnlJR8Y5-8v0Qfsh3gqo/Shortlisted",
   2022: "https://opensheet.elk.sh/1OC5gOWCpUrDXI8HAPEM9iOohoznBfAVF9d-rSMO7FXM/JSON_EndPoint",
@@ -242,22 +243,27 @@ const Project = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [mounted, setMounted] = useState(false);
-  const [year, setYear] = useState("24");
+  const [year, setYear] = useState("2024-Extd");
   const { theme } = useTheme();
 
   const getProjects = useCallback(async (year) => {
     if (year === "2021") {
       setData(projectLinks[year]);
+      setYear(year.substring(2));   // remove this when full code when leaderboard display time
+    } 
+    else if(year === "2024-Extd") {   // remove this else if when leaderboard display time
+      setYear("2024-Extd");
     } else {
       const response = await fetch(projectLinks[year]);
       setData(await response.json());
+      setYear(year.substring(2));   // remove this when full code when leaderboard display time
     }
-    setYear(year.substring(2));
+    // setYear(year.substring(2));  // uncomment this when full code when leaderboard display time
   }, []);
 
   useEffect(() => {
     setMounted(true);
-    getProjects("2024");
+    getProjects("2024-Extd");
   }, []);
 
   if (!mounted) return null;
@@ -282,43 +288,60 @@ const Project = () => {
         /> */}
       </Head>
       <section>
-        <div className="flex flex-col md:flex-row justify-between items-center px-24 w-full">
-          <div className="flex flex-col md:flex-row wrap items-center justify-between w-full gap-2">
-            <p className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-start flex-col md:flex-row">
-              <h1 className="text-primary_orange-0">Projects&nbsp;</h1>
-              <h1>-&nbsp;GSSOC&apos;{year} </h1>
-            </p>
-            <div className="flex object-right border-b-2 items-center">
-              <Search2Icon color={theme === "light" ? "black" : "white"} />
-              <input
-                className="px-3 py-1 bg-transparent outline-none dark:text-white text-black"
-                type="search"
-                placeholder="Search projects..."
-                name="search"
-                id="search"
-                onChange={(event) => setSearchTerm(event.target.value)}
-              />
-            </div>
+      <div className="flex flex-col items-center w-full gap-2">
+          <div className="text-primary_orange-0 mt-4 dark:text-white font-sans text-3xl md:text-5xl text-center font-extrabold">
+            <h1 className="text-primary_orange-0">Projects - GSSoC&apos;{year}</h1>
           </div>
-        </div>
-        <Spacer mt={16} />
-        <div className="flex flex-row justify-center flex-wrap items-center gap-5">
-          {Object.keys(projectLinks)
-            .reverse()
-            .map((year) => {
-              return (
-                <button
-                  key={year}
-                  className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
-                  onClick={() => getProjects(year)}
-                >
-                  {year}
-                </button>
-              );
-            })}
-        </div>
-        {}
-        {data.length > 1 && (
+            <Spacer mt={16} />
+                  <div className="flex flex-row justify-center flex-wrap items-center gap-5">
+                    {Object.keys(projectLinks)
+                      .reverse()
+                      .map((year) => {
+                        return (
+                          <button
+                            key={year}
+                            className="bg-gradient-to-b from-primary_orange-0 to-orange-600 text-lg dark:text-black rounded-b-md hover:bg-gradient-to-t hover:from-primary_orange-0 hover:to-orange-600 text-md text-white font-bold px-10 py-3 rounded md:text-2xl md:py-4"
+                            onClick={() => getProjects(year)}
+                          >
+                            {year}
+                          </button>
+                        );
+                      })}
+                  </div>
+            <div className="flex w-full justify-end items-center mt-4">
+              <div className="flex border-b-2 items-center ml-auto mr-4">
+                <Search2Icon color={theme === "light" ? "black" : "white"} />
+                <input
+                  className="px-3 py-1 bg-transparent outline-none dark:text-white text-black"
+                  type="search"
+                  placeholder="Search projects..."
+                  name="search"
+                  id="search"
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                />
+              </div>
+            </div>
+          </div>       
+        {year==="2024-Extd" && (      // remove this when full code when leaderboard display time
+            <div className="flex justify-center items-center mt-16 px-4">
+              <div className="text-xl text-center text-black dark:text-white w-full max-w-3xl">
+                <h1 className="text-5xl font-extrabold text-[#f57d33] mb-8 animate-pulse">
+                  COMING SOON!
+                </h1>
+                <p className="leading-relaxed">
+                  New projects for{" "}
+                  <span className="font-bold text-[#f57d33]">GSSoC&apos;24 Extended</span>{" "}
+                  will be listed soon. In the meantime, feel free to explore previous
+                  program projects for inspiration! <br /><br />
+                  <span className="font-bold">Note:</span> The coding period will run from{" "}
+                  <span className="font-bold text-[#f57d33]">October 1st to October 30th</span>, 
+                  and only contributions made during this timeline and in new projects will 
+                  be considered.
+                </p>
+              </div>
+          </div>
+        )}
+        {data.length > 1 && year!=="2024-Extd" && (
           <div>
             <Spacer mt={10} mb={10} />
             <SearchTags setSearchTerm={setSearchTerm} />

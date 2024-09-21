@@ -59,7 +59,6 @@ const Certi_Comp = (props) => {
         setOrganizingTeam(dataOT);
         setProjectAdmins(dataPA);
         setTop100(dataT100);
-        console.log(dataM)
       } catch (error) {
         console.log(error);
       }
@@ -238,6 +237,10 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <div id="rank_display" className="rank_display_2024 text-big-black">
+            {props.verified ? `Rank: ${props.Rank}` : "Rank: X".repeat(props.Rank.length)}
+            </div>
+
             <h5 className="cert_id_2024 text-sm  font-bold">
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
@@ -256,6 +259,10 @@ const Certi_Comp = (props) => {
             <div id="contrib_name" className={`${props.year==2024?"contrib_name_2024":"contrib_name_2023"} text-big-orange`}>
               {props.verified ? props.Name : "X".repeat(props.Name.length)}
             </div>
+            <div id="rank_display" className="toprank_display_2024 text-big-black">
+            {props.verified ? `Rank: ${props.Rank}` : "Rank: X".repeat(props.Rank.length)}
+            </div>
+
             <h5 className="cert_id_2024 text-sm  font-bold">
               Certificate ID: <span className="font-normal">{certificateId}</span>
             </h5>
@@ -369,7 +376,7 @@ const Certi_Comp = (props) => {
             : "dark:text-black bg-gradient-to-b from-slate-600 to-orange-400 text-md text-white w-full font-medium py-3 px-5 rounded mb-3 text-md text-white font-bold px-5 py-1 rounded md:text-xl md:py-3"
         }
         onClick={Switcher}
-        disabled={props.verified}
+        disabled={!props.verified}
       >
         Verify
       </button>
