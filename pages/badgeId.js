@@ -82,7 +82,7 @@ const Badge = () => {
         <input
           type="text"
           className="text-primary_orange-0 px-2 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value.trim())}
           disabled={verified}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
@@ -91,7 +91,7 @@ const Badge = () => {
         <input
           type="text"
           className="text-primary_orange-0 px-2 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value.trim())}
           disabled={verified}
         ></input>
         <label className="text-black dark:text-primary_orange-0 font-semibold mt-3 text-lg">
@@ -100,7 +100,7 @@ const Badge = () => {
         <select
           className="text-primary_orange-0 px-1 dark:text-white dark:border-slate-200 border-black border-2 rounded-md  font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           defaultValue="Contributor"
-          onChange={(e) => setRole(e.target.value)}
+          onChange={(e) => setRole(e.target.value.trim())}
           disabled={verified}
         >
           <option value="Contributor">Contributor</option>
@@ -117,7 +117,7 @@ const Badge = () => {
           type="text"
           className="text-primary_orange-0 px-2 dark:text-white dark:border-slate-200 border-black border-2 rounded-md font-semibold mt-2 text-xs sm:text-sm md:text-lg"
           value={Github}
-          onChange={(e) => setGithub(e.target.value)}
+          onChange={(e) => setGithub(e.target.value.trim())}
           disabled={verified}
         ></input>
 
