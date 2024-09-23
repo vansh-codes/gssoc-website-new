@@ -1068,7 +1068,7 @@ const Registration = () => {
                         <div className="mb-4">
                           <div className="block text-sm font-semibold text-gray-800 mb-4">
                             IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                           </div>
                           <UploadField
                             name="resume"
@@ -1121,7 +1121,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         <div className="mb-4">
                           <div className="block text-sm font-semibold text-gray-800 mb-4">
                             IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                           </div>
                           <UploadField
                             name="resume"
@@ -1230,7 +1230,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         <div className="mb-4">
                           <div className="block text-sm font-semibold text-gray-800 mb-4">
                             IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                           </div>
                           <UploadField
                             name="resume"
@@ -1280,7 +1280,7 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         <div className="mb-4">
                           <div className="block text-sm font-semibold text-gray-800 mb-4">
                             IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL)
+                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                           </div>
                           <UploadField
                             name="resume"
