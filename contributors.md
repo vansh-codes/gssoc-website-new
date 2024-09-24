@@ -5,17 +5,17 @@
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/Suvraneel">
-            <img src="https://avatars.githubusercontent.com/u/63473496?v=4" width="100;" alt="Suvraneel"/>
-            <br />
-            <sub><b>Suvraneel Bhuin</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/Hemu21">
             <img src="https://avatars.githubusercontent.com/u/106808387?v=4" width="100;" alt="Hemu21"/>
             <br />
             <sub><b>Hemanth Kumar </b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Suvraneel">
+            <img src="https://avatars.githubusercontent.com/u/63473496?v=4" width="100;" alt="Suvraneel"/>
+            <br />
+            <sub><b>Suvraneel Bhuin</b></sub>
         </a>
     </td>
     <td align="center">
