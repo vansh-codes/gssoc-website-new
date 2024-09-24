@@ -35,7 +35,15 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
   };
 
   return (
-    <div className="upload-field" onClick={()=>window.open("https://docs.google.com/forms/d/e/1FAIpQLSfpekPodFPqG2gRTXkXMmBE36HwhmYRkb4rPkzZJALehvDQaw/viewform?pli=1&pli=1","_blank")}>
+    <div
+      className="upload-field"
+      onClick={() =>
+        window.open(
+          "https://docs.google.com/forms/d/e/1FAIpQLSfpekPodFPqG2gRTXkXMmBE36HwhmYRkb4rPkzZJALehvDQaw/viewform?pli=1&pli=1",
+          "_blank"
+        )
+      }
+    >
       <label
         htmlFor={name}
         className="bg-[#F86F26] px-4 rounded-lg py-2 cursor-pointer text-white font-semibold"
@@ -1064,21 +1072,19 @@ const Registration = () => {
                         error={errors.startupServices}
                         required={false}
                       />
-                      {formData.gender && formData.gender === "Female" && (
-                        <div className="mb-4">
-                          <div className="block text-sm font-semibold text-gray-800 mb-4">
-                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
-                          </div>
-                          <UploadField
-                            name="resume"
-                            label="Upload Resume"
-                            onChange={handleFileChange}
-                            preview={false}
-                            setuploadedFile={setuploadedFile}
-                          />
+                      <div className="mb-4">
+                        <div className="block text-sm font-semibold text-gray-800 mb-4">
+                          IF YOU WISH TO HAVE YOUR RESUME SHARED WITH COMPANIES,
+                          PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                         </div>
-                      )}
+                        <UploadField
+                          name="resume"
+                          label="Upload Resume"
+                          onChange={handleFileChange}
+                          preview={false}
+                          setuploadedFile={setuploadedFile}
+                        />
+                      </div>
                     </>
                   )}
 
@@ -1117,21 +1123,19 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.startupServices}
                         required={false}
                       />
-                      {formData.gender && formData.gender === "Female" && (
-                        <div className="mb-4">
-                          <div className="block text-sm font-semibold text-gray-800 mb-4">
-                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
-                          </div>
-                          <UploadField
-                            name="resume"
-                            label="Upload Resume"
-                            onChange={handleFileChange}
-                            preview={false}
-                            setuploadedFile={setuploadedFile}
-                          />
+                      <div className="mb-4">
+                        <div className="block text-sm font-semibold text-gray-800 mb-4">
+                          IF YOU WISH TO HAVE YOUR RESUME SHARED WITH COMPANIES,
+                          PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                         </div>
-                      )}
+                        <UploadField
+                          name="resume"
+                          label="Upload Resume"
+                          onChange={handleFileChange}
+                          preview={false}
+                          setuploadedFile={setuploadedFile}
+                        />
+                      </div>
                     </>
                   )}
 
@@ -1226,21 +1230,20 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.startupServices}
                         required={false}
                       />
-                      {formData.gender && formData.gender === "Female" && (
-                        <div className="mb-4">
-                          <div className="block text-sm font-semibold text-gray-800 mb-4">
-                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
-                          </div>
-                          <UploadField
-                            name="resume"
-                            label="Upload Resume"
-                            onChange={handleFileChange}
-                            preview={false}
-                            setuploadedFile={setuploadedFile}
-                          />
+
+                      <div className="mb-4">
+                        <div className="block text-sm font-semibold text-gray-800 mb-4">
+                          IF YOU WISH TO HAVE YOUR RESUME SHARED WITH COMPANIES,
+                          PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                         </div>
-                      )}
+                        <UploadField
+                          name="resume"
+                          label="Upload Resume"
+                          onChange={handleFileChange}
+                          preview={false}
+                          setuploadedFile={setuploadedFile}
+                        />
+                      </div>
                     </>
                   )}
                   {role === "Mentor" && (
@@ -1276,21 +1279,19 @@ SHARE YOUR EXPERIENCE BRIEFLY"
                         error={errors.startupServices}
                         required={false}
                       />
-                      {formData.gender && formData.gender === "Female" && (
-                        <div className="mb-4">
-                          <div className="block text-sm font-semibold text-gray-800 mb-4">
-                            IF YOU WISH TO HAVE YOUR RESUME SHARED WITH
-                            COMPANIES, PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
-                          </div>
-                          <UploadField
-                            name="resume"
-                            label="Upload Resume"
-                            onChange={handleFileChange}
-                            preview={false}
-                            setuploadedFile={setuploadedFile}
-                          />
+                      <div className="mb-4">
+                        <div className="block text-sm font-semibold text-gray-800 mb-4">
+                          IF YOU WISH TO HAVE YOUR RESUME SHARED WITH COMPANIES,
+                          PLEASE UPLOAD YOUR RESUME (OPTIONAL) Maximum Size 1MB
                         </div>
-                      )}
+                        <UploadField
+                          name="resume"
+                          label="Upload Resume"
+                          onChange={handleFileChange}
+                          preview={false}
+                          setuploadedFile={setuploadedFile}
+                        />
+                      </div>
                     </>
                   )}
 
