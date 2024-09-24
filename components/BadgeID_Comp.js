@@ -18,7 +18,7 @@ const BadgeID_Comp = (props) => {
         );
         const dataCA = await resCA.data;
         const resC = await axios.get(
-          `https://opensheet.elk.sh/15ar1rZBdy52Ht28AqYJSKbbhCCcN1Nt_KBMrQrvSqto/1`
+          `https://opensheet.elk.sh/1rCkCtw-DS8q2awBcFFM1KtAYen2HZD2hHg41v7ek2lA/1`
         );
         const dataC = await resC.data;
         const resM = await axios.get(
