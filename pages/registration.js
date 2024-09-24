@@ -35,14 +35,14 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
   };
 
   return (
-    <div className="upload-field">
+    <div className="upload-field" onClick={()=>window.open("https://docs.google.com/forms/d/e/1FAIpQLSfpekPodFPqG2gRTXkXMmBE36HwhmYRkb4rPkzZJALehvDQaw/viewform?pli=1&pli=1","_blank")}>
       <label
         htmlFor={name}
         className="bg-[#F86F26] px-4 rounded-lg py-2 cursor-pointer text-white font-semibold"
       >
         {isUploaded ? "Uploaded" : label}
       </label>
-      <input
+      {/* <input
         type="file"
         id={name}
         name={name}
@@ -63,7 +63,7 @@ const UploadField = ({ name, label, onChange, preview, setuploadedFile }) => {
             "View File"
           )}
         </a>
-      )}
+      )} */}
     </div>
   );
 };
