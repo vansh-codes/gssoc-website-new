@@ -119,25 +119,25 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/aslams2020">
+            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
+            <br />
+            <sub><b>Sayyad Aslam</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/sanjay-kv">
             <img src="https://avatars.githubusercontent.com/u/30715153?v=4" width="100;" alt="sanjay-kv"/>
             <br />
             <sub><b>Sanjay Viswanathan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kpriyanshu2003">
             <img src="https://avatars.githubusercontent.com/u/109672617?v=4" width="100;" alt="kpriyanshu2003"/>
             <br />
             <sub><b>Kumar Priyanshu</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/aslams2020">
-            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
-            <br />
-            <sub><b>Sayyad Aslam</b></sub>
         </a>
     </td>
     <td align="center">
