@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/GaganpreetKaurKalsi">
+            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
+            <br />
+            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Saviour1001">
             <img src="https://avatars.githubusercontent.com/u/71517788?v=4" width="100;" alt="Saviour1001"/>
             <br />
@@ -105,10 +112,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/GaganpreetKaurKalsi">
-            <img src="https://avatars.githubusercontent.com/u/54144759?v=4" width="100;" alt="GaganpreetKaurKalsi"/>
+        <a href="https://github.com/aslams2020">
+            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
             <br />
-            <sub><b>Gaganpreet Kaur Kalsi</b></sub>
+            <sub><b>Sayyad Aslam</b></sub>
         </a>
     </td>
     <td align="center">
@@ -116,13 +123,6 @@
             <img src="https://avatars.githubusercontent.com/u/133582566?v=4" width="100;" alt="Meetjain1"/>
             <br />
             <sub><b>Meet Jain</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/aslams2020">
-            <img src="https://avatars.githubusercontent.com/u/131389695?v=4" width="100;" alt="aslams2020"/>
-            <br />
-            <sub><b>Sayyad Aslam</b></sub>
         </a>
     </td>
     <td align="center">
@@ -148,17 +148,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/partha120804">
-            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
+        <a href="https://github.com/HemantKr071">
+            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
             <br />
-            <sub><b>Partha120804</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/hustler0109">
-            <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
-            <br />
-            <sub><b>Shristy Joshi Thakur</b></sub>
+            <sub><b>Hemant Kumar</b></sub>
         </a>
     </td>
     <td align="center">
@@ -169,10 +162,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/HemantKr071">
-            <img src="https://avatars.githubusercontent.com/u/115487745?v=4" width="100;" alt="HemantKr071"/>
+        <a href="https://github.com/hustler0109">
+            <img src="https://avatars.githubusercontent.com/u/90794215?v=4" width="100;" alt="hustler0109"/>
             <br />
-            <sub><b>Hemant Kumar</b></sub>
+            <sub><b>Shristy Joshi Thakur</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/partha120804">
+            <img src="https://avatars.githubusercontent.com/u/138643473?v=4" width="100;" alt="partha120804"/>
+            <br />
+            <sub><b>Partha120804</b></sub>
         </a>
     </td></tr>
 <tr>
