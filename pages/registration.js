@@ -591,7 +591,7 @@ const Registration = () => {
                           className="bg-[#feb106] mb-6 text-white py-2 w-full font-semibold rounded-full shadow-xl shadow-gray-400 m-auto hover:bg-[#ff9a34]"
                           onClick={() => handleRoleSelectAndNext("CA")}
                         >
-                          Register
+                          Closed
                         </button>
                       </div>
                     </div>
@@ -746,7 +746,7 @@ const Registration = () => {
                 />
               </div>
             </div>
-            {/* {role != "" ? ( */}
+            {role != "CA" ? (
               <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
                 <h1 className="text-2xl font-semibold text-center mb-6">
                   REGISTER FOR GSSOC&apos;24 EXTD.
@@ -950,7 +950,7 @@ const Registration = () => {
                   </div>
                 </div>
               </div>
-            {/* ) : (
+            ) : (
               <div className="min-h-screen p-10 max-sm:p-2 max-sm:my-10 w-full flex flex-col items-center justify-center z-30">
                 <img
                   src="https://github.com/user-attachments/assets/6ba0f38c-a28d-4d22-835a-93779f126e46"
@@ -980,8 +980,7 @@ const Registration = () => {
                   Go Back
                 </button>
               </div>
-            ) 
-            }*/}
+            )}
           </>
         );
       case 3:
