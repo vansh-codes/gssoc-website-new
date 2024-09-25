@@ -29,6 +29,7 @@ const CALeaderboard = () => {
   const [showConfetti, setShowConfetti] = useState(true);
   const [year, setYear] = useState(new Date().getFullYear());
   const { height, width } = useWindowDimensions();
+  const [ comingsoon, setComingSoon ] = useState(true);
   let [lastupdated, setLastupdated] = useState("");
   function useWindowDimensions() {
     const hasWindow = typeof window !== "undefined";
@@ -211,7 +212,7 @@ const CALeaderboard = () => {
           </div>
         </div>
       )}
-      {showConfetti && <Confetti width={windowWidth} height={windowHeight} />}
+      {/* {showConfetti && <Confetti width={windowWidth} height={windowHeight} />} */}
       <div className="items-center justify-center mt-20">
         <div className="font-sans text-center text-md font-extrabold text-black-100 mt-5">
           <div className="flex justify-center mb-5">
@@ -221,13 +222,30 @@ const CALeaderboard = () => {
               2024 EXTD
             </button>
           </div>
-          <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
+          {/* <div className="text-primary_orange-0 dark:text-white font-sans text-3xl md:text-5xl text center font-extrabold flex wrap justify-center flex-col md:flex-row mb-10 underline decoration-orange-500  underline-offset-8">
             <h1 className="text-primary_orange-0 mt-5">
               Top Campus Ambassadors&nbsp;
             </h1>
-          </div>
+          </div> */}
         </div>
       </div>
+      {comingsoon && (
+        <div className="flex justify-center items-center mt-16 px-4 font-sans">
+              <div className="text-xl text-center text-black dark:text-white w-full max-w-3xl">
+                <h1 className="text-4xl font-extrabold text-[#f57d33] mb-8">CA-Leaderboard</h1>
+                <h3 className="text-3xl font-extrabold text-[#f57d33] mb-8 animate-pulse">
+                  COMING SOON!
+                </h3>
+                <p className="leading-relaxed">
+                  CA Leaderboard for{" "}
+                  <span className="font-bold text-[#f57d33]">GSSoC&apos;24 Extended</span>{" "}
+                  will be available soon. In the meantime, keep referring to get yourself on top of the leaderboard <br /><br />
+                </p>
+              </div>
+      </div>
+      )}
+      {!comingsoon && (
+        <>
       <div className="flex justify-center">{renderTopThree()}</div>
       <Spacer mt={10} />
       <div className="flex mb-5">
@@ -409,6 +427,8 @@ const CALeaderboard = () => {
           No entries found for the selected year.
         </div>
       )}
+          </>
+        )}
     </>
   );
 };
