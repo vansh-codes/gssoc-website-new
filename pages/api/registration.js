@@ -3,6 +3,7 @@ import CA from "../../utils/models/caSchema";
 import Contributors from "../../utils/models/contributorsSchema";
 import Mentor from "../../utils/models/mentorSchema";
 import ProjectAdmin from "../../utils/models/projectAdminSchema";
+import CALeaderboard from "../../utils/models/caLeaderboard";
 
 const allowCors = (fn) => async (req, res) => {
   res.setHeader("Access-Control-Allow-Credentials", true);
@@ -33,7 +34,8 @@ const handler = async (req, res) => {
 
   if (method === "POST") {
     try {
-      const { role, ...formData } = req.body;
+      const { role, referral, ...formData } = req.body;
+
       let savedData;
 
       switch (role) {
@@ -53,6 +55,18 @@ const handler = async (req, res) => {
           return res
             .status(400)
             .json({ success: false, message: "Invalid role" });
+      }
+
+      if (referral) {
+        const caEntry = await CALeaderboard.findOne({ referralCode: referral });
+
+        if (caEntry) {
+          caEntry.referralCount += 1;
+          await caEntry.save();
+          console.log(`Referral count updated for ${referral}`);
+        } else {
+          console.log("Referral code not found in CA Leaderboard.");
+        }
       }
 
       return res.status(201).json({ success: true, data: savedData });
