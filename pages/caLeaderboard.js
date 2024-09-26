@@ -29,7 +29,7 @@ const CALeaderboard = () => {
   const [showConfetti, setShowConfetti] = useState(true);
   const [year, setYear] = useState(new Date().getFullYear());
   const { height, width } = useWindowDimensions();
-  const [ comingsoon, setComingSoon ] = useState(true);
+  const [comingsoon, setComingSoon] = useState(true);
   let [lastupdated, setLastupdated] = useState("");
   function useWindowDimensions() {
     const hasWindow = typeof window !== "undefined";
@@ -80,20 +80,25 @@ const CALeaderboard = () => {
         setLoadingMsg("Waiting for response from server");
       }, 600);
       try {
-        const response = await fetch(`https://gssoc24-leaderboard-backend-production-dfe3.up.railway.app/CALeaderboard`);
-        const data = await response.json();
-        console.log(data.leaderboard);
-        const processedData = data.leaderboard.map((user) => ({
-          Name: user.caName || "N/A",
-          Image: user.Image || "",
+        const response = await fetch(`https://gssoc-website-new-lovat.vercel.app/api/caLeaderboards`);
+        const result = await response.json();
+        console.log(result, "Fetched Data");
+
+        const usersData = result.data || []; 
+
+        const processedData = usersData.map((user) => ({
+          Name: user.name || "N/A", 
+          Image: user.Image || "", 
           ReferralCode: user.referralCode || "abc",
-          ReferralCount: parseInt(user.referralCount || "0"),
-          score: calculateScore(parseInt(user.referralCount || "0")),
+          ReferralCount: parseInt(user.referralCount || "0", 10),
+          score: calculateScore(parseInt(user.referralCount || "0", 10)),
         }));
+
+        console.log(processedData, "Processed Data");
         processedData.sort((a, b) => b.score - a.score);
         setUsers(processedData);
         setIsLoading(false);
-        setLastupdated(data.updatedTimestring);
+        // setLastupdated(data.updatedTimestring);
         setSearchData(processedData);
       } catch (error) {
         console.error("Failed to fetch data:", error);
@@ -231,204 +236,214 @@ const CALeaderboard = () => {
       </div>
       {comingsoon && (
         <div className="flex justify-center items-center mt-16 px-4 font-sans">
-              <div className="text-xl text-center text-black dark:text-white w-full max-w-3xl">
-                <h1 className="text-4xl font-extrabold text-[#f57d33] mb-8">CA-Leaderboard</h1>
-                <h3 className="text-3xl font-extrabold text-[#f57d33] mb-8 animate-pulse">
-                  COMING SOON!
-                </h3>
-                <p className="leading-relaxed">
-                  CA Leaderboard for{" "}
-                  <span className="font-bold text-[#f57d33]">GSSoC&apos;24 Extended</span>{" "}
-                  will be available soon. In the meantime, keep referring to get yourself on top of the leaderboard <br /><br />
-                </p>
-              </div>
-      </div>
+          <div className="text-xl text-center text-black dark:text-white w-full max-w-3xl">
+            <h1 className="text-4xl font-extrabold text-[#f57d33] mb-8">
+              CA-Leaderboard
+            </h1>
+            <h3 className="text-3xl font-extrabold text-[#f57d33] mb-8 animate-pulse">
+              COMING SOON!
+            </h3>
+            <p className="leading-relaxed">
+              CA Leaderboard for{" "}
+              <span className="font-bold text-[#f57d33]">
+                GSSoC&apos;24 Extended
+              </span>{" "}
+              will be available soon. In the meantime, keep referring to get
+              yourself on top of the leaderboard <br />
+              <br />
+            </p>
+          </div>
+        </div>
       )}
       {!comingsoon && (
         <>
-      <div className="flex justify-center">{renderTopThree()}</div>
-      <Spacer mt={10} />
-      <div className="flex mb-5">
-        <div className="input-group relative flex flex-wrap items-stretch w-[80%] m-auto">
-          <span className="relative flex items-center w-1/2 justify-start">
-            <label className="mr-2 whites-nowrap text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400">
-              Showing
-            </label>
-            <select
-              className="relative bg-gray-300 dark:bg-neutral-600 text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400 items-center"
-              onInput={handleItemsPerPageChange}
-              onChange={() => handlePageChange(1)}
-              value={itemsPerPage}
-            >
-              <option value="10">10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-            <label className="ml-2 whites-nowrap text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400">
-              rows per page
-            </label>
-          </span>
-          <span className="relative flex w-1/2 justify-end">
-            <span className="relative search-container flex w-full justify-end">
-              <div className="relative flex search-container">
-                <input
-                  onChange={(e) => {
-                    setFilter(e.target.value);
-                    filterData();
-                  }}
-                  value={filter}
-                  id="searchInputField"
-                  type="text"
-                  className="form-control relative flex-auto min-w-0 block px-0.5 py-1.5 text-base dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-400 focus:outline-none dark:placeholder-neutral-300"
-                  placeholder="Search"
-                  onKeyUp={() => {
-                    filterData();
-                  }}
-                />
-                <span className="search-count dark:text-neutral-300">
-                  {searchData.length}
-                </span>
-              </div>
-            </span>
-          </span>
-        </div>
-      </div>
-      <div className="bg-sky-100 dark:bg-orange-200 px-1.5 py-1.5 rounded-md w-[80%] text-center m-auto mb-3">
-        <p className="text-sky-700 dark:text-orange-900 text-sm">
-          {isLoading === false && lastupdated !== "" && (
-            <>
-              The leaderboard was last updated on: <b>{lastupdated}</b>
-            </>
-          )}
-          {isLoading === false && lastupdated === null && (
-            <>The server is updating. Please comeback after 5-10 mins</>
-          )}
-          <a
-            className="ml-2 underline hover:no-underline"
-            href="https://github.com/GSSoC24/Contributor/discussions/288"
-            target="_blank"
-            rel="noreferrer"
-          >
-            More details about badges
-          </a>
-        </p>
-      </div>
-
-      <div className="w-[80%] m-auto overflow-x-auto">
-        <div className="table w-full">
-          <div className="table-header-group">
-            <div className="table-row">
-              {columns.map((column) => (
-                <div
-                  className="table-cell font-serif px-4 py-4 bg-black text-white dark:bg-primary_orange-0 dark:text-black"
-                  key={column.id}
-                  style={{ minWidth: column.minWidth }}
+          <div className="flex justify-center">{renderTopThree()}</div>
+          <Spacer mt={10} />
+          <div className="flex mb-5">
+            <div className="input-group relative flex flex-wrap items-stretch w-[80%] m-auto">
+              <span className="relative flex items-center w-1/2 justify-start">
+                <label className="mr-2 whites-nowrap text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400">
+                  Showing
+                </label>
+                <select
+                  className="relative bg-gray-300 dark:bg-neutral-600 text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400 items-center"
+                  onInput={handleItemsPerPageChange}
+                  onChange={() => handlePageChange(1)}
+                  value={itemsPerPage}
                 >
-                  {column.label}
-                </div>
-              ))}
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+                <label className="ml-2 whites-nowrap text-gray-900 dark:text-gray-200 font-large text-xxl hover:text-gray-400">
+                  rows per page
+                </label>
+              </span>
+              <span className="relative flex w-1/2 justify-end">
+                <span className="relative search-container flex w-full justify-end">
+                  <div className="relative flex search-container">
+                    <input
+                      onChange={(e) => {
+                        setFilter(e.target.value);
+                        filterData();
+                      }}
+                      value={filter}
+                      id="searchInputField"
+                      type="text"
+                      className="form-control relative flex-auto min-w-0 block px-0.5 py-1.5 text-base dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-400 focus:outline-none dark:placeholder-neutral-300"
+                      placeholder="Search"
+                      onKeyUp={() => {
+                        filterData();
+                      }}
+                    />
+                    <span className="search-count dark:text-neutral-300">
+                      {searchData.length}
+                    </span>
+                  </div>
+                </span>
+              </span>
             </div>
           </div>
-          {!isLoading && (
-            <div className="table-row-group">
-              {searchData
-                .slice(
-                  (activePage - 1) * itemsPerPage,
-                  activePage * itemsPerPage
-                )
-                .map((user, index) => (
-                  <div
-                    className={`table-row ${
-                      index % 2 === 0
-                        ? "bg-leaderboardbg-0 dark:bg-gray-800"
-                        : "bg-[#FFF7ED] dark:bg-gray-900"
-                    }`}
-                    key={index}
-                  >
-                    <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                      {(activePage - 1) * itemsPerPage + index + 1}
+          <div className="bg-sky-100 dark:bg-orange-200 px-1.5 py-1.5 rounded-md w-[80%] text-center m-auto mb-3">
+            <p className="text-sky-700 dark:text-orange-900 text-sm">
+              {isLoading === false && lastupdated !== "" && (
+                <>
+                  The leaderboard was last updated on: <b>{lastupdated}</b>
+                </>
+              )}
+              {isLoading === false && lastupdated === null && (
+                <>The server is updating. Please comeback after 5-10 mins</>
+              )}
+              <a
+                className="ml-2 underline hover:no-underline"
+                href="https://github.com/GSSoC24/Contributor/discussions/288"
+                target="_blank"
+                rel="noreferrer"
+              >
+                More details about badges
+              </a>
+            </p>
+          </div>
+
+          <div className="w-[80%] m-auto overflow-x-auto">
+            <div className="table w-full">
+              <div className="table-header-group">
+                <div className="table-row">
+                  {columns.map((column) => (
+                    <div
+                      className="table-cell font-serif px-4 py-4 bg-black text-white dark:bg-primary_orange-0 dark:text-black"
+                      key={column.id}
+                      style={{ minWidth: column.minWidth }}
+                    >
+                      {column.label}
                     </div>
-                    <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                      <div className="flex items-center">
-                        <Avatar src={user.Image} name={user.Name} size="sm" />
-                        <span className="ml-2">{user.Name}</span>
+                  ))}
+                </div>
+              </div>
+              {!isLoading && (
+                <div className="table-row-group">
+                  {searchData
+                    .slice(
+                      (activePage - 1) * itemsPerPage,
+                      activePage * itemsPerPage
+                    )
+                    .map((user, index) => (
+                      <div
+                        className={`table-row ${
+                          index % 2 === 0
+                            ? "bg-leaderboardbg-0 dark:bg-gray-800"
+                            : "bg-[#FFF7ED] dark:bg-gray-900"
+                        }`}
+                        key={index}
+                      >
+                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                          {(activePage - 1) * itemsPerPage + index + 1}
+                        </div>
+                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                          <div className="flex items-center">
+                            <Avatar
+                              src={user.Image}
+                              name={user.Name}
+                              size="sm"
+                            />
+                            <span className="ml-2">{user.Name}</span>
+                          </div>
+                        </div>
+                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                          {user.ReferralCode}
+                        </div>
+                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                          {user.ReferralCount}
+                        </div>
+                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                          {user.score}
+                        </div>
                       </div>
-                    </div>
-                    <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                      {user.ReferralCode}
-                    </div>
-                    <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                      {user.ReferralCount}
-                    </div>
-                    <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                      {user.score}
-                    </div>
-                  </div>
-                ))}
+                    ))}
+                </div>
+              )}
+            </div>
+            {isLoading && (
+              <div className="flex flex-col items-center justify-center w-full h-80 gap-5">
+                <SkeletonCircle size="80" />
+                <Skeleton>
+                  <Box className="text-center px={4}"> Loading data... </Box>
+                </Skeleton>
+              </div>
+            )}
+          </div>
+          {!isLoading && isClient && searchData.length > 0 && (
+            <div className="pagination-holder mb-20">
+              <div className="flex sm:space-y-4 justify-between items-center w-[80%] m-auto py-4">
+                {/* Left side for current range */}
+                <div className="text-gray-700 dark:text-gray-300 md:text-base md:text-left sm:text-sm">
+                  {`${(activePage - 1) * itemsPerPage + 1}-${Math.min(
+                    activePage * itemsPerPage,
+                    searchData.length
+                  )}/${searchData.length}`}
+                </div>
+
+                {/* Center for Page Numbers */}
+                <div className="flex justify-center w-full md:w-auto">
+                  <Pagination
+                    innerClass={
+                      theme === "dark" ? "dark-theme pagination" : "pagination"
+                    }
+                    itemClass="page-item"
+                    linkClass="page-link"
+                    activePage={activePage}
+                    activeClass="active-page"
+                    itemsCountPerPage={itemsPerPage}
+                    totalItemsCount={searchData.length}
+                    pageRangeDisplayed={width < 600 ? 3 : 5}
+                    onChange={handlePageChange}
+                  />
+                </div>
+
+                {/* Right side for Jump to page */}
+                <div className="flex items-center justify-center w-full md:w-auto">
+                  <input
+                    type="number"
+                    placeholder="Jump to page"
+                    min="1"
+                    max={Math.ceil(searchData.length / itemsPerPage)}
+                    className="w-full sm:w-24 md:w-32 px-2 py-2 border rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white dark:outline-gray-800 dark:outline-text-white md:text-left"
+                    onChange={(e) =>
+                      handleJumpToPage(() => Math.abs(e.target.value) || 1)
+                    }
+                  />
+                </div>
+              </div>
             </div>
           )}
-        </div>
-        {isLoading && (
-          <div className="flex flex-col items-center justify-center w-full h-80 gap-5">
-            <SkeletonCircle size="80" />
-            <Skeleton>
-              <Box className="text-center px={4}"> Loading data... </Box>
-            </Skeleton>
-          </div>
-        )}
-      </div>
-      {!isLoading && isClient && searchData.length > 0 && (
-        <div className="pagination-holder mb-20">
-          <div className="flex sm:space-y-4 justify-between items-center w-[80%] m-auto py-4">
-            {/* Left side for current range */}
-            <div className="text-gray-700 dark:text-gray-300 md:text-base md:text-left sm:text-sm">
-              {`${(activePage - 1) * itemsPerPage + 1}-${Math.min(
-                activePage * itemsPerPage,
-                searchData.length
-              )}/${searchData.length}`}
+          {!isLoading && searchData.length === 0 && (
+            <div className="text-center text-xl mt-10">
+              No entries found for the selected year.
             </div>
-
-            {/* Center for Page Numbers */}
-            <div className="flex justify-center w-full md:w-auto">
-              <Pagination
-                innerClass={
-                  theme === "dark" ? "dark-theme pagination" : "pagination"
-                }
-                itemClass="page-item"
-                linkClass="page-link"
-                activePage={activePage}
-                activeClass="active-page"
-                itemsCountPerPage={itemsPerPage}
-                totalItemsCount={searchData.length}
-                pageRangeDisplayed={width < 600 ? 3 : 5}
-                onChange={handlePageChange}
-              />
-            </div>
-
-            {/* Right side for Jump to page */}
-            <div className="flex items-center justify-center w-full md:w-auto">
-              <input
-                type="number"
-                placeholder="Jump to page"
-                min="1"
-                max={Math.ceil(searchData.length / itemsPerPage)}
-                className="w-full sm:w-24 md:w-32 px-2 py-2 border rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white dark:outline-gray-800 dark:outline-text-white md:text-left"
-                onChange={(e) =>
-                  handleJumpToPage(() => Math.abs(e.target.value) || 1)
-                }
-              />
-            </div>
-          </div>
-        </div>
+          )}
+        </>
       )}
-      {!isLoading && searchData.length === 0 && (
-        <div className="text-center text-xl mt-10">
-          No entries found for the selected year.
-        </div>
-      )}
-          </>
-        )}
     </>
   );
 };
