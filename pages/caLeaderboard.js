@@ -80,33 +80,38 @@ const CALeaderboard = () => {
         setLoadingMsg("Waiting for response from server");
       }, 600);
       try {
-        const response = await fetch(`https://gssoc-website-new-lovat.vercel.app/api/caLeaderboards`);
+        const response = await fetch(
+          `https://gssoc-website-new-lovat.vercel.app/api/caLeaderboards`
+        );
         const result = await response.json();
         console.log(result, "Fetched Data");
-
-        const usersData = result.data || []; 
-
-        const processedData = usersData.map((user) => ({
-          Name: user.name || "N/A", 
-          Image: user.Image || "", 
-          ReferralCode: user.referralCode || "abc",
-          ReferralCount: parseInt(user.referralCount || "0", 10),
-          score: calculateScore(parseInt(user.referralCount || "0", 10)),
-        }));
-
-        console.log(processedData, "Processed Data");
-        processedData.sort((a, b) => b.score - a.score);
+  
+        const usersData = result.data || [];
+  
+        const processedData = usersData
+          .map((user) => ({
+            Name: user.name || "N/A",
+            Image: user.Image || "",
+            ReferralCode: user.referralCode || "abc",
+            ReferralCount: parseInt(user.referralCount || "0", 10),
+            score: calculateScore(parseInt(user.referralCount || "0", 10)),
+          }))
+          .sort((a, b) => b.score - a.score) 
+          .map((user, index) => ({
+            ...user,
+            rank: index + 1,
+          }));
+  
         setUsers(processedData);
-        setIsLoading(false);
-        // setLastupdated(data.updatedTimestring);
         setSearchData(processedData);
+        setIsLoading(false);
       } catch (error) {
         console.error("Failed to fetch data:", error);
       } finally {
         setIsLoading(false);
       }
     };
-
+  
     getUsers();
   }, [year]);
 
@@ -129,7 +134,7 @@ const CALeaderboard = () => {
     const filteredData = users.filter((user) =>
       user.Name.toLowerCase().includes(filter.toLowerCase())
     );
-    setSearchData(filteredData);
+    setSearchData(filteredData); 
     setActivePage(1);
   };
 
@@ -143,10 +148,12 @@ const CALeaderboard = () => {
 
   const years = ["Extended", 2024, 2023];
   const renderTopThree = () => {
+    if (!users || users.length < 3) return null;
+  
     const orderedData = [
-      { ...searchData[1], rank: 2 },
-      { ...searchData[0], rank: 1 },
-      { ...searchData[2], rank: 3 },
+      { ...users[1], rank: 2 }, 
+      { ...users[0], rank: 1 }, 
+      { ...users[2], rank: 3 },
     ];
 
     return orderedData.map((user, index) => (
@@ -172,9 +179,7 @@ const CALeaderboard = () => {
                 <Avatar src={user.Image} name={user.Name} size="xl" />
                 <h3
                   className={`text-black dark:text-primary_orange-0 font-semibold mt-2 ${
-                    user.rank === 1
-                      ? "text-lg"
-                      : "text-xs sm:text-sm md:text-md"
+                    user.rank === 1 ? "text-lg" : "text-xs sm:text-sm md:text-md"
                   }`}
                 >
                   {user.rank}. {user.Name}
@@ -186,6 +191,7 @@ const CALeaderboard = () => {
       </div>
     ));
   };
+  
 
   return (
     <>
@@ -343,45 +349,38 @@ const CALeaderboard = () => {
               </div>
               {!isLoading && (
                 <div className="table-row-group">
-                  {searchData
-                    .slice(
-                      (activePage - 1) * itemsPerPage,
-                      activePage * itemsPerPage
-                    )
-                    .map((user, index) => (
-                      <div
-                        className={`table-row ${
-                          index % 2 === 0
-                            ? "bg-leaderboardbg-0 dark:bg-gray-800"
-                            : "bg-[#FFF7ED] dark:bg-gray-900"
-                        }`}
-                        key={index}
-                      >
-                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                          {(activePage - 1) * itemsPerPage + index + 1}
-                        </div>
-                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                          <div className="flex items-center">
-                            <Avatar
-                              src={user.Image}
-                              name={user.Name}
-                              size="sm"
-                            />
-                            <span className="ml-2">{user.Name}</span>
-                          </div>
-                        </div>
-                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                          {user.ReferralCode}
-                        </div>
-                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                          {user.ReferralCount}
-                        </div>
-                        <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
-                          {user.score}
+                {searchData
+                  .slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage)
+                  .map((user, index) => (
+                    <div
+                      className={`table-row ${
+                        index % 2 === 0
+                          ? "bg-leaderboardbg-0 dark:bg-gray-800"
+                          : "bg-[#FFF7ED] dark:bg-gray-900"
+                      }`}
+                      key={index}
+                    >
+                      <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                        {user.rank} 
+                      </div>
+                      <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                        <div className="flex items-center">
+                          <Avatar src={user.Image} name={user.Name} size="sm" />
+                          <span className="ml-2">{user.Name}</span>
                         </div>
                       </div>
-                    ))}
-                </div>
+                      <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                        {user.ReferralCode}
+                      </div>
+                      <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                        {user.ReferralCount}
+                      </div>
+                      <div className="table-cell px-4 py-6 text-black dark:bg-black dark:text-white font-medium">
+                        {user.score}
+                      </div>
+                    </div>
+                  ))}
+              </div>
               )}
             </div>
             {isLoading && (
