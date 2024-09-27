@@ -323,11 +323,11 @@ const CALeaderboard = () => {
               )}
               <a
                 className="ml-2 underline hover:no-underline"
-                href="https://github.com/GSSoC24/Contributor/discussions/288"
+                href="https://github.com/orgs/GSSoC24/discussions/740"
                 target="_blank"
                 rel="noreferrer"
               >
-                More details about badges
+                More details about CAs and CA leaderboard
               </a>
             </p>
           </div>
