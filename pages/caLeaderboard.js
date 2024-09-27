@@ -323,7 +323,7 @@ const CALeaderboard = () => {
               )}
               <a
                 className="ml-2 underline hover:no-underline"
-                href="https://github.com/orgs/GSSoC24/discussions/725"
+                href="https://github.com/orgs/GSSoC24/discussions/740"
                 target="_blank"
                 rel="noreferrer"
               >
